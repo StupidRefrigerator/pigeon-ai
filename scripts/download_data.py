@@ -11,7 +11,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from pigeon_ai.paths import RAW
 
 # Share link to pigeon-ai-raw.zip in the team Google Drive; see DATA.md.
-DRIVE_URL = ""
+DRIVE_URL = "https://drive.google.com/drive/folders/1mbuAEllISFlfmRX8O7300f_iwsCJ04cM?usp=sharing"
 
 REQUIRED = [
     "national_toilets.csv",

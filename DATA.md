@@ -19,14 +19,14 @@ This downloads the zip, extracts it into `data/raw/`, and checks that the requir
 
 ## Files
 
-| Path in `data/raw/` | Dataset | Source | Downloaded |
-|---|---|---|---|
-| `national_toilets.csv` | National Public Toilet Map | data.gov.au | TODO |
-| `census_2021/` | ABS 2021 Census GCP, SA1, NSW (uses G01) | ABS Census DataPacks | TODO |
-| `abs_sa1_2021/` | ABS 2021 SA1 boundaries (ASGS Ed. 3) | ABS digital boundary files | TODO |
-| `abs_boundaries/` | ABS 2026 GCCSA boundaries | ABS digital boundary files | TODO |
-| `abs_suburbs/` | ABS 2026 Suburbs and Localities (SAL) | ABS digital boundary files | TODO |
-| `osm/nsw.osm.pbf` | OpenStreetMap NSW extract | Geofabrik | 2026-10-18 |
+| Path in `data/raw/`    | Dataset                                  | Source                     | Downloaded |
+| ---------------------- | ---------------------------------------- | -------------------------- | ---------- |
+| `national_toilets.csv` | National Public Toilet Map               | data.gov.au                | 2026-10-18 |
+| `census_2021/`         | ABS 2021 Census GCP, SA1, NSW (uses G01) | ABS Census DataPacks       | 2026-10-18 |
+| `abs_sa1_2021/`        | ABS 2021 SA1 boundaries (ASGS Ed. 3)     | ABS digital boundary files | 2026-10-18 |
+| `abs_boundaries/`      | ABS 2026 GCCSA boundaries                | ABS digital boundary files | 2026-10-18 |
+| `abs_suburbs/`         | ABS 2026 Suburbs and Localities (SAL)    | ABS digital boundary files | 2026-10-18 |
+| `osm/nsw.osm.pbf`      | OpenStreetMap NSW extract                | Geofabrik                  | 2026-10-18 |
 
 The OSM extract changes daily, so download it again from the source and the features will differ slightly. Use the Drive copy to reproduce the committed dataset exactly.
 
