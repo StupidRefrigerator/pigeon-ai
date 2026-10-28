@@ -80,6 +80,41 @@ def build_grid(study):
     return grid.to_crs(CRS)
 
 
+def build_expanded_study_area(boundaries, include_rural=False):
+    """Reconstruct pre-growth selection (V9), or all Greater Sydney (V10)."""
+    sydney = boundaries[boundaries["GCC_NAME21"] == "Greater Sydney"].copy()
+    if include_rural:
+        city = gpd.read_file(RAW / "abs_boundaries/GCCSA_2026_AUST_GDA2020.shp")
+        city = city[city["GCC_NAME26"] == "Greater Sydney"].to_crs(CRS)
+        assert len(city) == 1, "Expected one Greater Sydney boundary"
+        sydney = sydney.to_crs(CRS)
+        # Keep whole 2021 SA1s whose representative points are in the 2026 city.
+        city_shape = city.geometry.union_all()
+        return sydney[sydney.representative_point().intersects(city_shape)].copy()
+
+    # Archived 01_explore_toilets notebook, cells 24–30. The 50-person
+    # threshold defines urban clusters, NOT a hard cutoff on final SA1s.
+    density = sydney["population"] / sydney["AREASQKM21"].replace(0, float("nan"))
+    urban_shape = sydney[density >= 50].geometry.union_all()
+    components = (
+        list(urban_shape.geoms)
+        if urban_shape.geom_type == "MultiPolygon" else [urban_shape]
+    )
+    clusters = gpd.GeoDataFrame(geometry=components, crs=sydney.crs)
+    selected = clusters.loc[[8, 47, 28, 38, 39]].to_crs(CRS)
+    expanded = selected.geometry.union_all().buffer(500)
+    sydney = sydney.to_crs(CRS)
+    study = sydney[sydney.representative_point().intersects(expanded)].copy()
+    # Component positions are historical. Stop if ordering/source changes;
+    # never silently substitute a different study area.
+    approved_path = REFERENCE / "approved_preliminary_sa1_ids.txt"
+    approved = set(approved_path.read_text().splitlines())
+    assert set(study["sa1_code"]) == approved, (
+        "Reconstructed pre-growth selection differs from approved IDs"
+    )
+    return study
+
+
 def add_toilet_counts(grid):
     toilets = pd.read_csv(RAW / "national_toilets.csv")
     assert toilets["FacilityID"].is_unique, "Duplicate toilet facility IDs"

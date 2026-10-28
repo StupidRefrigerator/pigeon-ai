@@ -85,6 +85,74 @@ Use `jupyter lab` to explore the five notebooks after generating the outputs. Ea
 
 Equivalent `.gpkg` and `.geojson` files include geometry. The GeoPackage uses EPSG:7856, layer `hex_features`; GeoJSON uses EPSG:4326. Use `FEATURES` in `pigeon_ai.validation` to select predictors; keep the identifier, target and geometry separate. No model training is included.
 
+## Dataset Experiments
+
+PIGEON-AI contains 10 dataset experiments to compare how different features and geographic coverage affect predictions of existing public toilet locations.
+
+### Experiments
+
+| Version | Description                                          | Features | Hexagons |
+| ------- | ---------------------------------------------------- | -------: | -------: |
+| V1      | Baseline: population, amenities, transport and parks |       20 |   16,228 |
+| V2      | Population only                                      |        4 |   16,228 |
+| V3      | Amenities, transport and parks only                  |       16 |   16,228 |
+| V4      | Local features (within hexagon and 250 m)            |       13 |   16,228 |
+| V5      | Baseline + 1 km surrounding features                 |       26 |   16,228 |
+| V6      | Baseline + pedestrian accessibility                  |       23 |   16,228 |
+| V7      | Baseline + demographics and socioeconomic data       |       26 |   16,228 |
+| V8      | Baseline + future population projections             |       24 |   16,228 |
+| V9      | Baseline with growth suburbs included                |       20 |   17,336 |
+| V10     | Baseline across all Greater Sydney                   |       20 |   97,733 |
+
+### Usage
+
+```python
+from pigeon_ai.experiments import load_experiment
+
+X, y = load_experiment("V1")
+```
+
+- `X`: Feature DataFrame indexed by `hex_id`.
+- `y`: Binary target (`1` = public toilet present, `0` = absent).
+- Experiment definitions are in `src/pigeon_ai/experiments.py`.
+
+### Data Files
+
+All datasets are stored in `data/processed/`.
+
+| File                           | Experiments |
+| ------------------------------ | ----------- |
+| `sydney_hex_features.csv`      | V1–V4       |
+| `sydney_extended_features.csv` | V5–V8       |
+| `sydney_growth_features.csv`   | V9          |
+| `sydney_all_features.csv`      | V10         |
+
+### Additional Features
+
+- **V5:** Population, amenities, transport and park features within 1 km.
+- **V6:** Walkable network length, pedestrian junctions and distance to the nearest footpath.
+- **V7:** Four age groups (0–17, 18–25, 26–64, 65+), household estimates and SEIFA IRSD scores.
+- **V8:** Projected population for 2031 and 2041, plus population growth estimates using NSW 2024 projections.
+
+### Rebuilding Datasets
+
+Run the relevant scripts in order:
+
+```bash
+python scripts/build_experiments.py
+python scripts/build_accessibility.py
+python scripts/build_demographics.py
+python scripts/build_projections.py
+```
+
+### Important Notes
+
+- V7 contains missing demographic values (`NaN`), which must be handled during model training.
+- V8 is a future-planning scenario, not a valid historical prediction benchmark. It assumes future population growth follows existing population distributions.
+- Demographic and population projections are geographically estimated, not exact hexagon-level observations.
+- OSM pedestrian features reflect mapped infrastructure, not actual walking routes or wheelchair accessibility.
+- Existing toilet locations are used only as target labels, not predictors.
+
 ## Important methodology notes
 
 - The approved study area contains **10,503 SA1s**. Historical selection used **50 people/km²**, not 500. Approved preliminary membership is frozen in `data/reference/`; growth exclusions are recalculated using suburb and SA1 representative points.

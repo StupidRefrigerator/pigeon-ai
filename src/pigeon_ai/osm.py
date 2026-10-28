@@ -15,24 +15,28 @@ CATEGORIES = {
 }
 
 
-def prepare_osm():
-    folder = INTERIM / "osm"
+def prepare_osm(folder=None, full_nsw=False):
+    folder = INTERIM / "osm" if folder is None else folder
     folder.mkdir(parents=True, exist_ok=True)
     sydney_path = folder / "sydney.osm.pbf"
     poi_path = folder / "sydney_pois.osm.pbf"
     geopackage_path = folder / "sydney_pois.gpkg"
 
+    if not full_nsw:
+        subprocess.run(
+            [
+                "osmium", "extract", "-b", "150.45,-34.25,151.40,-33.35",
+                "-s", "complete_ways", str(RAW / "osm/nsw.osm.pbf"),
+                "-o", str(sydney_path), "--overwrite",
+            ],
+            check=True,
+        )
+    # Expanded experiments use the existing full NSW source, avoiding the
+    # original Sydney bbox truncation at rural edges and 1 km buffers.
+    source_path = RAW / "osm/nsw.osm.pbf" if full_nsw else sydney_path
     subprocess.run(
         [
-            "osmium", "extract", "-b", "150.45,-34.25,151.40,-33.35",
-            "-s", "complete_ways", str(RAW / "osm/nsw.osm.pbf"),
-            "-o", str(sydney_path), "--overwrite",
-        ],
-        check=True,
-    )
-    subprocess.run(
-        [
-            "osmium", "tags-filter", str(sydney_path),
+            "osmium", "tags-filter", str(source_path),
             "nwr/shop", "nwr/amenity=cafe,restaurant",
             "nwr/highway=bus_stop", "nwr/railway=station", "nwr/leisure=park",
             "-o", str(poi_path), "--overwrite",
@@ -93,9 +97,9 @@ def load_osm(geopackage_path):
     return objects, parks
 
 
-def add_osm_counts(grid, objects):
+def add_osm_counts(grid, objects, buffer_distances=(250, 500)):
     grid = grid.copy()
-    context_area = grid.geometry.union_all().buffer(500)
+    context_area = grid.geometry.union_all().buffer(max(buffer_distances))
     nearby_objects = objects[objects.intersects(context_area)]
     inside = gpd.sjoin(
         nearby_objects,
@@ -112,7 +116,7 @@ def add_osm_counts(grid, objects):
         grid[f"{category}_inside"] = grid["hex_id"].map(counts).fillna(0).astype(int)
         selected_objects = nearby_objects.loc[nearby_objects[flag], ["geometry"]]
 
-        for radius in (250, 500):
+        for radius in buffer_distances:
             zones = centres.copy()
             zones["geometry"] = centres.geometry.buffer(radius)
             matches = gpd.sjoin(
@@ -124,16 +128,16 @@ def add_osm_counts(grid, objects):
     return grid
 
 
-def add_park_features(grid, parks):
+def add_park_features(grid, parks, buffer_distances=(250, 500)):
     grid = grid.copy()
-    context_area = grid.geometry.union_all().buffer(500)
+    context_area = grid.geometry.union_all().buffer(max(buffer_distances))
     nearby_parks = parks[parks.intersects(context_area)]
     park_union = nearby_parks.geometry.union_all()
     overlaps = intersection(grid.geometry.array, park_union)
     grid["park_area_inside_m2"] = area(overlaps)
 
     centres = grid.geometry.centroid
-    for radius in (250, 500):
+    for radius in buffer_distances:
         # Park buffers use 8 segments/quadrant; population/count buffers use 16.
         zones = buffer(centres.array, radius)
         overlaps = intersection(zones, park_union)
