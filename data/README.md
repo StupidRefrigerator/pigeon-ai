@@ -178,7 +178,7 @@ The run takes about 2.5 minutes. It prints a report and writes regenerable outpu
 - `calibration.csv`, `folds.csv`, `stability.csv`, `fairness.csv`: prediction bands, per-fold scores, candidate overlap across seeds and feature sets, and the SEIFA decile audit.
 - `decision_tree.png`: depth-3 surrogate tree of the forest's predictions.
 
-`data/review/candidate_review.csv` is committed. A candidate is a hex predicted at or above the threshold with no toilet. Each run refreshes the model columns, appends new candidates as `unreviewed`, and never changes the human columns (`status`, `reviewer`, `reviewed_on`, `notes`). A row that stops being a candidate stays with `still_candidate=False`. Edit `status` to one of:
+`data/review/candidate_review.csv` is committed. A candidate is a hex predicted at or above the threshold with no toilet. Only the default run (`toilets`, `latest`, threshold 1.0) updates the file; runs with other settings leave it unchanged. Each default run refreshes the model columns, appends new candidates as `unreviewed`, and never changes the human columns (`status`, `reviewer`, `reviewed_on`, `notes`). A row that stops being a candidate stays with `still_candidate=False`. Edit `status` to one of:
 
 - `unreviewed`: not looked at yet.
 - `real_gap`: a toilet would plausibly belong here.
