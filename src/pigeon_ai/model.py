@@ -287,9 +287,14 @@ def run(target_name="toilets", feature_set="latest", threshold=THRESHOLD, today=
     found[["lat", "lng"]] = [[round(c, 5) for c in h3.cell_to_latlng(i)] for i in found["hex_id"]]
     for col in ("predicted_toilets", "p_any_toilet"):
         found[col] = found[col].round(4)
-    existing = load_review(review_path)
-    review = merge_review(existing, found, today or pd.Timestamp.today().date().isoformat())
-    save_review(review, review_path)
+    review = load_review(review_path)
+    # Only the default configuration owns the review file; experiments must not
+    # mark reviewed candidates as stale or add their own.
+    if (target_name, feature_set, threshold) == ("toilets", "latest", THRESHOLD):
+        review = merge_review(review, found, today or pd.Timestamp.today().date().isoformat())
+        save_review(review, review_path)
+    else:
+        print(f"Experiment run: {review_path.name} left unchanged.")
     counts, reviewed, share = review_progress(review)
 
     def block(title, table, **kw):
