@@ -40,13 +40,13 @@ def add_population_features(grid, boundaries):
     return grid
 
 
-def add_population_buffers(grid, boundaries):
+def add_population_buffers(grid, boundaries, buffer_distances=(250, 500)):
     grid = grid.copy()
-    context_area = grid.geometry.union_all().buffer(500)
+    context_area = grid.geometry.union_all().buffer(max(buffer_distances))
     context = select_population_context(boundaries, context_area)
     centres = grid.geometry.centroid
 
-    for radius in (250, 500):
+    for radius in buffer_distances:
         zones = grid[["hex_id", "geometry"]].copy()
         zones["geometry"] = centres.buffer(radius)
         population = allocate_population(zones, context)
