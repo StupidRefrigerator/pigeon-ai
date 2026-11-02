@@ -10,7 +10,7 @@ import pandas as pd
 import pytest
 
 from pigeon_ai.model import (
-    REVIEW_COLUMNS, TARGETS, ReviewStatus, cross_validate, load_review, merge_review,
+    REVIEW_COLUMNS, TARGETS, ReviewStatus, cross_validate, is_candidate, load_review, merge_review,
     save_review,
 )
 
@@ -37,7 +37,7 @@ def test_every_hex_predicted_once_and_blocks_never_split_across_folds():
 
 def candidates(*rows):
     return pd.DataFrame(
-        [dict(hex_id=h, lat=0.0, lng=0.0, predicted_toilets=p, p_any_toilet=0.5, top_drivers=d)
+        [dict(hex_id=h, lat=0.0, lng=0.0, toilet_count=0, kind="no_toilet", predicted_toilets=p, p_any_toilet=0.5, top_drivers=d)
          for h, p, d in rows])
 
 
@@ -85,3 +85,9 @@ def test_feature_sets_hold_no_label_identifier_or_sensitive_columns():
             assert len(features) == len(set(features))
             assert not [f for f in features if any(b in f for b in banned)]
             assert not {"lat", "lng", "lon"} & set(features)
+
+
+def test_candidates_are_empty_hexes_or_shortfalls_of_at_least_the_threshold():
+    pred = np.array([1.0, 0.9, 2.1, 1.5, 3.2])
+    actual = np.array([0, 0, 1, 1, 2])
+    assert is_candidate(pred, actual, 1.0).tolist() == [True, False, True, False, True]

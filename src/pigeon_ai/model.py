@@ -63,10 +63,10 @@ class ReviewStatus(StrEnum):
 
 
 REVIEW_COLUMNS = [
-    "hex_id", "lat", "lng", "predicted_toilets", "p_any_toilet", "top_drivers",
+    "hex_id", "lat", "lng", "toilet_count", "kind", "predicted_toilets", "p_any_toilet", "top_drivers",
     "first_flagged", "status", "reviewer", "reviewed_on", "notes", "still_candidate",
 ]
-MODEL_OUTPUTS = ["predicted_toilets", "p_any_toilet", "top_drivers"]
+MODEL_OUTPUTS = ["toilet_count", "kind", "predicted_toilets", "p_any_toilet", "top_drivers"]
 
 
 # Modelling
@@ -101,7 +101,12 @@ def top_drivers(shap_values, features, n=3):
 
 
 def is_candidate(pred, actual, threshold=THRESHOLD):
-    return (pred >= threshold) & (actual == 0)
+    """Predicted at least `threshold` more toilets than exist. For an empty hex, predicted >= threshold."""
+    return (pred - actual) >= threshold
+
+
+def candidate_kind(actual):
+    return np.where(actual == 0, "no_toilet", "shortfall")
 
 
 def p_any(pred):
@@ -198,6 +203,7 @@ def load_review(path):
                 f"allowed: {allowed}")
     for col in ("predicted_toilets", "p_any_toilet"):
         review[col] = review[col].astype(float)
+    review["toilet_count"] = review["toilet_count"].astype(int)
     review["still_candidate"] = review["still_candidate"] == "True"
     return review[REVIEW_COLUMNS]
 
@@ -255,6 +261,7 @@ def run(target_name="toilets", feature_set="latest", threshold=THRESHOLD, today=
     hexes = pd.DataFrame({
         "hex_id": df["hex_id"], label: actual, "predicted_toilets": pred,
         "p_any_toilet": p_any(pred), "gap": pred - actual, "is_candidate": candidate,
+        "kind": np.where(candidate, candidate_kind(actual), ""),
         "fold": fold, "top_drivers": drivers})
     hexes.to_csv(out_dir / "hex_predictions.csv", index=False)
 
@@ -320,7 +327,8 @@ def run(target_name="toilets", feature_set="latest", threshold=THRESHOLD, today=
         f"\nSurrogate depth-3 tree R^2 vs forest predictions: {surrogate_r2:.3f}",
         "\n== Review progress ==\n" + counts.to_string()
         + f"\nShare of reviewed candidates that are real gaps: {share_text}",
-        f"\nCandidates this run: {int(candidate.sum())}; review rows: {len(review)}; "
+        f"\nCandidates this run: {int(candidate.sum())} "
+        f"({int((candidate & (actual == 0)).sum())} no_toilet, {int((candidate & (actual > 0)).sum())} shortfall); review rows: {len(review)}; "
         f"runtime: {perf_counter() - start:.0f}s",
     ]
     return "\n".join(parts)

@@ -8,7 +8,7 @@ This page records the modelling decisions for the toilet MVP, why we made them, 
 
 The target, `toilet_count`, records where toilets exist today. The model therefore learns where toilets usually sit, given what surrounds a place. It does not learn where toilets are needed.
 
-A hex the model predicts at 1.2 with no toilet is unusual compared with similar places in Sydney. Call it a **candidate**, not unmet need. The model ranks a busy place without a toilet highly, and that is the useful output. It measures gaps against Sydney's own typical provision. If Sydney under-provides a whole type of area, the model learns that as normal, which is why we run the fairness audit.
+A hex the model predicts at 1.2 with no toilet, or at 2.3 with one, is unusual compared with similar places in Sydney. Call it a **candidate**, not unmet need. The model ranks a busy place without a toilet highly, and that is the useful output. It measures gaps against Sydney's own typical provision. If Sydney under-provides a whole type of area, the model learns that as normal, which is why we run the fairness audit.
 
 We accept this for the MVP and state it in the demo. Stronger claims need a better target, such as planner-assessed provision against a shared rubric, which we do not have.
 
@@ -40,7 +40,7 @@ Each entry lists the decision, the reason, and the trade-off.
 
 12. **Validate on held-out geographic blocks.** Hexes are grouped by their res-6 H3 parent, about 36 km² each, giving 90 blocks. The blocks are dealt into 5 groups of 18. Each round trains on 4 groups and predicts the fifth, so every hex is predicted once by a model that never saw its area. A random split scored almost the same, so the score is not inflated by neighbours. The block split matters for the output, because a model that has seen a hex repeats its real count and hides the gap.
 
-13. **Flag a candidate when the prediction is at least 1 and the hex has no toilet.** A prediction of 1 means at least a 63% chance of a toilet. The threshold is a choice, not something learned. At 1 the rule flags 106 hexes. At 0.5 it would flag 633, and at 1.5 it would flag 24.
+13. **Flag a candidate when the prediction is at least 1 more than the real count.** For an empty hex this means a prediction of 1 or more, which is at least a 63% chance of a toilet. For a hex with toilets it is a `shortfall`, such as 1 toilet predicted at 2.3. The threshold is a choice, not something learned. At 1 the rule flags 120 hexes: 106 with no toilet and 14 shortfalls, all of them hexes with 1 toilet predicted at 2.0 to 2.4. For empty hexes alone, a threshold of 0.5 would flag 633 and 1.5 would flag 24.
 
 14. **Track every candidate in a review file.** `data/review/candidate_review.csv` is committed. A person sets `status` to `unreviewed`, `real_gap`, `toilet_not_on_map`, or `not_public_place`, and any other value fails the next run. Reruns never change human columns, and only the default configuration updates the file. The top candidates include large shopping centres such as Liverpool and Bondi Junction, which probably have toilets the public map does not list.
 
@@ -58,9 +58,9 @@ Each entry lists the decision, the reason, and the trade-off.
 | Baselines | Is the forest better than a simple rule? | Ranking by shops within 500 m gets 65 of the top 100 and PR-AUC 0.29. Population alone gets 48 and 0.25. |
 | Calibration | Can predictions be read literally? | Predicted 2,632 against 2,570 actual. Every prediction band matches its actual average within 0.06. |
 | Per-fold | Is performance consistent across areas? | Deviance 0.37 to 0.45 and PR-AUC 0.46 to 0.58 across the 5 folds |
-| Stability | Do candidates survive a different random seed or feature set? | 101 to 103 of 106 survive a new seed. 92 of V1's 100 survive the feature change. |
-| Fairness | Do candidates or errors differ by disadvantage? | Predicted/actual ratio 0.91 to 1.14 in every SEIFA decile. Deciles 9 and 10 (least disadvantaged) have 1.5 candidates per 1,000 hexes, against 3 to 10 elsewhere. Not yet explained. |
-| Review | Are candidates real gaps? | Not started. 106 candidates are `unreviewed`. |
+| Stability | Do candidates survive a different random seed or feature set? | 113 to 116 of 120 survive a new seed. 105 of V1's 115 survive the feature change. |
+| Fairness | Do candidates or errors differ by disadvantage? | Predicted/actual ratio 0.91 to 1.14 in every SEIFA decile. Deciles 9 and 10 (least disadvantaged) have 1.5 candidates per 1,000 hexes, against 5 to 13 elsewhere. Not yet explained. |
+| Review | Are candidates real gaps? | Not started. 120 candidates are `unreviewed`. |
 
 The review eval is the one that decides whether the product works. Review at least the top 30 candidates and report the share that are `real_gap`.
 
@@ -82,3 +82,4 @@ The review eval is the one that decides whether the product works. Review at lea
 
 - 2026-11-02: First version. Random forest replaces the earlier gradient-boosting proposal after the spatial comparison.
 - 2026-11-02: Moved to PR #4's extended dataset and the 28-column `latest` feature set. Added the target registry, the review file and its statuses, and the evals table. `load_experiment` returns counts again.
+- 2026-11-02: Candidate rule now flags shortfalls too: a hex with toilets whose prediction is at least 1 higher. The review file gains `toilet_count` and `kind`.

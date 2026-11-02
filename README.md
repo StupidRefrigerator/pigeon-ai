@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 ## Model
 
-The model predicts how many public toilets a hexagon would typically have, given what is around it. A hexagon with a high prediction and no toilet is a **candidate**: a place to check for a missing toilet. Design decisions and their trade-offs are in [docs/model-decisions.md](docs/model-decisions.md).
+The model predicts how many public toilets a hexagon would typically have, given what is around it. A hexagon predicted to have at least one more toilet than it has is a **candidate**: a place to check for a missing toilet. Design decisions and their trade-offs are in [docs/model-decisions.md](docs/model-decisions.md).
 
 ### Train and evaluate
 
@@ -44,7 +44,7 @@ Optional flags:
 | Flag | Default | Effect |
 |---|---|---|
 | `--features` | `latest` | Feature set: `latest` (28 columns) or `v1` (19 columns). |
-| `--threshold` | `1.0` | Predicted count at or above which an empty hexagon is a candidate. |
+| `--threshold` | `1.0` | How many more toilets than exist the prediction must be to flag a candidate. |
 | `--target` | `toilets` | Infrastructure type. Only `toilets` exists today. |
 
 A run with non-default flags is an experiment. It prints the report and writes `data/model/`, but leaves the review file unchanged.
@@ -71,7 +71,9 @@ The script uses 5-fold spatial cross-validation. Instead of one fixed test set, 
 3. For each group, train a forest on the other 4 groups. Predict this group's hexagons, which are the test set for this turn, and record why each prediction came out as it did (SHAP).
 4. Combine the 5 test sets. Each hexagon now has one prediction from a model that never saw it.
 5. Compute the evals by comparing those predictions with the real toilet counts. Per-fold evals use each turn's test set on its own.
-6. Flag candidates and update the review file. A candidate is a hexagon predicted at 1.0 or more that has no toilet: a place where a toilet would be typical but is missing.
+6. Flag candidates and update the review file. A candidate is a hexagon whose prediction is at least 1.0 more than its real toilet count: a place where similar places in Sydney typically have more toilets. There are two kinds:
+   - `no_toilet`: the hexagon has no toilet and is predicted at 1.0 or more.
+   - `shortfall`: the hexagon has toilets but is predicted at least 1.0 more, such as 1 toilet predicted at 2.3.
 7. Draw the depth-3 decision tree that summarises the forest.
 
 Each run retrains from scratch. The script does not save a trained model file, because every prediction it reports comes from the cross-validation models.
@@ -99,7 +101,7 @@ All evals use the held-out predictions. Results are from the current `latest` ru
 | Baselines | Is the forest better than a simple rule? | The same metrics for ranking by shops within 500 m, a population-only forest, and the average. | Shops ranking 65 top-100 hits. Population-only 48. |
 | Calibration | Can a prediction be read literally? | Group hexagons by predicted count, then compare the average prediction with the average actual count. | Every band within 0.06. Total 2,632 predicted, 2,570 actual. |
 | Per-fold | Is the model consistent across areas? | Deviance and PR-AUC for each fold. | Deviance 0.37 to 0.45. |
-| Stability | Do candidates depend on chance? | Rerun with random seeds 1 and 2, and with the `v1` features. Count candidates in common. | 101 to 103 of 106 across seeds. |
+| Stability | Do candidates depend on chance? | Rerun with random seeds 1 and 2, and with the `v1` features. Count candidates in common. | 113 to 116 of 120 across seeds. |
 | Fairness | Does the model treat areas differently by disadvantage? | Split hexagons into SEIFA IRSD deciles. Compare predicted with actual toilets and the candidate rate. SEIFA is never a model input. | Predicted/actual 0.91 to 1.14 in every decile. |
 | Review | Are the candidates real gaps? | Share of reviewed candidates marked `real_gap`. | Not started. |
 
@@ -110,6 +112,7 @@ All evals use the held-out predictions. Results are from the current `latest` ru
 | Column | Filled by | Values |
 |---|---|---|
 | `hex_id`, `lat`, `lng` | Script | Location of the hexagon. |
+| `toilet_count`, `kind` | Script | Real toilet count, and `no_toilet` or `shortfall`. |
 | `predicted_toilets`, `p_any_toilet`, `top_drivers` | Script | Updated on every default run. |
 | `first_flagged` | Script | Date the hexagon first became a candidate. |
 | `still_candidate` | Script | `False` if a later run no longer flags it. The row is kept. |
@@ -120,8 +123,8 @@ To review a candidate:
 
 1. Open `lat`, `lng` in a map, such as Google Maps.
 2. Set `status`:
-   - `real_gap`: a public toilet would plausibly belong here and none exists.
-   - `toilet_not_on_map`: a toilet exists, such as inside a shopping centre, but the National Public Toilet Map does not list it.
+   - `real_gap`: a public toilet (or, for a `shortfall`, another one) would plausibly belong here.
+   - `toilet_not_on_map`: a toilet exists, such as inside a shopping centre, but the National Public Toilet Map does not list it. For a `shortfall`, this means extra toilets exist beyond those listed.
    - `not_public_place`: the area is not open to the public, such as private or industrial land.
    - `unreviewed`: not checked yet. This is the default.
 3. Fill `reviewer`, `reviewed_on` and `notes`.

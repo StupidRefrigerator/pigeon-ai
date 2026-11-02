@@ -11,7 +11,7 @@ if __name__ == "__main__":
     parser.add_argument("--target", default="toilets", choices=list(TARGETS))
     parser.add_argument("--features", default="latest", help="feature set name, e.g. latest or v1")
     parser.add_argument("--threshold", type=float, default=THRESHOLD,
-                        help="predicted count at or above which an empty hex is a candidate")
+                        help="how many more toilets than exist the prediction must be to flag a candidate")
     args = parser.parse_args()
     if args.features not in TARGETS[args.target].feature_sets:
         parser.error(f"--features must be one of {list(TARGETS[args.target].feature_sets)}")
