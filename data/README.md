@@ -161,3 +161,28 @@ python scripts/build_projections.py
 - OSM excludes `shop=vacant`, counts cafes/restaurants as food, and preserves distinct objects even when names match. Polygon destinations become representative points before projection; inside counts use `within`, buffer counts use `intersects`.
 - Park areas use unioned original polygons. Their historical Shapely buffers use 8 segments per quadrant; population/count buffers use GeoPandas's 16. These definitions are deliberately preserved.
 - Nearest-park queries use **all available park polygons**, retaining the corrected distances. OSM extraction uses bbox `150.45,-34.25,151.40,-33.35`, `complete_ways`, and shop/food/bus/station/park tag filters with referenced objects. Mapping and relation coverage can be incomplete; distances are not walking distances or globally complete park access estimates.
+
+## Model
+
+```bash
+python scripts/train_model.py                 # toilets, latest features
+python scripts/train_model.py --features v1   # 19-column feature set
+python scripts/train_model.py --threshold 1.0 # candidate cut-off (predicted count)
+```
+
+The run takes about 2.5 minutes. It prints a report and writes regenerable outputs to `data/model/` (git-ignored).
+
+- `hex_predictions.csv`: one out-of-fold prediction per hex, with `p_any_toilet`, `gap`, `is_candidate`, CV `fold` and the top three SHAP `top_drivers`.
+- `feature_importance.csv`: mean absolute SHAP value per feature.
+- `metrics.csv`: deviance, PR-AUC, predicted vs actual total, top-100 hits and candidate count for the forest and each baseline.
+- `calibration.csv`, `folds.csv`, `stability.csv`, `fairness.csv`: prediction bands, per-fold scores, candidate overlap across seeds and feature sets, and the SEIFA decile audit.
+- `decision_tree.png`: depth-3 surrogate tree of the forest's predictions.
+
+`data/review/candidate_review.csv` is committed. A candidate is a hex predicted at or above the threshold with no toilet. Each run refreshes the model columns, appends new candidates as `unreviewed`, and never changes the human columns (`status`, `reviewer`, `reviewed_on`, `notes`). A row that stops being a candidate stays with `still_candidate=False`. Edit `status` to one of:
+
+- `unreviewed`: not looked at yet.
+- `real_gap`: a toilet would plausibly belong here.
+- `toilet_not_on_map`: a toilet exists but is missing from the National Public Toilet Map.
+- `not_public_place`: the hex is not somewhere the public goes, such as private land.
+
+Any other status value makes the next run fail with the row and value named.
