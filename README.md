@@ -62,16 +62,19 @@ The model never sees location (`hex_id`, coordinates or council), SEIFA, demogra
 
 **Model.** A random forest regressor: 300 decision trees, each grown on a random sample of hexagons and features, with at least 20 hexagons per leaf. The forest's prediction is the average of the trees' predictions, read as an expected toilet count. The chance of at least one toilet is `1 - exp(-prediction)`.
 
-**Training and testing.** The script uses spatial cross-validation, so every hexagon is predicted by a model that never saw it:
+**Training and testing.** Resolution 9 is the unit the model predicts: each row, each prediction and each candidate is one res-9 hexagon. Resolution 6 is used only to decide which hexagons are tested together.
 
-1. Group the hexagons into 90 blocks by their H3 resolution-6 parent (about 36 km² each).
-2. Divide the blocks into 5 folds of 18 blocks.
-3. For each fold, train a forest on the other 4 folds, then predict every hexagon in this fold. Compute SHAP values for these predictions.
-4. Combine the 5 sets of predictions. Each hexagon now has one held-out prediction.
-5. Compute the evals on the held-out predictions.
-6. Flag candidates: predicted at least 1.0, actual 0.
-7. Fit a depth-3 decision tree to the forest's predictions and save it as a diagram.
-8. Merge the candidates into the review file.
+The script uses 5-fold spatial cross-validation. Instead of one fixed test set, it takes 5 turns, and each turn uses a different fifth of Sydney as the test set. After 5 turns, every hexagon has been tested exactly once, by a model that never saw it or its surrounding area.
+
+1. Load the 16,228 hexagons with their 28 input columns and their real toilet count.
+2. Put each hexagon in its res-6 block (about 36 km²), then split the 90 blocks into 5 groups of 18.
+3. For each group, train a forest on the other 4 groups. Predict this group's hexagons, which are the test set for this turn, and record why each prediction came out as it did (SHAP).
+4. Combine the 5 test sets. Each hexagon now has one prediction from a model that never saw it.
+5. Compute the evals by comparing those predictions with the real toilet counts. Per-fold evals use each turn's test set on its own.
+6. Flag candidates and update the review file. A candidate is a hexagon predicted at 1.0 or more that has no toilet: a place where a toilet would be typical but is missing.
+7. Draw the depth-3 decision tree that summarises the forest.
+
+Each run retrains from scratch. The script does not save a trained model file, because every prediction it reports comes from the cross-validation models.
 
 **Outputs.** In `data/model/` (regenerated each run, not committed):
 
@@ -80,6 +83,7 @@ The model never sees location (`hex_id`, coordinates or council), SEIFA, demogra
 | `hex_predictions.csv` | Prediction, chance of a toilet, gap, candidate flag, fold and top three drivers for each hexagon. |
 | `metrics.csv` | Headline metrics for the forest and each baseline. |
 | `calibration.csv`, `folds.csv`, `stability.csv`, `fairness.csv` | One file per eval below. |
+| `shap_values.csv` | SHAP value of every feature for every hexagon: how far each feature pushed that prediction up or down, in toilets. |
 | `feature_importance.csv` | Mean absolute SHAP value per feature. |
 | `decision_tree.png` | The depth-3 summary tree. |
 

@@ -258,6 +258,10 @@ def run(target_name="toilets", feature_set="latest", threshold=THRESHOLD, today=
         "fold": fold, "top_drivers": drivers})
     hexes.to_csv(out_dir / "hex_predictions.csv", index=False)
 
+    shap_table = pd.DataFrame(shap_values, columns=features).round(5)
+    shap_table.insert(0, "hex_id", df["hex_id"])
+    shap_table.to_csv(out_dir / "shap_values.csv", index=False)
+
     importance = pd.DataFrame({"feature": features, "mean_abs_shap": np.abs(shap_values).mean(axis=0)})
     importance = importance.sort_values("mean_abs_shap", ascending=False)
     importance.to_csv(out_dir / "feature_importance.csv", index=False)
