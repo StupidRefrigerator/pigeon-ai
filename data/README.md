@@ -161,3 +161,7 @@ python scripts/build_projections.py
 - OSM excludes `shop=vacant`, counts cafes/restaurants as food, and preserves distinct objects even when names match. Polygon destinations become representative points before projection; inside counts use `within`, buffer counts use `intersects`.
 - Park areas use unioned original polygons. Their historical Shapely buffers use 8 segments per quadrant; population/count buffers use GeoPandas's 16. These definitions are deliberately preserved.
 - Nearest-park queries use **all available park polygons**, retaining the corrected distances. OSM extraction uses bbox `150.45,-34.25,151.40,-33.35`, `complete_ways`, and shop/food/bus/station/park tag filters with referenced objects. Mapping and relation coverage can be incomplete; distances are not walking distances or globally complete park access estimates.
+
+## Model
+
+Training, the model architecture, the evals and the candidate review file are described in the [project README](../README.md#model).

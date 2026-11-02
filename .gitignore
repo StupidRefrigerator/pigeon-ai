@@ -30,3 +30,6 @@ dist/
 
 # Trained models
 models/
+
+# Regenerable model outputs
+data/model/
