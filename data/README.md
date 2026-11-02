@@ -164,25 +164,4 @@ python scripts/build_projections.py
 
 ## Model
 
-```bash
-python scripts/train_model.py                 # toilets, latest features
-python scripts/train_model.py --features v1   # 19-column feature set
-python scripts/train_model.py --threshold 1.0 # candidate cut-off (predicted count)
-```
-
-The run takes about 2.5 minutes. It prints a report and writes regenerable outputs to `data/model/` (git-ignored).
-
-- `hex_predictions.csv`: one out-of-fold prediction per hex, with `p_any_toilet`, `gap`, `is_candidate`, CV `fold` and the top three SHAP `top_drivers`.
-- `feature_importance.csv`: mean absolute SHAP value per feature.
-- `metrics.csv`: deviance, PR-AUC, predicted vs actual total, top-100 hits and candidate count for the forest and each baseline.
-- `calibration.csv`, `folds.csv`, `stability.csv`, `fairness.csv`: prediction bands, per-fold scores, candidate overlap across seeds and feature sets, and the SEIFA decile audit.
-- `decision_tree.png`: depth-3 surrogate tree of the forest's predictions.
-
-`data/review/candidate_review.csv` is committed. A candidate is a hex predicted at or above the threshold with no toilet. Only the default run (`toilets`, `latest`, threshold 1.0) updates the file; runs with other settings leave it unchanged. Each default run refreshes the model columns, appends new candidates as `unreviewed`, and never changes the human columns (`status`, `reviewer`, `reviewed_on`, `notes`). A row that stops being a candidate stays with `still_candidate=False`. Edit `status` to one of:
-
-- `unreviewed`: not looked at yet.
-- `real_gap`: a toilet would plausibly belong here.
-- `toilet_not_on_map`: a toilet exists but is missing from the National Public Toilet Map.
-- `not_public_place`: the hex is not somewhere the public goes, such as private land.
-
-Any other status value makes the next run fail with the row and value named.
+Training, the model architecture, the evals and the candidate review file are described in the [project README](../README.md#model).
