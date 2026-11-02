@@ -86,8 +86,8 @@ EXPERIMENTS = {
 def load_experiment(version):
     """Return (X, y) from the master CSV, preserving row order.
 
-    X and y share a hex_id index (retrieve with X.index). The binary target
-    is named has_toilet: 1 when toilet_count > 0, otherwise 0.
+    X and y share a hex_id index (retrieve with X.index). y is toilet_count,
+    the number of public toilets in each hexagon.
     V7 retains approved demographic NaNs; handle them in future training code.
     V8 is a planning scenario; growth percentages are NaN for zero population.
     """
@@ -120,5 +120,5 @@ def load_experiment(version):
 
     data = data.set_index("hex_id")
     X = data.loc[:, feature_names].copy()
-    y = data["toilet_count"].gt(0).astype(int).rename("has_toilet")
+    y = data["toilet_count"]
     return X, y

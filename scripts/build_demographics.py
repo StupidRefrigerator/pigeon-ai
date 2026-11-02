@@ -31,7 +31,7 @@ def main():
     old_columns = [column for column in original if column not in DEMOGRAPHIC_FEATURES]
     assert set(EXTENDED_FEATURES + ACCESSIBILITY_FEATURES + ["toilet_count"]) <= set(old_columns)
     pd.testing.assert_frame_equal(original[before["V1"][0].columns], before["V1"][0], check_exact=True)
-    pd.testing.assert_series_equal(original.toilet_count.gt(0).astype(int).rename("has_toilet"), before["V1"][1])
+    pd.testing.assert_series_equal(original.toilet_count, before["V1"][1])
     temporary = path.with_suffix(".csv.tmp")
     try:
         print("Read local G04A/G04B, G35 and SEIFA Table 2/Table 6", flush=True)

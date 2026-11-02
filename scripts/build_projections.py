@@ -29,7 +29,7 @@ def main():
     original = pd.read_csv(path).set_index("hex_id")
     old_columns = [column for column in original if column not in PROJECTION_FEATURES]
     pd.testing.assert_frame_equal(original[before["V1"][0].columns], before["V1"][0], check_exact=True)
-    pd.testing.assert_series_equal(original.toilet_count.gt(0).astype(int).rename("has_toilet"), before["V1"][1])
+    pd.testing.assert_series_equal(original.toilet_count, before["V1"][1])
     temporary = path.with_suffix(".csv.tmp")
     try:
         print("Validate native NSW SA2 and collapsed-unit workbook mappings", flush=True)

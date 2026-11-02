@@ -113,7 +113,7 @@ X, y = load_experiment("V1")
 ```
 
 - `X`: Feature DataFrame indexed by `hex_id`.
-- `y`: Binary target (`1` = public toilet present, `0` = absent).
+- `y`: `toilet_count`, the number of public toilets in each hexagon. Use `y > 0` if you need a present/absent label.
 - Experiment definitions are in `src/pigeon_ai/experiments.py`.
 
 ### Data Files

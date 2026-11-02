@@ -119,8 +119,8 @@ def build(versions):
             X, y = load_experiment(version)
             assert X.index.equals(result.index) and X.index.equals(y.index)
             assert list(X.columns) == EXPERIMENTS[version]["features"]
-            assert not {"hex_id", "toilet_count", "has_toilet", "geometry"} & set(X.columns)
-            pd.testing.assert_series_equal(y, result.toilet_count.gt(0).astype(int).rename("has_toilet"))
+            assert not {"hex_id", "toilet_count", "geometry"} & set(X.columns)
+            pd.testing.assert_series_equal(y, result.toilet_count)
             if version == "V5":
                 pd.testing.assert_frame_equal(
                     X[FEATURES], original_experiments["V1"][0], check_exact=True,
