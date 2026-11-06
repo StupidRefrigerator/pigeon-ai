@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 import shap
 from sklearn.ensemble import RandomForestRegressor
+from sklearn.impute import SimpleImputer
 from sklearn.metrics import average_precision_score, mean_poisson_deviance
 from sklearn.model_selection import GroupKFold
 from sklearn.tree import DecisionTreeRegressor, plot_tree
@@ -77,19 +78,44 @@ def make_forest(seed):
     )
 
 
-def cross_validate(df, features, label, seed=0, with_shap=False):
+def cross_validate(df, features, label, seed=0, with_shap=False, folds=None):
     """Out-of-fold predictions grouped by res-6 parent, so no block spans train and test."""
     X, y = df[features].to_numpy(), df[label].to_numpy()
     groups = [h3.cell_to_parent(h, BLOCK_RESOLUTION) for h in df["hex_id"]]
     pred = np.zeros(len(df))
     fold = np.zeros(len(df), dtype=int)
     shap_values = np.zeros(X.shape) if with_shap else None
-    for k, (train, test) in enumerate(GroupKFold(n_splits=N_FOLDS).split(X, y, groups)):
-        forest = make_forest(seed).fit(X[train], y[train])
-        pred[test], fold[test] = forest.predict(X[test]), k
+    if folds is None:
+        folds = spatial_folds(df)
+    folds = np.asarray(folds)
+    if folds.shape != (len(df),) or set(folds) != set(range(N_FOLDS)):
+        raise ValueError("Expected one fold per row and all five folds")
+    if pd.DataFrame({"group": groups, "fold": folds}).groupby("group").fold.nunique().max() != 1:
+        raise ValueError("A spatial block spans multiple folds")
+    seen = np.zeros(len(df), dtype=int)
+    for k in range(N_FOLDS):
+        train, test = np.flatnonzero(folds != k), np.flatnonzero(folds == k)
+        train_X, test_X = X[train], X[test]
+        if np.isnan(train_X).any() or np.isnan(test_X).any():
+            imputer = SimpleImputer(strategy="median", keep_empty_features=True)
+            train_X = imputer.fit_transform(train_X)
+            test_X = imputer.transform(test_X)
+        forest = make_forest(seed).fit(train_X, y[train])
+        pred[test], fold[test] = forest.predict(test_X), k
+        seen[test] += 1
         if with_shap:
-            shap_values[test] = shap.TreeExplainer(forest).shap_values(X[test])
+            shap_values[test] = shap.TreeExplainer(forest).shap_values(test_X)
+    assert (seen == 1).all()
     return pred, fold, shap_values
+
+
+def spatial_folds(df):
+    """Deterministic existing GroupKFold assignment, independent of predictors."""
+    groups = [h3.cell_to_parent(h, BLOCK_RESOLUTION) for h in df["hex_id"]]
+    folds = np.empty(len(df), dtype=int)
+    for k, (_, test) in enumerate(GroupKFold(n_splits=N_FOLDS).split(df, groups=groups)):
+        folds[test] = k
+    return folds
 
 
 def top_drivers(shap_values, features, n=3):

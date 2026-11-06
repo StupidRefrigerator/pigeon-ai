@@ -10,8 +10,8 @@ import gdown
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from pigeon_ai.paths import RAW
 
-# Share link to pigeon-ai-raw.zip in the team Google Drive; see DATA.md.
-DRIVE_URL = "https://drive.google.com/drive/folders/1mbuAEllISFlfmRX8O7300f_iwsCJ04cM?usp=sharing"
+# Optional share link to the ZIP file itself, not its Drive folder; see DATA.md.
+DRIVE_URL = ""
 
 REQUIRED = [
     "national_toilets.csv",
@@ -25,7 +25,7 @@ REQUIRED = [
 
 def main(url):
     if not url:
-        sys.exit("No Drive link: set DRIVE_URL or pass the link as an argument.")
+        sys.exit("Pass the share link to pigeon-ai-raw.zip (not the Drive folder); see DATA.md.")
     RAW.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as temporary:
         archive = Path(temporary) / "pigeon-ai-raw.zip"

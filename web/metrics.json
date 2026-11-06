@@ -1,0 +1,20 @@
+{
+  "source": "Saved five-fold res-6 spatial CV, seed 0; original 16,228 hexagons. These are evaluation metrics, not scores of the final full-data fits.",
+  "models": {
+    "V1": {
+      "deviance": 0.4267731792105985,
+      "pr_auc": 0.5109079263798934,
+      "top100_hits": 83.0
+    },
+    "V5": {
+      "deviance": 0.4210025922344428,
+      "pr_auc": 0.5159696566100415,
+      "top100_hits": 86.0
+    },
+    "V6": {
+      "deviance": 0.4204626345906836,
+      "pr_auc": 0.5140123839788231,
+      "top100_hits": 84.0
+    }
+  }
+}

@@ -1,0 +1,76 @@
+:root {
+  color-scheme: dark;
+  --paper: #0a0a0a;
+  --ink: #ededed;
+  --muted: #aaa;
+  --line: #383838;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+main { max-width: 1280px; margin: 0 auto; padding: 24px 28px 40px; }
+section + section { margin-top: 30px; }
+h1, h2, h3 { color: #fff; line-height: 1.35; font-weight: 600; }
+h1 { font-size: 28px; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+h2 { font-size: 22px; margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+h3 { font-size: 16px; margin: 14px 0 10px; }
+p { margin: 10px 0; }
+ul { margin: 14px 0; padding-left: 24px; }
+li + li { margin-top: 4px; }
+.note, .coverage-note { color: var(--muted); font-size: 13px; }
+a { color: inherit; text-decoration: underline; }
+code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .93em; }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; font-variant-numeric: tabular-nums; }
+th, td { border: 1px solid var(--line); padding: 7px 9px; vertical-align: top; }
+th { font-weight: 600; }
+th:not(:nth-child(2)), td:not(:nth-child(2)) { white-space: nowrap; }
+td:nth-child(2) { min-width: 220px; }
+.search { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px; margin: 18px 0 8px; }
+label { display: flex; flex-direction: column; gap: 5px; font-size: 13px; }
+.location-label { width: 340px; max-width: 100%; }
+.radius-label { width: 100px; }
+input, button { font: inherit; color: var(--ink); border: 1px solid #555; background: #151515; border-radius: 0; padding: 7px 10px; min-height: 38px; }
+input { width: 100%; }
+button { cursor: pointer; background: #222; padding-inline: 18px; }
+button:hover { background: #303030; }
+button:disabled { opacity: .6; cursor: wait; }
+input:focus-visible, button:focus-visible, a:focus-visible, .table-scroll:focus-visible { outline: 2px solid #ccc; outline-offset: 2px; }
+#status { font-size: 13px; margin: 14px 0; }
+#status.error { color: #fff; text-decoration: underline; }
+.maps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.map { height: 330px; border: 1px solid var(--line); background: #222; color-scheme: light; }
+.map-total { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 7px; color: var(--muted); font-size: 12px; }
+.map-total strong { color: var(--ink); font-weight: 500; }
+.legend-row { margin-top: 16px; font-size: 12px; }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.legend span { display: inline-flex; align-items: center; gap: 5px; color: var(--muted); }
+.legend i { width: 12px; height: 10px; }
+.legend-row p { color: var(--muted); }
+.details { margin: 22px 0; padding-top: 4px; border-top: 1px solid var(--line); }
+#detail-title { overflow-wrap: anywhere; }
+#actual-detail, .empty-details { color: var(--muted); font-size: 13px; }
+.detail-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.detail-numbers { display: flex; gap: 24px; font-variant-numeric: tabular-nums; }
+.detail-numbers span { display: block; font-size: 12px; color: var(--muted); }
+.detail-numbers strong { font-size: 16px; font-weight: 500; }
+.candidate, .importance-label, .importance-row { font-size: 12px; }
+.importance-label { color: var(--muted); margin-top: 14px; }
+.importance-row { display: flex; justify-content: space-between; gap: 10px; }
+.importance-row span { overflow-wrap: anywhere; }
+.importance-row strong { font-weight: 500; }
+/* Leave the geographic colors intact; only make Leaflet text readable. */
+.leaflet-container { font-family: inherit; color: #222; }
+.leaflet-tooltip { color: #222; font-size: 12px; }
+.leaflet-control-attribution { font-size: 9px !important; }
+@media (max-width: 720px) {
+  main { padding: 20px 16px 30px; }
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  .maps, .detail-grid { grid-template-columns: 1fr; }
+  .map { height: 330px; }
+}
