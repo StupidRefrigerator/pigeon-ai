@@ -5,9 +5,12 @@ Raw data is too large for Git and lives in the team Google Drive as one zip, `pi
 ## Getting the data
 
 ```sh
-python scripts/download_data.py            # uses DRIVE_URL in the script
-python scripts/download_data.py "<link>"   # or pass the share link
+python scripts/download_data.py "<share link to pigeon-ai-raw.zip itself>"
 ```
+
+Get the ZIP-file share link from the [team Drive folder](https://drive.google.com/drive/folders/1mbuAEllISFlfmRX8O7300f_iwsCJ04cM?usp=sharing).
+The folder URL itself is not a downloadable ZIP. You can optionally set the
+file link as `DRIVE_URL` in the script.
 
 This downloads the zip, extracts it into `data/raw/`, and checks that the required files exist. Manual alternative: download the zip from Drive and unzip it into `data/raw/`.
 

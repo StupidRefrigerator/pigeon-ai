@@ -37,7 +37,7 @@ The model predicts how many public toilets a hexagon would typically have, given
    The run takes about 2.5 minutes. It trains and tests the model, prints a report of every eval, and writes the output files.
 3. Read the report. Check that the forest beats every baseline and that the predicted total is close to the actual total.
 4. Open `data/review/candidate_review.csv` and review candidates from the top. See [Review candidates](#review-candidates).
-5. Commit the review file. Do not commit `data/model/`; the script regenerates it.
+5. Commit the review file. Keep generated evaluation outputs in `data/model/` uncommitted; only the three shared inference models under `data/model/final/` are included in Git.
 
 Optional flags:
 
@@ -138,3 +138,164 @@ Each default run merges new results into the file. It updates the script columns
 - [docs/model-decisions.md](docs/model-decisions.md): model design decisions and their trade-offs.
 
 The processed datasets in `data/processed/` are committed. You don't need raw data to work on the model.
+
+### Compare dataset experiments V1–V10
+
+```sh
+python scripts/compare_experiments.py
+```
+
+This reuses the count forest (300 trees, leaf size 20, max_features 0.5),
+res-6 spatial CV, seeds 0/1/2, metrics, candidate rule and held-out SHAP.
+Outputs go only to the git-ignored `data/model/experiments/` directory; the
+review file and default training outputs are untouched.
+
+- `comparison.csv`: one full-coverage row per experiment, including feature/row
+  counts, metrics and comparability notes.
+- `comparison_v1_area.csv`: all experiments scored on the original V1 hexagons.
+- `V1_predictions.csv` through `V10_predictions.csv`: the same schema as the
+  default hex predictions (IDs, actual/predicted counts, gap, candidate, fold,
+  probability, kind and top three held-out SHAP drivers), ready for a future map.
+- `V*_folds.csv`, `V*_feature_importance.csv`, `V*_stability.csv`: fold metrics,
+  mean absolute held-out SHAP and candidate overlap across seeds.
+- `report.txt`: readable comparison and improvements over V1 by deviance.
+
+For a smoke run use `--versions V2 --no-shap --no-stability --out-dir /tmp/pigeon-smoke`.
+Omitting SHAP leaves `top_drivers` empty; normal runs include it.
+
+Experiments use exactly the registered inputs from `load_experiment`, including
+`population_density`, which the production model omits as redundant. Thus the
+experiment V1 is not identical to `train_model.py --features v1`. V7 explicitly
+includes Census age/households and SEIFA for feature comparison: these are
+independent of toilet labels, but can encode historical provision inequalities.
+Their inclusion is not a recommendation to change production inputs. V8 includes
+future population scenarios and is exploratory, not evidence of forecasting
+future toilets from historical data. Missing predictors use training-fold median
+imputation only (a feature entirely absent from training is filled with zero).
+No labels, toilet-derived variables, IDs or location columns enter the forest.
+
+V1–V8 have identical test hexagons and res-6 fold assignments. V9/V10 retain those
+assignments for every shared block; new blocks keep their full-area GroupKFold
+assignment. The resulting expanded folds can be uneven. All rows in a held-out
+block, including added rows, are excluded from training. Full-area V9/V10 metrics
+have different populations and must be assessed separately. Their V1-area metrics
+compare the same test population, with different training coverage. They do not
+measure extrapolation to entirely unseen growth suburbs. All comparisons remain
+single spatial partitions, without confidence intervals or hyperparameter tuning;
+PR-AUC is average precision, and top-100 hits measure existing toilets, not need.
+
+### Local V1 / V5 / V6 comparison page
+
+For installation and launch commands, see [Running the Model Comparison Webpage](#running-the-model-comparison-webpage). To regenerate the shared models when needed:
+
+```sh
+python scripts/train_final_models.py
+```
+
+Open **http://127.0.0.1:8000**. Choose a Sydney suburb or listed landmark (for
+example Town Hall, Parramatta or Bondi Junction), set a radius in km, and click
+**Analyze area**. You can also enter `latitude, longitude`. Pan/zoom any map to
+move all three together. Click a hexagon to see its actual count, all three
+predictions, nonnegative gaps, candidate flags and model-wide feature importance.
+Use `--port 8001` on the server command if port 8000 is occupied; Ctrl+C stops it.
+
+Training performs just one full-data fit per version, using `load_experiment()`
+and the existing `make_forest(seed=0)` settings. It preserves the exact registered
+20/26/23 features (including density), fits median imputation, and writes
+`V1.pkl`, `V5.pkl`, `V6.pkl` and matching readable JSON metadata under
+`data/model/final/`. Metadata includes the ordered features, source dataset,
+training time, seed, scikit-learn version and feature importance. These six inference artifacts are allowed into Git for teammates to use.
+Load only trusted repository or locally trained pickles; regenerate after changing
+processed features or the Python/scikit-learn environment.
+The server loads them once at startup and never trains on an Analyze request.
+
+Required local feature tables:
+
+- `data/processed/sydney_hex_features.csv` for V1.
+- `data/processed/sydney_extended_features.csv` with the 1 km and accessibility
+  columns for V5/V6.
+
+These processed files are already in the repository. If rebuilding, use the
+existing [data pipeline](data/README.md#running-the-pipeline), then
+`python scripts/build_experiments.py --versions V5` and
+`python scripts/build_accessibility.py`. The accessibility builder also checks
+the existing V9/V10 tables; see [data README](data/README.md) for its prerequisites.
+Raw inputs come from the team's shared Drive as described in `DATA.md`.
+
+The committed `data/reference/sydney_places.json` contains 937 Sydney suburb
+representative points and selected landmarks. To rebuild it from the existing
+raw ABS suburb and Greater Sydney boundary files, run `python scripts/build_places.py`.
+Lookup is local; unlisted landmarks/addresses require coordinates. Leaflet 1.9.4 and its license are included in `web/vendor/leaflet/`.
+OpenStreetMap basemap tiles need internet access; lookup, inference and hexagon
+overlays run locally.
+No Node install, frontend build, database or web framework is needed.
+
+The summary's `web/metrics.json` is a small checked-in snapshot of the completed
+V1/V5/V6 spatial-CV comparison, with its provenance. Ignored experiment CSVs are
+not needed to run the app. Heatmaps run the final full-data models on existing
+study-area feature rows; their predictions are in-sample, so use the spatial-CV
+metrics for evaluation. Cells are selected by center-to-location great-circle
+distance, and circles near the study boundary may have partial coverage.
+The same fixed color bins are used on every map. Gap is
+`max(0, predicted_count - actual_count)`; candidates have a gap of at least 1.
+Feature importance is global forest impurity importance, not a local explanation
+or causal evidence. Gaps remain candidates for investigation, not measured need.
+This local prototype supports only V1/V5/V6 and does not modify review records.
+
+
+## Running the Model Comparison Webpage
+
+From the repository root after cloning/pulling, use Python 3.14 (tested with
+3.14.3) and the pinned dependencies, especially scikit-learn 1.9.1:
+
+```sh
+python3.14 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python scripts/serve_comparison.py
+```
+
+On Windows, activate with `.venv\Scripts\activate` instead. Open
+**http://127.0.0.1:8000**. Select a place and radius, then click **Analyze**.
+No Node installation or frontend build is needed. Internet access is needed for
+OpenStreetMap tiles; the interface, location lookup and predictions are local.
+
+The repository must include:
+
+- `data/processed/sydney_hex_features.csv` and
+  `data/processed/sydney_extended_features.csv` (with 1 km/accessibility columns).
+- `data/model/final/V1.pkl`, `V5.pkl`, `V6.pkl` and their matching `.json` files.
+- `data/reference/sydney_places.json`, `web/` (including vendored Leaflet and its
+  license), `src/pigeon_ai/` and the server script.
+
+The processed tables are already tracked. The six saved-model files are about
+29 MB total and are explicitly allowed by `.gitignore`; include them in the
+commit along with the new webpage source. No raw data or ignored experiment
+outputs are required for normal startup. The V1–V10 report table is a static
+snapshot in `web/index.html` (V10 pending); `web/metrics.json` supplies the saved
+V1/V5/V6 evaluation metadata. Neither reads local experiment CSVs at runtime.
+
+If the saved models are absent or need replacing, run this once before serving:
+
+```sh
+python scripts/train_final_models.py
+```
+
+If rebuilding processed tables from the team's original raw snapshot is necessary,
+install the native osmium/GDAL tools described in [data/README.md](data/README.md),
+then use the existing pipeline:
+
+```sh
+python scripts/download_data.py "<share link to pigeon-ai-raw.zip itself>"
+python scripts/run_pipeline.py
+python scripts/build_experiments.py --versions V5 V9 V10
+python scripts/build_accessibility.py
+python scripts/train_final_models.py
+python scripts/serve_comparison.py
+```
+
+Alternatively, unzip the team's archive directly into `data/raw/` as described in
+[DATA.md](DATA.md). V9/V10 feature tables are included in the rebuild command
+because the existing accessibility builder checks them; this does not train or
+evaluate those models. Use the original Drive snapshot to preserve input values.
+Do not run `compare_experiments.py` just to launch the webpage.

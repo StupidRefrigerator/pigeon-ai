@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PIGEON-AI — Dataset Comparison</title>
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/vendor/leaflet/leaflet.js"></script>
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <main>
+    <section aria-labelledby="comparison-title">
+      <h1 id="comparison-title">PIGEON-AI — Dataset Comparison</h1>
+      <p>Saved five-fold spatial cross-validation results for the toilet-count experiments.</p>
+      <div class="table-scroll" role="region" aria-label="Dataset comparison table" tabindex="0">
+        <table>
+          <thead><tr><th scope="col">Version</th><th scope="col">Description</th><th scope="col">Hexagons</th><th scope="col">Features</th><th scope="col">Poisson deviance</th><th scope="col">PR-AUC</th><th scope="col">Top-100 hits</th><th scope="col">Status</th></tr></thead>
+          <tbody>
+            <tr><td>V1</td><td>Baseline: population, amenities, transport and parks</td><td>16,228</td><td>20</td><td>0.4268</td><td>0.5109</td><td>83</td><td>Completed</td></tr>
+            <tr><td>V2</td><td>Population only</td><td>16,228</td><td>4</td><td>0.6307</td><td>0.2499</td><td>47</td><td>Completed</td></tr>
+            <tr><td>V3</td><td>Amenities, transport and parks only</td><td>16,228</td><td>16</td><td>0.4350</td><td>0.5037</td><td>85</td><td>Completed</td></tr>
+            <tr><td>V4</td><td>Local features: inside hexagon and within 250 m</td><td>16,228</td><td>13</td><td>0.4377</td><td>0.4958</td><td>85</td><td>Completed</td></tr>
+            <tr><td>V5</td><td>Baseline + 1 km surrounding features</td><td>16,228</td><td>26</td><td>0.4210</td><td>0.5160</td><td>86</td><td>Completed</td></tr>
+            <tr><td>V6</td><td>Baseline + pedestrian accessibility</td><td>16,228</td><td>23</td><td>0.4205</td><td>0.5140</td><td>84</td><td>Completed</td></tr>
+            <tr><td>V7</td><td>Baseline + demographics and SEIFA</td><td>16,228</td><td>26</td><td>0.4244</td><td>0.5115</td><td>84</td><td>Completed</td></tr>
+            <tr><td>V8</td><td>Baseline + future population projections (exploratory)</td><td>16,228</td><td>24</td><td>0.4281</td><td>0.5109</td><td>86</td><td>Completed</td></tr>
+            <tr><td>V9</td><td>Expanded study area including growth suburbs</td><td>17,336</td><td>20</td><td>0.4102</td><td>0.5071</td><td>84</td><td>Completed</td></tr>
+            <tr><td>V10</td><td>All Greater Sydney, including rural areas</td><td>97,733</td><td>20</td><td>Pending</td><td>Pending</td><td>Pending</td><td>Pending</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li>On the comparable historical study-area experiments, V5 has the highest PR-AUC and V6 the lowest deviance.</li>
+        <li>V2 performs substantially worse than the baseline.</li>
+        <li>V9's expanded coverage does not meaningfully improve original-area performance (deviance 0.4271; PR-AUC 0.5104).</li>
+      </ul>
+      <p class="note">V1–V8 use the same 16,228 hexagons and folds; V8 is an exploratory future-population scenario. V9's full-area deviance is not directly comparable to V1–V8. V10 is incomplete and remains pending. Source: saved <code>comparison.csv</code> and the verified report.</p>
+    </section>
+
+    <section aria-labelledby="selected-title">
+      <h2 id="selected-title">Selected Models: V1, V5 and V6</h2>
+      <ul>
+        <li><strong>V1 — Baseline:</strong> Reference for measuring improvements.</li>
+        <li><strong>V5 — 1 km surrounding features:</strong> Best PR-AUC (0.5160) and 86 top-100 hits.</li>
+        <li><strong>V6 — Pedestrian accessibility:</strong> Lowest deviance (0.4205).</li>
+      </ul>
+      <p>The differences are relatively small. We will compare their geographic predictions before selecting a final model.</p>
+    </section>
+
+    <section aria-labelledby="demo-title">
+      <h2 id="demo-title">Heatmap Demo</h2>
+      <p class="note">The saved final models run on existing study-area rows. These predictions are in-sample; use the spatial-CV results above for evaluation.</p>
+      <form id="search" class="search">
+        <label class="location-label" for="location">Sydney suburb or place<input id="location" name="location" list="places" value="Town Hall" placeholder="Parramatta or Bondi Junction" required autocomplete="off"><datalist id="places"></datalist></label>
+        <label class="radius-label" for="radius">Radius (km)<input id="radius" name="radius" type="number" value="2" min="0.1" max="30" step="0.1" required></label>
+        <button id="analyze" type="submit" disabled>Analyze</button>
+      </form>
+      <p class="note">Choose a listed suburb or landmark, or enter latitude, longitude.</p>
+      <p id="status" role="status" aria-live="polite">Loading models…</p>
+      <div class="maps" aria-label="Three model heatmaps">
+        <div><h3>V1 — Baseline</h3><div id="map-V1" class="map" aria-label="V1 gap heatmap"></div><div id="total-V1" class="map-total">Choose an area to see predictions.</div></div>
+        <div><h3>V5 — 1 km features</h3><div id="map-V5" class="map" aria-label="V5 gap heatmap"></div><div id="total-V5" class="map-total">Choose an area to see predictions.</div></div>
+        <div><h3>V6 — Accessibility</h3><div id="map-V6" class="map" aria-label="V6 gap heatmap"></div><div id="total-V6" class="map-total">Choose an area to see predictions.</div></div>
+      </div>
+    <div class="legend-row"><div class="legend"><strong>Gap score</strong><span><i style="background:#dfe7df"></i>0</span><span><i style="background:#f7e3aa"></i>&gt;0–0.25</span><span><i style="background:#e9b75b"></i>0.25–0.5</span><span><i style="background:#df873c"></i>0.5–1</span><span><i style="background:#c94c35"></i>1–2</span><span><i style="background:#842f37"></i>2+</span></div><p>Same scale on every map · dark outlines mark candidates (gap ≥ 1)</p></div>
+    <p class="coverage-note">Gap = max(0, predicted − actual). Whole hexagons are included when their centers fall inside the circle. Only existing study-area cells are scored.</p>
+
+
+      <div class="details" aria-labelledby="detail-title">
+        <h3 id="detail-title">Select a hexagon</h3>
+        <p id="actual-detail">Click any coloured cell to compare all three predictions.</p>
+        <div id="detail-content" class="empty-details"><p>The same hexagon will be highlighted across all three maps.</p></div>
+      </div>
+      <p class="note">Models learn existing provision, not unmet need. Candidates are places to investigate. Location lookup: ABS 2026 suburbs and selected landmarks. Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
+    </section>
+  </main>
+</body>
+</html>

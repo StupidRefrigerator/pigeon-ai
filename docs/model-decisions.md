@@ -83,3 +83,32 @@ The review eval is the one that decides whether the product works. Review at lea
 - 2026-11-02: First version. Random forest replaces the earlier gradient-boosting proposal after the spatial comparison.
 - 2026-11-02: Moved to PR #4's extended dataset and the 28-column `latest` feature set. Added the target registry, the review file and its statuses, and the evals table. `load_experiment` returns counts again.
 - 2026-11-02: Candidate rule now flags shortfalls too: a hex with toilets whose prediction is at least 1 higher. The review file gains `toilet_count` and `kind`.
+
+## Dataset comparison extension (2026-11-06)
+
+`compare_experiments.py` tests the declared V1–V10 datasets without changing the
+production choices above. It deliberately retains density and enables V7's
+independently sourced Census/SEIFA inputs and V8's projection inputs. The former
+can reproduce provision bias; the latter is only an exploratory scenario. See
+README's comparison section for fold anchoring, training-only imputation and
+output definitions. Expanded-area full metrics are not ranked against V1–V8.
+
+The real-data audit found 370 missing values per V7 age-share column, 2,392
+missing SEIFA values and 222 missing V8 growth-percentage values. These remain
+missing in the source datasets and are imputed only inside training folds.
+The density/population ratio actually ranges from 7.89365 to 7.90214 for
+positive-population V1 cells: the production redundancy argument is approximate,
+not exact. The comparison retains density as declared by the experiment registry.
+
+## Local comparison prototype (2026-11-06)
+
+The prototype saves full-data V1/V5/V6 forests for interactive inference, reusing
+the registered feature lists and existing forest settings at seed 0. V1 is the
+baseline, V5 has the best ranking metrics, and V6 the lowest deviance in the saved
+same-area experiment comparison. A median imputer is saved with each forest.
+The page displays the existing spatial-CV metrics, rather than evaluating these
+full-data fits on their own training rows. Its live heatmaps are in-sample and
+may hide gaps; use them to compare behavior, not to claim validation performance.
+The displayed gap is clamped at zero, with the unchanged candidate threshold 1.
+For this simple prototype, model-wide impurity importance replaces expensive
+per-request SHAP. No review-file updates or model-evaluation reruns are involved.

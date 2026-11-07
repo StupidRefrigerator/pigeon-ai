@@ -1,0 +1,130 @@
+{
+  "version": "V6",
+  "target": "toilet_count",
+  "features": [
+    "population_est",
+    "population_density",
+    "shop_inside",
+    "shop_250m",
+    "shop_500m",
+    "food_inside",
+    "food_250m",
+    "food_500m",
+    "bus_stop_inside",
+    "bus_stop_250m",
+    "bus_stop_500m",
+    "train_station_inside",
+    "train_station_250m",
+    "train_station_500m",
+    "park_area_inside_m2",
+    "park_area_250m_m2",
+    "park_area_500m_m2",
+    "distance_nearest_park_m",
+    "population_250m",
+    "population_500m",
+    "walkable_length_500m",
+    "walkable_junctions_500m",
+    "distance_nearest_footpath_m"
+  ],
+  "dataset": "sydney_extended_features.csv",
+  "rows": 16228,
+  "seed": 0,
+  "candidate_threshold": 1.0,
+  "trained_at": "2026-11-06T01:41:06.680237+00:00",
+  "sklearn_version": "1.9.1",
+  "preprocessing": "median imputation",
+  "feature_importance": [
+    {
+      "feature": "food_250m",
+      "importance": 0.13967819532228767
+    },
+    {
+      "feature": "shop_inside",
+      "importance": 0.1274319094289191
+    },
+    {
+      "feature": "food_inside",
+      "importance": 0.12468053337182189
+    },
+    {
+      "feature": "park_area_inside_m2",
+      "importance": 0.1105283342147329
+    },
+    {
+      "feature": "shop_250m",
+      "importance": 0.09341845595651248
+    },
+    {
+      "feature": "park_area_250m_m2",
+      "importance": 0.05151853992910437
+    },
+    {
+      "feature": "park_area_500m_m2",
+      "importance": 0.035741937069432295
+    },
+    {
+      "feature": "distance_nearest_park_m",
+      "importance": 0.03468352875682024
+    },
+    {
+      "feature": "train_station_250m",
+      "importance": 0.033855090311377026
+    },
+    {
+      "feature": "distance_nearest_footpath_m",
+      "importance": 0.02868398020675984
+    },
+    {
+      "feature": "population_500m",
+      "importance": 0.025096730877388684
+    },
+    {
+      "feature": "walkable_junctions_500m",
+      "importance": 0.024863226557434316
+    },
+    {
+      "feature": "shop_500m",
+      "importance": 0.0248237463308815
+    },
+    {
+      "feature": "walkable_length_500m",
+      "importance": 0.021974884552990855
+    },
+    {
+      "feature": "train_station_inside",
+      "importance": 0.021681413790204086
+    },
+    {
+      "feature": "population_250m",
+      "importance": 0.01656222651764475
+    },
+    {
+      "feature": "population_density",
+      "importance": 0.015517437712558936
+    },
+    {
+      "feature": "food_500m",
+      "importance": 0.015481297897361699
+    },
+    {
+      "feature": "population_est",
+      "importance": 0.014927729697999258
+    },
+    {
+      "feature": "bus_stop_250m",
+      "importance": 0.012476445473279474
+    },
+    {
+      "feature": "bus_stop_500m",
+      "importance": 0.011780388112180986
+    },
+    {
+      "feature": "bus_stop_inside",
+      "importance": 0.009676944396875376
+    },
+    {
+      "feature": "train_station_500m",
+      "importance": 0.0049170235154321834
+    }
+  ]
+}
