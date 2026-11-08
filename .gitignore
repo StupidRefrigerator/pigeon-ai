@@ -31,9 +31,5 @@ dist/
 # Trained models
 models/
 
-# Regenerable model outputs, except the three shared inference models.
-data/model/*
-!data/model/final/
-data/model/final/*
-!data/model/final/V[156].pkl
-!data/model/final/V[156].json
+# Regenerable model outputs
+data/model/
