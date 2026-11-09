@@ -1,0 +1,38 @@
+{
+  "_note": "Numbers that exist only in docs/findings.md (no CSV behind them). Update here when a later experiment changes them.",
+  "validity_curated": {
+    "shop_or_destination": 107,
+    "houses_or_industry_only": 0,
+    "limit_note": "82% of busy hexes the model did not flag also contain a shopping centre or strong destination. The check shows candidates are plausible places. It cannot prove they need a toilet."
+  },
+  "seifa": {
+    "toilets_per_10k_decile_1": 4.1,
+    "toilets_per_10k_decile_10": 5.7,
+    "real_over_pred_min": 0.88,
+    "real_over_pred_max": 1.09,
+    "note": "The model reproduces Sydney's current pattern, so wealthier areas get more. Changing that needs a priority step after the model: priority = gap x (1 + weight x disadvantage)."
+  },
+  "new_area_tests": [
+    {
+      "test": "A. Growth suburbs",
+      "where": "Oran Park, Marsden Park, etc.",
+      "real_data": "Yes: real features and real toilets",
+      "shows": "The model works on suburbs it never saw",
+      "result": "24/35 real toilet hexes in top 100"
+    },
+    {
+      "test": "B. Bradfield",
+      "where": "Airport city, not built yet",
+      "real_data": "No: features built from government plans",
+      "shows": "Where it would put toilets in the future",
+      "result": "about 139 toilets in the mid 2041 scenario (read the ranking, not the total)"
+    },
+    {
+      "test": "C. Oran Park check",
+      "where": "Oran Park",
+      "real_data": "Yes",
+      "shows": "Whether test B's guessed features can be trusted",
+      "result": "proxy keeps 5/10 of the real-feature top 10"
+    }
+  ]
+}
