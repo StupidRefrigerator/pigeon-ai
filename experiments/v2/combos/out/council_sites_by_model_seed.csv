@@ -1,0 +1,757 @@
+site_id,name,site_type,hex_id,toilet_count_hex,pct_hex,pred_hex,cand_ring,grid,model,seed
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.90919885450863,1.645353067352922,True,study,M0,0
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.88824474401062,1.5945093738271046,False,study,M0,0
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.65774952853252,1.2474530896939142,True,study,M0,0
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.72298665921632,0.6458496244549523,False,study,M0,0
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,99.14088146958161,0.9392319001578682,False,study,M0,0
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,99.14088146958161,0.9392319001578682,False,study,M0,0
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,2.4317159057847246,False,study,M0,0
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,90.71034434588252,0.3452158919230782,False,study,M0,0
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,99.08500384158692,0.9101849098433862,False,study,M0,0
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,96.38890829084305,0.5436944651454486,False,study,M0,0
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,98.95927917859886,0.8639332812066765,True,study,M0,0
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,96.0326884123769,0.522489980483823,True,study,M0,0
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.21072850457499,0.9745933587146312,False,study,M0,0
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,96.77306698330656,0.5688092932720773,True,study,M0,0
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,96.53558706432912,0.5528703218306716,True,study,M0,0
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,81.84675560522456,0.2002251126722477,False,study,M0,0
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,63.386184256478316,0.0629766226023701,False,study,M0,0
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.45519312705176,1.0983259280208142,False,study,M0,0
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,93.09212823915625,0.40846333152941,False,study,M0,0
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.8684780331075,0.8354822511880955,False,study,M0,0
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,82.09820493120067,0.2028621084225001,False,study,M0,0
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,91.74408046378431,0.3710715164763575,False,study,M0,0
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.33645316756304,1.0349422213970765,True,study,M0,0
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,85.26926031989942,0.2474284641719694,False,study,M0,0
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,89.35531186701124,0.317910385682527,False,study,M0,0
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,97.3737514842495,0.6132317202416526,False,study,M0,0
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,89.9769504784522,0.3298044087036037,False,study,M0,0
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,74.54075574491863,0.1161910076567364,False,study,M0,0
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,94.30048194454146,0.4443886341023458,False,study,M0,0
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.03031361318712,0.6758940717726056,False,study,M0,0
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,74.84808269888943,0.1187567525504152,True,study,M0,0
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,67.43731228609346,0.0767752897250788,False,study,M0,0
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,84.22155479499895,0.2327736554596984,False,study,M0,0
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,84.96193336592862,0.2432578664628609,False,study,M0,0
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,82.0074037857093,0.2019896668932405,False,study,M0,0
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,90.75225256687854,0.3461027142629644,False,study,M0,0
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,28.895718376754907,0.0109616082324695,,growth,M0,0
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,41.43326115806384,0.0237943961943262,,growth,M0,0
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.1199273590836,0.9308441954024484,False,study,M0,0
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,96.12348955786827,0.5272268279455763,False,study,M0,0
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,84.94796395892995,0.2429854373679942,False,study,M0,0
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,88.02123349863798,0.2928444617559383,,growth,M0,0
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.90221415100929,1.6615632241166816,True,study,M0,1
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.89522944750995,1.6574806875504475,False,study,M0,1
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.67171893553119,1.2722486592284752,True,study,M0,1
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.54138436823357,0.6259051863894275,False,study,M0,1
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,99.22469791157366,0.9661263133785514,False,study,M0,1
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,99.22469791157366,0.9661263133785514,False,study,M0,1
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,2.437580905556619,False,study,M0,1
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,91.56247817280156,0.3693434820693027,False,study,M0,1
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,99.07103443458826,0.9020766045784124,False,study,M0,1
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,95.64852971991338,0.5019382070928186,False,study,M0,1
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,99.03611091709156,0.8818401223930042,True,study,M0,1
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,96.5705105818258,0.5545868541468082,True,study,M0,1
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.23168261507298,0.9863202112079296,False,study,M0,1
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,96.98260808828665,0.5821834897039004,True,study,M0,1
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,97.2410421177621,0.5998104220740741,True,study,M0,1
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,80.14248795138646,0.1798730946013471,False,study,M0,1
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,63.323321924984285,0.0623699802778554,False,study,M0,1
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.36439198156039,1.044790260558255,False,study,M0,1
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,92.4914437382133,0.3916449960173469,False,study,M0,1
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,99.0221415100929,0.8754957508795845,False,study,M0,1
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,81.50450513375708,0.1977102283655147,False,study,M0,1
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,91.2062582943354,0.3595478306904655,False,study,M0,1
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.252636725571,1.004212923548904,True,study,M0,1
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,86.10044003632046,0.261546335611817,False,study,M0,1
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,88.38443808060347,0.2994689825396537,False,study,M0,1
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,97.61123140322694,0.636019800452863,False,study,M0,1
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,89.74645526297408,0.3264054993980218,False,study,M0,1
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,74.90396032688412,0.1188666187978541,False,study,M0,1
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,94.69861004400363,0.4622587845620378,False,study,M0,1
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.11413005517916,0.688964470136666,False,study,M0,1
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,73.17175385904868,0.1060919357211455,True,study,M0,1
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,69.58161626038975,0.0861677411640123,False,study,M0,1
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,84.74540755744918,0.2400122238486307,False,study,M0,1
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,84.00502898651952,0.2295957949370034,False,study,M0,1
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,82.58014947265488,0.2113694096365556,False,study,M0,1
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,90.20046099043095,0.3370216164706273,False,study,M0,1
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,29.95040860515471,0.0120597822563809,,growth,M0,1
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,38.84193615981002,0.0208548684077612,,growth,M0,1
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.10595795208494,0.9142476193936137,False,study,M0,1
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,94.96402877697842,0.4719315737784431,False,study,M0,1
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,84.43109589997904,0.2354849145842366,False,study,M0,1
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,87.38562548019837,0.2813261535336269,,growth,M0,1
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.89522944750995,1.6374392466954126,True,study,M0,2
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.90919885450863,1.6657126519800245,False,study,M0,2
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.66473423203185,1.2772908135178669,True,study,M0,2
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.22707271076342,0.6020050422166305,False,study,M0,2
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,99.13389676608227,0.9224872958745663,False,study,M0,2
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,99.13389676608227,0.9224872958745663,False,study,M0,2
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,2.437010218528589,False,study,M0,2
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,89.76740937347209,0.3252460666214776,False,study,M0,2
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,99.23168261507298,0.972412257693026,False,study,M0,2
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,94.88719703848571,0.4677679655600988,False,study,M0,2
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,99.02912621359224,0.8784859354017676,True,study,M0,2
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,96.989592791786,0.5846943137120232,True,study,M0,2
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.21072850457499,0.9604257197849104,False,study,M0,2
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,96.96863868128798,0.5837700866239635,True,study,M0,2
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,97.2200880072641,0.6010389794796492,True,study,M0,2
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,82.6988894321436,0.2112804904770941,False,study,M0,2
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,65.46064119578124,0.0692279642357077,False,study,M0,2
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.3504225745617,1.062898201106545,False,study,M0,2
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,92.40762729622128,0.3874947341446758,False,study,M0,2
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.87546273660683,0.8384014268135441,False,study,M0,2
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,80.82698889432143,0.1887195666137204,False,study,M0,2
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,92.88957183767549,0.4025792021051433,False,study,M0,2
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.3085143535657,1.0231968056179035,True,study,M0,2
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,86.75700216525809,0.2698360817520168,False,study,M0,2
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,89.42515890200461,0.3198431899213702,False,study,M0,2
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,97.1642103792694,0.5975810304881097,False,study,M0,2
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,90.92687015436195,0.3516845195752777,False,study,M0,2
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,75.75609415380318,0.1272025665238232,False,study,M0,2
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,95.18753928895718,0.4821555150869128,False,study,M0,2
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.37256408465461,0.7382792947111683,False,study,M0,2
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,75.44178249633303,0.1241601022324084,True,study,M0,2
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,69.400013969407,0.0845816182374614,False,study,M0,2
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,85.80009778584899,0.2548221264411134,False,study,M0,2
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,83.94216665502549,0.2278952303119938,False,study,M0,2
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,83.15987986309982,0.2173529238232817,False,study,M0,2
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,90.62652790389048,0.3446491063469132,False,study,M0,2
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,30.027240343647414,0.0121068212934542,,growth,M0,2
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,37.70342948941818,0.0194423443806371,,growth,M0,2
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.08500384158692,0.9028692687086564,False,study,M0,2
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,95.01990640497311,0.477005350521373,False,study,M0,2
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,83.73961025354474,0.2256432719102439,False,study,M0,2
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,86.79891038625411,0.270372689349007,,growth,M0,2
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.81141300551792,1.436625985520138,True,study,M1,0
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.93015296500664,1.700438679625894,False,study,M1,0
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.57393308654048,1.2194796846381537,True,study,M1,0
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.69504784521897,0.676954426572498,False,study,M1,0
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,98.97324858559755,0.9468592101318932,False,study,M1,0
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,98.97324858559755,0.9468592101318932,False,study,M1,0
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,2.399093784759466,False,study,M1,0
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,88.26569812111475,0.274422189299393,False,study,M1,0
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,98.0652371306838,0.7338912082540482,False,study,M1,0
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,96.5705105818258,0.5789274831177991,False,study,M1,0
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,97.27596563525879,0.6339589606542203,True,study,M1,0
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,97.6810784382203,0.6748118321615888,True,study,M1,0
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.55996367954181,1.208922012154274,True,study,M1,0
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,97.27596563525879,0.6338470071688078,False,study,M1,0
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.18397709017252,0.7560506128433419,True,study,M1,0
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,85.44387790738283,0.2230714516623572,False,study,M1,0
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,77.35559125515123,0.1193400639713717,False,study,M1,0
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.33645316756304,1.0806801451192574,False,study,M1,0
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,98.505273451142,0.8279940952251195,False,study,M1,0
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.77767688761612,0.8951327453378343,False,study,M1,0
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,84.7104840399525,0.2131061164349512,False,study,M1,0
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,98.7357686666201,0.882118846186594,False,study,M1,0
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.23866731857233,1.0438168826220282,True,study,M1,0
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,83.51609974156597,0.1950997442540843,False,study,M1,0
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,85.69532723335894,0.2283043795084048,False,study,M1,0
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,97.08039393727736,0.618032355043661,False,study,M1,0
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,92.59621429070336,0.3819667446168452,False,study,M1,0
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,78.10993923307956,0.1277191844247509,False,study,M1,0
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,98.46336523014598,0.818960963309034,False,study,M1,0
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.38653349165328,0.7997024864131423,False,study,M1,0
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,77.95627575609416,0.1254999085512901,True,study,M1,0
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,95.02689110847244,0.4765841264373309,False,study,M1,0
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,98.95229447509954,0.9427594655329696,False,study,M1,0
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,74.50583222742195,0.0981458934791487,False,study,M1,0
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,98.56813578263603,0.8445124438253145,False,study,M1,0
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,97.46455262974087,0.6500691295342641,False,study,M1,0
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,29.51735698819585,0.0080075200958525,,growth,M1,0
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,20.06705315359363,0.0031708041646985,,growth,M1,0
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.79045889501991,1.413333642486455,False,study,M1,0
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,99.23866731857233,1.0480183489104868,False,study,M1,0
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,98.47733463714465,0.8223125186205201,False,study,M1,0
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,85.87692952434169,0.2313162931739864,,growth,M1,0
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.87427533701194,1.527021708243589,True,study,M1,1
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.93015296500664,1.6883342411389315,False,study,M1,1
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.73458126702522,1.3551647666518098,True,study,M1,1
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.61123140322694,0.6616932279721789,False,study,M1,1
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,99.21072850457499,1.035549015607303,False,study,M1,1
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,99.21072850457499,1.035549015607303,False,study,M1,1
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,2.4437670585292004,False,study,M1,1
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,89.35531186701124,0.2964181042488746,False,study,M1,1
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,98.45638052664664,0.7994819428676061,False,study,M1,1
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,96.25619892435566,0.5492299545104349,False,study,M1,1
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,97.54138436823357,0.6554513325007326,True,study,M1,1
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,97.66710903122163,0.6673056112091693,True,study,M1,1
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.58790249353915,1.2230410881962717,True,study,M1,1
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,97.87665013620172,0.6944090287642548,False,study,M1,1
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.3516099741566,0.7811110952060906,True,study,M1,1
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,83.66277851505204,0.198356901359585,False,study,M1,1
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,78.20772508207027,0.1283054016578986,False,study,M1,1
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.33645316756304,1.0768722824932868,False,study,M1,1
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,97.9115736536984,0.7018474436031104,False,study,M1,1
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.74973807361877,0.884647850219607,False,study,M1,1
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,86.02360829782776,0.2341823688008351,False,study,M1,1
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,98.83355451561081,0.9050261022211782,False,study,M1,1
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.28756024306769,1.0505410830222082,True,study,M1,1
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,82.05629671020465,0.173587696810499,False,study,M1,1
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,85.12956624991268,0.2204829469267957,False,study,M1,1
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,96.3400153663477,0.5548603584939007,False,study,M1,1
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,93.12705175665293,0.3993354676426953,False,study,M1,1
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,78.71062373402249,0.1341351665230511,False,study,M1,1
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,98.30271704966124,0.7735445549289053,False,study,M1,1
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.51225815464133,0.8251404734716588,False,study,M1,1
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,78.13089334357757,0.1278080702134247,True,study,M1,1
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,96.00474959837955,0.5306645498940238,False,study,M1,1
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,98.9453097716002,0.935117733086283,False,study,M1,1
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,73.94705594747504,0.0929352312591493,False,study,M1,1
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,98.2957323461619,0.7656411285841368,False,study,M1,1
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,97.63218551372495,0.6634929185650346,False,study,M1,1
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,30.648878955088357,0.0088533087434076,,growth,M1,1
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,19.745756792624153,0.0031193347890262,,growth,M1,1
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.81141300551792,1.436739755540556,False,study,M1,1
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,99.18977439407698,1.0258380300778278,False,study,M1,1
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,98.65195222462806,0.855066149784548,False,study,M1,1
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,85.02479569742265,0.2183857669571657,,growth,M1,1
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.8463365230146,1.5106517790302525,True,study,M1,2
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.93015296500664,1.7187499792807706,False,study,M1,2
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.71362715652721,1.3276175158081616,True,study,M1,2
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.70203254871831,0.6766318185227271,False,study,M1,2
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,99.07801913808758,0.9753304871469533,False,study,M1,2
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,99.07801913808758,0.9753304871469533,False,study,M1,2
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,2.432190703529438,False,study,M1,2
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,88.89432143605504,0.2886784695474726,False,study,M1,2
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,98.31668645665991,0.7857606370883028,False,study,M1,2
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,96.97562338478731,0.6042620810226249,False,study,M1,2
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,96.9546692742893,0.60124779489062,True,study,M1,2
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,97.52043025773555,0.6605855183651778,True,study,M1,2
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.53202486554446,1.2074292164049394,True,study,M1,2
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,97.48550674023888,0.6528926080868834,False,study,M1,2
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.54718167213802,0.8322508630902696,True,study,M1,2
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,85.52769434937487,0.2266984790770084,False,study,M1,2
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,78.10993923307956,0.1269380394604657,False,study,M1,2
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.4272543130544,1.1249812920076323,False,study,M1,2
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,98.4284417126493,0.8108201663147997,False,study,M1,2
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.84053921911016,0.903894786516188,False,study,M1,2
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,84.75239226094853,0.2137864072628528,False,study,M1,2
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,98.7916462946148,0.8957224081171791,False,study,M1,2
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.21771320807431,1.0265105858429195,True,study,M1,2
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,82.084235524202,0.1757717269615711,False,study,M1,2
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,85.29021443039743,0.2235691103847772,False,study,M1,2
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,96.9546692742893,0.6018539458771013,False,study,M1,2
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,92.37968848222393,0.3753413546706165,False,study,M1,2
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,76.5663197597262,0.1132596093257339,False,study,M1,2
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,98.53321226513934,0.830453140297065,False,study,M1,2
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.28176293916323,0.7781177593495754,False,study,M1,2
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,79.29733882796675,0.1405773704494631,True,study,M1,2
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,95.3621568764406,0.4966642561982085,False,study,M1,2
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,98.80561570161346,0.8979744959411406,False,study,M1,2
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,76.88761612069568,0.1158050572467627,False,study,M1,2
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,98.43542641614863,0.8110299360540942,False,study,M1,2
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,97.27596563525879,0.6303478980247288,False,study,M1,2
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,31.90612558496892,0.0096129942212799,,growth,M1,2
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,19.68987916462946,0.0029356053853947,,growth,M1,2
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.77648948802123,1.4060069305621148,False,study,M1,2
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,99.10595795208494,0.9907029721058248,False,study,M1,2
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,98.61702870713138,0.8546143685303207,False,study,M1,2
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,84.6336523014598,0.2116956306354222,,growth,M1,2
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.87427533701194,2.442710437848391,True,study,M2,0
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.90919885450863,2.644486679673867,False,study,M2,0
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.91618355800796,2.752065485583392,True,study,M2,0
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,98.49828874764266,0.9710209994819352,True,study,M2,0
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,98.57512048613536,1.009892432843034,False,study,M2,0
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,98.57512048613536,1.009892432843034,False,study,M2,0
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,4.62015042308636,True,study,M2,0
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,89.8651952224628,0.3929419024565429,False,study,M2,0
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,98.45638052664664,0.9615592080781498,False,study,M2,0
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,98.00935950268911,0.8719874181555956,False,study,M2,0
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,98.42145700914996,0.9537142363481425,True,study,M2,0
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,96.91974575679262,0.7144042033849989,True,study,M2,0
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.20374380107565,1.3262512212920097,True,study,M2,0
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,96.85688342529859,0.7054581372546668,True,study,M2,0
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.59607459663337,1.016477025149424,True,study,M2,0
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,81.2041628832856,0.2304291623800026,False,study,M2,0
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,63.86114409443319,0.0858916617332243,False,study,M2,0
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.0430956205909,1.2247853541794067,False,study,M2,0
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,92.61018369770203,0.4775710238309897,False,study,M2,0
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,99.00118739959488,1.1980998305415438,False,study,M2,0
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,81.24607110428163,0.2307711036804481,False,study,M2,0
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,89.73248585597541,0.3897731064550355,False,study,M2,0
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.21072850457499,1.3316772396837715,True,study,M2,0
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,86.03059300132709,0.3100320952888267,False,study,M2,0
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,88.83844380806035,0.368574857132351,False,study,M2,0
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,96.3400153663477,0.6615464675034746,False,study,M2,0
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,89.12481665153314,0.3764105146203658,False,study,M2,0
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,73.4022490745268,0.1381553754851084,False,study,M2,0
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,94.43319131102885,0.5547693159788181,False,study,M2,0
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,97.4715373332402,0.7846081438869612,True,study,M2,0
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,78.12390864007823,0.1881887371352296,True,study,M2,0
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,67.49318991408815,0.102243975941755,False,study,M2,0
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,83.76056436404275,0.272579588752832,False,study,M2,0
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,83.22274219459383,0.262476157473708,False,study,M2,0
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,83.34148215408256,0.2645198152433501,False,study,M2,0
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,89.36229657051058,0.3810326281045905,False,study,M2,0
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,35.85248306209402,0.0253506799228492,,growth,M2,0
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,44.83481176224069,0.0386239097119327,,growth,M2,0
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,98.37256408465461,0.9428417592013848,False,study,M2,0
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,95.1526157714605,0.5905368870204812,False,study,M2,0
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,83.20877278759517,0.2623148968087165,False,study,M2,0
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,85.3251379478941,0.2973379142521468,,growth,M2,0
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.90221415100929,2.7096979608476897,True,study,M2,1
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.90919885450863,2.7921030394324453,False,study,M2,1
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.91618355800796,2.8041574457198406,True,study,M2,1
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,98.24683942166655,0.9147051288836158,True,study,M2,1
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,98.65195222462806,1.0351689432838496,False,study,M2,1
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,98.65195222462806,1.0351689432838496,False,study,M2,1
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,4.7510326558403255,True,study,M2,1
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,90.34713976391703,0.4066055834175952,False,study,M2,1
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,98.49828874764266,0.9757399886373316,False,study,M2,1
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,97.9115736536984,0.851288068407149,False,study,M2,1
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,98.41447230565062,0.955497084081045,True,study,M2,1
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,96.68226583781518,0.6894407824253658,True,study,M2,1
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.1758049870783,1.3052308205515617,True,study,M2,1
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,96.39589299434239,0.6595005848708151,True,study,M2,1
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.64496752112873,1.029789800197806,True,study,M2,1
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,81.15526995879024,0.2309349323216096,False,study,M2,1
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,63.26045959349025,0.0844512816623355,False,study,M2,1
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.05008032409025,1.2358331685165562,False,study,M2,1
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,91.27610532932877,0.4377651310118521,False,study,M2,1
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.99420269609556,1.2041492487311691,False,study,M2,1
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,81.16923936578893,0.231287218132677,False,study,M2,1
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,89.80233289096878,0.3909271616469425,False,study,M2,1
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.29454494656702,1.370811343561264,True,study,M2,1
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,86.44269050778794,0.3203397125182501,False,study,M2,1
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,89.66962352448138,0.3868758096267705,False,study,M2,1
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,96.1863518893623,0.6429746184904954,False,study,M2,1
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,88.77558147656632,0.365855778375509,False,study,M2,1
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,74.36613815743522,0.1471683950822328,False,study,M2,1
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,95.08276873646713,0.5885540970679023,False,study,M2,1
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,96.94768457078997,0.7181519470937163,True,study,M2,1
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,74.63155689041,0.1501948065307817,False,study,M2,1
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,69.1695187539289,0.1109419434307477,False,study,M2,1
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,84.39617238248236,0.2858389166288401,False,study,M2,1
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,82.64999650764825,0.2534562052898328,False,study,M2,1
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,82.97827757211707,0.2598464464659873,False,study,M2,1
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,87.9653558706433,0.3496892881048496,False,study,M2,1
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,34.965425717678286,0.0242432972908124,,growth,M2,1
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,43.01180414891388,0.0361018627038149,,growth,M2,1
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,98.38653349165328,0.9460368893909644,False,study,M2,1
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,94.67765593350562,0.5680496466742656,False,study,M2,1
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,83.97709017252218,0.2789884991276424,False,study,M2,1
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,84.98288747642663,0.2941879693650434,,growth,M2,1
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.91618355800796,2.772638983740582,True,study,M2,2
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.91618355800796,2.84427549913573,False,study,M2,2
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.9231682615073,2.8762956529897723,True,study,M2,2
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,98.54019696863868,0.9895325621982072,True,study,M2,2
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,98.61702870713138,1.0183515093519773,False,study,M2,2
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,98.61702870713138,1.0183515093519773,False,study,M2,2
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,4.7238764599789835,True,study,M2,2
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,88.92226025005239,0.3707539658565527,False,study,M2,2
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,98.58908989313403,1.004583056587003,True,study,M2,2
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,97.45756792624154,0.7882635118520551,False,study,M2,2
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,98.25382412516589,0.9203527741774968,True,study,M2,2
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,96.7241740588112,0.6902542267411262,True,study,M2,2
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.273590836069,1.3612078362209674,True,study,M2,2
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,96.66829643081651,0.6853233847215622,True,study,M2,2
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.78466159111545,1.0900122662189862,True,study,M2,2
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,80.51267723685129,0.2195961332287725,False,study,M2,2
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,65.64922819026333,0.0939687213217373,False,study,M2,2
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.08500384158692,1.2610566229535825,False,study,M2,2
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,91.38786058531815,0.434774886676476,False,study,M2,2
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.95927917859886,1.1772156560956273,False,study,M2,2
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,80.75714185932807,0.222314943273661,False,study,M2,2
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,90.284277432423,0.4051036082781149,False,study,M2,2
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.14088146958161,1.2846078742468423,True,study,M2,2
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,84.65460641195781,0.2900801884148059,False,study,M2,2
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,89.27149542501921,0.3779165716395801,False,study,M2,2
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,96.20032129636097,0.6489380590602297,False,study,M2,2
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,88.95019906404973,0.371520223568197,False,study,M2,2
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,74.33121463993854,0.1467890014618916,False,study,M2,2
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,94.38429838653349,0.552132118137133,False,study,M2,2
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,97.65313962422294,0.8203431099813459,True,study,M2,2
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,77.50925473213663,0.1820584451044376,True,study,M2,2
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,66.431514982189,0.097378813811236,False,study,M2,2
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,84.26346301599497,0.2831187842446849,False,study,M2,2
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,82.47537892016484,0.2523531251647418,False,study,M2,2
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,83.69770203254872,0.2726569009708246,False,study,M2,2
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,88.22378990011875,0.3583419542624467,False,study,M2,2
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,28.31598798630998,0.015045374176112,,growth,M2,2
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,37.291331982957324,0.0271448786747336,,growth,M2,2
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,98.54019696863868,0.9908747987315883,False,study,M2,2
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,94.41922190403018,0.5536879371061034,False,study,M2,2
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,82.00041908220996,0.2425797393993073,False,study,M2,2
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,84.9200251449326,0.2946627527503461,,growth,M2,2
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.90919885450863,2.734029479644074,True,study,M3,0
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.90919885450863,2.7361933063871025,False,study,M3,0
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.93713766850597,2.9838070730572563,True,study,M3,0
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.97443598519243,0.9175136255748686,True,study,M3,0
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,98.3516099741566,0.9922882678990456,False,study,M3,0
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,98.3516099741566,0.9922882678990456,False,study,M3,0
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,4.656699649086853,True,study,M3,0
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,86.68715513026471,0.3048825585054738,False,study,M3,0
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,97.26199622826012,0.8097795987657712,False,study,M3,0
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,97.97443598519243,0.9158802814754964,False,study,M3,0
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,97.45756792624154,0.8394166805397292,True,study,M3,0
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,97.26199622826012,0.8099284972714731,True,study,M3,0
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.36439198156039,1.4489272891014622,True,study,M3,0
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,96.68925054131452,0.7512140820269599,True,study,M3,0
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,99.24565202207167,1.3442891128455552,True,study,M3,0
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,83.35545156108124,0.2372806277754949,False,study,M3,0
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,76.23105399175805,0.136570994669825,False,study,M3,0
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.00817210309422,1.2071396631912044,False,study,M3,0
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,97.73695606621499,0.8738775717645532,False,study,M3,0
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,99.01515680659357,1.2118166938097097,False,study,M3,0
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,86.91066564224349,0.3092509861245371,False,study,M3,0
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,98.30271704966124,0.9871633887658094,False,study,M3,0
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.22469791157366,1.3422205014213977,True,study,M3,0
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,81.97248026821262,0.2143365982281031,False,study,M3,0
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,85.55563316337222,0.2792405707312216,False,study,M3,0
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,95.33421806244326,0.6299751900179119,True,study,M3,0
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,87.66501362017182,0.3269428436288716,False,study,M3,0
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,73.33240203953342,0.1122737940881368,False,study,M3,0
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,97.63917021722428,0.8640751446825735,False,study,M3,0
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,97.74394076971433,0.8768292912434245,True,study,M3,0
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,78.60585318153244,0.1631116329165762,True,study,M3,0
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,96.31906125584969,0.7114539149860257,False,study,M3,0
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,98.75672277711811,1.0967014683401828,False,study,M3,0
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,72.06817070615352,0.1036255685305979,False,study,M3,0
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,98.54019696863868,1.047248555351756,False,study,M3,0
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,95.85108612139415,0.6702372427458313,False,study,M3,0
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,47.929035412446744,0.031143600207936,,growth,M3,0
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,13.599217713208075,0.0015960061443932,,growth,M3,0
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.42026960955508,1.5106981501921868,False,study,M3,0
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,99.22469791157366,1.3289902227433332,False,study,M3,0
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,98.07920653768248,0.9341668278203482,False,study,M3,0
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,83.69071732904938,0.2445848467449617,,growth,M3,0
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.90919885450863,2.728698082164353,True,study,M3,1
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.90221415100929,2.6755274900168815,False,study,M3,1
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.93713766850597,2.9492151322421387,True,study,M3,1
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,98.1979464971712,0.9529815516596664,True,study,M3,1
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,98.40050289865195,1.0200657940010684,False,study,M3,1
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,98.40050289865195,1.0200657940010684,False,study,M3,1
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,4.746962719192617,True,study,M3,1
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,88.89432143605504,0.3551917727452325,False,study,M3,1
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,97.40867500174618,0.8322468187248183,False,study,M3,1
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,97.66710903122163,0.8671715297476887,False,study,M3,1
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,97.15722567577006,0.8070157167106307,True,study,M3,1
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,96.93371516379129,0.7810357980410613,True,study,M3,1
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.44122372005309,1.5153248547138916,True,study,M3,1
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,96.63337291331983,0.7522121432734623,False,study,M3,1
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,99.18278969057764,1.3059585478600717,True,study,M3,1
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,82.19599078019138,0.2181409021590029,False,study,M3,1
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,76.67109031221625,0.1405769810258948,False,study,M3,1
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,98.93832506810087,1.1909486212937388,False,study,M3,1
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,97.23405741426276,0.8112109683235165,False,study,M3,1
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.9662638820982,1.2039659659652522,False,study,M3,1
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,86.52650694977999,0.3000419699778335,False,study,M3,1
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,98.33764056715792,1.0008029699186336,False,study,M3,1
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.23866731857233,1.331004977243622,True,study,M3,1
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,82.00041908220996,0.2146850637640538,False,study,M3,1
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,86.00963889082908,0.2878291288983838,False,study,M3,1
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,94.72654885800098,0.5837785315822225,True,study,M3,1
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,88.2936369351121,0.3426736412663315,False,study,M3,1
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,72.68282461409513,0.1070386908128773,False,study,M3,1
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,97.64615492072362,0.8656923836241623,False,study,M3,1
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.10714535167982,0.9305388273682508,True,study,M3,1
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,79.15066005448068,0.1716715460959011,False,study,M3,1
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,95.64852971991338,0.6622346840819139,False,study,M3,1
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,98.76370748061744,1.0964509188927665,False,study,M3,1
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,72.78759516658518,0.1077899085913883,False,study,M3,1
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,98.49130404414332,1.0370549807281428,False,study,M3,1
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,95.72536145840608,0.6680870931570964,False,study,M3,1
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,48.66941398337641,0.0320986293801365,,growth,M3,1
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,13.536355381714046,0.0015105711369009,,growth,M3,1
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.44122372005309,1.5176722146618626,False,study,M3,1
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,99.28057553956835,1.3543082123488788,False,study,M3,1
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,97.9115736536984,0.8988470946470263,False,study,M3,1
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,84.1726618705036,0.2517616346296266,,growth,M3,1
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.93015296500664,2.896380359358497,True,study,M3,2
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.91618355800796,2.817514999942386,False,study,M3,2
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.93713766850597,2.9726881571146877,True,study,M3,2
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,98.09317594468115,0.9350291234057913,True,study,M3,2
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,98.44939582314731,1.0193138842983491,False,study,M3,2
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,98.44939582314731,1.0193138842983491,False,study,M3,2
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,100.0,4.692201418329566,True,study,M3,2
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,87.34371725920235,0.3186056567386079,False,study,M3,2
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,97.11531745477404,0.7954168738396069,False,study,M3,2
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,97.45756792624154,0.840867017657172,False,study,M3,2
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,97.05245512328001,0.7909936048536542,True,study,M3,2
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,97.031501012782,0.7840246777250537,True,study,M3,2
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.35740727806105,1.4069515857439083,True,study,M3,2
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,96.90577634979395,0.7719649673333248,False,study,M3,2
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,99.34343787106238,1.400993052706779,True,study,M3,2
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,84.58475937696444,0.2595176497236613,False,study,M3,2
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,77.17398896416847,0.1462871749518299,False,study,M3,2
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.0221415100929,1.2033098195956564,False,study,M3,2
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,97.63218551372495,0.8615645096338967,False,study,M3,2
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.93832506810087,1.171327354513797,False,study,M3,2
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,85.85597541384368,0.2847936690395657,False,study,M3,2
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,98.21191590416987,0.9654597520920936,False,study,M3,2
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.23866731857233,1.3429325277333222,True,study,M3,2
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,83.59991618355801,0.2424199226543414,False,study,M3,2
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,86.33791995529789,0.2946221536039907,False,study,M3,2
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,95.08975343996647,0.6173239411332738,True,study,M3,2
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,88.63588740657958,0.3493235103699331,False,study,M3,2
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,73.32541733603408,0.1107469176820478,False,study,M3,2
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,97.45756792624154,0.8421011959173506,False,study,M3,2
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,97.66012432772229,0.8653357979335968,True,study,M3,2
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,80.91080533631347,0.1930249360556626,False,study,M3,2
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,96.52161765733045,0.7340951179104598,False,study,M3,2
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,98.82656981211147,1.1159177496981143,False,study,M3,2
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,73.75846895299294,0.1145197322847259,False,study,M3,2
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,98.34462527065726,0.9998755643984188,False,study,M3,2
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,96.38192358734372,0.7238049471939346,False,study,M3,2
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,39.449605364252285,0.0204715475807777,,growth,M3,2
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,20.93315638751135,0.0053272075471447,,growth,M3,2
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.39931549905707,1.4735360628353522,False,study,M3,2
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,99.21072850457499,1.315174262401252,False,study,M3,2
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,97.85569602570371,0.8895626468934623,False,study,M3,2
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,83.22274219459383,0.2334551189059037,,growth,M3,2
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.90221415100929,1.75571818611965,True,study,M2t,0
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.96507648250332,2.055583675060863,False,study,M2t,0
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.68568834252986,1.3866427079634724,True,study,M2t,0
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.73695606621499,0.6836338713471666,False,study,M2t,0
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,99.03611091709156,0.940730317565019,False,study,M2t,0
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,99.03611091709156,0.940730317565019,False,study,M2t,0
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,99.99301529650066,2.312348220627114,False,study,M2t,0
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,90.61255849689181,0.3542235901505465,False,study,M2t,0
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,99.07103443458826,0.957009802772894,False,study,M2t,0
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,97.5274149612349,0.6646841767449115,False,study,M2t,0
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,99.0430956205909,0.9446237442844038,True,study,M2t,0
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,97.15024097227072,0.633175402996121,True,study,M2t,0
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.18278969057764,1.027439293842744,True,study,M2t,0
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,96.94069986729063,0.6128952782614372,True,study,M2t,0
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.54019696863868,0.8230901609141854,True,study,M2t,0
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,82.6220576936509,0.2155228828197365,False,study,M2t,0
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,63.61667947195642,0.0663847787927659,False,study,M2t,0
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.273590836069,1.0792917185649384,False,study,M2t,0
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,93.13403646015226,0.421505302829844,False,study,M2t,0
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.91038625410351,0.9080778130341154,False,study,M2t,0
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,82.852552909129,0.2183142927596169,False,study,M2t,0
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,91.16435007333939,0.3678773701961808,False,study,M2t,0
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.3853460920584,1.1475202307520345,True,study,M2t,0
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,86.29601173430189,0.2693178098893406,False,study,M2t,0
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,89.52294475099532,0.3312981533747036,False,study,M2t,0
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,97.55535377523225,0.6673843268701675,False,study,M2t,0
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,90.96877837535797,0.3626988477553526,False,study,M2t,0
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,74.78522036739541,0.1228677920310606,False,study,M2t,0
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,93.8674303275826,0.4469121050898583,False,study,M2t,0
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.25382412516589,0.7580642119253628,False,study,M2t,0
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,75.93071174128659,0.1335945588607071,True,study,M2t,0
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,70.50359712230215,0.0941580924343949,False,study,M2t,0
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,85.75120486135364,0.2618475586992472,False,study,M2t,0
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,83.60690088705735,0.2303064679013503,False,study,M2t,0
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,80.7431724523294,0.1915452605319487,False,study,M2t,0
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,87.95138646364462,0.3017618536393758,False,study,M2t,0
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,29.000488929244952,0.0113108608982624,,growth,M2t,0
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,41.41929175106517,0.0244984151563381,,growth,M2t,0
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,98.75672277711811,0.8682890361572468,False,study,M2t,0
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,95.8999790458895,0.5370354885429814,False,study,M2t,0
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,85.95376126283439,0.2643971290644733,False,study,M2t,0
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,87.30180903820633,0.2895892510333959,,growth,M2t,0
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.91618355800796,1.7946120750799988,True,study,M2t,1
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.95110707550465,2.0003931537044006,False,study,M2t,1
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.71362715652721,1.419237364606896,True,study,M2t,1
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,98.05825242718447,0.7229634773239871,False,study,M2t,1
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,99.12691206258295,0.991261448480419,False,study,M2t,1
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,99.12691206258295,0.991261448480419,False,study,M2t,1
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,99.99301529650066,2.3174645669991163,False,study,M2t,1
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,90.76622197387721,0.3591503660923704,False,study,M2t,1
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,99.06404973108891,0.9612175305568408,False,study,M2t,1
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,97.33184326325348,0.6437176532050624,False,study,M2t,1
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,98.91038625410351,0.9066798770935676,True,study,M2t,1
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,97.30390444925612,0.6411182530770853,True,study,M2t,1
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.1967590975763,1.0177930794976464,True,study,M2t,1
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,96.66829643081651,0.5848031097900163,True,study,M2t,1
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.9453097716002,0.9188364558472052,True,study,M2t,1
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,81.13431584829225,0.1977954175962232,False,study,M2t,1
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,65.08346720681708,0.0702830163250285,False,study,M2t,1
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.3085143535657,1.0994990766623771,False,study,M2t,1
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,92.6031989942027,0.410342840190472,False,study,M2t,1
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.90340155060417,0.9035663160775314,False,study,M2t,1
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,80.54760075434798,0.1906310567635405,False,study,M2t,1
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,90.02584340294754,0.3428272194462002,False,study,M2t,1
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.37137668505972,1.1377618857109886,True,study,M2t,1
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,88.57302507508557,0.3134185625903282,False,study,M2t,1
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,89.90710344345882,0.3398823575719706,False,study,M2t,1
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,97.3737514842495,0.6480368388281884,False,study,M2t,1
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,90.10267514144024,0.3447410530434919,False,study,M2t,1
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,74.26136760494516,0.1185523182768763,False,study,M2t,1
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,95.25040162045121,0.501509910451543,False,study,M2t,1
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.02332890968778,0.7176589901144166,False,study,M2t,1
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,75.07857791436753,0.1247232907436527,True,study,M2t,1
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,70.6851994132849,0.0950368069815123,False,study,M2t,1
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,85.98868478033107,0.2659287121767514,False,study,M2t,1
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,84.87113222043725,0.249704743675893,False,study,M2t,1
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,82.2378990011874,0.2107216499439919,False,study,M2t,1
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,88.4263463015995,0.3105028753939605,False,study,M2t,1
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,27.72927289236572,0.0104248245899168,,growth,M2t,1
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,43.919815603827615,0.0276519409024073,,growth,M2t,1
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.00118739959488,0.9334219506659384,False,study,M2t,1
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,95.09673814346581,0.4964256339257893,False,study,M2t,1
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,84.77334637144654,0.2474099299975213,False,study,M2t,1
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,88.34252985960745,0.3090696010786117,,growth,M2t,1
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.91618355800796,1.8683035790923248,True,study,M2t,2
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.98603059300133,2.1776564742945475,False,study,M2t,2
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.74855067402389,1.4842997563965403,True,study,M2t,2
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.96046657819376,0.7104144926530237,False,study,M2t,2
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,99.11294265558428,0.9739255360095828,False,study,M2t,2
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,99.11294265558428,0.9739255360095828,False,study,M2t,2
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,99.98603059300133,2.283834300266486,True,study,M2t,2
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,90.0188586994482,0.3437768344687897,False,study,M2t,2
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,99.07801913808758,0.9579764709491853,False,study,M2t,2
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,97.3178738562548,0.6391236790229236,False,study,M2t,2
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,99.1199273590836,0.9763238299343996,True,study,M2t,2
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,97.42962911224419,0.6527566030744575,True,study,M2t,2
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.16882028357897,1.004614836424863,True,study,M2t,2
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,97.23405741426276,0.631914844846483,True,study,M2t,2
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.81958510861215,0.8772400621001885,True,study,M2t,2
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,83.14591045610113,0.2228051105419884,False,study,M2t,2
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,63.2115666689949,0.0649742704670696,False,study,M2t,2
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.3504225745617,1.1182601527569471,False,study,M2t,2
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,93.08514353565691,0.4179213488283655,False,study,M2t,2
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.7916462946148,0.8706387295259418,False,study,M2t,2
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,83.64880910805336,0.230248428702376,False,study,M2t,2
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,91.73709576028497,0.385788023206862,False,study,M2t,2
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.36439198156039,1.1310891310371345,True,study,M2t,2
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,86.55444576377732,0.2764148627637147,False,study,M2t,2
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,90.73129845638053,0.3600958323815757,False,study,M2t,2
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,97.2410421177621,0.633514650882089,False,study,M2t,2
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,91.34595236432213,0.3755864563018438,False,study,M2t,2
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,72.12404833414821,0.1028043989213184,False,study,M2t,2
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,95.27834043444855,0.5027344951724877,False,study,M2t,2
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.14905357267584,0.7401897829873906,False,study,M2t,2
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,75.14144024586156,0.1254248846304244,True,study,M2t,2
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,68.09387441503108,0.0817105265121218,False,study,M2t,2
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,85.6673884193616,0.2625983282132604,False,study,M2t,2
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,82.76175176363763,0.2172692095363911,False,study,M2t,2
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,82.32171544317944,0.2110382361549124,False,study,M2t,2
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,90.85003841586925,0.3622932766408028,False,study,M2t,2
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,28.581406719284768,0.0111531378845646,,growth,M2t,2
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,42.592721938953694,0.0257306407877823,,growth,M2t,2
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,98.8684780331075,0.8860458085270722,False,study,M2t,2
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,95.17356988195851,0.4963426721812394,False,study,M2t,2
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,84.16567716700426,0.2395472103037001,False,study,M2t,2
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,86.24013410630718,0.2719921744781498,,growth,M2t,2
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.90919885450863,1.6860255867288751,True,study,M3t,0
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.95809177900398,2.061283457080137,False,study,M3t,0
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.78347419152057,1.5000818016218307,False,study,M3t,0
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.86966543270238,0.7385608002757845,False,study,M3t,0
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,99.05706502758957,1.0410010983218676,False,study,M3t,0
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,99.05706502758957,1.0410010983218676,False,study,M3t,0
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,99.99301529650066,2.2613158171997103,False,study,M3t,0
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,89.29943423901655,0.3074875932984248,False,study,M3t,0
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,97.89061954320039,0.7409339849629659,False,study,M3t,0
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,97.85569602570371,0.7361086976397675,False,study,M3t,0
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,97.34581267025214,0.6651966799760048,True,study,M3t,0
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,97.5274149612349,0.6921560850031292,True,study,M3t,0
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.41328490605574,1.2003428066361757,True,study,M3t,0
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,97.65313962422294,0.7106321198806871,False,study,M3t,0
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.81958510861215,0.9498820500155568,True,study,M3t,0
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,86.18425647831249,0.2453545746403953,False,study,M3t,0
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,77.59307117412865,0.1274002400818903,False,study,M3t,0
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.252636725571,1.1144740841953489,False,study,M3t,0
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,98.32367116015925,0.833034680232129,False,study,M3t,0
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.8894321436055,0.9694613449762304,False,study,M3t,0
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,83.97709017252218,0.2106701062423183,False,study,M3t,0
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,98.48431934064399,0.8649943159501035,False,study,M3t,0
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.32248376056437,1.1399235855710086,True,study,M3t,0
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,80.41489138786058,0.1594148560355702,False,study,M3t,0
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,86.09345533282112,0.2432834696957509,False,study,M3t,0
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,96.43081651183907,0.5911556588923798,False,study,M3t,0
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,92.34476496472725,0.3852758903831667,False,study,M3t,0
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,78.29154152406231,0.1349462831094342,False,study,M3t,0
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,98.14905357267584,0.7948205871903969,False,study,M3t,0
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.18397709017252,0.8058379141174897,False,study,M3t,0
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,80.76412656282741,0.1633566133774027,True,study,M3t,0
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,96.01173430187889,0.5572359851638893,False,study,M3t,0
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,98.66592163162673,0.9036682004091284,False,study,M3t,0
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,74.4220157854299,0.1016241102363299,False,study,M3t,0
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,98.47034993364532,0.8591877693910971,False,study,M3t,0
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,97.31088915275546,0.659556853760649,False,study,M3t,0
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,26.115806384019,0.006430807894733,,growth,M3t,0
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,17.741146888314592,0.0022239888986559,,growth,M3t,0
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.72759656352588,1.4071099142061012,False,study,M3t,0
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,99.14088146958161,1.0622542221175622,False,study,M3t,0
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,98.59607459663337,0.8899826550189365,False,study,M3t,0
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,85.39498498288748,0.2335268127267264,,growth,M3t,0
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.91618355800796,1.75517953606215,True,study,M3t,1
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.97206118600265,2.0792142893996153,False,study,M3t,1
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.88824474401062,1.6451608696225402,True,study,M3t,1
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.70203254871831,0.7113488184571986,False,study,M3t,1
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,99.05008032409025,1.024019014661038,False,study,M3t,1
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,99.05008032409025,1.024019014661038,False,study,M3t,1
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,99.99301529650066,2.2794197986293256,False,study,M3t,1
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,88.61493329608159,0.2929553002958103,False,study,M3t,1
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,97.79981839770902,0.7238298710700123,False,study,M3t,1
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,97.66710903122163,0.7039482363758779,False,study,M3t,1
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,97.84172661870504,0.7340860589860663,True,study,M3t,1
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,97.80680310120836,0.7262837504621528,True,study,M3t,1
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.4621778305511,1.2023454301052523,True,study,M3t,1
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,97.45756792624154,0.6816516127085414,False,study,M3t,1
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.90340155060417,0.9716222477130364,True,study,M3t,1
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,86.13536355381714,0.2467138598424301,False,study,M3t,1
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,78.4242508905497,0.135773573029643,False,study,M3t,1
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.24565202207167,1.1017543956570606,False,study,M3t,1
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,98.12111475867849,0.7861785364126141,False,study,M3t,1
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.92435566110218,0.9784477022551245,False,study,M3t,1
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,86.04456240832576,0.24506056673158,False,study,M3t,1
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,98.49828874764266,0.8618978978594471,False,study,M3t,1
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.24565202207167,1.0946110853932198,True,study,M3t,1
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,83.69071732904938,0.2066824389831942,False,study,M3t,1
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,85.01082629042398,0.2262420043756969,False,study,M3t,1
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,96.59844939582315,0.6030315754574705,False,study,M3t,1
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,93.08514353565691,0.4086843511413853,False,study,M3t,1
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,78.55696025703709,0.1371580454422733,False,study,M3t,1
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,98.44939582314731,0.853553585562224,False,study,M3t,1
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.30271704966124,0.8147458216004785,False,study,M3t,1
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,80.21233498637983,0.1561934178872814,True,study,M3t,1
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,95.6136062024167,0.5299018092921737,False,study,M3t,1
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,98.68687574212474,0.9054046193269036,False,study,M3t,1
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,75.78403296780051,0.1117661514739668,False,study,M3t,1
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,98.44939582314731,0.8523036268036946,False,study,M3t,1
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,97.66012432772229,0.7039172369791973,False,study,M3t,1
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,27.79213522385975,0.0075211214512422,,growth,M3t,1
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,14.004330516169588,0.0010537330316742,,growth,M3t,1
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.69965774952853,1.4020098703353674,False,study,M3t,1
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,99.0430956205909,1.0210533693011412,False,study,M3t,1
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,98.47733463714465,0.8594493823783427,False,study,M3t,1
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,85.84200600684501,0.2416205302038982,,growth,M3t,1
+CS01,APT College St after William St (Hyde Park),new,89be0e3434bffff,2.0,99.90919885450863,1.7043246699302068,True,study,M3t,2
+CS02,APT Elizabeth St before Market St (Hyde Park),new,89be0e35cb3ffff,13.0,99.97206118600265,2.0621282728403996,False,study,M3t,2
+CS03,APT Quay St at George St,new,89be0e3430fffff,0.0,99.83935181951526,1.5786654677294327,True,study,M3t,2
+CS04,APT Erskineville Rd & Charles St (Ellen Lawman Rest Area),new,89be0e34167ffff,1.0,97.47852203673953,0.6811846567392424,False,study,M3t,2
+CS05,APT Bicentennial Park East (NE edge),relocation,89be0e35da3ffff,1.0,99.14786617308096,1.0560504385566734,False,study,M3t,2
+CS06,New toilet building Jubilee Oval West,replacement,89be0e35da3ffff,1.0,99.14786617308096,1.0560504385566734,False,study,M3t,2
+CS07,APT Bathurst St (near 115 Bathurst St),new,89be0e3434fffff,9.0,99.99301529650066,2.218527539663621,False,study,M3t,2
+CS08,APT Alfred St,new,89be0e2056bffff,0.0,89.20863309352518,0.3073042099943613,False,study,M3t,2
+IW01,Pioneers Memorial Park new public toilets,new,89be0e34a87ffff,0.0,97.76489488021234,0.7169400791906849,False,study,M3t,2
+IW02,Stanmore Village (adjacent Stanmore Library),new,89be0e34eafffff,0.0,97.38772089124816,0.6703533378411056,False,study,M3t,2
+IW03,Camperdown Memorial Rest Park new public toilet,new,89be0e34e8fffff,1.0,97.12230215827338,0.6449928900577546,True,study,M3t,2
+IW04,Gladstone Park new public toilets,replacement,89be0e35d73ffff,1.0,97.74394076971433,0.7124672806395531,True,study,M3t,2
+IW05,Mackey Park new amenities building,replacement,89be0e36b6bffff,0.0,99.4621778305511,1.2027271668732458,True,study,M3t,2
+IW06,King George Park facility with inclusive playground,replacement,89be0e34a43ffff,1.0,97.69504784521897,0.7082877672717253,False,study,M3t,2
+WO01,Gugara Park new public toilet,new,89be0e34207ffff,0.0,98.95927917859886,0.9926855281484545,True,study,M3t,2
+ST01,Austin Park new public toilet,new,89be08c922fffff,0.0,85.68834252985961,0.2371005685427505,False,study,M3t,2
+ST02,Freshwater Park new public toilet,new,89be08c900bffff,0.0,76.25200810225606,0.1154531397009524,False,study,M3t,2
+CB02,Five Dock Park new amenities building,replacement,89be0e34b4bffff,2.0,99.25962142907034,1.108190744096894,False,study,M3t,2
+PA04,Max Ruddock Reserve amenities building,replacement,89be0e24933ffff,0.0,98.04428302018579,0.7730137493736242,False,study,M3t,2
+NB01,Freshwater Beach north-end amenities building,relocation,89be0e2233bffff,1.0,98.93134036460152,0.980584095491844,False,study,M3t,2
+SU01,Castelnau Reserve public amenities,new,89be08d8ec7ffff,1.0,85.52769434937487,0.2341589869166562,False,study,M3t,2
+SU03,Waratah Park accessible amenities,new,89be08d8bafffff,4.0,98.54718167213802,0.8696456802417498,False,study,M3t,2
+SU04,Monro Park toilets via hotel VPA,new,89be08d802bffff,3.0,99.34343787106238,1.1553998793955516,True,study,M3t,2
+BA01,Sir Joseph Banks Park new amenities,replacement,89be0e36eafffff,0.0,82.4683942166655,0.1871238008851969,False,study,M3t,2
+BA02,Riverine Park new public amenities,new,89be0e36ba3ffff,0.0,86.11440944331913,0.2459145769273027,False,study,M3t,2
+CA01,Allum Park new amenities building,replacement,89be08c950bffff,1.0,96.73814346580987,0.6119037377360297,False,study,M3t,2
+CA02,Wagener Oval new amenities building,new,89be0e3490fffff,1.0,92.24697911573654,0.3845567957824665,False,study,M3t,2
+CU01,York Street Park new Exeloo,new,89be08c9e1bffff,0.0,78.22169448906894,0.1335314322860739,False,study,M3t,2
+CU02,Dirrabari Reserve smart toilet,new,89be085313bffff,1.0,98.43542641614863,0.8424661974508975,False,study,M3t,2
+CU03,Lytton Street Park smart toilet,new,89be0853043ffff,2.0,98.37954878815394,0.8311026057391605,False,study,M3t,2
+HO01,Hornsby Park Old Mans Valley recreation hub toilets,new,89be0e2ed87ffff,0.0,79.65355870643292,0.1495830799330154,False,study,M3t,2
+HO02,Pennant Hills Park new No.2 amenities building,new,89be0e25c83ffff,1.0,96.3400153663477,0.5817008969072465,False,study,M3t,2
+HO03,Ron Payne Park new amenities building,replacement,89be0e24203ffff,1.0,98.67290633512607,0.903150751235898,False,study,M3t,2
+LC01,Stringybark Reserve toilet (masterplan),new,89be0e275dbffff,0.0,75.07857791436753,0.1060366022540288,False,study,M3t,2
+CM01,Fairfax Reserve new amenities building,new,89be08ce937ffff,0.0,98.58908989313403,0.8794454434989973,False,study,M3t,2
+CM02,Nugget Beames Reserve new amenities building,new,89be08c5a8fffff,0.0,97.11531745477404,0.6425527775398717,False,study,M3t,2
+BL01,Ken Birdsey Park amenities building,new,89be085a827ffff,0.0,29.664035761681916,0.0085415498154883,,growth,M3t,2
+TH01,Anthony Skarratt Reserve amenities building,new,89be0858cd3ffff,0.0,19.075225256687855,0.0028724822263842,,growth,M3t,2
+PE01,Mark Leece Sporting Complex accessible amenities,new,89be0850ba3ffff,1.0,99.6926730460292,1.396594489704593,False,study,M3t,2
+PE02,Cook Park precinct new public toilets,new,89be08425a3ffff,1.0,98.99420269609556,0.9966218889792494,False,study,M3t,2
+CT01,Bensley Reserve new amenity building,replacement,89be08cf53bffff,1.0,98.60305930013271,0.8839063256786021,False,study,M3t,2
+NS01,Leppington Parks for People park amenities block,new,89be08cc02bffff,1.0,83.87930432353147,0.2099114462287582,,growth,M3t,2

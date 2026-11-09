@@ -1,0 +1,121 @@
+area,f_scenario,model,rank,hex_id,pred,zone,role,nearest_station,station_dist_m,drivers
+aerotropolis,planned_re1,M0,1,89be0856407ffff,1.1577367015744917,MU Mixed Use,centre,Bradfield Station,27.0,train_station_250m +0.28; train_station_inside +0.24; food_inside +0.20
+aerotropolis,planned_re1,M0,2,89be08573abffff,1.1083028330109017,MU Mixed Use,centre,Luddenham Station,182.0,train_station_inside +0.27; train_station_250m +0.26; food_inside +0.11
+aerotropolis,planned_re1,M0,3,89be0857323ffff,1.0055956190753548,ENZ Environment and Recreation,park,Luddenham Station,585.0,park_area_inside_m2 +0.26; food_inside +0.18; park_area_250m_m2 +0.11
+aerotropolis,planned_re1,M0,4,89be0857333ffff,0.8165325007573089,MU Mixed Use,centre,Luddenham Station,204.0,train_station_250m +0.15; food_inside +0.13; shop_250m +0.10
+aerotropolis,planned_re1,M0,5,89be08573afffff,0.7603535624249582,MU Mixed Use,centre,Luddenham Station,302.0,food_inside +0.19; park_area_inside_m2 +0.14; park_area_250m_m2 +0.09
+aerotropolis,planned_re1,M0,6,89be0856417ffff,0.7188989233704599,MU Mixed Use,centre,Bradfield Station,407.0,food_inside +0.18; park_area_inside_m2 +0.12; shop_250m +0.09
+aerotropolis,planned_re1,M0,7,89be0856413ffff,0.7041423627037517,ENZ Environment and Recreation,park,Bradfield Station,679.0,park_area_inside_m2 +0.28; park_area_250m_m2 +0.13; distance_nearest_park_m +0.08
+aerotropolis,planned_re1,M0,8,89be08564bbffff,0.6792949633898997,ENZ Environment and Recreation,park,Bradfield Station,688.0,park_area_inside_m2 +0.22; park_area_250m_m2 +0.10; food_250m +0.06
+aerotropolis,planned_re1,M0,9,89be0857337ffff,0.6416921737910983,MU Mixed Use,centre,Luddenham Station,497.0,food_inside +0.15; park_area_inside_m2 +0.13; park_area_250m_m2 +0.07
+aerotropolis,planned_re1,M0,10,89be08546dbffff,0.6161603906647943,MU Mixed Use,mu_fringe,Luddenham Station,665.0,park_area_inside_m2 +0.13; shop_inside +0.07; park_area_250m_m2 +0.07
+aerotropolis,planned_re1,M1,1,89be0856407ffff,1.191027695501676,MU Mixed Use,centre,Bradfield Station,27.0,train_station_250m +0.30; train_station_inside +0.21; food_inside +0.19
+aerotropolis,planned_re1,M1,2,89be08573abffff,1.0633323470862146,MU Mixed Use,centre,Luddenham Station,182.0,train_station_250m +0.29; train_station_inside +0.22; shop_inside +0.14
+aerotropolis,planned_re1,M1,3,89be08cd9a3ffff,1.052429543150219,RE1 Public Recreation,park,Bradfield Station,2402.0,sports_area_inside_m2 +0.24; park_area_inside_m2 +0.17; distance_nearest_sports_m +0.16
+aerotropolis,planned_re1,M1,4,89be08cd9b7ffff,1.0494211682442398,RE1 Public Recreation,park,Bradfield Station,2343.0,sports_area_inside_m2 +0.24; park_area_inside_m2 +0.17; distance_nearest_sports_m +0.15
+aerotropolis,planned_re1,M1,5,89be08ccb63ffff,0.7337149880393388,RU4 Primary Production Small Lots,rural,Bradfield Station,1769.0,sports_area_inside_m2 +0.26; distance_nearest_sports_m +0.15; park_area_inside_m2 +0.13
+aerotropolis,planned_re1,M1,6,89be0857333ffff,0.7117503683490393,MU Mixed Use,centre,Luddenham Station,204.0,train_station_250m +0.22; shop_inside +0.12; food_inside +0.12
+aerotropolis,planned_re1,M1,7,89be08cd93bffff,0.6906619691814584,ENZ Environment and Recreation,park,Bradfield Station,2511.0,park_area_inside_m2 +0.16; distance_nearest_sports_m +0.12; distance_nearest_playground_m +0.11
+aerotropolis,planned_re1,M1,8,89be08572bbffff,0.6389522790911467,ENZ Environment and Recreation,park,Luddenham Station,3025.0,park_area_inside_m2 +0.17; distance_nearest_playground_m +0.12; distance_nearest_sports_m +0.11
+aerotropolis,planned_re1,M1,9,89be08cd9abffff,0.6158217353779877,RU4 Primary Production Small Lots,rural,Bradfield Station,2518.0,park_area_inside_m2 +0.16; distance_nearest_playground_m +0.12; distance_nearest_sports_m +0.10
+aerotropolis,planned_re1,M1,10,89be0856433ffff,0.5979271776577602,MU Mixed Use,centre,Bradfield Station,381.0,food_inside +0.19; shop_inside +0.13; food_250m +0.09
+aerotropolis,planned_re1,M2,1,89be0856407ffff,1.662271081103641,MU Mixed Use,centre,Bradfield Station,27.0,train_station_inside +0.40; food_inside +0.39; train_station_250m +0.33
+aerotropolis,planned_re1,M2,2,89be08573abffff,1.393453860412491,MU Mixed Use,centre,Luddenham Station,182.0,train_station_inside +0.36; train_station_250m +0.30; food_inside +0.21
+aerotropolis,planned_re1,M2,3,89be0857323ffff,1.3647712273420354,ENZ Environment and Recreation,park,Luddenham Station,585.0,food_inside +0.29; park_area_inside_m2 +0.27; food_250m +0.19
+aerotropolis,planned_re1,M2,4,89be08564bbffff,0.9621343740748074,ENZ Environment and Recreation,park,Bradfield Station,688.0,park_area_inside_m2 +0.25; food_250m +0.16; park_area_250m_m2 +0.16
+aerotropolis,planned_re1,M2,5,89be0857333ffff,0.9482881861560194,MU Mixed Use,centre,Luddenham Station,204.0,food_inside +0.20; train_station_250m +0.20; shop_inside +0.09
+aerotropolis,planned_re1,M2,6,89be08573afffff,0.8998473560069562,MU Mixed Use,centre,Luddenham Station,302.0,food_inside +0.33; park_area_inside_m2 +0.12; park_area_250m_m2 +0.11
+aerotropolis,planned_re1,M2,7,89be0856417ffff,0.8706855753190651,MU Mixed Use,centre,Bradfield Station,407.0,food_inside +0.33; park_area_inside_m2 +0.10; park_area_250m_m2 +0.10
+aerotropolis,planned_re1,M2,8,89be0857337ffff,0.8128199029601246,MU Mixed Use,centre,Luddenham Station,497.0,food_inside +0.24; park_area_inside_m2 +0.11; food_250m +0.09
+aerotropolis,planned_re1,M2,9,89be08564afffff,0.8119954742488923,MU Mixed Use,mu_fringe,Bradfield Station,673.0,food_inside +0.24; shop_inside +0.13; food_250m +0.10
+aerotropolis,planned_re1,M2,10,89be08562a3ffff,0.775498144099355,SP2 Infrastructure,infrastructure,Airport Terminal,185.0,train_station_250m +0.35; train_station_inside +0.30; train_station_500m +0.05
+aerotropolis,planned_re1,M3,1,89be0856407ffff,1.749823061937071,MU Mixed Use,centre,Bradfield Station,27.0,train_station_inside +0.40; train_station_250m +0.38; food_inside +0.35
+aerotropolis,planned_re1,M3,2,89be08573abffff,1.4360536392339933,MU Mixed Use,centre,Luddenham Station,182.0,train_station_250m +0.37; train_station_inside +0.36; food_inside +0.18
+aerotropolis,planned_re1,M3,3,89be08cd9a3ffff,1.1772940437787636,RE1 Public Recreation,park,Bradfield Station,2402.0,sports_area_inside_m2 +0.25; distance_nearest_sports_m +0.18; distance_nearest_playground_m +0.18
+aerotropolis,planned_re1,M3,4,89be08cd9b7ffff,1.1748688476466709,RE1 Public Recreation,park,Bradfield Station,2343.0,sports_area_inside_m2 +0.25; distance_nearest_sports_m +0.18; distance_nearest_playground_m +0.18
+aerotropolis,planned_re1,M3,5,89be0857333ffff,0.9565142543447062,MU Mixed Use,centre,Luddenham Station,204.0,train_station_250m +0.30; food_inside +0.20; shop_inside +0.15
+aerotropolis,planned_re1,M3,6,89be08562a3ffff,0.9261131318469211,SP2 Infrastructure,infrastructure,Airport Terminal,185.0,train_station_250m +0.45; train_station_inside +0.33; food_250m -0.04
+aerotropolis,planned_re1,M3,7,89be08562cfffff,0.9261131318469211,SP2 Infrastructure,infrastructure,Airport Business Park,113.0,train_station_250m +0.45; train_station_inside +0.33; food_250m -0.04
+aerotropolis,planned_re1,M3,8,89be0857323ffff,0.8901128163690437,ENZ Environment and Recreation,park,Luddenham Station,585.0,food_inside +0.27; food_250m +0.14; park_area_inside_m2 +0.10
+aerotropolis,planned_re1,M3,9,89be0856417ffff,0.8123598786390612,MU Mixed Use,centre,Bradfield Station,407.0,food_inside +0.34; shop_inside +0.14; food_250m +0.07
+aerotropolis,planned_re1,M3,10,89be08cd93bffff,0.7949104803418151,ENZ Environment and Recreation,park,Bradfield Station,2511.0,park_area_inside_m2 +0.16; distance_nearest_playground_m +0.14; distance_nearest_sports_m +0.13
+aerotropolis,planned_re1_enz,M1,1,89be0857057ffff,1.197526979281915,ENZ Environment and Recreation,park,Luddenham Station,3164.0,sports_area_inside_m2 +0.28; park_area_inside_m2 +0.18; distance_nearest_sports_m +0.17
+aerotropolis,planned_re1_enz,M1,2,89be0857043ffff,1.194609943569172,ENZ Environment and Recreation,park,Luddenham Station,3157.0,sports_area_inside_m2 +0.28; park_area_inside_m2 +0.18; distance_nearest_sports_m +0.16
+aerotropolis,planned_re1_enz,M1,3,89be08cd9afffff,1.1931470644977826,ENZ Environment and Recreation,park,Bradfield Station,2140.0,sports_area_inside_m2 +0.28; park_area_inside_m2 +0.18; distance_nearest_sports_m +0.16
+aerotropolis,planned_re1_enz,M1,4,89be08572b3ffff,1.192966929817648,ENZ Environment and Recreation,park,Luddenham Station,2910.0,sports_area_inside_m2 +0.28; park_area_inside_m2 +0.18; distance_nearest_sports_m +0.17
+aerotropolis,planned_re1_enz,M1,5,89be085704fffff,1.1918137311644492,ENZ Environment and Recreation,park,Luddenham Station,2842.0,sports_area_inside_m2 +0.28; park_area_inside_m2 +0.18; distance_nearest_sports_m +0.17
+aerotropolis,planned_re1_enz,M1,6,89be08cd923ffff,1.1888579768986238,ENZ Environment and Recreation,park,Bradfield Station,2131.0,sports_area_inside_m2 +0.28; park_area_inside_m2 +0.18; distance_nearest_sports_m +0.17
+aerotropolis,planned_re1_enz,M1,7,89be08cd937ffff,1.1888424245974643,ENZ Environment and Recreation,park,Bradfield Station,1918.0,sports_area_inside_m2 +0.27; park_area_inside_m2 +0.18; distance_nearest_sports_m +0.16
+aerotropolis,planned_re1_enz,M1,8,89be08cd9a7ffff,1.1888424245974643,ENZ Environment and Recreation,park,Bradfield Station,2038.0,sports_area_inside_m2 +0.27; park_area_inside_m2 +0.18; distance_nearest_sports_m +0.16
+aerotropolis,planned_re1_enz,M1,9,89be0857047ffff,1.1873142178734069,ENZ Environment and Recreation,park,Luddenham Station,2824.0,sports_area_inside_m2 +0.28; park_area_inside_m2 +0.18; distance_nearest_sports_m +0.16
+aerotropolis,planned_re1_enz,M1,10,89be08570cfffff,1.1873027617541585,ENZ Environment and Recreation,park,Luddenham Station,3513.0,sports_area_inside_m2 +0.27; park_area_inside_m2 +0.18; distance_nearest_sports_m +0.16
+aerotropolis,planned_re1_enz,M3,1,89be0856407ffff,1.750491109667671,MU Mixed Use,centre,Bradfield Station,27.0,train_station_inside +0.40; train_station_250m +0.38; food_inside +0.34
+aerotropolis,planned_re1_enz,M3,2,89be08573abffff,1.4409435606662104,MU Mixed Use,centre,Luddenham Station,182.0,train_station_250m +0.38; train_station_inside +0.36; shop_inside +0.18
+aerotropolis,planned_re1_enz,M3,3,89be0857057ffff,1.3183101353348619,ENZ Environment and Recreation,park,Luddenham Station,3164.0,sports_area_inside_m2 +0.28; distance_nearest_sports_m +0.21; distance_nearest_playground_m +0.19
+aerotropolis,planned_re1_enz,M3,4,89be085704fffff,1.3083109786787037,ENZ Environment and Recreation,park,Luddenham Station,2842.0,sports_area_inside_m2 +0.28; distance_nearest_sports_m +0.21; distance_nearest_playground_m +0.19
+aerotropolis,planned_re1_enz,M3,5,89be0857043ffff,1.3080443181496106,ENZ Environment and Recreation,park,Luddenham Station,3157.0,sports_area_inside_m2 +0.28; distance_nearest_sports_m +0.20; distance_nearest_playground_m +0.19
+aerotropolis,planned_re1_enz,M3,6,89be08572b3ffff,1.3066098589543282,ENZ Environment and Recreation,park,Luddenham Station,2910.0,sports_area_inside_m2 +0.28; distance_nearest_sports_m +0.20; distance_nearest_playground_m +0.19
+aerotropolis,planned_re1_enz,M3,7,89be08cd9afffff,1.3053455004670456,ENZ Environment and Recreation,park,Bradfield Station,2140.0,sports_area_inside_m2 +0.28; distance_nearest_sports_m +0.20; distance_nearest_playground_m +0.19
+aerotropolis,planned_re1_enz,M3,8,89be0857047ffff,1.298493961876294,ENZ Environment and Recreation,park,Luddenham Station,2824.0,sports_area_inside_m2 +0.28; distance_nearest_sports_m +0.20; distance_nearest_playground_m +0.19
+aerotropolis,planned_re1_enz,M3,9,89be08cd937ffff,1.294587921066787,ENZ Environment and Recreation,park,Bradfield Station,1918.0,sports_area_inside_m2 +0.27; distance_nearest_sports_m +0.20; distance_nearest_playground_m +0.19
+aerotropolis,planned_re1_enz,M3,10,89be08cd9a7ffff,1.2944174135873094,ENZ Environment and Recreation,park,Bradfield Station,2038.0,sports_area_inside_m2 +0.27; distance_nearest_sports_m +0.20; distance_nearest_playground_m +0.19
+leppington,planned_re1,M0,1,89be08cc303ffff,1.0182129018166353,MU1 Mixed Use,centre,Leppington,126.0,train_station_inside +0.25; train_station_250m +0.24; shop_inside +0.12
+leppington,planned_re1,M0,2,89be08cc343ffff,0.8269644401709784,RE1 Public Recreation,park,Leppington,1004.0,park_area_inside_m2 +0.33; park_area_250m_m2 +0.15; population_500m +0.10
+leppington,planned_re1,M0,3,89be08cc30bffff,0.7990027534350687,SP2 Infrastructure,infrastructure,Leppington,426.0,food_inside +0.17; park_area_inside_m2 +0.16; park_area_250m_m2 +0.08
+leppington,planned_re1,M0,4,89be08cc30fffff,0.714206130737874,MU1 Mixed Use,centre,Leppington,503.0,park_area_inside_m2 +0.16; food_inside +0.16; park_area_250m_m2 +0.08
+leppington,planned_re1,M0,5,89be08cc38bffff,0.6737113521749306,RE1 Public Recreation,park,Leppington,646.0,park_area_inside_m2 +0.24; park_area_250m_m2 +0.12; population_500m +0.08
+leppington,planned_re1,M0,6,89be08cc307ffff,0.6519664920212593,RE1 Public Recreation,park,Leppington,484.0,park_area_inside_m2 +0.20; park_area_250m_m2 +0.10; distance_nearest_park_m +0.07
+leppington,planned_re1,M0,7,89be08cc3c3ffff,0.5998832115481922,RE1 Public Recreation,park,Leppington,899.0,park_area_inside_m2 +0.26; park_area_250m_m2 +0.12; distance_nearest_park_m +0.06
+leppington,planned_re1,M0,8,89be08cdd93ffff,0.5836315051801776,RE1 Public Recreation,park,Leppington,1505.0,park_area_inside_m2 +0.26; park_area_250m_m2 +0.11; distance_nearest_park_m +0.07
+leppington,planned_re1,M0,9,89be08cdcb7ffff,0.573769833911827,RE1 Public Recreation,park,Leppington,1436.0,park_area_inside_m2 +0.23; park_area_250m_m2 +0.11; population_500m +0.07
+leppington,planned_re1,M0,10,89be08cc357ffff,0.5309141619031933,MU1 Mixed Use,centre,Leppington,635.0,food_inside +0.13; park_area_inside_m2 +0.12; park_area_250m_m2 +0.06
+leppington,planned_re1,M1,1,89be08cc303ffff,1.165884716118432,MU1 Mixed Use,centre,Leppington,126.0,train_station_250m +0.32; train_station_inside +0.21; shop_inside +0.17
+leppington,planned_re1,M1,2,89be08cc343ffff,0.9522728259336553,RE1 Public Recreation,park,Leppington,1004.0,park_area_inside_m2 +0.20; sports_area_inside_m2 +0.17; distance_nearest_sports_m +0.16
+leppington,planned_re1,M1,3,89be08cdd03ffff,0.8794484416797269,RE1 Public Recreation,park,Leppington,2795.0,park_area_inside_m2 +0.18; sports_area_inside_m2 +0.16; distance_nearest_sports_m +0.14
+leppington,planned_re1,M1,4,89be08cc3c3ffff,0.8466599994183849,RE1 Public Recreation,park,Leppington,899.0,park_area_inside_m2 +0.19; distance_nearest_sports_m +0.15; sports_area_inside_m2 +0.12
+leppington,planned_re1,M1,5,89be08cc30bffff,0.8222848647324629,SP2 Infrastructure,infrastructure,Leppington,426.0,sports_area_inside_m2 +0.14; park_area_inside_m2 +0.10; food_inside +0.09
+leppington,planned_re1,M1,6,89be08cdcb7ffff,0.7958634960476367,RE1 Public Recreation,park,Leppington,1436.0,park_area_inside_m2 +0.18; distance_nearest_sports_m +0.15; distance_nearest_playground_m +0.11
+leppington,planned_re1,M1,7,89be08cc307ffff,0.7845524625312597,RE1 Public Recreation,park,Leppington,484.0,park_area_inside_m2 +0.14; distance_nearest_sports_m +0.13; distance_nearest_playground_m +0.10
+leppington,planned_re1,M1,8,89be08cc38bffff,0.7623069561803939,RE1 Public Recreation,park,Leppington,646.0,park_area_inside_m2 +0.17; distance_nearest_sports_m +0.15; sports_area_inside_m2 +0.11
+leppington,planned_re1,M1,9,89be08cc36bffff,0.759445495420718,R2 Low Density Residential,residential,Leppington,1410.0,park_area_inside_m2 +0.18; distance_nearest_sports_m +0.16; sports_area_inside_m2 +0.11
+leppington,planned_re1,M1,10,89be08cdd93ffff,0.7305816095910495,RE1 Public Recreation,park,Leppington,1505.0,park_area_inside_m2 +0.17; distance_nearest_sports_m +0.16; sports_area_inside_m2 +0.12
+leppington,planned_re1,M2,1,89be08cc303ffff,1.373863311750532,MU1 Mixed Use,centre,Leppington,126.0,train_station_inside +0.36; train_station_250m +0.29; food_inside +0.21
+leppington,planned_re1,M2,2,89be08cc343ffff,0.8985253397956653,RE1 Public Recreation,park,Leppington,1004.0,park_area_inside_m2 +0.34; park_area_250m_m2 +0.18; population_500m +0.11
+leppington,planned_re1,M2,3,89be08cc30fffff,0.8567677147611015,MU1 Mixed Use,centre,Leppington,503.0,food_inside +0.24; park_area_inside_m2 +0.13; park_area_250m_m2 +0.10
+leppington,planned_re1,M2,4,89be08cc30bffff,0.8554110110607224,SP2 Infrastructure,infrastructure,Leppington,426.0,food_inside +0.24; park_area_inside_m2 +0.12; park_area_250m_m2 +0.10
+leppington,planned_re1,M2,5,89be08cc307ffff,0.7317749755209862,RE1 Public Recreation,park,Leppington,484.0,park_area_inside_m2 +0.22; park_area_250m_m2 +0.11; shop_inside +0.09
+leppington,planned_re1,M2,6,89be08cc357ffff,0.7181485798554265,MU1 Mixed Use,centre,Leppington,635.0,food_inside +0.22; park_area_inside_m2 +0.10; food_250m +0.09
+leppington,planned_re1,M2,7,89be08cc313ffff,0.6715327073038451,MU1 Mixed Use,centre,Leppington,265.0,food_inside +0.19; food_250m +0.08; shop_inside +0.08
+leppington,planned_re1,M2,8,89be08cc38bffff,0.6687728624719278,RE1 Public Recreation,park,Leppington,646.0,park_area_inside_m2 +0.24; park_area_250m_m2 +0.13; distance_nearest_park_m +0.08
+leppington,planned_re1,M2,9,89be08cdd93ffff,0.6504698874815847,RE1 Public Recreation,park,Leppington,1505.0,park_area_inside_m2 +0.28; park_area_250m_m2 +0.12; distance_nearest_park_m +0.07
+leppington,planned_re1,M2,10,89be08cdcb7ffff,0.6238973563700928,RE1 Public Recreation,park,Leppington,1436.0,park_area_inside_m2 +0.25; park_area_250m_m2 +0.13; population_500m +0.08
+leppington,planned_re1,M3,1,89be08cc303ffff,1.5143985875088277,MU1 Mixed Use,centre,Leppington,126.0,train_station_250m +0.38; train_station_inside +0.38; food_inside +0.19
+leppington,planned_re1,M3,2,89be08cc343ffff,1.0161269482793527,RE1 Public Recreation,park,Leppington,1004.0,sports_area_inside_m2 +0.20; distance_nearest_sports_m +0.17; park_area_inside_m2 +0.16
+leppington,planned_re1,M3,3,89be08cdd03ffff,1.0119933121925677,RE1 Public Recreation,park,Leppington,2795.0,sports_area_inside_m2 +0.18; distance_nearest_sports_m +0.17; park_area_inside_m2 +0.16
+leppington,planned_re1,M3,4,89be08cc30bffff,0.9954322660011652,SP2 Infrastructure,infrastructure,Leppington,426.0,food_inside +0.18; sports_area_inside_m2 +0.15; distance_nearest_sports_m +0.10
+leppington,planned_re1,M3,5,89be08cc3c3ffff,0.9183683254254583,RE1 Public Recreation,park,Leppington,899.0,park_area_inside_m2 +0.17; distance_nearest_sports_m +0.15; distance_nearest_playground_m +0.14
+leppington,planned_re1,M3,6,89be08cc30fffff,0.865852373052528,MU1 Mixed Use,centre,Leppington,503.0,food_inside +0.21; distance_nearest_sports_m +0.10; shop_inside +0.08
+leppington,planned_re1,M3,7,89be08cdcb7ffff,0.8647805785642287,RE1 Public Recreation,park,Leppington,1436.0,park_area_inside_m2 +0.16; distance_nearest_sports_m +0.15; distance_nearest_playground_m +0.14
+leppington,planned_re1,M3,8,89be08cc307ffff,0.8310095435605033,RE1 Public Recreation,park,Leppington,484.0,distance_nearest_sports_m +0.14; distance_nearest_playground_m +0.12; park_area_inside_m2 +0.12
+leppington,planned_re1,M3,9,89be08cc38bffff,0.815480749360159,RE1 Public Recreation,park,Leppington,646.0,distance_nearest_sports_m +0.15; park_area_inside_m2 +0.14; distance_nearest_playground_m +0.14
+leppington,planned_re1,M3,10,89be08cc357ffff,0.7898371421419764,MU1 Mixed Use,centre,Leppington,635.0,food_inside +0.19; distance_nearest_sports_m +0.09; distance_nearest_playground_m +0.08
+leppington,planned_re1_enz,M1,1,89be08cc303ffff,1.165884716118432,MU1 Mixed Use,centre,Leppington,126.0,train_station_250m +0.32; train_station_inside +0.21; shop_inside +0.17
+leppington,planned_re1_enz,M1,2,89be08cc343ffff,0.9522728259336553,RE1 Public Recreation,park,Leppington,1004.0,park_area_inside_m2 +0.20; sports_area_inside_m2 +0.17; distance_nearest_sports_m +0.16
+leppington,planned_re1_enz,M1,3,89be08cdd03ffff,0.8794484416797271,RE1 Public Recreation,park,Leppington,2795.0,park_area_inside_m2 +0.18; sports_area_inside_m2 +0.16; distance_nearest_sports_m +0.14
+leppington,planned_re1_enz,M1,4,89be08cc3c3ffff,0.8466599994183849,RE1 Public Recreation,park,Leppington,899.0,park_area_inside_m2 +0.19; distance_nearest_sports_m +0.15; sports_area_inside_m2 +0.12
+leppington,planned_re1_enz,M1,5,89be08cc30bffff,0.822284864732463,SP2 Infrastructure,infrastructure,Leppington,426.0,sports_area_inside_m2 +0.14; park_area_inside_m2 +0.10; food_inside +0.09
+leppington,planned_re1_enz,M1,6,89be08cdcb7ffff,0.795863496047637,RE1 Public Recreation,park,Leppington,1436.0,park_area_inside_m2 +0.18; distance_nearest_sports_m +0.15; distance_nearest_playground_m +0.11
+leppington,planned_re1_enz,M1,7,89be08cc307ffff,0.7845524625312598,RE1 Public Recreation,park,Leppington,484.0,park_area_inside_m2 +0.14; distance_nearest_sports_m +0.13; distance_nearest_playground_m +0.10
+leppington,planned_re1_enz,M1,8,89be08cc38bffff,0.762306956180394,RE1 Public Recreation,park,Leppington,646.0,park_area_inside_m2 +0.17; distance_nearest_sports_m +0.15; sports_area_inside_m2 +0.11
+leppington,planned_re1_enz,M1,9,89be08cc36bffff,0.7594454954207182,R2 Low Density Residential,residential,Leppington,1410.0,park_area_inside_m2 +0.18; distance_nearest_sports_m +0.16; sports_area_inside_m2 +0.11
+leppington,planned_re1_enz,M1,10,89be08cdd93ffff,0.7305816095910495,RE1 Public Recreation,park,Leppington,1505.0,park_area_inside_m2 +0.17; distance_nearest_sports_m +0.16; sports_area_inside_m2 +0.12
+leppington,planned_re1_enz,M3,1,89be08cc303ffff,1.5143985875088277,MU1 Mixed Use,centre,Leppington,126.0,train_station_250m +0.38; train_station_inside +0.38; food_inside +0.19
+leppington,planned_re1_enz,M3,2,89be08cc343ffff,1.0161269482793531,RE1 Public Recreation,park,Leppington,1004.0,sports_area_inside_m2 +0.20; distance_nearest_sports_m +0.17; park_area_inside_m2 +0.16
+leppington,planned_re1_enz,M3,3,89be08cdd03ffff,1.0119933121925682,RE1 Public Recreation,park,Leppington,2795.0,sports_area_inside_m2 +0.18; distance_nearest_sports_m +0.17; park_area_inside_m2 +0.16
+leppington,planned_re1_enz,M3,4,89be08cc30bffff,0.995432266001165,SP2 Infrastructure,infrastructure,Leppington,426.0,food_inside +0.18; sports_area_inside_m2 +0.15; distance_nearest_sports_m +0.10
+leppington,planned_re1_enz,M3,5,89be08cc3c3ffff,0.9183683254254583,RE1 Public Recreation,park,Leppington,899.0,park_area_inside_m2 +0.17; distance_nearest_sports_m +0.15; distance_nearest_playground_m +0.14
+leppington,planned_re1_enz,M3,6,89be08cc30fffff,0.8658523730525278,MU1 Mixed Use,centre,Leppington,503.0,food_inside +0.21; distance_nearest_sports_m +0.10; shop_inside +0.08
+leppington,planned_re1_enz,M3,7,89be08cdcb7ffff,0.864780578564229,RE1 Public Recreation,park,Leppington,1436.0,park_area_inside_m2 +0.16; distance_nearest_sports_m +0.15; distance_nearest_playground_m +0.14
+leppington,planned_re1_enz,M3,8,89be08cc307ffff,0.8310095435605033,RE1 Public Recreation,park,Leppington,484.0,distance_nearest_sports_m +0.14; distance_nearest_playground_m +0.12; park_area_inside_m2 +0.12
+leppington,planned_re1_enz,M3,9,89be08cc38bffff,0.8154807493601588,RE1 Public Recreation,park,Leppington,646.0,distance_nearest_sports_m +0.15; park_area_inside_m2 +0.14; distance_nearest_playground_m +0.14
+leppington,planned_re1_enz,M3,10,89be08cc357ffff,0.7898371421419765,MU1 Mixed Use,centre,Leppington,635.0,food_inside +0.19; distance_nearest_sports_m +0.09; distance_nearest_playground_m +0.08
