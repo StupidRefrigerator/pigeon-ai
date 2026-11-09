@@ -1,0 +1,3 @@
+model,hex_id,suburb,lat,lng,toilet_count,pred
+baseline,89be085a90fffff,Schofields,-33.7044,150.8749,0,1.2201
+good_areas,89be085a90fffff,Schofields,-33.7044,150.8749,0,1.1804

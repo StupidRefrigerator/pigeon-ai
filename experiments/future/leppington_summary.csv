@@ -1,0 +1,17 @@
+scenario,model,total,hexes_ge1,max_hex,expected_hexes_with_toilet,uplift_vs_today
+dphi2041|shops_high|bus_calibrated,baseline,31.17,7,1.27,23.9,24.3
+dphi2041|shops_high|bus_calibrated,good_areas,45.52,12,2.02,32.39,31.56
+dphi2041|shops_high|bus_none,baseline,30.72,7,1.27,23.53,23.85
+dphi2041|shops_high|bus_none,good_areas,44.55,12,2.02,31.53,30.59
+dphi2041|shops_low|bus_calibrated,baseline,20.24,0,0.95,17.21,13.37
+dphi2041|shops_low|bus_calibrated,good_areas,29.94,1,1.04,24.62,15.98
+dphi2041|shops_low|bus_none,baseline,19.77,0,0.95,16.82,12.9
+dphi2041|shops_low|bus_none,good_areas,28.9,1,1.03,23.7,14.94
+dphi2041|shops_mid|bus_calibrated,baseline,22.66,1,1.02,19.0,15.79
+dphi2041|shops_mid|bus_calibrated,good_areas,33.42,3,1.18,26.84,19.46
+dphi2041|shops_mid|bus_calibrated|parks_RE_only,baseline,22.66,1,1.02,19.0,15.79
+dphi2041|shops_mid|bus_calibrated|parks_RE_only,good_areas,33.42,3,1.18,26.84,19.46
+dphi2041|shops_mid|bus_none,baseline,22.15,1,1.02,18.57,15.28
+dphi2041|shops_mid|bus_none,good_areas,32.36,3,1.17,25.92,18.4
+today_real_features,baseline,6.87,0,0.74,6.03,0.0
+today_real_features,good_areas,13.96,0,0.75,12.19,0.0
