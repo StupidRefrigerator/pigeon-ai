@@ -10,7 +10,7 @@ function AppShell() {
           Pigeon AI
         </Link>
         <Link to="/app" activeOptions={{ exact: true }} activeProps={{ className: 'active' }}>
-          Map explorer
+          App
         </Link>
         <Link to="/app/stats" activeProps={{ className: 'active' }}>
           Stats

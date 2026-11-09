@@ -1,4 +1,4 @@
-"""Turn the repo CSVs into compact JSON under app/public/data/.
+"""Turn the repo CSVs into app/src/data/stats.json for the internal stats page.
 
 Run from anywhere:  /tmp/pigeon-env/bin/python app/scripts/build_data.py
 Needs the remote branch origin/heatmap-held-out (fetched) for the held-out
@@ -13,17 +13,9 @@ import pandas as pd
 
 APP = Path(__file__).resolve().parents[1]
 REPO = APP.parent
-OUT = APP / "public" / "data"
-OUT.mkdir(parents=True, exist_ok=True)
 
 SCENARIO = "dphi2041|shops_mid|bus_calibrated"
 BRADFIELD_NOTE = "planned scenario — read the ranking, not the totals"
-
-
-def write(name, obj):
-    path = OUT / name
-    path.write_text(json.dumps(obj, separators=(",", ":"), ensure_ascii=False))
-    print(f"{name}: {path.stat().st_size / 1024:.0f} KB")
 
 
 def r(x, n=3):
@@ -48,51 +40,8 @@ gap = (pred["latest"] - pred["toilet_count"]).clip(lower=0)
 cand_ids = set(pred.loc[(pred["latest"] - pred["toilet_count"]) >= 1, "hex_id"])
 assert cand_ids == set(review["hex_id"]) and len(cand_ids) == 120, "candidates do not match candidate_review.csv"
 
-write("hexes.json", {
-    "ids": pred["hex_id"].tolist(),
-    "actual": pred["toilet_count"].astype(int).tolist(),
-    "pred": [round(float(x), 3) for x in pred["latest"]],
-})
-write("candidates.json", {
-    row.hex_id: {"drivers": row.top_drivers, "kind": row.kind, "pAny": r(row.p_any_toilet)}
-    for row in review.itertuples()
-})
-
-# ---------- new suburbs ----------
-g = pd.read_csv(REPO / "experiments/growth/growth_predictions.csv")
-a = pd.read_csv(REPO / "experiments/future/aero_predictions.csv")
-a = a[(a.scenario == SCENARIO) & (a.model == "baseline")]
 top = pd.read_csv(REPO / "experiments/future/aero_top15.csv")
 top = top[(top.scenario == SCENARIO) & (top.model == "baseline")]
-drivers = dict(zip(top.hex_id, top.drivers))
-write("newsuburbs.json", {
-    "growth": {
-        "ids": g.hex_id.tolist(), "suburb": g.suburb.tolist(),
-        "actual": g.toilet_count.astype(int).tolist(),
-        "pred": [round(float(x), 3) for x in g.baseline_pred],
-    },
-    "bradfield": {
-        "label": f"Bradfield / Aerotropolis — {BRADFIELD_NOTE}",
-        "scenario": SCENARIO,
-        "ids": a.hex_id.tolist(), "zone": a.zone.tolist(), "station": a.nearest_station.tolist(),
-        "stationM": [int(x) for x in a.station_dist_m],
-        "pred": [round(float(x), 3) for x in a.pred],
-        "drivers": {h: drivers[h] for h in a.hex_id if h in drivers},
-    },
-})
-
-# ---------- council plans ----------
-p = pd.read_csv(REPO / "experiments/gov/planned_sites.csv")
-p = p[p.lat.notna() & p.lng.notna()]
-write("plans.json", [
-    {"id": s.site_id, "name": s["name"], "council": s.council, "status": s.status, "url": s.url,
-     "lat": round(s.lat, 5), "lng": round(s.lng, 5), "pct": r(s.original_pct_hex, 1)}
-    for _, s in p.iterrows()
-])
-
-# ---------- places ----------
-places = json.load(open(REPO / "data/reference/sydney_places.json"))["places"]
-write("places.json", [[k, round(v[0], 5), round(v[1], 5)] for k, v in sorted(places.items())])
 
 # ---------- stats (original model only) ----------
 curated = json.load(open(APP / "scripts/curated_stats.json"))

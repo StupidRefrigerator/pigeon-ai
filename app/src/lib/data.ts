@@ -1,38 +1,3 @@
-import type { StudyHexes } from './gap'
-
-export type Place = [name: string, lat: number, lng: number]
-
-export interface CandidateInfo {
-  drivers: string
-  kind: 'no_toilet' | 'shortfall'
-  pAny: number | null
-}
-
-export interface NewSuburbs {
-  growth: { ids: string[]; suburb: string[]; actual: number[]; pred: number[] }
-  bradfield: {
-    label: string
-    scenario: string
-    ids: string[]
-    zone: string[]
-    station: string[]
-    stationM: number[]
-    pred: number[]
-    drivers: Record<string, string>
-  }
-}
-
-export interface PlannedSite {
-  id: string
-  name: string
-  council: string
-  status: string
-  url: string
-  lat: number
-  lng: number
-  pct: number | null
-}
-
 export interface Ratio {
   x: number
   y: number
@@ -102,29 +67,4 @@ export interface PlanRow {
   top25: Ratio
   candidateNear: Ratio
   medianPct: number
-}
-
-async function getJson<T>(name: string): Promise<T> {
-  const res = await fetch(`/data/${name}.json`)
-  if (!res.ok) throw new Error(`Could not load ${name}.json (${res.status})`)
-  return res.json() as Promise<T>
-}
-
-export interface ExplorerData {
-  places: Place[]
-  hexes: StudyHexes
-  candidates: Record<string, CandidateInfo>
-  newSuburbs: NewSuburbs
-  plans: PlannedSite[]
-}
-
-export async function loadExplorerData(): Promise<ExplorerData> {
-  const [places, hexes, candidates, newSuburbs, plans] = await Promise.all([
-    getJson<Place[]>('places'),
-    getJson<StudyHexes>('hexes'),
-    getJson<Record<string, CandidateInfo>>('candidates'),
-    getJson<NewSuburbs>('newsuburbs'),
-    getJson<PlannedSite[]>('plans'),
-  ])
-  return { places, hexes, candidates, newSuburbs, plans }
 }

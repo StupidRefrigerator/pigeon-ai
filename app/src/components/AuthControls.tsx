@@ -1,4 +1,4 @@
-import { Show, SignInButton, UserButton } from '@clerk/tanstack-react-start'
+import { Show, SignInButton, SignOutButton, UserButton } from '@clerk/tanstack-react-start'
 import { clerkEnabled } from '../lib/clerk'
 
 export function AuthControls() {
@@ -13,7 +13,7 @@ export function AuthControls() {
     )
   }
   return (
-    <>
+    <div className="actions">
       <Show when="signed-out">
         <SignInButton>
           <button className="btn">Sign in</button>
@@ -21,7 +21,10 @@ export function AuthControls() {
       </Show>
       <Show when="signed-in">
         <UserButton />
+        <SignOutButton>
+          <button className="btn">Sign out</button>
+        </SignOutButton>
       </Show>
-    </>
+    </div>
   )
 }
