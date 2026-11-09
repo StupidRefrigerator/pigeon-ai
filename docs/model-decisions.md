@@ -78,11 +78,28 @@ The review eval is the one that decides whether the product works. Review at lea
 - **How complete is the National Public Toilet Map by council?** Uneven coverage would show up as false candidates in some councils. Review statuses of `toilet_not_on_map` by council will show it.
 - **Should council be a feature?** It would absorb council policy and recording differences, but it would also hide a council that under-provides everywhere. Currently we leave it out.
 
+## Experiments
+
+These are not production. The production model and review file are unchanged.
+
+### Good-areas model (2026-11-09)
+
+The model is trained only on well-served blocks and applied everywhere, so gaps are measured against good provision instead of Sydney's average. Good blocks are the top third by the ratio of real toilets to the production model's held-out prediction, among blocks with at least 5 predicted toilets. Code: `src/pigeon_ai/good_areas.py`. Candidates go to `data/review/candidate_review_good_areas.csv`.
+
+Caveats:
+
+- Selection uses the production model, so its blind spots carry over.
+- Choosing blocks where actual is above predicted partly picks luck. Some of those blocks would regress to the mean.
+- Good blocks may only be councils that record toilets more completely. Then the model learns recording habits, not need.
+- It predicts above today's counts by design. Higher deviance is expected.
+- Only candidate review can show whether it is better.
+
 ## Change log
 
 - 2026-11-02: First version. Random forest replaces the earlier gradient-boosting proposal after the spatial comparison.
 - 2026-11-02: Moved to PR #4's extended dataset and the 28-column `latest` feature set. Added the target registry, the review file and its statuses, and the evals table. `load_experiment` returns counts again.
 - 2026-11-02: Candidate rule now flags shortfalls too: a hex with toilets whose prediction is at least 1 higher. The review file gains `toilet_count` and `kind`.
+- 2026-11-09: Added the good-areas experiment (not production) with its own review file.
 
 ## Dataset comparison extension (2026-11-06)
 

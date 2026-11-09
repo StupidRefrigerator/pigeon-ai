@@ -105,6 +105,39 @@ All evals use the held-out predictions. Results are from the current `latest` ru
 | Fairness | Does the model treat areas differently by disadvantage? | Split hexagons into SEIFA IRSD deciles. Compare predicted with actual toilets and the candidate rate. SEIFA is never a model input. | Predicted/actual 0.91 to 1.14 in every decile. |
 | Review | Are the candidates real gaps? | Share of reviewed candidates marked `real_gap`. | Not started. |
 
+### Good-areas experiment
+
+The production model learns from all of Sydney, so it measures gaps against Sydney's average provision. This experiment asks a different question: where would we expect toilets if every area were as well served as the best-served areas? It is not production. The review file `data/review/candidate_review.csv` is never touched.
+
+**How good areas are chosen.** The 90 spatial blocks (H3 resolution 6, the same blocks the cross-validation uses) are scored by the ratio of real toilets to the toilets the normal model expects there. A block needs at least 5 expected toilets to count. The top third by ratio are the good areas: 20 of 62 eligible blocks.
+
+**How it is trained.** One forest is trained on every hexagon in the good blocks. It predicts all hexagons outside them. Hexagons inside the good blocks are predicted by 5-fold cross-validation within the good blocks. Every hexagon is predicted by a forest that never saw its block.
+
+Run it from the project root (about 1 minute):
+
+```sh
+python scripts/train_good_areas.py
+```
+
+The `--seed` flag (default `0`) sets the forest seed. Outputs go to `data/model/good_areas/` (not committed):
+
+| File | Content |
+|---|---|
+| `comparison.csv` | Baseline, good areas and three random-block controls: deviance, PR-AUC, totals, candidates, overlap with the baseline's candidates. |
+| `spread.csv` | Mean prediction by real toilet count, baseline against good areas. |
+| `fairness.csv` | The SEIFA decile audit for both models. |
+| `stability.csv` | Good-areas candidates that repeat across seeds. |
+| `good_blocks.csv` | The chosen blocks with their real toilets, expected toilets and ratio. |
+| `hex_predictions.csv` | Every hexagon with both predictions, the gap, candidate flag and SHAP drivers. |
+
+Its candidates go to a separate file, `data/review/candidate_review_good_areas.csv`, with the same columns and statuses as the production review file. Reruns keep human fields. Commit it.
+
+**How to read it.**
+
+- The model deliberately predicts above today's counts, so its total (3,624) is well above the actual 2,570. A higher deviance is expected. It is not a defect.
+- The random controls train on the same number of blocks chosen at random. Their totals stay near 2,600 and their candidates fall. The extra predictions come from which areas are chosen, not from training on fewer rows.
+- Only candidate review can say whether this model finds more real gaps than the production one.
+
 ### Review candidates
 
 `data/review/candidate_review.csv` has one row per candidate. The script fills the model columns. A reviewer fills the human columns.
