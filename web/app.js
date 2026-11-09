@@ -2,7 +2,7 @@
 let versions = [];
 const labels = {};
 const maps = {}, layers = {}, cells = {}, circles = {};
-let summary, selectedHex, syncing = false;
+let summary, predictions, places, selectedHex, syncing = false;
 const status = document.getElementById('status');
 const button = document.getElementById('analyze');
 const fixed = (n) => Number(n).toFixed(2);
@@ -50,11 +50,10 @@ function resetDetails() {
   content.className = 'empty-details';
   content.innerHTML = '<p>The same hexagon will be highlighted across all the maps.</p>';
 }
-async function request(url) {
+async function load(url, as = 'json') {
   const response = await fetch(url);
-  const data = await response.json();
-  if (!response.ok) throw new Error(data.error || 'The request failed.');
-  return data;
+  if (!response.ok) throw new Error(`Could not load ${url} (${response.status}).`);
+  return response[as]();
 }
 async function analyze(event) {
   event.preventDefault();
@@ -64,8 +63,7 @@ async function analyze(event) {
   status.className = '';
   status.textContent = 'Selecting hexagons and showing held-out predictions…';
   try {
-    const params = new URLSearchParams({location: document.getElementById('location').value, radius: document.getElementById('radius').value});
-    const data = await request(`/api/analyze?${params}`);
+    const data = analyzeArea(predictions, places, document.getElementById('location').value, Number(document.getElementById('radius').value));
     resetDetails();
     for (const version of versions) {
       if (layers[version]) maps[version].removeLayer(layers[version]);
@@ -99,7 +97,12 @@ async function analyze(event) {
 async function init() {
   try {
     if (!window.L) throw new Error('Map library could not load. Check the web/vendor/leaflet files and reload.');
-    summary = await request('/api/summary');
+    if (!window.h3) throw new Error('Hexagon library could not load. Check the web/vendor/h3-js files and reload.');
+    const [metrics, placeFile, csv] = await Promise.all([load('metrics.json'), load('places.json'), load('predictions.csv', 'text')]);
+    predictions = addGeometry(parsePredictions(csv), window.h3);
+    places = placeFile.places;
+    summary = {versions: predictions.versions.map(id => ({id, label: MODEL_LABELS[id] || id})), places: Object.keys(places),
+               importance: Object.fromEntries(Object.entries(metrics.models).map(([v, m]) => [v, m.importance]))};
     versions = summary.versions.map(v => v.id);
     const grid = document.getElementById('maps');
     for (const {id, label} of summary.versions) {

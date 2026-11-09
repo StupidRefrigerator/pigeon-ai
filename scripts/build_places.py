@@ -6,7 +6,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 import geopandas as gpd
-from pigeon_ai.paths import RAW, REFERENCE
+from pigeon_ai.paths import RAW, WEB
 
 if __name__ == "__main__":
     city = gpd.read_file(RAW / "abs_boundaries/GCCSA_2026_AUST_GDA2020.shp")
@@ -21,6 +21,6 @@ if __name__ == "__main__":
                    "Town Hall": [-33.8732, 151.2069], "Central Station": [-33.8830, 151.2067],
                    "Circular Quay": [-33.8611, 151.2126], "Darling Harbour": [-33.8737, 151.2006],
                    "Sydney Olympic Park": [-33.8473, 151.0688]})
-    path = REFERENCE / "sydney_places.json"
+    path = WEB / "places.json"
     path.write_text(json.dumps({"source": "ABS 2026 Suburbs and Localities, representative points within Greater Sydney; six manually located landmarks", "places": dict(sorted(places.items()))}, indent=2) + "\n")
     print(f"Saved {len(places)} locations to {path}")

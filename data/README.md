@@ -171,7 +171,7 @@ Training, the model architecture, the evals and the candidate review file are de
 The [local comparison page](../README.md#local-comparison-page) shows V1, V5, V6 and
 Latest from held-out predictions. `scripts/build_comparison_page.py` reads the
 baseline and extended CSVs above and writes `web/predictions.csv` and
-`web/metrics.json`. Both are committed. `scripts/serve_comparison.py` serves them
+`web/metrics.json`. Both are committed. The static page in `web/` reads them
 and needs no raw files or processed tables. See
 [Running the Model Comparison Webpage](../README.md#running-the-model-comparison-webpage)
 for teammate setup.

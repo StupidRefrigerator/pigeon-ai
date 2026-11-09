@@ -9,7 +9,9 @@ import pandas as pd
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from pigeon_ai.comparison import held_out_predictions, load_model_data
 from pigeon_ai.model import metrics_row
-from pigeon_ai.prototype import MODELS, WEB_DIR
+from pigeon_ai.paths import WEB as WEB_DIR
+
+MODELS = ["V1", "V5", "V6", "latest"]  # page labels are in web/analyze.js
 
 SEED = 0
 SOURCE = ("Held-out 5-fold res-6 spatial cross-validation, seed 0. Each hex is predicted by a "

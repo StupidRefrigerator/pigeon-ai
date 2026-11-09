@@ -172,19 +172,18 @@ their own spatial folds, so their numbers are not comparable to V1–V8. Every
 comparison is one spatial partition, with no confidence intervals or tuning.
 PR-AUC is average precision. Top-100 hits count existing toilets, not need.
 
-### Local comparison page
+### Comparison page
 
-To run the page, see [Running the Model Comparison Webpage](#running-the-model-comparison-webpage).
+The page is a static site in `web/`. It is deployed on Vercel. To run it locally, see [Running the Model Comparison Webpage](#running-the-model-comparison-webpage).
 It shows four models side by side: V1, V5, V6 and Latest. Latest is the production
 feature set: V5's 1 km features plus V6's walkability features, without
 `population_density`.
 
-Open **http://127.0.0.1:8000**. Choose a Sydney suburb or listed landmark (for
+Choose a Sydney suburb or listed landmark (for
 example Town Hall, Parramatta or Bondi Junction), set a radius in km, and click
 **Analyze**. You can also enter `latitude, longitude`. Pan or zoom any map to move
 all of them together. Click a hexagon to see its actual count, every model's
-prediction, gap, candidate flag and model-wide importance. Use `--port 8001` on
-the server command if port 8000 is busy. Ctrl+C stops it.
+prediction, gap, candidate flag and model-wide importance.
 
 The maps show held-out predictions. Each hex is predicted by a forest that never
 saw its res-6 block (about 36 km²), so a hex's own toilet count cannot shrink its
@@ -197,12 +196,13 @@ candidates to investigate, not measured need. Cells are selected by the distance
 from the location to the hex centre, so circles near the study boundary may be
 partly covered. The page never changes the review file.
 
-The server only reads two committed files, so it trains nothing at startup:
+The browser loads three committed files and does the lookup itself, in `web/analyze.js`. Nothing is trained:
 
 - `web/predictions.csv`: `hex_id`, `toilet_count`, `fold`, then one held-out
   prediction column per model.
 - `web/metrics.json`: per-model deviance, PR-AUC, top-100 hits, candidates and
   importance, with a `source` note.
+- `web/places.json`: 937 Sydney suburb representative points and selected landmarks.
 
 To rebuild them after the processed features or the forest settings change (about
 10 minutes):
@@ -227,33 +227,26 @@ These files are already in the repository. To rebuild them, use the existing
 `python scripts/build_accessibility.py`. Raw inputs come from the team's shared
 Drive as described in `DATA.md`.
 
-The committed `data/reference/sydney_places.json` contains 937 Sydney suburb
-representative points and selected landmarks. To rebuild it from the existing
+To rebuild `web/places.json` from the existing
 raw ABS suburb and Greater Sydney boundary files, run `python scripts/build_places.py`.
-Lookup is local. Unlisted landmarks and addresses need coordinates. Leaflet 1.9.4
-and its license are in `web/vendor/leaflet/`. OpenStreetMap basemap tiles need
-internet access. Lookup and the hexagon overlays run locally. No Node install,
-frontend build, database or web framework is needed.
+Unlisted landmarks and addresses need coordinates. Leaflet 1.9.4 and h3-js 4.5.0,
+with their licenses, are in `web/vendor/`. OpenStreetMap basemap tiles need
+internet access. There is no frontend build, database or web framework.
 
 ## Running the Model Comparison Webpage
 
-From the repository root after cloning or pulling, use Python 3.14 (tested with
-3.14.3) and the pinned dependencies, especially scikit-learn 1.9.1:
+The page is static, so any file server works. From the repository root:
 
 ```sh
-python3.14 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r requirements.txt
-python scripts/serve_comparison.py
+python -m http.server 8000 --directory web
 ```
 
-On Windows, activate with `.venv\Scripts\activate` instead. Open
-**http://127.0.0.1:8000**. Select a place and radius, then click **Analyze**.
-Internet access is needed for OpenStreetMap tiles. The rest runs locally.
+Open **http://127.0.0.1:8000**. Select a place and radius, then click **Analyze**.
+No packages, processed tables, raw data or training are needed.
 
-The repository must include `web/` (with `predictions.csv`, `metrics.json` and the
-vendored Leaflet), `data/reference/sydney_places.json` and `src/pigeon_ai/`. No
-processed tables, raw data or training are needed to serve the page. The V1–V10
+To deploy, `vercel.json` publishes `web/` with no build step. From the repository
+root, run `npx vercel --prod`. To test the lookup, run
+`node --test tests/analyze.test.js`. The V1–V10
 table at the top of the page is a static snapshot in `web/index.html` (V10 pending).
 
 To rebuild the processed tables from the team's raw snapshot, install the native
@@ -265,7 +258,6 @@ python scripts/run_pipeline.py
 python scripts/build_experiments.py --versions V5 V9 V10
 python scripts/build_accessibility.py
 python scripts/build_comparison_page.py
-python scripts/serve_comparison.py
 ```
 
 Alternatively, unzip the team's archive directly into `data/raw/` as described in
