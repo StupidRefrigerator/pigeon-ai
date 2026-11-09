@@ -12,7 +12,17 @@ Quick reference for every model result so far. The scripts and raw CSVs for each
 
 Every number below is held-out. No model saw the hex it was scored on.
 
-**Decision: use the original.** Good-areas ranks real toilets slightly worse, predicts 41% too many toilets, and flags 2.6× as many spots. Each of its flags is no more likely to match a council plan than one of the original's flags.
+**Decision (team, 9 Nov 2026): use the original cross-validated model. The good-areas model is dropped and PR #8 is closed.** Good-areas ranks real toilets slightly worse, predicts 41% too many toilets, and flags 2.6× as many spots. Each of its flags is no more likely to match a council plan than one of the original's flags.
+
+## The three new-area tests
+
+There are 3 different tests. This is the easiest place to get confused.
+
+| Test | Where | Does real data exist? | What it shows |
+|---|---|---|---|
+| A. Growth suburbs | Oran Park, Marsden Park, etc. | Yes: real features and real toilets | The model works on suburbs it never saw (24/35) |
+| B. Bradfield | Airport city, not built yet | No, so the features are **built from government plans** | Where it *would* put toilets in the future |
+| C. Oran Park check | Oran Park | Yes | **Whether test B's guessed features can be trusted** |
 
 ## 1. Does it find where toilets already are?
 
@@ -104,6 +114,23 @@ Folder: `experiments/gov/`, with every site, its source URL and its scores in `p
 | Real ÷ predicted | Between 0.88 and 1.09 across all deciles | |
 
 The model reproduces Sydney's current pattern, so wealthier areas get more. Changing that needs a priority step after the model: `priority = gap × (1 + weight × disadvantage)`.
+
+## Data sources for a new suburb
+
+A new suburb needs a value for every feature the model uses. These are the official sources for each one, so they can go straight into the new-suburb prompt or input form.
+
+| Feature | Source | Format | Notes |
+|---|---|---|---|
+| Population, today | ABS Census 2021 mesh blocks and SA1 | CSV and shapefile | Already in the pipeline |
+| Population, future | NSW DPHI 2024 Common Planning Assumptions, SA2 projections to 2041 | XLSX | Spread over land zoned for housing |
+| Land use and zoning | NSW Planning Portal, Principal Planning Layers (ArcGIS MapServer, layer 19 Land Zoning) | GeoJSON via REST | Gives centre, residential, park (RE1), mixed use and infrastructure zones |
+| Precinct and master plans | DPHI precinct plans (Aerotropolis Precinct Plan, Bradfield City Centre Master Plan, South West Growth Area plans) | PDF | Locations of town centres, parks and "amenities" |
+| Train and metro stations | Sydney Metro (Western Sydney Airport line) and Transport for NSW | Station coordinates | Planned stations are in the master plans |
+| Bus stops | TfNSW GTFS (today) | GTFS | Future values: calibrated densities per zone |
+| Shops and food | OpenStreetMap (today) | Overpass API | Future values: low, mid or high density per zone, calibrated on 20 Sydney suburbs |
+| Parks, sports fields, playgrounds, beaches | OpenStreetMap (today) and zoning RE1 (planned) | Overpass and GeoJSON | Being added as v2 features |
+| Disadvantage | ABS SEIFA 2021 IRSD | CSV | New suburbs have no score until the next Census |
+| Planned toilets | Council toilet strategies, project pages and DA reports | Web and PDF | 56 sites collected in `experiments/gov/planned_sites.csv` |
 
 ## Next improvements, in order
 
