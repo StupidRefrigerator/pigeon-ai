@@ -33,3 +33,4 @@ models/
 
 # Regenerable model outputs
 data/model/
+.vercel
