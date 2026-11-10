@@ -1,0 +1,417 @@
+{
+ "model": "Sections 1–7 use V11, the `latest` feature set (5-fold spatial CV; every number is held-out)",
+ "headline": {
+  "hexes": 16228,
+  "toilets": 2570,
+  "toiletHexes": 1911,
+  "prAuc": {
+   "value": 0.519,
+   "random": 0.118
+  },
+  "topN": [
+   {
+    "label": "Real toilet hexes in top 100",
+    "x": 86,
+    "y": 100,
+    "pct": 86.0
+   },
+   {
+    "label": "Real toilet hexes in top 500",
+    "x": 359,
+    "y": 500,
+    "pct": 71.8
+   },
+   {
+    "label": "Real toilet hexes in top 1,000",
+    "x": 616,
+    "y": 1000,
+    "pct": 61.6
+   }
+  ],
+  "deviance": 0.419,
+  "predictedTotal": 2632,
+  "actualTotal": 2570,
+  "predictedTotalPctOfActual": 102.4,
+  "candidates": 120
+ },
+ "validity": {
+  "n": 120,
+  "rows": [
+   {
+    "label": "A public toilet on OpenStreetMap",
+    "x": 60,
+    "y": 120,
+    "pct": 50
+   },
+   {
+    "label": "More OSM public toilets than the official map lists",
+    "x": 55,
+    "y": 120,
+    "pct": 46
+   },
+   {
+    "label": "A shopping centre or strong destination (station, beach, large park, library, mall)",
+    "x": 107,
+    "y": 120,
+    "pct": 89
+   },
+   {
+    "label": "Only houses or industry",
+    "x": 0,
+    "y": 120,
+    "pct": 0
+   }
+  ],
+  "note": "82% of busy hexes the model did not flag also contain a shopping centre or strong destination. The check shows candidates are plausible places. It cannot prove they need a toilet."
+ },
+ "growth": {
+  "hexes": 1108,
+  "suburbs": 16,
+  "actual": 39,
+  "predicted": 54.6,
+  "toiletHexes": 35,
+  "top100": {
+   "x": 24,
+   "y": 35,
+   "pct": 69
+  },
+  "prAuc": {
+   "value": 0.312,
+   "random": 0.032
+  },
+  "perSuburb": [
+   {
+    "suburb": "Austral",
+    "hexes": 118,
+    "actual": 0,
+    "pred": 2.2
+   },
+   {
+    "suburb": "Box Hill (NSW)",
+    "hexes": 86,
+    "actual": 1,
+    "pred": 4.7
+   },
+   {
+    "suburb": "Bringelly",
+    "hexes": 87,
+    "actual": 0,
+    "pred": 0.3
+   },
+   {
+    "suburb": "Catherine Field",
+    "hexes": 72,
+    "actual": 1,
+    "pred": 0.9
+   },
+   {
+    "suburb": "Colebee",
+    "hexes": 45,
+    "actual": 1,
+    "pred": 5.1
+   },
+   {
+    "suburb": "Edmondson Park",
+    "hexes": 64,
+    "actual": 5,
+    "pred": 4.7
+   },
+   {
+    "suburb": "Gilead",
+    "hexes": 3,
+    "actual": 0,
+    "pred": 0.1
+   },
+   {
+    "suburb": "Gledswood Hills",
+    "hexes": 76,
+    "actual": 3,
+    "pred": 5.0
+   },
+   {
+    "suburb": "Gregory Hills",
+    "hexes": 23,
+    "actual": 7,
+    "pred": 3.0
+   },
+   {
+    "suburb": "Leppington",
+    "hexes": 140,
+    "actual": 6,
+    "pred": 4.8
+   },
+   {
+    "suburb": "Marsden Park",
+    "hexes": 102,
+    "actual": 0,
+    "pred": 4.7
+   },
+   {
+    "suburb": "Oran Park",
+    "hexes": 86,
+    "actual": 5,
+    "pred": 8.3
+   },
+   {
+    "suburb": "Riverstone",
+    "hexes": 48,
+    "actual": 6,
+    "pred": 3.9
+   },
+   {
+    "suburb": "Schofields",
+    "hexes": 64,
+    "actual": 3,
+    "pred": 4.6
+   },
+   {
+    "suburb": "Shanes Park",
+    "hexes": 66,
+    "actual": 1,
+    "pred": 1.2
+   },
+   {
+    "suburb": "Vineyard",
+    "hexes": 28,
+    "actual": 0,
+    "pred": 1.0
+   }
+  ],
+  "note": "A random top 100 would catch about 3 of the 35. Over-predicting is expected because these suburbs are still filling in."
+ },
+ "bradfield": {
+  "label": "planned scenario — read the ranking, not the totals",
+  "scenario": "dphi2041|shops_mid|bus_calibrated",
+  "todayTotal": 9.7,
+  "midTotal": 139.4,
+  "hexesGe1": 3,
+  "maxHex": 1.16,
+  "top": [
+   {
+    "rank": 1,
+    "zone": "MU Mixed Use",
+    "station": "Bradfield Station",
+    "stationM": 27,
+    "pred": 1.16,
+    "drivers": "train_station_250m +0.28; train_station_inside +0.24; food_inside +0.20"
+   },
+   {
+    "rank": 2,
+    "zone": "MU Mixed Use",
+    "station": "Luddenham Station",
+    "stationM": 182,
+    "pred": 1.11,
+    "drivers": "train_station_inside +0.27; train_station_250m +0.26; food_inside +0.11"
+   },
+   {
+    "rank": 3,
+    "zone": "ENZ Environment and Recreation",
+    "station": "Luddenham Station",
+    "stationM": 585,
+    "pred": 1.01,
+    "drivers": "park_area_inside_m2 +0.26; food_inside +0.18; park_area_250m_m2 +0.11"
+   },
+   {
+    "rank": 4,
+    "zone": "MU Mixed Use",
+    "station": "Luddenham Station",
+    "stationM": 204,
+    "pred": 0.82,
+    "drivers": "train_station_250m +0.15; food_inside +0.13; shop_250m +0.10"
+   },
+   {
+    "rank": 5,
+    "zone": "MU Mixed Use",
+    "station": "Luddenham Station",
+    "stationM": 302,
+    "pred": 0.76,
+    "drivers": "food_inside +0.19; park_area_inside_m2 +0.14; park_area_250m_m2 +0.09"
+   }
+  ],
+  "oranProxy": {
+   "overlap": {
+    "real": 10,
+    "proxy": 5,
+    "of": 10
+   },
+   "toiletHexesInTop10": {
+    "real": 3,
+    "proxy": 2,
+    "of": 5
+   }
+  }
+ },
+ "plans": {
+  "rows": [
+   {
+    "label": "Planned sites",
+    "n": 42,
+    "top10": {
+     "x": 26,
+     "y": 42,
+     "pct": 62
+    },
+    "top25": {
+     "x": 36,
+     "y": 42,
+     "pct": 86
+    },
+    "candidateNear": {
+     "x": 8,
+     "y": 39,
+     "pct": 21
+    },
+    "medianPct": 95
+   },
+   {
+    "label": "Random empty hexes",
+    "n": 1000,
+    "top10": {
+     "x": 109,
+     "y": 1000,
+     "pct": 11
+    },
+    "top25": {
+     "x": 248,
+     "y": 1000,
+     "pct": 25
+    },
+    "candidateNear": {
+     "x": 23,
+     "y": 1000,
+     "pct": 2
+    },
+    "medianPct": 49
+   },
+   {
+    "label": "Random empty park hexes",
+    "n": 1000,
+    "top10": {
+     "x": 195,
+     "y": 1000,
+     "pct": 20
+    },
+    "top25": {
+     "x": 472,
+     "y": 1000,
+     "pct": 47
+    },
+    "candidateNear": {
+     "x": 47,
+     "y": 1000,
+     "pct": 5
+    },
+    "medianPct": 73
+   }
+  ],
+  "fairest": {
+   "label": "Brand-new sites in hexes with no toilet yet",
+   "n": 15,
+   "top10": {
+    "x": 6,
+    "y": 15,
+    "pct": 40
+   },
+   "top25": {
+    "x": 10,
+    "y": 15,
+    "pct": 67
+   },
+   "candidateNear": {
+    "x": 3,
+    "y": 13,
+    "pct": 23
+   },
+   "medianPct": 85
+  },
+  "reverse": {
+   "candidatesNear": {
+    "x": 10,
+    "y": 120,
+    "pct": 8.3
+   },
+   "chance": {
+    "x": 249,
+    "y": 16228,
+    "pct": 1.5
+   }
+  },
+  "sources": "56 sites from 22 councils' strategies, project pages, DA reports and media releases; 42 could be placed on a hex.",
+  "misses": "Sports-field amenity blocks (Ken Birdsey Park at the 29th percentile, Anthony Skarratt Reserve at the 41st). The model has no sports-field feature."
+ },
+ "seifa": {
+  "toilets_per_10k_decile_1": 4.1,
+  "toilets_per_10k_decile_10": 5.7,
+  "real_over_pred_min": 0.88,
+  "real_over_pred_max": 1.09,
+  "note": "The model reproduces Sydney's current pattern, so wealthier areas get more. Changing that needs a priority step after the model: priority = gap x (1 + weight x disadvantage)."
+ },
+ "newAreaTests": [
+  {
+   "test": "A. Growth suburbs",
+   "where": "Oran Park, Marsden Park, etc.",
+   "real_data": "Yes: real features and real toilets",
+   "shows": "The model works on suburbs it never saw",
+   "result": "24/35 real toilet hexes in top 100"
+  },
+  {
+   "test": "B. Bradfield",
+   "where": "Airport city, not built yet",
+   "real_data": "No: features built from government plans",
+   "shows": "Where it would put toilets in the future",
+   "result": "about 139 toilets in the mid 2041 scenario (read the ranking, not the total)"
+  },
+  {
+   "test": "C. Oran Park check",
+   "where": "Oran Park",
+   "real_data": "Yes",
+   "shows": "Whether test B's guessed features can be trusted",
+   "result": "proxy keeps 5/10 of the real-feature top 10"
+  }
+ ],
+ "v2Changes": [
+  {
+   "change": "V11 (before)",
+   "prAuc": "0.520",
+   "council": "26/42",
+   "growth": "24/35",
+   "verdict": ""
+  },
+  {
+   "change": "+ sports fields, playgrounds, beaches (V12)",
+   "prAuc": "0.569",
+   "council": "30/42",
+   "growth": "22/35",
+   "verdict": "Keep. The only change that beats the noise (seed spread ±0.001)."
+  },
+  {
+   "change": "Retrain on OSM toilets as labels",
+   "prAuc": "0.506",
+   "council": "24/42",
+   "growth": "24/35",
+   "verdict": "Drop. Predicts 29% too many toilets and makes 267 candidates."
+  },
+  {
+   "change": "Count OSM toilets after the model",
+   "prAuc": "same",
+   "council": "same",
+   "growth": "same",
+   "verdict": "Keep. Picks with an OSM toilet fall from 37/120 to 9/120."
+  },
+  {
+   "change": "Disadvantage weighting w = 1",
+   "prAuc": "same",
+   "council": "same",
+   "growth": "same",
+   "verdict": "Keep. Picks in deciles 1–3 rise from 32 to 54 of 120; deciles 8–10 fall from 17 to 3."
+  },
+  {
+   "change": "400 m walk as a filter",
+   "prAuc": "same",
+   "council": "same",
+   "growth": "same",
+   "verdict": "Drop as a filter, keep as a map layer. Only 5–20 of its 120 picks are real gaps."
+  }
+ ],
+ "v2Note": "1,471,429 of 4,491,614 residents (32.8%) have no listed toilet within about 400 m. Correction to section 2: counting strictly inside the hex, 39/120 (32%) of V11's candidates already have an OSM public toilet; the 60/120 figure also counted toilets up to 50 m outside the hex."
+}
