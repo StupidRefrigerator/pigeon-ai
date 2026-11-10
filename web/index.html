@@ -40,38 +40,35 @@
     </section>
 
     <section aria-labelledby="selected-title">
-      <h2 id="selected-title">Selected Models: V1, V5 and V6</h2>
+      <h2 id="selected-title">Selected Models: V1, V5, V6 and Latest</h2>
       <ul>
         <li><strong>V1 — Baseline:</strong> Reference for measuring improvements.</li>
-        <li><strong>V5 — 1 km surrounding features:</strong> Best PR-AUC (0.5160) and 86 top-100 hits.</li>
-        <li><strong>V6 — Pedestrian accessibility:</strong> Lowest deviance (0.4205).</li>
+        <li><strong>V5 — 1 km surrounding features:</strong> Best PR-AUC of V1, V5 and V6 (0.5159) and 86 top-100 hits.</li>
+        <li><strong>V6 — Pedestrian accessibility:</strong> Lowest deviance of V1, V5 and V6 (0.4205).</li>
+        <li><strong>Latest — V5 + V6 (production):</strong> V5's 1 km features plus V6's walkability features, without population density. Deviance 0.4176, PR-AUC 0.5194, 86 top-100 hits, 120 candidates.</li>
       </ul>
-      <p>The differences are relatively small. We will compare their geographic predictions before selecting a final model.</p>
+      <p>The differences are relatively small. The heatmaps below use the same held-out predictions as these metrics (<code>web/metrics.json</code>).</p>
     </section>
 
     <section aria-labelledby="demo-title">
       <h2 id="demo-title">Heatmap Demo</h2>
-      <p class="note">The saved final models run on existing study-area rows. These predictions are in-sample; use the spatial-CV results above for evaluation.</p>
+      <p class="note">Every map shows held-out predictions: each hexagon is predicted by a model that never saw its roughly 36 km² block (5-fold spatial cross-validation, seed 0). A hexagon's own toilet count never reaches its own prediction. Latest is the production feature set: V5's 1 km features plus V6's walkability features, without population density.</p>
       <form id="search" class="search">
         <label class="location-label" for="location">Sydney suburb or place<input id="location" name="location" list="places" value="Town Hall" placeholder="Parramatta or Bondi Junction" required autocomplete="off"><datalist id="places"></datalist></label>
         <label class="radius-label" for="radius">Radius (km)<input id="radius" name="radius" type="number" value="2" min="0.1" max="30" step="0.1" required></label>
         <button id="analyze" type="submit" disabled>Analyze</button>
       </form>
       <p class="note">Choose a listed suburb or landmark, or enter latitude, longitude.</p>
-      <p id="status" role="status" aria-live="polite">Loading models…</p>
-      <div class="maps" aria-label="Three model heatmaps">
-        <div><h3>V1 — Baseline</h3><div id="map-V1" class="map" aria-label="V1 gap heatmap"></div><div id="total-V1" class="map-total">Choose an area to see predictions.</div></div>
-        <div><h3>V5 — 1 km features</h3><div id="map-V5" class="map" aria-label="V5 gap heatmap"></div><div id="total-V5" class="map-total">Choose an area to see predictions.</div></div>
-        <div><h3>V6 — Accessibility</h3><div id="map-V6" class="map" aria-label="V6 gap heatmap"></div><div id="total-V6" class="map-total">Choose an area to see predictions.</div></div>
-      </div>
-    <div class="legend-row"><div class="legend"><strong>Gap score</strong><span><i style="background:#dfe7df"></i>0</span><span><i style="background:#f7e3aa"></i>&gt;0–0.25</span><span><i style="background:#e9b75b"></i>0.25–0.5</span><span><i style="background:#df873c"></i>0.5–1</span><span><i style="background:#c94c35"></i>1–2</span><span><i style="background:#842f37"></i>2+</span></div><p>Same scale on every map · dark outlines mark candidates (gap ≥ 1)</p></div>
-    <p class="coverage-note">Gap = max(0, predicted − actual). Whole hexagons are included when their centers fall inside the circle. Only existing study-area cells are scored.</p>
+      <p id="status" role="status" aria-live="polite">Loading predictions…</p>
+      <div id="maps" class="maps" aria-label="Model heatmaps"></div>
+    <div class="legend-row"><div class="legend"><strong>Gap score</strong><span><i style="background:#dfe7df"></i>0</span><span><i style="background:#f7e3aa"></i>&gt;0–0.25</span><span><i style="background:#e9b75b"></i>0.25–0.5</span><span><i style="background:#df873c"></i>0.5–1</span><span><i style="background:#c94c35"></i>1–2</span><span><i style="background:#842f37"></i>2+</span></div><p>Same scale on every map · dark outlines mark candidates (predicted − actual ≥ 1)</p></div>
+    <p class="coverage-note">Gap = max(0, predicted − actual); a candidate has predicted − actual ≥ 1. Whole hexagons are included when their centers fall inside the circle. Only existing study-area cells are scored.</p>
 
 
       <div class="details" aria-labelledby="detail-title">
         <h3 id="detail-title">Select a hexagon</h3>
-        <p id="actual-detail">Click any coloured cell to compare all three predictions.</p>
-        <div id="detail-content" class="empty-details"><p>The same hexagon will be highlighted across all three maps.</p></div>
+        <p id="actual-detail">Click any coloured cell to compare the model predictions.</p>
+        <div id="detail-content" class="empty-details"><p>The same hexagon will be highlighted across all the maps.</p></div>
       </div>
       <p class="note">Models learn existing provision, not unmet need. Candidates are places to investigate. Location lookup: ABS 2026 suburbs and selected landmarks. Map data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.</p>
     </section>

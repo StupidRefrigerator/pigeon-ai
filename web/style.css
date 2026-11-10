@@ -42,7 +42,7 @@ button:disabled { opacity: .6; cursor: wait; }
 input:focus-visible, button:focus-visible, a:focus-visible, .table-scroll:focus-visible { outline: 2px solid #ccc; outline-offset: 2px; }
 #status { font-size: 13px; margin: 14px 0; }
 #status.error { color: #fff; text-decoration: underline; }
-.maps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.maps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 .map { height: 330px; border: 1px solid var(--line); background: #222; color-scheme: light; }
 .map-total { display: flex; flex-wrap: wrap; gap: 4px 12px; margin-top: 7px; color: var(--muted); font-size: 12px; }
 .map-total strong { color: var(--ink); font-weight: 500; }
@@ -54,7 +54,7 @@ input:focus-visible, button:focus-visible, a:focus-visible, .table-scroll:focus-
 .details { margin: 22px 0; padding-top: 4px; border-top: 1px solid var(--line); }
 #detail-title { overflow-wrap: anywhere; }
 #actual-detail, .empty-details { color: var(--muted); font-size: 13px; }
-.detail-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.detail-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
 .detail-numbers { display: flex; gap: 24px; font-variant-numeric: tabular-nums; }
 .detail-numbers span { display: block; font-size: 12px; color: var(--muted); }
 .detail-numbers strong { font-size: 16px; font-weight: 500; }

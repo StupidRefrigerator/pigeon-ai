@@ -84,14 +84,18 @@ The review eval is the one that decides whether the product works. Review at lea
 - 2026-11-02: Moved to PR #4's extended dataset and the 28-column `latest` feature set. Added the target registry, the review file and its statuses, and the evals table. `load_experiment` returns counts again.
 - 2026-11-02: Candidate rule now flags shortfalls too: a hex with toilets whose prediction is at least 1 higher. The review file gains `toilet_count` and `kind`.
 
-## Dataset comparison extension (2026-11-06)
+## Dataset comparison extension (2026-11-06, revised 2026-11-09)
 
 `compare_experiments.py` tests the declared V1–V10 datasets without changing the
 production choices above. It deliberately retains density and enables V7's
 independently sourced Census/SEIFA inputs and V8's projection inputs. The former
-can reproduce provision bias; the latter is only an exploratory scenario. See
-README's comparison section for fold anchoring, training-only imputation and
-output definitions. Expanded-area full metrics are not ranked against V1–V8.
+can reproduce provision bias. The latter is only an exploratory scenario. See the
+README's comparison section for the outputs.
+
+Every experiment is scored with held-out predictions from `model.cross_validate`
+(seed 0). The first version also ran SHAP, seed stability and fold anchoring for
+V9/V10. That was dropped to keep the comparison simple. V9 and V10 use their own
+spatial folds and cover different hexes, so their numbers are not ranked against V1–V8.
 
 The real-data audit found 370 missing values per V7 age-share column, 2,392
 missing SEIFA values and 222 missing V8 growth-percentage values. These remain
@@ -100,18 +104,22 @@ The density/population ratio actually ranges from 7.89365 to 7.90214 for
 positive-population V1 cells: the production redundancy argument is approximate,
 not exact. The comparison retains density as declared by the experiment registry.
 
-## Local comparison prototype (2026-11-06)
+## Local comparison page (2026-11-06, revised 2026-11-09)
 
-The prototype saves full-data V1/V5/V6 forests for interactive inference, reusing
-the registered feature lists and existing forest settings at seed 0. V1 is the
-baseline, V5 has the best ranking metrics, and V6 the lowest deviance in the saved
-same-area experiment comparison. A median imputer is saved with each forest.
-The page displays the existing spatial-CV metrics, rather than evaluating these
-full-data fits on their own training rows. Its live heatmaps are in-sample and
-may hide gaps; use them to compare behavior, not to claim validation performance.
+The first version fit V1/V5/V6 forests on all hexes and predicted those same hexes.
+A hex's own toilet count then shaped its own prediction, so gaps shrank and the
+maps hid the places we want to find. We deleted those fits.
+
+The page now shows held-out predictions: 5-fold spatial CV by res-6 block, seed 0,
+so each hex is predicted by a forest that never saw its block. It compares V1, V5,
+V6 and Latest (V5's 1 km features plus V6's walkability features, without
+`population_density`; the production feature set). The predictions are committed
+in `web/predictions.csv` with their metrics in `web/metrics.json`, so the server
+trains nothing. The Latest map's 120 candidates equal the review file's 120.
+
 The displayed gap is clamped at zero, with the unchanged candidate threshold 1.
-For this simple prototype, model-wide impurity importance replaces expensive
-per-request SHAP. No review-file updates or model-evaluation reruns are involved.
+Model-wide importance is mean absolute SHAP on held-out rows. A final model on
+`latest` for scoring new areas is separate future work.
 
 ## V12: sports grounds, playgrounds and beaches; OSM toilets after the model (2026-11-10)
 

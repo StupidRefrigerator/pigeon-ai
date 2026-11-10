@@ -221,14 +221,12 @@ Counts, areas and distances follow the conventions of the park features: EPSG:78
 
 Training, the model architecture, the evals and the candidate review file are described in the [project README](../README.md#model).
 
-### Local comparison prototype
+### Local comparison page
 
-The [local comparison page](../README.md#local-v1--v5--v6-comparison-page) uses only
-V1, V5 and V6. It reads the baseline and extended CSVs above, trains/saves final
-forests with `scripts/train_final_models.py`, then serves them with
-`scripts/serve_comparison.py`. No raw files are needed when the processed tables
-already exist. The committed Sydney place lookup and CV metric snapshot make the
-page independent of ignored experiment outputs. The three shared inference models and their JSON metadata in
-`data/model/final/` are allowed into Git; other model outputs remain ignored.
-See [Running the Model Comparison Webpage](../README.md#running-the-model-comparison-webpage)
-for the complete teammate setup.
+The [local comparison page](../README.md#local-comparison-page) shows V1, V5, V6 and
+Latest from held-out predictions. `scripts/build_comparison_page.py` reads the
+baseline and extended CSVs above and writes `web/predictions.csv` and
+`web/metrics.json`. Both are committed. `scripts/serve_comparison.py` serves them
+and needs no raw files or processed tables. See
+[Running the Model Comparison Webpage](../README.md#running-the-model-comparison-webpage)
+for teammate setup.

@@ -1,20 +1,117 @@
 {
-  "source": "Saved five-fold res-6 spatial CV, seed 0; original 16,228 hexagons. These are evaluation metrics, not scores of the final full-data fits.",
+  "source": "Held-out 5-fold res-6 spatial cross-validation, seed 0. Each hex is predicted by a forest that never saw its res-6 block.",
   "models": {
     "V1": {
-      "deviance": 0.4267731792105985,
-      "pr_auc": 0.5109079263798934,
-      "top100_hits": 83.0
+      "deviance": 0.4268085957973288,
+      "pr_auc": 0.5108784941548816,
+      "top100_hits": 83,
+      "candidates": 119,
+      "importance": [
+        {
+          "feature": "park_area_inside_m2",
+          "importance": 0.19223998208243379
+        },
+        {
+          "feature": "shop_inside",
+          "importance": 0.11585176264202204
+        },
+        {
+          "feature": "food_inside",
+          "importance": 0.09840270809739102
+        },
+        {
+          "feature": "park_area_250m_m2",
+          "importance": 0.09518406973843593
+        },
+        {
+          "feature": "food_250m",
+          "importance": 0.08082973246141495
+        }
+      ]
     },
     "V5": {
-      "deviance": 0.4210025922344428,
-      "pr_auc": 0.5159696566100415,
-      "top100_hits": 86.0
+      "deviance": 0.4210036963474317,
+      "pr_auc": 0.5159414806889359,
+      "top100_hits": 86,
+      "candidates": 120,
+      "importance": [
+        {
+          "feature": "park_area_inside_m2",
+          "importance": 0.1835890555809597
+        },
+        {
+          "feature": "shop_inside",
+          "importance": 0.1145672850171056
+        },
+        {
+          "feature": "park_area_250m_m2",
+          "importance": 0.09377907706507033
+        },
+        {
+          "feature": "food_inside",
+          "importance": 0.08901136331435884
+        },
+        {
+          "feature": "shop_250m",
+          "importance": 0.08022509976007493
+        }
+      ]
     },
     "V6": {
-      "deviance": 0.4204626345906836,
-      "pr_auc": 0.5140123839788231,
-      "top100_hits": 84.0
+      "deviance": 0.4204723313462874,
+      "pr_auc": 0.5139832548604604,
+      "top100_hits": 84,
+      "candidates": 118,
+      "importance": [
+        {
+          "feature": "park_area_inside_m2",
+          "importance": 0.18477592965353196
+        },
+        {
+          "feature": "shop_inside",
+          "importance": 0.11246352894937094
+        },
+        {
+          "feature": "park_area_250m_m2",
+          "importance": 0.08716330119445286
+        },
+        {
+          "feature": "food_inside",
+          "importance": 0.0837838521233325
+        },
+        {
+          "feature": "food_250m",
+          "importance": 0.08255068727290894
+        }
+      ]
+    },
+    "latest": {
+      "deviance": 0.41758481461765173,
+      "pr_auc": 0.519436815961535,
+      "top100_hits": 86,
+      "candidates": 120,
+      "importance": [
+        {
+          "feature": "park_area_inside_m2",
+          "importance": 0.17102705473319155
+        },
+        {
+          "feature": "shop_inside",
+          "importance": 0.1153150607265127
+        },
+        {
+          "feature": "park_area_250m_m2",
+          "importance": 0.08929779420118085
+        },
+        {
+          "feature": "food_inside",
+          "importance": 0.08139284105416497
+        },
+        {
+          "feature": "food_250m",
+          "importance": 0.0775527777067073
+        }
+      ]
     }
   }
 }
