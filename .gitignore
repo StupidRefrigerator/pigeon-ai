@@ -31,8 +31,16 @@ dist/
 # Trained models
 models/
 
-# Regenerable model outputs
-data/model/
+# Model outputs. The final V12 results are committed (see README); the rest is regenerable.
+data/model/*
+!data/model/hex_predictions.csv
+!data/model/recommendations.csv
+!data/model/metrics.csv
+!data/model/feature_importance.csv
+!data/model/calibration.csv
+!data/model/fairness.csv
+!data/model/folds.csv
+!data/model/stability.csv
 
 # Large experiment outputs, kept in pigeon-ai-experiment-outputs.zip on the team Drive (see DATA.md)
 experiments/v2/combos/out/study_oof_predictions.csv

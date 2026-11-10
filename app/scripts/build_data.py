@@ -4,9 +4,7 @@ Run from anywhere:  /tmp/pigeon-env/bin/python app/scripts/build_data.py
 Needs the remote branch origin/heatmap-held-out (fetched) for the held-out
 `latest` predictions, unless app/data-src/predictions.csv already exists.
 """
-import io
 import json
-import subprocess
 from pathlib import Path
 
 import pandas as pd
@@ -26,10 +24,7 @@ def load_predictions():
     local = APP / "data-src" / "predictions.csv"
     if local.exists():
         return pd.read_csv(local)
-    txt = subprocess.check_output(
-        ["git", "-C", str(REPO), "show", "origin/heatmap-held-out:web/predictions.csv"], text=True
-    )
-    return pd.read_csv(io.StringIO(txt))
+    return pd.read_csv(REPO / "web/predictions.csv")
 
 
 # ---------- study hexes (held-out, latest) ----------
