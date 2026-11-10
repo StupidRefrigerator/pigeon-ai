@@ -34,3 +34,17 @@ This downloads the zip, extracts it into `data/raw/`, and checks that the requir
 The OSM extract changes daily, so download it again from the source and the features will differ slightly. Use the Drive copy to reproduce the committed dataset exactly.
 
 The archived baseline (`archive/before_simplification/`) is also in the Drive folder. It's only needed for `--check-baseline`.
+
+## Experiment outputs
+
+Three large per-hexagon outputs from `experiments/` are not in Git (12.7 MB). They are in `pigeon-ai-experiment-outputs.zip` on the team Drive:
+
+| File | Made by | Read by |
+| --- | --- | --- |
+| `experiments/v2/combos/out/study_oof_predictions.csv` | `experiments/v2/combos/study_cv.py` (about 3 min) | `experiments/v2/combos/evaluate_study.py` |
+| `experiments/future/aero_predictions.csv` | `experiments/future/run_aero.py` | Nothing; kept for reference |
+| `experiments/future/aero_features.csv` | `experiments/future/run_aero.py` | `experiments/v2/data/scripts/hexsets.py` |
+
+Unzip it at the repo root (`unzip pigeon-ai-experiment-outputs.zip`), or rerun the script that makes the file. You don't need them to train the model or run the app; the summary CSVs that the findings page and the app read are committed.
+
+> **TODO(drive):** `pigeon-ai-experiment-outputs.zip` is not on the Drive yet. Until it is, ask Summit for it.
