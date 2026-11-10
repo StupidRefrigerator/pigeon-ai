@@ -132,6 +132,25 @@ A new suburb needs a value for every feature the model uses. These are the offic
 | Disadvantage | ABS SEIFA 2021 IRSD | CSV | New suburbs have no score until the next Census |
 | Planned toilets | Council toilet strategies, project pages and DA reports | Web and PDF | 56 sites collected in `experiments/gov/planned_sites.csv` |
 
+## v2: new inputs, label fix, 400 m walk and equity (10 Nov 2026)
+
+Folder: `experiments/v2/`. The data is in `data/`, the 400 m and equity steps in `postprocess/`, and every combination in `combos/results.md`. All numbers are held-out, and each model was run with 3 seeds. A gain smaller than the seed spread is noise.
+
+| Change | PR-AUC | Council sites in top 10% | Growth toilet hexes in top 100 | Verdict |
+|---|---|---|---|---|
+| Base model | 0.520 | 26/42 | 24/35 | |
+| **+ sports fields, playgrounds, beaches** | **0.569** (seed spread ±0.001) | **30/42** | 22/35 | **Keep.** It is the only change that beats the noise. |
+| Retrain on OSM toilets as labels | 0.506 | 24/42 | 24/35 | Drop. It predicts 29% too many toilets and makes 267 candidates. |
+| Count OSM toilets *after* the model | same model | same | same | **Keep.** Picks that already have an OSM toilet fall from 37/120 to 9/120. |
+| Equity weight w=1 | same model | same | same | **Keep.** Picks in deciles 1–3 rise from 32 to 54 of 120; picks in deciles 8–10 fall from 17 to 3. |
+| 400 m walk as a filter | same model | same | same | Drop as a filter, keep as a map layer. Only 5–20 of its 120 picks are real gaps, and 0–3 are near a council plan. |
+
+- **Chosen setup:** latest + sports, playground and beach features, trained on official labels. OSM toilets are counted after the model, the list is equity-weighted (w=1), and only picks with a gap of at least 1 are listed (87).
+- **400 m walk:** 1,471,429 of 4,491,614 residents (32.8%) have no listed toilet within about 400 m.
+- **Still missed:** Ken Birdsey Park (31st percentile) and Anthony Skarratt Reserve (20th). OpenStreetMap has no sports ground mapped at either site.
+- **Bradfield:** the station hex is still #1 for every variant. The new features lower the area total from 142 to 107 and add two planned parks at #3 and #4.
+- **Correction to section 2:** counting strictly inside the hex, **39/120 (32%)** of the original candidates already have an OSM public toilet. The 50% figure also counted toilets up to 50 m outside the hex.
+
 ## Next improvements, in order
 
 1. Add sports fields, playgrounds and beaches as features. These cover the biggest misses.

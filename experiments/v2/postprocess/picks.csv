@@ -1,0 +1,1441 @@
+variant,rank,hex_id,suburb,gap,seifa_decile,uncovered,has_toilet,priority
+none,1,89be08c8bb3ffff,Liverpool,2.237178105660445,1.0,False,False,2.237178105660445
+none,2,89be08cb5dbffff,Hurstville,2.217771682856851,2.0,False,False,2.217771682856851
+none,3,89be0e3460fffff,Bondi Junction,2.127767466193594,6.0,False,False,2.127767466193594
+none,4,89be0e34267ffff,Woolloomooloo,2.1174535305810687,6.0,False,False,2.1174535305810687
+none,5,89be08536cfffff,Parramatta,2.0323033669223194,3.0,False,False,2.0323033669223194
+none,6,89be0e35dd7ffff,Pyrmont,2.0247310013142337,4.0,False,False,2.0247310013142337
+none,7,89be0e345cbffff,Daceyville,1.9578126836264889,3.0,False,False,1.9578126836264889
+none,8,89be0e343abffff,Chippendale,1.943956144214203,4.0,False,False,1.943956144214203
+none,9,89be0e345dbffff,Kingsford (NSW),1.8917338265381811,3.0,False,False,1.8917338265381811
+none,10,89be0e35e37ffff,North Sydney,1.8381761012845423,,False,False,1.8381761012845423
+none,11,89be0e34227ffff,Darlinghurst,1.8286118008998915,5.0,False,False,1.8286118008998915
+none,12,89be0e205afffff,Brookvale,1.8062357780038876,5.0,False,False,1.8062357780038876
+none,13,89be0e34237ffff,Darlinghurst,1.654633525738832,6.0,False,False,1.654633525738832
+none,14,89be0e34023ffff,Waterloo (NSW),1.6449263917230188,6.0,False,False,1.6449263917230188
+none,15,89be0e35d63ffff,Balmain,1.6210026384844192,8.0,False,False,1.6210026384844192
+none,16,89be0e343c7ffff,Surry Hills,1.6203404238682977,6.0,False,False,1.6203404238682977
+none,17,89be085ac07ffff,Parklea,1.5872915090287447,,False,False,1.5872915090287447
+none,18,89be0842503ffff,St Marys (NSW),1.584246703204904,1.0,False,False,1.584246703204904
+none,19,89be08c52bbffff,Campbelltown (NSW),1.559589437265252,,False,False,1.559589437265252
+none,20,89be0e36a47ffff,St Peters (NSW),1.553657121489853,5.0,False,False,1.553657121489853
+none,21,89be085ae67ffff,Beaumont Hills,1.5509945422264926,5.0,False,False,1.5509945422264926
+none,22,89be0e2403bffff,Epping (NSW),1.5271103121338756,4.0,False,False,1.5271103121338756
+none,23,89be0e2ed93ffff,Hornsby,1.5151305468193073,3.0,False,False,1.5151305468193073
+none,24,89be0e3423bffff,Rushcutters Bay,1.5109018673233705,7.0,False,False,1.5109018673233705
+none,25,89be0853663ffff,Westmead,1.488945623977917,,False,False,1.488945623977917
+none,26,89be0e34223ffff,Darlinghurst,1.4863861822596591,6.0,False,False,1.4863861822596591
+none,27,89be0e35dc7ffff,Pyrmont,1.4832970875048173,6.0,False,False,1.4832970875048173
+none,28,89be0e341cbffff,Zetland,1.4797306786262192,6.0,False,False,1.4797306786262192
+none,29,89be0e2ac4bffff,Bilgola Beach,1.478089847677159,6.0,False,False,1.478089847677159
+none,30,89be0844217ffff,Springwood (NSW),1.4488345622289776,4.0,False,False,1.4488345622289776
+none,31,89be0e35c03ffff,Circular Quay,1.436207557365371,,False,False,1.436207557365371
+none,32,89be0e34e87ffff,Newtown (NSW),1.42839470958327,5.0,False,False,1.42839470958327
+none,33,89be08c9657ffff,Burwood (NSW),1.4262784647126834,2.0,False,False,1.4262784647126834
+none,34,89be0e34c33ffff,Marrickville,1.4243444780065984,4.0,False,False,1.4243444780065984
+none,35,89be0e34287ffff,Paddington (NSW),1.4240006899575035,10.0,False,False,1.4240006899575035
+none,36,89be0e34473ffff,Randwick,1.4130699483754907,6.0,False,True,1.4130699483754907
+none,37,89be0e3438fffff,Redfern,1.4121000481741783,,False,False,1.4121000481741783
+none,38,89be0e34353ffff,Darlinghurst,1.4092106584802262,5.0,False,True,1.4092106584802262
+none,39,89be0e348c7ffff,Petersham,1.4065588042848025,4.0,False,False,1.4065588042848025
+none,40,89be0e342abffff,Paddington (NSW),1.4050127598845283,8.0,False,False,1.4050127598845283
+none,41,89be0e3435bffff,Darlinghurst,1.3966118082982155,5.0,False,False,1.3966118082982155
+none,42,89be0e35a33ffff,St Leonards (NSW),1.395415331404705,,False,False,1.395415331404705
+none,43,89be0e346cbffff,Bondi,1.3926247995552647,5.0,True,False,1.3926247995552647
+none,44,89be0853653ffff,Parramatta,1.375268022067164,4.0,False,False,1.375268022067164
+none,45,89be0e3468fffff,Waverley (NSW),1.3495159399284755,5.0,False,False,1.3495159399284755
+none,46,89be0842d63ffff,Penrith,1.3445274324286518,2.0,False,True,1.3445274324286518
+none,47,89be0e3422bffff,Woolloomooloo,1.3427825251313963,5.0,False,True,1.3427825251313963
+none,48,89be08cb5cfffff,Hurstville,1.340834797166858,2.0,False,True,1.340834797166858
+none,49,89be0e343cbffff,Darlinghurst,1.3370505837039257,5.0,False,True,1.3370505837039257
+none,50,89be0e342c3ffff,Double Bay,1.3334262006455322,8.0,False,False,1.3334262006455322
+none,51,89be0e3440fffff,Randwick,1.305781352756112,6.0,False,True,1.305781352756112
+none,52,89be0e34127ffff,Newtown (NSW),1.3037798840879782,8.0,False,False,1.3037798840879782
+none,53,89be085365bffff,Parramatta,1.2914448632125093,3.0,True,False,1.2914448632125093
+none,54,89be0e34317ffff,Chippendale,1.288412869173338,,False,False,1.288412869173338
+none,55,89be0e24d8fffff,North Parramatta,1.2661274508545477,3.0,False,False,1.2661274508545477
+none,56,89be0e35847ffff,Wollstonecraft,1.2489324616528654,10.0,False,False,1.2489324616528654
+none,57,89be0e3430fffff,Haymarket,1.2474530896939149,,False,False,1.2474530896939149
+none,58,89be0e34cdbffff,St Peters (NSW),1.2440003758945553,,False,False,1.2440003758945553
+none,59,89be084a527ffff,Windsor (NSW),1.2431182085737518,4.0,False,False,1.2431182085737518
+none,60,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,1.24270717497835
+none,61,89be0e3417bffff,Eveleigh,1.2334094973079843,7.0,False,False,1.2334094973079843
+none,62,89be084716bffff,Warrimoo,1.2244004643430786,6.0,False,False,1.2244004643430786
+none,63,89be08cb537ffff,Mortdale,1.2173517548062915,3.0,False,True,1.2173517548062915
+none,64,89be0e26593ffff,Canada Bay,1.2157287268621104,,False,False,1.2157287268621104
+none,65,89be0e2aeb3ffff,Avalon Beach,1.214517747548007,8.0,False,False,1.214517747548007
+none,66,89be0e3464fffff,Bellevue Hill,1.2119775633841818,8.0,False,False,1.2119775633841818
+none,67,89be08ca2dbffff,Mortdale,1.211383573162588,4.0,False,False,1.211383573162588
+none,68,89be0e24d87ffff,North Parramatta,1.211372321647043,2.0,False,False,1.211372321647043
+none,69,89be0e34e23ffff,Stanmore (NSW),1.2083001960713935,7.0,True,False,1.2083001960713935
+none,70,89be08d8067ffff,Cronulla,1.1905203786101612,6.0,False,True,1.1905203786101612
+none,71,89be0e341cfffff,Zetland,1.189179896098042,6.0,False,False,1.189179896098042
+none,72,89be0e34303ffff,Central Station,1.1838175946068787,,False,True,1.1838175946068787
+none,73,89be0e346cfffff,Bondi,1.1653443095648437,5.0,False,False,1.1653443095648437
+none,74,89be085a88bffff,The Ponds,1.1650857412507,9.0,True,False,1.1650857412507
+none,75,89be08429abffff,Emu Plains,1.1637785897144308,3.0,False,False,1.1637785897144308
+none,76,89be0853453ffff,Holroyd,1.156778633003481,2.0,False,False,1.156778633003481
+none,77,89be0e2ed83ffff,Hornsby,1.155601543578342,3.0,False,False,1.155601543578342
+none,78,89be0e34e0bffff,Forest Lodge,1.151154819479291,,False,False,1.151154819479291
+none,79,89be08cb50fffff,Penshurst (NSW),1.1409698131503,2.0,False,True,1.1409698131503
+none,80,89be0e343c3ffff,Surry Hills,1.1375271072411115,7.0,False,False,1.1375271072411115
+none,81,89be08536c7ffff,Parramatta,1.1325266112813877,5.0,False,False,1.1325266112813877
+none,82,89be0e34617ffff,Queens Park (NSW),1.1324937677089593,7.0,False,False,1.1324937677089593
+none,83,89be08ce033ffff,Minto,1.1304923468605876,1.0,False,False,1.1304923468605876
+none,84,89be08c894fffff,Liverpool,1.1303692721002307,1.0,False,True,1.1303692721002307
+none,85,89be0e34a1bffff,Lilyfield,1.1298546685671609,,False,False,1.1298546685671609
+none,86,89be0e26b27ffff,Parramatta,1.1148831740188174,4.0,False,False,1.1148831740188174
+none,87,89be0e3412fffff,Newtown (NSW),1.113423472972323,8.0,True,False,1.113423472972323
+none,88,89be08c897bffff,Liverpool,1.1020278117776348,1.0,False,False,1.1020278117776348
+none,89,89be085242fffff,Canley Heights,1.1008213128695985,1.0,False,False,1.1008213128695985
+none,90,89be0e3426fffff,Potts Point,1.0986835121326213,,False,False,1.0986835121326213
+none,91,89be0e34193ffff,Rosebery (NSW),1.0976374117376042,8.0,False,False,1.0976374117376042
+none,92,89be0e34403ffff,Randwick,1.0952738044489514,7.0,False,False,1.0952738044489514
+none,93,89be0e346b3ffff,Queens Park (NSW),1.0934796876861332,8.0,False,False,1.0934796876861332
+none,94,89be0842cafffff,Kingswood (Penrith - NSW),1.0876560800088173,1.0,False,False,1.0876560800088173
+none,95,89be0e34a53ffff,Rozelle,1.083507109035751,,False,False,1.083507109035751
+none,96,89be0e22b6bffff,Forestville (NSW),1.083079570812462,4.0,False,False,1.083079570812462
+none,97,89be0e3462bffff,Woollahra,1.0830071265434744,7.0,False,False,1.0830071265434744
+none,98,89be0e343d3ffff,Surry Hills,1.0815884814731933,,False,False,1.0815884814731933
+none,99,89be0e34027ffff,Waterloo (NSW),1.077408343608118,8.0,False,False,1.077408343608118
+none,100,89be0e2696bffff,Harris Park,1.0759332341843133,3.0,False,False,1.0759332341843133
+none,101,89be0e35d9bffff,Pyrmont,1.07154387057973,3.0,False,False,1.07154387057973
+none,102,89be0e26bbbffff,Camellia,1.0692528040294689,6.0,True,False,1.0692528040294689
+none,103,89be0e35c83ffff,Woolloomooloo,1.0661940487488777,,False,False,1.0661940487488777
+none,104,89be0e358c3ffff,McMahons Point,1.0543332998123878,9.0,False,False,1.0543332998123878
+none,105,89be0e343cfffff,Surry Hills,1.0532673320815418,5.0,False,False,1.0532673320815418
+none,106,89be0e3420bffff,Rushcutters Bay,1.045922394433352,8.0,False,False,1.045922394433352
+none,107,89be0e34edbffff,Darlington (Sydney - NSW),1.0419397044040688,,False,False,1.0419397044040688
+none,108,89be0853613ffff,Mays Hill,1.0339560234250014,3.0,False,False,1.0339560234250014
+none,109,89be0e34493ffff,South Coogee,1.0281014120494034,1.0,False,False,1.0281014120494034
+none,110,89be08c5393ffff,Englorie Park,1.0274835742813155,3.0,False,False,1.0274835742813155
+none,111,89be0e3483bffff,Summer Hill (Inner West - NSW),1.0251586673646118,8.0,False,False,1.0251586673646118
+none,112,89be0e3464bffff,Bellevue Hill,1.024875516098642,8.0,True,False,1.024875516098642
+none,113,89be0e36b73ffff,Wolli Creek,1.02124908783722,7.0,False,False,1.02124908783722
+none,114,89be0e261bbffff,Concord West,1.0197545919474769,5.0,False,False,1.0197545919474769
+none,115,89be0853643ffff,Parramatta,1.019176737486215,3.0,False,False,1.019176737486215
+none,116,89be0e34553ffff,Kensington (NSW),1.015588744233429,4.0,False,False,1.015588744233429
+none,117,89be08cb4dbffff,Kogarah,1.0111823915796043,3.0,False,False,1.0111823915796043
+none,118,89be0e35ea7ffff,Milsons Point,1.009740341075485,,False,True,1.009740341075485
+none,119,89be0e348b7ffff,Dulwich Hill,1.0069933893681473,6.0,False,False,1.0069933893681473
+none,120,89be0e270dbffff,Roseville,1.0026023439719527,6.0,False,True,1.0026023439719527
+coverage[official],1,89be0e346cbffff,Bondi,1.3926247995552647,5.0,True,False,1.3926247995552647
+coverage[official],2,89be085365bffff,Parramatta,1.2914448632125093,3.0,True,False,1.2914448632125093
+coverage[official],3,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,1.24270717497835
+coverage[official],4,89be0e34e23ffff,Stanmore (NSW),1.2083001960713935,7.0,True,False,1.2083001960713935
+coverage[official],5,89be085a88bffff,The Ponds,1.1650857412507,9.0,True,False,1.1650857412507
+coverage[official],6,89be0e3412fffff,Newtown (NSW),1.113423472972323,8.0,True,False,1.113423472972323
+coverage[official],7,89be0e26bbbffff,Camellia,1.0692528040294689,6.0,True,False,1.0692528040294689
+coverage[official],8,89be0e3464bffff,Bellevue Hill,1.024875516098642,8.0,True,False,1.024875516098642
+coverage[official],9,89be0e34233ffff,Darlinghurst,0.991330579159508,9.0,True,False,0.991330579159508
+coverage[official],10,89be0e26bb3ffff,Camellia,0.9760612808139724,2.0,True,False,0.9760612808139724
+coverage[official],11,89be084508fffff,Winmalee,0.9430373224841584,6.0,True,False,0.9430373224841584
+coverage[official],12,89be0851927ffff,Dharruk,0.9205822872383146,2.0,True,False,0.9205822872383146
+coverage[official],13,89be0e20cdbffff,Frenchs Forest,0.9145447996838348,,True,False,0.9145447996838348
+coverage[official],14,89be0e24d17ffff,North Parramatta,0.9025619024110596,2.0,True,False,0.9025619024110596
+coverage[official],15,89be08cf1d7ffff,Macquarie Fields,0.835206944537087,2.0,True,False,0.835206944537087
+coverage[official],16,89be0857483ffff,Kemps Creek,0.832614075783638,3.0,True,False,0.832614075783638
+coverage[official],17,89be08cd1b3ffff,Carnes Hill,0.8138198848864604,4.0,True,False,0.8138198848864604
+coverage[official],18,89be0e3404bffff,Centennial Park (NSW),0.7967635928510871,,True,False,0.7967635928510871
+coverage[official],19,89be0e2626bffff,North Ryde,0.7906736156786787,,True,False,0.7906736156786787
+coverage[official],20,89be08c8c37ffff,Moorebank,0.7853937522610484,4.0,True,False,0.7853937522610484
+coverage[official],21,89be08cd283ffff,Heckenberg,0.779379821342624,1.0,True,False,0.779379821342624
+coverage[official],22,89be0852533ffff,Cabramatta West,0.7768820431117031,1.0,True,False,0.7768820431117031
+coverage[official],23,89be08475a7ffff,Glenbrook,0.7717716088870661,7.0,True,False,0.7717716088870661
+coverage[official],24,89be085a4dbffff,Castle Hill (NSW),0.7539622432926973,6.0,True,False,0.7539622432926973
+coverage[official],25,89be08556dbffff,St Clair (Penrith - NSW),0.7530729979470305,3.0,True,False,0.7530729979470305
+coverage[official],26,89be08c5013ffff,Bradbury (NSW),0.7398615980709216,2.0,True,False,0.7398615980709216
+coverage[official],27,89be0858593ffff,North Kellyville,0.7319337490000785,8.0,True,False,0.7319337490000785
+coverage[official],28,89be085b157ffff,Middle Dural,0.7302306017452376,7.0,True,False,0.7302306017452376
+coverage[official],29,89be0850947ffff,St Clair (Penrith - NSW),0.7272718081407945,3.0,True,False,0.7272718081407945
+coverage[official],30,89be0e3408fffff,Kensington (NSW),0.710940855018504,,True,False,0.710940855018504
+coverage[official],31,89be0852033ffff,Wakeley,0.7104649309896351,1.0,True,False,0.7104649309896351
+coverage[official],32,89be08c8803ffff,Moorebank,0.7078667995308069,3.0,True,False,0.7078667995308069
+coverage[official],33,89be0850377ffff,Bungarribee,0.7060798389340406,,True,False,0.7060798389340406
+coverage[official],34,89be08cd61bffff,Ashcroft,0.6941364605240039,1.0,True,False,0.6941364605240039
+coverage[official],35,89be0e26c8fffff,Sydney Olympic Park,0.6931766428407494,,True,False,0.6931766428407494
+coverage[official],36,89be08cb28fffff,Clemton Park,0.6683277362951813,4.0,True,False,0.6683277362951813
+coverage[official],37,89be0e2495bffff,Baulkham Hills,0.6672872714906851,6.0,True,False,0.6672872714906851
+coverage[official],38,89be0853267ffff,Old Toongabbie,0.6652025016011904,5.0,True,False,0.6652025016011904
+coverage[official],39,89be0e21c57ffff,Elanora Heights,0.6621902215649013,8.0,True,False,0.6621902215649013
+coverage[official],40,89be0e26ac3ffff,Ermington,0.6526888091522607,4.0,True,False,0.6526888091522607
+coverage[official],41,89be08cd613ffff,Ashcroft,0.6470776913394315,1.0,True,False,0.6470776913394315
+coverage[official],42,89be0e2114fffff,Mona Vale,0.646828501270724,,True,False,0.646828501270724
+coverage[official],43,89be08d9d27ffff,Miranda (NSW),0.6398749749367907,4.0,True,False,0.6398749749367907
+coverage[official],44,89be0858913ffff,Vineyard,0.6379798989962341,2.0,True,False,0.6379798989962341
+coverage[official],45,89be0e22e9bffff,Fairlight,0.6370516462541269,9.0,True,False,0.6370516462541269
+coverage[official],46,89be085a893ffff,The Ponds,0.6341260569089093,8.0,True,False,0.6341260569089093
+coverage[official],47,89be0e35b57ffff,Northwood (NSW),0.6339776339382291,10.0,True,False,0.6339776339382291
+coverage[official],48,89be0e26143ffff,Rhodes,0.6292115147766202,,True,False,0.6292115147766202
+coverage[official],49,89be0852007ffff,Wakeley,0.628469506971991,1.0,True,False,0.628469506971991
+coverage[official],50,89be08c538fffff,Englorie Park,0.6262111792842306,5.0,True,False,0.6262111792842306
+coverage[official],51,89be08c8ca7ffff,Hammondville,0.6150029616510398,4.0,True,False,0.6150029616510398
+coverage[official],52,89be08cd6bbffff,Cartwright,0.6146808986384114,1.0,True,False,0.6146808986384114
+coverage[official],53,89be0e26e8fffff,Wentworth Point,0.6096525186214915,7.0,True,False,0.6096525186214915
+coverage[official],54,89be08c9817ffff,Chester Hill,0.6090688910197183,,True,False,0.6090688910197183
+coverage[official],55,89be0e26b53ffff,Dundas (NSW),0.6066015265685276,3.0,True,False,0.6066015265685276
+coverage[official],56,89be08c8b0fffff,Warwick Farm,0.6025174075999498,1.0,True,False,0.6025174075999498
+coverage[official],57,89be0e26aa7ffff,Rydalmere,0.6022450283884325,,True,False,0.6022450283884325
+coverage[official],58,89be0e201a7ffff,Beacon Hill,0.5958755353008174,,True,False,0.5958755353008174
+coverage[official],59,89be0e26a27ffff,Dundas (NSW),0.5944761406443995,3.0,True,False,0.5944761406443995
+coverage[official],60,89be084261bffff,Blackett,0.5860674477868256,1.0,True,False,0.5860674477868256
+coverage[official],61,89be0850217ffff,Arndell Park,0.5858353942437639,,True,False,0.5858353942437639
+coverage[official],62,89be08ce007ffff,Minto,0.5846006031952362,2.0,True,False,0.5846006031952362
+coverage[official],63,89be08c891bffff,Liverpool,0.5842221611834756,3.0,True,False,0.5842221611834756
+coverage[official],64,89be0e35873ffff,Waverton,0.5807470873175747,10.0,True,False,0.5807470873175747
+coverage[official],65,89be08d83b7ffff,Burraneer,0.5801522932719225,10.0,True,False,0.5801522932719225
+coverage[official],66,89be0851407ffff,Seven Hills (NSW),0.5776744945208133,,True,False,0.5776744945208133
+coverage[official],67,89be08cd68fffff,Ashcroft,0.5752547566726224,1.0,True,False,0.5752547566726224
+coverage[official],68,89be0e25243ffff,North Turramurra,0.5728834335493409,9.0,True,False,0.5728834335493409
+coverage[official],69,89be0e34e73ffff,Annandale (NSW),0.571772711001061,8.0,True,False,0.571772711001061
+coverage[official],70,89be0851b2fffff,Bidwill (NSW),0.5701631067576448,1.0,True,False,0.5701631067576448
+coverage[official],71,89be084a58fffff,McGraths Hill,0.5697737359066646,5.0,True,False,0.5697737359066646
+coverage[official],72,89be0e20a6fffff,Terrey Hills,0.5677021719031904,,True,False,0.5677021719031904
+coverage[official],73,89be0e2298fffff,Castlecrag,0.5642446308601387,10.0,True,False,0.5642446308601387
+coverage[official],74,89be08cd453ffff,Lurnea,0.5627968953498249,1.0,True,False,0.5627968953498249
+coverage[official],75,89be0e2136bffff,Newport (NSW),0.5600813332309723,6.0,True,False,0.5600813332309723
+coverage[official],76,89be0e26e13ffff,Wentworth Point,0.5599806480763141,,True,False,0.5599806480763141
+coverage[official],77,89be084a637ffff,Pitt Town,0.5575354052293742,10.0,True,False,0.5575354052293742
+coverage[official],78,89be084a62fffff,Pitt Town,0.5561818079988738,9.0,True,False,0.5561818079988738
+coverage[official],79,89be08cb1b7ffff,Peakhurst,0.5543663755480893,,True,False,0.5543663755480893
+coverage[official],80,89be0e2e8afffff,Hornsby Heights,0.553323482218638,10.0,True,False,0.553323482218638
+coverage[official],81,89be0855ac3ffff,Jamisontown,0.5518314965066294,,True,False,0.5518314965066294
+coverage[official],82,89be0e20a6bffff,Terrey Hills,0.5497913493854754,,True,False,0.5497913493854754
+coverage[official],83,89be0850a87ffff,Minchinbury,0.5439436989187628,,True,False,0.5439436989187628
+coverage[official],84,89be08428d7ffff,Cambridge Gardens,0.5404175457609014,2.0,True,False,0.5404175457609014
+coverage[official],85,89be0858dc3ffff,Grantham Farm,0.5370030635310712,5.0,True,False,0.5370030635310712
+coverage[official],86,89be08c9cd7ffff,Yagoona,0.5361506626552569,2.0,True,False,0.5361506626552569
+coverage[official],87,89be08c9b63ffff,Guildford West,0.5313686773004747,1.0,True,False,0.5313686773004747
+coverage[official],88,89be0e369b3ffff,Monterey,0.5302912346078428,7.0,True,False,0.5302912346078428
+coverage[official],89,89be08cc1dbffff,Denham Court,0.5291830881569077,4.0,True,False,0.5291830881569077
+coverage[official],90,89be084288bffff,Cambridge Gardens,0.5275385401772581,1.0,True,False,0.5275385401772581
+coverage[official],91,89be08cd4cfffff,Lurnea,0.5272566201367669,1.0,True,False,0.5272566201367669
+coverage[official],92,89be0e2026bffff,North Narrabeen,0.5256161353057024,7.0,True,False,0.5256161353057024
+coverage[official],93,89be0e242bbffff,North Epping,0.5254779414161241,9.0,True,False,0.5254779414161241
+coverage[official],94,89be08c8b0bffff,Warwick Farm,0.5236871444948136,1.0,True,False,0.5236871444948136
+coverage[official],95,89be0e34c5bffff,Newtown (NSW),0.5233240218051496,5.0,True,False,0.5233240218051496
+coverage[official],96,89be0e2401bffff,Marsfield,0.5225080218236087,7.0,True,False,0.5225080218236087
+coverage[official],97,89be0e20977ffff,St Ives (NSW),0.5222279627057728,10.0,True,False,0.5222279627057728
+coverage[official],98,89be0855a4fffff,Emu Plains,0.5203240971429068,4.0,True,False,0.5203240971429068
+coverage[official],99,89be0855acfffff,Jamisontown,0.5189451496699965,4.0,True,False,0.5189451496699965
+coverage[official],100,89be08cb467ffff,Bexley,0.5175013588094753,4.0,True,False,0.5175013588094753
+coverage[official],101,89be0e36267ffff,South Coogee,0.516841416108132,1.0,True,False,0.516841416108132
+coverage[official],102,89be0e26373ffff,Meadowbank (NSW),0.5129393993173951,5.0,True,False,0.5129393993173951
+coverage[official],103,89be08cd5a3ffff,Horningsea Park,0.51157113048902,3.0,True,False,0.51157113048902
+coverage[official],104,89be0847573ffff,Blaxland (NSW),0.5113857908786422,7.0,True,False,0.5113857908786422
+coverage[official],105,89be08cd2d3ffff,Mount Pritchard,0.5112354117164154,1.0,True,False,0.5112354117164154
+coverage[official],106,89be08cb253ffff,Canterbury (NSW),0.509448261950256,4.0,True,False,0.509448261950256
+coverage[official],107,89be085533bffff,South Penrith,0.505916318246291,3.0,True,False,0.505916318246291
+coverage[official],108,89be0851b03ffff,Hassall Grove,0.504467459466932,3.0,True,False,0.504467459466932
+coverage[official],109,89be085a32fffff,North Kellyville,0.5039403805898385,10.0,True,False,0.5039403805898385
+coverage[official],110,89be0e34e47ffff,Forest Lodge,0.5036231029466229,7.0,True,False,0.5036231029466229
+coverage[official],111,89be08c5907ffff,Camden South,0.5029206722303347,4.0,True,False,0.5029206722303347
+coverage[official],112,89be085137bffff,Acacia Gardens,0.5025530692598624,7.0,True,False,0.5025530692598624
+coverage[official],113,89be08c827bffff,Yagoona,0.5023858109545748,,True,False,0.5023858109545748
+coverage[official],114,89be0e26b2fffff,Parramatta,0.5020099913388748,4.0,True,False,0.5020099913388748
+coverage[official],115,89be08c12a3ffff,Barden Ridge,0.5018399250356821,,True,False,0.5018399250356821
+coverage[official],116,89be084310fffff,Melonba,0.5014849083256983,9.0,True,False,0.5014849083256983
+coverage[official],117,89be0e3465bffff,Bondi,0.4992602566381377,9.0,True,False,0.4992602566381377
+coverage[official],118,89be08cd0afffff,Hoxton Park,0.498989074160484,1.0,True,False,0.498989074160484
+coverage[official],119,89be085133bffff,Kings Park (NSW),0.4981656284850403,6.0,True,False,0.4981656284850403
+coverage[official],120,89be0e26ac7ffff,Ermington,0.4968098584993672,2.0,True,False,0.4968098584993672
+coverage[official+osm],1,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,1.24270717497835
+coverage[official+osm],2,89be0e34e23ffff,Stanmore (NSW),1.2083001960713935,7.0,True,False,1.2083001960713935
+coverage[official+osm],3,89be0e26bbbffff,Camellia,1.0692528040294689,6.0,True,False,1.0692528040294689
+coverage[official+osm],4,89be0e3464bffff,Bellevue Hill,1.024875516098642,8.0,True,False,1.024875516098642
+coverage[official+osm],5,89be0e26bb3ffff,Camellia,0.9760612808139724,2.0,True,False,0.9760612808139724
+coverage[official+osm],6,89be0851927ffff,Dharruk,0.9205822872383146,2.0,True,False,0.9205822872383146
+coverage[official+osm],7,89be0e20cdbffff,Frenchs Forest,0.9145447996838348,,True,False,0.9145447996838348
+coverage[official+osm],8,89be0e24d17ffff,North Parramatta,0.9025619024110596,2.0,True,False,0.9025619024110596
+coverage[official+osm],9,89be08cf1d7ffff,Macquarie Fields,0.835206944537087,2.0,True,False,0.835206944537087
+coverage[official+osm],10,89be0857483ffff,Kemps Creek,0.832614075783638,3.0,True,False,0.832614075783638
+coverage[official+osm],11,89be08cd1b3ffff,Carnes Hill,0.8138198848864604,4.0,True,False,0.8138198848864604
+coverage[official+osm],12,89be0e2626bffff,North Ryde,0.7906736156786787,,True,False,0.7906736156786787
+coverage[official+osm],13,89be08c8c37ffff,Moorebank,0.7853937522610484,4.0,True,False,0.7853937522610484
+coverage[official+osm],14,89be08cd283ffff,Heckenberg,0.779379821342624,1.0,True,False,0.779379821342624
+coverage[official+osm],15,89be0852533ffff,Cabramatta West,0.7768820431117031,1.0,True,False,0.7768820431117031
+coverage[official+osm],16,89be08475a7ffff,Glenbrook,0.7717716088870661,7.0,True,False,0.7717716088870661
+coverage[official+osm],17,89be085a4dbffff,Castle Hill (NSW),0.7539622432926973,6.0,True,False,0.7539622432926973
+coverage[official+osm],18,89be08556dbffff,St Clair (Penrith - NSW),0.7530729979470305,3.0,True,False,0.7530729979470305
+coverage[official+osm],19,89be08c5013ffff,Bradbury (NSW),0.7398615980709216,2.0,True,False,0.7398615980709216
+coverage[official+osm],20,89be0858593ffff,North Kellyville,0.7319337490000785,8.0,True,False,0.7319337490000785
+coverage[official+osm],21,89be0850947ffff,St Clair (Penrith - NSW),0.7272718081407945,3.0,True,False,0.7272718081407945
+coverage[official+osm],22,89be0e3408fffff,Kensington (NSW),0.710940855018504,,True,False,0.710940855018504
+coverage[official+osm],23,89be08c8803ffff,Moorebank,0.7078667995308069,3.0,True,False,0.7078667995308069
+coverage[official+osm],24,89be08cd61bffff,Ashcroft,0.6941364605240039,1.0,True,False,0.6941364605240039
+coverage[official+osm],25,89be08cb28fffff,Clemton Park,0.6683277362951813,4.0,True,False,0.6683277362951813
+coverage[official+osm],26,89be0e2495bffff,Baulkham Hills,0.6672872714906851,6.0,True,False,0.6672872714906851
+coverage[official+osm],27,89be0853267ffff,Old Toongabbie,0.6652025016011904,5.0,True,False,0.6652025016011904
+coverage[official+osm],28,89be0e21c57ffff,Elanora Heights,0.6621902215649013,8.0,True,False,0.6621902215649013
+coverage[official+osm],29,89be0e26ac3ffff,Ermington,0.6526888091522607,4.0,True,False,0.6526888091522607
+coverage[official+osm],30,89be08cd613ffff,Ashcroft,0.6470776913394315,1.0,True,False,0.6470776913394315
+coverage[official+osm],31,89be0e2114fffff,Mona Vale,0.646828501270724,,True,False,0.646828501270724
+coverage[official+osm],32,89be08d9d27ffff,Miranda (NSW),0.6398749749367907,4.0,True,False,0.6398749749367907
+coverage[official+osm],33,89be0858913ffff,Vineyard,0.6379798989962341,2.0,True,False,0.6379798989962341
+coverage[official+osm],34,89be0e22e9bffff,Fairlight,0.6370516462541269,9.0,True,False,0.6370516462541269
+coverage[official+osm],35,89be085a893ffff,The Ponds,0.6341260569089093,8.0,True,False,0.6341260569089093
+coverage[official+osm],36,89be0e35b57ffff,Northwood (NSW),0.6339776339382291,10.0,True,False,0.6339776339382291
+coverage[official+osm],37,89be0e26143ffff,Rhodes,0.6292115147766202,,True,False,0.6292115147766202
+coverage[official+osm],38,89be08c8ca7ffff,Hammondville,0.6150029616510398,4.0,True,False,0.6150029616510398
+coverage[official+osm],39,89be08cd6bbffff,Cartwright,0.6146808986384114,1.0,True,False,0.6146808986384114
+coverage[official+osm],40,89be0e26e8fffff,Wentworth Point,0.6096525186214915,7.0,True,False,0.6096525186214915
+coverage[official+osm],41,89be08c9817ffff,Chester Hill,0.6090688910197183,,True,False,0.6090688910197183
+coverage[official+osm],42,89be0e26b53ffff,Dundas (NSW),0.6066015265685276,3.0,True,False,0.6066015265685276
+coverage[official+osm],43,89be08c8b0fffff,Warwick Farm,0.6025174075999498,1.0,True,False,0.6025174075999498
+coverage[official+osm],44,89be0e26aa7ffff,Rydalmere,0.6022450283884325,,True,False,0.6022450283884325
+coverage[official+osm],45,89be0e201a7ffff,Beacon Hill,0.5958755353008174,,True,False,0.5958755353008174
+coverage[official+osm],46,89be0e26a27ffff,Dundas (NSW),0.5944761406443995,3.0,True,False,0.5944761406443995
+coverage[official+osm],47,89be084261bffff,Blackett,0.5860674477868256,1.0,True,False,0.5860674477868256
+coverage[official+osm],48,89be0850217ffff,Arndell Park,0.5858353942437639,,True,False,0.5858353942437639
+coverage[official+osm],49,89be08ce007ffff,Minto,0.5846006031952362,2.0,True,False,0.5846006031952362
+coverage[official+osm],50,89be08c891bffff,Liverpool,0.5842221611834756,3.0,True,False,0.5842221611834756
+coverage[official+osm],51,89be08d83b7ffff,Burraneer,0.5801522932719225,10.0,True,False,0.5801522932719225
+coverage[official+osm],52,89be0851407ffff,Seven Hills (NSW),0.5776744945208133,,True,False,0.5776744945208133
+coverage[official+osm],53,89be08cd68fffff,Ashcroft,0.5752547566726224,1.0,True,False,0.5752547566726224
+coverage[official+osm],54,89be0e25243ffff,North Turramurra,0.5728834335493409,9.0,True,False,0.5728834335493409
+coverage[official+osm],55,89be0851b2fffff,Bidwill (NSW),0.5701631067576448,1.0,True,False,0.5701631067576448
+coverage[official+osm],56,89be084a58fffff,McGraths Hill,0.5697737359066646,5.0,True,False,0.5697737359066646
+coverage[official+osm],57,89be0e2298fffff,Castlecrag,0.5642446308601387,10.0,True,False,0.5642446308601387
+coverage[official+osm],58,89be08cd453ffff,Lurnea,0.5627968953498249,1.0,True,False,0.5627968953498249
+coverage[official+osm],59,89be0e2136bffff,Newport (NSW),0.5600813332309723,6.0,True,False,0.5600813332309723
+coverage[official+osm],60,89be084a637ffff,Pitt Town,0.5575354052293742,10.0,True,False,0.5575354052293742
+coverage[official+osm],61,89be084a62fffff,Pitt Town,0.5561818079988738,9.0,True,False,0.5561818079988738
+coverage[official+osm],62,89be08cb1b7ffff,Peakhurst,0.5543663755480893,,True,False,0.5543663755480893
+coverage[official+osm],63,89be0e2e8afffff,Hornsby Heights,0.553323482218638,10.0,True,False,0.553323482218638
+coverage[official+osm],64,89be0850a87ffff,Minchinbury,0.5439436989187628,,True,False,0.5439436989187628
+coverage[official+osm],65,89be08428d7ffff,Cambridge Gardens,0.5404175457609014,2.0,True,False,0.5404175457609014
+coverage[official+osm],66,89be0858dc3ffff,Grantham Farm,0.5370030635310712,5.0,True,False,0.5370030635310712
+coverage[official+osm],67,89be08c9cd7ffff,Yagoona,0.5361506626552569,2.0,True,False,0.5361506626552569
+coverage[official+osm],68,89be08c9b63ffff,Guildford West,0.5313686773004747,1.0,True,False,0.5313686773004747
+coverage[official+osm],69,89be08cc1dbffff,Denham Court,0.5291830881569077,4.0,True,False,0.5291830881569077
+coverage[official+osm],70,89be084288bffff,Cambridge Gardens,0.5275385401772581,1.0,True,False,0.5275385401772581
+coverage[official+osm],71,89be08cd4cfffff,Lurnea,0.5272566201367669,1.0,True,False,0.5272566201367669
+coverage[official+osm],72,89be0e2026bffff,North Narrabeen,0.5256161353057024,7.0,True,False,0.5256161353057024
+coverage[official+osm],73,89be0e242bbffff,North Epping,0.5254779414161241,9.0,True,False,0.5254779414161241
+coverage[official+osm],74,89be08c8b0bffff,Warwick Farm,0.5236871444948136,1.0,True,False,0.5236871444948136
+coverage[official+osm],75,89be0e2401bffff,Marsfield,0.5225080218236087,7.0,True,False,0.5225080218236087
+coverage[official+osm],76,89be0e20977ffff,St Ives (NSW),0.5222279627057728,10.0,True,False,0.5222279627057728
+coverage[official+osm],77,89be0855a4fffff,Emu Plains,0.5203240971429068,4.0,True,False,0.5203240971429068
+coverage[official+osm],78,89be08cb467ffff,Bexley,0.5175013588094753,4.0,True,False,0.5175013588094753
+coverage[official+osm],79,89be0e36267ffff,South Coogee,0.516841416108132,1.0,True,False,0.516841416108132
+coverage[official+osm],80,89be0e26373ffff,Meadowbank (NSW),0.5129393993173951,5.0,True,False,0.5129393993173951
+coverage[official+osm],81,89be08cd5a3ffff,Horningsea Park,0.51157113048902,3.0,True,False,0.51157113048902
+coverage[official+osm],82,89be0847573ffff,Blaxland (NSW),0.5113857908786422,7.0,True,False,0.5113857908786422
+coverage[official+osm],83,89be08cd2d3ffff,Mount Pritchard,0.5112354117164154,1.0,True,False,0.5112354117164154
+coverage[official+osm],84,89be08cb253ffff,Canterbury (NSW),0.509448261950256,4.0,True,False,0.509448261950256
+coverage[official+osm],85,89be085533bffff,South Penrith,0.505916318246291,3.0,True,False,0.505916318246291
+coverage[official+osm],86,89be0851b03ffff,Hassall Grove,0.504467459466932,3.0,True,False,0.504467459466932
+coverage[official+osm],87,89be085a32fffff,North Kellyville,0.5039403805898385,10.0,True,False,0.5039403805898385
+coverage[official+osm],88,89be0e34e47ffff,Forest Lodge,0.5036231029466229,7.0,True,False,0.5036231029466229
+coverage[official+osm],89,89be08c5907ffff,Camden South,0.5029206722303347,4.0,True,False,0.5029206722303347
+coverage[official+osm],90,89be085137bffff,Acacia Gardens,0.5025530692598624,7.0,True,False,0.5025530692598624
+coverage[official+osm],91,89be08c827bffff,Yagoona,0.5023858109545748,,True,False,0.5023858109545748
+coverage[official+osm],92,89be0e26b2fffff,Parramatta,0.5020099913388748,4.0,True,False,0.5020099913388748
+coverage[official+osm],93,89be08c12a3ffff,Barden Ridge,0.5018399250356821,,True,False,0.5018399250356821
+coverage[official+osm],94,89be084310fffff,Melonba,0.5014849083256983,9.0,True,False,0.5014849083256983
+coverage[official+osm],95,89be0e3465bffff,Bondi,0.4992602566381377,9.0,True,False,0.4992602566381377
+coverage[official+osm],96,89be08cd0afffff,Hoxton Park,0.498989074160484,1.0,True,False,0.498989074160484
+coverage[official+osm],97,89be085133bffff,Kings Park (NSW),0.4981656284850403,6.0,True,False,0.4981656284850403
+coverage[official+osm],98,89be0e26ac7ffff,Ermington,0.4968098584993672,2.0,True,False,0.4968098584993672
+coverage[official+osm],99,89be08caa2fffff,Voyager Point,0.4967592554860369,9.0,True,False,0.4967592554860369
+coverage[official+osm],100,89be085162bffff,Bella Vista,0.4941846534082049,10.0,True,False,0.4941846534082049
+coverage[official+osm],101,89be0859d07ffff,Gables,0.4938419839980739,7.0,True,False,0.4938419839980739
+coverage[official+osm],102,89be085060bffff,Prospect (NSW),0.4934659990570818,,True,False,0.4934659990570818
+coverage[official+osm],103,89be08c918bffff,Chullora,0.4921145012345277,,True,False,0.4921145012345277
+coverage[official+osm],104,89be0e36b4bffff,Tempe,0.4918510993662345,2.0,True,False,0.4918510993662345
+coverage[official+osm],105,89be0841037ffff,Bligh Park,0.4917249975443497,4.0,True,False,0.4917249975443497
+coverage[official+osm],106,89be08c9b73ffff,Yennora,0.4911265462510384,1.0,True,False,0.4911265462510384
+coverage[official+osm],107,89be0e26103ffff,Concord West,0.4896395886725826,,True,False,0.4896395886725826
+coverage[official+osm],108,89be08cd58bffff,Prestons,0.4895904289681594,4.0,True,False,0.4895904289681594
+coverage[official+osm],109,89be0843113ffff,Shanes Park,0.487959308238374,9.0,True,False,0.487959308238374
+coverage[official+osm],110,89be0e34457ffff,Randwick,0.4855428036603702,9.0,True,False,0.4855428036603702
+coverage[official+osm],111,89be085a637ffff,Glenhaven,0.4852718221230898,10.0,True,False,0.4852718221230898
+coverage[official+osm],112,89be085522fffff,Caddens,0.4847269324961857,,True,False,0.4847269324961857
+coverage[official+osm],113,89be08cd58fffff,Prestons,0.4841058517749954,3.0,True,False,0.4841058517749954
+coverage[official+osm],114,89be08c91d7ffff,Chullora,0.4834684355526537,,True,False,0.4834684355526537
+coverage[official+osm],115,89be08520a7ffff,Wakeley,0.4826517159414743,1.0,True,False,0.4826517159414743
+coverage[official+osm],116,89be085026bffff,Blacktown,0.4810264848747447,2.0,True,False,0.4810264848747447
+coverage[official+osm],117,89be0850677ffff,Prospect (NSW),0.4808061659038111,,True,False,0.4808061659038111
+coverage[official+osm],118,89be084288fffff,Penrith,0.4804666110440247,1.0,True,False,0.4804666110440247
+coverage[official+osm],119,89be085095bffff,St Clair (Penrith - NSW),0.4767683120425133,4.0,True,False,0.4767683120425133
+coverage[official+osm],120,89be08525b3ffff,Mount Pritchard,0.4756102103823232,1.0,True,False,0.4756102103823232
+equity w=0.5,1,89be08c8bb3ffff,Liverpool,2.237178105660445,1.0,False,False,3.3557671584906674
+equity w=0.5,2,89be08cb5dbffff,Hurstville,2.217771682856851,2.0,False,False,3.215768940142434
+equity w=0.5,3,89be08536cfffff,Parramatta,2.0323033669223194,3.0,False,False,2.845224713691247
+equity w=0.5,4,89be0e345cbffff,Daceyville,1.9578126836264889,3.0,False,False,2.7409377570770843
+equity w=0.5,5,89be0e35dd7ffff,Pyrmont,2.0247310013142337,4.0,False,False,2.7333868517742155
+equity w=0.5,6,89be0e3460fffff,Bondi Junction,2.127767466193594,6.0,False,False,2.6597093327419925
+equity w=0.5,7,89be0e345dbffff,Kingsford (NSW),1.8917338265381811,3.0,False,False,2.6484273571534533
+equity w=0.5,8,89be0e34267ffff,Woolloomooloo,2.1174535305810687,6.0,False,False,2.6468169132263357
+equity w=0.5,9,89be0e343abffff,Chippendale,1.943956144214203,4.0,False,False,2.624340794689174
+equity w=0.5,10,89be0e34227ffff,Darlinghurst,1.8286118008998915,5.0,False,False,2.377195341169859
+equity w=0.5,11,89be0842503ffff,St Marys (NSW),1.584246703204904,1.0,False,False,2.3763700548073556
+equity w=0.5,12,89be0e205afffff,Brookvale,1.8062357780038876,5.0,False,False,2.348106511405054
+equity w=0.5,13,89be0e35e37ffff,North Sydney,1.8381761012845423,,False,False,2.3438671682926673
+equity w=0.5,14,89be0e2ed93ffff,Hornsby,1.5151305468193073,3.0,False,False,2.12118276554703
+equity w=0.5,15,89be0e34237ffff,Darlinghurst,1.654633525738832,6.0,False,False,2.06829190717354
+equity w=0.5,16,89be08c9657ffff,Burwood (NSW),1.4262784647126834,2.0,False,False,2.068103773833391
+equity w=0.5,17,89be0e2403bffff,Epping (NSW),1.5271103121338756,4.0,False,False,2.061598921380732
+equity w=0.5,18,89be0e34023ffff,Waterloo (NSW),1.6449263917230188,6.0,False,False,2.0561579896537734
+equity w=0.5,19,89be0e343c7ffff,Surry Hills,1.6203404238682977,6.0,False,False,2.0254255298353723
+equity w=0.5,20,89be085ac07ffff,Parklea,1.5872915090287447,,False,False,2.023963020693356
+equity w=0.5,21,89be0e36a47ffff,St Peters (NSW),1.553657121489853,5.0,False,False,2.019754257936809
+equity w=0.5,22,89be085ae67ffff,Beaumont Hills,1.5509945422264926,5.0,False,False,2.0162929048944402
+equity w=0.5,23,89be08c52bbffff,Campbelltown (NSW),1.559589437265252,,False,False,1.9886399760434097
+equity w=0.5,24,89be0844217ffff,Springwood (NSW),1.4488345622289776,4.0,False,False,1.9559266590091198
+equity w=0.5,25,89be0842d63ffff,Penrith,1.3445274324286518,2.0,False,True,1.949564777021545
+equity w=0.5,26,89be08cb5cfffff,Hurstville,1.340834797166858,2.0,False,True,1.944210455891944
+equity w=0.5,27,89be0e34c33ffff,Marrickville,1.4243444780065984,4.0,False,False,1.922865045308908
+equity w=0.5,28,89be0e348c7ffff,Petersham,1.4065588042848025,4.0,False,False,1.8988543857844835
+equity w=0.5,29,89be0853663ffff,Westmead,1.488945623977917,,False,False,1.8985617106957795
+equity w=0.5,30,89be0e35d63ffff,Balmain,1.6210026384844192,8.0,False,False,1.864153034257082
+equity w=0.5,31,89be0e34223ffff,Darlinghurst,1.4863861822596591,6.0,False,False,1.857982727824574
+equity w=0.5,32,89be0e34e87ffff,Newtown (NSW),1.42839470958327,5.0,False,False,1.8569131224582511
+equity w=0.5,33,89be0853653ffff,Parramatta,1.375268022067164,4.0,False,False,1.8566118297906715
+equity w=0.5,34,89be0e35dc7ffff,Pyrmont,1.4832970875048173,6.0,False,False,1.8541213593810215
+equity w=0.5,35,89be0e341cbffff,Zetland,1.4797306786262192,6.0,False,False,1.849663348282774
+equity w=0.5,36,89be0e2ac4bffff,Bilgola Beach,1.478089847677159,6.0,False,False,1.8476123095964487
+equity w=0.5,37,89be0e34353ffff,Darlinghurst,1.4092106584802262,5.0,False,True,1.8319738560242942
+equity w=0.5,38,89be0e35c03ffff,Circular Quay,1.436207557365371,,False,False,1.8313151488641914
+equity w=0.5,39,89be0e3435bffff,Darlinghurst,1.3966118082982155,5.0,False,False,1.8155953507876803
+equity w=0.5,40,89be0e3423bffff,Rushcutters Bay,1.5109018673233705,7.0,False,False,1.8130822407880445
+equity w=0.5,41,89be0e346cbffff,Bondi,1.3926247995552647,5.0,True,False,1.8104122394218443
+equity w=0.5,42,89be085365bffff,Parramatta,1.2914448632125093,3.0,True,False,1.808022808497513
+equity w=0.5,43,89be0e3438fffff,Redfern,1.4121000481741783,,False,False,1.80057554820076
+equity w=0.5,44,89be0e35a33ffff,St Leonards (NSW),1.395415331404705,,False,False,1.7793007857767995
+equity w=0.5,45,89be0e24d8fffff,North Parramatta,1.2661274508545477,3.0,False,False,1.7725784311963666
+equity w=0.5,46,89be0e34473ffff,Randwick,1.4130699483754907,6.0,False,True,1.7663374354693633
+equity w=0.5,47,89be0e24d87ffff,North Parramatta,1.211372321647043,2.0,False,False,1.7564898663882123
+equity w=0.5,48,89be0e3468fffff,Waverley (NSW),1.3495159399284755,5.0,False,False,1.7543707219070181
+equity w=0.5,49,89be0e3422bffff,Woolloomooloo,1.3427825251313963,5.0,False,True,1.7456172826708152
+equity w=0.5,50,89be0e343cbffff,Darlinghurst,1.3370505837039257,5.0,False,True,1.7381657588151034
+equity w=0.5,51,89be08cb537ffff,Mortdale,1.2173517548062915,3.0,False,True,1.704292456728808
+equity w=0.5,52,89be08ce033ffff,Minto,1.1304923468605876,1.0,False,False,1.6957385202908815
+equity w=0.5,53,89be08c894fffff,Liverpool,1.1303692721002307,1.0,False,True,1.6955539081503461
+equity w=0.5,54,89be084a527ffff,Windsor (NSW),1.2431182085737518,4.0,False,False,1.678209581574565
+equity w=0.5,55,89be0853453ffff,Holroyd,1.156778633003481,2.0,False,False,1.6773290178550475
+equity w=0.5,56,89be08cb50fffff,Penshurst (NSW),1.1409698131503,2.0,False,True,1.654406229067935
+equity w=0.5,57,89be08c897bffff,Liverpool,1.1020278117776348,1.0,False,False,1.653041717666452
+equity w=0.5,58,89be085242fffff,Canley Heights,1.1008213128695985,1.0,False,False,1.6512319693043978
+equity w=0.5,59,89be0e34317ffff,Chippendale,1.288412869173338,,False,False,1.6428614326727553
+equity w=0.5,60,89be08ca2dbffff,Mortdale,1.211383573162588,4.0,False,False,1.6353678237694937
+equity w=0.5,61,89be0e3440fffff,Randwick,1.305781352756112,6.0,False,True,1.63222669094514
+equity w=0.5,62,89be0842cafffff,Kingswood (Penrith - NSW),1.0876560800088173,1.0,False,False,1.631484120013226
+equity w=0.5,63,89be08429abffff,Emu Plains,1.1637785897144308,3.0,False,False,1.629290025600203
+equity w=0.5,64,89be0e2ed83ffff,Hornsby,1.155601543578342,3.0,False,False,1.6178421610096787
+equity w=0.5,65,89be0e342abffff,Paddington (NSW),1.4050127598845283,8.0,False,False,1.6157646738672076
+equity w=0.5,66,89be0e3430fffff,Haymarket,1.2474530896939149,,False,False,1.5906334212894941
+equity w=0.5,67,89be0e34cdbffff,St Peters (NSW),1.2440003758945553,,False,False,1.5862308493540986
+equity w=0.5,68,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,1.5533839687229376
+equity w=0.5,69,89be0e26593ffff,Canada Bay,1.2157287268621104,,False,False,1.5501815339950675
+equity w=0.5,70,89be0e34493ffff,South Coogee,1.0281014120494034,1.0,False,False,1.5421521180741051
+equity w=0.5,71,89be0e342c3ffff,Double Bay,1.3334262006455322,8.0,False,False,1.533440130742362
+equity w=0.5,72,89be084716bffff,Warrimoo,1.2244004643430786,6.0,False,False,1.5305005804288483
+equity w=0.5,73,89be0e346cfffff,Bondi,1.1653443095648437,5.0,False,False,1.514947602434297
+equity w=0.5,74,89be0e34303ffff,Central Station,1.1838175946068787,,False,True,1.5094914961125085
+equity w=0.5,75,89be0e2696bffff,Harris Park,1.0759332341843133,3.0,False,False,1.5063065278580385
+equity w=0.5,76,89be0e26b27ffff,Parramatta,1.1148831740188174,4.0,False,False,1.5050922849254036
+equity w=0.5,77,89be0e35d9bffff,Pyrmont,1.07154387057973,3.0,False,False,1.500161418811622
+equity w=0.5,78,89be0e34127ffff,Newtown (NSW),1.3037798840879782,8.0,False,False,1.499346866701175
+equity w=0.5,79,89be0e34287ffff,Paddington (NSW),1.4240006899575035,10.0,False,False,1.4952007244553787
+equity w=0.5,80,89be08d8067ffff,Cronulla,1.1905203786101612,6.0,False,True,1.4881504732627016
+equity w=0.5,81,89be0e341cfffff,Zetland,1.189179896098042,6.0,False,False,1.4864748701225525
+equity w=0.5,82,89be0e3417bffff,Eveleigh,1.2334094973079843,7.0,False,False,1.4800913967695812
+equity w=0.5,83,89be08536c7ffff,Parramatta,1.1325266112813877,5.0,False,False,1.472284594665804
+equity w=0.5,84,89be0e34e0bffff,Forest Lodge,1.151154819479291,,False,False,1.467843034796218
+equity w=0.5,85,89be0e22b6bffff,Forestville (NSW),1.083079570812462,4.0,False,False,1.462157420596824
+equity w=0.5,86,89be0e34e23ffff,Stanmore (NSW),1.2083001960713935,7.0,True,False,1.4499602352856722
+equity w=0.5,87,89be0853613ffff,Mays Hill,1.0339560234250014,3.0,False,False,1.4475384327950018
+equity w=0.5,88,89be0e34a1bffff,Lilyfield,1.1298546685671609,,False,False,1.4406831101471416
+equity w=0.5,89,89be08c5393ffff,Englorie Park,1.0274835742813155,3.0,False,False,1.4384770039938417
+equity w=0.5,90,89be0853643ffff,Parramatta,1.019176737486215,3.0,False,False,1.426847432480701
+equity w=0.5,91,89be08cb4dbffff,Kogarah,1.0111823915796043,3.0,False,False,1.415655348211446
+equity w=0.5,92,89be08c896fffff,Liverpool,0.943694721017528,1.0,False,False,1.415542081526292
+equity w=0.5,93,89be0e26bb3ffff,Camellia,0.9760612808139724,2.0,True,False,1.41528885718026
+equity w=0.5,94,89be0e3426fffff,Potts Point,1.0986835121326213,,False,False,1.4009366189847465
+equity w=0.5,95,89be0853657ffff,Parramatta,0.9977642695036436,3.0,False,False,1.396869977305101
+equity w=0.5,96,89be0e2aeb3ffff,Avalon Beach,1.214517747548007,8.0,False,False,1.3966954096802078
+equity w=0.5,97,89be08c8967ffff,Liverpool,0.9309894229228584,1.0,False,False,1.3964841343842875
+equity w=0.5,98,89be0e3464fffff,Bellevue Hill,1.2119775633841818,8.0,False,False,1.393774197891809
+equity w=0.5,99,89be0e34a53ffff,Rozelle,1.083507109035751,,False,False,1.3815851145632325
+equity w=0.5,100,89be0e343d3ffff,Surry Hills,1.0815884814731933,,False,False,1.3791386633505776
+equity w=0.5,101,89be0842aa3ffff,Cranebrook,0.9178774106622554,1.0,False,False,1.3768161159933832
+equity w=0.5,102,89be0e34553ffff,Kensington (NSW),1.015588744233429,4.0,False,False,1.3710448047151294
+equity w=0.5,103,89be08cb00bffff,Kingsgrove,0.9444990941725364,2.0,False,True,1.3695236865501779
+equity w=0.5,104,89be0e343cfffff,Surry Hills,1.0532673320815418,5.0,False,False,1.3692475317060044
+equity w=0.5,105,89be0e343c3ffff,Surry Hills,1.1375271072411115,7.0,False,False,1.3650325286893337
+equity w=0.5,106,89be0e35c83ffff,Woolloomooloo,1.0661940487488777,,False,False,1.3595091483047674
+equity w=0.5,107,89be0e34617ffff,Queens Park (NSW),1.1324937677089593,7.0,False,False,1.358992521250751
+equity w=0.5,108,89be0e26bbbffff,Camellia,1.0692528040294689,6.0,True,False,1.3365660050368362
+equity w=0.5,109,89be08cb627ffff,Bexley North,0.9541545769356736,3.0,False,True,1.335816407709943
+equity w=0.5,110,89be0851927ffff,Dharruk,0.9205822872383146,2.0,True,False,1.3348443164955561
+equity w=0.5,111,89be0853603ffff,Mays Hill,0.9521196821471708,3.0,False,False,1.3329675550060391
+equity w=0.5,112,89be0e34edbffff,Darlington (Sydney - NSW),1.0419397044040688,,False,False,1.328582317432287
+equity w=0.5,113,89be0e261bbffff,Concord West,1.0197545919474769,5.0,False,False,1.32568096953172
+equity w=0.5,114,89be0e36b6bffff,Tempe,0.9745933587146308,4.0,False,False,1.3157010342647517
+equity w=0.5,115,89be0e34403ffff,Randwick,1.0952738044489514,7.0,False,False,1.3143285653387415
+equity w=0.5,116,89be0e35847ffff,Wollstonecraft,1.2489324616528654,10.0,False,False,1.3113790847355087
+equity w=0.5,117,89be0e3436fffff,Darling Harbour,0.9712917970985608,4.0,False,False,1.3112439260830573
+equity w=0.5,118,89be0e24d17ffff,North Parramatta,0.9025619024110596,2.0,True,False,1.3087147584960364
+equity w=0.5,119,89be085a413ffff,Castle Hill (NSW),0.9345733310050296,3.0,False,False,1.3084026634070414
+equity w=0.5,120,89be0e3462bffff,Woollahra,1.0830071265434744,7.0,False,False,1.2996085518521692
+equity w=1,1,89be08c8bb3ffff,Liverpool,2.237178105660445,1.0,False,False,4.47435621132089
+equity w=1,2,89be08cb5dbffff,Hurstville,2.217771682856851,2.0,False,False,4.213766197428017
+equity w=1,3,89be08536cfffff,Parramatta,2.0323033669223194,3.0,False,False,3.658146060460175
+equity w=1,4,89be0e345cbffff,Daceyville,1.9578126836264889,3.0,False,False,3.52406283052768
+equity w=1,5,89be0e35dd7ffff,Pyrmont,2.0247310013142337,4.0,False,False,3.4420427022341973
+equity w=1,6,89be0e345dbffff,Kingsford (NSW),1.8917338265381811,3.0,False,False,3.4051208877687262
+equity w=1,7,89be0e343abffff,Chippendale,1.943956144214203,4.0,False,False,3.304725445164145
+equity w=1,8,89be0e3460fffff,Bondi Junction,2.127767466193594,6.0,False,False,3.1916511992903907
+equity w=1,9,89be0e34267ffff,Woolloomooloo,2.1174535305810687,6.0,False,False,3.176180295871603
+equity w=1,10,89be0842503ffff,St Marys (NSW),1.584246703204904,1.0,False,False,3.168493406409808
+equity w=1,11,89be0e34227ffff,Darlinghurst,1.8286118008998915,5.0,False,False,2.9257788814398267
+equity w=1,12,89be0e205afffff,Brookvale,1.8062357780038876,5.0,False,False,2.88997724480622
+equity w=1,13,89be0e35e37ffff,North Sydney,1.8381761012845423,,False,False,2.8495582353007927
+equity w=1,14,89be0e2ed93ffff,Hornsby,1.5151305468193073,3.0,False,False,2.727234984274753
+equity w=1,15,89be08c9657ffff,Burwood (NSW),1.4262784647126834,2.0,False,False,2.7099290829540985
+equity w=1,16,89be0e2403bffff,Epping (NSW),1.5271103121338756,4.0,False,False,2.5960875306275883
+equity w=1,17,89be0842d63ffff,Penrith,1.3445274324286518,2.0,False,True,2.554602121614438
+equity w=1,18,89be08cb5cfffff,Hurstville,1.340834797166858,2.0,False,True,2.54758611461703
+equity w=1,19,89be0e36a47ffff,St Peters (NSW),1.553657121489853,5.0,False,False,2.485851394383765
+equity w=1,20,89be0e34237ffff,Darlinghurst,1.654633525738832,6.0,False,False,2.481950288608248
+equity w=1,21,89be085ae67ffff,Beaumont Hills,1.5509945422264926,5.0,False,False,2.481591267562388
+equity w=1,22,89be0e34023ffff,Waterloo (NSW),1.6449263917230188,6.0,False,False,2.4673895875845284
+equity w=1,23,89be0844217ffff,Springwood (NSW),1.4488345622289776,4.0,False,False,2.4630187557892618
+equity w=1,24,89be085ac07ffff,Parklea,1.5872915090287447,,False,False,2.4606345323579677
+equity w=1,25,89be0e343c7ffff,Surry Hills,1.6203404238682977,6.0,False,False,2.4305106358024466
+equity w=1,26,89be0e34c33ffff,Marrickville,1.4243444780065984,4.0,False,False,2.421385612611217
+equity w=1,27,89be08c52bbffff,Campbelltown (NSW),1.559589437265252,,False,False,2.4176905148215675
+equity w=1,28,89be0e348c7ffff,Petersham,1.4065588042848025,4.0,False,False,2.3911499672841643
+equity w=1,29,89be0853653ffff,Parramatta,1.375268022067164,4.0,False,False,2.337955637514179
+equity w=1,30,89be085365bffff,Parramatta,1.2914448632125093,3.0,True,False,2.3246007537825166
+equity w=1,31,89be0853663ffff,Westmead,1.488945623977917,,False,False,2.308177797413642
+equity w=1,32,89be0e24d87ffff,North Parramatta,1.211372321647043,2.0,False,False,2.3016074111293814
+equity w=1,33,89be0e34e87ffff,Newtown (NSW),1.42839470958327,5.0,False,False,2.2854315353332324
+equity w=1,34,89be0e24d8fffff,North Parramatta,1.2661274508545477,3.0,False,False,2.2790294115381857
+equity w=1,35,89be08ce033ffff,Minto,1.1304923468605876,1.0,False,False,2.2609846937211753
+equity w=1,36,89be08c894fffff,Liverpool,1.1303692721002307,1.0,False,True,2.2607385442004615
+equity w=1,37,89be0e34353ffff,Darlinghurst,1.4092106584802262,5.0,False,True,2.254737053568362
+equity w=1,38,89be0e3435bffff,Darlinghurst,1.3966118082982155,5.0,False,False,2.234578893277145
+equity w=1,39,89be0e34223ffff,Darlinghurst,1.4863861822596591,6.0,False,False,2.2295792733894886
+equity w=1,40,89be0e346cbffff,Bondi,1.3926247995552647,5.0,True,False,2.2281996792884238
+equity w=1,41,89be0e35c03ffff,Circular Quay,1.436207557365371,,False,False,2.226422740363012
+equity w=1,42,89be0e35dc7ffff,Pyrmont,1.4832970875048173,6.0,False,False,2.224945631257226
+equity w=1,43,89be0e341cbffff,Zetland,1.4797306786262192,6.0,False,False,2.219596017939329
+equity w=1,44,89be0e2ac4bffff,Bilgola Beach,1.478089847677159,6.0,False,False,2.217134771515738
+equity w=1,45,89be08c897bffff,Liverpool,1.1020278117776348,1.0,False,False,2.2040556235552695
+equity w=1,46,89be085242fffff,Canley Heights,1.1008213128695985,1.0,False,False,2.201642625739197
+equity w=1,47,89be0853453ffff,Holroyd,1.156778633003481,2.0,False,False,2.1978794027066137
+equity w=1,48,89be08cb537ffff,Mortdale,1.2173517548062915,3.0,False,True,2.191233158651325
+equity w=1,49,89be0e3438fffff,Redfern,1.4121000481741783,,False,False,2.1890510482273418
+equity w=1,50,89be0842cafffff,Kingswood (Penrith - NSW),1.0876560800088173,1.0,False,False,2.1753121600176346
+equity w=1,51,89be08cb50fffff,Penshurst (NSW),1.1409698131503,2.0,False,True,2.16784264498557
+equity w=1,52,89be0e35a33ffff,St Leonards (NSW),1.395415331404705,,False,False,2.163186240148894
+equity w=1,53,89be0e3468fffff,Waverley (NSW),1.3495159399284755,5.0,False,False,2.159225503885561
+equity w=1,54,89be0e3422bffff,Woolloomooloo,1.3427825251313963,5.0,False,True,2.148452040210234
+equity w=1,55,89be0e343cbffff,Darlinghurst,1.3370505837039257,5.0,False,True,2.139280933926281
+equity w=1,56,89be0e34473ffff,Randwick,1.4130699483754907,6.0,False,True,2.1196049225632363
+equity w=1,57,89be0e3423bffff,Rushcutters Bay,1.5109018673233705,7.0,False,False,2.1152626142527184
+equity w=1,58,89be084a527ffff,Windsor (NSW),1.2431182085737518,4.0,False,False,2.113300954575378
+equity w=1,59,89be0e35d63ffff,Balmain,1.6210026384844192,8.0,False,False,2.107303430029745
+equity w=1,60,89be08429abffff,Emu Plains,1.1637785897144308,3.0,False,False,2.0948014614859756
+equity w=1,61,89be0e2ed83ffff,Hornsby,1.155601543578342,3.0,False,False,2.0800827784410156
+equity w=1,62,89be08ca2dbffff,Mortdale,1.211383573162588,4.0,False,False,2.0593520743763993
+equity w=1,63,89be0e34493ffff,South Coogee,1.0281014120494034,1.0,False,False,2.056202824098807
+equity w=1,64,89be0e34317ffff,Chippendale,1.288412869173338,,False,False,1.9973099961721725
+equity w=1,65,89be0e3440fffff,Randwick,1.305781352756112,6.0,False,True,1.958672029134168
+equity w=1,66,89be0e2696bffff,Harris Park,1.0759332341843133,3.0,False,False,1.936679821531764
+equity w=1,67,89be0e3430fffff,Haymarket,1.2474530896939149,,False,False,1.9338137528850732
+equity w=1,68,89be0e35d9bffff,Pyrmont,1.07154387057973,3.0,False,False,1.928778967043514
+equity w=1,69,89be0e34cdbffff,St Peters (NSW),1.2440003758945553,,False,False,1.9284613228136418
+equity w=1,70,89be0e26b27ffff,Parramatta,1.1148831740188174,4.0,False,False,1.8953013958319895
+equity w=1,71,89be08c896fffff,Liverpool,0.943694721017528,1.0,False,False,1.887389442035056
+equity w=1,72,89be0e26593ffff,Canada Bay,1.2157287268621104,,False,False,1.8846343411280246
+equity w=1,73,89be0e346cfffff,Bondi,1.1653443095648437,5.0,False,False,1.86455089530375
+equity w=1,74,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,1.864060762467525
+equity w=1,75,89be08c8967ffff,Liverpool,0.9309894229228584,1.0,False,False,1.8619788458457167
+equity w=1,76,89be0853613ffff,Mays Hill,1.0339560234250014,3.0,False,False,1.8611208421650025
+equity w=1,77,89be0e26bb3ffff,Camellia,0.9760612808139724,2.0,True,False,1.8545164335465474
+equity w=1,78,89be08c5393ffff,Englorie Park,1.0274835742813155,3.0,False,False,1.849470433706368
+equity w=1,79,89be0e22b6bffff,Forestville (NSW),1.083079570812462,4.0,False,False,1.8412352703811854
+equity w=1,80,89be084716bffff,Warrimoo,1.2244004643430786,6.0,False,False,1.8366006965146178
+equity w=1,81,89be0842aa3ffff,Cranebrook,0.9178774106622554,1.0,False,False,1.8357548213245107
+equity w=1,82,89be0e34303ffff,Central Station,1.1838175946068787,,False,True,1.8351653976181383
+equity w=1,83,89be0853643ffff,Parramatta,1.019176737486215,3.0,False,False,1.8345181274751872
+equity w=1,84,89be0e342abffff,Paddington (NSW),1.4050127598845283,8.0,False,False,1.8265165878498868
+equity w=1,85,89be08cb4dbffff,Kogarah,1.0111823915796043,3.0,False,False,1.820128304843288
+equity w=1,86,89be08536c7ffff,Parramatta,1.1325266112813877,5.0,False,False,1.8120425780502203
+equity w=1,87,89be0853657ffff,Parramatta,0.9977642695036436,3.0,False,False,1.7959756851065585
+equity w=1,88,89be08cb00bffff,Kingsgrove,0.9444990941725364,2.0,False,True,1.794548278927819
+equity w=1,89,89be08d8067ffff,Cronulla,1.1905203786101612,6.0,False,True,1.7857805679152419
+equity w=1,90,89be0e34e0bffff,Forest Lodge,1.151154819479291,,False,False,1.784531250113145
+equity w=1,91,89be0e341cfffff,Zetland,1.189179896098042,6.0,False,False,1.7837698441470629
+equity w=1,92,89be0e34a1bffff,Lilyfield,1.1298546685671609,,False,False,1.7515115517271223
+equity w=1,93,89be0851927ffff,Dharruk,0.9205822872383146,2.0,True,False,1.7491063457527976
+equity w=1,94,89be0e342c3ffff,Double Bay,1.3334262006455322,8.0,False,False,1.733454060839192
+equity w=1,95,89be0e3417bffff,Eveleigh,1.2334094973079843,7.0,False,False,1.726773296231178
+equity w=1,96,89be0e34553ffff,Kensington (NSW),1.015588744233429,4.0,False,False,1.7265008651968292
+equity w=1,97,89be08cb627ffff,Bexley North,0.9541545769356736,3.0,False,True,1.7174782384842127
+equity w=1,98,89be0e24d17ffff,North Parramatta,0.9025619024110596,2.0,True,False,1.7148676145810131
+equity w=1,99,89be0853603ffff,Mays Hill,0.9521196821471708,3.0,False,False,1.7138154278649074
+equity w=1,100,89be0e3426fffff,Potts Point,1.0986835121326213,,False,False,1.7031897258368716
+equity w=1,101,89be0e34127ffff,Newtown (NSW),1.3037798840879782,8.0,False,False,1.6949138493143716
+equity w=1,102,89be0e34e23ffff,Stanmore (NSW),1.2083001960713935,7.0,True,False,1.691620274499951
+equity w=1,103,89be0e3438bffff,Redfern,0.8452442944855807,1.0,False,False,1.6904885889711614
+equity w=1,104,89be0e343cfffff,Surry Hills,1.0532673320815418,5.0,False,False,1.6852277313304669
+equity w=1,105,89be085a413ffff,Castle Hill (NSW),0.9345733310050296,3.0,False,False,1.6822319958090532
+equity w=1,106,89be0e34a53ffff,Rozelle,1.083507109035751,,False,False,1.6796631200907137
+equity w=1,107,89be0e343d3ffff,Surry Hills,1.0815884814731933,,False,False,1.676688845227962
+equity w=1,108,89be08cd2c3ffff,Bonnyrigg,0.8292131862082561,1.0,False,False,1.6584263724165123
+equity w=1,109,89be0e36b6bffff,Tempe,0.9745933587146308,4.0,False,False,1.6568087098148723
+equity w=1,110,89be0e35c83ffff,Woolloomooloo,1.0661940487488777,,False,False,1.6528242478606572
+equity w=1,111,89be0e3436fffff,Darling Harbour,0.9712917970985608,4.0,False,False,1.6511960550675533
+equity w=1,112,89be0e261bbffff,Concord West,1.0197545919474769,5.0,False,False,1.6316073471159631
+equity w=1,113,89be0e34edbffff,Darlington (Sydney - NSW),1.0419397044040688,,False,False,1.6152249304605053
+equity w=1,114,89be0e26bbbffff,Camellia,1.0692528040294689,6.0,True,False,1.6038792060442033
+equity w=1,115,89be085ad37ffff,Quakers Hill,0.9422433872979578,4.0,False,False,1.6018137584065282
+equity w=1,116,89be08cd2d7ffff,Heckenberg,0.7982944709737823,1.0,False,False,1.5965889419475645
+equity w=1,117,89be0e343c3ffff,Surry Hills,1.1375271072411115,7.0,False,False,1.592537950137556
+equity w=1,118,89be08cf1d7ffff,Macquarie Fields,0.835206944537087,2.0,True,False,1.5868931946204652
+equity w=1,119,89be0e34617ffff,Queens Park (NSW),1.1324937677089593,7.0,False,False,1.585491274792543
+equity w=1,120,89be0e2aeb3ffff,Avalon Beach,1.214517747548007,8.0,False,False,1.578873071812409
+equity w=2,1,89be08c8bb3ffff,Liverpool,2.237178105660445,1.0,False,False,6.711534316981335
+equity w=2,2,89be08cb5dbffff,Hurstville,2.217771682856851,2.0,False,False,6.2097607119991824
+equity w=2,3,89be08536cfffff,Parramatta,2.0323033669223194,3.0,False,False,5.283988753998031
+equity w=2,4,89be0e345cbffff,Daceyville,1.9578126836264889,3.0,False,False,5.090312977428871
+equity w=2,5,89be0e345dbffff,Kingsford (NSW),1.8917338265381811,3.0,False,False,4.918507948999271
+equity w=2,6,89be0e35dd7ffff,Pyrmont,2.0247310013142337,4.0,False,False,4.8593544031541605
+equity w=2,7,89be0842503ffff,St Marys (NSW),1.584246703204904,1.0,False,False,4.752740109614711
+equity w=2,8,89be0e343abffff,Chippendale,1.943956144214203,4.0,False,False,4.665494746114087
+equity w=2,9,89be0e3460fffff,Bondi Junction,2.127767466193594,6.0,False,False,4.255534932387188
+equity w=2,10,89be0e34267ffff,Woolloomooloo,2.1174535305810687,6.0,False,False,4.234907061162137
+equity w=2,11,89be0e34227ffff,Darlinghurst,1.8286118008998915,5.0,False,False,4.022945961979762
+equity w=2,12,89be08c9657ffff,Burwood (NSW),1.4262784647126834,2.0,False,False,3.993579701195513
+equity w=2,13,89be0e205afffff,Brookvale,1.8062357780038876,5.0,False,False,3.973718711608553
+equity w=2,14,89be0e2ed93ffff,Hornsby,1.5151305468193073,3.0,False,False,3.939339421730199
+equity w=2,15,89be0e35e37ffff,North Sydney,1.8381761012845423,,False,False,3.8609403693170425
+equity w=2,16,89be0842d63ffff,Penrith,1.3445274324286518,2.0,False,True,3.764676810800225
+equity w=2,17,89be08cb5cfffff,Hurstville,1.340834797166858,2.0,False,True,3.754337432067202
+equity w=2,18,89be0e2403bffff,Epping (NSW),1.5271103121338756,4.0,False,False,3.665064749121301
+equity w=2,19,89be0844217ffff,Springwood (NSW),1.4488345622289776,4.0,False,False,3.477202949349546
+equity w=2,20,89be0e34c33ffff,Marrickville,1.4243444780065984,4.0,False,False,3.418426747215836
+equity w=2,21,89be0e36a47ffff,St Peters (NSW),1.553657121489853,5.0,False,False,3.418045667277677
+equity w=2,22,89be085ae67ffff,Beaumont Hills,1.5509945422264926,5.0,False,False,3.412187992898284
+equity w=2,23,89be0e24d87ffff,North Parramatta,1.211372321647043,2.0,False,False,3.39184250061172
+equity w=2,24,89be08ce033ffff,Minto,1.1304923468605876,1.0,False,False,3.391477040581763
+equity w=2,25,89be08c894fffff,Liverpool,1.1303692721002307,1.0,False,True,3.3911078163006922
+equity w=2,26,89be0e348c7ffff,Petersham,1.4065588042848025,4.0,False,False,3.375741130283526
+equity w=2,27,89be085365bffff,Parramatta,1.2914448632125093,3.0,True,False,3.3577566443525244
+equity w=2,28,89be085ac07ffff,Parklea,1.5872915090287447,,False,False,3.3339775556871905
+equity w=2,29,89be0e34237ffff,Darlinghurst,1.654633525738832,6.0,False,False,3.309267051477664
+equity w=2,30,89be08c897bffff,Liverpool,1.1020278117776348,1.0,False,False,3.306083435332904
+equity w=2,31,89be085242fffff,Canley Heights,1.1008213128695985,1.0,False,False,3.3024639386087955
+equity w=2,32,89be0853653ffff,Parramatta,1.375268022067164,4.0,False,False,3.3006432529611938
+equity w=2,33,89be0e24d8fffff,North Parramatta,1.2661274508545477,3.0,False,False,3.291931372221824
+equity w=2,34,89be0e34023ffff,Waterloo (NSW),1.6449263917230188,6.0,False,False,3.2898527834460376
+equity w=2,35,89be08c52bbffff,Campbelltown (NSW),1.559589437265252,,False,False,3.2757915923778835
+equity w=2,36,89be0842cafffff,Kingswood (Penrith - NSW),1.0876560800088173,1.0,False,False,3.262968240026452
+equity w=2,37,89be0e343c7ffff,Surry Hills,1.6203404238682977,6.0,False,False,3.2406808477365954
+equity w=2,38,89be0853453ffff,Holroyd,1.156778633003481,2.0,False,False,3.2389801724097467
+equity w=2,39,89be08cb50fffff,Penshurst (NSW),1.1409698131503,2.0,False,True,3.19471547682084
+equity w=2,40,89be08cb537ffff,Mortdale,1.2173517548062915,3.0,False,True,3.165114562496358
+equity w=2,41,89be0e34e87ffff,Newtown (NSW),1.42839470958327,5.0,False,False,3.1424683610831945
+equity w=2,42,89be0853663ffff,Westmead,1.488945623977917,,False,False,3.1274099708493672
+equity w=2,43,89be0e34353ffff,Darlinghurst,1.4092106584802262,5.0,False,True,3.1002634486564977
+equity w=2,44,89be0e34493ffff,South Coogee,1.0281014120494034,1.0,False,False,3.0843042361482103
+equity w=2,45,89be0e3435bffff,Darlinghurst,1.3966118082982155,5.0,False,False,3.0725459782560742
+equity w=2,46,89be0e346cbffff,Bondi,1.3926247995552647,5.0,True,False,3.063774559021583
+equity w=2,47,89be08429abffff,Emu Plains,1.1637785897144308,3.0,False,False,3.0258243332575203
+equity w=2,48,89be0e35c03ffff,Circular Quay,1.436207557365371,,False,False,3.016637923360653
+equity w=2,49,89be0e2ed83ffff,Hornsby,1.155601543578342,3.0,False,False,3.0045640133036895
+equity w=2,50,89be084a527ffff,Windsor (NSW),1.2431182085737518,4.0,False,False,2.983483700577004
+equity w=2,51,89be0e34223ffff,Darlinghurst,1.4863861822596591,6.0,False,False,2.9727723645193183
+equity w=2,52,89be0e3468fffff,Waverley (NSW),1.3495159399284755,5.0,False,False,2.9689350678426463
+equity w=2,53,89be0e35dc7ffff,Pyrmont,1.4832970875048173,6.0,False,False,2.9665941750096345
+equity w=2,54,89be0e3438fffff,Redfern,1.4121000481741783,,False,False,2.966002048280505
+equity w=2,55,89be0e341cbffff,Zetland,1.4797306786262192,6.0,False,False,2.9594613572524384
+equity w=2,56,89be0e2ac4bffff,Bilgola Beach,1.478089847677159,6.0,False,False,2.956179695354318
+equity w=2,57,89be0e3422bffff,Woolloomooloo,1.3427825251313963,5.0,False,True,2.9541215552890723
+equity w=2,58,89be0e343cbffff,Darlinghurst,1.3370505837039257,5.0,False,True,2.941511284148637
+equity w=2,59,89be0e35a33ffff,St Leonards (NSW),1.395415331404705,,False,False,2.930957148893083
+equity w=2,60,89be08ca2dbffff,Mortdale,1.211383573162588,4.0,False,False,2.907320575590211
+equity w=2,61,89be08c896fffff,Liverpool,0.943694721017528,1.0,False,False,2.831084163052584
+equity w=2,62,89be0e34473ffff,Randwick,1.4130699483754907,6.0,False,True,2.8261398967509814
+equity w=2,63,89be0e2696bffff,Harris Park,1.0759332341843133,3.0,False,False,2.7974264088792147
+equity w=2,64,89be08c8967ffff,Liverpool,0.9309894229228584,1.0,False,False,2.792968268768575
+equity w=2,65,89be0e35d9bffff,Pyrmont,1.07154387057973,3.0,False,False,2.7860140635072983
+equity w=2,66,89be0842aa3ffff,Cranebrook,0.9178774106622554,1.0,False,False,2.7536322319867663
+equity w=2,67,89be0e26bb3ffff,Camellia,0.9760612808139724,2.0,True,False,2.7329715862791226
+equity w=2,68,89be0e3423bffff,Rushcutters Bay,1.5109018673233705,7.0,False,False,2.719623361182067
+equity w=2,69,89be0e34317ffff,Chippendale,1.288412869173338,,False,False,2.7062071231710068
+equity w=2,70,89be0853613ffff,Mays Hill,1.0339560234250014,3.0,False,False,2.6882856609050036
+equity w=2,71,89be0e26b27ffff,Parramatta,1.1148831740188174,4.0,False,False,2.6757196176451616
+equity w=2,72,89be08c5393ffff,Englorie Park,1.0274835742813155,3.0,False,False,2.6714572931314207
+equity w=2,73,89be0853643ffff,Parramatta,1.019176737486215,3.0,False,False,2.6498595174641593
+equity w=2,74,89be08cb00bffff,Kingsgrove,0.9444990941725364,2.0,False,True,2.644597463683102
+equity w=2,75,89be08cb4dbffff,Kogarah,1.0111823915796043,3.0,False,False,2.6290742181069713
+equity w=2,76,89be0e3430fffff,Haymarket,1.2474530896939149,,False,False,2.6201744160762317
+equity w=2,77,89be0e34cdbffff,St Peters (NSW),1.2440003758945553,,False,False,2.6129222697327283
+equity w=2,78,89be0e3440fffff,Randwick,1.305781352756112,6.0,False,True,2.611562705512224
+equity w=2,79,89be0e22b6bffff,Forestville (NSW),1.083079570812462,4.0,False,False,2.599390969949909
+equity w=2,80,89be0853657ffff,Parramatta,0.9977642695036436,3.0,False,False,2.5941871007094734
+equity w=2,81,89be0e35d63ffff,Balmain,1.6210026384844192,8.0,False,False,2.5936042215750708
+equity w=2,82,89be0851927ffff,Dharruk,0.9205822872383146,2.0,True,False,2.5776304042672806
+equity w=2,83,89be0e346cfffff,Bondi,1.1653443095648437,5.0,False,False,2.563757481042656
+equity w=2,84,89be0e26593ffff,Canada Bay,1.2157287268621104,,False,False,2.553539955393939
+equity w=2,85,89be0e3438bffff,Redfern,0.8452442944855807,1.0,False,False,2.535732883456742
+equity w=2,86,89be0e24d17ffff,North Parramatta,0.9025619024110596,2.0,True,False,2.5271733267509666
+equity w=2,87,89be08536c7ffff,Parramatta,1.1325266112813877,5.0,False,False,2.491558544819053
+equity w=2,88,89be08cd2c3ffff,Bonnyrigg,0.8292131862082561,1.0,False,False,2.4876395586247684
+equity w=2,89,89be0e34303ffff,Central Station,1.1838175946068787,,False,True,2.486513200629398
+equity w=2,90,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,2.4854143499567
+equity w=2,91,89be08cb627ffff,Bexley North,0.9541545769356736,3.0,False,True,2.4808019000327515
+equity w=2,92,89be0853603ffff,Mays Hill,0.9521196821471708,3.0,False,False,2.4755111735826443
+equity w=2,93,89be084716bffff,Warrimoo,1.2244004643430786,6.0,False,False,2.448800928686157
+equity w=2,94,89be0e34553ffff,Kensington (NSW),1.015588744233429,4.0,False,False,2.4374129861602296
+equity w=2,95,89be085a413ffff,Castle Hill (NSW),0.9345733310050296,3.0,False,False,2.429890660613077
+equity w=2,96,89be0e34e0bffff,Forest Lodge,1.151154819479291,,False,False,2.417907680746999
+equity w=2,97,89be08cd2d7ffff,Heckenberg,0.7982944709737823,1.0,False,False,2.394883412921347
+equity w=2,98,89be08d8067ffff,Cronulla,1.1905203786101612,6.0,False,True,2.3810407572203225
+equity w=2,99,89be0e341cfffff,Zetland,1.189179896098042,6.0,False,False,2.378359792196084
+equity w=2,100,89be0e34a1bffff,Lilyfield,1.1298546685671609,,False,False,2.373168434887084
+equity w=2,101,89be0e26b2bffff,Parramatta,0.7864010132643162,1.0,False,False,2.3592030397929484
+equity w=2,102,89be085341bffff,Merrylands,0.7800692242332644,1.0,False,False,2.340207672699793
+equity w=2,103,89be0e36b6bffff,Tempe,0.9745933587146308,4.0,False,False,2.339024060915114
+equity w=2,104,89be08cf1d7ffff,Macquarie Fields,0.835206944537087,2.0,True,False,2.3385794447038433
+equity w=2,105,89be08cd283ffff,Heckenberg,0.779379821342624,1.0,True,False,2.338139464027872
+equity w=2,106,89be0e3436fffff,Darling Harbour,0.9712917970985608,4.0,False,False,2.3311003130365457
+equity w=2,107,89be0852533ffff,Cabramatta West,0.7768820431117031,1.0,True,False,2.330646129335109
+equity w=2,108,89be0e343cfffff,Surry Hills,1.0532673320815418,5.0,False,False,2.317188130579392
+equity w=2,109,89be0e3426fffff,Potts Point,1.0986835121326213,,False,False,2.307695939541122
+equity w=2,110,89be08c950fffff,Greenacre,0.765211472395695,1.0,False,False,2.295634417187085
+equity w=2,111,89be0e26d9bffff,Lidcombe,0.7644765524730711,1.0,False,False,2.2934296574192135
+equity w=2,112,89be0e34a53ffff,Rozelle,1.083507109035751,,False,False,2.2758191311456764
+equity w=2,113,89be0e343d3ffff,Surry Hills,1.0815884814731933,,False,False,2.2717892089827307
+equity w=2,114,89be0842d6bffff,Penrith,0.8729318653974163,3.0,False,False,2.2696228500332825
+equity w=2,115,89be08c9c47ffff,Birrong,0.8083401731466319,2.0,False,False,2.2633524848105693
+equity w=2,116,89be085ad37ffff,Quakers Hill,0.9422433872979578,4.0,False,False,2.2613841295150987
+equity w=2,117,89be0e342abffff,Paddington (NSW),1.4050127598845283,8.0,False,False,2.2480204158152453
+equity w=2,118,89be0e261bbffff,Concord West,1.0197545919474769,5.0,False,False,2.243460102284449
+equity w=2,119,89be0e35c83ffff,Woolloomooloo,1.0661940487488777,,False,False,2.2394544469724367
+equity w=2,120,89be085360fffff,Westmead,0.7933076973188714,2.0,False,False,2.2212615524928396
+coverage[official] + equity w=0.5,1,89be0e346cbffff,Bondi,1.3926247995552647,5.0,True,False,1.8104122394218443
+coverage[official] + equity w=0.5,2,89be085365bffff,Parramatta,1.2914448632125093,3.0,True,False,1.808022808497513
+coverage[official] + equity w=0.5,3,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,1.5533839687229376
+coverage[official] + equity w=0.5,4,89be0e34e23ffff,Stanmore (NSW),1.2083001960713935,7.0,True,False,1.4499602352856722
+coverage[official] + equity w=0.5,5,89be0e26bb3ffff,Camellia,0.9760612808139724,2.0,True,False,1.41528885718026
+coverage[official] + equity w=0.5,6,89be0e26bbbffff,Camellia,1.0692528040294689,6.0,True,False,1.3365660050368362
+coverage[official] + equity w=0.5,7,89be0851927ffff,Dharruk,0.9205822872383146,2.0,True,False,1.3348443164955561
+coverage[official] + equity w=0.5,8,89be0e24d17ffff,North Parramatta,0.9025619024110596,2.0,True,False,1.3087147584960364
+coverage[official] + equity w=0.5,9,89be085a88bffff,The Ponds,1.1650857412507,9.0,True,False,1.2815943153757703
+coverage[official] + equity w=0.5,10,89be0e3412fffff,Newtown (NSW),1.113423472972323,8.0,True,False,1.2804369939181712
+coverage[official] + equity w=0.5,11,89be08cf1d7ffff,Macquarie Fields,0.835206944537087,2.0,True,False,1.211050069578776
+coverage[official] + equity w=0.5,12,89be084508fffff,Winmalee,0.9430373224841584,6.0,True,False,1.178796653105198
+coverage[official] + equity w=0.5,13,89be0e3464bffff,Bellevue Hill,1.024875516098642,8.0,True,False,1.1786068435134383
+coverage[official] + equity w=0.5,14,89be08cd283ffff,Heckenberg,0.779379821342624,1.0,True,False,1.169069732013936
+coverage[official] + equity w=0.5,15,89be0e20cdbffff,Frenchs Forest,0.9145447996838348,,True,False,1.16614046304583
+coverage[official] + equity w=0.5,16,89be0857483ffff,Kemps Creek,0.832614075783638,3.0,True,False,1.165659706097093
+coverage[official] + equity w=0.5,17,89be0852533ffff,Cabramatta West,0.7768820431117031,1.0,True,False,1.1653230646675545
+coverage[official] + equity w=0.5,18,89be08cd1b3ffff,Carnes Hill,0.8138198848864604,4.0,True,False,1.0986568445967215
+coverage[official] + equity w=0.5,19,89be0e34233ffff,Darlinghurst,0.991330579159508,9.0,True,False,1.0904636370754588
+coverage[official] + equity w=0.5,20,89be08c5013ffff,Bradbury (NSW),0.7398615980709216,2.0,True,False,1.0727993172028363
+coverage[official] + equity w=0.5,21,89be0852033ffff,Wakeley,0.7104649309896351,1.0,True,False,1.0656973964844527
+coverage[official] + equity w=0.5,22,89be08c8c37ffff,Moorebank,0.7853937522610484,4.0,True,False,1.0602815655524154
+coverage[official] + equity w=0.5,23,89be08556dbffff,St Clair (Penrith - NSW),0.7530729979470305,3.0,True,False,1.0543021971258426
+coverage[official] + equity w=0.5,24,89be08cd61bffff,Ashcroft,0.6941364605240039,1.0,True,False,1.0412046907860057
+coverage[official] + equity w=0.5,25,89be0850947ffff,St Clair (Penrith - NSW),0.7272718081407945,3.0,True,False,1.0181805313971122
+coverage[official] + equity w=0.5,26,89be0e3404bffff,Centennial Park (NSW),0.7967635928510871,,True,False,1.0159570809725627
+coverage[official] + equity w=0.5,27,89be0e2626bffff,North Ryde,0.7906736156786787,,True,False,1.0081917218537682
+coverage[official] + equity w=0.5,28,89be08c8803ffff,Moorebank,0.7078667995308069,3.0,True,False,0.9910135193431295
+coverage[official] + equity w=0.5,29,89be08cd613ffff,Ashcroft,0.6470776913394315,1.0,True,False,0.9706165370091473
+coverage[official] + equity w=0.5,30,89be0852007ffff,Wakeley,0.628469506971991,1.0,True,False,0.9427042604579865
+coverage[official] + equity w=0.5,31,89be085a4dbffff,Castle Hill (NSW),0.7539622432926973,6.0,True,False,0.9424528041158717
+coverage[official] + equity w=0.5,32,89be08475a7ffff,Glenbrook,0.7717716088870661,7.0,True,False,0.9261259306644792
+coverage[official] + equity w=0.5,33,89be0858913ffff,Vineyard,0.6379798989962341,2.0,True,False,0.9250708535445394
+coverage[official] + equity w=0.5,34,89be08cd6bbffff,Cartwright,0.6146808986384114,1.0,True,False,0.922021347957617
+coverage[official] + equity w=0.5,35,89be0e3408fffff,Kensington (NSW),0.710940855018504,,True,False,0.906524096092491
+coverage[official] + equity w=0.5,36,89be08c8b0fffff,Warwick Farm,0.6025174075999498,1.0,True,False,0.9037761113999246
+coverage[official] + equity w=0.5,37,89be08cb28fffff,Clemton Park,0.6683277362951813,4.0,True,False,0.9022424439984947
+coverage[official] + equity w=0.5,38,89be0850377ffff,Bungarribee,0.7060798389340406,,True,False,0.9003257911548115
+coverage[official] + equity w=0.5,39,89be0e26c8fffff,Sydney Olympic Park,0.6931766428407494,,True,False,0.8838728638928517
+coverage[official] + equity w=0.5,40,89be0e26ac3ffff,Ermington,0.6526888091522607,4.0,True,False,0.881129892355552
+coverage[official] + equity w=0.5,41,89be084261bffff,Blackett,0.5860674477868256,1.0,True,False,0.8791011716802384
+coverage[official] + equity w=0.5,42,89be085b157ffff,Middle Dural,0.7302306017452376,7.0,True,False,0.8762767220942851
+coverage[official] + equity w=0.5,43,89be0853267ffff,Old Toongabbie,0.6652025016011904,5.0,True,False,0.8647632520815476
+coverage[official] + equity w=0.5,44,89be08d9d27ffff,Miranda (NSW),0.6398749749367907,4.0,True,False,0.8638312161646675
+coverage[official] + equity w=0.5,45,89be08cd68fffff,Ashcroft,0.5752547566726224,1.0,True,False,0.8628821350089335
+coverage[official] + equity w=0.5,46,89be0851b2fffff,Bidwill (NSW),0.5701631067576448,1.0,True,False,0.8552446601364672
+coverage[official] + equity w=0.5,47,89be0e26b53ffff,Dundas (NSW),0.6066015265685276,3.0,True,False,0.8492421371959387
+coverage[official] + equity w=0.5,48,89be08ce007ffff,Minto,0.5846006031952362,2.0,True,False,0.8476708746330924
+coverage[official] + equity w=0.5,49,89be08cd453ffff,Lurnea,0.5627968953498249,1.0,True,False,0.8441953430247373
+coverage[official] + equity w=0.5,50,89be0858593ffff,North Kellyville,0.7319337490000785,8.0,True,False,0.8417238113500901
+coverage[official] + equity w=0.5,51,89be0e2495bffff,Baulkham Hills,0.6672872714906851,6.0,True,False,0.8341090893633564
+coverage[official] + equity w=0.5,52,89be0e26a27ffff,Dundas (NSW),0.5944761406443995,3.0,True,False,0.8322665969021592
+coverage[official] + equity w=0.5,53,89be08c8ca7ffff,Hammondville,0.6150029616510398,4.0,True,False,0.8302539982289039
+coverage[official] + equity w=0.5,54,89be0e2114fffff,Mona Vale,0.646828501270724,,True,False,0.8247741261487105
+coverage[official] + equity w=0.5,55,89be08c891bffff,Liverpool,0.5842221611834756,3.0,True,False,0.8179110256568658
+coverage[official] + equity w=0.5,56,89be08c538fffff,Englorie Park,0.6262111792842306,5.0,True,False,0.8140745330694998
+coverage[official] + equity w=0.5,57,89be0e26143ffff,Rhodes,0.6292115147766202,,True,False,0.8023106221248414
+coverage[official] + equity w=0.5,58,89be08c9b63ffff,Guildford West,0.5313686773004747,1.0,True,False,0.797053015950712
+coverage[official] + equity w=0.5,59,89be084288bffff,Cambridge Gardens,0.5275385401772581,1.0,True,False,0.7913078102658871
+coverage[official] + equity w=0.5,60,89be08cd4cfffff,Lurnea,0.5272566201367669,1.0,True,False,0.7908849302051504
+coverage[official] + equity w=0.5,61,89be08c8b0bffff,Warwick Farm,0.5236871444948136,1.0,True,False,0.7855307167422203
+coverage[official] + equity w=0.5,62,89be08428d7ffff,Cambridge Gardens,0.5404175457609014,2.0,True,False,0.783605441353307
+coverage[official] + equity w=0.5,63,89be08c9cd7ffff,Yagoona,0.5361506626552569,2.0,True,False,0.7774184608501225
+coverage[official] + equity w=0.5,64,89be08c9817ffff,Chester Hill,0.6090688910197183,,True,False,0.7766266659064561
+coverage[official] + equity w=0.5,65,89be0e36267ffff,South Coogee,0.516841416108132,1.0,True,False,0.775262124162198
+coverage[official] + equity w=0.5,66,89be0e26aa7ffff,Rydalmere,0.6022450283884325,,True,False,0.767925525917076
+coverage[official] + equity w=0.5,67,89be08cd2d3ffff,Mount Pritchard,0.5112354117164154,1.0,True,False,0.7668531175746232
+coverage[official] + equity w=0.5,68,89be0e21c57ffff,Elanora Heights,0.6621902215649013,8.0,True,False,0.7615187547996364
+coverage[official] + equity w=0.5,69,89be0e201a7ffff,Beacon Hill,0.5958755353008174,,True,False,0.7598037547133836
+coverage[official] + equity w=0.5,70,89be08cd0afffff,Hoxton Park,0.498989074160484,1.0,True,False,0.748483611240726
+coverage[official] + equity w=0.5,71,89be0850217ffff,Arndell Park,0.5858353942437639,,True,False,0.747001522668146
+coverage[official] + equity w=0.5,72,89be084a58fffff,McGraths Hill,0.5697737359066646,5.0,True,False,0.740705856678664
+coverage[official] + equity w=0.5,73,89be08c9b73ffff,Yennora,0.4911265462510384,1.0,True,False,0.7366898193765576
+coverage[official] + equity w=0.5,74,89be0851407ffff,Seven Hills (NSW),0.5776744945208133,,True,False,0.7365955202666429
+coverage[official] + equity w=0.5,75,89be0e26e8fffff,Wentworth Point,0.6096525186214915,7.0,True,False,0.7315830223457898
+coverage[official] + equity w=0.5,76,89be085a893ffff,The Ponds,0.6341260569089093,8.0,True,False,0.7292449654452456
+coverage[official] + equity w=0.5,77,89be08520a7ffff,Wakeley,0.4826517159414743,1.0,True,False,0.7239775739122115
+coverage[official] + equity w=0.5,78,89be0e20a6fffff,Terrey Hills,0.5677021719031904,,True,False,0.723879763838989
+coverage[official] + equity w=0.5,79,89be084288fffff,Penrith,0.4804666110440247,1.0,True,False,0.720699916566037
+coverage[official] + equity w=0.5,80,89be0e26ac7ffff,Ermington,0.4968098584993672,2.0,True,False,0.7203742948240824
+coverage[official] + equity w=0.5,81,89be08cd5a3ffff,Horningsea Park,0.51157113048902,3.0,True,False,0.716199582684628
+coverage[official] + equity w=0.5,82,89be08cc1dbffff,Denham Court,0.5291830881569077,4.0,True,False,0.7143971690118255
+coverage[official] + equity w=0.5,83,89be0e26e13ffff,Wentworth Point,0.5599806480763141,,True,False,0.714034011751168
+coverage[official] + equity w=0.5,84,89be08525b3ffff,Mount Pritchard,0.4756102103823232,1.0,True,False,0.7134153155734848
+coverage[official] + equity w=0.5,85,89be0e36b4bffff,Tempe,0.4918510993662345,2.0,True,False,0.71318409408104
+coverage[official] + equity w=0.5,86,89be085533bffff,South Penrith,0.505916318246291,3.0,True,False,0.7082828455448074
+coverage[official] + equity w=0.5,87,89be08cb1b7ffff,Peakhurst,0.5543663755480893,,True,False,0.7068752259071144
+coverage[official] + equity w=0.5,88,89be0851b03ffff,Hassall Grove,0.504467459466932,3.0,True,False,0.7062544432537047
+coverage[official] + equity w=0.5,89,89be0855ac3ffff,Jamisontown,0.5518314965066294,,True,False,0.7036429894762745
+coverage[official] + equity w=0.5,90,89be0855a4fffff,Emu Plains,0.5203240971429068,4.0,True,False,0.7024375311429243
+coverage[official] + equity w=0.5,91,89be0e20a6bffff,Terrey Hills,0.5497913493854754,,True,False,0.7010415880912721
+coverage[official] + equity w=0.5,92,89be0e22e9bffff,Fairlight,0.6370516462541269,9.0,True,False,0.7007568108795397
+coverage[official] + equity w=0.5,93,89be0855acfffff,Jamisontown,0.5189451496699965,4.0,True,False,0.7005759520544953
+coverage[official] + equity w=0.5,94,89be0e2136bffff,Newport (NSW),0.5600813332309723,6.0,True,False,0.7001016665387154
+coverage[official] + equity w=0.5,95,89be08cb467ffff,Bexley,0.5175013588094753,4.0,True,False,0.6986268343927917
+coverage[official] + equity w=0.5,96,89be0858dc3ffff,Grantham Farm,0.5370030635310712,5.0,True,False,0.6981039825903925
+coverage[official] + equity w=0.5,97,89be085026bffff,Blacktown,0.4810264848747447,2.0,True,False,0.6974884030683798
+coverage[official] + equity w=0.5,98,89be0850a87ffff,Minchinbury,0.5439436989187628,,True,False,0.6935852209178546
+coverage[official] + equity w=0.5,99,89be08cd287ffff,Busby,0.460920145999922,1.0,True,False,0.691380218999883
+coverage[official] + equity w=0.5,100,89be08cb253ffff,Canterbury (NSW),0.509448261950256,4.0,True,False,0.6877551536328457
+coverage[official] + equity w=0.5,101,89be0e34c5bffff,Newtown (NSW),0.5233240218051496,5.0,True,False,0.6803212283466945
+coverage[official] + equity w=0.5,102,89be08c5907ffff,Camden South,0.5029206722303347,4.0,True,False,0.6789429075109519
+coverage[official] + equity w=0.5,103,89be08cd58fffff,Prestons,0.4841058517749954,3.0,True,False,0.6777481924849935
+coverage[official] + equity w=0.5,104,89be0e26b2fffff,Parramatta,0.5020099913388748,4.0,True,False,0.677713488307481
+coverage[official] + equity w=0.5,105,89be0e26373ffff,Meadowbank (NSW),0.5129393993173951,5.0,True,False,0.6668212191126136
+coverage[official] + equity w=0.5,106,89be0e35b57ffff,Northwood (NSW),0.6339776339382291,10.0,True,False,0.6656765156351406
+coverage[official] + equity w=0.5,107,89be0841037ffff,Bligh Park,0.4917249975443497,4.0,True,False,0.6638287466848721
+coverage[official] + equity w=0.5,108,89be08cd58bffff,Prestons,0.4895904289681594,4.0,True,False,0.6609470791070152
+coverage[official] + equity w=0.5,109,89be08cd6a3ffff,Cartwright,0.4398288949132429,1.0,True,False,0.6597433423698643
+coverage[official] + equity w=0.5,110,89be0e34e73ffff,Annandale (NSW),0.571772711001061,8.0,True,False,0.65753861765122
+coverage[official] + equity w=0.5,111,89be085095bffff,St Clair (Penrith - NSW),0.4767683120425133,4.0,True,False,0.643637221257393
+coverage[official] + equity w=0.5,112,89be08c8817ffff,Moorebank,0.4436884024750516,2.0,True,False,0.6433481835888248
+coverage[official] + equity w=0.5,113,89be08ce287ffff,Ingleburn,0.42870393596695,1.0,True,False,0.643055903950425
+coverage[official] + equity w=0.5,114,89be08c827bffff,Yagoona,0.5023858109545748,,True,False,0.6405945585353023
+coverage[official] + equity w=0.5,115,89be08c12a3ffff,Barden Ridge,0.5018399250356821,,True,False,0.6398984967803748
+coverage[official] + equity w=0.5,116,89be0e369b3ffff,Monterey,0.5302912346078428,7.0,True,False,0.6363494815294113
+coverage[official] + equity w=0.5,117,89be0852453ffff,Canley Vale,0.4236162807054187,1.0,True,False,0.635424421058128
+coverage[official] + equity w=0.5,118,89be0e21957ffff,Terrey Hills,0.4966875247000708,,True,False,0.6333286463856819
+coverage[official] + equity w=0.5,119,89be0e2026bffff,North Narrabeen,0.5256161353057024,7.0,True,False,0.6307393623668428
+coverage[official] + equity w=0.5,120,89be0e25243ffff,North Turramurra,0.5728834335493409,9.0,True,False,0.6301717769042751
+coverage[official] + equity w=1,1,89be085365bffff,Parramatta,1.2914448632125093,3.0,True,False,2.3246007537825166
+coverage[official] + equity w=1,2,89be0e346cbffff,Bondi,1.3926247995552647,5.0,True,False,2.2281996792884238
+coverage[official] + equity w=1,3,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,1.864060762467525
+coverage[official] + equity w=1,4,89be0e26bb3ffff,Camellia,0.9760612808139724,2.0,True,False,1.8545164335465474
+coverage[official] + equity w=1,5,89be0851927ffff,Dharruk,0.9205822872383146,2.0,True,False,1.7491063457527976
+coverage[official] + equity w=1,6,89be0e24d17ffff,North Parramatta,0.9025619024110596,2.0,True,False,1.7148676145810131
+coverage[official] + equity w=1,7,89be0e34e23ffff,Stanmore (NSW),1.2083001960713935,7.0,True,False,1.691620274499951
+coverage[official] + equity w=1,8,89be0e26bbbffff,Camellia,1.0692528040294689,6.0,True,False,1.6038792060442033
+coverage[official] + equity w=1,9,89be08cf1d7ffff,Macquarie Fields,0.835206944537087,2.0,True,False,1.5868931946204652
+coverage[official] + equity w=1,10,89be08cd283ffff,Heckenberg,0.779379821342624,1.0,True,False,1.558759642685248
+coverage[official] + equity w=1,11,89be0852533ffff,Cabramatta West,0.7768820431117031,1.0,True,False,1.5537640862234061
+coverage[official] + equity w=1,12,89be0857483ffff,Kemps Creek,0.832614075783638,3.0,True,False,1.4987053364105485
+coverage[official] + equity w=1,13,89be0e3412fffff,Newtown (NSW),1.113423472972323,8.0,True,False,1.4474505148640198
+coverage[official] + equity w=1,14,89be0852033ffff,Wakeley,0.7104649309896351,1.0,True,False,1.4209298619792703
+coverage[official] + equity w=1,15,89be0e20cdbffff,Frenchs Forest,0.9145447996838348,,True,False,1.4177361264078252
+coverage[official] + equity w=1,16,89be084508fffff,Winmalee,0.9430373224841584,6.0,True,False,1.4145559837262376
+coverage[official] + equity w=1,17,89be08c5013ffff,Bradbury (NSW),0.7398615980709216,2.0,True,False,1.405737036334751
+coverage[official] + equity w=1,18,89be085a88bffff,The Ponds,1.1650857412507,9.0,True,False,1.39810288950084
+coverage[official] + equity w=1,19,89be08cd61bffff,Ashcroft,0.6941364605240039,1.0,True,False,1.3882729210480078
+coverage[official] + equity w=1,20,89be08cd1b3ffff,Carnes Hill,0.8138198848864604,4.0,True,False,1.3834938043069827
+coverage[official] + equity w=1,21,89be08556dbffff,St Clair (Penrith - NSW),0.7530729979470305,3.0,True,False,1.355531396304655
+coverage[official] + equity w=1,22,89be08c8c37ffff,Moorebank,0.7853937522610484,4.0,True,False,1.3351693788437822
+coverage[official] + equity w=1,23,89be0e3464bffff,Bellevue Hill,1.024875516098642,8.0,True,False,1.3323381709282347
+coverage[official] + equity w=1,24,89be0850947ffff,St Clair (Penrith - NSW),0.7272718081407945,3.0,True,False,1.30908925465343
+coverage[official] + equity w=1,25,89be08cd613ffff,Ashcroft,0.6470776913394315,1.0,True,False,1.294155382678863
+coverage[official] + equity w=1,26,89be08c8803ffff,Moorebank,0.7078667995308069,3.0,True,False,1.2741602391554525
+coverage[official] + equity w=1,27,89be0852007ffff,Wakeley,0.628469506971991,1.0,True,False,1.256939013943982
+coverage[official] + equity w=1,28,89be0e3404bffff,Centennial Park (NSW),0.7967635928510871,,True,False,1.2351505690940383
+coverage[official] + equity w=1,29,89be08cd6bbffff,Cartwright,0.6146808986384114,1.0,True,False,1.2293617972768227
+coverage[official] + equity w=1,30,89be0e2626bffff,North Ryde,0.7906736156786787,,True,False,1.2257098280288579
+coverage[official] + equity w=1,31,89be0858913ffff,Vineyard,0.6379798989962341,2.0,True,False,1.2121618080928447
+coverage[official] + equity w=1,32,89be08c8b0fffff,Warwick Farm,0.6025174075999498,1.0,True,False,1.2050348151998995
+coverage[official] + equity w=1,33,89be0e34233ffff,Darlinghurst,0.991330579159508,9.0,True,False,1.1895966949914094
+coverage[official] + equity w=1,34,89be084261bffff,Blackett,0.5860674477868256,1.0,True,False,1.1721348955736512
+coverage[official] + equity w=1,35,89be08cd68fffff,Ashcroft,0.5752547566726224,1.0,True,False,1.1505095133452448
+coverage[official] + equity w=1,36,89be0851b2fffff,Bidwill (NSW),0.5701631067576448,1.0,True,False,1.1403262135152896
+coverage[official] + equity w=1,37,89be08cb28fffff,Clemton Park,0.6683277362951813,4.0,True,False,1.136157151701808
+coverage[official] + equity w=1,38,89be085a4dbffff,Castle Hill (NSW),0.7539622432926973,6.0,True,False,1.130943364939046
+coverage[official] + equity w=1,39,89be08cd453ffff,Lurnea,0.5627968953498249,1.0,True,False,1.1255937906996498
+coverage[official] + equity w=1,40,89be08ce007ffff,Minto,0.5846006031952362,2.0,True,False,1.1107411460709486
+coverage[official] + equity w=1,41,89be0e26ac3ffff,Ermington,0.6526888091522607,4.0,True,False,1.1095709755588432
+coverage[official] + equity w=1,42,89be0e3408fffff,Kensington (NSW),0.710940855018504,,True,False,1.1021073371664778
+coverage[official] + equity w=1,43,89be0850377ffff,Bungarribee,0.7060798389340406,,True,False,1.0945717433755824
+coverage[official] + equity w=1,44,89be0e26b53ffff,Dundas (NSW),0.6066015265685276,3.0,True,False,1.0918827478233497
+coverage[official] + equity w=1,45,89be08d9d27ffff,Miranda (NSW),0.6398749749367907,4.0,True,False,1.0877874573925441
+coverage[official] + equity w=1,46,89be08475a7ffff,Glenbrook,0.7717716088870661,7.0,True,False,1.0804802524418924
+coverage[official] + equity w=1,47,89be0e26c8fffff,Sydney Olympic Park,0.6931766428407494,,True,False,1.0745690849449538
+coverage[official] + equity w=1,48,89be0e26a27ffff,Dundas (NSW),0.5944761406443995,3.0,True,False,1.0700570531599192
+coverage[official] + equity w=1,49,89be0853267ffff,Old Toongabbie,0.6652025016011904,5.0,True,False,1.0643240025619047
+coverage[official] + equity w=1,50,89be08c9b63ffff,Guildford West,0.5313686773004747,1.0,True,False,1.0627373546009493
+coverage[official] + equity w=1,51,89be084288bffff,Cambridge Gardens,0.5275385401772581,1.0,True,False,1.0550770803545162
+coverage[official] + equity w=1,52,89be08cd4cfffff,Lurnea,0.5272566201367669,1.0,True,False,1.0545132402735338
+coverage[official] + equity w=1,53,89be08c891bffff,Liverpool,0.5842221611834756,3.0,True,False,1.0515998901302561
+coverage[official] + equity w=1,54,89be08c8b0bffff,Warwick Farm,0.5236871444948136,1.0,True,False,1.0473742889896271
+coverage[official] + equity w=1,55,89be08c8ca7ffff,Hammondville,0.6150029616510398,4.0,True,False,1.0455050348067678
+coverage[official] + equity w=1,56,89be0e36267ffff,South Coogee,0.516841416108132,1.0,True,False,1.033682832216264
+coverage[official] + equity w=1,57,89be08428d7ffff,Cambridge Gardens,0.5404175457609014,2.0,True,False,1.0267933369457125
+coverage[official] + equity w=1,58,89be08cd2d3ffff,Mount Pritchard,0.5112354117164154,1.0,True,False,1.0224708234328308
+coverage[official] + equity w=1,59,89be085b157ffff,Middle Dural,0.7302306017452376,7.0,True,False,1.0223228424433326
+coverage[official] + equity w=1,60,89be08c9cd7ffff,Yagoona,0.5361506626552569,2.0,True,False,1.018686259044988
+coverage[official] + equity w=1,61,89be0e2114fffff,Mona Vale,0.646828501270724,,True,False,1.002719751026697
+coverage[official] + equity w=1,62,89be08c538fffff,Englorie Park,0.6262111792842306,5.0,True,False,1.001937886854769
+coverage[official] + equity w=1,63,89be0e2495bffff,Baulkham Hills,0.6672872714906851,6.0,True,False,1.0009309072360277
+coverage[official] + equity w=1,64,89be08cd0afffff,Hoxton Park,0.498989074160484,1.0,True,False,0.997978148320968
+coverage[official] + equity w=1,65,89be08c9b73ffff,Yennora,0.4911265462510384,1.0,True,False,0.9822530925020768
+coverage[official] + equity w=1,66,89be0e26143ffff,Rhodes,0.6292115147766202,,True,False,0.9754097294730626
+coverage[official] + equity w=1,67,89be08520a7ffff,Wakeley,0.4826517159414743,1.0,True,False,0.9653034318829486
+coverage[official] + equity w=1,68,89be084288fffff,Penrith,0.4804666110440247,1.0,True,False,0.9609332220880494
+coverage[official] + equity w=1,69,89be0858593ffff,North Kellyville,0.7319337490000785,8.0,True,False,0.951513873700102
+coverage[official] + equity w=1,70,89be08525b3ffff,Mount Pritchard,0.4756102103823232,1.0,True,False,0.9512204207646464
+coverage[official] + equity w=1,71,89be08c9817ffff,Chester Hill,0.6090688910197183,,True,False,0.944184440793194
+coverage[official] + equity w=1,72,89be0e26ac7ffff,Ermington,0.4968098584993672,2.0,True,False,0.9439387311487977
+coverage[official] + equity w=1,73,89be0e36b4bffff,Tempe,0.4918510993662345,2.0,True,False,0.9345170887958455
+coverage[official] + equity w=1,74,89be0e26aa7ffff,Rydalmere,0.6022450283884325,,True,False,0.9336060234457194
+coverage[official] + equity w=1,75,89be0e201a7ffff,Beacon Hill,0.5958755353008174,,True,False,0.9237319741259499
+coverage[official] + equity w=1,76,89be08cd287ffff,Busby,0.460920145999922,1.0,True,False,0.921840291999844
+coverage[official] + equity w=1,77,89be08cd5a3ffff,Horningsea Park,0.51157113048902,3.0,True,False,0.9208280348802361
+coverage[official] + equity w=1,78,89be085026bffff,Blacktown,0.4810264848747447,2.0,True,False,0.9139503212620149
+coverage[official] + equity w=1,79,89be084a58fffff,McGraths Hill,0.5697737359066646,5.0,True,False,0.9116379774506633
+coverage[official] + equity w=1,80,89be085533bffff,South Penrith,0.505916318246291,3.0,True,False,0.9106493728433238
+coverage[official] + equity w=1,81,89be0850217ffff,Arndell Park,0.5858353942437639,,True,False,0.9081676510925281
+coverage[official] + equity w=1,82,89be0851b03ffff,Hassall Grove,0.504467459466932,3.0,True,False,0.9080414270404775
+coverage[official] + equity w=1,83,89be08cc1dbffff,Denham Court,0.5291830881569077,4.0,True,False,0.8996112498667431
+coverage[official] + equity w=1,84,89be0851407ffff,Seven Hills (NSW),0.5776744945208133,,True,False,0.8955165460124724
+coverage[official] + equity w=1,85,89be0855a4fffff,Emu Plains,0.5203240971429068,4.0,True,False,0.8845509651429416
+coverage[official] + equity w=1,86,89be0855acfffff,Jamisontown,0.5189451496699965,4.0,True,False,0.882206754438994
+coverage[official] + equity w=1,87,89be0e20a6fffff,Terrey Hills,0.5677021719031904,,True,False,0.8800573557747875
+coverage[official] + equity w=1,88,89be08cb467ffff,Bexley,0.5175013588094753,4.0,True,False,0.8797523099761081
+coverage[official] + equity w=1,89,89be08cd6a3ffff,Cartwright,0.4398288949132429,1.0,True,False,0.8796577898264858
+coverage[official] + equity w=1,90,89be08cd58fffff,Prestons,0.4841058517749954,3.0,True,False,0.8713905331949917
+coverage[official] + equity w=1,91,89be0e26e13ffff,Wentworth Point,0.5599806480763141,,True,False,0.8680873754260219
+coverage[official] + equity w=1,92,89be08cb253ffff,Canterbury (NSW),0.509448261950256,4.0,True,False,0.8660620453154353
+coverage[official] + equity w=1,93,89be0e21c57ffff,Elanora Heights,0.6621902215649013,8.0,True,False,0.8608472880343717
+coverage[official] + equity w=1,94,89be08cb1b7ffff,Peakhurst,0.5543663755480893,,True,False,0.8593840762661393
+coverage[official] + equity w=1,95,89be0858dc3ffff,Grantham Farm,0.5370030635310712,5.0,True,False,0.859204901649714
+coverage[official] + equity w=1,96,89be08ce287ffff,Ingleburn,0.42870393596695,1.0,True,False,0.8574078719339
+coverage[official] + equity w=1,97,89be0855ac3ffff,Jamisontown,0.5518314965066294,,True,False,0.8554544824459196
+coverage[official] + equity w=1,98,89be08c5907ffff,Camden South,0.5029206722303347,4.0,True,False,0.8549651427915689
+coverage[official] + equity w=1,99,89be0e26e8fffff,Wentworth Point,0.6096525186214915,7.0,True,False,0.853513526070088
+coverage[official] + equity w=1,100,89be0e26b2fffff,Parramatta,0.5020099913388748,4.0,True,False,0.8534169852760871
+coverage[official] + equity w=1,101,89be0e20a6bffff,Terrey Hills,0.5497913493854754,,True,False,0.8522918267970689
+coverage[official] + equity w=1,102,89be0852453ffff,Canley Vale,0.4236162807054187,1.0,True,False,0.8472325614108374
+coverage[official] + equity w=1,103,89be0850a87ffff,Minchinbury,0.5439436989187628,,True,False,0.8432267429169463
+coverage[official] + equity w=1,104,89be08c8817ffff,Moorebank,0.4436884024750516,2.0,True,False,0.843007964702598
+coverage[official] + equity w=1,105,89be0e2136bffff,Newport (NSW),0.5600813332309723,6.0,True,False,0.8401219998464584
+coverage[official] + equity w=1,106,89be0e34c5bffff,Newtown (NSW),0.5233240218051496,5.0,True,False,0.8373184348882394
+coverage[official] + equity w=1,107,89be0841037ffff,Bligh Park,0.4917249975443497,4.0,True,False,0.8359324958253944
+coverage[official] + equity w=1,108,89be08cd58bffff,Prestons,0.4895904289681594,4.0,True,False,0.8323037292458709
+coverage[official] + equity w=1,109,89be085a893ffff,The Ponds,0.6341260569089093,8.0,True,False,0.8243638739815822
+coverage[official] + equity w=1,110,89be0e26373ffff,Meadowbank (NSW),0.5129393993173951,5.0,True,False,0.8207030389078321
+coverage[official] + equity w=1,111,89be085203bffff,Wakeley,0.409713272638145,1.0,True,False,0.81942654527629
+coverage[official] + equity w=1,112,89be08c529bffff,Campbelltown (NSW),0.4066814386135636,1.0,True,False,0.8133628772271272
+coverage[official] + equity w=1,113,89be085095bffff,St Clair (Penrith - NSW),0.4767683120425133,4.0,True,False,0.8105061304722726
+coverage[official] + equity w=1,114,89be08c866fffff,Mount Lewis,0.3997691005111429,1.0,True,False,0.7995382010222858
+coverage[official] + equity w=1,115,89be08c5083ffff,Bradbury (NSW),0.4167347318047146,2.0,True,False,0.7917959904289577
+coverage[official] + equity w=1,116,89be08cec93ffff,Claymore,0.4153222249911289,2.0,True,False,0.7891122274831449
+coverage[official] + equity w=1,117,89be085151bffff,Seven Hills (NSW),0.4616329197362572,4.0,True,False,0.7847759635516373
+coverage[official] + equity w=1,118,89be08c827bffff,Yagoona,0.5023858109545748,,True,False,0.7788033061160299
+coverage[official] + equity w=1,119,89be08c12a3ffff,Barden Ridge,0.5018399250356821,,True,False,0.7779570685250675
+coverage[official] + equity w=1,120,89be08422bbffff,Willmot,0.3887574929150929,1.0,True,False,0.7775149858301857
+coverage[official] + equity w=2,1,89be085365bffff,Parramatta,1.2914448632125093,3.0,True,False,3.3577566443525244
+coverage[official] + equity w=2,2,89be0e346cbffff,Bondi,1.3926247995552647,5.0,True,False,3.063774559021583
+coverage[official] + equity w=2,3,89be0e26bb3ffff,Camellia,0.9760612808139724,2.0,True,False,2.7329715862791226
+coverage[official] + equity w=2,4,89be0851927ffff,Dharruk,0.9205822872383146,2.0,True,False,2.5776304042672806
+coverage[official] + equity w=2,5,89be0e24d17ffff,North Parramatta,0.9025619024110596,2.0,True,False,2.5271733267509666
+coverage[official] + equity w=2,6,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,2.4854143499567
+coverage[official] + equity w=2,7,89be08cf1d7ffff,Macquarie Fields,0.835206944537087,2.0,True,False,2.3385794447038433
+coverage[official] + equity w=2,8,89be08cd283ffff,Heckenberg,0.779379821342624,1.0,True,False,2.338139464027872
+coverage[official] + equity w=2,9,89be0852533ffff,Cabramatta West,0.7768820431117031,1.0,True,False,2.330646129335109
+coverage[official] + equity w=2,10,89be0e34e23ffff,Stanmore (NSW),1.2083001960713935,7.0,True,False,2.1749403529285085
+coverage[official] + equity w=2,11,89be0857483ffff,Kemps Creek,0.832614075783638,3.0,True,False,2.164796597037459
+coverage[official] + equity w=2,12,89be0e26bbbffff,Camellia,1.0692528040294689,6.0,True,False,2.1385056080589377
+coverage[official] + equity w=2,13,89be0852033ffff,Wakeley,0.7104649309896351,1.0,True,False,2.1313947929689054
+coverage[official] + equity w=2,14,89be08cd61bffff,Ashcroft,0.6941364605240039,1.0,True,False,2.0824093815720115
+coverage[official] + equity w=2,15,89be08c5013ffff,Bradbury (NSW),0.7398615980709216,2.0,True,False,2.0716124745985804
+coverage[official] + equity w=2,16,89be08556dbffff,St Clair (Penrith - NSW),0.7530729979470305,3.0,True,False,1.9579897946622795
+coverage[official] + equity w=2,17,89be08cd1b3ffff,Carnes Hill,0.8138198848864604,4.0,True,False,1.953167723727505
+coverage[official] + equity w=2,18,89be08cd613ffff,Ashcroft,0.6470776913394315,1.0,True,False,1.9412330740182946
+coverage[official] + equity w=2,19,89be0e20cdbffff,Frenchs Forest,0.9145447996838348,,True,False,1.9209274531318155
+coverage[official] + equity w=2,20,89be0850947ffff,St Clair (Penrith - NSW),0.7272718081407945,3.0,True,False,1.8909067011660659
+coverage[official] + equity w=2,21,89be084508fffff,Winmalee,0.9430373224841584,6.0,True,False,1.8860746449683168
+coverage[official] + equity w=2,22,89be0852007ffff,Wakeley,0.628469506971991,1.0,True,False,1.885408520915973
+coverage[official] + equity w=2,23,89be08c8c37ffff,Moorebank,0.7853937522610484,4.0,True,False,1.884945005426516
+coverage[official] + equity w=2,24,89be08cd6bbffff,Cartwright,0.6146808986384114,1.0,True,False,1.844042695915234
+coverage[official] + equity w=2,25,89be08c8803ffff,Moorebank,0.7078667995308069,3.0,True,False,1.840453678780098
+coverage[official] + equity w=2,26,89be08c8b0fffff,Warwick Farm,0.6025174075999498,1.0,True,False,1.8075522227998493
+coverage[official] + equity w=2,27,89be0858913ffff,Vineyard,0.6379798989962341,2.0,True,False,1.7863437171894554
+coverage[official] + equity w=2,28,89be0e3412fffff,Newtown (NSW),1.113423472972323,8.0,True,False,1.7814775567557168
+coverage[official] + equity w=2,29,89be084261bffff,Blackett,0.5860674477868256,1.0,True,False,1.7582023433604768
+coverage[official] + equity w=2,30,89be08cd68fffff,Ashcroft,0.5752547566726224,1.0,True,False,1.725764270017867
+coverage[official] + equity w=2,31,89be0851b2fffff,Bidwill (NSW),0.5701631067576448,1.0,True,False,1.7104893202729343
+coverage[official] + equity w=2,32,89be08cd453ffff,Lurnea,0.5627968953498249,1.0,True,False,1.6883906860494746
+coverage[official] + equity w=2,33,89be0e3404bffff,Centennial Park (NSW),0.7967635928510871,,True,False,1.6735375453369894
+coverage[official] + equity w=2,34,89be0e2626bffff,North Ryde,0.7906736156786787,,True,False,1.6607460403790368
+coverage[official] + equity w=2,35,89be0e3464bffff,Bellevue Hill,1.024875516098642,8.0,True,False,1.6398008257578274
+coverage[official] + equity w=2,36,89be08ce007ffff,Minto,0.5846006031952362,2.0,True,False,1.6368816889466613
+coverage[official] + equity w=2,37,89be085a88bffff,The Ponds,1.1650857412507,9.0,True,False,1.63112003775098
+coverage[official] + equity w=2,38,89be08cb28fffff,Clemton Park,0.6683277362951813,4.0,True,False,1.603986567108435
+coverage[official] + equity w=2,39,89be08c9b63ffff,Guildford West,0.5313686773004747,1.0,True,False,1.594106031901424
+coverage[official] + equity w=2,40,89be084288bffff,Cambridge Gardens,0.5275385401772581,1.0,True,False,1.5826156205317743
+coverage[official] + equity w=2,41,89be08cd4cfffff,Lurnea,0.5272566201367669,1.0,True,False,1.5817698604103008
+coverage[official] + equity w=2,42,89be0e26b53ffff,Dundas (NSW),0.6066015265685276,3.0,True,False,1.5771639690781718
+coverage[official] + equity w=2,43,89be08c8b0bffff,Warwick Farm,0.5236871444948136,1.0,True,False,1.5710614334844406
+coverage[official] + equity w=2,44,89be0e26ac3ffff,Ermington,0.6526888091522607,4.0,True,False,1.5664531419654255
+coverage[official] + equity w=2,45,89be0e36267ffff,South Coogee,0.516841416108132,1.0,True,False,1.550524248324396
+coverage[official] + equity w=2,46,89be0e26a27ffff,Dundas (NSW),0.5944761406443995,3.0,True,False,1.5456379656754387
+coverage[official] + equity w=2,47,89be08d9d27ffff,Miranda (NSW),0.6398749749367907,4.0,True,False,1.5356999398482976
+coverage[official] + equity w=2,48,89be08cd2d3ffff,Mount Pritchard,0.5112354117164154,1.0,True,False,1.5337062351492463
+coverage[official] + equity w=2,49,89be08c891bffff,Liverpool,0.5842221611834756,3.0,True,False,1.5189776190770365
+coverage[official] + equity w=2,50,89be08428d7ffff,Cambridge Gardens,0.5404175457609014,2.0,True,False,1.5131691281305237
+coverage[official] + equity w=2,51,89be085a4dbffff,Castle Hill (NSW),0.7539622432926973,6.0,True,False,1.5079244865853947
+coverage[official] + equity w=2,52,89be08c9cd7ffff,Yagoona,0.5361506626552569,2.0,True,False,1.5012218554347192
+coverage[official] + equity w=2,53,89be08cd0afffff,Hoxton Park,0.498989074160484,1.0,True,False,1.496967222481452
+coverage[official] + equity w=2,54,89be0e3408fffff,Kensington (NSW),0.710940855018504,,True,False,1.4932738193144517
+coverage[official] + equity w=2,55,89be0850377ffff,Bungarribee,0.7060798389340406,,True,False,1.483063647817124
+coverage[official] + equity w=2,56,89be08c8ca7ffff,Hammondville,0.6150029616510398,4.0,True,False,1.4760071079624957
+coverage[official] + equity w=2,57,89be08c9b73ffff,Yennora,0.4911265462510384,1.0,True,False,1.4733796387531153
+coverage[official] + equity w=2,58,89be0853267ffff,Old Toongabbie,0.6652025016011904,5.0,True,False,1.463445503522619
+coverage[official] + equity w=2,59,89be0e26c8fffff,Sydney Olympic Park,0.6931766428407494,,True,False,1.4559615270491584
+coverage[official] + equity w=2,60,89be08520a7ffff,Wakeley,0.4826517159414743,1.0,True,False,1.447955147824423
+coverage[official] + equity w=2,61,89be084288fffff,Penrith,0.4804666110440247,1.0,True,False,1.441399833132074
+coverage[official] + equity w=2,62,89be08525b3ffff,Mount Pritchard,0.4756102103823232,1.0,True,False,1.4268306311469696
+coverage[official] + equity w=2,63,89be0e26ac7ffff,Ermington,0.4968098584993672,2.0,True,False,1.3910676037982281
+coverage[official] + equity w=2,64,89be08475a7ffff,Glenbrook,0.7717716088870661,7.0,True,False,1.389188895996719
+coverage[official] + equity w=2,65,89be0e34233ffff,Darlinghurst,0.991330579159508,9.0,True,False,1.387862810823311
+coverage[official] + equity w=2,66,89be08cd287ffff,Busby,0.460920145999922,1.0,True,False,1.382760437999766
+coverage[official] + equity w=2,67,89be08c538fffff,Englorie Park,0.6262111792842306,5.0,True,False,1.3776645944253076
+coverage[official] + equity w=2,68,89be0e36b4bffff,Tempe,0.4918510993662345,2.0,True,False,1.3771830782254566
+coverage[official] + equity w=2,69,89be0e2114fffff,Mona Vale,0.646828501270724,,True,False,1.35861100078267
+coverage[official] + equity w=2,70,89be085026bffff,Blacktown,0.4810264848747447,2.0,True,False,1.346874157649285
+coverage[official] + equity w=2,71,89be0e2495bffff,Baulkham Hills,0.6672872714906851,6.0,True,False,1.3345745429813702
+coverage[official] + equity w=2,72,89be08cd5a3ffff,Horningsea Park,0.51157113048902,3.0,True,False,1.3300849392714522
+coverage[official] + equity w=2,73,89be0e26143ffff,Rhodes,0.6292115147766202,,True,False,1.321607944169505
+coverage[official] + equity w=2,74,89be08cd6a3ffff,Cartwright,0.4398288949132429,1.0,True,False,1.3194866847397286
+coverage[official] + equity w=2,75,89be085533bffff,South Penrith,0.505916318246291,3.0,True,False,1.3153824274403567
+coverage[official] + equity w=2,76,89be085b157ffff,Middle Dural,0.7302306017452376,7.0,True,False,1.3144150831414276
+coverage[official] + equity w=2,77,89be0851b03ffff,Hassall Grove,0.504467459466932,3.0,True,False,1.3116153946140232
+coverage[official] + equity w=2,78,89be08ce287ffff,Ingleburn,0.42870393596695,1.0,True,False,1.28611180790085
+coverage[official] + equity w=2,79,89be08c9817ffff,Chester Hill,0.6090688910197183,,True,False,1.2792999905666698
+coverage[official] + equity w=2,80,89be0852453ffff,Canley Vale,0.4236162807054187,1.0,True,False,1.270848842116256
+coverage[official] + equity w=2,81,89be08cc1dbffff,Denham Court,0.5291830881569077,4.0,True,False,1.2700394115765785
+coverage[official] + equity w=2,82,89be0e26aa7ffff,Rydalmere,0.6022450283884325,,True,False,1.2649670185030062
+coverage[official] + equity w=2,83,89be08cd58fffff,Prestons,0.4841058517749954,3.0,True,False,1.258675214614988
+coverage[official] + equity w=2,84,89be084a58fffff,McGraths Hill,0.5697737359066646,5.0,True,False,1.253502218994662
+coverage[official] + equity w=2,85,89be0e201a7ffff,Beacon Hill,0.5958755353008174,,True,False,1.2515884129510824
+coverage[official] + equity w=2,86,89be0855a4fffff,Emu Plains,0.5203240971429068,4.0,True,False,1.2487778331429764
+coverage[official] + equity w=2,87,89be0855acfffff,Jamisontown,0.5189451496699965,4.0,True,False,1.2454683592079916
+coverage[official] + equity w=2,88,89be08c8817ffff,Moorebank,0.4436884024750516,2.0,True,False,1.2423275269301444
+coverage[official] + equity w=2,89,89be08cb467ffff,Bexley,0.5175013588094753,4.0,True,False,1.2420032611427407
+coverage[official] + equity w=2,90,89be0850217ffff,Arndell Park,0.5858353942437639,,True,False,1.2304999079412924
+coverage[official] + equity w=2,91,89be085203bffff,Wakeley,0.409713272638145,1.0,True,False,1.229139817914435
+coverage[official] + equity w=2,92,89be08cb253ffff,Canterbury (NSW),0.509448261950256,4.0,True,False,1.2226758286806145
+coverage[official] + equity w=2,93,89be08c529bffff,Campbelltown (NSW),0.4066814386135636,1.0,True,False,1.2200443158406908
+coverage[official] + equity w=2,94,89be0851407ffff,Seven Hills (NSW),0.5776744945208133,,True,False,1.2133585975041317
+coverage[official] + equity w=2,95,89be08c5907ffff,Camden South,0.5029206722303347,4.0,True,False,1.2070096133528032
+coverage[official] + equity w=2,96,89be0e26b2fffff,Parramatta,0.5020099913388748,4.0,True,False,1.2048239792132995
+coverage[official] + equity w=2,97,89be08c866fffff,Mount Lewis,0.3997691005111429,1.0,True,False,1.1993073015334286
+coverage[official] + equity w=2,98,89be0e20a6fffff,Terrey Hills,0.5677021719031904,,True,False,1.1924125396463847
+coverage[official] + equity w=2,99,89be0858dc3ffff,Grantham Farm,0.5370030635310712,5.0,True,False,1.1814067397683568
+coverage[official] + equity w=2,100,89be0841037ffff,Bligh Park,0.4917249975443497,4.0,True,False,1.1801399941064392
+coverage[official] + equity w=2,101,89be0e26e13ffff,Wentworth Point,0.5599806480763141,,True,False,1.1761941027757297
+coverage[official] + equity w=2,102,89be08cd58bffff,Prestons,0.4895904289681594,4.0,True,False,1.1750170295235824
+coverage[official] + equity w=2,103,89be0858593ffff,North Kellyville,0.7319337490000785,8.0,True,False,1.1710939984001256
+coverage[official] + equity w=2,104,89be08c5083ffff,Bradbury (NSW),0.4167347318047146,2.0,True,False,1.1668572490532008
+coverage[official] + equity w=2,105,89be08422bbffff,Willmot,0.3887574929150929,1.0,True,False,1.1662724787452787
+coverage[official] + equity w=2,106,89be08cb1b7ffff,Peakhurst,0.5543663755480893,,True,False,1.1644017769841895
+coverage[official] + equity w=2,107,89be08cec93ffff,Claymore,0.4153222249911289,2.0,True,False,1.1629022299751608
+coverage[official] + equity w=2,108,89be0855ac3ffff,Jamisontown,0.5518314965066294,,True,False,1.1590774683852096
+coverage[official] + equity w=2,109,89be08c8357ffff,Condell Park,0.3853835374389009,1.0,True,False,1.1561506123167027
+coverage[official] + equity w=2,110,89be0e20a6bffff,Terrey Hills,0.5497913493854754,,True,False,1.1547923042086625
+coverage[official] + equity w=2,111,89be0e34c5bffff,Newtown (NSW),0.5233240218051496,5.0,True,False,1.1513128479713293
+coverage[official] + equity w=2,112,89be08426afffff,Emerton,0.3821950095380743,1.0,True,False,1.146585028614223
+coverage[official] + equity w=2,113,89be0851e83ffff,Marayong,0.4090373698167747,2.0,True,False,1.1453046354869691
+coverage[official] + equity w=2,114,89be085095bffff,St Clair (Penrith - NSW),0.4767683120425133,4.0,True,False,1.144243948902032
+coverage[official] + equity w=2,115,89be0850a87ffff,Minchinbury,0.5439436989187628,,True,False,1.1425097869151297
+coverage[official] + equity w=2,116,89be085020bffff,Blacktown,0.4072998634938833,2.0,True,False,1.1404396177828733
+coverage[official] + equity w=2,117,89be0e26373ffff,Meadowbank (NSW),0.5129393993173951,5.0,True,False,1.1284666784982693
+coverage[official] + equity w=2,118,89be08c5293ffff,Campbelltown (NSW),0.3739274471722734,1.0,True,False,1.1217823415168202
+coverage[official] + equity w=2,119,89be08514afffff,Seven Hills (NSW),0.3738932037396881,1.0,True,False,1.1216796112190643
+coverage[official] + equity w=2,120,89be0e2136bffff,Newport (NSW),0.5600813332309723,6.0,True,False,1.1201626664619446
+coverage[official+osm] + equity w=0.5,1,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,1.5533839687229376
+coverage[official+osm] + equity w=0.5,2,89be0e34e23ffff,Stanmore (NSW),1.2083001960713935,7.0,True,False,1.4499602352856722
+coverage[official+osm] + equity w=0.5,3,89be0e26bb3ffff,Camellia,0.9760612808139724,2.0,True,False,1.41528885718026
+coverage[official+osm] + equity w=0.5,4,89be0e26bbbffff,Camellia,1.0692528040294689,6.0,True,False,1.3365660050368362
+coverage[official+osm] + equity w=0.5,5,89be0851927ffff,Dharruk,0.9205822872383146,2.0,True,False,1.3348443164955561
+coverage[official+osm] + equity w=0.5,6,89be0e24d17ffff,North Parramatta,0.9025619024110596,2.0,True,False,1.3087147584960364
+coverage[official+osm] + equity w=0.5,7,89be08cf1d7ffff,Macquarie Fields,0.835206944537087,2.0,True,False,1.211050069578776
+coverage[official+osm] + equity w=0.5,8,89be0e3464bffff,Bellevue Hill,1.024875516098642,8.0,True,False,1.1786068435134383
+coverage[official+osm] + equity w=0.5,9,89be08cd283ffff,Heckenberg,0.779379821342624,1.0,True,False,1.169069732013936
+coverage[official+osm] + equity w=0.5,10,89be0e20cdbffff,Frenchs Forest,0.9145447996838348,,True,False,1.16614046304583
+coverage[official+osm] + equity w=0.5,11,89be0857483ffff,Kemps Creek,0.832614075783638,3.0,True,False,1.165659706097093
+coverage[official+osm] + equity w=0.5,12,89be0852533ffff,Cabramatta West,0.7768820431117031,1.0,True,False,1.1653230646675545
+coverage[official+osm] + equity w=0.5,13,89be08cd1b3ffff,Carnes Hill,0.8138198848864604,4.0,True,False,1.0986568445967215
+coverage[official+osm] + equity w=0.5,14,89be08c5013ffff,Bradbury (NSW),0.7398615980709216,2.0,True,False,1.0727993172028363
+coverage[official+osm] + equity w=0.5,15,89be08c8c37ffff,Moorebank,0.7853937522610484,4.0,True,False,1.0602815655524154
+coverage[official+osm] + equity w=0.5,16,89be08556dbffff,St Clair (Penrith - NSW),0.7530729979470305,3.0,True,False,1.0543021971258426
+coverage[official+osm] + equity w=0.5,17,89be08cd61bffff,Ashcroft,0.6941364605240039,1.0,True,False,1.0412046907860057
+coverage[official+osm] + equity w=0.5,18,89be0850947ffff,St Clair (Penrith - NSW),0.7272718081407945,3.0,True,False,1.0181805313971122
+coverage[official+osm] + equity w=0.5,19,89be0e2626bffff,North Ryde,0.7906736156786787,,True,False,1.0081917218537682
+coverage[official+osm] + equity w=0.5,20,89be08c8803ffff,Moorebank,0.7078667995308069,3.0,True,False,0.9910135193431295
+coverage[official+osm] + equity w=0.5,21,89be08cd613ffff,Ashcroft,0.6470776913394315,1.0,True,False,0.9706165370091473
+coverage[official+osm] + equity w=0.5,22,89be085a4dbffff,Castle Hill (NSW),0.7539622432926973,6.0,True,False,0.9424528041158717
+coverage[official+osm] + equity w=0.5,23,89be08475a7ffff,Glenbrook,0.7717716088870661,7.0,True,False,0.9261259306644792
+coverage[official+osm] + equity w=0.5,24,89be0858913ffff,Vineyard,0.6379798989962341,2.0,True,False,0.9250708535445394
+coverage[official+osm] + equity w=0.5,25,89be08cd6bbffff,Cartwright,0.6146808986384114,1.0,True,False,0.922021347957617
+coverage[official+osm] + equity w=0.5,26,89be0e3408fffff,Kensington (NSW),0.710940855018504,,True,False,0.906524096092491
+coverage[official+osm] + equity w=0.5,27,89be08c8b0fffff,Warwick Farm,0.6025174075999498,1.0,True,False,0.9037761113999246
+coverage[official+osm] + equity w=0.5,28,89be08cb28fffff,Clemton Park,0.6683277362951813,4.0,True,False,0.9022424439984947
+coverage[official+osm] + equity w=0.5,29,89be0e26ac3ffff,Ermington,0.6526888091522607,4.0,True,False,0.881129892355552
+coverage[official+osm] + equity w=0.5,30,89be084261bffff,Blackett,0.5860674477868256,1.0,True,False,0.8791011716802384
+coverage[official+osm] + equity w=0.5,31,89be0853267ffff,Old Toongabbie,0.6652025016011904,5.0,True,False,0.8647632520815476
+coverage[official+osm] + equity w=0.5,32,89be08d9d27ffff,Miranda (NSW),0.6398749749367907,4.0,True,False,0.8638312161646675
+coverage[official+osm] + equity w=0.5,33,89be08cd68fffff,Ashcroft,0.5752547566726224,1.0,True,False,0.8628821350089335
+coverage[official+osm] + equity w=0.5,34,89be0851b2fffff,Bidwill (NSW),0.5701631067576448,1.0,True,False,0.8552446601364672
+coverage[official+osm] + equity w=0.5,35,89be0e26b53ffff,Dundas (NSW),0.6066015265685276,3.0,True,False,0.8492421371959387
+coverage[official+osm] + equity w=0.5,36,89be08ce007ffff,Minto,0.5846006031952362,2.0,True,False,0.8476708746330924
+coverage[official+osm] + equity w=0.5,37,89be08cd453ffff,Lurnea,0.5627968953498249,1.0,True,False,0.8441953430247373
+coverage[official+osm] + equity w=0.5,38,89be0858593ffff,North Kellyville,0.7319337490000785,8.0,True,False,0.8417238113500901
+coverage[official+osm] + equity w=0.5,39,89be0e2495bffff,Baulkham Hills,0.6672872714906851,6.0,True,False,0.8341090893633564
+coverage[official+osm] + equity w=0.5,40,89be0e26a27ffff,Dundas (NSW),0.5944761406443995,3.0,True,False,0.8322665969021592
+coverage[official+osm] + equity w=0.5,41,89be08c8ca7ffff,Hammondville,0.6150029616510398,4.0,True,False,0.8302539982289039
+coverage[official+osm] + equity w=0.5,42,89be0e2114fffff,Mona Vale,0.646828501270724,,True,False,0.8247741261487105
+coverage[official+osm] + equity w=0.5,43,89be08c891bffff,Liverpool,0.5842221611834756,3.0,True,False,0.8179110256568658
+coverage[official+osm] + equity w=0.5,44,89be0e26143ffff,Rhodes,0.6292115147766202,,True,False,0.8023106221248414
+coverage[official+osm] + equity w=0.5,45,89be08c9b63ffff,Guildford West,0.5313686773004747,1.0,True,False,0.797053015950712
+coverage[official+osm] + equity w=0.5,46,89be084288bffff,Cambridge Gardens,0.5275385401772581,1.0,True,False,0.7913078102658871
+coverage[official+osm] + equity w=0.5,47,89be08cd4cfffff,Lurnea,0.5272566201367669,1.0,True,False,0.7908849302051504
+coverage[official+osm] + equity w=0.5,48,89be08c8b0bffff,Warwick Farm,0.5236871444948136,1.0,True,False,0.7855307167422203
+coverage[official+osm] + equity w=0.5,49,89be08428d7ffff,Cambridge Gardens,0.5404175457609014,2.0,True,False,0.783605441353307
+coverage[official+osm] + equity w=0.5,50,89be08c9cd7ffff,Yagoona,0.5361506626552569,2.0,True,False,0.7774184608501225
+coverage[official+osm] + equity w=0.5,51,89be08c9817ffff,Chester Hill,0.6090688910197183,,True,False,0.7766266659064561
+coverage[official+osm] + equity w=0.5,52,89be0e36267ffff,South Coogee,0.516841416108132,1.0,True,False,0.775262124162198
+coverage[official+osm] + equity w=0.5,53,89be0e26aa7ffff,Rydalmere,0.6022450283884325,,True,False,0.767925525917076
+coverage[official+osm] + equity w=0.5,54,89be08cd2d3ffff,Mount Pritchard,0.5112354117164154,1.0,True,False,0.7668531175746232
+coverage[official+osm] + equity w=0.5,55,89be0e21c57ffff,Elanora Heights,0.6621902215649013,8.0,True,False,0.7615187547996364
+coverage[official+osm] + equity w=0.5,56,89be0e201a7ffff,Beacon Hill,0.5958755353008174,,True,False,0.7598037547133836
+coverage[official+osm] + equity w=0.5,57,89be08cd0afffff,Hoxton Park,0.498989074160484,1.0,True,False,0.748483611240726
+coverage[official+osm] + equity w=0.5,58,89be0850217ffff,Arndell Park,0.5858353942437639,,True,False,0.747001522668146
+coverage[official+osm] + equity w=0.5,59,89be084a58fffff,McGraths Hill,0.5697737359066646,5.0,True,False,0.740705856678664
+coverage[official+osm] + equity w=0.5,60,89be08c9b73ffff,Yennora,0.4911265462510384,1.0,True,False,0.7366898193765576
+coverage[official+osm] + equity w=0.5,61,89be0851407ffff,Seven Hills (NSW),0.5776744945208133,,True,False,0.7365955202666429
+coverage[official+osm] + equity w=0.5,62,89be0e26e8fffff,Wentworth Point,0.6096525186214915,7.0,True,False,0.7315830223457898
+coverage[official+osm] + equity w=0.5,63,89be085a893ffff,The Ponds,0.6341260569089093,8.0,True,False,0.7292449654452456
+coverage[official+osm] + equity w=0.5,64,89be08520a7ffff,Wakeley,0.4826517159414743,1.0,True,False,0.7239775739122115
+coverage[official+osm] + equity w=0.5,65,89be084288fffff,Penrith,0.4804666110440247,1.0,True,False,0.720699916566037
+coverage[official+osm] + equity w=0.5,66,89be0e26ac7ffff,Ermington,0.4968098584993672,2.0,True,False,0.7203742948240824
+coverage[official+osm] + equity w=0.5,67,89be08cd5a3ffff,Horningsea Park,0.51157113048902,3.0,True,False,0.716199582684628
+coverage[official+osm] + equity w=0.5,68,89be08cc1dbffff,Denham Court,0.5291830881569077,4.0,True,False,0.7143971690118255
+coverage[official+osm] + equity w=0.5,69,89be08525b3ffff,Mount Pritchard,0.4756102103823232,1.0,True,False,0.7134153155734848
+coverage[official+osm] + equity w=0.5,70,89be0e36b4bffff,Tempe,0.4918510993662345,2.0,True,False,0.71318409408104
+coverage[official+osm] + equity w=0.5,71,89be085533bffff,South Penrith,0.505916318246291,3.0,True,False,0.7082828455448074
+coverage[official+osm] + equity w=0.5,72,89be08cb1b7ffff,Peakhurst,0.5543663755480893,,True,False,0.7068752259071144
+coverage[official+osm] + equity w=0.5,73,89be0851b03ffff,Hassall Grove,0.504467459466932,3.0,True,False,0.7062544432537047
+coverage[official+osm] + equity w=0.5,74,89be0855a4fffff,Emu Plains,0.5203240971429068,4.0,True,False,0.7024375311429243
+coverage[official+osm] + equity w=0.5,75,89be0e22e9bffff,Fairlight,0.6370516462541269,9.0,True,False,0.7007568108795397
+coverage[official+osm] + equity w=0.5,76,89be0e2136bffff,Newport (NSW),0.5600813332309723,6.0,True,False,0.7001016665387154
+coverage[official+osm] + equity w=0.5,77,89be08cb467ffff,Bexley,0.5175013588094753,4.0,True,False,0.6986268343927917
+coverage[official+osm] + equity w=0.5,78,89be0858dc3ffff,Grantham Farm,0.5370030635310712,5.0,True,False,0.6981039825903925
+coverage[official+osm] + equity w=0.5,79,89be085026bffff,Blacktown,0.4810264848747447,2.0,True,False,0.6974884030683798
+coverage[official+osm] + equity w=0.5,80,89be0850a87ffff,Minchinbury,0.5439436989187628,,True,False,0.6935852209178546
+coverage[official+osm] + equity w=0.5,81,89be08cd287ffff,Busby,0.460920145999922,1.0,True,False,0.691380218999883
+coverage[official+osm] + equity w=0.5,82,89be08cb253ffff,Canterbury (NSW),0.509448261950256,4.0,True,False,0.6877551536328457
+coverage[official+osm] + equity w=0.5,83,89be08c5907ffff,Camden South,0.5029206722303347,4.0,True,False,0.6789429075109519
+coverage[official+osm] + equity w=0.5,84,89be08cd58fffff,Prestons,0.4841058517749954,3.0,True,False,0.6777481924849935
+coverage[official+osm] + equity w=0.5,85,89be0e26b2fffff,Parramatta,0.5020099913388748,4.0,True,False,0.677713488307481
+coverage[official+osm] + equity w=0.5,86,89be0e26373ffff,Meadowbank (NSW),0.5129393993173951,5.0,True,False,0.6668212191126136
+coverage[official+osm] + equity w=0.5,87,89be0e35b57ffff,Northwood (NSW),0.6339776339382291,10.0,True,False,0.6656765156351406
+coverage[official+osm] + equity w=0.5,88,89be0841037ffff,Bligh Park,0.4917249975443497,4.0,True,False,0.6638287466848721
+coverage[official+osm] + equity w=0.5,89,89be08cd58bffff,Prestons,0.4895904289681594,4.0,True,False,0.6609470791070152
+coverage[official+osm] + equity w=0.5,90,89be08cd6a3ffff,Cartwright,0.4398288949132429,1.0,True,False,0.6597433423698643
+coverage[official+osm] + equity w=0.5,91,89be085095bffff,St Clair (Penrith - NSW),0.4767683120425133,4.0,True,False,0.643637221257393
+coverage[official+osm] + equity w=0.5,92,89be08c8817ffff,Moorebank,0.4436884024750516,2.0,True,False,0.6433481835888248
+coverage[official+osm] + equity w=0.5,93,89be08ce287ffff,Ingleburn,0.42870393596695,1.0,True,False,0.643055903950425
+coverage[official+osm] + equity w=0.5,94,89be08c827bffff,Yagoona,0.5023858109545748,,True,False,0.6405945585353023
+coverage[official+osm] + equity w=0.5,95,89be08c12a3ffff,Barden Ridge,0.5018399250356821,,True,False,0.6398984967803748
+coverage[official+osm] + equity w=0.5,96,89be0852453ffff,Canley Vale,0.4236162807054187,1.0,True,False,0.635424421058128
+coverage[official+osm] + equity w=0.5,97,89be0e2026bffff,North Narrabeen,0.5256161353057024,7.0,True,False,0.6307393623668428
+coverage[official+osm] + equity w=0.5,98,89be0e25243ffff,North Turramurra,0.5728834335493409,9.0,True,False,0.6301717769042751
+coverage[official+osm] + equity w=0.5,99,89be085060bffff,Prospect (NSW),0.4934659990570818,,True,False,0.6292208635779638
+coverage[official+osm] + equity w=0.5,100,89be08c918bffff,Chullora,0.4921145012345277,,True,False,0.6274975622184858
+coverage[official+osm] + equity w=0.5,101,89be0e2401bffff,Marsfield,0.5225080218236087,7.0,True,False,0.6270096261883303
+coverage[official+osm] + equity w=0.5,102,89be0e26103ffff,Concord West,0.4896395886725826,,True,False,0.624341789333459
+coverage[official+osm] + equity w=0.5,103,89be085151bffff,Seven Hills (NSW),0.4616329197362572,4.0,True,False,0.6232044416439473
+coverage[official+osm] + equity w=0.5,104,89be085133bffff,Kings Park (NSW),0.4981656284850403,6.0,True,False,0.6227070356063004
+coverage[official+osm] + equity w=0.5,105,89be085522fffff,Caddens,0.4847269324961857,,True,False,0.6180776378667304
+coverage[official+osm] + equity w=0.5,106,89be08c91d7ffff,Chullora,0.4834684355526537,,True,False,0.6164729223744116
+coverage[official+osm] + equity w=0.5,107,89be085203bffff,Wakeley,0.409713272638145,1.0,True,False,0.6145699089572175
+coverage[official+osm] + equity w=0.5,108,89be0847573ffff,Blaxland (NSW),0.5113857908786422,7.0,True,False,0.6136629490543707
+coverage[official+osm] + equity w=0.5,109,89be0850677ffff,Prospect (NSW),0.4808061659038111,,True,False,0.6130782495687411
+coverage[official+osm] + equity w=0.5,110,89be084a62fffff,Pitt Town,0.5561818079988738,9.0,True,False,0.6117999887987613
+coverage[official+osm] + equity w=0.5,111,89be08c529bffff,Campbelltown (NSW),0.4066814386135636,1.0,True,False,0.6100221579203454
+coverage[official+osm] + equity w=0.5,112,89be08d83b7ffff,Burraneer,0.5801522932719225,10.0,True,False,0.6091599079355187
+coverage[official+osm] + equity w=0.5,113,89be0e20357ffff,Cromer (NSW),0.4753034281546807,,True,False,0.6060616822567745
+coverage[official+osm] + equity w=0.5,114,89be084b1b3ffff,Wilberforce (NSW),0.4477266318698721,4.0,True,False,0.6044309530243274
+coverage[official+osm] + equity w=0.5,115,89be0e34e47ffff,Forest Lodge,0.5036231029466229,7.0,True,False,0.6043477235359475
+coverage[official+osm] + equity w=0.5,116,89be08c5083ffff,Bradbury (NSW),0.4167347318047146,2.0,True,False,0.6042653611168362
+coverage[official+osm] + equity w=0.5,117,89be085137bffff,Acacia Gardens,0.5025530692598624,7.0,True,False,0.6030636831118349
+coverage[official+osm] + equity w=0.5,118,89be08cec93ffff,Claymore,0.4153222249911289,2.0,True,False,0.6022172262371369
+coverage[official+osm] + equity w=0.5,119,89be08c53c3ffff,Blair Athol (NSW),0.4454883026527995,4.0,True,False,0.6014092085812793
+coverage[official+osm] + equity w=0.5,120,89be08c866fffff,Mount Lewis,0.3997691005111429,1.0,True,False,0.5996536507667143
+coverage[official+osm] + equity w=1,1,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,1.864060762467525
+coverage[official+osm] + equity w=1,2,89be0e26bb3ffff,Camellia,0.9760612808139724,2.0,True,False,1.8545164335465474
+coverage[official+osm] + equity w=1,3,89be0851927ffff,Dharruk,0.9205822872383146,2.0,True,False,1.7491063457527976
+coverage[official+osm] + equity w=1,4,89be0e24d17ffff,North Parramatta,0.9025619024110596,2.0,True,False,1.7148676145810131
+coverage[official+osm] + equity w=1,5,89be0e34e23ffff,Stanmore (NSW),1.2083001960713935,7.0,True,False,1.691620274499951
+coverage[official+osm] + equity w=1,6,89be0e26bbbffff,Camellia,1.0692528040294689,6.0,True,False,1.6038792060442033
+coverage[official+osm] + equity w=1,7,89be08cf1d7ffff,Macquarie Fields,0.835206944537087,2.0,True,False,1.5868931946204652
+coverage[official+osm] + equity w=1,8,89be08cd283ffff,Heckenberg,0.779379821342624,1.0,True,False,1.558759642685248
+coverage[official+osm] + equity w=1,9,89be0852533ffff,Cabramatta West,0.7768820431117031,1.0,True,False,1.5537640862234061
+coverage[official+osm] + equity w=1,10,89be0857483ffff,Kemps Creek,0.832614075783638,3.0,True,False,1.4987053364105485
+coverage[official+osm] + equity w=1,11,89be0e20cdbffff,Frenchs Forest,0.9145447996838348,,True,False,1.4177361264078252
+coverage[official+osm] + equity w=1,12,89be08c5013ffff,Bradbury (NSW),0.7398615980709216,2.0,True,False,1.405737036334751
+coverage[official+osm] + equity w=1,13,89be08cd61bffff,Ashcroft,0.6941364605240039,1.0,True,False,1.3882729210480078
+coverage[official+osm] + equity w=1,14,89be08cd1b3ffff,Carnes Hill,0.8138198848864604,4.0,True,False,1.3834938043069827
+coverage[official+osm] + equity w=1,15,89be08556dbffff,St Clair (Penrith - NSW),0.7530729979470305,3.0,True,False,1.355531396304655
+coverage[official+osm] + equity w=1,16,89be08c8c37ffff,Moorebank,0.7853937522610484,4.0,True,False,1.3351693788437822
+coverage[official+osm] + equity w=1,17,89be0e3464bffff,Bellevue Hill,1.024875516098642,8.0,True,False,1.3323381709282347
+coverage[official+osm] + equity w=1,18,89be0850947ffff,St Clair (Penrith - NSW),0.7272718081407945,3.0,True,False,1.30908925465343
+coverage[official+osm] + equity w=1,19,89be08cd613ffff,Ashcroft,0.6470776913394315,1.0,True,False,1.294155382678863
+coverage[official+osm] + equity w=1,20,89be08c8803ffff,Moorebank,0.7078667995308069,3.0,True,False,1.2741602391554525
+coverage[official+osm] + equity w=1,21,89be08cd6bbffff,Cartwright,0.6146808986384114,1.0,True,False,1.2293617972768227
+coverage[official+osm] + equity w=1,22,89be0e2626bffff,North Ryde,0.7906736156786787,,True,False,1.2257098280288579
+coverage[official+osm] + equity w=1,23,89be0858913ffff,Vineyard,0.6379798989962341,2.0,True,False,1.2121618080928447
+coverage[official+osm] + equity w=1,24,89be08c8b0fffff,Warwick Farm,0.6025174075999498,1.0,True,False,1.2050348151998995
+coverage[official+osm] + equity w=1,25,89be084261bffff,Blackett,0.5860674477868256,1.0,True,False,1.1721348955736512
+coverage[official+osm] + equity w=1,26,89be08cd68fffff,Ashcroft,0.5752547566726224,1.0,True,False,1.1505095133452448
+coverage[official+osm] + equity w=1,27,89be0851b2fffff,Bidwill (NSW),0.5701631067576448,1.0,True,False,1.1403262135152896
+coverage[official+osm] + equity w=1,28,89be08cb28fffff,Clemton Park,0.6683277362951813,4.0,True,False,1.136157151701808
+coverage[official+osm] + equity w=1,29,89be085a4dbffff,Castle Hill (NSW),0.7539622432926973,6.0,True,False,1.130943364939046
+coverage[official+osm] + equity w=1,30,89be08cd453ffff,Lurnea,0.5627968953498249,1.0,True,False,1.1255937906996498
+coverage[official+osm] + equity w=1,31,89be08ce007ffff,Minto,0.5846006031952362,2.0,True,False,1.1107411460709486
+coverage[official+osm] + equity w=1,32,89be0e26ac3ffff,Ermington,0.6526888091522607,4.0,True,False,1.1095709755588432
+coverage[official+osm] + equity w=1,33,89be0e3408fffff,Kensington (NSW),0.710940855018504,,True,False,1.1021073371664778
+coverage[official+osm] + equity w=1,34,89be0e26b53ffff,Dundas (NSW),0.6066015265685276,3.0,True,False,1.0918827478233497
+coverage[official+osm] + equity w=1,35,89be08d9d27ffff,Miranda (NSW),0.6398749749367907,4.0,True,False,1.0877874573925441
+coverage[official+osm] + equity w=1,36,89be08475a7ffff,Glenbrook,0.7717716088870661,7.0,True,False,1.0804802524418924
+coverage[official+osm] + equity w=1,37,89be0e26a27ffff,Dundas (NSW),0.5944761406443995,3.0,True,False,1.0700570531599192
+coverage[official+osm] + equity w=1,38,89be0853267ffff,Old Toongabbie,0.6652025016011904,5.0,True,False,1.0643240025619047
+coverage[official+osm] + equity w=1,39,89be08c9b63ffff,Guildford West,0.5313686773004747,1.0,True,False,1.0627373546009493
+coverage[official+osm] + equity w=1,40,89be084288bffff,Cambridge Gardens,0.5275385401772581,1.0,True,False,1.0550770803545162
+coverage[official+osm] + equity w=1,41,89be08cd4cfffff,Lurnea,0.5272566201367669,1.0,True,False,1.0545132402735338
+coverage[official+osm] + equity w=1,42,89be08c891bffff,Liverpool,0.5842221611834756,3.0,True,False,1.0515998901302561
+coverage[official+osm] + equity w=1,43,89be08c8b0bffff,Warwick Farm,0.5236871444948136,1.0,True,False,1.0473742889896271
+coverage[official+osm] + equity w=1,44,89be08c8ca7ffff,Hammondville,0.6150029616510398,4.0,True,False,1.0455050348067678
+coverage[official+osm] + equity w=1,45,89be0e36267ffff,South Coogee,0.516841416108132,1.0,True,False,1.033682832216264
+coverage[official+osm] + equity w=1,46,89be08428d7ffff,Cambridge Gardens,0.5404175457609014,2.0,True,False,1.0267933369457125
+coverage[official+osm] + equity w=1,47,89be08cd2d3ffff,Mount Pritchard,0.5112354117164154,1.0,True,False,1.0224708234328308
+coverage[official+osm] + equity w=1,48,89be08c9cd7ffff,Yagoona,0.5361506626552569,2.0,True,False,1.018686259044988
+coverage[official+osm] + equity w=1,49,89be0e2114fffff,Mona Vale,0.646828501270724,,True,False,1.002719751026697
+coverage[official+osm] + equity w=1,50,89be0e2495bffff,Baulkham Hills,0.6672872714906851,6.0,True,False,1.0009309072360277
+coverage[official+osm] + equity w=1,51,89be08cd0afffff,Hoxton Park,0.498989074160484,1.0,True,False,0.997978148320968
+coverage[official+osm] + equity w=1,52,89be08c9b73ffff,Yennora,0.4911265462510384,1.0,True,False,0.9822530925020768
+coverage[official+osm] + equity w=1,53,89be0e26143ffff,Rhodes,0.6292115147766202,,True,False,0.9754097294730626
+coverage[official+osm] + equity w=1,54,89be08520a7ffff,Wakeley,0.4826517159414743,1.0,True,False,0.9653034318829486
+coverage[official+osm] + equity w=1,55,89be084288fffff,Penrith,0.4804666110440247,1.0,True,False,0.9609332220880494
+coverage[official+osm] + equity w=1,56,89be0858593ffff,North Kellyville,0.7319337490000785,8.0,True,False,0.951513873700102
+coverage[official+osm] + equity w=1,57,89be08525b3ffff,Mount Pritchard,0.4756102103823232,1.0,True,False,0.9512204207646464
+coverage[official+osm] + equity w=1,58,89be08c9817ffff,Chester Hill,0.6090688910197183,,True,False,0.944184440793194
+coverage[official+osm] + equity w=1,59,89be0e26ac7ffff,Ermington,0.4968098584993672,2.0,True,False,0.9439387311487977
+coverage[official+osm] + equity w=1,60,89be0e36b4bffff,Tempe,0.4918510993662345,2.0,True,False,0.9345170887958455
+coverage[official+osm] + equity w=1,61,89be0e26aa7ffff,Rydalmere,0.6022450283884325,,True,False,0.9336060234457194
+coverage[official+osm] + equity w=1,62,89be0e201a7ffff,Beacon Hill,0.5958755353008174,,True,False,0.9237319741259499
+coverage[official+osm] + equity w=1,63,89be08cd287ffff,Busby,0.460920145999922,1.0,True,False,0.921840291999844
+coverage[official+osm] + equity w=1,64,89be08cd5a3ffff,Horningsea Park,0.51157113048902,3.0,True,False,0.9208280348802361
+coverage[official+osm] + equity w=1,65,89be085026bffff,Blacktown,0.4810264848747447,2.0,True,False,0.9139503212620149
+coverage[official+osm] + equity w=1,66,89be084a58fffff,McGraths Hill,0.5697737359066646,5.0,True,False,0.9116379774506633
+coverage[official+osm] + equity w=1,67,89be085533bffff,South Penrith,0.505916318246291,3.0,True,False,0.9106493728433238
+coverage[official+osm] + equity w=1,68,89be0850217ffff,Arndell Park,0.5858353942437639,,True,False,0.9081676510925281
+coverage[official+osm] + equity w=1,69,89be0851b03ffff,Hassall Grove,0.504467459466932,3.0,True,False,0.9080414270404775
+coverage[official+osm] + equity w=1,70,89be08cc1dbffff,Denham Court,0.5291830881569077,4.0,True,False,0.8996112498667431
+coverage[official+osm] + equity w=1,71,89be0851407ffff,Seven Hills (NSW),0.5776744945208133,,True,False,0.8955165460124724
+coverage[official+osm] + equity w=1,72,89be0855a4fffff,Emu Plains,0.5203240971429068,4.0,True,False,0.8845509651429416
+coverage[official+osm] + equity w=1,73,89be08cb467ffff,Bexley,0.5175013588094753,4.0,True,False,0.8797523099761081
+coverage[official+osm] + equity w=1,74,89be08cd6a3ffff,Cartwright,0.4398288949132429,1.0,True,False,0.8796577898264858
+coverage[official+osm] + equity w=1,75,89be08cd58fffff,Prestons,0.4841058517749954,3.0,True,False,0.8713905331949917
+coverage[official+osm] + equity w=1,76,89be08cb253ffff,Canterbury (NSW),0.509448261950256,4.0,True,False,0.8660620453154353
+coverage[official+osm] + equity w=1,77,89be0e21c57ffff,Elanora Heights,0.6621902215649013,8.0,True,False,0.8608472880343717
+coverage[official+osm] + equity w=1,78,89be08cb1b7ffff,Peakhurst,0.5543663755480893,,True,False,0.8593840762661393
+coverage[official+osm] + equity w=1,79,89be0858dc3ffff,Grantham Farm,0.5370030635310712,5.0,True,False,0.859204901649714
+coverage[official+osm] + equity w=1,80,89be08ce287ffff,Ingleburn,0.42870393596695,1.0,True,False,0.8574078719339
+coverage[official+osm] + equity w=1,81,89be08c5907ffff,Camden South,0.5029206722303347,4.0,True,False,0.8549651427915689
+coverage[official+osm] + equity w=1,82,89be0e26e8fffff,Wentworth Point,0.6096525186214915,7.0,True,False,0.853513526070088
+coverage[official+osm] + equity w=1,83,89be0e26b2fffff,Parramatta,0.5020099913388748,4.0,True,False,0.8534169852760871
+coverage[official+osm] + equity w=1,84,89be0852453ffff,Canley Vale,0.4236162807054187,1.0,True,False,0.8472325614108374
+coverage[official+osm] + equity w=1,85,89be0850a87ffff,Minchinbury,0.5439436989187628,,True,False,0.8432267429169463
+coverage[official+osm] + equity w=1,86,89be08c8817ffff,Moorebank,0.4436884024750516,2.0,True,False,0.843007964702598
+coverage[official+osm] + equity w=1,87,89be0e2136bffff,Newport (NSW),0.5600813332309723,6.0,True,False,0.8401219998464584
+coverage[official+osm] + equity w=1,88,89be0841037ffff,Bligh Park,0.4917249975443497,4.0,True,False,0.8359324958253944
+coverage[official+osm] + equity w=1,89,89be08cd58bffff,Prestons,0.4895904289681594,4.0,True,False,0.8323037292458709
+coverage[official+osm] + equity w=1,90,89be085a893ffff,The Ponds,0.6341260569089093,8.0,True,False,0.8243638739815822
+coverage[official+osm] + equity w=1,91,89be0e26373ffff,Meadowbank (NSW),0.5129393993173951,5.0,True,False,0.8207030389078321
+coverage[official+osm] + equity w=1,92,89be085203bffff,Wakeley,0.409713272638145,1.0,True,False,0.81942654527629
+coverage[official+osm] + equity w=1,93,89be08c529bffff,Campbelltown (NSW),0.4066814386135636,1.0,True,False,0.8133628772271272
+coverage[official+osm] + equity w=1,94,89be085095bffff,St Clair (Penrith - NSW),0.4767683120425133,4.0,True,False,0.8105061304722726
+coverage[official+osm] + equity w=1,95,89be08c866fffff,Mount Lewis,0.3997691005111429,1.0,True,False,0.7995382010222858
+coverage[official+osm] + equity w=1,96,89be08c5083ffff,Bradbury (NSW),0.4167347318047146,2.0,True,False,0.7917959904289577
+coverage[official+osm] + equity w=1,97,89be08cec93ffff,Claymore,0.4153222249911289,2.0,True,False,0.7891122274831449
+coverage[official+osm] + equity w=1,98,89be085151bffff,Seven Hills (NSW),0.4616329197362572,4.0,True,False,0.7847759635516373
+coverage[official+osm] + equity w=1,99,89be08c827bffff,Yagoona,0.5023858109545748,,True,False,0.7788033061160299
+coverage[official+osm] + equity w=1,100,89be08c12a3ffff,Barden Ridge,0.5018399250356821,,True,False,0.7779570685250675
+coverage[official+osm] + equity w=1,101,89be08422bbffff,Willmot,0.3887574929150929,1.0,True,False,0.7775149858301857
+coverage[official+osm] + equity w=1,102,89be0851e83ffff,Marayong,0.4090373698167747,2.0,True,False,0.7771710026518719
+coverage[official+osm] + equity w=1,103,89be085020bffff,Blacktown,0.4072998634938833,2.0,True,False,0.7738697406383782
+coverage[official+osm] + equity w=1,104,89be08c8357ffff,Condell Park,0.3853835374389009,1.0,True,False,0.7707670748778018
+coverage[official+osm] + equity w=1,105,89be085060bffff,Prospect (NSW),0.4934659990570818,,True,False,0.7649757280988458
+coverage[official+osm] + equity w=1,106,89be0e22e9bffff,Fairlight,0.6370516462541269,9.0,True,False,0.7644619755049523
+coverage[official+osm] + equity w=1,107,89be08426afffff,Emerton,0.3821950095380743,1.0,True,False,0.7643900190761486
+coverage[official+osm] + equity w=1,108,89be08c918bffff,Chullora,0.4921145012345277,,True,False,0.762880623202444
+coverage[official+osm] + equity w=1,109,89be084b1b3ffff,Wilberforce (NSW),0.4477266318698721,4.0,True,False,0.7611352741787826
+coverage[official+osm] + equity w=1,110,89be0e26103ffff,Concord West,0.4896395886725826,,True,False,0.7590439899943353
+coverage[official+osm] + equity w=1,111,89be084367bffff,Riverstone,0.3989035143378328,2.0,True,False,0.7579166772418823
+coverage[official+osm] + equity w=1,112,89be08c53c3ffff,Blair Athol (NSW),0.4454883026527995,4.0,True,False,0.7573301145097591
+coverage[official+osm] + equity w=1,113,89be0e34ac7ffff,Lilyfield,0.4194296488127427,3.0,True,False,0.7549733678629369
+coverage[official+osm] + equity w=1,114,89be0841017ffff,Bligh Park,0.4427073947441347,4.0,True,False,0.7526025710650289
+coverage[official+osm] + equity w=1,115,89be085522fffff,Caddens,0.4847269324961857,,True,False,0.7514283432372751
+coverage[official+osm] + equity w=1,116,89be08c91d7ffff,Chullora,0.4834684355526537,,True,False,0.7494774091961697
+coverage[official+osm] + equity w=1,117,89be08c5293ffff,Campbelltown (NSW),0.3739274471722734,1.0,True,False,0.7478548943445468
+coverage[official+osm] + equity w=1,118,89be08514afffff,Seven Hills (NSW),0.3738932037396881,1.0,True,False,0.7477864074793762
+coverage[official+osm] + equity w=1,119,89be085133bffff,Kings Park (NSW),0.4981656284850403,6.0,True,False,0.7472484427275605
+coverage[official+osm] + equity w=1,120,89be0850677ffff,Prospect (NSW),0.4808061659038111,,True,False,0.7453503332336711
+coverage[official+osm] + equity w=2,1,89be0e26bb3ffff,Camellia,0.9760612808139724,2.0,True,False,2.7329715862791226
+coverage[official+osm] + equity w=2,2,89be0851927ffff,Dharruk,0.9205822872383146,2.0,True,False,2.5776304042672806
+coverage[official+osm] + equity w=2,3,89be0e24d17ffff,North Parramatta,0.9025619024110596,2.0,True,False,2.5271733267509666
+coverage[official+osm] + equity w=2,4,89be0e34eb3ffff,Enmore (Inner West - NSW),1.24270717497835,6.0,True,False,2.4854143499567
+coverage[official+osm] + equity w=2,5,89be08cf1d7ffff,Macquarie Fields,0.835206944537087,2.0,True,False,2.3385794447038433
+coverage[official+osm] + equity w=2,6,89be08cd283ffff,Heckenberg,0.779379821342624,1.0,True,False,2.338139464027872
+coverage[official+osm] + equity w=2,7,89be0852533ffff,Cabramatta West,0.7768820431117031,1.0,True,False,2.330646129335109
+coverage[official+osm] + equity w=2,8,89be0e34e23ffff,Stanmore (NSW),1.2083001960713935,7.0,True,False,2.1749403529285085
+coverage[official+osm] + equity w=2,9,89be0857483ffff,Kemps Creek,0.832614075783638,3.0,True,False,2.164796597037459
+coverage[official+osm] + equity w=2,10,89be0e26bbbffff,Camellia,1.0692528040294689,6.0,True,False,2.1385056080589377
+coverage[official+osm] + equity w=2,11,89be08cd61bffff,Ashcroft,0.6941364605240039,1.0,True,False,2.0824093815720115
+coverage[official+osm] + equity w=2,12,89be08c5013ffff,Bradbury (NSW),0.7398615980709216,2.0,True,False,2.0716124745985804
+coverage[official+osm] + equity w=2,13,89be08556dbffff,St Clair (Penrith - NSW),0.7530729979470305,3.0,True,False,1.9579897946622795
+coverage[official+osm] + equity w=2,14,89be08cd1b3ffff,Carnes Hill,0.8138198848864604,4.0,True,False,1.953167723727505
+coverage[official+osm] + equity w=2,15,89be08cd613ffff,Ashcroft,0.6470776913394315,1.0,True,False,1.9412330740182946
+coverage[official+osm] + equity w=2,16,89be0e20cdbffff,Frenchs Forest,0.9145447996838348,,True,False,1.9209274531318155
+coverage[official+osm] + equity w=2,17,89be0850947ffff,St Clair (Penrith - NSW),0.7272718081407945,3.0,True,False,1.8909067011660659
+coverage[official+osm] + equity w=2,18,89be08c8c37ffff,Moorebank,0.7853937522610484,4.0,True,False,1.884945005426516
+coverage[official+osm] + equity w=2,19,89be08cd6bbffff,Cartwright,0.6146808986384114,1.0,True,False,1.844042695915234
+coverage[official+osm] + equity w=2,20,89be08c8803ffff,Moorebank,0.7078667995308069,3.0,True,False,1.840453678780098
+coverage[official+osm] + equity w=2,21,89be08c8b0fffff,Warwick Farm,0.6025174075999498,1.0,True,False,1.8075522227998493
+coverage[official+osm] + equity w=2,22,89be0858913ffff,Vineyard,0.6379798989962341,2.0,True,False,1.7863437171894554
+coverage[official+osm] + equity w=2,23,89be084261bffff,Blackett,0.5860674477868256,1.0,True,False,1.7582023433604768
+coverage[official+osm] + equity w=2,24,89be08cd68fffff,Ashcroft,0.5752547566726224,1.0,True,False,1.725764270017867
+coverage[official+osm] + equity w=2,25,89be0851b2fffff,Bidwill (NSW),0.5701631067576448,1.0,True,False,1.7104893202729343
+coverage[official+osm] + equity w=2,26,89be08cd453ffff,Lurnea,0.5627968953498249,1.0,True,False,1.6883906860494746
+coverage[official+osm] + equity w=2,27,89be0e2626bffff,North Ryde,0.7906736156786787,,True,False,1.6607460403790368
+coverage[official+osm] + equity w=2,28,89be0e3464bffff,Bellevue Hill,1.024875516098642,8.0,True,False,1.6398008257578274
+coverage[official+osm] + equity w=2,29,89be08ce007ffff,Minto,0.5846006031952362,2.0,True,False,1.6368816889466613
+coverage[official+osm] + equity w=2,30,89be08cb28fffff,Clemton Park,0.6683277362951813,4.0,True,False,1.603986567108435
+coverage[official+osm] + equity w=2,31,89be08c9b63ffff,Guildford West,0.5313686773004747,1.0,True,False,1.594106031901424
+coverage[official+osm] + equity w=2,32,89be084288bffff,Cambridge Gardens,0.5275385401772581,1.0,True,False,1.5826156205317743
+coverage[official+osm] + equity w=2,33,89be08cd4cfffff,Lurnea,0.5272566201367669,1.0,True,False,1.5817698604103008
+coverage[official+osm] + equity w=2,34,89be0e26b53ffff,Dundas (NSW),0.6066015265685276,3.0,True,False,1.5771639690781718
+coverage[official+osm] + equity w=2,35,89be08c8b0bffff,Warwick Farm,0.5236871444948136,1.0,True,False,1.5710614334844406
+coverage[official+osm] + equity w=2,36,89be0e26ac3ffff,Ermington,0.6526888091522607,4.0,True,False,1.5664531419654255
+coverage[official+osm] + equity w=2,37,89be0e36267ffff,South Coogee,0.516841416108132,1.0,True,False,1.550524248324396
+coverage[official+osm] + equity w=2,38,89be0e26a27ffff,Dundas (NSW),0.5944761406443995,3.0,True,False,1.5456379656754387
+coverage[official+osm] + equity w=2,39,89be08d9d27ffff,Miranda (NSW),0.6398749749367907,4.0,True,False,1.5356999398482976
+coverage[official+osm] + equity w=2,40,89be08cd2d3ffff,Mount Pritchard,0.5112354117164154,1.0,True,False,1.5337062351492463
+coverage[official+osm] + equity w=2,41,89be08c891bffff,Liverpool,0.5842221611834756,3.0,True,False,1.5189776190770365
+coverage[official+osm] + equity w=2,42,89be08428d7ffff,Cambridge Gardens,0.5404175457609014,2.0,True,False,1.5131691281305237
+coverage[official+osm] + equity w=2,43,89be085a4dbffff,Castle Hill (NSW),0.7539622432926973,6.0,True,False,1.5079244865853947
+coverage[official+osm] + equity w=2,44,89be08c9cd7ffff,Yagoona,0.5361506626552569,2.0,True,False,1.5012218554347192
+coverage[official+osm] + equity w=2,45,89be08cd0afffff,Hoxton Park,0.498989074160484,1.0,True,False,1.496967222481452
+coverage[official+osm] + equity w=2,46,89be0e3408fffff,Kensington (NSW),0.710940855018504,,True,False,1.4932738193144517
+coverage[official+osm] + equity w=2,47,89be08c8ca7ffff,Hammondville,0.6150029616510398,4.0,True,False,1.4760071079624957
+coverage[official+osm] + equity w=2,48,89be08c9b73ffff,Yennora,0.4911265462510384,1.0,True,False,1.4733796387531153
+coverage[official+osm] + equity w=2,49,89be0853267ffff,Old Toongabbie,0.6652025016011904,5.0,True,False,1.463445503522619
+coverage[official+osm] + equity w=2,50,89be08520a7ffff,Wakeley,0.4826517159414743,1.0,True,False,1.447955147824423
+coverage[official+osm] + equity w=2,51,89be084288fffff,Penrith,0.4804666110440247,1.0,True,False,1.441399833132074
+coverage[official+osm] + equity w=2,52,89be08525b3ffff,Mount Pritchard,0.4756102103823232,1.0,True,False,1.4268306311469696
+coverage[official+osm] + equity w=2,53,89be0e26ac7ffff,Ermington,0.4968098584993672,2.0,True,False,1.3910676037982281
+coverage[official+osm] + equity w=2,54,89be08475a7ffff,Glenbrook,0.7717716088870661,7.0,True,False,1.389188895996719
+coverage[official+osm] + equity w=2,55,89be08cd287ffff,Busby,0.460920145999922,1.0,True,False,1.382760437999766
+coverage[official+osm] + equity w=2,56,89be0e36b4bffff,Tempe,0.4918510993662345,2.0,True,False,1.3771830782254566
+coverage[official+osm] + equity w=2,57,89be0e2114fffff,Mona Vale,0.646828501270724,,True,False,1.35861100078267
+coverage[official+osm] + equity w=2,58,89be085026bffff,Blacktown,0.4810264848747447,2.0,True,False,1.346874157649285
+coverage[official+osm] + equity w=2,59,89be0e2495bffff,Baulkham Hills,0.6672872714906851,6.0,True,False,1.3345745429813702
+coverage[official+osm] + equity w=2,60,89be08cd5a3ffff,Horningsea Park,0.51157113048902,3.0,True,False,1.3300849392714522
+coverage[official+osm] + equity w=2,61,89be0e26143ffff,Rhodes,0.6292115147766202,,True,False,1.321607944169505
+coverage[official+osm] + equity w=2,62,89be08cd6a3ffff,Cartwright,0.4398288949132429,1.0,True,False,1.3194866847397286
+coverage[official+osm] + equity w=2,63,89be085533bffff,South Penrith,0.505916318246291,3.0,True,False,1.3153824274403567
+coverage[official+osm] + equity w=2,64,89be0851b03ffff,Hassall Grove,0.504467459466932,3.0,True,False,1.3116153946140232
+coverage[official+osm] + equity w=2,65,89be08ce287ffff,Ingleburn,0.42870393596695,1.0,True,False,1.28611180790085
+coverage[official+osm] + equity w=2,66,89be08c9817ffff,Chester Hill,0.6090688910197183,,True,False,1.2792999905666698
+coverage[official+osm] + equity w=2,67,89be0852453ffff,Canley Vale,0.4236162807054187,1.0,True,False,1.270848842116256
+coverage[official+osm] + equity w=2,68,89be08cc1dbffff,Denham Court,0.5291830881569077,4.0,True,False,1.2700394115765785
+coverage[official+osm] + equity w=2,69,89be0e26aa7ffff,Rydalmere,0.6022450283884325,,True,False,1.2649670185030062
+coverage[official+osm] + equity w=2,70,89be08cd58fffff,Prestons,0.4841058517749954,3.0,True,False,1.258675214614988
+coverage[official+osm] + equity w=2,71,89be084a58fffff,McGraths Hill,0.5697737359066646,5.0,True,False,1.253502218994662
+coverage[official+osm] + equity w=2,72,89be0e201a7ffff,Beacon Hill,0.5958755353008174,,True,False,1.2515884129510824
+coverage[official+osm] + equity w=2,73,89be0855a4fffff,Emu Plains,0.5203240971429068,4.0,True,False,1.2487778331429764
+coverage[official+osm] + equity w=2,74,89be08c8817ffff,Moorebank,0.4436884024750516,2.0,True,False,1.2423275269301444
+coverage[official+osm] + equity w=2,75,89be08cb467ffff,Bexley,0.5175013588094753,4.0,True,False,1.2420032611427407
+coverage[official+osm] + equity w=2,76,89be0850217ffff,Arndell Park,0.5858353942437639,,True,False,1.2304999079412924
+coverage[official+osm] + equity w=2,77,89be085203bffff,Wakeley,0.409713272638145,1.0,True,False,1.229139817914435
+coverage[official+osm] + equity w=2,78,89be08cb253ffff,Canterbury (NSW),0.509448261950256,4.0,True,False,1.2226758286806145
+coverage[official+osm] + equity w=2,79,89be08c529bffff,Campbelltown (NSW),0.4066814386135636,1.0,True,False,1.2200443158406908
+coverage[official+osm] + equity w=2,80,89be0851407ffff,Seven Hills (NSW),0.5776744945208133,,True,False,1.2133585975041317
+coverage[official+osm] + equity w=2,81,89be08c5907ffff,Camden South,0.5029206722303347,4.0,True,False,1.2070096133528032
+coverage[official+osm] + equity w=2,82,89be0e26b2fffff,Parramatta,0.5020099913388748,4.0,True,False,1.2048239792132995
+coverage[official+osm] + equity w=2,83,89be08c866fffff,Mount Lewis,0.3997691005111429,1.0,True,False,1.1993073015334286
+coverage[official+osm] + equity w=2,84,89be0858dc3ffff,Grantham Farm,0.5370030635310712,5.0,True,False,1.1814067397683568
+coverage[official+osm] + equity w=2,85,89be0841037ffff,Bligh Park,0.4917249975443497,4.0,True,False,1.1801399941064392
+coverage[official+osm] + equity w=2,86,89be08cd58bffff,Prestons,0.4895904289681594,4.0,True,False,1.1750170295235824
+coverage[official+osm] + equity w=2,87,89be0858593ffff,North Kellyville,0.7319337490000785,8.0,True,False,1.1710939984001256
+coverage[official+osm] + equity w=2,88,89be08c5083ffff,Bradbury (NSW),0.4167347318047146,2.0,True,False,1.1668572490532008
+coverage[official+osm] + equity w=2,89,89be08422bbffff,Willmot,0.3887574929150929,1.0,True,False,1.1662724787452787
+coverage[official+osm] + equity w=2,90,89be08cb1b7ffff,Peakhurst,0.5543663755480893,,True,False,1.1644017769841895
+coverage[official+osm] + equity w=2,91,89be08cec93ffff,Claymore,0.4153222249911289,2.0,True,False,1.1629022299751608
+coverage[official+osm] + equity w=2,92,89be08c8357ffff,Condell Park,0.3853835374389009,1.0,True,False,1.1561506123167027
+coverage[official+osm] + equity w=2,93,89be08426afffff,Emerton,0.3821950095380743,1.0,True,False,1.146585028614223
+coverage[official+osm] + equity w=2,94,89be0851e83ffff,Marayong,0.4090373698167747,2.0,True,False,1.1453046354869691
+coverage[official+osm] + equity w=2,95,89be085095bffff,St Clair (Penrith - NSW),0.4767683120425133,4.0,True,False,1.144243948902032
+coverage[official+osm] + equity w=2,96,89be0850a87ffff,Minchinbury,0.5439436989187628,,True,False,1.1425097869151297
+coverage[official+osm] + equity w=2,97,89be085020bffff,Blacktown,0.4072998634938833,2.0,True,False,1.1404396177828733
+coverage[official+osm] + equity w=2,98,89be0e26373ffff,Meadowbank (NSW),0.5129393993173951,5.0,True,False,1.1284666784982693
+coverage[official+osm] + equity w=2,99,89be08c5293ffff,Campbelltown (NSW),0.3739274471722734,1.0,True,False,1.1217823415168202
+coverage[official+osm] + equity w=2,100,89be08514afffff,Seven Hills (NSW),0.3738932037396881,1.0,True,False,1.1216796112190643
+coverage[official+osm] + equity w=2,101,89be0e2136bffff,Newport (NSW),0.5600813332309723,6.0,True,False,1.1201626664619446
+coverage[official+osm] + equity w=2,102,89be084367bffff,Riverstone,0.3989035143378328,2.0,True,False,1.1169298401459318
+coverage[official+osm] + equity w=2,103,89be085151bffff,Seven Hills (NSW),0.4616329197362572,4.0,True,False,1.1079190073670173
+coverage[official+osm] + equity w=2,104,89be0e26e8fffff,Wentworth Point,0.6096525186214915,7.0,True,False,1.0973745335186846
+coverage[official+osm] + equity w=2,105,89be08c9cafffff,Bass Hill,0.3640767770021594,1.0,True,False,1.0922303310064783
+coverage[official+osm] + equity w=2,106,89be08cd623ffff,Sadleir,0.3640086732768794,1.0,True,False,1.0920260198306382
+coverage[official+osm] + equity w=2,107,89be0e34ac7ffff,Lilyfield,0.4194296488127427,3.0,True,False,1.090517086913131
+coverage[official+osm] + equity w=2,108,89be08d9b73ffff,South Hurstville,0.41373461447325,3.0,True,False,1.07570999763045
+coverage[official+osm] + equity w=2,109,89be084b1b3ffff,Wilberforce (NSW),0.4477266318698721,4.0,True,False,1.074543916487693
+coverage[official+osm] + equity w=2,110,89be08c53c3ffff,Blair Athol (NSW),0.4454883026527995,4.0,True,False,1.0691719263667188
+coverage[official+osm] + equity w=2,111,89be0841017ffff,Bligh Park,0.4427073947441347,4.0,True,False,1.0624977473859232
+coverage[official+osm] + equity w=2,112,89be085250fffff,Cabramatta West,0.3533086979868372,1.0,True,False,1.0599260939605115
+coverage[official+osm] + equity w=2,113,89be0e21c57ffff,Elanora Heights,0.6621902215649013,8.0,True,False,1.059504354503842
+coverage[official+osm] + equity w=2,114,89be08c827bffff,Yagoona,0.5023858109545748,,True,False,1.0552208012774849
+coverage[official+osm] + equity w=2,115,89be08c9ca7ffff,Bass Hill,0.3516989305536321,1.0,True,False,1.0550967916608962
+coverage[official+osm] + equity w=2,116,89be08c12a3ffff,Barden Ridge,0.5018399250356821,,True,False,1.054074212014453
+coverage[official+osm] + equity w=2,117,89be085253bffff,Cabramatta West,0.3506299285336747,1.0,True,False,1.051889785601024
+coverage[official+osm] + equity w=2,118,89be085156bffff,Seven Hills (NSW),0.3745288894578918,2.0,True,False,1.048680890482097
+coverage[official+osm] + equity w=2,119,89be0842d57ffff,Penrith,0.3720117233135986,2.0,True,False,1.041632825278076
+coverage[official+osm] + equity w=2,120,89be085060bffff,Prospect (NSW),0.4934659990570818,,True,False,1.03648545714061

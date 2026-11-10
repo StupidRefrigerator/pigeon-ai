@@ -1,0 +1,79 @@
+{
+ "rates": {
+  "pitch_share": 0.06840450556745377,
+  "sports_share": 0.08015608982483789,
+  "sports_per_ha": 0.25327399254961985,
+  "playground_per_ha": 0.1699046366687033,
+  "re1_ha": 947.5903845633921
+ },
+ "re1": {
+  "planned_re1": {
+   "parcels": 112,
+   "developed": 15,
+   "undeveloped_ha": 285.2084039460008,
+   "developed_ha": 71.461520131257
+  },
+  "planned_re1_enz": {
+   "parcels": 173,
+   "developed": 15,
+   "undeveloped_ha": 1624.366183022302,
+   "developed_ha": 71.461520131257
+  }
+ },
+ "summary": [
+  {
+   "scenario": "current_osm",
+   "area": "aerotropolis",
+   "sports_500m": 0.11,
+   "sports_area_500m_m2": 1902.622,
+   "playground_500m": 0.029,
+   "distance_nearest_sports_m": 1839.419,
+   "distance_nearest_playground_m": 2570.761
+  },
+  {
+   "scenario": "current_osm",
+   "area": "leppington",
+   "sports_500m": 0.591,
+   "sports_area_500m_m2": 1069.848,
+   "playground_500m": 0.119,
+   "distance_nearest_sports_m": 1009.764,
+   "distance_nearest_playground_m": 1253.68
+  },
+  {
+   "scenario": "planned_re1",
+   "area": "aerotropolis",
+   "sports_500m": 0.217,
+   "sports_area_500m_m2": 2241.198,
+   "playground_500m": 0.101,
+   "distance_nearest_sports_m": 1569.766,
+   "distance_nearest_playground_m": 1914.693
+  },
+  {
+   "scenario": "planned_re1",
+   "area": "leppington",
+   "sports_500m": 1.9,
+   "sports_area_500m_m2": 5194.071,
+   "playground_500m": 0.998,
+   "distance_nearest_sports_m": 403.926,
+   "distance_nearest_playground_m": 536.305
+  },
+  {
+   "scenario": "planned_re1_enz",
+   "area": "aerotropolis",
+   "sports_500m": 2.24,
+   "sports_area_500m_m2": 8611.378,
+   "playground_500m": 1.457,
+   "distance_nearest_sports_m": 513.556,
+   "distance_nearest_playground_m": 543.686
+  },
+  {
+   "scenario": "planned_re1_enz",
+   "area": "leppington",
+   "sports_500m": 1.9,
+   "sports_area_500m_m2": 5194.071,
+   "playground_500m": 0.998,
+   "distance_nearest_sports_m": 403.926,
+   "distance_nearest_playground_m": 536.305
+  }
+ ]
+}
