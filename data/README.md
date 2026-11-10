@@ -153,6 +153,61 @@ python scripts/build_projections.py
 - OSM pedestrian features reflect mapped infrastructure, not actual walking routes or wheelchair accessibility.
 - Existing toilet locations are used only as target labels, not predictors.
 
+## V12 OSM features: sports grounds, playgrounds, beaches and OSM toilets
+
+The default model (V12) adds 17 OpenStreetMap columns to the 28 `latest` columns. The build also counts OSM public toilets, which the recommended list uses after the model.
+
+### Files
+
+| File in `data/processed/` | Rows | Contents |
+|---|---:|---|
+| `sydney_recreation_features.csv` | 16,228 | The 17 V12 columns and 3 `osm_toilets_*` columns for the study hexagons (same hexagons as `sydney_extended_features.csv`). |
+| `sydney_growth_recreation_features.csv` | 17,336 | The same columns for the growth set (same hexagons as `sydney_growth_features.csv`). |
+| `osm_toilets.csv` | 2,462 | One row per OSM `amenity=toilets`: `lat`, `lng`, `access`, `fee`, `name`, `operator`, `osm_type`, `osm_id`, `hex_id`, `is_public`, `is_public_tagged`, `is_private`. |
+
+Every hexagon has a value in every column. The model joins `sydney_recreation_features.csv` to `sydney_extended_features.csv` by `hex_id`.
+
+### Rebuilding
+
+```sh
+python -I scripts/build_recreation.py
+```
+
+It reads the Overpass tiles in `data/raw/osm_overpass_v12/` (see [DATA.md](../DATA.md)) and writes the three files above in about 40 seconds. Run it with `-I`, because it reads downloaded files. With the Drive copy of the tiles, the output is byte-identical to the committed files. `scripts/fetch_overpass.py` downloads new tiles from today's OSM. These give different values.
+
+### Source and query dates
+
+- OpenStreetMap through the Overpass API, queried 2026-11-09 from 12:13 to 15:07 UTC.
+- Bbox: 150.4939, -34.1406, 151.3624, -33.5211 (W, S, E, N). This is the bounds of all study, growth and future hexagons plus 1.5 km.
+- The bbox was split into a 4 × 3 grid. Tiles that failed were split 2 × 2, and some again, which gives 39 tiles. Elements on tile edges are counted once, by OSM type and id.
+- Of the 40 responses (39 tiles and the surf-club query), 25 came from overpass-api.de, 8 from overpass.kumi.systems and 7 from overpass.private.coffee.
+- **Freshness varies by tile.** overpass-api.de tiles are from 2026-11-09. Mirror tiles 0_2, 1_0, 2_0, 2_1_10, 2_2_01, 2_2_11, 3_0_00, 3_0_10, 3_0_11, 3_1_10_01, 3_1_10_10, 3_2_01_01, 3_2_01_10 and 3_2_11 are snapshots from 2026-05-31 to 2026-07-28. OSM edits made after those dates are missing there.
+- Query per tile: `leisure` = pitch, sports_centre, stadium, track, golf_course, playground or beach_resort; `natural=beach`; lifeguard and surf-club tags; and `amenity=toilets`. One extra query found surf clubs by name over the coast east of 151.10°.
+
+### Columns
+
+| Column | Definition |
+|---|---|
+| `sports_inside`, `sports_250m`, `sports_500m`, `sports_1000m` | Count of `leisure` = pitch, sports_centre, stadium or track (12,871 features). Golf courses are left out. |
+| `sports_area_inside_m2`, `sports_area_500m_m2` | Area (m²) of the union of sports polygons in the hexagon or a 500 m circle. The union stops a pitch inside a stadium from counting twice. |
+| `distance_nearest_sports_m` | Metres from the hexagon centre to the nearest sports feature. 0 if the centre is inside one. |
+| `playground_inside`, `playground_250m`, `playground_500m`, `playground_1000m` | Count of `leisure=playground` (3,575). |
+| `distance_nearest_playground_m` | Metres to the nearest playground. |
+| `beach_inside`, `beach_250m`, `beach_500m`, `beach_1000m` | Count of `natural=beach` (322) plus surf lifesaving clubs and lifeguard posts (63). A surf beach usually scores 2 or 3. Harbour, bay and river beaches count too. |
+| `distance_nearest_beach_m` | Metres to the nearest beach feature. |
+| `osm_toilets_public` | OSM toilets in the hexagon whose `access` is yes, permissive, public or missing. **Not a model input.** |
+| `osm_toilets_public_tagged` | The same, but `access` is set to yes, permissive or public. Not a model input. |
+| `osm_toilets_private` | OSM toilets whose `access` is customers, private or no. Not a model input. |
+
+Counts, areas and distances follow the conventions of the park features: EPSG:7856, representative points taken before projection, `within` for inside counts, 16-segment circles for counts and 8-segment circles for areas. Nodes count as points. Ways and multipolygon relations are rebuilt as polygons, or as lines for unclosed ways such as running tracks.
+
+### Caveats
+
+- **Missing OSM data is a blind spot.** OSM has no sports ground mapped at Ken Birdsey Park (Schofields) or Anthony Skarratt Reserve (Box Hill), two council-planned sites. Both hexagons have zero sports and zero playgrounds, so the model cannot flag them.
+- The `osm_toilets_*` columns nearly copy the label (Spearman 0.57 with `toilet_count`). As inputs, the model would learn to copy the label. They are used only after the model.
+- In the study hexagons, OSM lists 1,862 public toilets and the official map 2,570. 272 hexagons have an OSM public toilet but an official count of 0.
+- A playground node inside a playground polygon counts twice. Duplicate mapping is not merged.
+
 ## Important methodology notes
 
 - The approved study area contains **10,503 SA1s**. Historical selection used **50 people/km²**, not 500. Approved preliminary membership is frozen in `data/reference/`; growth exclusions are recalculated using suburb and SA1 representative points.

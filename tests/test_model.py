@@ -10,7 +10,7 @@ import pandas as pd
 import pytest
 
 from pigeon_ai.model import (
-    REVIEW_COLUMNS, TARGETS, ReviewStatus, cross_validate, is_candidate, load_review, merge_review,
+    DEFAULT_FEATURES, REVIEW_COLUMNS, TARGETS, ReviewStatus, cross_validate, is_candidate, load_review, merge_review,
     save_review,
 )
 
@@ -91,3 +91,11 @@ def test_candidates_are_empty_hexes_or_shortfalls_of_at_least_the_threshold():
     pred = np.array([1.0, 0.9, 2.1, 1.5, 3.2])
     actual = np.array([0, 0, 1, 1, 2])
     assert is_candidate(pred, actual, 1.0).tolist() == [True, False, True, False, True]
+
+
+def test_v12_is_latest_plus_the_osm_recreation_columns_and_is_the_default():
+    sets = TARGETS["toilets"].feature_sets
+    assert DEFAULT_FEATURES == "v12"
+    assert sets["v12"][:len(sets["latest"])] == sets["latest"]
+    assert len(sets["latest"]) == 28 and len(sets["v12"]) == 45
+    assert not [f for f in sets["v12"] if f.startswith("osm_toilets")]

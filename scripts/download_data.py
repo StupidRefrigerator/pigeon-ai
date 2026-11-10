@@ -10,8 +10,10 @@ import gdown
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from pigeon_ai.paths import RAW
 
-# Optional share link to the ZIP file itself, not its Drive folder; see DATA.md.
+# Share links to the ZIP files themselves, not their Drive folder; see DATA.md.
 DRIVE_URL = ""
+# TODO(drive): upload pigeon-ai-raw-v12-osm.zip to the team Drive folder and paste its share link here.
+V12_OSM_DRIVE_URL = ""
 
 REQUIRED = [
     "national_toilets.csv",
@@ -21,25 +23,44 @@ REQUIRED = [
     "abs_suburbs/SAL_2026_AUST_GDA2020.shp",
     "osm/nsw.osm.pbf",
 ]
+V12_OSM_REQUIRED = [
+    "osm_overpass_v12/fetch_log.json",
+    "osm_overpass_v12/overpass_tile_0_0.json",
+    "osm_overpass_v12/overpass_slsc_names.json",
+]
 
 
-def main(url):
-    if not url:
-        sys.exit("Pass the share link to pigeon-ai-raw.zip (not the Drive folder); see DATA.md.")
+def download(url, name, required):
     RAW.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory() as temporary:
-        archive = Path(temporary) / "pigeon-ai-raw.zip"
+        archive = Path(temporary) / name
         gdown.download(url, str(archive))
         with zipfile.ZipFile(archive) as zipped:
             zipped.extractall(RAW)
-
-    missing = [name for name in REQUIRED if not (RAW / name).exists()]
+    missing = [path for path in required if not (RAW / path).exists()]
     if missing:
-        sys.exit("Missing from data/raw/:\n  " + "\n  ".join(missing))
+        sys.exit(f"Missing from data/raw/ after extracting {name}:\n  " + "\n  ".join(missing))
+
+
+def main(url, v12_osm_url, v12_osm_only):
+    zips = [(v12_osm_url, "pigeon-ai-raw-v12-osm.zip", V12_OSM_REQUIRED)]
+    if not v12_osm_only:
+        zips.insert(0, (url, "pigeon-ai-raw.zip", REQUIRED))
+    missing = [name for link, name, _ in zips if not link]
+    if missing:
+        sys.exit("No share link for " + " or ".join(missing) + ". Pass it as an argument or set it in "
+                 "scripts/download_data.py (V12_OSM_DRIVE_URL is a TODO until the zip is on Drive); see DATA.md.")
+    for link, name, required in zips:
+        download(link, name, required)
     print(f"Raw data ready in {RAW}")
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("url", nargs="?", default=DRIVE_URL, help="Drive share link")
-    main(parser.parse_args().url)
+    parser.add_argument("url", nargs="?", default=DRIVE_URL, help="Drive share link to pigeon-ai-raw.zip")
+    parser.add_argument("--v12-osm", default=V12_OSM_DRIVE_URL,
+                        help="Drive share link to pigeon-ai-raw-v12-osm.zip (Overpass tiles for V12)")
+    parser.add_argument("--v12-osm-only", action="store_true",
+                        help="download only pigeon-ai-raw-v12-osm.zip")
+    args = parser.parse_args()
+    main(args.url, args.v12_osm, args.v12_osm_only)

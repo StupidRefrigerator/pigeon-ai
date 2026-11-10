@@ -1,24 +1,36 @@
 # Data
 
-Raw data is too large for Git and lives in the team Google Drive as one zip, `pigeon-ai-raw.zip`. You only need it to rebuild the dataset. Modelling uses the committed `data/processed/sydney_hex_features.csv`.
+Raw data is too large for Git and lives in the team Google Drive as two zips:
+
+- `pigeon-ai-raw.zip`: everything except the V12 OpenStreetMap layers.
+- `pigeon-ai-raw-v12-osm.zip`: the Overpass downloads behind the V12 features (sports grounds, playgrounds, beaches, OSM toilets). About 2 MB.
+
+> **TODO(drive):** `pigeon-ai-raw-v12-osm.zip` is not on the Drive yet. Until someone uploads it and sets `V12_OSM_DRIVE_URL` in `scripts/download_data.py`, ask Summit for the zip.
+
+You only need them to rebuild the dataset. Modelling uses the committed CSVs in `data/processed/`.
 
 ## Getting the data
 
 ```sh
-python scripts/download_data.py "<share link to pigeon-ai-raw.zip itself>"
+python scripts/download_data.py
 ```
 
-Get the ZIP-file share link from the [team Drive folder](https://drive.google.com/drive/folders/1mbuAEllISFlfmRX8O7300f_iwsCJ04cM?usp=sharing).
-The folder URL itself is not a downloadable ZIP. You can optionally set the
-file link as `DRIVE_URL` in the script.
+This downloads both zips using the links in the script. To pass links yourself, run `python scripts/download_data.py "<pigeon-ai-raw.zip link>" --v12-osm "<pigeon-ai-raw-v12-osm.zip link>"`. To get only the V12 zip, add `--v12-osm-only`.
 
-This downloads the zip, extracts it into `data/raw/`, and checks that the required files exist. Manual alternative: download the zip from Drive and unzip it into `data/raw/`.
+Get the ZIP-file share link from the [team Drive folder](https://drive.google.com/drive/folders/1mbuAEllISFlfmRX8O7300f_iwsCJ04cM?usp=sharing).
+The folder URL itself is not a downloadable ZIP. Set the
+file links as `DRIVE_URL` and `V12_OSM_DRIVE_URL` in the script.
+
+This downloads each zip, extracts it into `data/raw/`, and checks that the required files exist. Manual alternative: download the zips from Drive and unzip them into `data/raw/`.
 
 ## Updating the data
 
-1. Zip the contents of `data/raw/`, not the folder itself: `cd data/raw && zip -r ../../pigeon-ai-raw.zip .`
-2. Upload it to the Drive folder, replacing the old version. Set sharing to "Anyone with the link can view".
-3. Paste the share link into `DRIVE_URL` in `scripts/download_data.py`, and update the table below.
+1. Zip the contents of `data/raw/` without the V12 folder, not the folder itself: `cd data/raw && zip -r ../../pigeon-ai-raw.zip . -x 'osm_overpass_v12/*'`
+2. Zip the V12 folder on its own: `cd data/raw && zip -r ../../pigeon-ai-raw-v12-osm.zip osm_overpass_v12`
+3. Upload the changed zip to the Drive folder, replacing the old version. Set sharing to "Anyone with the link can view".
+4. Paste the share link into `DRIVE_URL` or `V12_OSM_DRIVE_URL` in `scripts/download_data.py`, and update the table below.
+
+To refresh the V12 layers from today's OpenStreetMap, run `python scripts/fetch_overpass.py --out-dir data/raw/osm_overpass_v12_new`, check it, then replace `data/raw/osm_overpass_v12/` with it. The public Overpass servers are often overloaded: the first download took about 3 hours, with many HTTP 502/504 errors. The script retries, rotates between mirrors and splits failing tiles. Rerun it to resume. The new download gives different feature values, because OSM changes.
 
 ## Files
 
@@ -30,8 +42,9 @@ This downloads the zip, extracts it into `data/raw/`, and checks that the requir
 | `abs_boundaries/`      | ABS 2026 GCCSA boundaries                | ABS digital boundary files | 2026-10-18 |
 | `abs_suburbs/`         | ABS 2026 Suburbs and Localities (SAL)    | ABS digital boundary files | 2026-10-18 |
 | `osm/nsw.osm.pbf`      | OpenStreetMap NSW extract                | Geofabrik                  | 2026-10-18 |
+| `osm_overpass_v12/`    | OpenStreetMap sports, playgrounds, beaches, surf clubs and toilets, in 39 tiles plus one surf-club query (in `pigeon-ai-raw-v12-osm.zip`) | Overpass API (`scripts/fetch_overpass.py`) | 2026-11-09 |
 
-The OSM extract changes daily, so download it again from the source and the features will differ slightly. Use the Drive copy to reproduce the committed dataset exactly.
+OSM changes daily, so a new download gives slightly different features. Use the Drive copies to reproduce the committed dataset exactly. In `osm_overpass_v12/`, `fetch_log.json` and the `.meta.json` files record each tile's server and OSM snapshot time. Some mirror tiles are snapshots from 2026-05-31 to 2026-07-28, not 2026-11-09.
 
 The archived baseline (`archive/before_simplification/`) is also in the Drive folder. It's only needed for `--check-baseline`.
 

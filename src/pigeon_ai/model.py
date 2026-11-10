@@ -1,4 +1,4 @@
-"""Toilet-placement model: spatial CV, SHAP, candidates, evals and the review file."""
+"""Toilet-placement model: spatial CV, SHAP, candidates, evals, the recommended list and the review file."""
 from dataclasses import dataclass
 from enum import StrEnum
 from time import perf_counter
@@ -20,9 +20,12 @@ from sklearn.tree import DecisionTreeRegressor, plot_tree
 from .accessibility import ACCESSIBILITY_FEATURES
 from .experiments import EXTENDED_FEATURES
 from .paths import PROCESSED, ROOT
+from .postprocess import recommendations
+from .recreation import RECREATION_FEATURES
 from .validation import FEATURES
 
 DATA_FILE = PROCESSED / "sydney_extended_features.csv"
+RECREATION_FILE = PROCESSED / "sydney_recreation_features.csv"
 MODEL_DIR = ROOT / "data/model"
 REVIEW_PATH = ROOT / "data/review/candidate_review.csv"
 
@@ -44,16 +47,20 @@ class Target:
 
 # Each infrastructure type lists its own inputs so a future target can omit
 # columns that would leak its label (a parks target would drop park_*).
+# The column order is part of the model: max_features samples by position.
 _V1 = [f for f in FEATURES if f != "population_density"]
+_LATEST = _V1 + EXTENDED_FEATURES[len(FEATURES):] + ACCESSIBILITY_FEATURES
 TARGETS = {
     "toilets": Target(
         label="toilet_count",
         feature_sets={
             "v1": _V1,
-            "latest": _V1 + EXTENDED_FEATURES[len(FEATURES):] + ACCESSIBILITY_FEATURES,
+            "latest": _LATEST,
+            "v12": _LATEST + RECREATION_FEATURES,
         },
     ),
 }
+DEFAULT_FEATURES = "v12"
 
 
 class ReviewStatus(StrEnum):
@@ -139,6 +146,12 @@ def p_any(pred):
     return 1 - np.exp(-pred)
 
 
+def load_data(data_file=DATA_FILE, recreation_file=RECREATION_FILE):
+    """The extended features with the V12 OSM columns joined by hex_id, in the extended file's order."""
+    extra = pd.read_csv(recreation_file)
+    return pd.read_csv(data_file).merge(extra, on="hex_id", how="left", validate="1:1")
+
+
 # Evals
 
 def top_hits(score, actual, n=100):
@@ -148,14 +161,14 @@ def top_hits(score, actual, n=100):
 def metrics_row(name, actual, pred=None, ranking=None, threshold=THRESHOLD):
     """Fill only the metrics that mean something for this kind of model."""
     row = dict(model=name, deviance=np.nan, pr_auc=np.nan, predicted_total=np.nan,
-               actual_total=int(actual.sum()), top100_hits=np.nan, candidates=np.nan)
+               actual_total=int(actual.sum()), top100_hits=np.nan, top1000_hits=np.nan, candidates=np.nan)
     if pred is not None:
         pred = np.clip(pred, MIN_PREDICTION, None)
         row.update(deviance=mean_poisson_deviance(actual, pred), predicted_total=pred.sum(),
                    candidates=int(is_candidate(pred, actual, threshold).sum()))
     if ranking is not None:
         row.update(pr_auc=average_precision_score(actual > 0, ranking),
-                   top100_hits=top_hits(ranking, actual))
+                   top100_hits=top_hits(ranking, actual), top1000_hits=top_hits(ranking, actual, 1000))
     return row
 
 
@@ -261,13 +274,23 @@ def review_progress(review):
 
 # Pipeline
 
-def run(target_name="toilets", feature_set="latest", threshold=THRESHOLD, today=None,
-        out_dir=MODEL_DIR, review_path=REVIEW_PATH, data_file=DATA_FILE):
+def recommended_list(df, pred):
+    """The default recommended list with coordinates; see postprocess.recommendations."""
+    rec = recommendations(df["hex_id"], pred, df["toilet_count"], df["osm_toilets_public"], df[SEIFA_COLUMN])
+    rec.insert(1, "lat", [round(h3.cell_to_latlng(h)[0], 5) for h in rec["hex_id"]])
+    rec.insert(2, "lng", [round(h3.cell_to_latlng(h)[1], 5) for h in rec["hex_id"]])
+    return rec
+
+
+def run(target_name="toilets", feature_set=DEFAULT_FEATURES, threshold=THRESHOLD, today=None,
+        out_dir=MODEL_DIR, review_path=REVIEW_PATH, data_file=DATA_FILE, recreation_file=RECREATION_FILE):
     start = perf_counter()
     target = TARGETS[target_name]
     label, features = target.label, target.feature_sets[feature_set]
-    other_set = next(s for s in target.feature_sets if s != feature_set)
-    df = pd.read_csv(data_file)
+    # Compare with the set registered just before this one (v12 -> latest), or the last for the first.
+    names = list(target.feature_sets)
+    other_set = names[names.index(feature_set) - 1] if names.index(feature_set) else names[-1]
+    df = load_data(data_file, recreation_file)
     actual = df[label].to_numpy()
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -306,7 +329,7 @@ def run(target_name="toilets", feature_set="latest", threshold=THRESHOLD, today=
         metrics_row("forest population only", actual, pop_pred, pop_pred, threshold),
         metrics_row("mean everywhere", actual, mean_pred, None, threshold),
         metrics_row("rank by shop_500m", actual, None, df["shop_500m"].to_numpy(), threshold),
-    ]).astype({"top100_hits": "Int64", "candidates": "Int64"})
+    ]).astype({"top100_hits": "Int64", "top1000_hits": "Int64", "candidates": "Int64"})
     calibration = calibration_table(pred, actual)
     folds = fold_table(pred, actual, fold)
     stability = pd.DataFrame(
@@ -320,6 +343,15 @@ def run(target_name="toilets", feature_set="latest", threshold=THRESHOLD, today=
         table.to_csv(out_dir / f"{name}.csv", index=False)
     surrogate_r2 = save_surrogate_plot(df, features, pred, out_dir / "decision_tree.png")
 
+    rec_text = ""
+    if target_name == "toilets":
+        rec = recommended_list(df, pred)
+        rec.round(4).to_csv(out_dir / "recommendations.csv", index=False)
+        deciles = rec["seifa_decile"]
+        rec_text = (f"\nRecommended list (recommendations.csv): {len(rec)} hexes; "
+                    f"SEIFA deciles 1-3: {int(deciles.between(1, 3).sum())}, 8-10: {int(deciles.between(8, 10).sum())}; "
+                    f"no toilet within 400 m: {int(rec['uncovered_400m'].sum())}")
+
     found = hexes[candidate].copy()
     found[["lat", "lng"]] = [[round(c, 5) for c in h3.cell_to_latlng(i)] for i in found["hex_id"]]
     for col in ("predicted_toilets", "p_any_toilet"):
@@ -327,7 +359,7 @@ def run(target_name="toilets", feature_set="latest", threshold=THRESHOLD, today=
     review = load_review(review_path)
     # Only the default configuration owns the review file; experiments must not
     # mark reviewed candidates as stale or add their own.
-    if (target_name, feature_set, threshold) == ("toilets", "latest", THRESHOLD):
+    if (target_name, feature_set, threshold) == ("toilets", DEFAULT_FEATURES, THRESHOLD):
         review = merge_review(review, found, today or pd.Timestamp.today().date().isoformat())
         save_review(review, review_path)
     else:
@@ -351,6 +383,7 @@ def run(target_name="toilets", feature_set="latest", threshold=THRESHOLD, today=
               "SEIFA never used as an input)", fairness, float_format=lambda x: f"{x:.2f}"),
         block("Feature importance (mean |SHAP|)", importance, float_format=fmt),
         f"\nSurrogate depth-3 tree R^2 vs forest predictions: {surrogate_r2:.3f}",
+        rec_text,
         "\n== Review progress ==\n" + counts.to_string()
         + f"\nShare of reviewed candidates that are real gaps: {share_text}",
         f"\nCandidates this run: {int(candidate.sum())} "
