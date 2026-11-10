@@ -31,18 +31,10 @@ dist/
 # Trained models
 models/
 
-# Regenerable model outputs, except the three shared inference models.
-data/model/*
-!data/model/final/
-data/model/final/*
-!data/model/final/V[156].pkl
-!data/model/final/V[156].json
+# Regenerable model outputs
+data/model/
 
 # Large experiment outputs, kept in pigeon-ai-experiment-outputs.zip on the team Drive (see DATA.md)
 experiments/v2/combos/out/study_oof_predictions.csv
-
-# Large experiment outputs, kept in pigeon-ai-experiment-outputs.zip on the team Drive (see DATA.md)
 experiments/future/aero_predictions.csv
-
-# Large experiment outputs, kept in pigeon-ai-experiment-outputs.zip on the team Drive (see DATA.md)
 experiments/future/aero_features.csv
