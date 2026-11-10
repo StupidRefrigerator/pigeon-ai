@@ -47,3 +47,17 @@ To refresh the V12 layers from today's OpenStreetMap, run `python scripts/fetch_
 OSM changes daily, so a new download gives slightly different features. Use the Drive copies to reproduce the committed dataset exactly. In `osm_overpass_v12/`, `fetch_log.json` and the `.meta.json` files record each tile's server and OSM snapshot time. Some mirror tiles are snapshots from 2026-05-31 to 2026-07-28, not 2026-11-09.
 
 The archived baseline (`archive/before_simplification/`) is also in the Drive folder. It's only needed for `--check-baseline`.
+
+## Experiment outputs
+
+Three large per-hexagon outputs from `experiments/` are not in Git (12.7 MB). They are in `pigeon-ai-experiment-outputs.zip` on the team Drive:
+
+| File | Made by | Read by |
+| --- | --- | --- |
+| `experiments/v2/combos/out/study_oof_predictions.csv` | `experiments/v2/combos/study_cv.py` (about 3 min) | `experiments/v2/combos/evaluate_study.py` |
+| `experiments/future/aero_predictions.csv` | `experiments/future/run_aero.py` | Nothing; kept for reference |
+| `experiments/future/aero_features.csv` | `experiments/future/run_aero.py` | `experiments/v2/data/scripts/hexsets.py` |
+
+Unzip it at the repo root (`unzip pigeon-ai-experiment-outputs.zip`), or rerun the script that makes the file. You don't need them to train the model or run the app; the summary CSVs that the findings page and the app read are committed.
+
+> **TODO(drive):** `pigeon-ai-experiment-outputs.zip` is not on the Drive yet. Until it is, ask Summit for it.
