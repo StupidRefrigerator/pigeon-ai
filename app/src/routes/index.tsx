@@ -6,6 +6,7 @@ export const Route = createFileRoute('/')({ component: Landing })
 function Landing() {
   return (
     <main className="landing">
+      <img src="/logo.svg" alt="" className="logo" />
       <h1>Pigeon AI</h1>
       <p className="tagline">Helping councils plan where Sydney's next public toilets should go.</p>
       <span className="badge">Coming soon</span>

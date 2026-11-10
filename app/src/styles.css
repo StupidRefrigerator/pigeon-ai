@@ -17,6 +17,7 @@ button, input, select { font: inherit; }
 
 /* landing */
 .landing { min-height: 100vh; display: grid; place-content: center; text-align: center; padding: 2rem; gap: 1.1rem; justify-items: center; }
+.landing .logo { height: 7rem; }
 .landing h1 { font-size: clamp(2.6rem, 8vw, 4.5rem); letter-spacing: -0.03em; }
 .landing .tagline { font-size: 1.2rem; color: var(--muted); max-width: 34rem; margin: 0; }
 .badge { display: inline-block; padding: 0.2rem 0.8rem; border: 1px solid var(--ink); border-radius: 999px; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; }
@@ -31,7 +32,8 @@ button, input, select { font: inherit; }
 .topbar { display: flex; align-items: center; gap: 1.2rem; padding: 0.6rem 1rem; background: var(--ink); color: #fff; }
 .topbar a { color: #cfd8e1; text-decoration: none; }
 .topbar a.active { color: #fff; border-bottom: 2px solid var(--accent); }
-.topbar .brand { font-weight: 700; color: #fff; margin-right: auto; }
+.topbar .brand { font-weight: 700; color: #fff; margin-right: auto; display: flex; align-items: center; gap: 0.5rem; }
+.topbar .brand img { height: 1.6rem; }
 .page { flex: 1; min-height: 0; }
 
 /* app placeholder */
