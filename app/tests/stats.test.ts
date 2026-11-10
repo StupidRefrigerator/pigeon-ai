@@ -20,3 +20,18 @@ describe('stats.json', () => {
     for (const r of ratios) expect(Math.abs(r.pct - (100 * r.x) / r.y)).toBeLessThanOrEqual(0.5)  // pct may be rounded to a whole number
   })
 })
+
+import tracking from '../src/data/tracking.json'
+
+describe('tracking.json', () => {
+  it('marks exactly one current version, and it is the best PR-AUC', () => {
+    const current = tracking.versions.filter((v) => v.status === 'current')
+    expect(current.map((v) => v.id)).toEqual([tracking.current.id])
+    const best = Math.max(...tracking.versions.map((v) => v.prAuc ?? 0))
+    expect(current[0]!.prAuc).toBe(best)
+  })
+
+  it('keeps every version from the original comparison page', () => {
+    expect(tracking.versions.slice(0, 10).map((v) => v.id)).toEqual(['V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9', 'V10'])
+  })
+})

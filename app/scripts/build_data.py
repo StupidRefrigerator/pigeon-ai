@@ -158,8 +158,65 @@ plans = {
 STATS_PATH = APP / "src" / "data" / "stats.json"
 STATS_PATH.parent.mkdir(exist_ok=True)
 STATS_PATH.write_text(json.dumps({
-    "model": "Original cross-validated RandomForest, `latest` feature set (5-fold spatial CV; every number is held-out)",
+    "model": "Sections 1–7 use V11, the `latest` feature set (5-fold spatial CV; every number is held-out)",
     "headline": headline, "validity": validity, "growth": growth, "bradfield": bradfield,
     "plans": plans, "seifa": curated["seifa"], "newAreaTests": curated["new_area_tests"],
+    "v2Changes": curated["v2_changes"]["rows"], "v2Note": curated["v2_changes"]["note"],
 }, indent=1, ensure_ascii=False))
 print(f"stats.json: {STATS_PATH.stat().st_size / 1024:.0f} KB (bundled into the app, src/data/)")
+
+# ---------- tracking page: version history + the current model ----------
+V2 = REPO / "experiments/v2/combos/out"
+sm = pd.read_csv(V2 / "study_metrics.csv", header=[0, 1], index_col=[0, 1, 2])
+def study(model):
+    row = sm.loc[("official", "all", model)]
+    return {k: row[(k, "mean")] for k in ["pr_auc", "top100", "top1000", "deviance", "pred_total", "actual_total"]}
+summ = pd.read_csv(V2 / "summary_table.csv").set_index(["model", "post-processing"])
+m0, m1 = study("M0"), study("M1")
+assert (r(m0["pr_auc"]), r(m1["pr_auc"])) == (0.52, 0.569)
+
+def ratio(s):
+    x, y = (int(v) for v in s.split("/"))
+    return {"x": x, "y": y, "pct": round(100 * x / y)}
+
+jimmy = curated["versions_jimmy"]
+versions = [
+    {"id": v, "description": d, "hexes": h, "features": f, "deviance": dev, "prAuc": pa, "top100": t,
+     "status": "pending" if pa is None else "done"}
+    for v, d, h, f, dev, pa, t in jimmy["rows"]
+] + [
+    {"id": "V11", "description": "V5 + V6 combined: baseline, 1 km surroundings and accessibility", "hexes": n_hex, "features": 28,
+     "deviance": r(m0["deviance"], 4), "prAuc": r(m0["pr_auc"], 4), "top100": round(m0["top100"]), "status": "done"},
+    {"id": "V12", "description": "V11 + sports fields, playgrounds and beaches", "hexes": n_hex, "features": 45,
+     "deviance": r(m1["deviance"], 4), "prAuc": r(m1["pr_auc"], 4), "top100": round(m1["top100"]), "status": "current"},
+]
+
+chosen = summ.loc[("M1, OSM fix after model", "P1 equity w=1")]
+poor, rich = (int(v) for v in chosen["deciles 1–3 / 8–10"].split("/"))
+TRACKING_PATH = APP / "src" / "data" / "tracking.json"
+TRACKING_PATH.write_text(json.dumps({
+    "source": "5-fold res-6 spatial CV on 16,228 study hexes. V1–V10 are Jimmy's saved runs (seed 0). V11 and V12 are the mean of seeds 0–2 (experiments/v2/combos).",
+    "versions": versions,
+    "current": {
+        "id": "V12",
+        "prAuc": {"value": r(m1["pr_auc"]), "was": r(m0["pr_auc"]), "random": 0.118},
+        "deviance": {"value": r(m1["deviance"]), "was": r(m0["deviance"])},
+        "top1000": {"x": round(m1["top1000"]), "y": 1000, "pct": round(m1["top1000"] / 10, 1)},
+        "council": ratio(summ.loc[("M1 +F", "P0 none"), "council top 10%"]),
+        "predictedTotal": round(m1["pred_total"]), "actualTotal": int(m1["actual_total"]),
+        "setup": [
+            "Predict toilets per hex with V12",
+            "Skip spots where OpenStreetMap already lists a toilet",
+            "Rank with disadvantage weighting (w = 1)",
+            "List only spots short by at least 1 toilet",
+        ],
+        "picks": {
+            "listed": ratio(chosen["picks gap ≥ 1"])["x"],
+            "osmAlready": ratio(chosen["OSM toilet already"]),
+            "nearPlanned": ratio(chosen["near planned site"]),
+            "poorest30": {"x": poor, "y": 120, "pct": round(100 * poor / 120)},
+            "richest30": {"x": rich, "y": 120, "pct": round(100 * rich / 120)},
+        },
+    },
+}, indent=1, ensure_ascii=False))
+print(f"tracking.json: {TRACKING_PATH.stat().st_size / 1024:.0f} KB")

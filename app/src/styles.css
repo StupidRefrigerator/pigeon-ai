@@ -60,3 +60,7 @@ table.t td.num, table.t th.num { text-align: right; font-variant-numeric: tabula
   .explorer { grid-template-columns: 1fr; grid-template-rows: auto 60vh; height: auto; }
   .shell { height: auto; min-height: 100vh; }
 }
+
+.steps { margin: 0; padding-left: 1.4rem; display: flex; flex-direction: column; gap: 0.3rem; }
+.t tr.current td { background: #eef3f7; }
+.tag { margin-left: 0.4rem; font-size: 0.7rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: var(--ink); color: #fff; vertical-align: middle; }

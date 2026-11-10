@@ -58,6 +58,35 @@ export interface Stats {
     note: string
   }
   newAreaTests: { test: string; where: string; real_data: string; shows: string; result: string }[]
+  v2Changes: { change: string; prAuc: string; council: string; growth: string; verdict: string }[]
+  v2Note: string
+}
+
+export interface Version {
+  id: string
+  description: string
+  hexes: number
+  features: number
+  deviance: number | null
+  prAuc: number | null
+  top100: number | null
+  status: 'done' | 'pending' | 'current'
+}
+
+export interface Tracking {
+  source: string
+  versions: Version[]
+  current: {
+    id: string
+    prAuc: { value: number; was: number; random: number }
+    deviance: { value: number; was: number }
+    top1000: Ratio
+    council: Ratio
+    predictedTotal: number
+    actualTotal: number
+    setup: string[]
+    picks: { listed: number; osmAlready: Ratio; nearPlanned: Ratio; poorest30: Ratio; richest30: Ratio }
+  }
 }
 
 export interface PlanRow {

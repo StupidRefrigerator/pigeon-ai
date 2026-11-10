@@ -13,7 +13,10 @@ function AppShell() {
           App
         </Link>
         <Link to="/app/stats" activeProps={{ className: 'active' }}>
-          Stats
+          Tracking
+        </Link>
+        <Link to="/app/tests" activeProps={{ className: 'active' }}>
+          Tests
         </Link>
       </header>
       <div className="page">

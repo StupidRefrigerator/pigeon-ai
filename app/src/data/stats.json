@@ -1,5 +1,5 @@
 {
- "model": "Original cross-validated RandomForest, `latest` feature set (5-fold spatial CV; every number is held-out)",
+ "model": "Sections 1–7 use V11, the `latest` feature set (5-fold spatial CV; every number is held-out)",
  "headline": {
   "hexes": 16228,
   "toilets": 2570,
@@ -368,5 +368,50 @@
    "shows": "Whether test B's guessed features can be trusted",
    "result": "proxy keeps 5/10 of the real-feature top 10"
   }
- ]
+ ],
+ "v2Changes": [
+  {
+   "change": "V11 (before)",
+   "prAuc": "0.520",
+   "council": "26/42",
+   "growth": "24/35",
+   "verdict": ""
+  },
+  {
+   "change": "+ sports fields, playgrounds, beaches (V12)",
+   "prAuc": "0.569",
+   "council": "30/42",
+   "growth": "22/35",
+   "verdict": "Keep. The only change that beats the noise (seed spread ±0.001)."
+  },
+  {
+   "change": "Retrain on OSM toilets as labels",
+   "prAuc": "0.506",
+   "council": "24/42",
+   "growth": "24/35",
+   "verdict": "Drop. Predicts 29% too many toilets and makes 267 candidates."
+  },
+  {
+   "change": "Count OSM toilets after the model",
+   "prAuc": "same",
+   "council": "same",
+   "growth": "same",
+   "verdict": "Keep. Picks with an OSM toilet fall from 37/120 to 9/120."
+  },
+  {
+   "change": "Disadvantage weighting w = 1",
+   "prAuc": "same",
+   "council": "same",
+   "growth": "same",
+   "verdict": "Keep. Picks in deciles 1–3 rise from 32 to 54 of 120; deciles 8–10 fall from 17 to 3."
+  },
+  {
+   "change": "400 m walk as a filter",
+   "prAuc": "same",
+   "council": "same",
+   "growth": "same",
+   "verdict": "Drop as a filter, keep as a map layer. Only 5–20 of its 120 picks are real gaps."
+  }
+ ],
+ "v2Note": "1,471,429 of 4,491,614 residents (32.8%) have no listed toilet within about 400 m. Correction to section 2: counting strictly inside the hex, 39/120 (32%) of V11's candidates already have an OSM public toilet; the 60/120 figure also counted toilets up to 50 m outside the hex."
 }

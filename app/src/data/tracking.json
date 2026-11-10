@@ -1,0 +1,178 @@
+{
+ "source": "5-fold res-6 spatial CV on 16,228 study hexes. V1–V10 are Jimmy's saved runs (seed 0). V11 and V12 are the mean of seeds 0–2 (experiments/v2/combos).",
+ "versions": [
+  {
+   "id": "V1",
+   "description": "Baseline: population, amenities, transport and parks",
+   "hexes": 16228,
+   "features": 20,
+   "deviance": 0.4268,
+   "prAuc": 0.5109,
+   "top100": 83,
+   "status": "done"
+  },
+  {
+   "id": "V2",
+   "description": "Population only",
+   "hexes": 16228,
+   "features": 4,
+   "deviance": 0.6307,
+   "prAuc": 0.2499,
+   "top100": 47,
+   "status": "done"
+  },
+  {
+   "id": "V3",
+   "description": "Amenities, transport and parks only",
+   "hexes": 16228,
+   "features": 16,
+   "deviance": 0.435,
+   "prAuc": 0.5037,
+   "top100": 85,
+   "status": "done"
+  },
+  {
+   "id": "V4",
+   "description": "Local features: inside hexagon and within 250 m",
+   "hexes": 16228,
+   "features": 13,
+   "deviance": 0.4377,
+   "prAuc": 0.4958,
+   "top100": 85,
+   "status": "done"
+  },
+  {
+   "id": "V5",
+   "description": "Baseline + 1 km surrounding features",
+   "hexes": 16228,
+   "features": 26,
+   "deviance": 0.421,
+   "prAuc": 0.516,
+   "top100": 86,
+   "status": "done"
+  },
+  {
+   "id": "V6",
+   "description": "Baseline + pedestrian accessibility",
+   "hexes": 16228,
+   "features": 23,
+   "deviance": 0.4205,
+   "prAuc": 0.514,
+   "top100": 84,
+   "status": "done"
+  },
+  {
+   "id": "V7",
+   "description": "Baseline + demographics and SEIFA",
+   "hexes": 16228,
+   "features": 26,
+   "deviance": 0.4244,
+   "prAuc": 0.5115,
+   "top100": 84,
+   "status": "done"
+  },
+  {
+   "id": "V8",
+   "description": "Baseline + future population projections (exploratory)",
+   "hexes": 16228,
+   "features": 24,
+   "deviance": 0.4281,
+   "prAuc": 0.5109,
+   "top100": 86,
+   "status": "done"
+  },
+  {
+   "id": "V9",
+   "description": "Expanded study area including growth suburbs",
+   "hexes": 17336,
+   "features": 20,
+   "deviance": 0.4102,
+   "prAuc": 0.5071,
+   "top100": 84,
+   "status": "done"
+  },
+  {
+   "id": "V10",
+   "description": "All Greater Sydney, including rural areas",
+   "hexes": 97733,
+   "features": 20,
+   "deviance": null,
+   "prAuc": null,
+   "top100": null,
+   "status": "pending"
+  },
+  {
+   "id": "V11",
+   "description": "V5 + V6 combined: baseline, 1 km surroundings and accessibility",
+   "hexes": 16228,
+   "features": 28,
+   "deviance": 0.417,
+   "prAuc": 0.52,
+   "top100": 85,
+   "status": "done"
+  },
+  {
+   "id": "V12",
+   "description": "V11 + sports fields, playgrounds and beaches",
+   "hexes": 16228,
+   "features": 45,
+   "deviance": 0.3782,
+   "prAuc": 0.5691,
+   "top100": 85,
+   "status": "current"
+  }
+ ],
+ "current": {
+  "id": "V12",
+  "prAuc": {
+   "value": 0.569,
+   "was": 0.52,
+   "random": 0.118
+  },
+  "deviance": {
+   "value": 0.378,
+   "was": 0.417
+  },
+  "top1000": {
+   "x": 677,
+   "y": 1000,
+   "pct": 67.7
+  },
+  "council": {
+   "x": 30,
+   "y": 42,
+   "pct": 71
+  },
+  "predictedTotal": 2625,
+  "actualTotal": 2570,
+  "setup": [
+   "Predict toilets per hex with V12",
+   "Skip spots where OpenStreetMap already lists a toilet",
+   "Rank with disadvantage weighting (w = 1)",
+   "List only spots short by at least 1 toilet"
+  ],
+  "picks": {
+   "listed": 87,
+   "osmAlready": {
+    "x": 10,
+    "y": 120,
+    "pct": 8
+   },
+   "nearPlanned": {
+    "x": 8,
+    "y": 120,
+    "pct": 7
+   },
+   "poorest30": {
+    "x": 59,
+    "y": 120,
+    "pct": 49
+   },
+   "richest30": {
+    "x": 4,
+    "y": 120,
+    "pct": 3
+   }
+  }
+ }
+}

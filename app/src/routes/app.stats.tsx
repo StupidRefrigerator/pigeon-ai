@@ -1,159 +1,98 @@
-import { createFileRoute } from '@tanstack/react-router'
-import { Bars, fmtRatio, Table } from '../components/Bars'
-import type { Stats } from '../lib/data'
-import statsJson from '../data/stats.json'
+import { Link, createFileRoute } from '@tanstack/react-router'
+import { fmtRatio } from '../components/Bars'
+import type { Tracking } from '../lib/data'
+import trackingJson from '../data/tracking.json'
 
-const s = statsJson as Stats
+const t = trackingJson as Tracking
+const c = t.current
 
-export const Route = createFileRoute('/app/stats')({ component: StatsPage })
+export const Route = createFileRoute('/app/stats')({ component: TrackingPage })
 
-const SLATE = '#3d5a73'
-const GREY = '#9aa5b1'
-const ACCENT = '#b8321f'
+const fmt = (v: number | null, digits: number) => (v === null ? 'Pending' : v.toFixed(digits))
 
-function StatsPage() {
-  const h = s.headline
+function TrackingPage() {
   return (
     <div className="stats">
       <div className="stats-inner">
         <header>
-          <h1>Internal stats</h1>
-          <p className="note">{s.model}. Source: docs/findings.md, rebuilt from the experiment CSVs by app/scripts/build_data.py.</p>
+          <h1>Model tracking</h1>
+          <p className="note">{t.source}</p>
         </header>
 
         <section>
-          <h2>1. Headline evaluation</h2>
+          <h2>Current model: {c.id}</h2>
           <div className="kpis">
             <div className="kpi">
-              <b>{h.prAuc.value}</b>
-              <span>PR-AUC (random: {h.prAuc.random})</span>
+              <b>{c.prAuc.value.toFixed(3)}</b>
+              <span>
+                PR-AUC, was {c.prAuc.was.toFixed(3)} (random: {c.prAuc.random})
+              </span>
             </div>
             <div className="kpi">
-              <b>{h.deviance}</b>
-              <span>Poisson deviance (lower is better)</span>
+              <b>{c.deviance.value.toFixed(3)}</b>
+              <span>Poisson deviance, was {c.deviance.was.toFixed(3)} (lower is better)</span>
             </div>
             <div className="kpi">
-              <b>
-                {h.predictedTotal.toLocaleString()} / {h.actualTotal.toLocaleString()}
-              </b>
-              <span>Predicted vs real toilets ({h.predictedTotalPctOfActual}%)</span>
+              <b>{fmtRatio(c.top1000)}</b>
+              <span>Real toilet hexes in the top 1,000</span>
             </div>
             <div className="kpi">
-              <b>{h.candidates}</b>
-              <span>Candidate hexes (predicted − actual ≥ 1)</span>
+              <b>{fmtRatio(c.council)}</b>
+              <span>Council-planned sites in the top 10%</span>
             </div>
           </div>
           <p>
-            Study area: {h.hexes.toLocaleString()} hexes, {h.toilets.toLocaleString()} toilets in {h.toiletHexes.toLocaleString()} hexes. Real toilet hexes found
-            among the model's highest-ranked hexes:
-          </p>
-          <Bars items={h.topN.map((t) => ({ label: t.label, value: t.pct, max: 100, text: fmtRatio(t) }))} />
-        </section>
-
-        <section>
-          <h2>2. Are the suggested spots valid?</h2>
-          <p>Each of the {s.validity.n} candidate hexes was checked against OpenStreetMap and NSW zoning.</p>
-          <Bars items={s.validity.rows.map((r) => ({ label: r.label, value: r.pct, max: 100, text: fmtRatio(r), color: r.label.startsWith('Only') ? ACCENT : SLATE }))} />
-          <p className="note">{s.validity.note}</p>
-        </section>
-
-        <section>
-          <h2>3. Growth suburbs (never trained on)</h2>
-          <p>
-            {s.growth.suburbs} suburbs, {s.growth.hexes.toLocaleString()} hexes, {s.growth.actual} real toilets in {s.growth.toiletHexes} hexes. The model predicts{' '}
-            {s.growth.predicted} (real: {s.growth.actual}).
-          </p>
-          <Bars
-            items={[
-              { label: 'Real toilet hexes in top 100', value: s.growth.top100.pct, max: 100, text: fmtRatio(s.growth.top100) },
-              { label: 'A random top 100 would catch', value: 3 / s.growth.toiletHexes * 100, max: 100, text: `about 3/${s.growth.toiletHexes} (9%)`, color: GREY },
-            ]}
-          />
-          <p>
-            PR-AUC {s.growth.prAuc.value} (random: {s.growth.prAuc.random}). {s.growth.note}
-          </p>
-          <Table
-            head={['Suburb', 'Hexes', 'Real toilets', 'Predicted']}
-            rows={s.growth.perSuburb.map((r) => [r.suburb, r.hexes, r.actual, r.pred])}
-          />
-        </section>
-
-        <section>
-          <h2>4. Bradfield / Aerotropolis</h2>
-          <p className="callout">Planned scenario — read the ranking, not the totals. No real data exists yet: features were built from government plans (scenario {s.bradfield.scenario}).</p>
-          <Table
-            head={['', 'Predicted toilets across the area']}
-            rows={[
-              ['Today, with real features (farmland)', s.bradfield.todayTotal],
-              ['Mid scenario, 2041', s.bradfield.midTotal],
-            ]}
-          />
-          <p>
-            In the mid scenario {s.bradfield.hexesGe1} hexes reach a prediction of 1 or more; the highest single hex is {s.bradfield.maxHex}. Top hexes:
-          </p>
-          <Table
-            head={['#', 'Zone', 'Nearest station', 'Distance (m)', 'Predicted', 'Top drivers']}
-            numFrom={3}
-            rows={s.bradfield.top.map((t) => [t.rank, t.zone, t.station, t.stationM, t.pred, t.drivers])}
-          />
-          <p>
-            Proxy check on Oran Park, where real features exist: the proxy features overlap {s.bradfield.oranProxy.overlap.proxy}/{s.bradfield.oranProxy.overlap.of} of the
-            real-feature top 10, and put {s.bradfield.oranProxy.toiletHexesInTop10.proxy}/{s.bradfield.oranProxy.toiletHexesInTop10.of} real toilet hexes in their top 10 (real
-            features: {s.bradfield.oranProxy.overlap.real}/{s.bradfield.oranProxy.overlap.of} and {s.bradfield.oranProxy.toiletHexesInTop10.real}/
-            {s.bradfield.oranProxy.toiletHexesInTop10.of}). The proxy keeps about half the ranking.
+            Predicts {c.predictedTotal.toLocaleString()} toilets across the study area (real: {c.actualTotal.toLocaleString()}).
           </p>
         </section>
 
         <section>
-          <h2>5. Council plan crosscheck</h2>
-          <p>{s.plans.sources}</p>
-          <Table
-            head={['', 'n', "In model's top 10%", "In model's top 25%", 'Candidate within ~250 m', 'Median percentile']}
-            numFrom={1}
-            rows={[...s.plans.rows, s.plans.fairest].map((r) => [
-              r.label,
-              r.n.toLocaleString(),
-              fmtRatio(r.top10),
-              fmtRatio(r.top25),
-              fmtRatio(r.candidateNear),
-              `${r.medianPct}th`,
-            ])}
-          />
-          <Bars
-            items={[
-              { label: 'Planned sites in top 25%', value: s.plans.rows[0]!.top25.pct, max: 100, text: fmtRatio(s.plans.rows[0]!.top25) },
-              { label: 'Random empty hexes in top 25%', value: s.plans.rows[1]!.top25.pct, max: 100, text: fmtRatio(s.plans.rows[1]!.top25), color: GREY },
-              { label: 'Random empty park hexes in top 25%', value: s.plans.rows[2]!.top25.pct, max: 100, text: fmtRatio(s.plans.rows[2]!.top25), color: GREY },
-              { label: 'Brand-new sites, no toilet yet, top 25%', value: s.plans.fairest.top25.pct, max: 100, text: fmtRatio(s.plans.fairest.top25) },
-            ]}
-          />
+          <h2>How the list is made</h2>
+          <ol className="steps">
+            {c.setup.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
           <p>
-            Reverse check: {fmtRatio(s.plans.reverse.candidatesNear)} of the candidates are near a planned site, against {s.plans.reverse.chance.pct}% by chance (
-            {s.plans.reverse.chance.x}/{s.plans.reverse.chance.y.toLocaleString()} hexes).
-          </p>
-          <p className="note">Misses: {s.plans.misses}</p>
-        </section>
-
-        <section>
-          <h2>6. Socioeconomic shape (SEIFA deciles)</h2>
-          <Bars
-            items={[
-              { label: 'Decile 1 (most disadvantaged)', value: s.seifa.toilets_per_10k_decile_1, max: 6, text: `${s.seifa.toilets_per_10k_decile_1} toilets per 10k residents` },
-              { label: 'Decile 10 (least disadvantaged)', value: s.seifa.toilets_per_10k_decile_10, max: 6, text: `${s.seifa.toilets_per_10k_decile_10} toilets per 10k residents` },
-            ]}
-          />
-          <p>
-            Real ÷ predicted stays between {s.seifa.real_over_pred_min} and {s.seifa.real_over_pred_max} across all deciles. {s.seifa.note}
+            Result: {c.picks.listed} spots. Of the top 120, {fmtRatio(c.picks.osmAlready)} already have an OpenStreetMap toilet, {fmtRatio(c.picks.nearPlanned)} are near a
+            council-planned site, and {fmtRatio(c.picks.poorest30)} are in Sydney's poorest 30% of areas against {fmtRatio(c.picks.richest30)} in the richest 30%.
           </p>
         </section>
 
         <section>
-          <h2>7. The three new-area tests</h2>
-          <Table
-            head={['Test', 'Where', 'Does real data exist?', 'What it shows', 'Result']}
-            numFrom={99}
-            rows={s.newAreaTests.map((t) => [t.test, t.where, t.real_data, t.shows, t.result])}
-          />
+          <h2>All versions</h2>
+          <table className="t">
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Description</th>
+                <th className="num">Hexagons</th>
+                <th className="num">Features</th>
+                <th className="num">Poisson deviance</th>
+                <th className="num">PR-AUC</th>
+                <th className="num">Top-100 hits</th>
+              </tr>
+            </thead>
+            <tbody>
+              {t.versions.map((v) => (
+                <tr key={v.id} className={v.status === 'current' ? 'current' : undefined}>
+                  <td>
+                    <b>{v.id}</b>
+                    {v.status === 'current' && <span className="tag">current</span>}
+                  </td>
+                  <td>{v.description}</td>
+                  <td className="num">{v.hexes.toLocaleString()}</td>
+                  <td className="num">{v.features}</td>
+                  <td className="num">{fmt(v.deviance, 4)}</td>
+                  <td className="num">{fmt(v.prAuc, 4)}</td>
+                  <td className="num">{v.top100 ?? 'Pending'}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <p className="note">
+            V9 covers a larger area, so its deviance is not directly comparable to the others. Every test behind these numbers is on the <Link to="/app/tests">Tests</Link> page.
+          </p>
         </section>
       </div>
     </div>
