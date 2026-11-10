@@ -5,18 +5,20 @@ Raw data is too large for Git and lives in the team Google Drive as two zips:
 - `pigeon-ai-raw.zip`: everything except the V12 OpenStreetMap layers.
 - `pigeon-ai-raw-v12-osm.zip`: the Overpass downloads behind the V12 features (sports grounds, playgrounds, beaches, OSM toilets). About 2 MB.
 
+> **TODO(drive):** `pigeon-ai-raw-v12-osm.zip` is not on the Drive yet. Until someone uploads it and sets `V12_OSM_DRIVE_URL` in `scripts/download_data.py`, ask Summit for the zip.
+
 You only need them to rebuild the dataset. Modelling uses the committed CSVs in `data/processed/`.
 
 ## Getting the data
 
 ```sh
-python scripts/download_data.py "<share link to pigeon-ai-raw.zip>" --v12-osm "<share link to pigeon-ai-raw-v12-osm.zip>"
+python scripts/download_data.py
 ```
 
-To get only the V12 zip, run `python scripts/download_data.py --v12-osm-only --v12-osm "<share link>"`.
+This downloads both zips using the links in the script. To pass links yourself, run `python scripts/download_data.py "<pigeon-ai-raw.zip link>" --v12-osm "<pigeon-ai-raw-v12-osm.zip link>"`. To get only the V12 zip, add `--v12-osm-only`.
 
 Get the ZIP-file share link from the [team Drive folder](https://drive.google.com/drive/folders/1mbuAEllISFlfmRX8O7300f_iwsCJ04cM?usp=sharing).
-The folder URL itself is not a downloadable ZIP. You can optionally set the
+The folder URL itself is not a downloadable ZIP. Set the
 file links as `DRIVE_URL` and `V12_OSM_DRIVE_URL` in the script.
 
 This downloads each zip, extracts it into `data/raw/`, and checks that the required files exist. Manual alternative: download the zips from Drive and unzip them into `data/raw/`.

@@ -130,11 +130,11 @@ The code is in `src/pigeon_ai/postprocess.py`. SEIFA and OSM toilets are used on
 The V12 columns are committed in `data/processed/`, so you don't need this to train. To rebuild them from the raw Overpass download:
 
 ```sh
-python scripts/download_data.py --v12-osm-only --v12-osm "<share link to pigeon-ai-raw-v12-osm.zip>"
+python scripts/download_data.py --v12-osm-only
 python -I scripts/build_recreation.py
 ```
 
-The second command writes `sydney_recreation_features.csv`, `sydney_growth_recreation_features.csv` and `osm_toilets.csv`, byte-identical to the committed files. To refresh from today's OpenStreetMap, use `scripts/fetch_overpass.py`; see [DATA.md](DATA.md#updating-the-data). Columns, sources and caveats are in [data/README.md](data/README.md#v12-osm-features-sports-grounds-playgrounds-beaches-and-osm-toilets).
+The Drive link for this zip is still a TODO; see [DATA.md](DATA.md). The second command writes `sydney_recreation_features.csv`, `sydney_growth_recreation_features.csv` and `osm_toilets.csv`, byte-identical to the committed files. To refresh from today's OpenStreetMap, use `scripts/fetch_overpass.py`; see [DATA.md](DATA.md#updating-the-data). Columns, sources and caveats are in [data/README.md](data/README.md#v12-osm-features-sports-grounds-playgrounds-beaches-and-osm-toilets).
 
 ### Evals
 

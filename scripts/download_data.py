@@ -10,8 +10,9 @@ import gdown
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from pigeon_ai.paths import RAW
 
-# Optional share links to the ZIP files themselves, not their Drive folder; see DATA.md.
+# Share links to the ZIP files themselves, not their Drive folder; see DATA.md.
 DRIVE_URL = ""
+# TODO(drive): upload pigeon-ai-raw-v12-osm.zip to the team Drive folder and paste its share link here.
 V12_OSM_DRIVE_URL = ""
 
 REQUIRED = [
@@ -42,16 +43,15 @@ def download(url, name, required):
 
 
 def main(url, v12_osm_url, v12_osm_only):
+    zips = [(v12_osm_url, "pigeon-ai-raw-v12-osm.zip", V12_OSM_REQUIRED)]
     if not v12_osm_only:
-        if not url:
-            sys.exit("Pass the share link to pigeon-ai-raw.zip (not the Drive folder); see DATA.md.")
-        download(url, "pigeon-ai-raw.zip", REQUIRED)
-    if v12_osm_url:
-        download(v12_osm_url, "pigeon-ai-raw-v12-osm.zip", V12_OSM_REQUIRED)
-    elif v12_osm_only:
-        sys.exit("Pass --v12-osm with the share link to pigeon-ai-raw-v12-osm.zip; see DATA.md.")
-    else:
-        print("Skipped pigeon-ai-raw-v12-osm.zip (no --v12-osm link); only needed to rebuild the V12 features.")
+        zips.insert(0, (url, "pigeon-ai-raw.zip", REQUIRED))
+    missing = [name for link, name, _ in zips if not link]
+    if missing:
+        sys.exit("No share link for " + " or ".join(missing) + ". Pass it as an argument or set it in "
+                 "scripts/download_data.py (V12_OSM_DRIVE_URL is a TODO until the zip is on Drive); see DATA.md.")
+    for link, name, required in zips:
+        download(link, name, required)
     print(f"Raw data ready in {RAW}")
 
 
