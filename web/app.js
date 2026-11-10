@@ -1,5 +1,6 @@
-/* Buildless local comparison: one request, one geometry set, three model views. */
-const versions = ['V1', 'V5', 'V6'];
+/* Buildless local comparison: one request, one geometry set, one view per model. */
+let versions = [];
+const labels = {};
 const maps = {}, layers = {}, cells = {}, circles = {};
 let summary, selectedHex, syncing = false;
 const status = document.getElementById('status');
@@ -32,22 +33,22 @@ function selectHex(properties) {
     layer.bringToFront();
   }
   document.getElementById('detail-title').textContent = properties.hex_id;
-  document.getElementById('actual-detail').textContent = `Actual toilets: ${properties.actual_count} · same hexagon in all three models`;
+  document.getElementById('actual-detail').textContent = `Actual toilets: ${properties.actual_count} · same hexagon in every model`;
   const content = document.getElementById('detail-content');
   content.className = 'detail-grid';
   content.innerHTML = versions.map(v => {
     const value = properties.models[v];
     const importance = summary.importance[v].slice(0, 3);
-    return `<div class="detail-model"><h3>${v}</h3><div class="detail-numbers"><div><span>Predicted toilets</span><strong>${fixed(value.predicted_count)}</strong></div><div><span>Gap score</span><strong>${fixed(value.gap)}</strong></div></div><p class="candidate ${value.candidate ? 'yes' : ''}">Candidate: ${value.candidate ? 'Yes · gap ≥ 1' : 'No'}</p><p class="importance-label">Model-wide feature importance (not local drivers)</p>${importance.map(row => `<div class="importance-row"><span>${escapeHtml(row.feature.replaceAll('_', ' '))}</span><strong>${(row.importance * 100).toFixed(1)}%</strong></div>`).join('')}</div>`;
+    return `<div class="detail-model"><h3>${escapeHtml(labels[v])}</h3><div class="detail-numbers"><div><span>Predicted toilets</span><strong>${fixed(value.predicted_count)}</strong></div><div><span>Gap score</span><strong>${fixed(value.gap)}</strong></div></div><p class="candidate ${value.candidate ? 'yes' : ''}">Candidate: ${value.candidate ? 'Yes · predicted − actual ≥ 1' : 'No'}</p><p class="importance-label">Model-wide importance, mean |SHAP| on held-out rows (not local drivers)</p>${importance.map(row => `<div class="importance-row"><span>${escapeHtml(row.feature.replaceAll('_', ' '))}</span><strong>${(row.importance * 100).toFixed(1)}%</strong></div>`).join('')}</div>`;
   }).join('');
 }
 function resetDetails() {
   selectedHex = null;
   document.getElementById('detail-title').textContent = 'Select a hexagon';
-  document.getElementById('actual-detail').textContent = 'Click any coloured cell to compare all three predictions.';
+  document.getElementById('actual-detail').textContent = 'Click any coloured cell to compare the model predictions.';
   const content = document.getElementById('detail-content');
   content.className = 'empty-details';
-  content.innerHTML = '<p>The same hexagon will be highlighted across all three maps.</p>';
+  content.innerHTML = '<p>The same hexagon will be highlighted across all the maps.</p>';
 }
 async function request(url) {
   const response = await fetch(url);
@@ -61,7 +62,7 @@ async function analyze(event) {
   button.disabled = true;
   button.textContent = 'Analyzing…';
   status.className = '';
-  status.textContent = 'Selecting hexagons and running the three saved models…';
+  status.textContent = 'Selecting hexagons and showing held-out predictions…';
   try {
     const params = new URLSearchParams({location: document.getElementById('location').value, radius: document.getElementById('radius').value});
     const data = await request(`/api/analyze?${params}`);
@@ -89,7 +90,7 @@ async function analyze(event) {
     status.textContent = `${data.location} · ${data.radius_km} km · ${data.hexagons.toLocaleString()} hexagons · ${data.actual_total} actual toilets`;
   } catch (error) {
     status.className = 'error';
-    status.textContent = error.message + (layers.V1 ? ' Previous maps remain visible.' : '');
+    status.textContent = error.message + (layers[versions[0]] ? ' Previous maps remain visible.' : '');
   } finally {
     button.disabled = false;
     button.textContent = 'Analyze';
@@ -98,6 +99,13 @@ async function analyze(event) {
 async function init() {
   try {
     if (!window.L) throw new Error('Map library could not load. Check the web/vendor/leaflet files and reload.');
+    summary = await request('/api/summary');
+    versions = summary.versions.map(v => v.id);
+    const grid = document.getElementById('maps');
+    for (const {id, label} of summary.versions) {
+      labels[id] = label;
+      grid.insertAdjacentHTML('beforeend', `<div><h3>${escapeHtml(label)}</h3><div id="map-${id}" class="map" role="img" aria-label="${escapeHtml(label)} gap heatmap"></div><div id="total-${id}" class="map-total">Choose an area to see predictions.</div></div>`);
+    }
     for (const v of versions) {
       maps[v] = L.map(`map-${v}`, {preferCanvas: true, zoomControl: false, zoomAnimation: false, fadeAnimation: false}).setView([-33.8732, 151.2069], 12);
       L.control.zoom({position: 'topright'}).addTo(maps[v]);
@@ -109,7 +117,6 @@ async function init() {
         syncing = false;
       });
     }
-    summary = await request('/api/summary');
     const options = document.createDocumentFragment();
     for (const place of summary.places) {const option = document.createElement('option'); option.value = place; options.appendChild(option);}
     document.getElementById('places').appendChild(options);
