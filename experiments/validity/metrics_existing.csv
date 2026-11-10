@@ -1,0 +1,13 @@
+metric,baseline,good_areas,note
+hexes,16228.0,16228.0,
+poisson_deviance,0.4192968092991251,0.4486658970840763,mean-everywhere 0.719
+pr_auc,0.5194580272930694,0.4906919202088814,random 0.118
+top100_hits,86.0,83.0,hexes with >=1 toilet
+top500_hits,359.0,326.0,hexes with >=1 toilet
+top1000_hits,616.0,582.0,hexes with >=1 toilet
+recall_toilet_hexes_in_top1000,0.32234432234432236,0.304552590266876,of 1911 toilet hexes
+toilets_in_top1000_share,0.40428015564202335,0.3859922178988327,of 2570 toilets
+predicted_total,2632.242076170225,3624.217123249462,actual 2570
+spearman_with_actual,0.42291546603267793,0.41575295657496475,
+pr_auc_outside_good_blocks,0.4883292261868361,0.4663491353564285,"11771 hexes, random 0.096"
+pr_auc_inside_good_blocks,0.5966648305244014,0.5531288233874903,"4457 hexes, random 0.175"

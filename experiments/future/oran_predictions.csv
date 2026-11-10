@@ -1,0 +1,825 @@
+hex_id,zone,role,nearest_station,station_dist_m,lat,lng,scenario,model,pred,toilet_count
+89be081b2d3ffff,IN1 General Industrial,enterprise,Leppington,8812.0,-33.99528,150.72631,real_features,baseline,0.2891582224272076,0
+89be081b603ffff,R1 General Residential,residential,Leppington,9315.0,-34.0095,150.73202,real_features,baseline,0.18699780384623185,0
+89be081b607ffff,R1 General Residential,residential,Leppington,9651.0,-34.01021,150.72796,real_features,baseline,0.023073370509632807,0
+89be081b60bffff,R1 General Residential,residential,Leppington,8989.0,-34.00623,150.73331,real_features,baseline,0.047158580917047596,0
+89be081b60fffff,R1 General Residential,residential,Leppington,9329.0,-34.00694,150.72925,real_features,baseline,0.009158164738050601,0
+89be081b613ffff,R1 General Residential,residential,Leppington,9317.0,-34.01207,150.73478,real_features,baseline,0.11413972016807908,1
+89be081b617ffff,R1 General Residential,residential,Leppington,9645.0,-34.01277,150.73072,real_features,baseline,0.02298052623040427,0
+89be081b61bffff,R1 General Residential,residential,Leppington,8983.0,-34.0088,150.73607,real_features,baseline,0.6952246441770882,0
+89be081b63bffff,R1 General Residential,residential,Leppington,9672.0,-34.00765,150.72519,real_features,baseline,0.18711838953711274,0
+89be081b643ffff,R1 General Residential,residential,Leppington,8327.0,-34.00226,150.73866,real_features,baseline,0.6848849761080303,1
+89be081b647ffff,R1 General Residential,residential,Leppington,8668.0,-34.00297,150.7346,real_features,baseline,0.2592136348750027,0
+89be081b64bffff,B2 Local Centre,centre,Leppington,8006.0,-33.99899,150.73995,real_features,baseline,0.7720048849311352,1
+89be081b64fffff,R1 General Residential,residential,Leppington,8351.0,-33.9997,150.7359,real_features,baseline,0.24631500795841613,0
+89be081b653ffff,R1 General Residential,residential,Leppington,8320.0,-34.00482,150.74142,real_features,baseline,0.048300957441647564,0
+89be081b657ffff,R1 General Residential,residential,Leppington,8653.0,-34.00553,150.73737,real_features,baseline,0.006921263221052882,0
+89be081b65bffff,R3 Medium Density Residential,residential,Leppington,7990.0,-34.00155,150.74272,real_features,baseline,0.3267994303929719,0
+89be081b663ffff,R1 General Residential,residential,Leppington,9050.0,-34.00111,150.72778,real_features,baseline,0.021313135321771013,0
+89be081b667ffff,R1 General Residential,residential,Leppington,9404.0,-34.00181,150.72372,real_features,baseline,0.021663321569177715,0
+89be081b66bffff,R1 General Residential,residential,Leppington,8748.0,-33.99784,150.72907,real_features,baseline,0.014699063005454724,0
+89be081b66fffff,R1 General Residential,residential,Leppington,9105.0,-33.99854,150.72502,real_features,baseline,0.016476803980246178,0
+89be081b673ffff,R1 General Residential,residential,Leppington,9012.0,-34.00367,150.73055,real_features,baseline,0.06973801963262313,0
+89be081b677ffff,R1 General Residential,residential,Leppington,9359.0,-34.00438,150.72649,real_features,baseline,0.059535788312882414,0
+89be081b67bffff,R1 General Residential,residential,Leppington,8699.0,-34.0004,150.73184,real_features,baseline,0.007749164115238011,0
+89be081b6c3ffff,R2 Low Density Residential,residential,Leppington,8673.0,-34.01065,150.7429,real_features,baseline,0.03311529283279787,0
+89be081b6c7ffff,R1 General Residential,residential,Leppington,8993.0,-34.01136,150.73884,real_features,baseline,0.017736497992104326,0
+89be081b6cbffff,R2 Low Density Residential,residential,Leppington,8331.0,-34.00739,150.74419,real_features,baseline,0.023462613412853068,0
+89be081b6cfffff,R1 General Residential,residential,Leppington,8654.0,-34.00809,150.74013,real_features,baseline,0.04780902776664573,0
+89be081b6d3ffff,R2 Low Density Residential,residential,Leppington,8709.0,-34.01322,150.74566,real_features,baseline,0.007926624538034275,0
+89be081b6dbffff,R2 Low Density Residential,residential,Leppington,8359.0,-34.00995,150.74695,real_features,baseline,0.023033371518330945,0
+89be08cc803ffff,RU1 Primary Production,rural,Leppington,5456.0,-33.96373,150.75011,real_features,baseline,2.3751057155648283e-05,0
+89be08cc807ffff,RU1 Primary Production,rural,Leppington,5839.0,-33.96444,150.74606,real_features,baseline,0.0005365715699761611,0
+89be08cc813ffff,RU1 Primary Production,rural,Leppington,5269.0,-33.96629,150.75288,real_features,baseline,0.00024597327937787047,0
+89be08cc817ffff,RU1 Primary Production,rural,Leppington,5652.0,-33.967,150.74882,real_features,baseline,2.3751057155648283e-05,0
+89be08cc823ffff,RU1 Primary Production,rural,Leppington,6427.0,-33.96258,150.73924,real_features,baseline,0.0014663429584862908,0
+89be08cc833ffff,RU1 Primary Production,rural,Leppington,6222.0,-33.96514,150.742,real_features,baseline,0.0005365715699761611,0
+89be08cc883ffff,RU1 Primary Production,rural,Leppington,5341.0,-33.97213,150.75435,real_features,baseline,2.3751057155648283e-05,0
+89be08cc887ffff,RU1 Primary Production,rural,Leppington,5718.0,-33.97283,150.75029,real_features,baseline,2.3751057155648283e-05,0
+89be08cc88fffff,RU1 Primary Production,rural,Leppington,5485.0,-33.96956,150.75159,real_features,baseline,0.00024597327937787047,0
+89be08cc897ffff,RU1 Primary Production,rural,Leppington,5593.0,-33.9754,150.75306,real_features,baseline,0.00024597327937787047,0
+89be08cc8a3ffff,RU1 Primary Production,rural,Leppington,6247.0,-33.97098,150.74347,real_features,baseline,0.0004811772460219995,0
+89be08cc8a7ffff,RU1 Primary Production,rural,Leppington,6629.0,-33.97168,150.73942,real_features,baseline,0.002916721481007666,0
+89be08cc8abffff,RU1 Primary Production,rural,Leppington,6035.0,-33.96771,150.74477,real_features,baseline,2.3751057155648283e-05,0
+89be08cc8afffff,RU1 Primary Production,rural,Leppington,6417.0,-33.96841,150.74071,real_features,baseline,0.00261268105715178,0
+89be08cc8b3ffff,RU1 Primary Production,rural,Leppington,6097.0,-33.97354,150.74624,real_features,baseline,1.3237721256348222e-05,0
+89be08cc8b7ffff,RU1 Primary Production,rural,Leppington,6476.0,-33.97425,150.74218,real_features,baseline,1.3237721256348222e-05,0
+89be08cc8bbffff,RU1 Primary Production,rural,Leppington,5866.0,-33.97027,150.74753,real_features,baseline,2.3751057155648283e-05,0
+89be08ccc27ffff,RE1 Public Recreation,park,Leppington,5775.0,-33.98123,150.75453,real_features,baseline,1.3237721256348222e-05,0
+89be08ccd03ffff,R2 Low Density Residential,residential,Leppington,7150.0,-33.98662,150.74107,real_features,baseline,0.049134900866517374,0
+89be08ccd07ffff,R2 Low Density Residential,residential,Leppington,7515.0,-33.98732,150.73701,real_features,baseline,0.2563939215722926,0
+89be08ccd0bffff,R2 Low Density Residential,residential,Leppington,6870.0,-33.98335,150.74236,real_features,baseline,0.002719021979846918,0
+89be08ccd0fffff,R2 Low Density Residential,residential,Leppington,7239.0,-33.98405,150.7383,real_features,baseline,0.048447210863208315,0
+89be08ccd13ffff,R2 Low Density Residential,residential,Leppington,7081.0,-33.98918,150.74383,real_features,baseline,0.025283523936320277,0
+89be08ccd17ffff,R2 Low Density Residential,residential,Leppington,7439.0,-33.98989,150.73978,real_features,baseline,0.015457612174899753,0
+89be08ccd1bffff,R2 Low Density Residential,residential,Leppington,6787.0,-33.98591,150.74512,real_features,baseline,0.00139199507756486,0
+89be08ccd3bffff,R2 Low Density Residential,residential,Leppington,7609.0,-33.98476,150.73425,real_features,baseline,0.05203325452451454,0
+89be08ccd43ffff,R2 Low Density Residential,residential,Leppington,6229.0,-33.97937,150.74771,real_features,baseline,1.3237721256348222e-05,0
+89be08ccd47ffff,R2 Low Density Residential,residential,Leppington,6600.0,-33.98008,150.74365,real_features,baseline,2.6722079400900537e-05,0
+89be08ccd4bffff,RU1 Primary Production,rural,Leppington,5967.0,-33.9761,150.749,real_features,baseline,1.3237721256348222e-05,0
+89be08ccd4fffff,RU1 Primary Production,rural,Leppington,6342.0,-33.97681,150.74495,real_features,baseline,1.3237721256348222e-05,0
+89be08ccd53ffff,RE1 Public Recreation,park,Leppington,6138.0,-33.98194,150.75047,real_features,baseline,1.3237721256348222e-05,0
+89be08ccd57ffff,R2 Low Density Residential,residential,Leppington,6503.0,-33.98264,150.74642,real_features,baseline,2.6722079400900537e-05,0
+89be08ccd5bffff,RU1 Primary Production,rural,Leppington,5859.0,-33.97867,150.75177,real_features,baseline,1.3237721256348222e-05,0
+89be08ccd63ffff,R2 Low Density Residential,residential,Leppington,7095.0,-33.97822,150.73683,real_features,baseline,0.010629044307008865,0
+89be08ccd6bffff,RU1 Primary Production,rural,Leppington,6855.0,-33.97495,150.73813,real_features,baseline,0.0020360749831077785,0
+89be08ccd73ffff,R2 Low Density Residential,residential,Leppington,6973.0,-33.98079,150.7396,real_features,baseline,0.0009041901995160795,0
+89be08ccd77ffff,R2 Low Density Residential,residential,Leppington,7347.0,-33.98149,150.73554,real_features,baseline,0.002940449425245001,0
+89be08ccd7bffff,R2 Low Density Residential,residential,Leppington,6718.0,-33.97752,150.74089,real_features,baseline,0.00018593855275935757,0
+89be08ccd83ffff,R1 General Residential,residential,Leppington,7345.0,-33.99501,150.7453,real_features,baseline,0.4675004879013368,0
+89be08ccd87ffff,R3 Medium Density Residential,residential,Leppington,7691.0,-33.99572,150.74125,real_features,baseline,0.10828501500504426,0
+89be08ccd8bffff,R1 General Residential,residential,Leppington,7032.0,-33.99174,150.7466,real_features,baseline,0.11671276449431742,0
+89be08ccd8fffff,R1 General Residential,residential,Leppington,7382.0,-33.99245,150.74254,real_features,baseline,0.11088538891374526,0
+89be08ccd93ffff,R3 Medium Density Residential,residential,Leppington,7328.0,-33.99758,150.74807,real_features,baseline,0.018757112284770516,0
+89be08ccd97ffff,B2 Local Centre,centre,Leppington,7665.0,-33.99828,150.74401,real_features,baseline,0.2597450462743869,2
+89be08ccd9bffff,R1 General Residential,residential,Leppington,7003.0,-33.99431,150.74936,real_features,baseline,0.08773417656785591,0
+89be08ccda3ffff,IN1 General Industrial,enterprise,Leppington,8093.0,-33.99386,150.73443,real_features,baseline,0.17939211391468526,0
+89be08ccda7ffff,IN1 General Industrial,enterprise,Leppington,8452.0,-33.99457,150.73037,real_features,baseline,0.0076522575426548785,0
+89be08ccdabffff,R2 Low Density Residential,residential,Leppington,7800.0,-33.99059,150.73572,real_features,baseline,0.1627768304748766,0
+89be08ccdafffff,IN1 General Industrial,enterprise,Leppington,8163.0,-33.9913,150.73166,real_features,baseline,0.13970064920604797,0
+89be08ccdb3ffff,R1 General Residential,residential,Leppington,8041.0,-33.99643,150.73719,real_features,baseline,0.3420493409927789,0
+89be08ccdb7ffff,R1 General Residential,residential,Leppington,8393.0,-33.99713,150.73313,real_features,baseline,0.009287916186297823,0
+89be08ccdbbffff,C2 Environmental Conservation,conservation,Leppington,7736.0,-33.99316,150.73848,real_features,baseline,0.10784108334774187,0
+89be08ccdc3ffff,R1 General Residential,residential,Leppington,6373.0,-33.98777,150.75195,real_features,baseline,2.6722079400900537e-05,0
+89be08ccdc7ffff,C2 Environmental Conservation,conservation,Leppington,6725.0,-33.98847,150.74789,real_features,baseline,0.033967486249043964,0
+89be08ccdcbffff,R1 General Residential,residential,Leppington,6069.0,-33.9845,150.75324,real_features,baseline,0.00023545994347857045,0
+89be08ccdcfffff,R3 Medium Density Residential,residential,Leppington,6427.0,-33.9852,150.74918,real_features,baseline,2.6722079400900537e-05,0
+89be08ccdd3ffff,R1 General Residential,residential,Leppington,6341.0,-33.99033,150.75471,real_features,baseline,0.0021169014574898004,0
+89be08ccdd7ffff,R1 General Residential,residential,Leppington,6684.0,-33.99104,150.75065,real_features,baseline,0.00569700843746032,0
+89be08ccddbffff,RU4 Primary Production Small Lots,rural,Leppington,6024.0,-33.98706,150.756,real_features,baseline,3.2240857729897846e-05,0
+89be08ce94fffff,R2 Low Density Residential,residential,Leppington,8547.0,-34.01764,150.75525,real_features,baseline,0.019693531839979187,0
+89be08ce96bffff,R2 Low Density Residential,residential,Leppington,8761.0,-34.01578,150.74843,real_features,baseline,0.052358082585509315,0
+89be08ce97bffff,R2 Low Density Residential,residential,Leppington,8829.0,-34.01834,150.75119,real_features,baseline,0.025766187310228842,0
+89be08ceb23ffff,R1 General Residential,residential,Leppington,7669.0,-34.00341,150.74954,real_features,baseline,0.010908687083269638,0
+89be08ceb27ffff,R1 General Residential,residential,Leppington,7992.0,-34.00412,150.74548,real_features,baseline,0.3418333495056029,0
+89be08ceb2bffff,R1 General Residential,residential,Leppington,7330.0,-34.00014,150.75083,real_features,baseline,0.031087638464582065,0
+89be08ceb2fffff,R3 Medium Density Residential,residential,Leppington,7658.0,-34.00085,150.74678,real_features,baseline,0.009916286598672993,0
+89be08ceb33ffff,C2 Environmental Conservation,conservation,Leppington,7700.0,-34.00597,150.7523,real_features,baseline,0.4352713353154935,0
+89be08ceb37ffff,R2 Low Density Residential,residential,Leppington,8013.0,-34.00668,150.74825,real_features,baseline,0.22615383884801957,0
+89be08ceb67ffff,R1 General Residential,residential,Leppington,6995.0,-33.99687,150.75213,real_features,baseline,0.05001186383393168,0
+89be08ceb6fffff,R1 General Residential,residential,Leppington,6665.0,-33.9936,150.75342,real_features,baseline,0.07705551646442206,0
+89be08ceb77ffff,RU4 Primary Production Small Lots,rural,Leppington,7008.0,-33.99943,150.75489,real_features,baseline,0.03747199549025331,0
+89be08ceba7ffff,R2 Low Density Residential,residential,Leppington,8405.0,-34.01251,150.74972,real_features,baseline,0.039317782513760766,0
+89be08cebafffff,R2 Low Density Residential,residential,Leppington,8051.0,-34.00924,150.75101,real_features,baseline,0.011457372390501824,0
+89be08cebb7ffff,R2 Low Density Residential,residential,Leppington,8467.0,-34.01507,150.75248,real_features,baseline,0.013151399059704057,0
+89be081b2d3ffff,IN1 General Industrial,enterprise,Leppington,8812.0,-33.99528,150.72631,real_features,good_areas,0.38348939793793513,0
+89be081b603ffff,R1 General Residential,residential,Leppington,9315.0,-34.0095,150.73202,real_features,good_areas,0.3146793094714754,0
+89be081b607ffff,R1 General Residential,residential,Leppington,9651.0,-34.01021,150.72796,real_features,good_areas,0.0345191983679915,0
+89be081b60bffff,R1 General Residential,residential,Leppington,8989.0,-34.00623,150.73331,real_features,good_areas,0.09658489950443085,0
+89be081b60fffff,R1 General Residential,residential,Leppington,9329.0,-34.00694,150.72925,real_features,good_areas,0.022269695958800188,0
+89be081b613ffff,R1 General Residential,residential,Leppington,9317.0,-34.01207,150.73478,real_features,good_areas,0.14092431023855143,1
+89be081b617ffff,R1 General Residential,residential,Leppington,9645.0,-34.01277,150.73072,real_features,good_areas,0.06301123341581454,0
+89be081b61bffff,R1 General Residential,residential,Leppington,8983.0,-34.0088,150.73607,real_features,good_areas,0.8901047192454122,0
+89be081b63bffff,R1 General Residential,residential,Leppington,9672.0,-34.00765,150.72519,real_features,good_areas,0.3496615347455559,0
+89be081b643ffff,R1 General Residential,residential,Leppington,8327.0,-34.00226,150.73866,real_features,good_areas,0.8167532511958907,1
+89be081b647ffff,R1 General Residential,residential,Leppington,8668.0,-34.00297,150.7346,real_features,good_areas,0.5147199821315311,0
+89be081b64bffff,B2 Local Centre,centre,Leppington,8006.0,-33.99899,150.73995,real_features,good_areas,1.1131381647843843,1
+89be081b64fffff,R1 General Residential,residential,Leppington,8351.0,-33.9997,150.7359,real_features,good_areas,0.4655322801939828,0
+89be081b653ffff,R1 General Residential,residential,Leppington,8320.0,-34.00482,150.74142,real_features,good_areas,0.06360813677873033,0
+89be081b657ffff,R1 General Residential,residential,Leppington,8653.0,-34.00553,150.73737,real_features,good_areas,0.041769294206075204,0
+89be081b65bffff,R3 Medium Density Residential,residential,Leppington,7990.0,-34.00155,150.74272,real_features,good_areas,0.5080842277609373,0
+89be081b663ffff,R1 General Residential,residential,Leppington,9050.0,-34.00111,150.72778,real_features,good_areas,0.04145179279132246,0
+89be081b667ffff,R1 General Residential,residential,Leppington,9404.0,-34.00181,150.72372,real_features,good_areas,0.03773942152123069,0
+89be081b66bffff,R1 General Residential,residential,Leppington,8748.0,-33.99784,150.72907,real_features,good_areas,0.013634268322241749,0
+89be081b66fffff,R1 General Residential,residential,Leppington,9105.0,-33.99854,150.72502,real_features,good_areas,0.013137174130857503,0
+89be081b673ffff,R1 General Residential,residential,Leppington,9012.0,-34.00367,150.73055,real_features,good_areas,0.08675262657769006,0
+89be081b677ffff,R1 General Residential,residential,Leppington,9359.0,-34.00438,150.72649,real_features,good_areas,0.08532806667866823,0
+89be081b67bffff,R1 General Residential,residential,Leppington,8699.0,-34.0004,150.73184,real_features,good_areas,0.01947144782531153,0
+89be081b6c3ffff,R2 Low Density Residential,residential,Leppington,8673.0,-34.01065,150.7429,real_features,good_areas,0.033551721855906866,0
+89be081b6c7ffff,R1 General Residential,residential,Leppington,8993.0,-34.01136,150.73884,real_features,good_areas,0.048043516111505744,0
+89be081b6cbffff,R2 Low Density Residential,residential,Leppington,8331.0,-34.00739,150.74419,real_features,good_areas,0.013901997551564522,0
+89be081b6cfffff,R1 General Residential,residential,Leppington,8654.0,-34.00809,150.74013,real_features,good_areas,0.11848084574064176,0
+89be081b6d3ffff,R2 Low Density Residential,residential,Leppington,8709.0,-34.01322,150.74566,real_features,good_areas,0.004214427242213569,0
+89be081b6dbffff,R2 Low Density Residential,residential,Leppington,8359.0,-34.00995,150.74695,real_features,good_areas,0.050376978401856,0
+89be08cc803ffff,RU1 Primary Production,rural,Leppington,5456.0,-33.96373,150.75011,real_features,good_areas,0.01011067032572334,0
+89be08cc807ffff,RU1 Primary Production,rural,Leppington,5839.0,-33.96444,150.74606,real_features,good_areas,0.011831861618390433,0
+89be08cc813ffff,RU1 Primary Production,rural,Leppington,5269.0,-33.96629,150.75288,real_features,good_areas,0.010943770898231403,0
+89be08cc817ffff,RU1 Primary Production,rural,Leppington,5652.0,-33.967,150.74882,real_features,good_areas,0.010943770898231403,0
+89be08cc823ffff,RU1 Primary Production,rural,Leppington,6427.0,-33.96258,150.73924,real_features,good_areas,0.007522265882992746,0
+89be08cc833ffff,RU1 Primary Production,rural,Leppington,6222.0,-33.96514,150.742,real_features,good_areas,0.010824723279183785,0
+89be08cc883ffff,RU1 Primary Production,rural,Leppington,5341.0,-33.97213,150.75435,real_features,good_areas,0.00900641831764574,0
+89be08cc887ffff,RU1 Primary Production,rural,Leppington,5718.0,-33.97283,150.75029,real_features,good_areas,0.010943770898231403,0
+89be08cc88fffff,RU1 Primary Production,rural,Leppington,5485.0,-33.96956,150.75159,real_features,good_areas,0.010943770898231403,0
+89be08cc897ffff,RU1 Primary Production,rural,Leppington,5593.0,-33.9754,150.75306,real_features,good_areas,0.010943770898231403,0
+89be08cc8a3ffff,RU1 Primary Production,rural,Leppington,6247.0,-33.97098,150.74347,real_features,good_areas,0.010943770898231403,0
+89be08cc8a7ffff,RU1 Primary Production,rural,Leppington,6629.0,-33.97168,150.73942,real_features,good_areas,0.0192822832940922,0
+89be08cc8abffff,RU1 Primary Production,rural,Leppington,6035.0,-33.96771,150.74477,real_features,good_areas,0.010943770898231403,0
+89be08cc8afffff,RU1 Primary Production,rural,Leppington,6417.0,-33.96841,150.74071,real_features,good_areas,0.019108478288218884,0
+89be08cc8b3ffff,RU1 Primary Production,rural,Leppington,6097.0,-33.97354,150.74624,real_features,good_areas,0.010943770898231403,0
+89be08cc8b7ffff,RU1 Primary Production,rural,Leppington,6476.0,-33.97425,150.74218,real_features,good_areas,0.010943770898231403,0
+89be08cc8bbffff,RU1 Primary Production,rural,Leppington,5866.0,-33.97027,150.74753,real_features,good_areas,0.010943770898231403,0
+89be08ccc27ffff,RE1 Public Recreation,park,Leppington,5775.0,-33.98123,150.75453,real_features,good_areas,0.010543770898231405,0
+89be08ccd03ffff,R2 Low Density Residential,residential,Leppington,7150.0,-33.98662,150.74107,real_features,good_areas,0.15202218914599241,0
+89be08ccd07ffff,R2 Low Density Residential,residential,Leppington,7515.0,-33.98732,150.73701,real_features,good_areas,0.34398412049061755,0
+89be08ccd0bffff,R2 Low Density Residential,residential,Leppington,6870.0,-33.98335,150.74236,real_features,good_areas,0.03740366513251029,0
+89be08ccd0fffff,R2 Low Density Residential,residential,Leppington,7239.0,-33.98405,150.7383,real_features,good_areas,0.1321786002130346,0
+89be08ccd13ffff,R2 Low Density Residential,residential,Leppington,7081.0,-33.98918,150.74383,real_features,good_areas,0.08462723297500299,0
+89be08ccd17ffff,R2 Low Density Residential,residential,Leppington,7439.0,-33.98989,150.73978,real_features,good_areas,0.10305128732100004,0
+89be08ccd1bffff,R2 Low Density Residential,residential,Leppington,6787.0,-33.98591,150.74512,real_features,good_areas,0.02188465322295508,0
+89be08ccd3bffff,R2 Low Density Residential,residential,Leppington,7609.0,-33.98476,150.73425,real_features,good_areas,0.13143737718545961,0
+89be08ccd43ffff,R2 Low Density Residential,residential,Leppington,6229.0,-33.97937,150.74771,real_features,good_areas,0.0107659615098957,0
+89be08ccd47ffff,R2 Low Density Residential,residential,Leppington,6600.0,-33.98008,150.74365,real_features,good_areas,0.0107659615098957,0
+89be08ccd4bffff,RU1 Primary Production,rural,Leppington,5967.0,-33.9761,150.749,real_features,good_areas,0.010943770898231403,0
+89be08ccd4fffff,RU1 Primary Production,rural,Leppington,6342.0,-33.97681,150.74495,real_features,good_areas,0.0107659615098957,0
+89be08ccd53ffff,RE1 Public Recreation,park,Leppington,6138.0,-33.98194,150.75047,real_features,good_areas,0.0107659615098957,0
+89be08ccd57ffff,R2 Low Density Residential,residential,Leppington,6503.0,-33.98264,150.74642,real_features,good_areas,0.0107659615098957,0
+89be08ccd5bffff,RU1 Primary Production,rural,Leppington,5859.0,-33.97867,150.75177,real_features,good_areas,0.010943770898231403,0
+89be08ccd63ffff,R2 Low Density Residential,residential,Leppington,7095.0,-33.97822,150.73683,real_features,good_areas,0.09478011819438559,0
+89be08ccd6bffff,RU1 Primary Production,rural,Leppington,6855.0,-33.97495,150.73813,real_features,good_areas,0.019937807239089826,0
+89be08ccd73ffff,R2 Low Density Residential,residential,Leppington,6973.0,-33.98079,150.7396,real_features,good_areas,0.02188465322295508,0
+89be08ccd77ffff,R2 Low Density Residential,residential,Leppington,7347.0,-33.98149,150.73554,real_features,good_areas,0.03873890535179477,0
+89be08ccd7bffff,R2 Low Density Residential,residential,Leppington,6718.0,-33.97752,150.74089,real_features,good_areas,0.013519632572005417,0
+89be08ccd83ffff,R1 General Residential,residential,Leppington,7345.0,-33.99501,150.7453,real_features,good_areas,0.5814087531964169,0
+89be08ccd87ffff,R3 Medium Density Residential,residential,Leppington,7691.0,-33.99572,150.74125,real_features,good_areas,0.20863685130787965,0
+89be08ccd8bffff,R1 General Residential,residential,Leppington,7032.0,-33.99174,150.7466,real_features,good_areas,0.10751288246710786,0
+89be08ccd8fffff,R1 General Residential,residential,Leppington,7382.0,-33.99245,150.74254,real_features,good_areas,0.11028633494100477,0
+89be08ccd93ffff,R3 Medium Density Residential,residential,Leppington,7328.0,-33.99758,150.74807,real_features,good_areas,0.030897796015297328,0
+89be08ccd97ffff,B2 Local Centre,centre,Leppington,7665.0,-33.99828,150.74401,real_features,good_areas,0.42507848117758656,2
+89be08ccd9bffff,R1 General Residential,residential,Leppington,7003.0,-33.99431,150.74936,real_features,good_areas,0.10362689205493816,0
+89be08ccda3ffff,IN1 General Industrial,enterprise,Leppington,8093.0,-33.99386,150.73443,real_features,good_areas,0.3604788134939997,0
+89be08ccda7ffff,IN1 General Industrial,enterprise,Leppington,8452.0,-33.99457,150.73037,real_features,good_areas,0.0263821082866146,0
+89be08ccdabffff,R2 Low Density Residential,residential,Leppington,7800.0,-33.99059,150.73572,real_features,good_areas,0.35638651708250646,0
+89be08ccdafffff,IN1 General Industrial,enterprise,Leppington,8163.0,-33.9913,150.73166,real_features,good_areas,0.1962994583979557,0
+89be08ccdb3ffff,R1 General Residential,residential,Leppington,8041.0,-33.99643,150.73719,real_features,good_areas,0.5442890265982666,0
+89be08ccdb7ffff,R1 General Residential,residential,Leppington,8393.0,-33.99713,150.73313,real_features,good_areas,0.036154314077149925,0
+89be08ccdbbffff,C2 Environmental Conservation,conservation,Leppington,7736.0,-33.99316,150.73848,real_features,good_areas,0.1796146380672822,0
+89be08ccdc3ffff,R1 General Residential,residential,Leppington,6373.0,-33.98777,150.75195,real_features,good_areas,0.013338211467226302,0
+89be08ccdc7ffff,C2 Environmental Conservation,conservation,Leppington,6725.0,-33.98847,150.74789,real_features,good_areas,0.14489344438258725,0
+89be08ccdcbffff,R1 General Residential,residential,Leppington,6069.0,-33.9845,150.75324,real_features,good_areas,0.0107659615098957,0
+89be08ccdcfffff,R3 Medium Density Residential,residential,Leppington,6427.0,-33.9852,150.74918,real_features,good_areas,0.013175843742358579,0
+89be08ccdd3ffff,R1 General Residential,residential,Leppington,6341.0,-33.99033,150.75471,real_features,good_areas,0.008187815283232201,0
+89be08ccdd7ffff,R1 General Residential,residential,Leppington,6684.0,-33.99104,150.75065,real_features,good_areas,0.04408747464893106,0
+89be08ccddbffff,RU4 Primary Production Small Lots,rural,Leppington,6024.0,-33.98706,150.756,real_features,good_areas,0.003641035341567347,0
+89be08ce94fffff,R2 Low Density Residential,residential,Leppington,8547.0,-34.01764,150.75525,real_features,good_areas,0.038751651433128614,0
+89be08ce96bffff,R2 Low Density Residential,residential,Leppington,8761.0,-34.01578,150.74843,real_features,good_areas,0.07595887856762072,0
+89be08ce97bffff,R2 Low Density Residential,residential,Leppington,8829.0,-34.01834,150.75119,real_features,good_areas,0.025500526990771353,0
+89be08ceb23ffff,R1 General Residential,residential,Leppington,7669.0,-34.00341,150.74954,real_features,good_areas,0.01773598832252938,0
+89be08ceb27ffff,R1 General Residential,residential,Leppington,7992.0,-34.00412,150.74548,real_features,good_areas,0.449002645400004,0
+89be08ceb2bffff,R1 General Residential,residential,Leppington,7330.0,-34.00014,150.75083,real_features,good_areas,0.03092262957575868,0
+89be08ceb2fffff,R3 Medium Density Residential,residential,Leppington,7658.0,-34.00085,150.74678,real_features,good_areas,0.0072044045137889465,0
+89be08ceb33ffff,C2 Environmental Conservation,conservation,Leppington,7700.0,-34.00597,150.7523,real_features,good_areas,0.5897747913459698,0
+89be08ceb37ffff,R2 Low Density Residential,residential,Leppington,8013.0,-34.00668,150.74825,real_features,good_areas,0.37400022086099893,0
+89be08ceb67ffff,R1 General Residential,residential,Leppington,6995.0,-33.99687,150.75213,real_features,good_areas,0.11029267884690291,0
+89be08ceb6fffff,R1 General Residential,residential,Leppington,6665.0,-33.9936,150.75342,real_features,good_areas,0.17955303671317108,0
+89be08ceb77ffff,RU4 Primary Production Small Lots,rural,Leppington,7008.0,-33.99943,150.75489,real_features,good_areas,0.11084277511493203,0
+89be08ceba7ffff,R2 Low Density Residential,residential,Leppington,8405.0,-34.01251,150.74972,real_features,good_areas,0.061187841955035877,0
+89be08cebafffff,R2 Low Density Residential,residential,Leppington,8051.0,-34.00924,150.75101,real_features,good_areas,0.020146500083125053,0
+89be08cebb7ffff,R2 Low Density Residential,residential,Leppington,8467.0,-34.01507,150.75248,real_features,good_areas,0.03508038605581024,0
+89be081b2d3ffff,IN1 General Industrial,enterprise,Leppington,8812.0,-33.99528,150.72631,zoning_proxy|shops_low|bus_calibrated,baseline,0.00815306600391378,0
+89be081b603ffff,R1 General Residential,residential,Leppington,9315.0,-34.0095,150.73202,zoning_proxy|shops_low|bus_calibrated,baseline,0.020226487930632177,0
+89be081b607ffff,R1 General Residential,residential,Leppington,9651.0,-34.01021,150.72796,zoning_proxy|shops_low|bus_calibrated,baseline,0.06964842005043803,0
+89be081b60bffff,R1 General Residential,residential,Leppington,8989.0,-34.00623,150.73331,zoning_proxy|shops_low|bus_calibrated,baseline,0.03044419412862175,0
+89be081b60fffff,R1 General Residential,residential,Leppington,9329.0,-34.00694,150.72925,zoning_proxy|shops_low|bus_calibrated,baseline,0.06021762862372878,0
+89be081b613ffff,R1 General Residential,residential,Leppington,9317.0,-34.01207,150.73478,zoning_proxy|shops_low|bus_calibrated,baseline,0.21363685289854592,1
+89be081b617ffff,R1 General Residential,residential,Leppington,9645.0,-34.01277,150.73072,zoning_proxy|shops_low|bus_calibrated,baseline,0.01119419929396323,0
+89be081b61bffff,R1 General Residential,residential,Leppington,8983.0,-34.0088,150.73607,zoning_proxy|shops_low|bus_calibrated,baseline,0.35553543662497655,0
+89be081b63bffff,R1 General Residential,residential,Leppington,9672.0,-34.00765,150.72519,zoning_proxy|shops_low|bus_calibrated,baseline,0.06796854347041072,0
+89be081b643ffff,R1 General Residential,residential,Leppington,8327.0,-34.00226,150.73866,zoning_proxy|shops_low|bus_calibrated,baseline,0.0735364144584453,1
+89be081b647ffff,R1 General Residential,residential,Leppington,8668.0,-34.00297,150.7346,zoning_proxy|shops_low|bus_calibrated,baseline,0.07000273678611166,0
+89be081b64bffff,B2 Local Centre,centre,Leppington,8006.0,-33.99899,150.73995,zoning_proxy|shops_low|bus_calibrated,baseline,0.26878819038377944,1
+89be081b64fffff,R1 General Residential,residential,Leppington,8351.0,-33.9997,150.7359,zoning_proxy|shops_low|bus_calibrated,baseline,0.06127963476561265,0
+89be081b653ffff,R1 General Residential,residential,Leppington,8320.0,-34.00482,150.74142,zoning_proxy|shops_low|bus_calibrated,baseline,0.028819645859381873,0
+89be081b657ffff,R1 General Residential,residential,Leppington,8653.0,-34.00553,150.73737,zoning_proxy|shops_low|bus_calibrated,baseline,0.018418951150404577,0
+89be081b65bffff,R3 Medium Density Residential,residential,Leppington,7990.0,-34.00155,150.74272,zoning_proxy|shops_low|bus_calibrated,baseline,0.27781740559821844,0
+89be081b663ffff,R1 General Residential,residential,Leppington,9050.0,-34.00111,150.72778,zoning_proxy|shops_low|bus_calibrated,baseline,0.054541063782318405,0
+89be081b667ffff,R1 General Residential,residential,Leppington,9404.0,-34.00181,150.72372,zoning_proxy|shops_low|bus_calibrated,baseline,0.058836367828224746,0
+89be081b66bffff,R1 General Residential,residential,Leppington,8748.0,-33.99784,150.72907,zoning_proxy|shops_low|bus_calibrated,baseline,0.0689143772582197,0
+89be081b66fffff,R1 General Residential,residential,Leppington,9105.0,-33.99854,150.72502,zoning_proxy|shops_low|bus_calibrated,baseline,0.05879944102046461,0
+89be081b673ffff,R1 General Residential,residential,Leppington,9012.0,-34.00367,150.73055,zoning_proxy|shops_low|bus_calibrated,baseline,0.054518888311676846,0
+89be081b677ffff,R1 General Residential,residential,Leppington,9359.0,-34.00438,150.72649,zoning_proxy|shops_low|bus_calibrated,baseline,0.05434122556970315,0
+89be081b67bffff,R1 General Residential,residential,Leppington,8699.0,-34.0004,150.73184,zoning_proxy|shops_low|bus_calibrated,baseline,0.05498428179351561,0
+89be081b6c3ffff,R2 Low Density Residential,residential,Leppington,8673.0,-34.01065,150.7429,zoning_proxy|shops_low|bus_calibrated,baseline,0.021449662354498234,0
+89be081b6c7ffff,R1 General Residential,residential,Leppington,8993.0,-34.01136,150.73884,zoning_proxy|shops_low|bus_calibrated,baseline,0.036095274977470664,0
+89be081b6cbffff,R2 Low Density Residential,residential,Leppington,8331.0,-34.00739,150.74419,zoning_proxy|shops_low|bus_calibrated,baseline,0.015146858449284165,0
+89be081b6cfffff,R1 General Residential,residential,Leppington,8654.0,-34.00809,150.74013,zoning_proxy|shops_low|bus_calibrated,baseline,0.3317158537564029,0
+89be081b6d3ffff,R2 Low Density Residential,residential,Leppington,8709.0,-34.01322,150.74566,zoning_proxy|shops_low|bus_calibrated,baseline,0.0649402538722231,0
+89be081b6dbffff,R2 Low Density Residential,residential,Leppington,8359.0,-34.00995,150.74695,zoning_proxy|shops_low|bus_calibrated,baseline,0.05811268249128415,0
+89be08cc803ffff,RU1 Primary Production,rural,Leppington,5456.0,-33.96373,150.75011,zoning_proxy|shops_low|bus_calibrated,baseline,0.0008423726592480949,0
+89be08cc807ffff,RU1 Primary Production,rural,Leppington,5839.0,-33.96444,150.74606,zoning_proxy|shops_low|bus_calibrated,baseline,0.000719729822450343,0
+89be08cc813ffff,RU1 Primary Production,rural,Leppington,5269.0,-33.96629,150.75288,zoning_proxy|shops_low|bus_calibrated,baseline,0.00019838667678777797,0
+89be08cc817ffff,RU1 Primary Production,rural,Leppington,5652.0,-33.967,150.74882,zoning_proxy|shops_low|bus_calibrated,baseline,0.00033429211305502604,0
+89be08cc823ffff,RU1 Primary Production,rural,Leppington,6427.0,-33.96258,150.73924,zoning_proxy|shops_low|bus_calibrated,baseline,0.004816127818735494,0
+89be08cc833ffff,RU1 Primary Production,rural,Leppington,6222.0,-33.96514,150.742,zoning_proxy|shops_low|bus_calibrated,baseline,0.00042646444383642057,0
+89be08cc883ffff,RU1 Primary Production,rural,Leppington,5341.0,-33.97213,150.75435,zoning_proxy|shops_low|bus_calibrated,baseline,0.0004415343337285384,0
+89be08cc887ffff,RU1 Primary Production,rural,Leppington,5718.0,-33.97283,150.75029,zoning_proxy|shops_low|bus_calibrated,baseline,0.00019838667678777797,0
+89be08cc88fffff,RU1 Primary Production,rural,Leppington,5485.0,-33.96956,150.75159,zoning_proxy|shops_low|bus_calibrated,baseline,0.0018225874122559345,0
+89be08cc897ffff,RU1 Primary Production,rural,Leppington,5593.0,-33.9754,150.75306,zoning_proxy|shops_low|bus_calibrated,baseline,0.010068333937349539,0
+89be08cc8a3ffff,RU1 Primary Production,rural,Leppington,6247.0,-33.97098,150.74347,zoning_proxy|shops_low|bus_calibrated,baseline,0.004892883070508628,0
+89be08cc8a7ffff,RU1 Primary Production,rural,Leppington,6629.0,-33.97168,150.73942,zoning_proxy|shops_low|bus_calibrated,baseline,0.01751542370407522,0
+89be08cc8abffff,RU1 Primary Production,rural,Leppington,6035.0,-33.96771,150.74477,zoning_proxy|shops_low|bus_calibrated,baseline,0.00019838667678777797,0
+89be08cc8afffff,RU1 Primary Production,rural,Leppington,6417.0,-33.96841,150.74071,zoning_proxy|shops_low|bus_calibrated,baseline,0.009264162288531405,0
+89be08cc8b3ffff,RU1 Primary Production,rural,Leppington,6097.0,-33.97354,150.74624,zoning_proxy|shops_low|bus_calibrated,baseline,0.00011505334345444466,0
+89be08cc8b7ffff,RU1 Primary Production,rural,Leppington,6476.0,-33.97425,150.74218,zoning_proxy|shops_low|bus_calibrated,baseline,0.0007252223796236977,0
+89be08cc8bbffff,RU1 Primary Production,rural,Leppington,5866.0,-33.97027,150.74753,zoning_proxy|shops_low|bus_calibrated,baseline,0.0018225874122559345,0
+89be08ccc27ffff,RE1 Public Recreation,park,Leppington,5775.0,-33.98123,150.75453,zoning_proxy|shops_low|bus_calibrated,baseline,0.2663924981260572,0
+89be08ccd03ffff,R2 Low Density Residential,residential,Leppington,7150.0,-33.98662,150.74107,zoning_proxy|shops_low|bus_calibrated,baseline,0.061546707318949366,0
+89be08ccd07ffff,R2 Low Density Residential,residential,Leppington,7515.0,-33.98732,150.73701,zoning_proxy|shops_low|bus_calibrated,baseline,0.05546884493446727,0
+89be08ccd0bffff,R2 Low Density Residential,residential,Leppington,6870.0,-33.98335,150.74236,zoning_proxy|shops_low|bus_calibrated,baseline,0.06380514557873077,0
+89be08ccd0fffff,R2 Low Density Residential,residential,Leppington,7239.0,-33.98405,150.7383,zoning_proxy|shops_low|bus_calibrated,baseline,0.06232171581305496,0
+89be08ccd13ffff,R2 Low Density Residential,residential,Leppington,7081.0,-33.98918,150.74383,zoning_proxy|shops_low|bus_calibrated,baseline,0.05198600748702839,0
+89be08ccd17ffff,R2 Low Density Residential,residential,Leppington,7439.0,-33.98989,150.73978,zoning_proxy|shops_low|bus_calibrated,baseline,0.045088077004405355,0
+89be08ccd1bffff,R2 Low Density Residential,residential,Leppington,6787.0,-33.98591,150.74512,zoning_proxy|shops_low|bus_calibrated,baseline,0.05056140169682638,0
+89be08ccd3bffff,R2 Low Density Residential,residential,Leppington,7609.0,-33.98476,150.73425,zoning_proxy|shops_low|bus_calibrated,baseline,0.019621140597878613,0
+89be08ccd43ffff,R2 Low Density Residential,residential,Leppington,6229.0,-33.97937,150.74771,zoning_proxy|shops_low|bus_calibrated,baseline,0.02028157743283016,0
+89be08ccd47ffff,R2 Low Density Residential,residential,Leppington,6600.0,-33.98008,150.74365,zoning_proxy|shops_low|bus_calibrated,baseline,0.07192359657789375,0
+89be08ccd4bffff,RU1 Primary Production,rural,Leppington,5967.0,-33.9761,150.749,zoning_proxy|shops_low|bus_calibrated,baseline,0.0038434168183232803,0
+89be08ccd4fffff,RU1 Primary Production,rural,Leppington,6342.0,-33.97681,150.74495,zoning_proxy|shops_low|bus_calibrated,baseline,0.007844108101630819,0
+89be08ccd53ffff,RE1 Public Recreation,park,Leppington,6138.0,-33.98194,150.75047,zoning_proxy|shops_low|bus_calibrated,baseline,0.39819865415649697,0
+89be08ccd57ffff,R2 Low Density Residential,residential,Leppington,6503.0,-33.98264,150.74642,zoning_proxy|shops_low|bus_calibrated,baseline,0.04950856960650552,0
+89be08ccd5bffff,RU1 Primary Production,rural,Leppington,5859.0,-33.97867,150.75177,zoning_proxy|shops_low|bus_calibrated,baseline,0.03756720586185102,0
+89be08ccd63ffff,R2 Low Density Residential,residential,Leppington,7095.0,-33.97822,150.73683,zoning_proxy|shops_low|bus_calibrated,baseline,0.05964902228883568,0
+89be08ccd6bffff,RU1 Primary Production,rural,Leppington,6855.0,-33.97495,150.73813,zoning_proxy|shops_low|bus_calibrated,baseline,0.011353873392248838,0
+89be08ccd73ffff,R2 Low Density Residential,residential,Leppington,6973.0,-33.98079,150.7396,zoning_proxy|shops_low|bus_calibrated,baseline,0.04150415828498414,0
+89be08ccd77ffff,R2 Low Density Residential,residential,Leppington,7347.0,-33.98149,150.73554,zoning_proxy|shops_low|bus_calibrated,baseline,0.06818339311711809,0
+89be08ccd7bffff,R2 Low Density Residential,residential,Leppington,6718.0,-33.97752,150.74089,zoning_proxy|shops_low|bus_calibrated,baseline,0.025318319919184703,0
+89be08ccd83ffff,R1 General Residential,residential,Leppington,7345.0,-33.99501,150.7453,zoning_proxy|shops_low|bus_calibrated,baseline,0.06597680156311511,0
+89be08ccd87ffff,R3 Medium Density Residential,residential,Leppington,7691.0,-33.99572,150.74125,zoning_proxy|shops_low|bus_calibrated,baseline,0.077428412201112,0
+89be08ccd8bffff,R1 General Residential,residential,Leppington,7032.0,-33.99174,150.7466,zoning_proxy|shops_low|bus_calibrated,baseline,0.05479608949900457,0
+89be08ccd8fffff,R1 General Residential,residential,Leppington,7382.0,-33.99245,150.74254,zoning_proxy|shops_low|bus_calibrated,baseline,0.05234531325430547,0
+89be08ccd93ffff,R3 Medium Density Residential,residential,Leppington,7328.0,-33.99758,150.74807,zoning_proxy|shops_low|bus_calibrated,baseline,0.06963895832693483,0
+89be08ccd97ffff,B2 Local Centre,centre,Leppington,7665.0,-33.99828,150.74401,zoning_proxy|shops_low|bus_calibrated,baseline,0.2691157101129415,2
+89be08ccd9bffff,R1 General Residential,residential,Leppington,7003.0,-33.99431,150.74936,zoning_proxy|shops_low|bus_calibrated,baseline,0.05565236077727699,0
+89be08ccda3ffff,IN1 General Industrial,enterprise,Leppington,8093.0,-33.99386,150.73443,zoning_proxy|shops_low|bus_calibrated,baseline,0.012885477015684337,0
+89be08ccda7ffff,IN1 General Industrial,enterprise,Leppington,8452.0,-33.99457,150.73037,zoning_proxy|shops_low|bus_calibrated,baseline,0.0064035188851044875,0
+89be08ccdabffff,R2 Low Density Residential,residential,Leppington,7800.0,-33.99059,150.73572,zoning_proxy|shops_low|bus_calibrated,baseline,0.060235874497237024,0
+89be08ccdafffff,IN1 General Industrial,enterprise,Leppington,8163.0,-33.9913,150.73166,zoning_proxy|shops_low|bus_calibrated,baseline,0.007093217494864065,0
+89be08ccdb3ffff,R1 General Residential,residential,Leppington,8041.0,-33.99643,150.73719,zoning_proxy|shops_low|bus_calibrated,baseline,0.07972324151143943,0
+89be08ccdb7ffff,R1 General Residential,residential,Leppington,8393.0,-33.99713,150.73313,zoning_proxy|shops_low|bus_calibrated,baseline,0.06988258855707619,0
+89be08ccdbbffff,C2 Environmental Conservation,conservation,Leppington,7736.0,-33.99316,150.73848,zoning_proxy|shops_low|bus_calibrated,baseline,0.025562945486248483,0
+89be08ccdc3ffff,R1 General Residential,residential,Leppington,6373.0,-33.98777,150.75195,zoning_proxy|shops_low|bus_calibrated,baseline,0.015338721530945171,0
+89be08ccdc7ffff,C2 Environmental Conservation,conservation,Leppington,6725.0,-33.98847,150.74789,zoning_proxy|shops_low|bus_calibrated,baseline,0.0288813850262823,0
+89be08ccdcbffff,R1 General Residential,residential,Leppington,6069.0,-33.9845,150.75324,zoning_proxy|shops_low|bus_calibrated,baseline,0.1327233969767052,0
+89be08ccdcfffff,R3 Medium Density Residential,residential,Leppington,6427.0,-33.9852,150.74918,zoning_proxy|shops_low|bus_calibrated,baseline,0.16500199196928683,0
+89be08ccdd3ffff,R1 General Residential,residential,Leppington,6341.0,-33.99033,150.75471,zoning_proxy|shops_low|bus_calibrated,baseline,0.023594055182770718,0
+89be08ccdd7ffff,R1 General Residential,residential,Leppington,6684.0,-33.99104,150.75065,zoning_proxy|shops_low|bus_calibrated,baseline,0.05968745944602343,0
+89be08ccddbffff,RU4 Primary Production Small Lots,rural,Leppington,6024.0,-33.98706,150.756,zoning_proxy|shops_low|bus_calibrated,baseline,0.013938532789283519,0
+89be08ce94fffff,R2 Low Density Residential,residential,Leppington,8547.0,-34.01764,150.75525,zoning_proxy|shops_low|bus_calibrated,baseline,0.06526334033806518,0
+89be08ce96bffff,R2 Low Density Residential,residential,Leppington,8761.0,-34.01578,150.74843,zoning_proxy|shops_low|bus_calibrated,baseline,0.05208687478227233,0
+89be08ce97bffff,R2 Low Density Residential,residential,Leppington,8829.0,-34.01834,150.75119,zoning_proxy|shops_low|bus_calibrated,baseline,0.05135470714635812,0
+89be08ceb23ffff,R1 General Residential,residential,Leppington,7669.0,-34.00341,150.74954,zoning_proxy|shops_low|bus_calibrated,baseline,0.06582939954968205,0
+89be08ceb27ffff,R1 General Residential,residential,Leppington,7992.0,-34.00412,150.74548,zoning_proxy|shops_low|bus_calibrated,baseline,0.07570601958271653,0
+89be08ceb2bffff,R1 General Residential,residential,Leppington,7330.0,-34.00014,150.75083,zoning_proxy|shops_low|bus_calibrated,baseline,0.0515044773154976,0
+89be08ceb2fffff,R3 Medium Density Residential,residential,Leppington,7658.0,-34.00085,150.74678,zoning_proxy|shops_low|bus_calibrated,baseline,0.08348881274566645,0
+89be08ceb33ffff,C2 Environmental Conservation,conservation,Leppington,7700.0,-34.00597,150.7523,zoning_proxy|shops_low|bus_calibrated,baseline,0.017995832166146954,0
+89be08ceb37ffff,R2 Low Density Residential,residential,Leppington,8013.0,-34.00668,150.74825,zoning_proxy|shops_low|bus_calibrated,baseline,0.060552820031359346,0
+89be08ceb67ffff,R1 General Residential,residential,Leppington,6995.0,-33.99687,150.75213,zoning_proxy|shops_low|bus_calibrated,baseline,0.056865601528366,0
+89be08ceb6fffff,R1 General Residential,residential,Leppington,6665.0,-33.9936,150.75342,zoning_proxy|shops_low|bus_calibrated,baseline,0.06166776565736459,0
+89be08ceb77ffff,RU4 Primary Production Small Lots,rural,Leppington,7008.0,-33.99943,150.75489,zoning_proxy|shops_low|bus_calibrated,baseline,0.006704827119166022,0
+89be08ceba7ffff,R2 Low Density Residential,residential,Leppington,8405.0,-34.01251,150.74972,zoning_proxy|shops_low|bus_calibrated,baseline,0.05255226826411111,0
+89be08cebafffff,R2 Low Density Residential,residential,Leppington,8051.0,-34.00924,150.75101,zoning_proxy|shops_low|bus_calibrated,baseline,0.07634204264656747,0
+89be08cebb7ffff,R2 Low Density Residential,residential,Leppington,8467.0,-34.01507,150.75248,zoning_proxy|shops_low|bus_calibrated,baseline,0.06371121563603714,0
+89be081b2d3ffff,IN1 General Industrial,enterprise,Leppington,8812.0,-33.99528,150.72631,zoning_proxy|shops_low|bus_calibrated,good_areas,0.04459226650437515,0
+89be081b603ffff,R1 General Residential,residential,Leppington,9315.0,-34.0095,150.73202,zoning_proxy|shops_low|bus_calibrated,good_areas,0.044264788610494474,0
+89be081b607ffff,R1 General Residential,residential,Leppington,9651.0,-34.01021,150.72796,zoning_proxy|shops_low|bus_calibrated,good_areas,0.1380333546971187,0
+89be081b60bffff,R1 General Residential,residential,Leppington,8989.0,-34.00623,150.73331,zoning_proxy|shops_low|bus_calibrated,good_areas,0.060739286076079896,0
+89be081b60fffff,R1 General Residential,residential,Leppington,9329.0,-34.00694,150.72925,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12291233810024212,0
+89be081b613ffff,R1 General Residential,residential,Leppington,9317.0,-34.01207,150.73478,zoning_proxy|shops_low|bus_calibrated,good_areas,0.3493783863690779,1
+89be081b617ffff,R1 General Residential,residential,Leppington,9645.0,-34.01277,150.73072,zoning_proxy|shops_low|bus_calibrated,good_areas,0.03083523295384016,0
+89be081b61bffff,R1 General Residential,residential,Leppington,8983.0,-34.0088,150.73607,zoning_proxy|shops_low|bus_calibrated,good_areas,0.4285891316780996,0
+89be081b63bffff,R1 General Residential,residential,Leppington,9672.0,-34.00765,150.72519,zoning_proxy|shops_low|bus_calibrated,good_areas,0.14678092495328,0
+89be081b643ffff,R1 General Residential,residential,Leppington,8327.0,-34.00226,150.73866,zoning_proxy|shops_low|bus_calibrated,good_areas,0.13356241184181813,1
+89be081b647ffff,R1 General Residential,residential,Leppington,8668.0,-34.00297,150.7346,zoning_proxy|shops_low|bus_calibrated,good_areas,0.13505985531019912,0
+89be081b64bffff,B2 Local Centre,centre,Leppington,8006.0,-33.99899,150.73995,zoning_proxy|shops_low|bus_calibrated,good_areas,0.3629395195465097,1
+89be081b64fffff,R1 General Residential,residential,Leppington,8351.0,-33.9997,150.7359,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12086599464156597,0
+89be081b653ffff,R1 General Residential,residential,Leppington,8320.0,-34.00482,150.74142,zoning_proxy|shops_low|bus_calibrated,good_areas,0.05385625282321706,0
+89be081b657ffff,R1 General Residential,residential,Leppington,8653.0,-34.00553,150.73737,zoning_proxy|shops_low|bus_calibrated,good_areas,0.038566425458774777,0
+89be081b65bffff,R3 Medium Density Residential,residential,Leppington,7990.0,-34.00155,150.74272,zoning_proxy|shops_low|bus_calibrated,good_areas,0.3620129972515746,0
+89be081b663ffff,R1 General Residential,residential,Leppington,9050.0,-34.00111,150.72778,zoning_proxy|shops_low|bus_calibrated,good_areas,0.11670944409651135,0
+89be081b667ffff,R1 General Residential,residential,Leppington,9404.0,-34.00181,150.72372,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12978645679541678,0
+89be081b66bffff,R1 General Residential,residential,Leppington,8748.0,-33.99784,150.72907,zoning_proxy|shops_low|bus_calibrated,good_areas,0.1316003114725579,0
+89be081b66fffff,R1 General Residential,residential,Leppington,9105.0,-33.99854,150.72502,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12444148074735466,0
+89be081b673ffff,R1 General Residential,residential,Leppington,9012.0,-34.00367,150.73055,zoning_proxy|shops_low|bus_calibrated,good_areas,0.1215401250416973,0
+89be081b677ffff,R1 General Residential,residential,Leppington,9359.0,-34.00438,150.72649,zoning_proxy|shops_low|bus_calibrated,good_areas,0.1106100348363342,0
+89be081b67bffff,R1 General Residential,residential,Leppington,8699.0,-34.0004,150.73184,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12048809865890092,0
+89be081b6c3ffff,R2 Low Density Residential,residential,Leppington,8673.0,-34.01065,150.7429,zoning_proxy|shops_low|bus_calibrated,good_areas,0.03397136807860303,0
+89be081b6c7ffff,R1 General Residential,residential,Leppington,8993.0,-34.01136,150.73884,zoning_proxy|shops_low|bus_calibrated,good_areas,0.07748031899892632,0
+89be081b6cbffff,R2 Low Density Residential,residential,Leppington,8331.0,-34.00739,150.74419,zoning_proxy|shops_low|bus_calibrated,good_areas,0.05025878652838461,0
+89be081b6cfffff,R1 General Residential,residential,Leppington,8654.0,-34.00809,150.74013,zoning_proxy|shops_low|bus_calibrated,good_areas,0.5534045318801021,0
+89be081b6d3ffff,R2 Low Density Residential,residential,Leppington,8709.0,-34.01322,150.74566,zoning_proxy|shops_low|bus_calibrated,good_areas,0.11478411675577639,0
+89be081b6dbffff,R2 Low Density Residential,residential,Leppington,8359.0,-34.00995,150.74695,zoning_proxy|shops_low|bus_calibrated,good_areas,0.11302833131943221,0
+89be08cc803ffff,RU1 Primary Production,rural,Leppington,5456.0,-33.96373,150.75011,zoning_proxy|shops_low|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc807ffff,RU1 Primary Production,rural,Leppington,5839.0,-33.96444,150.74606,zoning_proxy|shops_low|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc813ffff,RU1 Primary Production,rural,Leppington,5269.0,-33.96629,150.75288,zoning_proxy|shops_low|bus_calibrated,good_areas,0.0013661187224409917,0
+89be08cc817ffff,RU1 Primary Production,rural,Leppington,5652.0,-33.967,150.74882,zoning_proxy|shops_low|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc823ffff,RU1 Primary Production,rural,Leppington,6427.0,-33.96258,150.73924,zoning_proxy|shops_low|bus_calibrated,good_areas,0.05955132221581099,0
+89be08cc833ffff,RU1 Primary Production,rural,Leppington,6222.0,-33.96514,150.742,zoning_proxy|shops_low|bus_calibrated,good_areas,0.015218166658148938,0
+89be08cc883ffff,RU1 Primary Production,rural,Leppington,5341.0,-33.97213,150.75435,zoning_proxy|shops_low|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc887ffff,RU1 Primary Production,rural,Leppington,5718.0,-33.97283,150.75029,zoning_proxy|shops_low|bus_calibrated,good_areas,0.0013661187224409917,0
+89be08cc88fffff,RU1 Primary Production,rural,Leppington,5485.0,-33.96956,150.75159,zoning_proxy|shops_low|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc897ffff,RU1 Primary Production,rural,Leppington,5593.0,-33.9754,150.75306,zoning_proxy|shops_low|bus_calibrated,good_areas,0.014658317723569488,0
+89be08cc8a3ffff,RU1 Primary Production,rural,Leppington,6247.0,-33.97098,150.74347,zoning_proxy|shops_low|bus_calibrated,good_areas,0.004081554215299425,0
+89be08cc8a7ffff,RU1 Primary Production,rural,Leppington,6629.0,-33.97168,150.73942,zoning_proxy|shops_low|bus_calibrated,good_areas,0.08642171097768163,0
+89be08cc8abffff,RU1 Primary Production,rural,Leppington,6035.0,-33.96771,150.74477,zoning_proxy|shops_low|bus_calibrated,good_areas,0.0008036187224409918,0
+89be08cc8afffff,RU1 Primary Production,rural,Leppington,6417.0,-33.96841,150.74071,zoning_proxy|shops_low|bus_calibrated,good_areas,0.04537259803112667,0
+89be08cc8b3ffff,RU1 Primary Production,rural,Leppington,6097.0,-33.97354,150.74624,zoning_proxy|shops_low|bus_calibrated,good_areas,0.0010435380772797014,0
+89be08cc8b7ffff,RU1 Primary Production,rural,Leppington,6476.0,-33.97425,150.74218,zoning_proxy|shops_low|bus_calibrated,good_areas,0.002177673884208274,0
+89be08cc8bbffff,RU1 Primary Production,rural,Leppington,5866.0,-33.97027,150.74753,zoning_proxy|shops_low|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08ccc27ffff,RE1 Public Recreation,park,Leppington,5775.0,-33.98123,150.75453,zoning_proxy|shops_low|bus_calibrated,good_areas,0.4448554902724862,0
+89be08ccd03ffff,R2 Low Density Residential,residential,Leppington,7150.0,-33.98662,150.74107,zoning_proxy|shops_low|bus_calibrated,good_areas,0.11915428874760466,0
+89be08ccd07ffff,R2 Low Density Residential,residential,Leppington,7515.0,-33.98732,150.73701,zoning_proxy|shops_low|bus_calibrated,good_areas,0.11232840996666583,0
+89be08ccd0bffff,R2 Low Density Residential,residential,Leppington,6870.0,-33.98335,150.74236,zoning_proxy|shops_low|bus_calibrated,good_areas,0.117208923803482,0
+89be08ccd0fffff,R2 Low Density Residential,residential,Leppington,7239.0,-33.98405,150.7383,zoning_proxy|shops_low|bus_calibrated,good_areas,0.11793080682038846,0
+89be08ccd13ffff,R2 Low Density Residential,residential,Leppington,7081.0,-33.98918,150.74383,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12135636587255168,0
+89be08ccd17ffff,R2 Low Density Residential,residential,Leppington,7439.0,-33.98989,150.73978,zoning_proxy|shops_low|bus_calibrated,good_areas,0.09818744886378539,0
+89be08ccd1bffff,R2 Low Density Residential,residential,Leppington,6787.0,-33.98591,150.74512,zoning_proxy|shops_low|bus_calibrated,good_areas,0.07917626010573624,0
+89be08ccd3bffff,R2 Low Density Residential,residential,Leppington,7609.0,-33.98476,150.73425,zoning_proxy|shops_low|bus_calibrated,good_areas,0.04833164555029051,0
+89be08ccd43ffff,R2 Low Density Residential,residential,Leppington,6229.0,-33.97937,150.74771,zoning_proxy|shops_low|bus_calibrated,good_areas,0.0776277474399931,0
+89be08ccd47ffff,R2 Low Density Residential,residential,Leppington,6600.0,-33.98008,150.74365,zoning_proxy|shops_low|bus_calibrated,good_areas,0.13131039366931233,0
+89be08ccd4bffff,RU1 Primary Production,rural,Leppington,5967.0,-33.9761,150.749,zoning_proxy|shops_low|bus_calibrated,good_areas,0.019326390821030732,0
+89be08ccd4fffff,RU1 Primary Production,rural,Leppington,6342.0,-33.97681,150.74495,zoning_proxy|shops_low|bus_calibrated,good_areas,0.003279600312942374,0
+89be08ccd53ffff,RE1 Public Recreation,park,Leppington,6138.0,-33.98194,150.75047,zoning_proxy|shops_low|bus_calibrated,good_areas,0.7218883111053672,0
+89be08ccd57ffff,R2 Low Density Residential,residential,Leppington,6503.0,-33.98264,150.74642,zoning_proxy|shops_low|bus_calibrated,good_areas,0.09841690230584116,0
+89be08ccd5bffff,RU1 Primary Production,rural,Leppington,5859.0,-33.97867,150.75177,zoning_proxy|shops_low|bus_calibrated,good_areas,0.21754505278621622,0
+89be08ccd63ffff,R2 Low Density Residential,residential,Leppington,7095.0,-33.97822,150.73683,zoning_proxy|shops_low|bus_calibrated,good_areas,0.13236909233756522,0
+89be08ccd6bffff,RU1 Primary Production,rural,Leppington,6855.0,-33.97495,150.73813,zoning_proxy|shops_low|bus_calibrated,good_areas,0.011428898574489673,0
+89be08ccd73ffff,R2 Low Density Residential,residential,Leppington,6973.0,-33.98079,150.7396,zoning_proxy|shops_low|bus_calibrated,good_areas,0.08821383713809701,0
+89be08ccd77ffff,R2 Low Density Residential,residential,Leppington,7347.0,-33.98149,150.73554,zoning_proxy|shops_low|bus_calibrated,good_areas,0.13598440213526314,0
+89be08ccd7bffff,R2 Low Density Residential,residential,Leppington,6718.0,-33.97752,150.74089,zoning_proxy|shops_low|bus_calibrated,good_areas,0.06950771052070365,0
+89be08ccd83ffff,R1 General Residential,residential,Leppington,7345.0,-33.99501,150.7453,zoning_proxy|shops_low|bus_calibrated,good_areas,0.13529699663264821,0
+89be08ccd87ffff,R3 Medium Density Residential,residential,Leppington,7691.0,-33.99572,150.74125,zoning_proxy|shops_low|bus_calibrated,good_areas,0.13249356630497178,0
+89be08ccd8bffff,R1 General Residential,residential,Leppington,7032.0,-33.99174,150.7466,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12490986243895963,0
+89be08ccd8fffff,R1 General Residential,residential,Leppington,7382.0,-33.99245,150.74254,zoning_proxy|shops_low|bus_calibrated,good_areas,0.11185365682295217,0
+89be08ccd93ffff,R3 Medium Density Residential,residential,Leppington,7328.0,-33.99758,150.74807,zoning_proxy|shops_low|bus_calibrated,good_areas,0.13460784252593738,0
+89be08ccd97ffff,B2 Local Centre,centre,Leppington,7665.0,-33.99828,150.74401,zoning_proxy|shops_low|bus_calibrated,good_areas,0.3545602073877642,2
+89be08ccd9bffff,R1 General Residential,residential,Leppington,7003.0,-33.99431,150.74936,zoning_proxy|shops_low|bus_calibrated,good_areas,0.11351775920267788,0
+89be08ccda3ffff,IN1 General Industrial,enterprise,Leppington,8093.0,-33.99386,150.73443,zoning_proxy|shops_low|bus_calibrated,good_areas,0.04920717443699848,0
+89be08ccda7ffff,IN1 General Industrial,enterprise,Leppington,8452.0,-33.99457,150.73037,zoning_proxy|shops_low|bus_calibrated,good_areas,0.05250890289561284,0
+89be08ccdabffff,R2 Low Density Residential,residential,Leppington,7800.0,-33.99059,150.73572,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12764593387166315,0
+89be08ccdafffff,IN1 General Industrial,enterprise,Leppington,8163.0,-33.9913,150.73166,zoning_proxy|shops_low|bus_calibrated,good_areas,0.05573990880363001,0
+89be08ccdb3ffff,R1 General Residential,residential,Leppington,8041.0,-33.99643,150.73719,zoning_proxy|shops_low|bus_calibrated,good_areas,0.14055899417933262,0
+89be08ccdb7ffff,R1 General Residential,residential,Leppington,8393.0,-33.99713,150.73313,zoning_proxy|shops_low|bus_calibrated,good_areas,0.13109049015484484,0
+89be08ccdbbffff,C2 Environmental Conservation,conservation,Leppington,7736.0,-33.99316,150.73848,zoning_proxy|shops_low|bus_calibrated,good_areas,0.05400821366053615,0
+89be08ccdc3ffff,R1 General Residential,residential,Leppington,6373.0,-33.98777,150.75195,zoning_proxy|shops_low|bus_calibrated,good_areas,0.04011627547289993,0
+89be08ccdc7ffff,C2 Environmental Conservation,conservation,Leppington,6725.0,-33.98847,150.74789,zoning_proxy|shops_low|bus_calibrated,good_areas,0.08142883639883189,0
+89be08ccdcbffff,R1 General Residential,residential,Leppington,6069.0,-33.9845,150.75324,zoning_proxy|shops_low|bus_calibrated,good_areas,0.1812428819869001,0
+89be08ccdcfffff,R3 Medium Density Residential,residential,Leppington,6427.0,-33.9852,150.74918,zoning_proxy|shops_low|bus_calibrated,good_areas,0.21757935503553638,0
+89be08ccdd3ffff,R1 General Residential,residential,Leppington,6341.0,-33.99033,150.75471,zoning_proxy|shops_low|bus_calibrated,good_areas,0.050498691213432444,0
+89be08ccdd7ffff,R1 General Residential,residential,Leppington,6684.0,-33.99104,150.75065,zoning_proxy|shops_low|bus_calibrated,good_areas,0.1133158834730777,0
+89be08ccddbffff,RU4 Primary Production Small Lots,rural,Leppington,6024.0,-33.98706,150.756,zoning_proxy|shops_low|bus_calibrated,good_areas,0.06259656937867833,0
+89be08ce94fffff,R2 Low Density Residential,residential,Leppington,8547.0,-34.01764,150.75525,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12165315255907383,0
+89be08ce96bffff,R2 Low Density Residential,residential,Leppington,8761.0,-34.01578,150.74843,zoning_proxy|shops_low|bus_calibrated,good_areas,0.11029017282873496,0
+89be08ce97bffff,R2 Low Density Residential,residential,Leppington,8829.0,-34.01834,150.75119,zoning_proxy|shops_low|bus_calibrated,good_areas,0.07620928533519891,0
+89be08ceb23ffff,R1 General Residential,residential,Leppington,7669.0,-34.00341,150.74954,zoning_proxy|shops_low|bus_calibrated,good_areas,0.1299281834935523,0
+89be08ceb27ffff,R1 General Residential,residential,Leppington,7992.0,-34.00412,150.74548,zoning_proxy|shops_low|bus_calibrated,good_areas,0.13862949629881485,0
+89be08ceb2bffff,R1 General Residential,residential,Leppington,7330.0,-34.00014,150.75083,zoning_proxy|shops_low|bus_calibrated,good_areas,0.1127244834016841,0
+89be08ceb2fffff,R3 Medium Density Residential,residential,Leppington,7658.0,-34.00085,150.74678,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12454674001732267,0
+89be08ceb33ffff,C2 Environmental Conservation,conservation,Leppington,7700.0,-34.00597,150.7523,zoning_proxy|shops_low|bus_calibrated,good_areas,0.04729557913846309,0
+89be08ceb37ffff,R2 Low Density Residential,residential,Leppington,8013.0,-34.00668,150.74825,zoning_proxy|shops_low|bus_calibrated,good_areas,0.1291541275421759,0
+89be08ceb67ffff,R1 General Residential,residential,Leppington,6995.0,-33.99687,150.75213,zoning_proxy|shops_low|bus_calibrated,good_areas,0.11442256084720012,0
+89be08ceb6fffff,R1 General Residential,residential,Leppington,6665.0,-33.9936,150.75342,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12461757450010183,0
+89be08ceb77ffff,RU4 Primary Production Small Lots,rural,Leppington,7008.0,-33.99943,150.75489,zoning_proxy|shops_low|bus_calibrated,good_areas,0.001805921586943892,0
+89be08ceba7ffff,R2 Low Density Residential,residential,Leppington,8405.0,-34.01251,150.74972,zoning_proxy|shops_low|bus_calibrated,good_areas,0.1101930939031331,0
+89be08cebafffff,R2 Low Density Residential,residential,Leppington,8051.0,-34.00924,150.75101,zoning_proxy|shops_low|bus_calibrated,good_areas,0.15548534672465958,0
+89be08cebb7ffff,R2 Low Density Residential,residential,Leppington,8467.0,-34.01507,150.75248,zoning_proxy|shops_low|bus_calibrated,good_areas,0.12393584254358778,0
+89be081b2d3ffff,IN1 General Industrial,enterprise,Leppington,8812.0,-33.99528,150.72631,zoning_proxy|shops_mid|bus_calibrated,baseline,0.380313898555467,0
+89be081b603ffff,R1 General Residential,residential,Leppington,9315.0,-34.0095,150.73202,zoning_proxy|shops_mid|bus_calibrated,baseline,0.020226487930632177,0
+89be081b607ffff,R1 General Residential,residential,Leppington,9651.0,-34.01021,150.72796,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06964842005043803,0
+89be081b60bffff,R1 General Residential,residential,Leppington,8989.0,-34.00623,150.73331,zoning_proxy|shops_mid|bus_calibrated,baseline,0.030444194128621753,0
+89be081b60fffff,R1 General Residential,residential,Leppington,9329.0,-34.00694,150.72925,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06021762862372879,0
+89be081b613ffff,R1 General Residential,residential,Leppington,9317.0,-34.01207,150.73478,zoning_proxy|shops_mid|bus_calibrated,baseline,0.21363685289854592,1
+89be081b617ffff,R1 General Residential,residential,Leppington,9645.0,-34.01277,150.73072,zoning_proxy|shops_mid|bus_calibrated,baseline,0.011194199293963227,0
+89be081b61bffff,R1 General Residential,residential,Leppington,8983.0,-34.0088,150.73607,zoning_proxy|shops_mid|bus_calibrated,baseline,0.35553543662497655,0
+89be081b63bffff,R1 General Residential,residential,Leppington,9672.0,-34.00765,150.72519,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06796854347041073,0
+89be081b643ffff,R1 General Residential,residential,Leppington,8327.0,-34.00226,150.73866,zoning_proxy|shops_mid|bus_calibrated,baseline,0.09186149945527414,1
+89be081b647ffff,R1 General Residential,residential,Leppington,8668.0,-34.00297,150.7346,zoning_proxy|shops_mid|bus_calibrated,baseline,0.07000273678611163,0
+89be081b64bffff,B2 Local Centre,centre,Leppington,8006.0,-33.99899,150.73995,zoning_proxy|shops_mid|bus_calibrated,baseline,0.46610092516743556,1
+89be081b64fffff,R1 General Residential,residential,Leppington,8351.0,-33.9997,150.7359,zoning_proxy|shops_mid|bus_calibrated,baseline,0.0681232187411307,0
+89be081b653ffff,R1 General Residential,residential,Leppington,8320.0,-34.00482,150.74142,zoning_proxy|shops_mid|bus_calibrated,baseline,0.050101483011420186,0
+89be081b657ffff,R1 General Residential,residential,Leppington,8653.0,-34.00553,150.73737,zoning_proxy|shops_mid|bus_calibrated,baseline,0.018418951150404574,0
+89be081b65bffff,R3 Medium Density Residential,residential,Leppington,7990.0,-34.00155,150.74272,zoning_proxy|shops_mid|bus_calibrated,baseline,0.5615221443620851,0
+89be081b663ffff,R1 General Residential,residential,Leppington,9050.0,-34.00111,150.72778,zoning_proxy|shops_mid|bus_calibrated,baseline,0.05454106378231839,0
+89be081b667ffff,R1 General Residential,residential,Leppington,9404.0,-34.00181,150.72372,zoning_proxy|shops_mid|bus_calibrated,baseline,0.058836367828224746,0
+89be081b66bffff,R1 General Residential,residential,Leppington,8748.0,-33.99784,150.72907,zoning_proxy|shops_mid|bus_calibrated,baseline,0.08177001445268098,0
+89be081b66fffff,R1 General Residential,residential,Leppington,9105.0,-33.99854,150.72502,zoning_proxy|shops_mid|bus_calibrated,baseline,0.0743282252742749,0
+89be081b673ffff,R1 General Residential,residential,Leppington,9012.0,-34.00367,150.73055,zoning_proxy|shops_mid|bus_calibrated,baseline,0.05451888831167684,0
+89be081b677ffff,R1 General Residential,residential,Leppington,9359.0,-34.00438,150.72649,zoning_proxy|shops_mid|bus_calibrated,baseline,0.05434122556970315,0
+89be081b67bffff,R1 General Residential,residential,Leppington,8699.0,-34.0004,150.73184,zoning_proxy|shops_mid|bus_calibrated,baseline,0.054984281793515624,0
+89be081b6c3ffff,R2 Low Density Residential,residential,Leppington,8673.0,-34.01065,150.7429,zoning_proxy|shops_mid|bus_calibrated,baseline,0.021449662354498234,0
+89be081b6c7ffff,R1 General Residential,residential,Leppington,8993.0,-34.01136,150.73884,zoning_proxy|shops_mid|bus_calibrated,baseline,0.036095274977470664,0
+89be081b6cbffff,R2 Low Density Residential,residential,Leppington,8331.0,-34.00739,150.74419,zoning_proxy|shops_mid|bus_calibrated,baseline,0.015146858449284165,0
+89be081b6cfffff,R1 General Residential,residential,Leppington,8654.0,-34.00809,150.74013,zoning_proxy|shops_mid|bus_calibrated,baseline,0.3317158537564029,0
+89be081b6d3ffff,R2 Low Density Residential,residential,Leppington,8709.0,-34.01322,150.74566,zoning_proxy|shops_mid|bus_calibrated,baseline,0.0649402538722231,0
+89be081b6dbffff,R2 Low Density Residential,residential,Leppington,8359.0,-34.00995,150.74695,zoning_proxy|shops_mid|bus_calibrated,baseline,0.05811268249128415,0
+89be08cc803ffff,RU1 Primary Production,rural,Leppington,5456.0,-33.96373,150.75011,zoning_proxy|shops_mid|bus_calibrated,baseline,0.0008423726592480949,0
+89be08cc807ffff,RU1 Primary Production,rural,Leppington,5839.0,-33.96444,150.74606,zoning_proxy|shops_mid|bus_calibrated,baseline,0.000719729822450343,0
+89be08cc813ffff,RU1 Primary Production,rural,Leppington,5269.0,-33.96629,150.75288,zoning_proxy|shops_mid|bus_calibrated,baseline,0.00019838667678777797,0
+89be08cc817ffff,RU1 Primary Production,rural,Leppington,5652.0,-33.967,150.74882,zoning_proxy|shops_mid|bus_calibrated,baseline,0.00033429211305502604,0
+89be08cc823ffff,RU1 Primary Production,rural,Leppington,6427.0,-33.96258,150.73924,zoning_proxy|shops_mid|bus_calibrated,baseline,0.004816127818735494,0
+89be08cc833ffff,RU1 Primary Production,rural,Leppington,6222.0,-33.96514,150.742,zoning_proxy|shops_mid|bus_calibrated,baseline,0.00042646444383642057,0
+89be08cc883ffff,RU1 Primary Production,rural,Leppington,5341.0,-33.97213,150.75435,zoning_proxy|shops_mid|bus_calibrated,baseline,0.0004415343337285384,0
+89be08cc887ffff,RU1 Primary Production,rural,Leppington,5718.0,-33.97283,150.75029,zoning_proxy|shops_mid|bus_calibrated,baseline,0.00019838667678777797,0
+89be08cc88fffff,RU1 Primary Production,rural,Leppington,5485.0,-33.96956,150.75159,zoning_proxy|shops_mid|bus_calibrated,baseline,0.001822587412255935,0
+89be08cc897ffff,RU1 Primary Production,rural,Leppington,5593.0,-33.9754,150.75306,zoning_proxy|shops_mid|bus_calibrated,baseline,0.010068333937349537,0
+89be08cc8a3ffff,RU1 Primary Production,rural,Leppington,6247.0,-33.97098,150.74347,zoning_proxy|shops_mid|bus_calibrated,baseline,0.004892883070508628,0
+89be08cc8a7ffff,RU1 Primary Production,rural,Leppington,6629.0,-33.97168,150.73942,zoning_proxy|shops_mid|bus_calibrated,baseline,0.04140862780931008,0
+89be08cc8abffff,RU1 Primary Production,rural,Leppington,6035.0,-33.96771,150.74477,zoning_proxy|shops_mid|bus_calibrated,baseline,0.00019838667678777797,0
+89be08cc8afffff,RU1 Primary Production,rural,Leppington,6417.0,-33.96841,150.74071,zoning_proxy|shops_mid|bus_calibrated,baseline,0.01927392366704112,0
+89be08cc8b3ffff,RU1 Primary Production,rural,Leppington,6097.0,-33.97354,150.74624,zoning_proxy|shops_mid|bus_calibrated,baseline,0.00011505334345444466,0
+89be08cc8b7ffff,RU1 Primary Production,rural,Leppington,6476.0,-33.97425,150.74218,zoning_proxy|shops_mid|bus_calibrated,baseline,0.0007252223796236977,0
+89be08cc8bbffff,RU1 Primary Production,rural,Leppington,5866.0,-33.97027,150.74753,zoning_proxy|shops_mid|bus_calibrated,baseline,0.001822587412255935,0
+89be08ccc27ffff,RE1 Public Recreation,park,Leppington,5775.0,-33.98123,150.75453,zoning_proxy|shops_mid|bus_calibrated,baseline,0.2663924981260572,0
+89be08ccd03ffff,R2 Low Density Residential,residential,Leppington,7150.0,-33.98662,150.74107,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06154670731894935,0
+89be08ccd07ffff,R2 Low Density Residential,residential,Leppington,7515.0,-33.98732,150.73701,zoning_proxy|shops_mid|bus_calibrated,baseline,0.05546884493446727,0
+89be08ccd0bffff,R2 Low Density Residential,residential,Leppington,6870.0,-33.98335,150.74236,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06380514557873078,0
+89be08ccd0fffff,R2 Low Density Residential,residential,Leppington,7239.0,-33.98405,150.7383,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06232171581305496,0
+89be08ccd13ffff,R2 Low Density Residential,residential,Leppington,7081.0,-33.98918,150.74383,zoning_proxy|shops_mid|bus_calibrated,baseline,0.0519860074870284,0
+89be08ccd17ffff,R2 Low Density Residential,residential,Leppington,7439.0,-33.98989,150.73978,zoning_proxy|shops_mid|bus_calibrated,baseline,0.04508807700440536,0
+89be08ccd1bffff,R2 Low Density Residential,residential,Leppington,6787.0,-33.98591,150.74512,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06195047983489607,0
+89be08ccd3bffff,R2 Low Density Residential,residential,Leppington,7609.0,-33.98476,150.73425,zoning_proxy|shops_mid|bus_calibrated,baseline,0.019621140597878613,0
+89be08ccd43ffff,R2 Low Density Residential,residential,Leppington,6229.0,-33.97937,150.74771,zoning_proxy|shops_mid|bus_calibrated,baseline,0.02028157743283016,0
+89be08ccd47ffff,R2 Low Density Residential,residential,Leppington,6600.0,-33.98008,150.74365,zoning_proxy|shops_mid|bus_calibrated,baseline,0.07192359657789377,0
+89be08ccd4bffff,RU1 Primary Production,rural,Leppington,5967.0,-33.9761,150.749,zoning_proxy|shops_mid|bus_calibrated,baseline,0.0038434168183232803,0
+89be08ccd4fffff,RU1 Primary Production,rural,Leppington,6342.0,-33.97681,150.74495,zoning_proxy|shops_mid|bus_calibrated,baseline,0.00784410810163082,0
+89be08ccd53ffff,RE1 Public Recreation,park,Leppington,6138.0,-33.98194,150.75047,zoning_proxy|shops_mid|bus_calibrated,baseline,0.398198654156497,0
+89be08ccd57ffff,R2 Low Density Residential,residential,Leppington,6503.0,-33.98264,150.74642,zoning_proxy|shops_mid|bus_calibrated,baseline,0.04950856960650552,0
+89be08ccd5bffff,RU1 Primary Production,rural,Leppington,5859.0,-33.97867,150.75177,zoning_proxy|shops_mid|bus_calibrated,baseline,0.037567205861851014,0
+89be08ccd63ffff,R2 Low Density Residential,residential,Leppington,7095.0,-33.97822,150.73683,zoning_proxy|shops_mid|bus_calibrated,baseline,0.05964902228883567,0
+89be08ccd6bffff,RU1 Primary Production,rural,Leppington,6855.0,-33.97495,150.73813,zoning_proxy|shops_mid|bus_calibrated,baseline,0.011353873392248838,0
+89be08ccd73ffff,R2 Low Density Residential,residential,Leppington,6973.0,-33.98079,150.7396,zoning_proxy|shops_mid|bus_calibrated,baseline,0.04150415828498413,0
+89be08ccd77ffff,R2 Low Density Residential,residential,Leppington,7347.0,-33.98149,150.73554,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06818339311711807,0
+89be08ccd7bffff,R2 Low Density Residential,residential,Leppington,6718.0,-33.97752,150.74089,zoning_proxy|shops_mid|bus_calibrated,baseline,0.025318319919184706,0
+89be08ccd83ffff,R1 General Residential,residential,Leppington,7345.0,-33.99501,150.7453,zoning_proxy|shops_mid|bus_calibrated,baseline,0.07230325569053893,0
+89be08ccd87ffff,R3 Medium Density Residential,residential,Leppington,7691.0,-33.99572,150.74125,zoning_proxy|shops_mid|bus_calibrated,baseline,0.3721032490657389,0
+89be08ccd8bffff,R1 General Residential,residential,Leppington,7032.0,-33.99174,150.7466,zoning_proxy|shops_mid|bus_calibrated,baseline,0.05479608949900458,0
+89be08ccd8fffff,R1 General Residential,residential,Leppington,7382.0,-33.99245,150.74254,zoning_proxy|shops_mid|bus_calibrated,baseline,0.05234531325430547,0
+89be08ccd93ffff,R3 Medium Density Residential,residential,Leppington,7328.0,-33.99758,150.74807,zoning_proxy|shops_mid|bus_calibrated,baseline,0.09008465434697885,0
+89be08ccd97ffff,B2 Local Centre,centre,Leppington,7665.0,-33.99828,150.74401,zoning_proxy|shops_mid|bus_calibrated,baseline,0.5451458921528491,2
+89be08ccd9bffff,R1 General Residential,residential,Leppington,7003.0,-33.99431,150.74936,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06240773848326031,0
+89be08ccda3ffff,IN1 General Industrial,enterprise,Leppington,8093.0,-33.99386,150.73443,zoning_proxy|shops_mid|bus_calibrated,baseline,0.35691415187965403,0
+89be08ccda7ffff,IN1 General Industrial,enterprise,Leppington,8452.0,-33.99457,150.73037,zoning_proxy|shops_mid|bus_calibrated,baseline,0.28185883965980885,0
+89be08ccdabffff,R2 Low Density Residential,residential,Leppington,7800.0,-33.99059,150.73572,zoning_proxy|shops_mid|bus_calibrated,baseline,0.07407429464308359,0
+89be08ccdafffff,IN1 General Industrial,enterprise,Leppington,8163.0,-33.9913,150.73166,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06884688941670411,0
+89be08ccdb3ffff,R1 General Residential,residential,Leppington,8041.0,-33.99643,150.73719,zoning_proxy|shops_mid|bus_calibrated,baseline,0.08534721561364825,0
+89be08ccdb7ffff,R1 General Residential,residential,Leppington,8393.0,-33.99713,150.73313,zoning_proxy|shops_mid|bus_calibrated,baseline,0.08310859612190782,0
+89be08ccdbbffff,C2 Environmental Conservation,conservation,Leppington,7736.0,-33.99316,150.73848,zoning_proxy|shops_mid|bus_calibrated,baseline,0.044330596426665654,0
+89be08ccdc3ffff,R1 General Residential,residential,Leppington,6373.0,-33.98777,150.75195,zoning_proxy|shops_mid|bus_calibrated,baseline,0.026895292966017628,0
+89be08ccdc7ffff,C2 Environmental Conservation,conservation,Leppington,6725.0,-33.98847,150.74789,zoning_proxy|shops_mid|bus_calibrated,baseline,0.056085518795097565,0
+89be08ccdcbffff,R1 General Residential,residential,Leppington,6069.0,-33.9845,150.75324,zoning_proxy|shops_mid|bus_calibrated,baseline,0.13301549637265472,0
+89be08ccdcfffff,R3 Medium Density Residential,residential,Leppington,6427.0,-33.9852,150.74918,zoning_proxy|shops_mid|bus_calibrated,baseline,0.21298800505177296,0
+89be08ccdd3ffff,R1 General Residential,residential,Leppington,6341.0,-33.99033,150.75471,zoning_proxy|shops_mid|bus_calibrated,baseline,0.023594055182770718,0
+89be08ccdd7ffff,R1 General Residential,residential,Leppington,6684.0,-33.99104,150.75065,zoning_proxy|shops_mid|bus_calibrated,baseline,0.05968745944602342,0
+89be08ccddbffff,RU4 Primary Production Small Lots,rural,Leppington,6024.0,-33.98706,150.756,zoning_proxy|shops_mid|bus_calibrated,baseline,0.013938532789283515,0
+89be08ce94fffff,R2 Low Density Residential,residential,Leppington,8547.0,-34.01764,150.75525,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06526334033806518,0
+89be08ce96bffff,R2 Low Density Residential,residential,Leppington,8761.0,-34.01578,150.74843,zoning_proxy|shops_mid|bus_calibrated,baseline,0.05208687478227232,0
+89be08ce97bffff,R2 Low Density Residential,residential,Leppington,8829.0,-34.01834,150.75119,zoning_proxy|shops_mid|bus_calibrated,baseline,0.05135470714635812,0
+89be08ceb23ffff,R1 General Residential,residential,Leppington,7669.0,-34.00341,150.74954,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06582939954968205,0
+89be08ceb27ffff,R1 General Residential,residential,Leppington,7992.0,-34.00412,150.74548,zoning_proxy|shops_mid|bus_calibrated,baseline,0.07643358004656395,0
+89be08ceb2bffff,R1 General Residential,residential,Leppington,7330.0,-34.00014,150.75083,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06762976272027064,0
+89be08ceb2fffff,R3 Medium Density Residential,residential,Leppington,7658.0,-34.00085,150.74678,zoning_proxy|shops_mid|bus_calibrated,baseline,0.5418590268343862,0
+89be08ceb33ffff,C2 Environmental Conservation,conservation,Leppington,7700.0,-34.00597,150.7523,zoning_proxy|shops_mid|bus_calibrated,baseline,0.017995832166146954,0
+89be08ceb37ffff,R2 Low Density Residential,residential,Leppington,8013.0,-34.00668,150.74825,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06055282003135936,0
+89be08ceb67ffff,R1 General Residential,residential,Leppington,6995.0,-33.99687,150.75213,zoning_proxy|shops_mid|bus_calibrated,baseline,0.056865601528366,0
+89be08ceb6fffff,R1 General Residential,residential,Leppington,6665.0,-33.9936,150.75342,zoning_proxy|shops_mid|bus_calibrated,baseline,0.0616677656573646,0
+89be08ceb77ffff,RU4 Primary Production Small Lots,rural,Leppington,7008.0,-33.99943,150.75489,zoning_proxy|shops_mid|bus_calibrated,baseline,0.006704827119166022,0
+89be08ceba7ffff,R2 Low Density Residential,residential,Leppington,8405.0,-34.01251,150.74972,zoning_proxy|shops_mid|bus_calibrated,baseline,0.0525522682641111,0
+89be08cebafffff,R2 Low Density Residential,residential,Leppington,8051.0,-34.00924,150.75101,zoning_proxy|shops_mid|bus_calibrated,baseline,0.07634204264656747,0
+89be08cebb7ffff,R2 Low Density Residential,residential,Leppington,8467.0,-34.01507,150.75248,zoning_proxy|shops_mid|bus_calibrated,baseline,0.06371121563603713,0
+89be081b2d3ffff,IN1 General Industrial,enterprise,Leppington,8812.0,-33.99528,150.72631,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.4313569041952094,0
+89be081b603ffff,R1 General Residential,residential,Leppington,9315.0,-34.0095,150.73202,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.04426478861049448,0
+89be081b607ffff,R1 General Residential,residential,Leppington,9651.0,-34.01021,150.72796,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.1380333546971187,0
+89be081b60bffff,R1 General Residential,residential,Leppington,8989.0,-34.00623,150.73331,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.06073928607607988,0
+89be081b60fffff,R1 General Residential,residential,Leppington,9329.0,-34.00694,150.72925,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12291233810024212,0
+89be081b613ffff,R1 General Residential,residential,Leppington,9317.0,-34.01207,150.73478,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.349378386369078,1
+89be081b617ffff,R1 General Residential,residential,Leppington,9645.0,-34.01277,150.73072,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.030835232953840153,0
+89be081b61bffff,R1 General Residential,residential,Leppington,8983.0,-34.0088,150.73607,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.4285891316780996,0
+89be081b63bffff,R1 General Residential,residential,Leppington,9672.0,-34.00765,150.72519,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.14678092495328002,0
+89be081b643ffff,R1 General Residential,residential,Leppington,8327.0,-34.00226,150.73866,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12905548265871644,1
+89be081b647ffff,R1 General Residential,residential,Leppington,8668.0,-34.00297,150.7346,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.13505985531019912,0
+89be081b64bffff,B2 Local Centre,centre,Leppington,8006.0,-33.99899,150.73995,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.6698579394864509,1
+89be081b64fffff,R1 General Residential,residential,Leppington,8351.0,-33.9997,150.7359,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12431206087699584,0
+89be081b653ffff,R1 General Residential,residential,Leppington,8320.0,-34.00482,150.74142,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.07532459959850439,0
+89be081b657ffff,R1 General Residential,residential,Leppington,8653.0,-34.00553,150.73737,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.038566425458774777,0
+89be081b65bffff,R3 Medium Density Residential,residential,Leppington,7990.0,-34.00155,150.74272,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.6526545541793395,0
+89be081b663ffff,R1 General Residential,residential,Leppington,9050.0,-34.00111,150.72778,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.11670944409651135,0
+89be081b667ffff,R1 General Residential,residential,Leppington,9404.0,-34.00181,150.72372,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12978645679541684,0
+89be081b66bffff,R1 General Residential,residential,Leppington,8748.0,-33.99784,150.72907,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.13851417029117352,0
+89be081b66fffff,R1 General Residential,residential,Leppington,9105.0,-33.99854,150.72502,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.13507183259248604,0
+89be081b673ffff,R1 General Residential,residential,Leppington,9012.0,-34.00367,150.73055,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.1215401250416973,0
+89be081b677ffff,R1 General Residential,residential,Leppington,9359.0,-34.00438,150.72649,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.11061003483633423,0
+89be081b67bffff,R1 General Residential,residential,Leppington,8699.0,-34.0004,150.73184,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12048809865890095,0
+89be081b6c3ffff,R2 Low Density Residential,residential,Leppington,8673.0,-34.01065,150.7429,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.03397136807860302,0
+89be081b6c7ffff,R1 General Residential,residential,Leppington,8993.0,-34.01136,150.73884,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.07748031899892634,0
+89be081b6cbffff,R2 Low Density Residential,residential,Leppington,8331.0,-34.00739,150.74419,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.05025878652838461,0
+89be081b6cfffff,R1 General Residential,residential,Leppington,8654.0,-34.00809,150.74013,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.5534045318801021,0
+89be081b6d3ffff,R2 Low Density Residential,residential,Leppington,8709.0,-34.01322,150.74566,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.11478411675577639,0
+89be081b6dbffff,R2 Low Density Residential,residential,Leppington,8359.0,-34.00995,150.74695,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.11302833131943224,0
+89be08cc803ffff,RU1 Primary Production,rural,Leppington,5456.0,-33.96373,150.75011,zoning_proxy|shops_mid|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc807ffff,RU1 Primary Production,rural,Leppington,5839.0,-33.96444,150.74606,zoning_proxy|shops_mid|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc813ffff,RU1 Primary Production,rural,Leppington,5269.0,-33.96629,150.75288,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.0013661187224409917,0
+89be08cc817ffff,RU1 Primary Production,rural,Leppington,5652.0,-33.967,150.74882,zoning_proxy|shops_mid|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc823ffff,RU1 Primary Production,rural,Leppington,6427.0,-33.96258,150.73924,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.059551322215811005,0
+89be08cc833ffff,RU1 Primary Production,rural,Leppington,6222.0,-33.96514,150.742,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.015218166658148936,0
+89be08cc883ffff,RU1 Primary Production,rural,Leppington,5341.0,-33.97213,150.75435,zoning_proxy|shops_mid|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc887ffff,RU1 Primary Production,rural,Leppington,5718.0,-33.97283,150.75029,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.0013661187224409917,0
+89be08cc88fffff,RU1 Primary Production,rural,Leppington,5485.0,-33.96956,150.75159,zoning_proxy|shops_mid|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc897ffff,RU1 Primary Production,rural,Leppington,5593.0,-33.9754,150.75306,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.01465831772356949,0
+89be08cc8a3ffff,RU1 Primary Production,rural,Leppington,6247.0,-33.97098,150.74347,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.004081554215299425,0
+89be08cc8a7ffff,RU1 Primary Production,rural,Leppington,6629.0,-33.97168,150.73942,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.0980714930366852,0
+89be08cc8abffff,RU1 Primary Production,rural,Leppington,6035.0,-33.96771,150.74477,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.0008036187224409918,0
+89be08cc8afffff,RU1 Primary Production,rural,Leppington,6417.0,-33.96841,150.74071,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.06159494844288301,0
+89be08cc8b3ffff,RU1 Primary Production,rural,Leppington,6097.0,-33.97354,150.74624,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.0010435380772797014,0
+89be08cc8b7ffff,RU1 Primary Production,rural,Leppington,6476.0,-33.97425,150.74218,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.002177673884208274,0
+89be08cc8bbffff,RU1 Primary Production,rural,Leppington,5866.0,-33.97027,150.74753,zoning_proxy|shops_mid|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08ccc27ffff,RE1 Public Recreation,park,Leppington,5775.0,-33.98123,150.75453,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.44485549027248605,0
+89be08ccd03ffff,R2 Low Density Residential,residential,Leppington,7150.0,-33.98662,150.74107,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.11915428874760463,0
+89be08ccd07ffff,R2 Low Density Residential,residential,Leppington,7515.0,-33.98732,150.73701,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.11232840996666583,0
+89be08ccd0bffff,R2 Low Density Residential,residential,Leppington,6870.0,-33.98335,150.74236,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.117208923803482,0
+89be08ccd0fffff,R2 Low Density Residential,residential,Leppington,7239.0,-33.98405,150.7383,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.11793080682038844,0
+89be08ccd13ffff,R2 Low Density Residential,residential,Leppington,7081.0,-33.98918,150.74383,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.1213563658725517,0
+89be08ccd17ffff,R2 Low Density Residential,residential,Leppington,7439.0,-33.98989,150.73978,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.09818744886378537,0
+89be08ccd1bffff,R2 Low Density Residential,residential,Leppington,6787.0,-33.98591,150.74512,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.0936838057236365,0
+89be08ccd3bffff,R2 Low Density Residential,residential,Leppington,7609.0,-33.98476,150.73425,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.04833164555029051,0
+89be08ccd43ffff,R2 Low Density Residential,residential,Leppington,6229.0,-33.97937,150.74771,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.0776277474399931,0
+89be08ccd47ffff,R2 Low Density Residential,residential,Leppington,6600.0,-33.98008,150.74365,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.13131039366931238,0
+89be08ccd4bffff,RU1 Primary Production,rural,Leppington,5967.0,-33.9761,150.749,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.019326390821030732,0
+89be08ccd4fffff,RU1 Primary Production,rural,Leppington,6342.0,-33.97681,150.74495,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.0032796003129423744,0
+89be08ccd53ffff,RE1 Public Recreation,park,Leppington,6138.0,-33.98194,150.75047,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.7218883111053671,0
+89be08ccd57ffff,R2 Low Density Residential,residential,Leppington,6503.0,-33.98264,150.74642,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.09841690230584117,0
+89be08ccd5bffff,RU1 Primary Production,rural,Leppington,5859.0,-33.97867,150.75177,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.21754505278621622,0
+89be08ccd63ffff,R2 Low Density Residential,residential,Leppington,7095.0,-33.97822,150.73683,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.13236909233756522,0
+89be08ccd6bffff,RU1 Primary Production,rural,Leppington,6855.0,-33.97495,150.73813,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.011428898574489673,0
+89be08ccd73ffff,R2 Low Density Residential,residential,Leppington,6973.0,-33.98079,150.7396,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.08821383713809702,0
+89be08ccd77ffff,R2 Low Density Residential,residential,Leppington,7347.0,-33.98149,150.73554,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.1359844021352631,0
+89be08ccd7bffff,R2 Low Density Residential,residential,Leppington,6718.0,-33.97752,150.74089,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.06950771052070363,0
+89be08ccd83ffff,R1 General Residential,residential,Leppington,7345.0,-33.99501,150.7453,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.13794852793464418,0
+89be08ccd87ffff,R3 Medium Density Residential,residential,Leppington,7691.0,-33.99572,150.74125,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.45220402629569717,0
+89be08ccd8bffff,R1 General Residential,residential,Leppington,7032.0,-33.99174,150.7466,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12490986243895966,0
+89be08ccd8fffff,R1 General Residential,residential,Leppington,7382.0,-33.99245,150.74254,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.1118536568229522,0
+89be08ccd93ffff,R3 Medium Density Residential,residential,Leppington,7328.0,-33.99758,150.74807,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.1269704507684389,0
+89be08ccd97ffff,B2 Local Centre,centre,Leppington,7665.0,-33.99828,150.74401,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.7829700891779073,2
+89be08ccd9bffff,R1 General Residential,residential,Leppington,7003.0,-33.99431,150.74936,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12368706937356024,0
+89be08ccda3ffff,IN1 General Industrial,enterprise,Leppington,8093.0,-33.99386,150.73443,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.41646122199821634,0
+89be08ccda7ffff,IN1 General Industrial,enterprise,Leppington,8452.0,-33.99457,150.73037,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.3877775320395913,0
+89be08ccdabffff,R2 Low Density Residential,residential,Leppington,7800.0,-33.99059,150.73572,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.137594059545033,0
+89be08ccdafffff,IN1 General Industrial,enterprise,Leppington,8163.0,-33.9913,150.73166,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.11801606362656576,0
+89be08ccdb3ffff,R1 General Residential,residential,Leppington,8041.0,-33.99643,150.73719,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.14103237536009602,0
+89be08ccdb7ffff,R1 General Residential,residential,Leppington,8393.0,-33.99713,150.73313,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.13800434897346048,0
+89be08ccdbbffff,C2 Environmental Conservation,conservation,Leppington,7736.0,-33.99316,150.73848,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.07192695894942651,0
+89be08ccdc3ffff,R1 General Residential,residential,Leppington,6373.0,-33.98777,150.75195,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.04358859709196818,0
+89be08ccdc7ffff,C2 Environmental Conservation,conservation,Leppington,6725.0,-33.98847,150.74789,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.10019715460127825,0
+89be08ccdcbffff,R1 General Residential,residential,Leppington,6069.0,-33.9845,150.75324,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.19897422508475607,0
+89be08ccdcfffff,R3 Medium Density Residential,residential,Leppington,6427.0,-33.9852,150.74918,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.28666426270002426,0
+89be08ccdd3ffff,R1 General Residential,residential,Leppington,6341.0,-33.99033,150.75471,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.050498691213432444,0
+89be08ccdd7ffff,R1 General Residential,residential,Leppington,6684.0,-33.99104,150.75065,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.11331588347307772,0
+89be08ccddbffff,RU4 Primary Production Small Lots,rural,Leppington,6024.0,-33.98706,150.756,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.06259656937867834,0
+89be08ce94fffff,R2 Low Density Residential,residential,Leppington,8547.0,-34.01764,150.75525,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12165315255907384,0
+89be08ce96bffff,R2 Low Density Residential,residential,Leppington,8761.0,-34.01578,150.74843,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.11029017282873495,0
+89be08ce97bffff,R2 Low Density Residential,residential,Leppington,8829.0,-34.01834,150.75119,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.07620928533519893,0
+89be08ceb23ffff,R1 General Residential,residential,Leppington,7669.0,-34.00341,150.74954,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12992818349355237,0
+89be08ceb27ffff,R1 General Residential,residential,Leppington,7992.0,-34.00412,150.74548,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.13882088925365707,0
+89be08ceb2bffff,R1 General Residential,residential,Leppington,7330.0,-34.00014,150.75083,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12106837835340355,0
+89be08ceb2fffff,R3 Medium Density Residential,residential,Leppington,7658.0,-34.00085,150.74678,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.5713333001802707,0
+89be08ceb33ffff,C2 Environmental Conservation,conservation,Leppington,7700.0,-34.00597,150.7523,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.04729557913846308,0
+89be08ceb37ffff,R2 Low Density Residential,residential,Leppington,8013.0,-34.00668,150.74825,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12915412754217592,0
+89be08ceb67ffff,R1 General Residential,residential,Leppington,6995.0,-33.99687,150.75213,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.11442256084720015,0
+89be08ceb6fffff,R1 General Residential,residential,Leppington,6665.0,-33.9936,150.75342,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.12461757450010183,0
+89be08ceb77ffff,RU4 Primary Production Small Lots,rural,Leppington,7008.0,-33.99943,150.75489,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.001805921586943892,0
+89be08ceba7ffff,R2 Low Density Residential,residential,Leppington,8405.0,-34.01251,150.74972,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.1101930939031331,0
+89be08cebafffff,R2 Low Density Residential,residential,Leppington,8051.0,-34.00924,150.75101,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.15548534672465958,0
+89be08cebb7ffff,R2 Low Density Residential,residential,Leppington,8467.0,-34.01507,150.75248,zoning_proxy|shops_mid|bus_calibrated,good_areas,0.1239358425435878,0
+89be081b2d3ffff,IN1 General Industrial,enterprise,Leppington,8812.0,-33.99528,150.72631,zoning_proxy|shops_high|bus_calibrated,baseline,0.40598328408544365,0
+89be081b603ffff,R1 General Residential,residential,Leppington,9315.0,-34.0095,150.73202,zoning_proxy|shops_high|bus_calibrated,baseline,0.020226487930632177,0
+89be081b607ffff,R1 General Residential,residential,Leppington,9651.0,-34.01021,150.72796,zoning_proxy|shops_high|bus_calibrated,baseline,0.06964842005043802,0
+89be081b60bffff,R1 General Residential,residential,Leppington,8989.0,-34.00623,150.73331,zoning_proxy|shops_high|bus_calibrated,baseline,0.030444194128621753,0
+89be081b60fffff,R1 General Residential,residential,Leppington,9329.0,-34.00694,150.72925,zoning_proxy|shops_high|bus_calibrated,baseline,0.060217628623728765,0
+89be081b613ffff,R1 General Residential,residential,Leppington,9317.0,-34.01207,150.73478,zoning_proxy|shops_high|bus_calibrated,baseline,0.21363685289854592,1
+89be081b617ffff,R1 General Residential,residential,Leppington,9645.0,-34.01277,150.73072,zoning_proxy|shops_high|bus_calibrated,baseline,0.011194199293963229,0
+89be081b61bffff,R1 General Residential,residential,Leppington,8983.0,-34.0088,150.73607,zoning_proxy|shops_high|bus_calibrated,baseline,0.3555354366249765,0
+89be081b63bffff,R1 General Residential,residential,Leppington,9672.0,-34.00765,150.72519,zoning_proxy|shops_high|bus_calibrated,baseline,0.06796854347041072,0
+89be081b643ffff,R1 General Residential,residential,Leppington,8327.0,-34.00226,150.73866,zoning_proxy|shops_high|bus_calibrated,baseline,0.4831769677112816,1
+89be081b647ffff,R1 General Residential,residential,Leppington,8668.0,-34.00297,150.7346,zoning_proxy|shops_high|bus_calibrated,baseline,0.08322439779296854,0
+89be081b64bffff,B2 Local Centre,centre,Leppington,8006.0,-33.99899,150.73995,zoning_proxy|shops_high|bus_calibrated,baseline,0.9742465765903046,1
+89be081b64fffff,R1 General Residential,residential,Leppington,8351.0,-33.9997,150.7359,zoning_proxy|shops_high|bus_calibrated,baseline,0.11212270297145563,0
+89be081b653ffff,R1 General Residential,residential,Leppington,8320.0,-34.00482,150.74142,zoning_proxy|shops_high|bus_calibrated,baseline,0.06262521792959638,0
+89be081b657ffff,R1 General Residential,residential,Leppington,8653.0,-34.00553,150.73737,zoning_proxy|shops_high|bus_calibrated,baseline,0.018418951150404574,0
+89be081b65bffff,R3 Medium Density Residential,residential,Leppington,7990.0,-34.00155,150.74272,zoning_proxy|shops_high|bus_calibrated,baseline,0.497506543303894,0
+89be081b663ffff,R1 General Residential,residential,Leppington,9050.0,-34.00111,150.72778,zoning_proxy|shops_high|bus_calibrated,baseline,0.05454106378231839,0
+89be081b667ffff,R1 General Residential,residential,Leppington,9404.0,-34.00181,150.72372,zoning_proxy|shops_high|bus_calibrated,baseline,0.05883636782822476,0
+89be081b66bffff,R1 General Residential,residential,Leppington,8748.0,-33.99784,150.72907,zoning_proxy|shops_high|bus_calibrated,baseline,0.08177001445268098,0
+89be081b66fffff,R1 General Residential,residential,Leppington,9105.0,-33.99854,150.72502,zoning_proxy|shops_high|bus_calibrated,baseline,0.08621472611642586,0
+89be081b673ffff,R1 General Residential,residential,Leppington,9012.0,-34.00367,150.73055,zoning_proxy|shops_high|bus_calibrated,baseline,0.054518888311676825,0
+89be081b677ffff,R1 General Residential,residential,Leppington,9359.0,-34.00438,150.72649,zoning_proxy|shops_high|bus_calibrated,baseline,0.05434122556970315,0
+89be081b67bffff,R1 General Residential,residential,Leppington,8699.0,-34.0004,150.73184,zoning_proxy|shops_high|bus_calibrated,baseline,0.05498428179351561,0
+89be081b6c3ffff,R2 Low Density Residential,residential,Leppington,8673.0,-34.01065,150.7429,zoning_proxy|shops_high|bus_calibrated,baseline,0.02144966235449823,0
+89be081b6c7ffff,R1 General Residential,residential,Leppington,8993.0,-34.01136,150.73884,zoning_proxy|shops_high|bus_calibrated,baseline,0.036095274977470664,0
+89be081b6cbffff,R2 Low Density Residential,residential,Leppington,8331.0,-34.00739,150.74419,zoning_proxy|shops_high|bus_calibrated,baseline,0.015146858449284165,0
+89be081b6cfffff,R1 General Residential,residential,Leppington,8654.0,-34.00809,150.74013,zoning_proxy|shops_high|bus_calibrated,baseline,0.33171585375640283,0
+89be081b6d3ffff,R2 Low Density Residential,residential,Leppington,8709.0,-34.01322,150.74566,zoning_proxy|shops_high|bus_calibrated,baseline,0.06494025387222309,0
+89be081b6dbffff,R2 Low Density Residential,residential,Leppington,8359.0,-34.00995,150.74695,zoning_proxy|shops_high|bus_calibrated,baseline,0.06919397814842508,0
+89be08cc803ffff,RU1 Primary Production,rural,Leppington,5456.0,-33.96373,150.75011,zoning_proxy|shops_high|bus_calibrated,baseline,0.0008423726592480949,0
+89be08cc807ffff,RU1 Primary Production,rural,Leppington,5839.0,-33.96444,150.74606,zoning_proxy|shops_high|bus_calibrated,baseline,0.000719729822450343,0
+89be08cc813ffff,RU1 Primary Production,rural,Leppington,5269.0,-33.96629,150.75288,zoning_proxy|shops_high|bus_calibrated,baseline,0.000198386676787778,0
+89be08cc817ffff,RU1 Primary Production,rural,Leppington,5652.0,-33.967,150.74882,zoning_proxy|shops_high|bus_calibrated,baseline,0.00033429211305502604,0
+89be08cc823ffff,RU1 Primary Production,rural,Leppington,6427.0,-33.96258,150.73924,zoning_proxy|shops_high|bus_calibrated,baseline,0.004816127818735494,0
+89be08cc833ffff,RU1 Primary Production,rural,Leppington,6222.0,-33.96514,150.742,zoning_proxy|shops_high|bus_calibrated,baseline,0.00042646444383642057,0
+89be08cc883ffff,RU1 Primary Production,rural,Leppington,5341.0,-33.97213,150.75435,zoning_proxy|shops_high|bus_calibrated,baseline,0.0004415343337285384,0
+89be08cc887ffff,RU1 Primary Production,rural,Leppington,5718.0,-33.97283,150.75029,zoning_proxy|shops_high|bus_calibrated,baseline,0.000198386676787778,0
+89be08cc88fffff,RU1 Primary Production,rural,Leppington,5485.0,-33.96956,150.75159,zoning_proxy|shops_high|bus_calibrated,baseline,0.0018225874122559345,0
+89be08cc897ffff,RU1 Primary Production,rural,Leppington,5593.0,-33.9754,150.75306,zoning_proxy|shops_high|bus_calibrated,baseline,0.010068333937349537,0
+89be08cc8a3ffff,RU1 Primary Production,rural,Leppington,6247.0,-33.97098,150.74347,zoning_proxy|shops_high|bus_calibrated,baseline,0.004892883070508628,0
+89be08cc8a7ffff,RU1 Primary Production,rural,Leppington,6629.0,-33.97168,150.73942,zoning_proxy|shops_high|bus_calibrated,baseline,0.05876496266135599,0
+89be08cc8abffff,RU1 Primary Production,rural,Leppington,6035.0,-33.96771,150.74477,zoning_proxy|shops_high|bus_calibrated,baseline,0.000198386676787778,0
+89be08cc8afffff,RU1 Primary Production,rural,Leppington,6417.0,-33.96841,150.74071,zoning_proxy|shops_high|bus_calibrated,baseline,0.04229463121931745,0
+89be08cc8b3ffff,RU1 Primary Production,rural,Leppington,6097.0,-33.97354,150.74624,zoning_proxy|shops_high|bus_calibrated,baseline,0.00011505334345444466,0
+89be08cc8b7ffff,RU1 Primary Production,rural,Leppington,6476.0,-33.97425,150.74218,zoning_proxy|shops_high|bus_calibrated,baseline,0.0007252223796236977,0
+89be08cc8bbffff,RU1 Primary Production,rural,Leppington,5866.0,-33.97027,150.74753,zoning_proxy|shops_high|bus_calibrated,baseline,0.0018225874122559345,0
+89be08ccc27ffff,RE1 Public Recreation,park,Leppington,5775.0,-33.98123,150.75453,zoning_proxy|shops_high|bus_calibrated,baseline,0.26639249812605714,0
+89be08ccd03ffff,R2 Low Density Residential,residential,Leppington,7150.0,-33.98662,150.74107,zoning_proxy|shops_high|bus_calibrated,baseline,0.06154670731894935,0
+89be08ccd07ffff,R2 Low Density Residential,residential,Leppington,7515.0,-33.98732,150.73701,zoning_proxy|shops_high|bus_calibrated,baseline,0.05546884493446727,0
+89be08ccd0bffff,R2 Low Density Residential,residential,Leppington,6870.0,-33.98335,150.74236,zoning_proxy|shops_high|bus_calibrated,baseline,0.07259103630718479,0
+89be08ccd0fffff,R2 Low Density Residential,residential,Leppington,7239.0,-33.98405,150.7383,zoning_proxy|shops_high|bus_calibrated,baseline,0.09115316062547553,0
+89be08ccd13ffff,R2 Low Density Residential,residential,Leppington,7081.0,-33.98918,150.74383,zoning_proxy|shops_high|bus_calibrated,baseline,0.0519860074870284,0
+89be08ccd17ffff,R2 Low Density Residential,residential,Leppington,7439.0,-33.98989,150.73978,zoning_proxy|shops_high|bus_calibrated,baseline,0.045088077004405355,0
+89be08ccd1bffff,R2 Low Density Residential,residential,Leppington,6787.0,-33.98591,150.74512,zoning_proxy|shops_high|bus_calibrated,baseline,0.06647719700768255,0
+89be08ccd3bffff,R2 Low Density Residential,residential,Leppington,7609.0,-33.98476,150.73425,zoning_proxy|shops_high|bus_calibrated,baseline,0.041419917083475234,0
+89be08ccd43ffff,R2 Low Density Residential,residential,Leppington,6229.0,-33.97937,150.74771,zoning_proxy|shops_high|bus_calibrated,baseline,0.02028157743283016,0
+89be08ccd47ffff,R2 Low Density Residential,residential,Leppington,6600.0,-33.98008,150.74365,zoning_proxy|shops_high|bus_calibrated,baseline,0.07192359657789375,0
+89be08ccd4bffff,RU1 Primary Production,rural,Leppington,5967.0,-33.9761,150.749,zoning_proxy|shops_high|bus_calibrated,baseline,0.0038434168183232803,0
+89be08ccd4fffff,RU1 Primary Production,rural,Leppington,6342.0,-33.97681,150.74495,zoning_proxy|shops_high|bus_calibrated,baseline,0.007844108101630819,0
+89be08ccd53ffff,RE1 Public Recreation,park,Leppington,6138.0,-33.98194,150.75047,zoning_proxy|shops_high|bus_calibrated,baseline,0.46635004684426423,0
+89be08ccd57ffff,R2 Low Density Residential,residential,Leppington,6503.0,-33.98264,150.74642,zoning_proxy|shops_high|bus_calibrated,baseline,0.04950856960650552,0
+89be08ccd5bffff,RU1 Primary Production,rural,Leppington,5859.0,-33.97867,150.75177,zoning_proxy|shops_high|bus_calibrated,baseline,0.037567205861851014,0
+89be08ccd63ffff,R2 Low Density Residential,residential,Leppington,7095.0,-33.97822,150.73683,zoning_proxy|shops_high|bus_calibrated,baseline,0.06800820806933322,0
+89be08ccd6bffff,RU1 Primary Production,rural,Leppington,6855.0,-33.97495,150.73813,zoning_proxy|shops_high|bus_calibrated,baseline,0.011353873392248838,0
+89be08ccd73ffff,R2 Low Density Residential,residential,Leppington,6973.0,-33.98079,150.7396,zoning_proxy|shops_high|bus_calibrated,baseline,0.07244788871505176,0
+89be08ccd77ffff,R2 Low Density Residential,residential,Leppington,7347.0,-33.98149,150.73554,zoning_proxy|shops_high|bus_calibrated,baseline,0.08047714842603954,0
+89be08ccd7bffff,R2 Low Density Residential,residential,Leppington,6718.0,-33.97752,150.74089,zoning_proxy|shops_high|bus_calibrated,baseline,0.025318319919184703,0
+89be08ccd83ffff,R1 General Residential,residential,Leppington,7345.0,-33.99501,150.7453,zoning_proxy|shops_high|bus_calibrated,baseline,0.12724760169460056,0
+89be08ccd87ffff,R3 Medium Density Residential,residential,Leppington,7691.0,-33.99572,150.74125,zoning_proxy|shops_high|bus_calibrated,baseline,0.4752952866403366,0
+89be08ccd8bffff,R1 General Residential,residential,Leppington,7032.0,-33.99174,150.7466,zoning_proxy|shops_high|bus_calibrated,baseline,0.05479608949900458,0
+89be08ccd8fffff,R1 General Residential,residential,Leppington,7382.0,-33.99245,150.74254,zoning_proxy|shops_high|bus_calibrated,baseline,0.06509633135609902,0
+89be08ccd93ffff,R3 Medium Density Residential,residential,Leppington,7328.0,-33.99758,150.74807,zoning_proxy|shops_high|bus_calibrated,baseline,0.4545009944488744,0
+89be08ccd97ffff,B2 Local Centre,centre,Leppington,7665.0,-33.99828,150.74401,zoning_proxy|shops_high|bus_calibrated,baseline,1.28166205068333,2
+89be08ccd9bffff,R1 General Residential,residential,Leppington,7003.0,-33.99431,150.74936,zoning_proxy|shops_high|bus_calibrated,baseline,0.07107379791796778,0
+89be08ccda3ffff,IN1 General Industrial,enterprise,Leppington,8093.0,-33.99386,150.73443,zoning_proxy|shops_high|bus_calibrated,baseline,0.356914151879654,0
+89be08ccda7ffff,IN1 General Industrial,enterprise,Leppington,8452.0,-33.99457,150.73037,zoning_proxy|shops_high|bus_calibrated,baseline,0.29936708685326785,0
+89be08ccdabffff,R2 Low Density Residential,residential,Leppington,7800.0,-33.99059,150.73572,zoning_proxy|shops_high|bus_calibrated,baseline,0.07407429464308359,0
+89be08ccdafffff,IN1 General Industrial,enterprise,Leppington,8163.0,-33.9913,150.73166,zoning_proxy|shops_high|bus_calibrated,baseline,0.06884688941670412,0
+89be08ccdb3ffff,R1 General Residential,residential,Leppington,8041.0,-33.99643,150.73719,zoning_proxy|shops_high|bus_calibrated,baseline,0.08265250331258979,0
+89be08ccdb7ffff,R1 General Residential,residential,Leppington,8393.0,-33.99713,150.73313,zoning_proxy|shops_high|bus_calibrated,baseline,0.08310859612190782,0
+89be08ccdbbffff,C2 Environmental Conservation,conservation,Leppington,7736.0,-33.99316,150.73848,zoning_proxy|shops_high|bus_calibrated,baseline,0.05907656187690345,0
+89be08ccdc3ffff,R1 General Residential,residential,Leppington,6373.0,-33.98777,150.75195,zoning_proxy|shops_high|bus_calibrated,baseline,0.09208204965891639,0
+89be08ccdc7ffff,C2 Environmental Conservation,conservation,Leppington,6725.0,-33.98847,150.74789,zoning_proxy|shops_high|bus_calibrated,baseline,0.09964975091809578,0
+89be08ccdcbffff,R1 General Residential,residential,Leppington,6069.0,-33.9845,150.75324,zoning_proxy|shops_high|bus_calibrated,baseline,0.18970742357980522,0
+89be08ccdcfffff,R3 Medium Density Residential,residential,Leppington,6427.0,-33.9852,150.74918,zoning_proxy|shops_high|bus_calibrated,baseline,0.594350762711031,0
+89be08ccdd3ffff,R1 General Residential,residential,Leppington,6341.0,-33.99033,150.75471,zoning_proxy|shops_high|bus_calibrated,baseline,0.023594055182770714,0
+89be08ccdd7ffff,R1 General Residential,residential,Leppington,6684.0,-33.99104,150.75065,zoning_proxy|shops_high|bus_calibrated,baseline,0.07194215528937906,0
+89be08ccddbffff,RU4 Primary Production Small Lots,rural,Leppington,6024.0,-33.98706,150.756,zoning_proxy|shops_high|bus_calibrated,baseline,0.013938532789283515,0
+89be08ce94fffff,R2 Low Density Residential,residential,Leppington,8547.0,-34.01764,150.75525,zoning_proxy|shops_high|bus_calibrated,baseline,0.06526334033806518,0
+89be08ce96bffff,R2 Low Density Residential,residential,Leppington,8761.0,-34.01578,150.74843,zoning_proxy|shops_high|bus_calibrated,baseline,0.05208687478227233,0
+89be08ce97bffff,R2 Low Density Residential,residential,Leppington,8829.0,-34.01834,150.75119,zoning_proxy|shops_high|bus_calibrated,baseline,0.05135470714635812,0
+89be08ceb23ffff,R1 General Residential,residential,Leppington,7669.0,-34.00341,150.74954,zoning_proxy|shops_high|bus_calibrated,baseline,0.0774093026601055,0
+89be08ceb27ffff,R1 General Residential,residential,Leppington,7992.0,-34.00412,150.74548,zoning_proxy|shops_high|bus_calibrated,baseline,0.07577824852221825,0
+89be08ceb2bffff,R1 General Residential,residential,Leppington,7330.0,-34.00014,150.75083,zoning_proxy|shops_high|bus_calibrated,baseline,0.07522592149500255,0
+89be08ceb2fffff,R3 Medium Density Residential,residential,Leppington,7658.0,-34.00085,150.74678,zoning_proxy|shops_high|bus_calibrated,baseline,0.49490284901523,0
+89be08ceb33ffff,C2 Environmental Conservation,conservation,Leppington,7700.0,-34.00597,150.7523,zoning_proxy|shops_high|bus_calibrated,baseline,0.017995832166146954,0
+89be08ceb37ffff,R2 Low Density Residential,residential,Leppington,8013.0,-34.00668,150.74825,zoning_proxy|shops_high|bus_calibrated,baseline,0.0686950969876955,0
+89be08ceb67ffff,R1 General Residential,residential,Leppington,6995.0,-33.99687,150.75213,zoning_proxy|shops_high|bus_calibrated,baseline,0.05686560152836601,0
+89be08ceb6fffff,R1 General Residential,residential,Leppington,6665.0,-33.9936,150.75342,zoning_proxy|shops_high|bus_calibrated,baseline,0.06166776565736459,0
+89be08ceb77ffff,RU4 Primary Production Small Lots,rural,Leppington,7008.0,-33.99943,150.75489,zoning_proxy|shops_high|bus_calibrated,baseline,0.006704827119166022,0
+89be08ceba7ffff,R2 Low Density Residential,residential,Leppington,8405.0,-34.01251,150.74972,zoning_proxy|shops_high|bus_calibrated,baseline,0.08157986376079712,0
+89be08cebafffff,R2 Low Density Residential,residential,Leppington,8051.0,-34.00924,150.75101,zoning_proxy|shops_high|bus_calibrated,baseline,0.3414062128254313,0
+89be08cebb7ffff,R2 Low Density Residential,residential,Leppington,8467.0,-34.01507,150.75248,zoning_proxy|shops_high|bus_calibrated,baseline,0.06371121563603713,0
+89be081b2d3ffff,IN1 General Industrial,enterprise,Leppington,8812.0,-33.99528,150.72631,zoning_proxy|shops_high|bus_calibrated,good_areas,0.6334058084726537,0
+89be081b603ffff,R1 General Residential,residential,Leppington,9315.0,-34.0095,150.73202,zoning_proxy|shops_high|bus_calibrated,good_areas,0.044264788610494495,0
+89be081b607ffff,R1 General Residential,residential,Leppington,9651.0,-34.01021,150.72796,zoning_proxy|shops_high|bus_calibrated,good_areas,0.1380333546971187,0
+89be081b60bffff,R1 General Residential,residential,Leppington,8989.0,-34.00623,150.73331,zoning_proxy|shops_high|bus_calibrated,good_areas,0.060739286076079896,0
+89be081b60fffff,R1 General Residential,residential,Leppington,9329.0,-34.00694,150.72925,zoning_proxy|shops_high|bus_calibrated,good_areas,0.12291233810024217,0
+89be081b613ffff,R1 General Residential,residential,Leppington,9317.0,-34.01207,150.73478,zoning_proxy|shops_high|bus_calibrated,good_areas,0.3493783863690779,1
+89be081b617ffff,R1 General Residential,residential,Leppington,9645.0,-34.01277,150.73072,zoning_proxy|shops_high|bus_calibrated,good_areas,0.03083523295384016,0
+89be081b61bffff,R1 General Residential,residential,Leppington,8983.0,-34.0088,150.73607,zoning_proxy|shops_high|bus_calibrated,good_areas,0.4285891316780996,0
+89be081b63bffff,R1 General Residential,residential,Leppington,9672.0,-34.00765,150.72519,zoning_proxy|shops_high|bus_calibrated,good_areas,0.14678092495328002,0
+89be081b643ffff,R1 General Residential,residential,Leppington,8327.0,-34.00226,150.73866,zoning_proxy|shops_high|bus_calibrated,good_areas,0.7564560110337156,1
+89be081b647ffff,R1 General Residential,residential,Leppington,8668.0,-34.00297,150.7346,zoning_proxy|shops_high|bus_calibrated,good_areas,0.14406843943211714,0
+89be081b64bffff,B2 Local Centre,centre,Leppington,8006.0,-33.99899,150.73995,zoning_proxy|shops_high|bus_calibrated,good_areas,1.9188257433968885,1
+89be081b64fffff,R1 General Residential,residential,Leppington,8351.0,-33.9997,150.7359,zoning_proxy|shops_high|bus_calibrated,good_areas,0.15690668724923673,0
+89be081b653ffff,R1 General Residential,residential,Leppington,8320.0,-34.00482,150.74142,zoning_proxy|shops_high|bus_calibrated,good_areas,0.09367415635852584,0
+89be081b657ffff,R1 General Residential,residential,Leppington,8653.0,-34.00553,150.73737,zoning_proxy|shops_high|bus_calibrated,good_areas,0.038566425458774777,0
+89be081b65bffff,R3 Medium Density Residential,residential,Leppington,7990.0,-34.00155,150.74272,zoning_proxy|shops_high|bus_calibrated,good_areas,1.2978741254856465,0
+89be081b663ffff,R1 General Residential,residential,Leppington,9050.0,-34.00111,150.72778,zoning_proxy|shops_high|bus_calibrated,good_areas,0.11670944409651135,0
+89be081b667ffff,R1 General Residential,residential,Leppington,9404.0,-34.00181,150.72372,zoning_proxy|shops_high|bus_calibrated,good_areas,0.12978645679541687,0
+89be081b66bffff,R1 General Residential,residential,Leppington,8748.0,-33.99784,150.72907,zoning_proxy|shops_high|bus_calibrated,good_areas,0.13851417029117358,0
+89be081b66fffff,R1 General Residential,residential,Leppington,9105.0,-33.99854,150.72502,zoning_proxy|shops_high|bus_calibrated,good_areas,0.1376888967372273,0
+89be081b673ffff,R1 General Residential,residential,Leppington,9012.0,-34.00367,150.73055,zoning_proxy|shops_high|bus_calibrated,good_areas,0.12154012504169733,0
+89be081b677ffff,R1 General Residential,residential,Leppington,9359.0,-34.00438,150.72649,zoning_proxy|shops_high|bus_calibrated,good_areas,0.1106100348363342,0
+89be081b67bffff,R1 General Residential,residential,Leppington,8699.0,-34.0004,150.73184,zoning_proxy|shops_high|bus_calibrated,good_areas,0.12048809865890092,0
+89be081b6c3ffff,R2 Low Density Residential,residential,Leppington,8673.0,-34.01065,150.7429,zoning_proxy|shops_high|bus_calibrated,good_areas,0.03397136807860302,0
+89be081b6c7ffff,R1 General Residential,residential,Leppington,8993.0,-34.01136,150.73884,zoning_proxy|shops_high|bus_calibrated,good_areas,0.07748031899892634,0
+89be081b6cbffff,R2 Low Density Residential,residential,Leppington,8331.0,-34.00739,150.74419,zoning_proxy|shops_high|bus_calibrated,good_areas,0.05025878652838461,0
+89be081b6cfffff,R1 General Residential,residential,Leppington,8654.0,-34.00809,150.74013,zoning_proxy|shops_high|bus_calibrated,good_areas,0.553404531880102,0
+89be081b6d3ffff,R2 Low Density Residential,residential,Leppington,8709.0,-34.01322,150.74566,zoning_proxy|shops_high|bus_calibrated,good_areas,0.11478411675577642,0
+89be081b6dbffff,R2 Low Density Residential,residential,Leppington,8359.0,-34.00995,150.74695,zoning_proxy|shops_high|bus_calibrated,good_areas,0.12351958780743982,0
+89be08cc803ffff,RU1 Primary Production,rural,Leppington,5456.0,-33.96373,150.75011,zoning_proxy|shops_high|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc807ffff,RU1 Primary Production,rural,Leppington,5839.0,-33.96444,150.74606,zoning_proxy|shops_high|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc813ffff,RU1 Primary Production,rural,Leppington,5269.0,-33.96629,150.75288,zoning_proxy|shops_high|bus_calibrated,good_areas,0.0013661187224409917,0
+89be08cc817ffff,RU1 Primary Production,rural,Leppington,5652.0,-33.967,150.74882,zoning_proxy|shops_high|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc823ffff,RU1 Primary Production,rural,Leppington,6427.0,-33.96258,150.73924,zoning_proxy|shops_high|bus_calibrated,good_areas,0.05955132221581098,0
+89be08cc833ffff,RU1 Primary Production,rural,Leppington,6222.0,-33.96514,150.742,zoning_proxy|shops_high|bus_calibrated,good_areas,0.015218166658148938,0
+89be08cc883ffff,RU1 Primary Production,rural,Leppington,5341.0,-33.97213,150.75435,zoning_proxy|shops_high|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc887ffff,RU1 Primary Production,rural,Leppington,5718.0,-33.97283,150.75029,zoning_proxy|shops_high|bus_calibrated,good_areas,0.0013661187224409917,0
+89be08cc88fffff,RU1 Primary Production,rural,Leppington,5485.0,-33.96956,150.75159,zoning_proxy|shops_high|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08cc897ffff,RU1 Primary Production,rural,Leppington,5593.0,-33.9754,150.75306,zoning_proxy|shops_high|bus_calibrated,good_areas,0.01465831772356949,0
+89be08cc8a3ffff,RU1 Primary Production,rural,Leppington,6247.0,-33.97098,150.74347,zoning_proxy|shops_high|bus_calibrated,good_areas,0.004081554215299425,0
+89be08cc8a7ffff,RU1 Primary Production,rural,Leppington,6629.0,-33.97168,150.73942,zoning_proxy|shops_high|bus_calibrated,good_areas,0.10133530989378761,0
+89be08cc8abffff,RU1 Primary Production,rural,Leppington,6035.0,-33.96771,150.74477,zoning_proxy|shops_high|bus_calibrated,good_areas,0.0008036187224409918,0
+89be08cc8afffff,RU1 Primary Production,rural,Leppington,6417.0,-33.96841,150.74071,zoning_proxy|shops_high|bus_calibrated,good_areas,0.0713393383856236,0
+89be08cc8b3ffff,RU1 Primary Production,rural,Leppington,6097.0,-33.97354,150.74624,zoning_proxy|shops_high|bus_calibrated,good_areas,0.0010435380772797014,0
+89be08cc8b7ffff,RU1 Primary Production,rural,Leppington,6476.0,-33.97425,150.74218,zoning_proxy|shops_high|bus_calibrated,good_areas,0.002177673884208274,0
+89be08cc8bbffff,RU1 Primary Production,rural,Leppington,5866.0,-33.97027,150.74753,zoning_proxy|shops_high|bus_calibrated,good_areas,9.909363283525708e-05,0
+89be08ccc27ffff,RE1 Public Recreation,park,Leppington,5775.0,-33.98123,150.75453,zoning_proxy|shops_high|bus_calibrated,good_areas,0.4448554902724862,0
+89be08ccd03ffff,R2 Low Density Residential,residential,Leppington,7150.0,-33.98662,150.74107,zoning_proxy|shops_high|bus_calibrated,good_areas,0.11915428874760463,0
+89be08ccd07ffff,R2 Low Density Residential,residential,Leppington,7515.0,-33.98732,150.73701,zoning_proxy|shops_high|bus_calibrated,good_areas,0.11232840996666583,0
+89be08ccd0bffff,R2 Low Density Residential,residential,Leppington,6870.0,-33.98335,150.74236,zoning_proxy|shops_high|bus_calibrated,good_areas,0.1275749932336236,0
+89be08ccd0fffff,R2 Low Density Residential,residential,Leppington,7239.0,-33.98405,150.7383,zoning_proxy|shops_high|bus_calibrated,good_areas,0.11550693339155033,0
+89be08ccd13ffff,R2 Low Density Residential,residential,Leppington,7081.0,-33.98918,150.74383,zoning_proxy|shops_high|bus_calibrated,good_areas,0.12135636587255173,0
+89be08ccd17ffff,R2 Low Density Residential,residential,Leppington,7439.0,-33.98989,150.73978,zoning_proxy|shops_high|bus_calibrated,good_areas,0.09818744886378537,0
+89be08ccd1bffff,R2 Low Density Residential,residential,Leppington,6787.0,-33.98591,150.74512,zoning_proxy|shops_high|bus_calibrated,good_areas,0.10540608409048827,0
+89be08ccd3bffff,R2 Low Density Residential,residential,Leppington,7609.0,-33.98476,150.73425,zoning_proxy|shops_high|bus_calibrated,good_areas,0.06666614130611213,0
+89be08ccd43ffff,R2 Low Density Residential,residential,Leppington,6229.0,-33.97937,150.74771,zoning_proxy|shops_high|bus_calibrated,good_areas,0.07762774743999311,0
+89be08ccd47ffff,R2 Low Density Residential,residential,Leppington,6600.0,-33.98008,150.74365,zoning_proxy|shops_high|bus_calibrated,good_areas,0.13131039366931238,0
+89be08ccd4bffff,RU1 Primary Production,rural,Leppington,5967.0,-33.9761,150.749,zoning_proxy|shops_high|bus_calibrated,good_areas,0.019326390821030732,0
+89be08ccd4fffff,RU1 Primary Production,rural,Leppington,6342.0,-33.97681,150.74495,zoning_proxy|shops_high|bus_calibrated,good_areas,0.0032796003129423744,0
+89be08ccd53ffff,RE1 Public Recreation,park,Leppington,6138.0,-33.98194,150.75047,zoning_proxy|shops_high|bus_calibrated,good_areas,0.7901984595041424,0
+89be08ccd57ffff,R2 Low Density Residential,residential,Leppington,6503.0,-33.98264,150.74642,zoning_proxy|shops_high|bus_calibrated,good_areas,0.09841690230584117,0
+89be08ccd5bffff,RU1 Primary Production,rural,Leppington,5859.0,-33.97867,150.75177,zoning_proxy|shops_high|bus_calibrated,good_areas,0.21754505278621622,0
+89be08ccd63ffff,R2 Low Density Residential,residential,Leppington,7095.0,-33.97822,150.73683,zoning_proxy|shops_high|bus_calibrated,good_areas,0.1452233745204304,0
+89be08ccd6bffff,RU1 Primary Production,rural,Leppington,6855.0,-33.97495,150.73813,zoning_proxy|shops_high|bus_calibrated,good_areas,0.011428898574489673,0
+89be08ccd73ffff,R2 Low Density Residential,residential,Leppington,6973.0,-33.98079,150.7396,zoning_proxy|shops_high|bus_calibrated,good_areas,0.09686910811022008,0
+89be08ccd77ffff,R2 Low Density Residential,residential,Leppington,7347.0,-33.98149,150.73554,zoning_proxy|shops_high|bus_calibrated,good_areas,0.14802180120124517,0
+89be08ccd7bffff,R2 Low Density Residential,residential,Leppington,6718.0,-33.97752,150.74089,zoning_proxy|shops_high|bus_calibrated,good_areas,0.06950771052070365,0
+89be08ccd83ffff,R1 General Residential,residential,Leppington,7345.0,-33.99501,150.7453,zoning_proxy|shops_high|bus_calibrated,good_areas,0.16943469157537597,0
+89be08ccd87ffff,R3 Medium Density Residential,residential,Leppington,7691.0,-33.99572,150.74125,zoning_proxy|shops_high|bus_calibrated,good_areas,0.8623117086754231,0
+89be08ccd8bffff,R1 General Residential,residential,Leppington,7032.0,-33.99174,150.7466,zoning_proxy|shops_high|bus_calibrated,good_areas,0.1249098624389597,0
+89be08ccd8fffff,R1 General Residential,residential,Leppington,7382.0,-33.99245,150.74254,zoning_proxy|shops_high|bus_calibrated,good_areas,0.12486202865240112,0
+89be08ccd93ffff,R3 Medium Density Residential,residential,Leppington,7328.0,-33.99758,150.74807,zoning_proxy|shops_high|bus_calibrated,good_areas,0.7537902407884546,0
+89be08ccd97ffff,B2 Local Centre,centre,Leppington,7665.0,-33.99828,150.74401,zoning_proxy|shops_high|bus_calibrated,good_areas,2.364661077124561,2
+89be08ccd9bffff,R1 General Residential,residential,Leppington,7003.0,-33.99431,150.74936,zoning_proxy|shops_high|bus_calibrated,good_areas,0.1273266282035238,0
+89be08ccda3ffff,IN1 General Industrial,enterprise,Leppington,8093.0,-33.99386,150.73443,zoning_proxy|shops_high|bus_calibrated,good_areas,0.4164612219982163,0
+89be08ccda7ffff,IN1 General Industrial,enterprise,Leppington,8452.0,-33.99457,150.73037,zoning_proxy|shops_high|bus_calibrated,good_areas,0.3877094055898028,0
+89be08ccdabffff,R2 Low Density Residential,residential,Leppington,7800.0,-33.99059,150.73572,zoning_proxy|shops_high|bus_calibrated,good_areas,0.137594059545033,0
+89be08ccdafffff,IN1 General Industrial,enterprise,Leppington,8163.0,-33.9913,150.73166,zoning_proxy|shops_high|bus_calibrated,good_areas,0.11801606362656573,0
+89be08ccdb3ffff,R1 General Residential,residential,Leppington,8041.0,-33.99643,150.73719,zoning_proxy|shops_high|bus_calibrated,good_areas,0.14560434873712916,0
+89be08ccdb7ffff,R1 General Residential,residential,Leppington,8393.0,-33.99713,150.73313,zoning_proxy|shops_high|bus_calibrated,good_areas,0.13800434897346053,0
+89be08ccdbbffff,C2 Environmental Conservation,conservation,Leppington,7736.0,-33.99316,150.73848,zoning_proxy|shops_high|bus_calibrated,good_areas,0.08449594606487354,0
+89be08ccdc3ffff,R1 General Residential,residential,Leppington,6373.0,-33.98777,150.75195,zoning_proxy|shops_high|bus_calibrated,good_areas,0.09755432972421028,0
+89be08ccdc7ffff,C2 Environmental Conservation,conservation,Leppington,6725.0,-33.98847,150.74789,zoning_proxy|shops_high|bus_calibrated,good_areas,0.12374358356621118,0
+89be08ccdcbffff,R1 General Residential,residential,Leppington,6069.0,-33.9845,150.75324,zoning_proxy|shops_high|bus_calibrated,good_areas,0.24688214821308715,0
+89be08ccdcfffff,R3 Medium Density Residential,residential,Leppington,6427.0,-33.9852,150.74918,zoning_proxy|shops_high|bus_calibrated,good_areas,0.7614972227456953,0
+89be08ccdd3ffff,R1 General Residential,residential,Leppington,6341.0,-33.99033,150.75471,zoning_proxy|shops_high|bus_calibrated,good_areas,0.050498691213432444,0
+89be08ccdd7ffff,R1 General Residential,residential,Leppington,6684.0,-33.99104,150.75065,zoning_proxy|shops_high|bus_calibrated,good_areas,0.1269449808441462,0
+89be08ccddbffff,RU4 Primary Production Small Lots,rural,Leppington,6024.0,-33.98706,150.756,zoning_proxy|shops_high|bus_calibrated,good_areas,0.06259656937867833,0
+89be08ce94fffff,R2 Low Density Residential,residential,Leppington,8547.0,-34.01764,150.75525,zoning_proxy|shops_high|bus_calibrated,good_areas,0.12165315255907384,0
+89be08ce96bffff,R2 Low Density Residential,residential,Leppington,8761.0,-34.01578,150.74843,zoning_proxy|shops_high|bus_calibrated,good_areas,0.11029017282873495,0
+89be08ce97bffff,R2 Low Density Residential,residential,Leppington,8829.0,-34.01834,150.75119,zoning_proxy|shops_high|bus_calibrated,good_areas,0.07620928533519893,0
+89be08ceb23ffff,R1 General Residential,residential,Leppington,7669.0,-34.00341,150.74954,zoning_proxy|shops_high|bus_calibrated,good_areas,0.13772706465046805,0
+89be08ceb27ffff,R1 General Residential,residential,Leppington,7992.0,-34.00412,150.74548,zoning_proxy|shops_high|bus_calibrated,good_areas,0.14165845724058374,0
+89be08ceb2bffff,R1 General Residential,residential,Leppington,7330.0,-34.00014,150.75083,zoning_proxy|shops_high|bus_calibrated,good_areas,0.128580025295823,0
+89be08ceb2fffff,R3 Medium Density Residential,residential,Leppington,7658.0,-34.00085,150.74678,zoning_proxy|shops_high|bus_calibrated,good_areas,1.0777034288669016,0
+89be08ceb33ffff,C2 Environmental Conservation,conservation,Leppington,7700.0,-34.00597,150.7523,zoning_proxy|shops_high|bus_calibrated,good_areas,0.047295579138463086,0
+89be08ceb37ffff,R2 Low Density Residential,residential,Leppington,8013.0,-34.00668,150.74825,zoning_proxy|shops_high|bus_calibrated,good_areas,0.1376739608396435,0
+89be08ceb67ffff,R1 General Residential,residential,Leppington,6995.0,-33.99687,150.75213,zoning_proxy|shops_high|bus_calibrated,good_areas,0.11442256084720015,0
+89be08ceb6fffff,R1 General Residential,residential,Leppington,6665.0,-33.9936,150.75342,zoning_proxy|shops_high|bus_calibrated,good_areas,0.1246175745001019,0
+89be08ceb77ffff,RU4 Primary Production Small Lots,rural,Leppington,7008.0,-33.99943,150.75489,zoning_proxy|shops_high|bus_calibrated,good_areas,0.001805921586943892,0
+89be08ceba7ffff,R2 Low Density Residential,residential,Leppington,8405.0,-34.01251,150.74972,zoning_proxy|shops_high|bus_calibrated,good_areas,0.11619585526588876,0
+89be08cebafffff,R2 Low Density Residential,residential,Leppington,8051.0,-34.00924,150.75101,zoning_proxy|shops_high|bus_calibrated,good_areas,0.4101398706479174,0
+89be08cebb7ffff,R2 Low Density Residential,residential,Leppington,8467.0,-34.01507,150.75248,zoning_proxy|shops_high|bus_calibrated,good_areas,0.12393584254358783,0

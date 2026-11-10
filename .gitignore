@@ -33,3 +33,8 @@ models/
 
 # Regenerable model outputs
 data/model/
+
+# Large experiment outputs, kept in pigeon-ai-experiment-outputs.zip on the team Drive (see DATA.md)
+experiments/v2/combos/out/study_oof_predictions.csv
+experiments/future/aero_predictions.csv
+experiments/future/aero_features.csv

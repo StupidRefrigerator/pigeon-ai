@@ -1,0 +1,9 @@
+scenario,model,total,spearman_vs_real_features,top10_overlap_with_real_features,real_toilet_hexes_in_top10,real_toilets
+real_features,baseline,8.303,1.0,10,3,5
+real_features,good_areas,13.495,1.0,10,2,5
+zoning_proxy|shops_low|bus_calibrated,baseline,6.282,0.438,4,3,5
+zoning_proxy|shops_low|bus_calibrated,good_areas,11.655,0.371,3,3,5
+zoning_proxy|shops_mid|bus_calibrated,baseline,9.154,0.502,5,2,5
+zoning_proxy|shops_mid|bus_calibrated,good_areas,14.837,0.414,3,2,5
+zoning_proxy|shops_high|bus_calibrated,baseline,12.475,0.472,5,3,5
+zoning_proxy|shops_high|bus_calibrated,good_areas,21.878,0.436,3,3,5

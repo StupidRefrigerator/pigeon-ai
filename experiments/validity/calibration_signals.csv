@@ -1,0 +1,12 @@
+,cal_no_toilet_low_pred,cal_no_toilet_mid_pred,cal_toilet
+n,300,300,300
+OSM public toilet in hex,1%,26%,56%
+OSM public toilets > map count (toilet_not_on_map),1%,26%,15%
+...of which access tag missing only,1%,18%,7%
+OSM customers/private toilet in hex,0%,2%,4%
+site: shopping centre,1%,15%,23%
+"site: strong destination (station, beach, 1ha+ park, library, ped. street...)",3%,73%,65%
+site: shopping OR strong destination,4%,82%,70%
+"site: weak destination only (playground, pitch, small park)",25%,14%,21%
+site: residential/industrial/unknown,71%,3%,7%
+median shops+food in hex,0,0,0

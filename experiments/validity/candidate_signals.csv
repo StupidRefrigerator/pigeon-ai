@@ -1,0 +1,12 @@
+,baseline (all),good-areas (all),both models,good-areas only,baseline only,baseline shortfall,good-areas shortfall,good-areas top 50,baseline top 50
+n,120,314,119,195,1,14,52,50,50
+OSM public toilet in hex,50%,42%,50%,37%,100%,93%,85%,50%,64%
+OSM public toilets > map count (toilet_not_on_map),46%,37%,45%,32%,100%,57%,56%,50%,56%
+...of which access tag missing only,23%,20%,23%,19%,100%,29%,27%,24%,30%
+OSM customers/private toilet in hex,8%,6%,8%,6%,0%,7%,8%,12%,10%
+site: shopping centre,32%,34%,32%,35%,0%,43%,54%,44%,38%
+"site: strong destination (station, beach, 1ha+ park, library, ped. street...)",82%,74%,82%,69%,100%,93%,94%,72%,80%
+site: shopping OR strong destination,89%,85%,89%,83%,100%,100%,98%,86%,90%
+"site: weak destination only (playground, pitch, small park)",9%,10%,9%,11%,0%,0%,2%,8%,10%
+site: residential/industrial/unknown,0%,1%,0%,1%,0%,0%,0%,0%,0%
+median shops+food in hex,22,14,22,11,1,60,43,36,36

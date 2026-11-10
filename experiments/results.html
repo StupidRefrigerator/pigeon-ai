@@ -1,0 +1,161 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>PIGEON-AI model results</title>
+<style>
+:root{color-scheme:light dark}
+body{margin:0;font-family:var(--font-sans,system-ui);color:var(--foreground,#222);line-height:1.45;font-size:14px}
+h1{font-size:20px;margin:4px 0 2px}
+h2{font-size:16px;margin:28px 0 8px;padding-top:4px;border-top:1px solid var(--border,#ddd)}
+h3{font-size:14px;margin:16px 0 6px}
+p{margin:6px 0}
+.muted{color:var(--muted-foreground,#777);font-size:12.5px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:12px 0}
+.card{background:var(--card,#f6f6f6);border:1px solid var(--border,#ddd);border-radius:var(--radius,8px);padding:12px}
+.card b{display:block;font-size:20px;margin:2px 0}
+.card span{font-size:12px;color:var(--muted-foreground,#777)}
+table{border-collapse:collapse;width:100%;margin:6px 0 4px;font-size:13px}
+th,td{padding:5px 8px;border-bottom:1px solid var(--border,#ddd);text-align:right;vertical-align:top}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:600;color:var(--muted-foreground,#666);font-size:12px}
+.win{color:var(--success,#1a7f37);font-weight:600}
+.pill{display:inline-block;padding:1px 7px;border-radius:999px;font-size:11.5px;background:var(--secondary,#eee)}
+.warn{background:var(--warning-surface,#fff4d6);border:1px solid var(--warning,#d9a400);border-radius:var(--radius,8px);padding:10px 12px;margin:10px 0}
+.bars{display:grid;grid-template-columns:70px 1fr 1fr;gap:6px 10px;align-items:center;font-size:12.5px;margin-top:8px}
+.bar{height:16px;border-radius:3px}
+.b1{background:var(--chart-1,#3b82f6)}.b2{background:var(--chart-2,#f59e0b)}
+.legend span{display:inline-flex;align-items:center;gap:5px;margin-right:14px;font-size:12px}
+.legend i{width:11px;height:11px;border-radius:2px;display:inline-block}
+img{max-width:100%;border-radius:var(--radius,8px);border:1px solid var(--border,#ddd)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.two{grid-template-columns:1fr}}
+ul{margin:6px 0;padding-left:20px}
+</style></head><body>
+
+<h1>Toilet model results: original vs good-areas</h1>
+<p class="muted">PIGEON-AI · 9 Nov 2026 · Every number comes from a model that never saw the area it predicts (spatial hold-out).</p>
+
+<div class="cards">
+ <div class="card"><span>Finds today's toilets (PR-AUC)</span><b>0.52 vs 0.49</b><span>original slightly better; random = 0.12</span></div>
+ <div class="card"><span>Toilets wanted overall (real: 2,570)</span><b>2,632 vs 3,624</b><span>good-areas wants ~1,050 more</span></div>
+ <div class="card"><span>Growth suburbs it never saw</span><b>0.31 PR-AUC</b><span>both models; 10× random</span></div>
+ <div class="card"><span>Bradfield top pick</span><b>Station + Central Park</b><span>master plan shows "Amenities" there</span></div>
+</div>
+
+<p><b>The two models.</b> <b>Original</b>: trained on all of Sydney in 5 rounds (5-fold spatial cross-validation), so each area is predicted by a model that never saw it. <b>Good-areas</b>: trained only on the 20 areas that already have the most toilets for how busy they are, then used to predict everywhere else. The original learns "what Sydney normally has"; good-areas learns "what well-served places have".</p>
+
+<h2>1 · Does it predict where toilets already are?</h2>
+
+<h3>Study area (16,228 hexes, 2,570 toilets)</h3>
+<table>
+<tr><th>Measure</th><th>What it means</th><th>Original</th><th>Good-areas</th></tr>
+<tr><td>PR-AUC</td><td style="text-align:left">Ranking all hexes, how well toilet hexes come first (random 0.118)</td><td class="win">0.519</td><td>0.491</td></tr>
+<tr><td>Top-100 hits</td><td style="text-align:left">Of the 100 highest predictions, how many have a toilet</td><td class="win">86</td><td>83</td></tr>
+<tr><td>Top-500 hits</td><td style="text-align:left">Same, top 500</td><td class="win">359</td><td>326</td></tr>
+<tr><td>Top-1,000 hits</td><td style="text-align:left">Same, top 1,000</td><td class="win">616</td><td>582</td></tr>
+<tr><td>Error (Poisson deviance)</td><td style="text-align:left">How far counts are off (guess-the-average 0.719)</td><td class="win">0.419</td><td>0.449*</td></tr>
+<tr><td>Predicted total</td><td style="text-align:left">vs 2,570 real toilets</td><td>2,632</td><td>3,624*</td></tr>
+</table>
+<p class="muted">* Good-areas is designed to predict <i>above</i> today's counts, so error and totals penalise it by design. The ranking rows are the fair comparison: the original is a little better at finding today's toilets.</p>
+
+<h3>How high predictions go (Oscar's "low variation" point)</h3>
+<div class="legend"><span><i class="b1"></i>Original</span><span><i class="b2"></i>Good-areas</span></div>
+<div class="bars" id="spread"></div>
+<p class="muted">Average prediction for hexes with each real toilet count. Both models flatten high counts; good-areas lifts them about 40% but still never predicts above ~2.8.</p>
+
+<h3>Growth suburbs the models never saw (1,108 hexes, 39 real toilets)</h3>
+<p>Marsden Park, Box Hill, Oran Park, Gregory Hills, Leppington, Edmondson Park and others were left out of training. They are new suburbs whose toilets are already on the map, so they are a real "new suburb" test. Uses the 19 basic inputs (1 km and walkability columns aren't built for these suburbs yet).</p>
+<table>
+<tr><th>Measure</th><th>Original</th><th>Good-areas</th></tr>
+<tr><td>Predicted toilets (real 39)</td><td class="win">55</td><td>97</td></tr>
+<tr><td>PR-AUC (random 0.032)</td><td>0.312</td><td>0.311</td></tr>
+<tr><td>Toilets in top 20 / 35 / 100 hexes</td><td>12 / 13 / 28</td><td>11 / 16 / 27</td></tr>
+<tr><td>Of 35 toilet hexes, found in top 100</td><td>24</td><td>23</td></tr>
+</table>
+<table>
+<tr><th>Suburb</th><th>Real toilets</th><th>Original</th><th>Good-areas</th></tr>
+<tr><td>Gregory Hills</td><td>7</td><td>3.0</td><td>4.8</td></tr>
+<tr><td>Riverstone</td><td>6</td><td>3.9</td><td>5.1</td></tr>
+<tr><td>Leppington</td><td>6</td><td>4.8</td><td>9.6</td></tr>
+<tr><td>Edmondson Park</td><td>5</td><td>4.7</td><td>6.8</td></tr>
+<tr><td>Oran Park</td><td>5</td><td>8.3</td><td>13.5</td></tr>
+<tr><td>Marsden Park</td><td>0</td><td>4.7</td><td>9.5</td></tr>
+<tr><td>Box Hill</td><td>1</td><td>4.7</td><td>9.7</td></tr>
+<tr><td>Austral</td><td>0</td><td>2.2</td><td>4.7</td></tr>
+</table>
+<p><b>Reading it:</b> both rank new suburbs well (10× better than random) but weaker than established Sydney (0.31 vs 0.52). Both under-predict built-up suburbs (Gregory Hills, Riverstone) and expect toilets in still-growing ones (Marsden Park, Box Hill, Austral) that don't have them yet. That could be model error, or toilets that will come as the suburbs fill in; the inputs use 2021 census population, before most residents arrived.</p>
+
+<h2>2 · Are its new toilet locations valid places?</h2>
+<div class="warn"><b>In progress.</b> An automated check is classifying every candidate (original 120, good-areas 314) using OpenStreetMap and NSW zoning: is there already a toilet the national map misses, is it a shopping centre, a park / station / beach / library, or just houses or industry? It is calibrated against hexes that really have toilets. This section will be filled in when it finishes. It's a proxy; the human review in <code>candidate_review.csv</code> is still the real test.</div>
+<p><b>What we know already:</b></p>
+<ul>
+<li>Good-areas keeps 119 of the original's 120 candidates and adds ~195 new ones. Its candidates are stable: 293–298 of 314 return with a different random seed.</li>
+<li>The original's top candidates include large shopping centres (e.g. Liverpool, Bondi Junction), which likely have customer toilets the public map doesn't list.</li>
+<li>In Bradfield (below), both models' top pick is exactly where the master plan places public amenities.</li>
+</ul>
+
+<h2>3 · A future suburb: Bradfield and the Aerotropolis</h2>
+<p>Bradfield City Centre, next to the new Western Sydney Airport, is farmland today (1 toilet in 88 km²). We built its future inputs from official plans and ran both models.</p>
+<table>
+<tr><th>Input</th><th>Source</th><th>Real or assumed</th></tr>
+<tr><td>Land use</td><td style="text-align:left">NSW Planning Portal zoning (Aerotropolis zones)</td><td><span class="pill">real plan</span></td></tr>
+<tr><td>Train stations</td><td style="text-align:left">Metro Western Sydney Airport stations under construction</td><td><span class="pill">real plan</span></td></tr>
+<tr><td>Parks</td><td style="text-align:left">Recreation-zoned land</td><td><span class="pill">real plan</span></td></tr>
+<tr><td>Population</td><td style="text-align:left">NSW 2024 projections for 2041, spread over zoned land</td><td><span class="pill">projection + assumption</span></td></tr>
+<tr><td>Shops, cafés, bus stops</td><td style="text-align:left">Density per hectare from existing Sydney centres, applied to planned centre zones (low / mid / high)</td><td><span class="pill">assumption</span></td></tr>
+</table>
+
+<div class="two">
+ <div><img src="/tmp/pigeon-eval/future/map_aero_baseline_dphi2041.png" alt="Original model predictions for the Aerotropolis"><p class="muted">Original model, mid scenario. Darker = more predicted toilets.</p></div>
+ <div><img src="/tmp/pigeon-eval/future/map_aero_good_areas_dphi2041.png" alt="Good-areas model predictions for the Aerotropolis"><p class="muted">Good-areas model, same inputs.</p></div>
+</div>
+
+<table>
+<tr><th>Scenario</th><th>Original total</th><th>Hexes ≥ 1</th><th>Good-areas total</th><th>Hexes ≥ 1</th></tr>
+<tr><td>Today's farmland</td><td>9.7</td><td>0</td><td>28.1</td><td>0</td></tr>
+<tr><td>Shops low</td><td>95</td><td>0</td><td>175</td><td>0</td></tr>
+<tr><td><b>Shops mid (headline)</b></td><td><b>139</b></td><td><b>3</b></td><td><b>229</b></td><td><b>6</b></td></tr>
+<tr><td>Shops high</td><td>152</td><td>14</td><td>254</td><td>21</td></tr>
+</table>
+<p><b>Read the ranking, not the totals.</b> Totals are inflated: spreading assumed shops evenly gives every enterprise hex ~0.3, which adds up over 838 hexes. The ranking is the useful part:</p>
+<ul>
+<li><b>#1 in both models: the Bradfield station hex</b>, fronting the 2 ha Central Park. The master plan's concept plan (p64) marks <b>"Amenities"</b> there. ✔</li>
+<li>#2: Luddenham station's town-centre core. Then parkland along Thompsons Creek, where the Social Infrastructure Strategy wants an amenities block in the regional parkland. ✔ (loosely)</li>
+<li>Good-areas leans more on creek-corridor parks; the original leans more on stations and the centre.</li>
+<li>The airport terminal scores low (0.57): the model has never seen an airport.</li>
+</ul>
+
+<h3>Does the plan-based method work? Oran Park check</h3>
+<p>We rebuilt Oran Park (already built, 5 real toilets) from zoning only, as if it were unbuilt, and compared with its real features.</p>
+<table>
+<tr><th>Inputs</th><th>Predicted total</th><th>Rank of the real-toilet hexes</th></tr>
+<tr><td>Real features</td><td>8.3</td><td>1, 3, 10, 21</td></tr>
+<tr><td>Plan-based (zoning) features</td><td>9.2</td><td>2, 4, 13, 16</td></tr>
+</table>
+<p>The plan-based method finds the real toilets about as well as real data does, so the Bradfield ranking is credible. Hex-by-hex agreement is only moderate (0.50), and zoning misses small parks.</p>
+<p class="muted">Leppington Town Centre (4 real toilets) was also run: top pick in both models is the mixed-use hex 126 m from Leppington station.</p>
+
+<h2>Verdict so far</h2>
+<table>
+<tr><th>Question</th><th>Original</th><th>Good-areas</th></tr>
+<tr><td>Finds today's toilets</td><td class="win">Slightly better</td><td>Close behind</td></tr>
+<tr><td>Works on new suburbs it never saw</td><td>Yes (0.31)</td><td>Yes (0.31), over-predicts totals</td></tr>
+<tr><td>Proposes new locations</td><td>120 conservative</td><td>314, higher bar</td></tr>
+<tr><td>Are those locations valid?</td><td colspan="2" style="text-align:center">Automated check running · human review not started</td></tr>
+<tr><td>Future suburb (Bradfield)</td><td colspan="2" style="text-align:center">Both put #1 where the master plan puts amenities</td></tr>
+</table>
+<p><b>Recommendation for the demo:</b> use the original for "where toilets usually go" and good-areas as the "raise the standard" view; show the growth-suburb test as evidence it works on new suburbs, and Bradfield as the future-suburb story with its assumptions labelled.</p>
+
+<h3>Caveats</h3>
+<ul>
+<li>The models learn existing placement, not need. Good-areas is a higher bar, still learned from today's toilets.</li>
+<li>Growth suburbs use 2021 population and only the 19 basic inputs.</li>
+<li>Bradfield shops, cafés and bus stops are assumptions with low/mid/high scenarios; there is no jobs input, and Bradfield is a jobs centre.</li>
+<li>No public dataset of planned toilets exists; plans were checked by reading the master plan PDFs.</li>
+</ul>
+
+<script>
+const rows=[["0",0.11,0.16],["1",0.46,0.60],["2",0.79,1.01],["3",0.96,1.23],["4",0.98,1.31],["5",0.94,1.43],["6+",1.47,1.78]];
+const max=2, el=document.getElementById('spread');
+el.innerHTML='<div class="muted">Real toilets</div><div class="muted">Original</div><div class="muted">Good-areas</div>'+rows.map(([k,a,b])=>
+`<div>${k}</div><div style="display:flex;align-items:center;gap:6px"><div class="bar b1" style="width:${a/max*80}%"></div>${a.toFixed(2)}</div><div style="display:flex;align-items:center;gap:6px"><div class="bar b2" style="width:${b/max*80}%"></div>${b.toFixed(2)}</div>`).join('');
+</script>
+</body></html>

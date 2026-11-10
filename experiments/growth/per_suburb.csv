@@ -1,0 +1,18 @@
+suburb,hexes,actual_toilets,baseline_pred,good_areas_pred
+Austral,118.0,0.0,2.2,4.7
+Box Hill (NSW),86.0,1.0,4.7,9.7
+Bringelly,87.0,0.0,0.3,1.7
+Catherine Field,72.0,1.0,0.9,2.6
+Colebee,45.0,1.0,5.1,7.9
+Edmondson Park,64.0,5.0,4.7,6.8
+Gilead,3.0,0.0,0.1,0.2
+Gledswood Hills,76.0,3.0,5.0,8.8
+Gregory Hills,23.0,7.0,3.0,4.8
+Leppington,140.0,6.0,4.8,9.6
+Marsden Park,102.0,0.0,4.7,9.5
+Oran Park,86.0,5.0,8.3,13.5
+Riverstone,48.0,6.0,3.9,5.1
+Schofields,64.0,3.0,4.6,7.2
+Shanes Park,66.0,1.0,1.2,2.8
+Vineyard,28.0,0.0,1.0,2.3
+TOTAL,1108.0,39.0,54.5,97.19999999999999

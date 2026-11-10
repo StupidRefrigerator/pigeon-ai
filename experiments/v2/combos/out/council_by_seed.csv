@@ -1,0 +1,91 @@
+model,seed,set,n,top10,top25,median_pct,cand_ring,cand_ring_n
+M0,0,planned (42),42,26.0,36.0,95.16658517845917,8,39
+M0,0,"planned new, empty hex",15,6.0,10.0,84.96193336592862,3,13
+M0,0,control: random empty hexes,1000,109.0,248.0,48.910386254103514,23,1000
+M0,0,control: random empty park hexes,1000,195.0,472.0,73.29747852203674,47,1000
+M0,0,reverse: candidates near a planned site,120,,,,10,120
+M0,1,planned (42),42,26.0,36.0,94.83131941049103,8,39
+M0,1,"planned new, empty hex",15,6.0,10.0,84.00502898651952,3,13
+M0,1,control: random empty hexes,1000,105.0,251.0,49.57742543829015,24,1000
+M0,1,control: random empty park hexes,1000,196.0,471.0,73.07396801005797,48,1000
+M0,1,reverse: candidates near a planned site,121,,,,10,121
+M0,2,planned (42),42,26.0,38.0,94.95355172172941,8,39
+M0,2,"planned new, empty hex",15,5.0,12.0,83.94216665502549,3,13
+M0,2,control: random empty hexes,1000,106.0,248.0,49.42026960955508,22,1000
+M0,2,control: random empty park hexes,1000,196.0,470.0,73.70259132499825,45,1000
+M0,2,reverse: candidates near a planned site,119,,,,11,119
+M1,0,planned (42),42,30.0,39.0,97.88014248795139,8,39
+M1,0,"planned new, empty hex",15,6.0,12.0,85.69532723335894,3,13
+M1,0,control: random empty hexes,1000,107.0,259.0,50.63560801843961,29,1000
+M1,0,control: random empty park hexes,1000,185.0,447.0,71.51637912970594,56,1000
+M1,0,reverse: candidates near a planned site,135,,,,11,135
+M1,1,planned (42),42,30.0,39.0,97.89411189495006,8,39
+M1,1,"planned new, empty hex",15,6.0,12.0,85.12956624991268,3,13
+M1,1,control: random empty hexes,1000,110.0,262.0,50.36669693371516,30,1000
+M1,1,control: random empty park hexes,1000,191.0,442.0,71.48494796395893,58,1000
+M1,1,reverse: candidates near a planned site,139,,,,11,139
+M1,2,planned (42),42,30.0,40.0,97.99189774394077,8,39
+M1,2,"planned new, empty hex",15,6.0,13.0,85.52769434937487,3,13
+M1,2,control: random empty hexes,1000,104.0,263.0,51.721729412586434,31,1000
+M1,2,control: random empty park hexes,1000,188.0,449.0,71.31382272822518,55,1000
+M1,2,reverse: candidates near a planned site,134,,,,11,134
+M2,0,planned (42),42,23.0,37.0,94.79290354124467,12,39
+M2,0,"planned new, empty hex",15,4.0,11.0,83.34148215408256,3,13
+M2,0,control: random empty hexes,1000,109.0,254.0,49.280575539568346,46,1000
+M2,0,control: random empty park hexes,1000,193.0,453.0,72.04372424390584,72,1000
+M2,0,reverse: candidates near a planned site,206,,,,19,206
+M2,1,planned (42),42,24.0,36.0,94.88021233498637,11,39
+M2,1,"planned new, empty hex",15,5.0,10.0,82.97827757211707,2,13
+M2,1,control: random empty hexes,1000,109.0,257.0,49.123419710833275,46,1000
+M2,1,control: random empty park hexes,1000,189.0,453.0,72.31263532863031,70,1000
+M2,1,reverse: candidates near a planned site,212,,,,21,212
+M2,2,planned (42),42,24.0,37.0,94.40176014528183,13,39
+M2,2,"planned new, empty hex",15,4.0,11.0,83.69770203254872,4,13
+M2,2,control: random empty hexes,1000,111.0,254.0,49.161835580079625,51,1000
+M2,2,control: random empty park hexes,1000,187.0,443.0,72.19040301739192,73,1000
+M2,2,reverse: candidates near a planned site,210,,,,22,210
+M3,0,planned (42),42,29.0,38.0,97.68806314171962,13,39
+M3,0,"planned new, empty hex",15,6.0,11.0,85.55563316337222,3,13
+M3,0,control: random empty hexes,1000,113.0,260.0,51.02325906265279,57,1000
+M3,0,control: random empty park hexes,1000,180.0,436.0,70.64329119228888,87,1000
+M3,0,reverse: candidates near a planned site,223,,,,20,223
+M3,1,planned (42),42,29.0,38.0,97.5274149612349,11,39
+M3,1,"planned new, empty hex",15,6.0,11.0,86.00963889082908,2,13
+M3,1,control: random empty hexes,1000,111.0,265.0,51.90682405531885,57,1000
+M3,1,control: random empty park hexes,1000,182.0,428.0,70.66773765453657,92,1000
+M3,1,reverse: candidates near a planned site,234,,,,20,234
+M3,2,planned (42),42,29.0,38.0,97.45756792624154,11,39
+M3,2,"planned new, empty hex",15,6.0,11.0,86.33791995529789,2,13
+M3,2,control: random empty hexes,1000,116.0,265.0,52.00460990430956,57,1000
+M3,2,control: random empty park hexes,1000,177.0,431.0,70.6747223580359,94,1000
+M3,2,reverse: candidates near a planned site,233,,,,21,233
+M2t,0,planned (42),42,26.0,37.0,94.88370468673605,9,39
+M2t,0,"planned new, empty hex",15,5.0,11.0,83.60690088705735,3,13
+M2t,0,control: random empty hexes,1000,105.0,253.0,49.430746664804076,22,1000
+M2t,0,control: random empty park hexes,1000,194.0,469.0,73.10889152755465,44,1000
+M2t,0,reverse: candidates near a planned site,125,,,,10,125
+M2t,1,planned (42),42,26.0,37.0,95.17356988195851,9,39
+M2t,1,"planned new, empty hex",15,5.0,11.0,84.87113222043725,3,13
+M2t,1,control: random empty hexes,1000,107.0,252.0,49.42376196130474,22,1000
+M2t,1,control: random empty park hexes,1000,191.0,468.0,73.4022490745268,44,1000
+M2t,1,reverse: candidates near a planned site,123,,,,10,123
+M2t,2,planned (42),42,28.0,37.0,95.22595515820353,10,39
+M2t,2,"planned new, empty hex",15,7.0,11.0,83.14591045610113,3,13
+M2t,2,control: random empty hexes,1000,107.0,252.0,48.88593979185583,22,1000
+M2t,2,control: random empty park hexes,1000,194.0,469.0,73.15778445205001,45,1000
+M2t,2,reverse: candidates near a planned site,121,,,,11,121
+M3t,0,planned (42),42,30.0,39.0,97.88014248795139,7,39
+M3t,0,"planned new, empty hex",15,6.0,12.0,86.18425647831249,2,13
+M3t,0,control: random empty hexes,1000,106.0,260.0,50.890549696165394,33,1000
+M3t,0,control: random empty park hexes,1000,189.0,436.0,71.67353495844102,53,1000
+M3t,0,reverse: candidates near a planned site,142,,,,9,142
+M3t,1,planned (42),42,30.0,40.0,97.8242648599567,8,39
+M3t,1,"planned new, empty hex",15,6.0,13.0,86.13536355381714,3,13
+M3t,1,control: random empty hexes,1000,108.0,262.0,50.918488510162746,33,1000
+M3t,1,control: random empty park hexes,1000,189.0,445.0,71.50590207445694,59,1000
+M3t,1,reverse: candidates near a planned site,143,,,,11,143
+M3t,2,planned (42),42,30.0,40.0,97.75441782496333,7,39
+M3t,2,"planned new, empty hex",15,6.0,13.0,86.11440944331913,2,13
+M3t,2,control: random empty hexes,1000,109.0,259.0,51.13152196689251,33,1000
+M3t,2,control: random empty park hexes,1000,188.0,445.0,71.58622616469931,56,1000
+M3t,2,reverse: candidates near a planned site,143,,,,10,143
