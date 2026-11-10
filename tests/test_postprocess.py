@@ -1,7 +1,12 @@
+from pathlib import Path
+import sys
+
 import h3
 import numpy as np
 import pandas as pd
 import pytest
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from pigeon_ai.postprocess import (coverage_step, coverage_summary, gap, newly_covered_population,
                          priority, recommendations, rings_for_walk, seifa_disadvantage, top_n)
