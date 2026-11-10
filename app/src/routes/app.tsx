@@ -7,6 +7,7 @@ function AppShell() {
     <div className="shell">
       <header className="topbar">
         <Link to="/" className="brand">
+          <img src="/logo.svg" alt="" />
           Pigeon AI
         </Link>
         <Link to="/app" activeOptions={{ exact: true }} activeProps={{ className: 'active' }}>

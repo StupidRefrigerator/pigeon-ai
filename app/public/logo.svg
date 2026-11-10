@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" width="500" height="600">
+  <title>Pigeon AI</title>
+  <path d="M50 6 L92 30 L92 76 L50 114 L8 76 L8 30 Z" fill="#3D5A73" stroke="#3D5A73" stroke-width="8" stroke-linejoin="round"/>
+  <g fill="#F4F1EA" transform="translate(14 16) scale(0.72)">
+    <path d="M45 38 Q26 26 2 34 L8 40 L3 46 L10 50 L6 56 Q28 62 45 58 Z"/>
+    <path d="M55 38 Q74 26 98 34 L92 40 L97 46 L90 50 L94 56 Q72 62 55 58 Z"/>
+    <ellipse cx="50" cy="50" rx="9" ry="20"/>
+    <circle cx="50" cy="27" r="7"/>
+    <polygon points="47.5,22 50,15 52.5,22"/>
+    <path d="M44.5 66 L38 87 Q50 92 62 87 L55.5 66 Z"/>
+  </g>
+</svg>
