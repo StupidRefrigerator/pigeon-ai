@@ -16,3 +16,4 @@ gdown==6.4.2
 openpyxl==3.1.5
 scikit-learn==1.9.1
 shap==0.54.1
+requests==2.34.2

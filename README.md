@@ -23,7 +23,7 @@ pip install -r requirements.txt
 
 ## Model
 
-The model predicts how many public toilets a hexagon would typically have, given what is around it. A hexagon predicted to have at least one more toilet than it has is a **candidate**: a place to check for a missing toilet. Design decisions and their trade-offs are in [docs/model-decisions.md](docs/model-decisions.md).
+The model predicts how many public toilets a hexagon would typically have, given what is around it. A hexagon predicted to have at least one more toilet than it has is a **candidate**: a place to check for a missing toilet. After the model, a few post-processing steps turn the predictions into the **recommended list**. The default model is **V12**. Design decisions and their trade-offs are in [docs/model-decisions.md](docs/model-decisions.md).
 
 ### Train and evaluate
 
@@ -34,7 +34,7 @@ The model predicts how many public toilets a hexagon would typically have, given
    python scripts/train_model.py
    ```
 
-   The run takes about 2.5 minutes. It trains and tests the model, prints a report of every eval, and writes the output files.
+   The run takes about 2.5 minutes. It trains and tests the model, prints a report of every eval, and writes the output files, including the recommended list `data/model/recommendations.csv`.
 3. Read the report. Check that the forest beats every baseline and that the predicted total is close to the actual total.
 4. Open `data/review/candidate_review.csv` and review candidates from the top. See [Review candidates](#review-candidates).
 5. Commit the review file. Keep generated evaluation outputs in `data/model/` uncommitted; only the three shared inference models under `data/model/final/` are included in Git.
@@ -43,7 +43,7 @@ Optional flags:
 
 | Flag | Default | Effect |
 |---|---|---|
-| `--features` | `latest` | Feature set: `latest` (28 columns) or `v1` (19 columns). |
+| `--features` | `v12` | Feature set: `v12` (45 columns), `latest` (the previous 28-column default) or `v1` (19 columns). |
 | `--threshold` | `1.0` | How many more toilets than exist the prediction must be to flag a candidate. |
 | `--target` | `toilets` | Infrastructure type. Only `toilets` exists today. |
 
@@ -51,12 +51,25 @@ A run with non-default flags is an experiment. It prints the report and writes `
 
 ### Architecture
 
-**Input.** `data/processed/sydney_extended_features.csv` has one row per H3 resolution-9 hexagon (about 0.1 km²) in the study area: 16,228 rows. The label is `toilet_count`. The `latest` feature set has 28 columns:
+**Input.** `data/processed/sydney_extended_features.csv` has one row per H3 resolution-9 hexagon (about 0.1 km²) in the study area: 16,228 rows. The script joins `data/processed/sydney_recreation_features.csv` to it by `hex_id`. The label is `toilet_count`, from the National Public Toilet Map.
+
+| Feature set | Columns | Contents |
+|---|---:|---|
+| `v12` (default) | 45 | `latest` plus the 17 OpenStreetMap columns below. |
+| `latest` | 28 | `v1` plus 1 km buffers and walkability. |
+| `v1` | 19 | Population, shops, food, transport and parks inside and within 250 m and 500 m. |
+
+The 45 `v12` columns:
 
 - Population inside the hexagon and within 250 m, 500 m and 1 km.
 - Shops, cafes and restaurants, bus stops and train stations inside and within 250 m, 500 m and 1 km.
 - Park area inside and within 250 m, 500 m and 1 km, and distance to the nearest park.
 - Walkable path length, pedestrian junctions and distance to the nearest footpath.
+- Sports grounds (pitches, sports centres, stadiums, tracks) inside and within 250 m, 500 m and 1 km, sports area inside and within 500 m, and distance to the nearest one.
+- Playgrounds inside and within 250 m, 500 m and 1 km, and distance to the nearest one.
+- Beaches and surf clubs inside and within 250 m, 500 m and 1 km, and distance to the nearest one.
+
+The exact lists, in order, are in `TARGETS` in `src/pigeon_ai/model.py`. The order matters: changing it changes the forest. The OSM toilet counts (`osm_toilets_*`) are never inputs, because they nearly copy the label. They are used only in the recommended list.
 
 The model never sees location (`hex_id`, coordinates or council), SEIFA, demographics or population projections. Each infrastructure type lists its own inputs in `TARGETS` in `src/pigeon_ai/model.py`, so a future target can leave out columns built from its own label.
 
@@ -66,7 +79,7 @@ The model never sees location (`hex_id`, coordinates or council), SEIFA, demogra
 
 The script uses 5-fold spatial cross-validation. Instead of one fixed test set, it takes 5 turns, and each turn uses a different fifth of Sydney as the test set. After 5 turns, every hexagon has been tested exactly once, by a model that never saw it or its surrounding area.
 
-1. Load the 16,228 hexagons with their 28 input columns and their real toilet count.
+1. Load the 16,228 hexagons with their 45 input columns and their real toilet count.
 2. Put each hexagon in its res-6 block (about 36 km²), then split the 90 blocks into 5 groups of 18.
 3. For each group, train a forest on the other 4 groups. Predict this group's hexagons, which are the test set for this turn, and record why each prediction came out as it did (SHAP).
 4. Combine the 5 test sets. Each hexagon now has one prediction from a model that never saw it.
@@ -75,6 +88,7 @@ The script uses 5-fold spatial cross-validation. Instead of one fixed test set, 
    - `no_toilet`: the hexagon has no toilet and is predicted at 1.0 or more.
    - `shortfall`: the hexagon has toilets but is predicted at least 1.0 more, such as 1 toilet predicted at 2.3.
 7. Draw the depth-3 decision tree that summarises the forest.
+8. Build the recommended list. See [Recommended list](#recommended-list).
 
 Each run retrains from scratch. The script does not save a trained model file, because every prediction it reports comes from the cross-validation models.
 
@@ -88,22 +102,59 @@ Each run retrains from scratch. The script does not save a trained model file, b
 | `shap_values.csv` | SHAP value of every feature for every hexagon: how far each feature pushed that prediction up or down, in toilets. |
 | `feature_importance.csv` | Mean absolute SHAP value per feature. |
 | `decision_tree.png` | The depth-3 summary tree. |
+| `recommendations.csv` | The recommended list, best first. See [Recommended list](#recommended-list). |
+
+### Recommended list
+
+The candidates rank hexagons by gap alone. The recommended list adjusts that ranking for toilets the official map misses and for disadvantage. It uses the seed-0 held-out predictions:
+
+1. **OSM toilets count as existing.** Existing toilets = the larger of the official count and the OSM public toilets in the hexagon. Gap = prediction − existing toilets, floored at 0.
+2. **Equity weight.** Priority = gap × (1 + disadvantage). Disadvantage is (11 − SEIFA IRSD decile) / 10, so decile 1 (most disadvantaged) gets 1.0 and decile 10 gets 0.1. Hexagons without SEIFA get the average.
+3. **Shortlist.** Take the 120 highest priorities and keep those with a gap of at least 1. This gives 87 hexagons.
+4. **400 m walking coverage is a column, not a filter.** `uncovered_400m` is `True` when neither the hexagon nor its 6 neighbours has an existing toilet. One ring of res-9 hexagons is about 400 m of walking.
+
+| Column | Contents |
+|---|---|
+| `hex_id`, `lat`, `lng` | The hexagon and its centre. |
+| `rank` | Priority rank among all 16,228 hexagons. Numbers are skipped where a hexagon was dropped for a gap below 1. |
+| `priority`, `gap` | As defined above. |
+| `predicted_toilets` | Held-out prediction. |
+| `toilet_count`, `osm_toilets_public`, `existing_toilets` | Official count, OSM public toilets, and the larger of the two. |
+| `seifa_decile`, `disadvantage` | SEIFA IRSD decile (1 = most disadvantaged; empty if unknown) and the weight above. |
+| `uncovered_400m` | No existing toilet within about 400 m of walking. |
+
+The code is in `src/pigeon_ai/postprocess.py`. SEIFA and OSM toilets are used only here, never as model inputs. Missing OSM data is a blind spot: OSM has no sports ground mapped at Ken Birdsey Park or Anthony Skarratt Reserve, two council-planned sites, so the model does not flag them.
+
+### Rebuild the V12 features
+
+The V12 columns are committed in `data/processed/`, so you don't need this to train. To rebuild them from the raw Overpass download:
+
+```sh
+python scripts/download_data.py --v12-osm-only --v12-osm "<share link to pigeon-ai-raw-v12-osm.zip>"
+python -I scripts/build_recreation.py
+```
+
+The second command writes `sydney_recreation_features.csv`, `sydney_growth_recreation_features.csv` and `osm_toilets.csv`, byte-identical to the committed files. To refresh from today's OpenStreetMap, use `scripts/fetch_overpass.py`; see [DATA.md](DATA.md#updating-the-data). Columns, sources and caveats are in [data/README.md](data/README.md#v12-osm-features-sports-grounds-playgrounds-beaches-and-osm-toilets).
 
 ### Evals
 
-All evals use the held-out predictions. Results are from the current `latest` run.
+All evals use the held-out predictions. Results are from the default `v12` run (seed 0). The `latest` column is the same run's comparison forest.
 
-| Eval | Question it answers | How it is measured | Result |
-|---|---|---|---|
-| Poisson deviance | How far off are the predicted counts? | Average error for count data. Lower is better. | 0.418. Predicting the average everywhere scores 0.719. |
-| PR-AUC | Does the ranking put toilet hexagons first? | Sort hexagons by prediction, highest first, and measure how early the toilet hexagons appear. 1.0 is perfect. | 0.519. Random order scores 0.118. |
-| Top-100 hits | Are the most confident predictions right? | Number of the 100 highest predictions that have a toilet. | 86 |
-| Baselines | Is the forest better than a simple rule? | The same metrics for ranking by shops within 500 m, a population-only forest, and the average. | Shops ranking 65 top-100 hits. Population-only 48. |
-| Calibration | Can a prediction be read literally? | Group hexagons by predicted count, then compare the average prediction with the average actual count. | Every band within 0.06. Total 2,632 predicted, 2,570 actual. |
-| Per-fold | Is the model consistent across areas? | Deviance and PR-AUC for each fold. | Deviance 0.37 to 0.45. |
-| Stability | Do candidates depend on chance? | Rerun with random seeds 1 and 2, and with the `v1` features. Count candidates in common. | 113 to 116 of 120 across seeds. |
-| Fairness | Does the model treat areas differently by disadvantage? | Split hexagons into SEIFA IRSD deciles. Compare predicted with actual toilets and the candidate rate. SEIFA is never a model input. | Predicted/actual 0.91 to 1.14 in every decile. |
-| Review | Are the candidates real gaps? | Share of reviewed candidates marked `real_gap`. | Not started. |
+| Eval | Question it answers | How it is measured | `v12` | `latest` |
+|---|---|---|---|---|
+| Poisson deviance | How far off are the predicted counts? | Average error for count data. Lower is better. | 0.378. Predicting the average everywhere scores 0.719. | 0.418 |
+| PR-AUC | Does the ranking put toilet hexagons first? | Sort hexagons by prediction, highest first, and measure how early the toilet hexagons appear. 1.0 is perfect. | 0.569. Random order scores 0.118. | 0.520 |
+| Top-100 hits | Are the most confident predictions right? | Number of the 100 highest predictions that have a toilet. | 85 | 86 |
+| Top-1000 hits | Does the ranking hold further down? | Number of the 1,000 highest predictions that have a toilet. | 671 | 616 |
+| Baselines | Is the forest better than a simple rule? | The same metrics for ranking by shops within 500 m, a population-only forest, and the average. | Shops ranking 65 top-100 hits. Population-only 48. | |
+| Calibration | Can a prediction be read literally? | Group hexagons by predicted count, then compare the average prediction with the average actual count. | Every band within 0.04. Total 2,624 predicted, 2,570 actual. | 2,632 predicted |
+| Per-fold | Is the model consistent across areas? | Deviance and PR-AUC for each fold. | Deviance 0.34 to 0.42. | |
+| Stability | Do candidates depend on chance? | Rerun with random seeds 1 and 2, and with the `latest` features. Count candidates in common. | 129 to 131 of 135 across seeds. | 120 candidates |
+| Fairness | Does the model treat areas differently by disadvantage? | Split hexagons into SEIFA IRSD deciles. Compare predicted with actual toilets and the candidate rate. SEIFA is never a model input. | Predicted/actual 0.91 to 1.17 in every decile. | |
+| Recommended list | Does the list avoid existing toilets and favour need? | Of the 120 highest priorities: how many have an OSM toilet, and how many are in SEIFA deciles 1–3 and 8–10. | 87 listed. 10/120 with an OSM toilet; deciles 1–3: 59/120; 8–10: 4/120. | |
+| Review | Are the candidates real gaps? | Share of reviewed candidates marked `real_gap`. | Not started. | |
+
+Across seeds 0–2, `v12` averages PR-AUC 0.569 (0.569 to 0.570), deviance 0.378, 85 top-100 hits and 677 top-1000 hits. The v2 experiments behind these numbers are in [docs/findings.md](docs/findings.md#v2-new-inputs-label-fix-400-m-walk-and-equity-10-nov-2026).
 
 ### Review candidates
 

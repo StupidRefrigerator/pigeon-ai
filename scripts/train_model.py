@@ -4,12 +4,13 @@ import argparse
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
-from pigeon_ai.model import THRESHOLD, TARGETS, run
+from pigeon_ai.model import DEFAULT_FEATURES, THRESHOLD, TARGETS, run
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Train and evaluate the placement model.")
     parser.add_argument("--target", default="toilets", choices=list(TARGETS))
-    parser.add_argument("--features", default="latest", help="feature set name, e.g. latest or v1")
+    parser.add_argument("--features", default=DEFAULT_FEATURES,
+                        help="feature set name: v12 (default), latest or v1")
     parser.add_argument("--threshold", type=float, default=THRESHOLD,
                         help="how many more toilets than exist the prediction must be to flag a candidate")
     args = parser.parse_args()
