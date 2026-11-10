@@ -37,7 +37,7 @@ The model predicts how many public toilets a hexagon would typically have, given
    The run takes about 2.5 minutes. It trains and tests the model, prints a report of every eval, and writes the output files, including the recommended list `data/model/recommendations.csv`.
 3. Read the report. Check that the forest beats every baseline and that the predicted total is close to the actual total.
 4. Open `data/review/candidate_review.csv` and review candidates from the top. See [Review candidates](#review-candidates).
-5. Commit the review file. Keep generated evaluation outputs in `data/model/` uncommitted; the comparison page's `web/predictions.csv` and `web/metrics.json` are the only generated files in Git.
+5. Commit the review file and the V12 results in `data/model/` (see Outputs below). The SHAP values and the tree picture stay uncommitted.
 
 Optional flags:
 
@@ -92,7 +92,7 @@ The script uses 5-fold spatial cross-validation. Instead of one fixed test set, 
 
 Each run retrains from scratch. The script does not save a trained model file, because every prediction it reports comes from the cross-validation models.
 
-**Outputs.** In `data/model/` (regenerated each run, not committed):
+**Outputs.** In `data/model/`, regenerated each run. The final V12 results are committed, so the app and the stats can use them without retraining: every file below except `shap_values.csv` (6.5 MB) and `decision_tree.png`. After an experiment run (non-default flags), restore them with `git checkout data/model` before you commit.
 
 | File | Contents |
 |---|---|

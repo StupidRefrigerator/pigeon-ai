@@ -1,0 +1,5 @@
+comparison,candidates,in_common_with_reference,jaccard
+seed 0 (reference),135,135,1.0
+seed 1 vs seed 0,139,131,0.916083916083916
+seed 2 vs seed 0,134,129,0.9214285714285714
+latest vs v12 (seed 0),120,101,0.6558441558441559
