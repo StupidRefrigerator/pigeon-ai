@@ -4,62 +4,27 @@ export interface Ratio {
   pct: number
 }
 
+export const fmtRatio = (r: Ratio) => `${r.x.toLocaleString()}/${r.y.toLocaleString()}`
+
+/** src/data/stats.json: the four answers on the Tests page. */
 export interface Stats {
-  model: string
-  headline: {
-    hexes: number
-    toilets: number
-    toiletHexes: number
-    prAuc: { value: number; random: number }
-    topN: (Ratio & { label: string })[]
-    deviance: number
-    predictedTotal: number
-    actualTotal: number
-    predictedTotalPctOfActual: number
-    candidates: number
-  }
-  validity: { n: number; rows: (Ratio & { label: string })[]; note: string }
+  find: { hexes: number; toiletHexes: number; top100: Ratio; top1000: Ratio; prAuc: number; random: number }
+  council: { top10: Ratio; random: number }
   growth: {
     hexes: number
-    suburbs: number
-    actual: number
-    predicted: number
     toiletHexes: number
     top100: Ratio
-    prAuc: { value: number; random: number }
-    perSuburb: { suburb: string; hexes: number; actual: number; pred: number }[]
-    note: string
+    randomTop100: number
+    prAuc: number
+    random: number
+    predicted: number
+    actual: number
   }
-  bradfield: {
-    label: string
-    scenario: string
-    todayTotal: number
-    midTotal: number
-    hexesGe1: number
-    maxHex: number
-    top: { rank: number; zone: string; station: string; stationM: number; pred: number; drivers: string }[]
-    oranProxy: {
-      overlap: { real: number; proxy: number; of: number }
-      toiletHexesInTop10: { real: number; proxy: number; of: number }
-    }
+  reach: {
+    poorest30: Ratio
+    richest30: Ratio
+    deciles: { decile: number; real: number; predicted: number; per10k: number }[]
   }
-  plans: {
-    rows: PlanRow[]
-    fairest: PlanRow
-    reverse: { candidatesNear: Ratio; chance: Ratio }
-    sources: string
-    misses: string
-  }
-  seifa: {
-    toilets_per_10k_decile_1: number
-    toilets_per_10k_decile_10: number
-    real_over_pred_min: number
-    real_over_pred_max: number
-    note: string
-  }
-  newAreaTests: { test: string; where: string; real_data: string; shows: string; result: string }[]
-  v2Changes: { change: string; prAuc: string; council: string; growth: string; verdict: string }[]
-  v2Note: string
 }
 
 export interface Version {
@@ -73,8 +38,8 @@ export interface Version {
   status: 'done' | 'pending' | 'current'
 }
 
+/** src/data/tracking.json: version history and the current model's headline. */
 export interface Tracking {
-  source: string
   versions: Version[]
   current: {
     id: string
@@ -84,16 +49,20 @@ export interface Tracking {
     council: Ratio
     predictedTotal: number
     actualTotal: number
-    setup: string[]
     picks: { listed: number; osmAlready: Ratio; nearPlanned: Ratio; poorest30: Ratio; richest30: Ratio }
   }
 }
 
-export interface PlanRow {
-  label: string
-  n: number
-  top10: Ratio
-  top25: Ratio
-  candidateNear: Ratio
-  medianPct: number
+/** public/heatmap.json, fetched by the Tracking-page map. Drivers are "featIndex:value" pairs joined by commas. */
+export interface HeatmapData {
+  feats: string[]
+  places: string[]
+  /** hex, real toilets, predicted, chance of ≥1, drivers, nearest place */
+  today: [string, number, number, number, string, number][]
+  /** hex, rank, gap after counting OSM toilets, OSM public toilets in the hex */
+  recs: [string, number, number, number][]
+  /** hex, real toilets, predicted, chance of ≥1, nearest place */
+  growth: [string, number, number, number, number][]
+  /** area, rank, hex, predicted, chance of ≥1, zone, nearest station, metres to it, drivers */
+  future: [string, number, string, number, number, string, string, number, string][]
 }

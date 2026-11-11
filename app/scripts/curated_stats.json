@@ -1,181 +1,98 @@
 {
-  "_note": "Numbers that exist only in docs/findings.md (no CSV behind them). Update here when a later experiment changes them.",
-  "validity_curated": {
-    "shop_or_destination": 107,
-    "houses_or_industry_only": 0,
-    "limit_note": "82% of busy hexes the model did not flag also contain a shopping centre or strong destination. The check shows candidates are plausible places. It cannot prove they need a toilet."
-  },
-  "seifa": {
-    "toilets_per_10k_decile_1": 4.1,
-    "toilets_per_10k_decile_10": 5.7,
-    "real_over_pred_min": 0.88,
-    "real_over_pred_max": 1.09,
-    "note": "Per resident, wealthier areas have more toilets, but in total the poorest decile has the most (274, against 150 in decile 10), and the model predicts every decile accurately. So the recommended list is ranked by gap alone, and it still leans poorer: 39 of the top 120 are in the poorest 30% of areas, against 17 in the richest 30%."
-  },
-  "new_area_tests": [
-    {
-      "test": "A. Growth suburbs",
-      "where": "Oran Park, Marsden Park, etc.",
-      "real_data": "Yes: real features and real toilets",
-      "shows": "The model works on suburbs it never saw",
-      "result": "24/35 real toilet hexes in top 100"
-    },
-    {
-      "test": "B. Bradfield",
-      "where": "Airport city, not built yet",
-      "real_data": "No: features built from government plans",
-      "shows": "Where it would put toilets in the future",
-      "result": "about 139 toilets in the mid 2041 scenario (read the ranking, not the total)"
-    },
-    {
-      "test": "C. Oran Park check",
-      "where": "Oran Park",
-      "real_data": "Yes",
-      "shows": "Whether test B's guessed features can be trusted",
-      "result": "proxy keeps 5/10 of the real-feature top 10"
-    }
-  ],
-  "versions_jimmy": {
-    "_source": "Jimmy's comparison page (web/index.html on master, from the saved comparison.csv). Seed 0, 5-fold res-6 spatial CV.",
-    "rows": [
-      [
-        "V1",
-        "Baseline: population, amenities, transport and parks",
-        16228,
-        20,
-        0.4268,
-        0.5109,
-        83
-      ],
-      [
-        "V2",
-        "Population only",
-        16228,
-        4,
-        0.6307,
-        0.2499,
-        47
-      ],
-      [
-        "V3",
-        "Amenities, transport and parks only",
-        16228,
-        16,
-        0.435,
-        0.5037,
-        85
-      ],
-      [
-        "V4",
-        "Local features: inside hexagon and within 250 m",
-        16228,
-        13,
-        0.4377,
-        0.4958,
-        85
-      ],
-      [
-        "V5",
-        "Baseline + 1 km surrounding features",
-        16228,
-        26,
-        0.421,
-        0.516,
-        86
-      ],
-      [
-        "V6",
-        "Baseline + pedestrian accessibility",
-        16228,
-        23,
-        0.4205,
-        0.514,
-        84
-      ],
-      [
-        "V7",
-        "Baseline + demographics and SEIFA",
-        16228,
-        26,
-        0.4244,
-        0.5115,
-        84
-      ],
-      [
-        "V8",
-        "Baseline + future population projections (exploratory)",
-        16228,
-        24,
-        0.4281,
-        0.5109,
-        86
-      ],
-      [
-        "V9",
-        "Expanded study area including growth suburbs",
-        17336,
-        20,
-        0.4102,
-        0.5071,
-        84
-      ],
-      [
-        "V10",
-        "All Greater Sydney, including rural areas",
-        97733,
-        20,
-        null,
-        null,
-        null
-      ]
-    ]
-  },
-  "v2_changes": {
-    "_source": "docs/findings.md, section v2; numbers from experiments/v2/combos/results.md",
-    "rows": [
-      {
-        "change": "V11 (before)",
-        "prAuc": "0.520",
-        "council": "26/42",
-        "growth": "24/35",
-        "verdict": ""
-      },
-      {
-        "change": "+ sports fields, playgrounds, beaches (V12)",
-        "prAuc": "0.569",
-        "council": "30/42",
-        "growth": "22/35",
-        "verdict": "Keep. The only change that beats the noise (seed spread ±0.001)."
-      },
-      {
-        "change": "Retrain on OSM toilets as labels",
-        "prAuc": "0.506",
-        "council": "24/42",
-        "growth": "24/35",
-        "verdict": "Drop. Predicts 29% too many toilets and makes 267 candidates."
-      },
-      {
-        "change": "Count OSM toilets after the model",
-        "prAuc": "same",
-        "council": "same",
-        "growth": "same",
-        "verdict": "Keep. Picks with an OSM toilet fall from 37/120 to 9/120."
-      },
-      {
-        "change": "Disadvantage weighting w = 1",
-        "prAuc": "same",
-        "council": "same",
-        "growth": "same",
-        "verdict": "Drop. Picks in deciles 1–3 rise from 32 to 54 of 120, but the model already predicts poor areas accurately and the list leans poorer without it."
-      },
-      {
-        "change": "400 m walk as a filter",
-        "prAuc": "same",
-        "council": "same",
-        "growth": "same",
-        "verdict": "Drop as a filter, keep as a map layer. Only 5–20 of its 120 picks are real gaps."
-      }
-    ],
-    "note": "1,471,429 of 4,491,614 residents (32.8%) have no listed toilet within about 400 m. Correction to section 2: counting strictly inside the hex, 39/120 (32%) of V11's candidates already have an OSM public toilet; the 60/120 figure also counted toilets up to 50 m outside the hex."
-  }
+ "_note": "Jimmy's saved V1-V10 comparison rows. They have no CSV in this repo, so they live here.",
+ "versions_jimmy": {
+  "_source": "Jimmy's comparison page (web/index.html on master, from the saved comparison.csv). Seed 0, 5-fold res-6 spatial CV.",
+  "rows": [
+   [
+    "V1",
+    "Baseline: population, amenities, transport and parks",
+    16228,
+    20,
+    0.4268,
+    0.5109,
+    83
+   ],
+   [
+    "V2",
+    "Population only",
+    16228,
+    4,
+    0.6307,
+    0.2499,
+    47
+   ],
+   [
+    "V3",
+    "Amenities, transport and parks only",
+    16228,
+    16,
+    0.435,
+    0.5037,
+    85
+   ],
+   [
+    "V4",
+    "Local features: inside hexagon and within 250 m",
+    16228,
+    13,
+    0.4377,
+    0.4958,
+    85
+   ],
+   [
+    "V5",
+    "Baseline + 1 km surrounding features",
+    16228,
+    26,
+    0.421,
+    0.516,
+    86
+   ],
+   [
+    "V6",
+    "Baseline + pedestrian accessibility",
+    16228,
+    23,
+    0.4205,
+    0.514,
+    84
+   ],
+   [
+    "V7",
+    "Baseline + demographics and SEIFA",
+    16228,
+    26,
+    0.4244,
+    0.5115,
+    84
+   ],
+   [
+    "V8",
+    "Baseline + future population projections (exploratory)",
+    16228,
+    24,
+    0.4281,
+    0.5109,
+    86
+   ],
+   [
+    "V9",
+    "Expanded study area including growth suburbs",
+    17336,
+    20,
+    0.4102,
+    0.5071,
+    84
+   ],
+   [
+    "V10",
+    "All Greater Sydney, including rural areas",
+    97733,
+    20,
+    null,
+    null,
+    null
+   ]
+  ]
+ }
 }
