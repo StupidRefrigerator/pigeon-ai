@@ -29,7 +29,7 @@ button, input, select { font: inherit; }
 
 /* app shell */
 .shell { display: flex; flex-direction: column; height: 100vh; }
-.topbar { display: flex; align-items: center; gap: 1.2rem; padding: 0.6rem 1rem; background: var(--ink); color: #fff; }
+.topbar { display: flex; align-items: center; gap: 1.2rem; padding: 0.6rem 1rem; background: #0a0a0a; color: #fff; border-bottom: 1px solid #383838; font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
 .topbar a { color: #cfd8e1; text-decoration: none; }
 .topbar a.active { color: #fff; border-bottom: 2px solid var(--accent); }
 .topbar .brand { font-weight: 700; color: #fff; margin-right: auto; display: flex; align-items: center; gap: 0.5rem; }
@@ -66,3 +66,34 @@ table.t td.num, table.t th.num { text-align: right; font-variant-numeric: tabula
 .steps { margin: 0; padding-left: 1.4rem; display: flex; flex-direction: column; gap: 0.3rem; }
 .t tr.current td { background: #eef3f7; }
 .tag { margin-left: 0.4rem; font-size: 0.7rem; padding: 0.1rem 0.4rem; border-radius: 4px; background: var(--ink); color: #fff; vertical-align: middle; }
+
+/* Tracking page: Jimmy's comparison-page style (web/style.css) */
+.jimmy {
+  color-scheme: dark; --paper: #0a0a0a; --ink: #ededed; --muted: #aaa; --line: #383838;
+  height: 100%; overflow-y: auto; background: var(--paper); color: var(--ink);
+  font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+.jimmy main { max-width: 1280px; margin: 0 auto; padding: 24px 28px 40px; }
+.jimmy section + section { margin-top: 30px; }
+.jimmy h1, .jimmy h2 { color: #fff; line-height: 1.35; font-weight: 600; }
+.jimmy h1 { font-size: 28px; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.jimmy h2 { font-size: 22px; margin: 0 0 14px; padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.jimmy p { margin: 10px 0; }
+.jimmy ul, .jimmy ol { margin: 14px 0; padding-left: 24px; }
+.jimmy li + li { margin-top: 4px; }
+.jimmy .note { color: var(--muted); font-size: 13px; }
+.jimmy a { color: inherit; text-decoration: underline; }
+.jimmy code { font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: .93em; }
+.jimmy .table-scroll { overflow-x: auto; }
+.jimmy table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; font-variant-numeric: tabular-nums; }
+.jimmy th, .jimmy td { border: 1px solid var(--line); padding: 7px 9px; vertical-align: top; }
+.jimmy th { font-weight: 600; }
+.jimmy th:not(:nth-child(2)), .jimmy td:not(:nth-child(2)) { white-space: nowrap; }
+.jimmy td:nth-child(2) { min-width: 220px; }
+.jimmy tr.current td { color: #fff; font-weight: 600; }
+.jimmy .table-scroll:focus-visible, .jimmy a:focus-visible { outline: 2px solid #ccc; outline-offset: 2px; }
+@media (max-width: 720px) {
+  .jimmy main { padding: 20px 16px 30px; }
+  .jimmy h1 { font-size: 24px; }
+  .jimmy h2 { font-size: 20px; }
+}
