@@ -106,22 +106,23 @@ Each run retrains from scratch. The script does not save a trained model file, b
 
 ### Recommended list
 
-The candidates rank hexagons by gap alone. The recommended list adjusts that ranking for toilets the official map misses and for disadvantage. It uses the seed-0 held-out predictions:
+The recommended list ranks hexagons by gap, after counting the toilets the official map misses. It has no disadvantage weighting. It uses the seed-0 held-out predictions:
 
 1. **OSM toilets count as existing.** Existing toilets = the larger of the official count and the OSM public toilets in the hexagon. Gap = prediction − existing toilets, floored at 0.
-2. **Equity weight.** Priority = gap × (1 + disadvantage). Disadvantage is (11 − SEIFA IRSD decile) / 10, so decile 1 (most disadvantaged) gets 1.0 and decile 10 gets 0.1. Hexagons without SEIFA get the average.
-3. **Shortlist.** Take the 120 highest priorities and keep those with a gap of at least 1. This gives 87 hexagons.
-4. **400 m walking coverage is a column, not a filter.** `uncovered_400m` is `True` when neither the hexagon nor its 6 neighbours has an existing toilet. One ring of res-9 hexagons is about 400 m of walking.
+2. **Shortlist.** Take the 120 largest gaps and keep those with a gap of at least 1. This gives 100 hexagons.
+3. **400 m walking coverage is a column, not a filter.** `uncovered_400m` is `True` when neither the hexagon nor its 6 neighbours has an existing toilet. One ring of res-9 hexagons is about 400 m of walking.
 
 | Column | Contents |
 |---|---|
 | `hex_id`, `lat`, `lng` | The hexagon and its centre. |
 | `rank` | Priority rank among all 16,228 hexagons. Numbers are skipped where a hexagon was dropped for a gap below 1. |
-| `priority`, `gap` | As defined above. |
+| `priority`, `gap` | Both equal the gap above. |
 | `predicted_toilets` | Held-out prediction. |
 | `toilet_count`, `osm_toilets_public`, `existing_toilets` | Official count, OSM public toilets, and the larger of the two. |
-| `seifa_decile`, `disadvantage` | SEIFA IRSD decile (1 = most disadvantaged; empty if unknown) and the weight above. |
+| `seifa_decile` | SEIFA IRSD decile (1 = most disadvantaged; empty if unknown). For information only; not used to rank. |
 | `uncovered_400m` | No existing toilet within about 400 m of walking. |
+
+**Why no equity weighting.** The model predicts poor areas as well as rich ones, and poor areas already have the most toilets. In SEIFA decile 1 (most disadvantaged) there are 274 real toilets and the model predicts 274. In decile 10 there are 150 real and 157 predicted. Real ÷ predicted is about 1.0 in deciles 1–3 (`data/model/fairness.csv`). Without any weighting, the top 120 already lean poorer: 39 are in deciles 1–3 and 17 in deciles 8–10. The weighting is still available as the `w` option of `recommendations` in `postprocess.py`, and the experiments use it.
 
 The code is in `src/pigeon_ai/postprocess.py`. SEIFA and OSM toilets are used only here, never as model inputs. Missing OSM data is a blind spot: OSM has no sports ground mapped at Ken Birdsey Park or Anthony Skarratt Reserve, two council-planned sites, so the model does not flag them.
 
@@ -151,7 +152,7 @@ All evals use the held-out predictions. Results are from the default `v12` run (
 | Per-fold | Is the model consistent across areas? | Deviance and PR-AUC for each fold. | Deviance 0.34 to 0.42. | |
 | Stability | Do candidates depend on chance? | Rerun with random seeds 1 and 2, and with the `latest` features. Count candidates in common. | 129 to 131 of 135 across seeds. | 120 candidates |
 | Fairness | Does the model treat areas differently by disadvantage? | Split hexagons into SEIFA IRSD deciles. Compare predicted with actual toilets and the candidate rate. SEIFA is never a model input. | Predicted/actual 0.91 to 1.17 in every decile. | |
-| Recommended list | Does the list avoid existing toilets and favour need? | Of the 120 highest priorities: how many have an OSM toilet, and how many are in SEIFA deciles 1–3 and 8–10. | 87 listed. 10/120 with an OSM toilet; deciles 1–3: 59/120; 8–10: 4/120. | |
+| Recommended list | Does the list avoid existing toilets? Where does it fall by disadvantage? | Of the 120 largest gaps: how many have an OSM toilet, and how many are in SEIFA deciles 1–3 and 8–10. | 100 listed. 9/120 with an OSM toilet; deciles 1–3: 39/120; 8–10: 17/120. | |
 | Review | Are the candidates real gaps? | Share of reviewed candidates marked `real_gap`. | Not started. | |
 
 Across seeds 0–2, `v12` averages PR-AUC 0.569 (0.569 to 0.570), deviance 0.378, 85 top-100 hits and 677 top-1000 hits. The v2 experiments behind these numbers are in [docs/findings.md](docs/findings.md#v2-new-inputs-label-fix-400-m-walk-and-equity-10-nov-2026).

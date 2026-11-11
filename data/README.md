@@ -155,7 +155,7 @@ python scripts/build_projections.py
 
 ## V12 OSM features: sports grounds, playgrounds, beaches and OSM toilets
 
-The default model (V12) adds 17 OpenStreetMap columns to the 28 `latest` columns. The build also counts OSM public toilets, which the recommended list uses after the model.
+The default model (V12) adds 17 OpenStreetMap columns to the 28 `latest` columns. The build also counts OSM public toilets, which the recommended list uses after the model. The recommended list (`data/model/recommendations.csv`, 100 spots) is ranked by gap with no disadvantage weighting. SEIFA IRSD deciles appear in it for information only; see [Why no equity weighting](../README.md#recommended-list).
 
 ### Files
 

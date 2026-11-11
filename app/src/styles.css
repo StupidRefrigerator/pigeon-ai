@@ -15,12 +15,7 @@ a { color: var(--slate); }
 h1, h2, h3 { line-height: 1.2; margin: 0; }
 button, input, select { font: inherit; }
 
-/* landing */
-.landing { min-height: 100vh; display: grid; place-content: center; text-align: center; padding: 2rem; gap: 1.1rem; justify-items: center; }
-.landing .logo { height: 7rem; }
-.landing h1 { font-size: clamp(2.6rem, 8vw, 4.5rem); letter-spacing: -0.03em; }
-.landing .tagline { font-size: 1.2rem; color: var(--muted); max-width: 34rem; margin: 0; }
-.badge { display: inline-block; padding: 0.2rem 0.8rem; border: 1px solid var(--ink); border-radius: 999px; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; }
+/* buttons */
 .actions { display: flex; gap: 0.8rem; flex-wrap: wrap; justify-content: center; align-items: center; }
 .btn { display: inline-block; border: 1px solid var(--ink); background: var(--ink); color: #fff; padding: 0.55rem 1.2rem; border-radius: 8px; text-decoration: none; cursor: pointer; }
 .btn.ghost { background: transparent; color: var(--ink); }
