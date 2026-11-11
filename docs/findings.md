@@ -113,7 +113,7 @@ Folder: `experiments/gov/`, with every site, its source URL and its scores in `p
 | Toilets per 10k residents | 4.1 | 5.7 |
 | Real ÷ predicted | Between 0.88 and 1.09 across all deciles | |
 
-The model reproduces Sydney's current pattern, so wealthier areas get more. Changing that needs a priority step after the model: `priority = gap × (1 + weight × disadvantage)`.
+Per resident, wealthier areas have more toilets. In total, the poorest areas have the most: decile 1 has 274 real toilets (274 predicted) and decile 10 has 150 (157 predicted). The model predicts every decile accurately, so the default list uses no disadvantage weighting. See [Why no equity weighting](#why-no-equity-weighting).
 
 ## Data sources for a new suburb
 
@@ -142,10 +142,10 @@ Folder: `experiments/v2/`. The data is in `data/`, the 400 m and equity steps in
 | **+ sports fields, playgrounds, beaches** | **0.569** (seed spread ±0.001) | **30/42** | 22/35 | **Keep.** It is the only change that beats the noise. |
 | Retrain on OSM toilets as labels | 0.506 | 24/42 | 24/35 | Drop. It predicts 29% too many toilets and makes 267 candidates. |
 | Count OSM toilets *after* the model | same model | same | same | **Keep.** Picks that already have an OSM toilet fall from 37/120 to 9/120. |
-| Equity weight w=1 | same model | same | same | **Keep.** Picks in deciles 1–3 rise from 32 to 54 of 120; picks in deciles 8–10 fall from 17 to 3. |
+| Equity weight w=1 | same model | same | same | Drop. Picks in deciles 1–3 rise from 32 to 54 of 120, but the list already leans poorer without it. See [Why no equity weighting](#why-no-equity-weighting). |
 | 400 m walk as a filter | same model | same | same | Drop as a filter, keep as a map layer. Only 5–20 of its 120 picks are real gaps, and 0–3 are near a council plan. |
 
-- **Chosen setup:** latest + sports, playground and beach features, trained on official labels. OSM toilets are counted after the model, the list is equity-weighted (w=1), and only picks with a gap of at least 1 are listed (87).
+- **Chosen setup:** latest + sports, playground and beach features, trained on official labels. OSM toilets are counted after the model, the list is ranked by gap with no weighting, and only picks with a gap of at least 1 are listed (100). Of the top 120, 9 already have an OSM toilet, 8 are near a planned site, 39 are in deciles 1–3 and 17 in deciles 8–10.
 - **400 m walk:** 1,471,429 of 4,491,614 residents (32.8%) have no listed toilet within about 400 m.
 - **Still missed:** Ken Birdsey Park (31st percentile) and Anthony Skarratt Reserve (20th). OpenStreetMap has no sports ground mapped at either site.
 - **Bradfield:** the station hex is still #1 for every variant. The new features lower the area total from 142 to 107 and add two planned parks at #3 and #4.
@@ -156,4 +156,8 @@ Folder: `experiments/v2/`. The data is in `data/`, the 400 m and equity steps in
 1. Add sports fields, playgrounds and beaches as features. These cover the biggest misses.
 2. Count OSM-listed public toilets as existing, so candidates stop pointing at toilets that already exist.
 3. Add 400 m walking coverage. City of Sydney plans to a 400 m target.
-4. Add the disadvantage priority step.
+4. ~~Add the disadvantage priority step.~~ Tried and dropped; see below.
+
+### Why no equity weighting
+
+The model already predicts poor areas accurately, and they already have the most toilets. Decile 1 has 274 real toilets and the model predicts 274. Decile 10 has 150 real and 157 predicted. Real ÷ predicted is about 1.0 in deciles 1–3 (`data/model/fairness.csv`). Without weighting, the top 120 already lean poorer: 39 in deciles 1–3 against 17 in deciles 8–10. So the default list is ranked by gap alone. The weighting is still an option in `postprocess.recommendations` (`w`).

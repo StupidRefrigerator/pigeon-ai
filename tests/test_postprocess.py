@@ -111,7 +111,17 @@ def test_recommendations_report_coverage_without_filtering_on_it():
     assert rec.loc[RING2, "uncovered_400m"].all()
 
 
-def test_recommendations_rank_disadvantaged_first_when_gaps_tie():
+def test_recommendations_rank_by_gap_alone_by_default():
     hexes = HEXES[:10]
-    rec = recommendations(hexes, [2.0] * 10, [0] * 10, [0] * 10, seifa_score=np.arange(10) * 10.0)
+    pred = np.arange(10) + 1.5  # hexes[9] has the largest gap but the highest SEIFA (least disadvantaged)
+    rec = recommendations(hexes, pred, [0] * 10, [0] * 10, seifa_score=np.arange(10) * 10.0)
+    assert rec.hex_id.tolist() == hexes[::-1]
+    assert (rec.priority == rec.gap).all()
+    assert rec.seifa_decile.tolist() == list(range(10, 0, -1))
+    assert "disadvantage" not in rec.columns
+
+
+def test_recommendations_can_still_weight_by_disadvantage():
+    hexes = HEXES[:10]
+    rec = recommendations(hexes, [2.0] * 10, [0] * 10, [0] * 10, seifa_score=np.arange(10) * 10.0, w=1.0)
     assert rec.hex_id.iloc[0] == hexes[0] and rec.priority.iloc[0] == pytest.approx(4.0)

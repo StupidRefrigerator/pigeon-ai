@@ -4,10 +4,10 @@ Every step is pure: it takes per-hex arrays and returns a per-hex DataFrame.
 None touches the model, so they work on any model's predictions.
 
     coverage_step    400 m walking coverage from existing toilets (H3 grid-disk)
-    equity_step      SEIFA disadvantage weighting
+    equity_step      optional SEIFA disadvantage weighting (off by default; used by experiments)
     priority         gap x (1 + w x disadvantage) [x uncovered]
-    recommendations  the default list: OSM toilets count as existing, equity w = 1,
-                     the 120 best-ranked hexes, kept if gap >= 1
+    recommendations  the default list: OSM toilets count as existing, ranked by gap alone
+                     (w = 0), the 120 best-ranked hexes, kept if gap >= 1
 """
 import h3
 import numpy as np
@@ -131,7 +131,9 @@ def newly_covered_population(pick_hexes, uncovered_hex_ids, population_by_hex, k
     return float(population_by_hex.reindex(list(reach)).fillna(0).sum())
 
 
-EQUITY_WEIGHT = 1.0
+# No disadvantage weighting by default: V12 predicts the poorest deciles as well as the
+# richest (data/model/fairness.csv), and the gap-ranked list already leans poorer.
+EQUITY_WEIGHT = 0.0
 SHORTLIST = 120
 MIN_GAP = 1.0
 
@@ -142,9 +144,10 @@ def recommendations(hex_ids, predicted, official, osm_public, seifa_score,
 
     Existing toilets = max(official count, OSM public toilets) per hex, so a hex
     the official map misses is not recommended for a toilet it already has.
-    Hexes are ranked by gap x (1 + w x disadvantage); the n best are kept if
-    their gap is at least min_gap. `uncovered_400m` (no existing toilet in the
-    hex or its neighbours) is reported, not used to filter.
+    Hexes are ranked by gap (priority = gap x (1 + w x disadvantage), and the
+    default w = 0 leaves it equal to gap); the n best are kept if their gap is
+    at least min_gap. `seifa_decile` and `uncovered_400m` (no existing toilet in
+    the hex or its neighbours) are reported, not used to rank or filter.
     """
     official = np.asarray(official, float)
     osm_public = np.asarray(osm_public, float)
@@ -159,7 +162,7 @@ def recommendations(hex_ids, predicted, official, osm_public, seifa_score,
                           "seifa_decile": "Int64"})
     return picks.rename(columns={"uncovered": "uncovered_400m"})[[
         "hex_id", "rank", "priority", "gap", "predicted_toilets", "toilet_count", "osm_toilets_public",
-        "existing_toilets", "seifa_decile", "disadvantage", "uncovered_400m"]].reset_index(drop=True)
+        "existing_toilets", "seifa_decile", "uncovered_400m"]].reset_index(drop=True)
 
 
 __all__ = [

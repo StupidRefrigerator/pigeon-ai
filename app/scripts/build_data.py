@@ -186,7 +186,7 @@ versions = [
      "deviance": r(m1["deviance"], 4), "prAuc": r(m1["pr_auc"], 4), "top100": round(m1["top100"]), "status": "current"},
 ]
 
-chosen = summ.loc[("M1, OSM fix after model", "P1 equity w=1")]
+chosen = summ.loc[("M1, OSM fix after model", "P0 none")]
 poor, rich = (int(v) for v in chosen["deciles 1–3 / 8–10"].split("/"))
 TRACKING_PATH = APP / "src" / "data" / "tracking.json"
 TRACKING_PATH.write_text(json.dumps({
@@ -202,7 +202,7 @@ TRACKING_PATH.write_text(json.dumps({
         "setup": [
             "Predict toilets per hex with V12",
             "Skip spots where OpenStreetMap already lists a toilet",
-            "Rank with disadvantage weighting (w = 1)",
+            "Rank by how many toilets each spot is short",
             "List only spots short by at least 1 toilet",
         ],
         "picks": {

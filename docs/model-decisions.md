@@ -140,8 +140,10 @@ The growth result is slightly worse, but this is 2 hexes of 35. The two biggest 
 **Why OSM toilets are applied after the model, not as labels.** OSM lists toilets that the official map misses, in 272 study hexes. We tried both uses:
 
 - Retraining on `max(official, OSM public)` as the label made the model worse: PR-AUC 0.506, 29% too many toilets predicted, and 267 candidates.
-- Keeping the official label and counting OSM toilets as existing only when building the list keeps the better model. Of the top 120 picks, those that already have an OSM public toilet fall from 39 to 9 (10 with the equity weight; `experiments/v2/combos/out/summary_table.csv`).
+- Keeping the official label and counting OSM toilets as existing only when building the list keeps the better model. Of the top 120 picks, those that already have an OSM public toilet fall from 37 to 9 (`experiments/v2/combos/out/summary_table.csv`).
 
-**The recommended list.** After the model: existing toilets = max(official, OSM public); gap = prediction − existing; priority = gap × (1 + disadvantage), where disadvantage is (11 − SEIFA IRSD decile) / 10; take the 120 highest priorities and keep those with gap ≥ 1. The equity weight moves picks from deciles 8–10 to deciles 1–3 (59 of the top 120 in deciles 1–3, 4 in 8–10). SEIFA is still never a model input.
+**The recommended list.** After the model: existing toilets = max(official, OSM public); gap = prediction − existing; take the 120 largest gaps and keep those with gap ≥ 1. That gives 100 spots. Of the top 120, 39 are in SEIFA deciles 1–3 and 17 in deciles 8–10. SEIFA is reported in the list but never used to rank, and is never a model input.
+
+**Why no equity weighting.** We tried priority = gap × (1 + disadvantage) and dropped it. The model already predicts poor areas accurately, and they already have the most toilets: decile 1 has 274 real toilets against 274 predicted, and decile 10 has 150 real against 157 predicted. Real ÷ predicted is about 1.0 in deciles 1–3 (`data/model/fairness.csv`). Without weighting, the list already leans poorer (39 against 17 of the top 120). The weighting stays available as an option (`w` in `postprocess.recommendations`) for experiments.
 
 **Why 400 m walking coverage is a column, not a filter.** As a filter, only 5–20 of its 120 picks were real gaps and 0–3 were near a council plan. It is kept as `uncovered_400m` for the map.
