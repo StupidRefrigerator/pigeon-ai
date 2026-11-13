@@ -6,6 +6,8 @@ from time import perf_counter
 import h3
 import matplotlib
 
+import json #temporary, if i forget to remove pls remove
+
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
@@ -23,6 +25,7 @@ from .paths import PROCESSED, ROOT
 from .postprocess import recommendations
 from .recreation import RECREATION_FEATURES
 from .validation import FEATURES
+from .explainability import build_candidate_evidence
 
 DATA_FILE = PROCESSED / "sydney_extended_features.csv"
 RECREATION_FILE = PROCESSED / "sydney_recreation_features.csv"
@@ -346,6 +349,19 @@ def run(target_name="toilets", feature_set=DEFAULT_FEATURES, threshold=THRESHOLD
     rec_text = ""
     if target_name == "toilets":
         rec = recommended_list(df, pred)
+
+        #calling my function from explainability
+        evidence = build_candidate_evidence(
+            recommendations=rec,
+            feature_data=df,
+            shap_values=shap_values,
+            feature_names=features,
+            top_k=5, #I'll experiment to see how many hexes LLM should get
+        )
+
+        with open(out_dir / "candidate_evidence.json", "w") as f:
+            json.dump(evidence[:20], f, indent=2)
+
         rec.round(4).to_csv(out_dir / "recommendations.csv", index=False)
         deciles = rec["seifa_decile"]
         rec_text = (f"\nRecommended list (recommendations.csv): {len(rec)} hexes; "
