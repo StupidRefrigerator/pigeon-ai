@@ -1,0 +1,1122 @@
+[
+  {
+    "hex_id": "89be08cb5dbffff",
+    "recommendation": {
+      "hex_id": "89be08cb5dbffff",
+      "lat": -33.968,
+      "lng": 151.10707,
+      "rank": 1,
+      "priority": 2.217771682856851,
+      "gap": 2.217771682856851,
+      "predicted_toilets": 2.217771682856851,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 2,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 2044.142003154017,
+      "population_250m": 3117.846307916292,
+      "population_500m": 10186.6509787214,
+      "shop_500m": 129.0,
+      "seifa_irsd_score": 935.1964702826313
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 33.0,
+        "shap_value": 0.538480000812948,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 50.0,
+        "shap_value": 0.507414158502561,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 22.0,
+        "shap_value": 0.48501019029549153,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 26.0,
+        "shap_value": 0.4464264797588865,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_500m",
+        "value": 129.0,
+        "shap_value": 0.08693725335651167,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e3460fffff",
+    "recommendation": {
+      "hex_id": "89be0e3460fffff",
+      "lat": -33.89397,
+      "lng": 151.24906,
+      "rank": 2,
+      "priority": 2.127767466193594,
+      "gap": 2.127767466193594,
+      "predicted_toilets": 2.127767466193594,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 6,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 1381.1119011699516,
+      "population_250m": 2093.185352337282,
+      "population_500m": 8196.977264366567,
+      "shop_500m": 97.0,
+      "seifa_irsd_score": 1060.793457903558
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 45.0,
+        "shap_value": 0.4788344174593302,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 58.0,
+        "shap_value": 0.45768799898174073,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 16.0,
+        "shap_value": 0.4308080219753251,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 12.0,
+        "shap_value": 0.40346360881263,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_500m",
+        "value": 97.0,
+        "shap_value": 0.09806761910511232,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e34267ffff",
+    "recommendation": {
+      "hex_id": "89be0e34267ffff",
+      "lat": -33.871,
+      "lng": 151.22406,
+      "rank": 3,
+      "priority": 2.117453530581069,
+      "gap": 2.117453530581069,
+      "predicted_toilets": 2.117453530581069,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 6,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 3133.465166006008,
+      "population_250m": 4471.26406795949,
+      "population_500m": 12681.832685027965,
+      "shop_500m": 151.0,
+      "seifa_irsd_score": 1066.914947232974
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 50.0,
+        "shap_value": 0.4955015218868806,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 76.0,
+        "shap_value": 0.47794910786159134,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 28.0,
+        "shap_value": 0.4688904094544171,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 51.0,
+        "shap_value": 0.4495439966911446,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_500m",
+        "value": 151.0,
+        "shap_value": 0.09647755135779686,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e35dd7ffff",
+    "recommendation": {
+      "hex_id": "89be0e35dd7ffff",
+      "lat": -33.87023,
+      "lng": 151.19421,
+      "rank": 4,
+      "priority": 2.0247310013142337,
+      "gap": 2.0247310013142337,
+      "predicted_toilets": 2.0247310013142337,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 4,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 1283.5638440972618,
+      "population_250m": 2319.58344379666,
+      "population_500m": 9671.057309607086,
+      "shop_500m": 46.0,
+      "seifa_irsd_score": 1030.2823117797502
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 23.0,
+        "shap_value": 0.3941554247812482,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "train_station_250m",
+        "value": 1.0,
+        "shap_value": 0.37830233356175746,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 26.0,
+        "shap_value": 0.30843797475953194,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 20.0,
+        "shap_value": 0.2912239877667699,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 17.0,
+        "shap_value": 0.24341661857055202,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e343abffff",
+    "recommendation": {
+      "hex_id": "89be0e343abffff",
+      "lat": -33.88771,
+      "lng": 151.19872,
+      "rank": 5,
+      "priority": 1.9439561442142035,
+      "gap": 1.9439561442142035,
+      "predicted_toilets": 1.9439561442142035,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 4,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 1584.2538863077018,
+      "population_250m": 2552.5113469299813,
+      "population_500m": 11641.130474591511,
+      "shop_500m": 99.0,
+      "seifa_irsd_score": 1027.508840624824
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 35.0,
+        "shap_value": 0.49399242693330525,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 41.0,
+        "shap_value": 0.428193560751988,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 22.0,
+        "shap_value": 0.4083395108585098,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 16.0,
+        "shap_value": 0.39610526954423525,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_500m",
+        "value": 99.0,
+        "shap_value": 0.08538396502503713,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e345dbffff",
+    "recommendation": {
+      "hex_id": "89be0e345dbffff",
+      "lat": -33.9249,
+      "lng": 151.2295,
+      "rank": 6,
+      "priority": 1.8917338265381811,
+      "gap": 1.8917338265381811,
+      "predicted_toilets": 1.8917338265381811,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 3,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 970.9537455084266,
+      "population_250m": 1587.1836912139315,
+      "population_500m": 6121.6343469101885,
+      "shop_500m": 43.0,
+      "seifa_irsd_score": 985.0895429526053
+    },
+    "model_drivers": [
+      {
+        "feature": "food_250m",
+        "value": 7.0,
+        "shap_value": 0.3334126098275058,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_inside",
+        "value": 13.0,
+        "shap_value": 0.32260451455541883,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 21.0,
+        "shap_value": 0.31931908704771916,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 3.0,
+        "shap_value": 0.2016168760199234,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "train_station_250m",
+        "value": 1.0,
+        "shap_value": 0.14467450727410297,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e34237ffff",
+    "recommendation": {
+      "hex_id": "89be0e34237ffff",
+      "lat": -33.88083,
+      "lng": 151.22024,
+      "rank": 7,
+      "priority": 1.654633525738832,
+      "gap": 1.654633525738832,
+      "predicted_toilets": 1.654633525738832,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 6,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 709.4742932219832,
+      "population_250m": 1299.2171038144074,
+      "population_500m": 7886.328590923023,
+      "shop_500m": 93.0,
+      "seifa_irsd_score": 1067.488602902836
+    },
+    "model_drivers": [
+      {
+        "feature": "food_250m",
+        "value": 10.0,
+        "shap_value": 0.37155060813351865,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 18.0,
+        "shap_value": 0.2798810367312218,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 6.0,
+        "shap_value": 0.2755012370680043,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_inside",
+        "value": 8.0,
+        "shap_value": 0.2289929417626302,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_500m",
+        "value": 93.0,
+        "shap_value": 0.09478521038907818,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e34023ffff",
+    "recommendation": {
+      "hex_id": "89be0e34023ffff",
+      "lat": -33.90048,
+      "lng": 151.2126,
+      "rank": 8,
+      "priority": 1.6449263917230186,
+      "gap": 1.6449263917230186,
+      "predicted_toilets": 1.6449263917230186,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 6,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 3318.6736798670127,
+      "population_250m": 4719.601582947137,
+      "population_500m": 11985.919261466612,
+      "shop_500m": 57.0,
+      "seifa_irsd_score": 1071.3223833534305
+    },
+    "model_drivers": [
+      {
+        "feature": "food_inside",
+        "value": 28.0,
+        "shap_value": 0.4070626500572685,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_inside",
+        "value": 14.0,
+        "shap_value": 0.33327761281674156,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 33.0,
+        "shap_value": 0.32034576170375223,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 18.0,
+        "shap_value": 0.27077378292855375,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "distance_nearest_footpath_m",
+        "value": 3.604019953101244,
+        "shap_value": 0.041803160463678234,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e35d63ffff",
+    "recommendation": {
+      "hex_id": "89be0e35d63ffff",
+      "lat": -33.85746,
+      "lng": 151.18034,
+      "rank": 9,
+      "priority": 1.6210026384844194,
+      "gap": 1.6210026384844194,
+      "predicted_toilets": 1.6210026384844194,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 8,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 913.998896184833,
+      "population_250m": 1455.563451057114,
+      "population_500m": 5941.188923431415,
+      "shop_500m": 28.0,
+      "seifa_irsd_score": 1103.075200945589
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 22.0,
+        "shap_value": 0.5485126601849033,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 25.0,
+        "shap_value": 0.40243892101253825,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 18.0,
+        "shap_value": 0.2453810319064018,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 17.0,
+        "shap_value": 0.23774172757697318,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_1000m",
+        "value": 33.0,
+        "shap_value": 0.06605191316589612,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be085ac07ffff",
+    "recommendation": {
+      "hex_id": "89be085ac07ffff",
+      "lat": -33.72059,
+      "lng": 150.9212,
+      "rank": 10,
+      "priority": 1.5872915090287447,
+      "gap": 1.5872915090287447,
+      "predicted_toilets": 1.5872915090287447,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": null,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 268.3281904911568,
+      "population_250m": 428.2938999834832,
+      "population_500m": 2489.443153380772,
+      "shop_500m": 41.0,
+      "seifa_irsd_score": null
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 25.0,
+        "shap_value": 0.5591974449511292,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 38.0,
+        "shap_value": 0.38137221036478636,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 7.0,
+        "shap_value": 0.2511607308740027,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 13.0,
+        "shap_value": 0.24991555251344144,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_1000m",
+        "value": 42.0,
+        "shap_value": 0.0681357462198204,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0842503ffff",
+    "recommendation": {
+      "hex_id": "89be0842503ffff",
+      "lat": -33.76764,
+      "lng": 150.77468,
+      "rank": 11,
+      "priority": 1.584246703204904,
+      "gap": 1.584246703204904,
+      "predicted_toilets": 1.584246703204904,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 1,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 258.67981772949827,
+      "population_250m": 375.4829217731172,
+      "population_500m": 1554.9445457746187,
+      "shop_500m": 85.0,
+      "seifa_irsd_score": 879.8718361985199
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 32.0,
+        "shap_value": 0.4726561195628385,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 39.0,
+        "shap_value": 0.32648890405239495,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 10.0,
+        "shap_value": 0.26369755479682494,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 7.0,
+        "shap_value": 0.2401538664404955,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "park_area_inside_m2",
+        "value": 12691.3064235562,
+        "shap_value": 0.07064947536588861,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be085ae67ffff",
+    "recommendation": {
+      "hex_id": "89be085ae67ffff",
+      "lat": -33.6893,
+      "lng": 150.92593,
+      "rank": 12,
+      "priority": 1.5509945422264926,
+      "gap": 1.5509945422264926,
+      "predicted_toilets": 1.5509945422264926,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 5,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 146.96035911455462,
+      "population_250m": 233.4005506495459,
+      "population_500m": 1251.246074679784,
+      "shop_500m": 35.0,
+      "seifa_irsd_score": 1058.64345
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 20.0,
+        "shap_value": 0.5102142247616867,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 28.0,
+        "shap_value": 0.37708257518939176,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 16.0,
+        "shap_value": 0.25099998745968094,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 9.0,
+        "shap_value": 0.24211012229828258,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_1000m",
+        "value": 38.0,
+        "shap_value": 0.07341457867401922,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e2403bffff",
+    "recommendation": {
+      "hex_id": "89be0e2403bffff",
+      "lat": -33.7746,
+      "lng": 151.08078,
+      "rank": 13,
+      "priority": 1.5271103121338756,
+      "gap": 1.5271103121338756,
+      "predicted_toilets": 1.5271103121338756,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 4,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 574.6901418673099,
+      "population_250m": 914.3526406052304,
+      "population_500m": 5679.568222323282,
+      "shop_500m": 28.0,
+      "seifa_irsd_score": 1035.3977037519142
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 14.0,
+        "shap_value": 0.27763710425434984,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "train_station_250m",
+        "value": 1.0,
+        "shap_value": 0.26373270601975596,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 5.0,
+        "shap_value": 0.2328848796917031,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 8.0,
+        "shap_value": 0.21894775663257277,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 18.0,
+        "shap_value": 0.21219918612787467,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e2ed93ffff",
+    "recommendation": {
+      "hex_id": "89be0e2ed93ffff",
+      "lat": -33.70074,
+      "lng": 151.10204,
+      "rank": 14,
+      "priority": 1.5151305468193075,
+      "gap": 1.5151305468193075,
+      "predicted_toilets": 1.5151305468193075,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 3,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 1539.1966892567966,
+      "population_250m": 2198.420155912401,
+      "population_500m": 6350.674163944646,
+      "shop_500m": 109.0,
+      "seifa_irsd_score": 990.7785282479808
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 24.0,
+        "shap_value": 0.5518082878083851,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 38.0,
+        "shap_value": 0.3228490643501347,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 3.0,
+        "shap_value": 0.22615627913145311,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 4.0,
+        "shap_value": 0.19836787093822572,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "park_area_1000m_m2",
+        "value": 81176.79875359789,
+        "shap_value": 0.06865406140426189,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e3423bffff",
+    "recommendation": {
+      "hex_id": "89be0e3423bffff",
+      "lat": -33.87683,
+      "lng": 151.22557,
+      "rank": 15,
+      "priority": 1.5109018673233705,
+      "gap": 1.5109018673233705,
+      "predicted_toilets": 1.5109018673233705,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 7,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 2190.751596528921,
+      "population_250m": 3381.4007329837896,
+      "population_500m": 10929.12116008319,
+      "shop_500m": 122.0,
+      "seifa_irsd_score": 1076.848984184064
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 13.0,
+        "shap_value": 0.33853699044984636,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 21.0,
+        "shap_value": 0.3252920984438183,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 11.0,
+        "shap_value": 0.32199301737445757,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 4.0,
+        "shap_value": 0.2559292704033625,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_500m",
+        "value": 122.0,
+        "shap_value": 0.09400939620237646,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e34223ffff",
+    "recommendation": {
+      "hex_id": "89be0e34223ffff",
+      "lat": -33.87755,
+      "lng": 151.22152,
+      "rank": 16,
+      "priority": 1.4863861822596596,
+      "gap": 1.4863861822596596,
+      "predicted_toilets": 1.4863861822596596,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 6,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 1808.3129445749807,
+      "population_250m": 2802.917206026442,
+      "population_500m": 9989.847687189764,
+      "shop_500m": 84.0,
+      "seifa_irsd_score": 1069.5551628586156
+    },
+    "model_drivers": [
+      {
+        "feature": "food_250m",
+        "value": 30.0,
+        "shap_value": 0.3962093944826414,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 28.0,
+        "shap_value": 0.3593602865155204,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_inside",
+        "value": 9.0,
+        "shap_value": 0.24340011422152472,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 9.0,
+        "shap_value": 0.09429733352703695,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "bus_stop_inside",
+        "value": 5.0,
+        "shap_value": 0.08056437643409134,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e35dc7ffff",
+    "recommendation": {
+      "hex_id": "89be0e35dc7ffff",
+      "lat": -33.86767,
+      "lng": 151.19144,
+      "rank": 17,
+      "priority": 1.4832970875048175,
+      "gap": 1.4832970875048175,
+      "predicted_toilets": 1.4832970875048175,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 6,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 2316.36184376578,
+      "population_250m": 3570.729851034874,
+      "population_500m": 6479.627358986052,
+      "shop_500m": 32.0,
+      "seifa_irsd_score": 1068.5995385486342
+    },
+    "model_drivers": [
+      {
+        "feature": "train_station_250m",
+        "value": 1.0,
+        "shap_value": 0.35535701776123335,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 17.0,
+        "shap_value": 0.2517285367867225,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "train_station_inside",
+        "value": 1.0,
+        "shap_value": 0.20279953309173693,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 13.0,
+        "shap_value": 0.19096408454647334,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_inside",
+        "value": 5.0,
+        "shap_value": 0.1446480679465559,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e341cbffff",
+    "recommendation": {
+      "hex_id": "89be0e341cbffff",
+      "lat": -33.90448,
+      "lng": 151.20728,
+      "rank": 18,
+      "priority": 1.4797306786262192,
+      "gap": 1.4797306786262192,
+      "predicted_toilets": 1.4797306786262192,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 6,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 2167.8376761675395,
+      "population_250m": 3171.41606203155,
+      "population_500m": 12987.258448319506,
+      "shop_500m": 42.0,
+      "seifa_irsd_score": 1073.0740824629968
+    },
+    "model_drivers": [
+      {
+        "feature": "food_250m",
+        "value": 8.0,
+        "shap_value": 0.3649693160544098,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 4.0,
+        "shap_value": 0.2543661644497033,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_inside",
+        "value": 9.0,
+        "shap_value": 0.22481408764420108,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 11.0,
+        "shap_value": 0.11922174536289766,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "bus_stop_inside",
+        "value": 7.0,
+        "shap_value": 0.07600897834506033,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0e2ac4bffff",
+    "recommendation": {
+      "hex_id": "89be0e2ac4bffff",
+      "lat": -33.63877,
+      "lng": 151.32909,
+      "rank": 19,
+      "priority": 1.478089847677159,
+      "gap": 1.478089847677159,
+      "predicted_toilets": 1.478089847677159,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 6,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 210.79525730796104,
+      "population_250m": 321.4040287666385,
+      "population_500m": 1154.067922289894,
+      "shop_500m": 62.0,
+      "seifa_irsd_score": 1072.215974
+    },
+    "model_drivers": [
+      {
+        "feature": "shop_inside",
+        "value": 17.0,
+        "shap_value": 0.5109157049762837,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 23.0,
+        "shap_value": 0.30890739887411217,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 5.0,
+        "shap_value": 0.286046190384167,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 10.0,
+        "shap_value": 0.21228482264642415,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "park_area_1000m_m2",
+        "value": 94650.55232703844,
+        "shap_value": 0.0723263891821443,
+        "effect": "increases prediction"
+      }
+    ]
+  },
+  {
+    "hex_id": "89be0844217ffff",
+    "recommendation": {
+      "hex_id": "89be0844217ffff",
+      "lat": -33.70091,
+      "lng": 150.56378,
+      "rank": 20,
+      "priority": 1.4488345622289776,
+      "gap": 1.4488345622289776,
+      "predicted_toilets": 1.4488345622289776,
+      "toilet_count": 0,
+      "osm_toilets_public": 0,
+      "existing_toilets": 0,
+      "seifa_decile": 4,
+      "uncovered_400m": false
+    },
+    "context": {
+      "population_est": 181.04817648505204,
+      "population_250m": 253.985010876286,
+      "population_500m": 670.0569122233909,
+      "shop_500m": 45.0,
+      "seifa_irsd_score": 1019.7520273681134
+    },
+    "model_drivers": [
+      {
+        "feature": "train_station_250m",
+        "value": 1.0,
+        "shap_value": 0.2537081194555612,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_inside",
+        "value": 5.0,
+        "shap_value": 0.242974780075092,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "food_250m",
+        "value": 7.0,
+        "shap_value": 0.2383979710090836,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_inside",
+        "value": 9.0,
+        "shap_value": 0.11704761011488722,
+        "effect": "increases prediction"
+      },
+      {
+        "feature": "shop_250m",
+        "value": 15.0,
+        "shap_value": 0.10529518375916334,
+        "effect": "increases prediction"
+      }
+    ]
+  }
+]
