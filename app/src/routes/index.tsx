@@ -134,9 +134,6 @@ function Landing() {
         </footer>
       </main>
 
-      <button className="replay" type="button">
-        Replay intro
-      </button>
       <div className="grain" aria-hidden="true" />
     </div>
   )
