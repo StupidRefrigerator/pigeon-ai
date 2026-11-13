@@ -687,7 +687,6 @@ export function startLanding(root: HTMLElement): () => void {
       else birds = birds.filter((b) => b.y0 < H)
     }, 150)
   })
-  el<HTMLButtonElement>(root, '.replay').addEventListener('click', startIntro, { signal })
 
   // the map data comes from public/, so the JS bundle stays small
   fetch(HEX_DATA_URL, { signal })
