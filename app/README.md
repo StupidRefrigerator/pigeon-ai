@@ -2,8 +2,8 @@
 
 TanStack Start (React) + Clerk, hosted on Vercel via Nitro.
 
-- `/` landing page (`src/routes/index.tsx`, styles and canvas code in `src/landing/`), `/app` placeholder with sign-in and sign-out, `/app/stats` internal stats.
-- Model shown: the original cross-validated RandomForest, `latest` feature set. Every prediction is held-out.
+- `/` landing page (`src/routes/index.tsx`, styles and canvas code in `src/landing/`), `/app` placeholder with sign-in and sign-out, `/app/stats` Tracking (V12 results, results map, version history), `/app/tests` Tests (four questions).
+- Model shown: V12. Every prediction is held out (spatial cross-validation). The suggested list is ranked by gap only.
 
 ## Run locally
 
@@ -25,10 +25,10 @@ Clerk uses the team's "Pigeon AI" application (`app_3Ls1IZXrkbrqOOmBnD6QCVOAzTn`
 /tmp/pigeon-env/bin/python scripts/build_landing_data.py
 ```
 
-`src/data/stats.json` is generated from the repo CSVs and committed:
+`src/data/tracking.json`, `src/data/stats.json` (Tracking and Tests pages, bundled) and `public/heatmap.json` (the Tracking-page map, fetched at runtime) are generated from the V12 outputs in `data/model/` and `experiments/v2/combos/out/` and committed:
 
 ```bash
 npm run build-data   # uses /tmp/pigeon-env/bin/python
 ```
 
-The script reads `latest` held-out predictions from `git show origin/heatmap-held-out:web/predictions.csv` (or `app/data-src/predictions.csv` if present), checks that the 120 candidates match `data/review/candidate_review.csv`. Numbers that exist only in `docs/findings.md` live in `scripts/curated_stats.json`.
+The script asserts that its numbers match `summary_table.csv`. V1–V10 have no CSV in this repo; their rows live in `scripts/curated_stats.json`.

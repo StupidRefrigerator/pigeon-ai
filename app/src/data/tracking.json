@@ -1,5 +1,4 @@
 {
- "source": "5-fold res-6 spatial CV on 16,228 study hexes. V1–V10 are Jimmy's saved runs (seed 0). V11 and V12 are the mean of seeds 0–2 (experiments/v2/combos).",
  "versions": [
   {
    "id": "V1",
@@ -145,12 +144,6 @@
   },
   "predictedTotal": 2625,
   "actualTotal": 2570,
-  "setup": [
-   "Predict toilets per hex with V12",
-   "Skip spots where OpenStreetMap already lists a toilet",
-   "Rank by how many toilets each spot is short",
-   "List only spots short by at least 1 toilet"
-  ],
   "picks": {
    "listed": 100,
    "osmAlready": {
