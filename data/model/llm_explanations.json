@@ -1,0 +1,382 @@
+[
+    {
+        "hex_id": "89be08cb5dbffff",
+        "rank": 1,
+        "prediction_explanation": "The model predicts a need for about 2.22 public toilets, driven primarily by a high density of shops and food venues both inside the hex and in the surrounding 250\u202fm radius.",
+        "recommendation_explanation": "With zero existing toilets, a population of ~2,000 and strong commercial activity, the algorithm ranks this location first for addressing the predicted shortfall.",
+        "key_drivers": [
+            "Shop count inside the hex (33) \u2013 positive SHAP contribution (0.5385).",
+            "Shops within 250\u202fm (50) \u2013 positive SHAP contribution (0.5074).",
+            "Food venues inside the hex (22) \u2013 positive SHAP contribution (0.4850).",
+            "Food venues within 250\u202fm (26) \u2013 positive SHAP contribution (0.4464).",
+            "Shops within 500\u202fm (129) \u2013 positive SHAP contribution (0.0869)."
+        ],
+        "caveats": [
+            "Predicted toilet need is a model estimate, not measured demand.",
+            "SHAP values show how features influence the model, not real-world causation.",
+            "SEIFA decile reflects socioeconomic context, not a direct driver of toilet demand.",
+            "No existing public toilets are recorded in this hex."
+        ]
+    },
+    {
+        "hex_id": "89be0e3460fffff",
+        "rank": 2,
+        "prediction_explanation": "A predicted need of 2.13 toilets stems from a substantial number of shops and food outlets nearby, which the model associates with higher toilet demand.",
+        "recommendation_explanation": "Given the absence of existing facilities and a population of ~1,380, the model prioritises this hex to meet the estimated demand.",
+        "key_drivers": [
+            "Shops inside the hex (45) \u2013 positive SHAP (0.4788).",
+            "Shops within 250\u202fm (58) \u2013 positive SHAP (0.4577).",
+            "Food venues within 250\u202fm (16) \u2013 positive SHAP (0.4308).",
+            "Food venues inside the hex (12) \u2013 positive SHAP (0.4035).",
+            "Shops within 500\u202fm (97) \u2013 positive SHAP (0.0981)."
+        ],
+        "caveats": [
+            "Predicted toilet need is a model estimate, not measured demand.",
+            "SHAP values indicate model influence, not causal relationships.",
+            "SEIFA decile is socioeconomic context only.",
+            "No public toilets are currently recorded."
+        ]
+    },
+    {
+        "hex_id": "89be0e34267ffff",
+        "rank": 3,
+        "prediction_explanation": "The model forecasts 2.12 needed toilets, driven by the highest counts of shops and food venues among the top three locations.",
+        "recommendation_explanation": "With a larger surrounding population (~3,100) and no existing toilets, this hex is ranked third to address the predicted shortfall.",
+        "key_drivers": [
+            "Shops inside the hex (50) \u2013 positive SHAP (0.4955).",
+            "Shops within 250\u202fm (76) \u2013 positive SHAP (0.4779).",
+            "Food venues inside the hex (28) \u2013 positive SHAP (0.4689).",
+            "Food venues within 250\u202fm (51) \u2013 positive SHAP (0.4495).",
+            "Shops within 500\u202fm (151) \u2013 positive SHAP (0.0965)."
+        ],
+        "caveats": [
+            "Predicted need is an estimate, not actual usage data.",
+            "SHAP values reflect model behavior, not causation.",
+            "SEIFA decile provides socioeconomic context only.",
+            "No public toilets are recorded."
+        ]
+    },
+    {
+        "hex_id": "89be0e35dd7ffff",
+        "rank": 4,
+        "prediction_explanation": "The predicted need of 2.02 toilets is influenced by moderate shop density, nearby train station presence, and food venue counts.",
+        "recommendation_explanation": "Zero existing toilets and a population of ~1,280 make this location a priority despite a lower overall population than higher\u2011ranked hexes.",
+        "key_drivers": [
+            "Shops inside the hex (23) \u2013 positive SHAP (0.3942).",
+            "Train station within 250\u202fm (1) \u2013 positive SHAP (0.3783).",
+            "Shops within 250\u202fm (26) \u2013 positive SHAP (0.3084).",
+            "Food venues within 250\u202fm (20) \u2013 positive SHAP (0.2912).",
+            "Food venues inside the hex (17) \u2013 positive SHAP (0.2434)."
+        ],
+        "caveats": [
+            "Prediction is model\u2011based, not observed demand.",
+            "SHAP values show model influence, not real causation.",
+            "SEIFA decile is contextual, not a direct driver.",
+            "No public toilets are currently present."
+        ]
+    },
+    {
+        "hex_id": "89be0e343abffff",
+        "rank": 5,
+        "prediction_explanation": "A predicted requirement of 1.94 toilets is driven by a balanced mix of shops and food venues both inside and nearby.",
+        "recommendation_explanation": "With no existing facilities and a population of ~1,580, the model ranks this hex fifth to address the estimated gap.",
+        "key_drivers": [
+            "Shops inside the hex (35) \u2013 positive SHAP (0.4940).",
+            "Shops within 250\u202fm (41) \u2013 positive SHAP (0.4282).",
+            "Food venues within 250\u202fm (22) \u2013 positive SHAP (0.4083).",
+            "Food venues inside the hex (16) \u2013 positive SHAP (0.3961).",
+            "Shops within 500\u202fm (99) \u2013 positive SHAP (0.0854)."
+        ],
+        "caveats": [
+            "Model prediction, not measured demand.",
+            "SHAP reflects model behavior, not causality.",
+            "SEIFA decile is socioeconomic context only.",
+            "No public toilets are recorded."
+        ]
+    },
+    {
+        "hex_id": "89be0e345dbffff",
+        "rank": 6,
+        "prediction_explanation": "The model predicts 1.89 needed toilets, with modest shop and food venue presence and a nearby train station contributing positively.",
+        "recommendation_explanation": "Given a small population (~970) and zero existing toilets, the algorithm flags this hex as a moderate priority.",
+        "key_drivers": [
+            "Food venues within 250\u202fm (7) \u2013 positive SHAP (0.3334).",
+            "Shops inside the hex (13) \u2013 positive SHAP (0.3226).",
+            "Shops within 250\u202fm (21) \u2013 positive SHAP (0.3193).",
+            "Food venues inside the hex (3) \u2013 positive SHAP (0.2016).",
+            "Train station within 250\u202fm (1) \u2013 positive SHAP (0.1447)."
+        ],
+        "caveats": [
+            "Prediction is an estimate, not actual demand.",
+            "SHAP values indicate model influence, not real causation.",
+            "SEIFA decile reflects socioeconomic context only.",
+            "No public toilets are present."
+        ]
+    },
+    {
+        "hex_id": "89be0e34237ffff",
+        "rank": 7,
+        "prediction_explanation": "A predicted need of 1.65 toilets is mainly driven by food venue density in the immediate area and surrounding shops.",
+        "recommendation_explanation": "With no existing toilets and a population of ~710, the model assigns this hex a lower but still notable priority.",
+        "key_drivers": [
+            "Food venues within 250\u202fm (10) \u2013 positive SHAP (0.3716).",
+            "Shops within 250\u202fm (18) \u2013 positive SHAP (0.2799).",
+            "Food venues inside the hex (6) \u2013 positive SHAP (0.2755).",
+            "Shops inside the hex (8) \u2013 positive SHAP (0.2290).",
+            "Shops within 500\u202fm (93) \u2013 positive SHAP (0.0948)."
+        ],
+        "caveats": [
+            "Prediction is model\u2011derived, not observed.",
+            "SHAP values show model influence, not causation.",
+            "SEIFA decile is contextual only.",
+            "No public toilets are recorded."
+        ]
+    },
+    {
+        "hex_id": "89be0e34023ffff",
+        "rank": 8,
+        "prediction_explanation": "The model forecasts 1.64 needed toilets, with high internal food venue count and moderate shop presence being the strongest drivers.",
+        "recommendation_explanation": "Despite a relatively large surrounding population (~3,300), the lack of existing toilets leads to a high priority ranking.",
+        "key_drivers": [
+            "Food venues inside the hex (28) \u2013 positive SHAP (0.4071).",
+            "Shops inside the hex (14) \u2013 positive SHAP (0.3333).",
+            "Food venues within 250\u202fm (33) \u2013 positive SHAP (0.3203).",
+            "Shops within 250\u202fm (18) \u2013 positive SHAP (0.2708).",
+            "Distance to nearest footpath (3.6\u202fm) \u2013 positive SHAP (0.0418)."
+        ],
+        "caveats": [
+            "Prediction is an estimate, not measured demand.",
+            "SHAP values reflect model behavior, not causality.",
+            "SEIFA decile provides socioeconomic context only.",
+            "No public toilets are present."
+        ]
+    },
+    {
+        "hex_id": "89be0e35d63ffff",
+        "rank": 9,
+        "prediction_explanation": "Predicted need of 1.62 toilets is driven chiefly by the high shop count inside the hex and nearby shop density.",
+        "recommendation_explanation": "With zero existing toilets and a population of ~914, the model flags this hex as a priority to meet the estimated shortfall.",
+        "key_drivers": [
+            "Shops inside the hex (22) \u2013 positive SHAP (0.5485).",
+            "Shops within 250\u202fm (25) \u2013 positive SHAP (0.4024).",
+            "Food venues within 250\u202fm (18) \u2013 positive SHAP (0.2454).",
+            "Food venues inside the hex (17) \u2013 positive SHAP (0.2377).",
+            "Shops within 1000\u202fm (33) \u2013 positive SHAP (0.0661)."
+        ],
+        "caveats": [
+            "Prediction is model\u2011based, not observed demand.",
+            "SHAP values indicate model influence, not real causation.",
+            "SEIFA decile is socioeconomic context only.",
+            "No public toilets are recorded."
+        ]
+    },
+    {
+        "hex_id": "89be085ac07ffff",
+        "rank": 10,
+        "prediction_explanation": "The model predicts 1.59 needed toilets, with the strongest influence coming from the number of shops inside the hex and nearby.",
+        "recommendation_explanation": "Despite a small population (~268) and no existing facilities, the commercial activity drives a moderate priority ranking.",
+        "key_drivers": [
+            "Shops inside the hex (25) \u2013 positive SHAP (0.5592).",
+            "Shops within 250\u202fm (38) \u2013 positive SHAP (0.3814).",
+            "Food venues inside the hex (7) \u2013 positive SHAP (0.2512).",
+            "Food venues within 250\u202fm (13) \u2013 positive SHAP (0.2499).",
+            "Shops within 1000\u202fm (42) \u2013 positive SHAP (0.0681)."
+        ],
+        "caveats": [
+            "Prediction is an estimate, not measured demand.",
+            "SHAP values reflect model behavior, not causation.",
+            "SEIFA decile is missing; socioeconomic context unavailable.",
+            "No public toilets are present."
+        ]
+    },
+    {
+        "hex_id": "89be0842503ffff",
+        "rank": 11,
+        "prediction_explanation": "A predicted need of 1.58 toilets is driven mainly by shop density, with additional contribution from nearby food venues and park area.",
+        "recommendation_explanation": "With no existing toilets and a low population (~259), the model still assigns a relatively high priority due to commercial activity.",
+        "key_drivers": [
+            "Shops inside the hex (32) \u2013 positive SHAP (0.4727).",
+            "Shops within 250\u202fm (39) \u2013 positive SHAP (0.3265).",
+            "Food venues within 250\u202fm (10) \u2013 positive SHAP (0.2637).",
+            "Food venues inside the hex (7) \u2013 positive SHAP (0.2402).",
+            "Park area inside the hex (12,691\u202fm\u00b2) \u2013 positive SHAP (0.0706)."
+        ],
+        "caveats": [
+            "Prediction is model\u2011derived, not observed demand.",
+            "SHAP values indicate model influence, not real causation.",
+            "SEIFA decile reflects socioeconomic context only.",
+            "No public toilets are recorded."
+        ]
+    },
+    {
+        "hex_id": "89be085ae67ffff",
+        "rank": 12,
+        "prediction_explanation": "The model forecasts 1.55 needed toilets, with shop counts inside and nearby being the primary drivers.",
+        "recommendation_explanation": "Given a very small population (~147) and no existing facilities, the model still ranks this hex due to its commercial density.",
+        "key_drivers": [
+            "Shops inside the hex (20) \u2013 positive SHAP (0.5102).",
+            "Shops within 250\u202fm (28) \u2013 positive SHAP (0.3771).",
+            "Food venues within 250\u202fm (16) \u2013 positive SHAP (0.2510).",
+            "Food venues inside the hex (9) \u2013 positive SHAP (0.2421).",
+            "Shops within 1000\u202fm (38) \u2013 positive SHAP (0.0734)."
+        ],
+        "caveats": [
+            "Prediction is an estimate, not measured demand.",
+            "SHAP values reflect model behavior, not causation.",
+            "SEIFA decile is socioeconomic context only.",
+            "No public toilets are present."
+        ]
+    },
+    {
+        "hex_id": "89be0e2403bffff",
+        "rank": 13,
+        "prediction_explanation": "Predicted need of 1.53 toilets is influenced by modest shop presence and the proximity of a train station.",
+        "recommendation_explanation": "With zero existing toilets and a population of ~575, the model assigns a moderate priority.",
+        "key_drivers": [
+            "Shops inside the hex (14) \u2013 positive SHAP (0.2776).",
+            "Train station within 250\u202fm (1) \u2013 positive SHAP (0.2637).",
+            "Food venues inside the hex (5) \u2013 positive SHAP (0.2329).",
+            "Food venues within 250\u202fm (8) \u2013 positive SHAP (0.2189).",
+            "Shops within 250\u202fm (18) \u2013 positive SHAP (0.2122)."
+        ],
+        "caveats": [
+            "Prediction is model\u2011based, not observed demand.",
+            "SHAP values indicate model influence, not real causation.",
+            "SEIFA decile provides socioeconomic context only.",
+            "No public toilets are recorded."
+        ]
+    },
+    {
+        "hex_id": "89be0e2ed93ffff",
+        "rank": 14,
+        "prediction_explanation": "The model predicts 1.52 needed toilets, with the strongest influence from the number of shops inside the hex.",
+        "recommendation_explanation": "Despite a relatively larger population (~1,540), the lack of existing toilets leads to a moderate priority ranking.",
+        "key_drivers": [
+            "Shops inside the hex (24) \u2013 positive SHAP (0.5518).",
+            "Shops within 250\u202fm (38) \u2013 positive SHAP (0.3228).",
+            "Food venues inside the hex (3) \u2013 positive SHAP (0.2262).",
+            "Food venues within 250\u202fm (4) \u2013 positive SHAP (0.1984).",
+            "Park area within 1000\u202fm (81,177\u202fm\u00b2) \u2013 positive SHAP (0.0687)."
+        ],
+        "caveats": [
+            "Prediction is an estimate, not measured demand.",
+            "SHAP values reflect model behavior, not causation.",
+            "SEIFA decile is socioeconomic context only.",
+            "No public toilets are present."
+        ]
+    },
+    {
+        "hex_id": "89be0e3423bffff",
+        "rank": 15,
+        "prediction_explanation": "A predicted need of 1.51 toilets is driven by a balanced mix of shops and food venues both inside and nearby.",
+        "recommendation_explanation": "With no existing facilities and a population of ~2,190, the model places this hex at mid\u2011range priority.",
+        "key_drivers": [
+            "Shops inside the hex (13) \u2013 positive SHAP (0.3385).",
+            "Shops within 250\u202fm (21) \u2013 positive SHAP (0.3253).",
+            "Food venues within 250\u202fm (11) \u2013 positive SHAP (0.3220).",
+            "Food venues inside the hex (4) \u2013 positive SHAP (0.2559).",
+            "Shops within 500\u202fm (122) \u2013 positive SHAP (0.0940)."
+        ],
+        "caveats": [
+            "Prediction is model\u2011derived, not observed demand.",
+            "SHAP values indicate model influence, not real causation.",
+            "SEIFA decile reflects socioeconomic context only.",
+            "No public toilets are recorded."
+        ]
+    },
+    {
+        "hex_id": "89be0e34223ffff",
+        "rank": 16,
+        "prediction_explanation": "The model forecasts 1.49 needed toilets, with food venue density being the dominant driver.",
+        "recommendation_explanation": "Zero existing toilets and a population of ~1,808 lead to a high priority despite lower shop density.",
+        "key_drivers": [
+            "Food venues within 250\u202fm (30) \u2013 positive SHAP (0.3962).",
+            "Food venues inside the hex (28) \u2013 positive SHAP (0.3594).",
+            "Shops inside the hex (9) \u2013 positive SHAP (0.2434).",
+            "Shops within 250\u202fm (9) \u2013 positive SHAP (0.0943).",
+            "Bus stops inside the hex (5) \u2013 positive SHAP (0.0806)."
+        ],
+        "caveats": [
+            "Prediction is an estimate, not measured demand.",
+            "SHAP values reflect model behavior, not causation.",
+            "SEIFA decile provides socioeconomic context only.",
+            "No public toilets are present."
+        ]
+    },
+    {
+        "hex_id": "89be0e35dc7ffff",
+        "rank": 17,
+        "prediction_explanation": "Predicted need of 1.48 toilets is heavily influenced by proximity to a train station and nearby food venues.",
+        "recommendation_explanation": "With no existing toilets and a population of ~2,316, the model assigns a high priority to serve commuters and local users.",
+        "key_drivers": [
+            "Train station within 250\u202fm (1) \u2013 positive SHAP (0.3554).",
+            "Food venues within 250\u202fm (17) \u2013 positive SHAP (0.2517).",
+            "Train station inside the hex (1) \u2013 positive SHAP (0.2028).",
+            "Food venues inside the hex (13) \u2013 positive SHAP (0.1910).",
+            "Shops inside the hex (5) \u2013 positive SHAP (0.1446)."
+        ],
+        "caveats": [
+            "Prediction is model\u2011based, not observed demand.",
+            "SHAP values indicate model influence, not real causation.",
+            "SEIFA decile is socioeconomic context only.",
+            "No public toilets are recorded."
+        ]
+    },
+    {
+        "hex_id": "89be0e341cbffff",
+        "rank": 18,
+        "prediction_explanation": "The model predicts 1.48 needed toilets, with food venue density being the strongest contributor.",
+        "recommendation_explanation": "Despite a sizable surrounding population (~2,168), the lack of existing facilities leads to a moderate priority ranking.",
+        "key_drivers": [
+            "Food venues within 250\u202fm (8) \u2013 positive SHAP (0.3650).",
+            "Food venues inside the hex (4) \u2013 positive SHAP (0.2544).",
+            "Shops inside the hex (9) \u2013 positive SHAP (0.2248).",
+            "Shops within 250\u202fm (11) \u2013 positive SHAP (0.1192).",
+            "Bus stops inside the hex (7) \u2013 positive SHAP (0.0760)."
+        ],
+        "caveats": [
+            "Prediction is an estimate, not measured demand.",
+            "SHAP values reflect model behavior, not causation.",
+            "SEIFA decile provides socioeconomic context only.",
+            "No public toilets are present."
+        ]
+    },
+    {
+        "hex_id": "89be0e2ac4bffff",
+        "rank": 19,
+        "prediction_explanation": "Predicted need of 1.48 toilets is driven primarily by the number of shops inside the hex.",
+        "recommendation_explanation": "With zero existing toilets and a small population (~211), the model still flags this location due to commercial activity.",
+        "key_drivers": [
+            "Shops inside the hex (17) \u2013 positive SHAP (0.5109).",
+            "Shops within 250\u202fm (23) \u2013 positive SHAP (0.3089).",
+            "Food venues inside the hex (5) \u2013 positive SHAP (0.2860).",
+            "Food venues within 250\u202fm (10) \u2013 positive SHAP (0.2123).",
+            "Park area within 1000\u202fm (94,651\u202fm\u00b2) \u2013 positive SHAP (0.0723)."
+        ],
+        "caveats": [
+            "Prediction is model\u2011derived, not observed demand.",
+            "SHAP values indicate model influence, not real causation.",
+            "SEIFA decile is socioeconomic context only.",
+            "No public toilets are recorded."
+        ]
+    },
+    {
+        "hex_id": "89be0844217ffff",
+        "rank": 20,
+        "prediction_explanation": "The model forecasts 1.45 needed toilets, with the nearby train station and food venue presence being the main contributors.",
+        "recommendation_explanation": "Despite a very low population (~181) and no existing facilities, the algorithm assigns a modest priority due to transport and commercial features.",
+        "key_drivers": [
+            "Train station within 250\u202fm (1) \u2013 positive SHAP (0.2537).",
+            "Food venues inside the hex (5) \u2013 positive SHAP (0.2430).",
+            "Food venues within 250\u202fm (7) \u2013 positive SHAP (0.2384).",
+            "Shops inside the hex (9) \u2013 positive SHAP (0.1170).",
+            "Shops within 250\u202fm (15) \u2013 positive SHAP (0.1053)."
+        ],
+        "caveats": [
+            "Prediction is an estimate, not measured demand.",
+            "SHAP values reflect model behavior, not causation.",
+            "SEIFA decile provides socioeconomic context only.",
+            "No public toilets are present."
+        ]
+    }
+]

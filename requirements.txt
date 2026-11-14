@@ -17,3 +17,5 @@ openpyxl==3.1.5
 scikit-learn==1.9.1
 shap==0.54.1
 requests==2.34.2
+pydantic==2.14.3
+openai-agents==0.24.0

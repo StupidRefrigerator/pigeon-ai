@@ -41,6 +41,8 @@ data/model/*
 !data/model/fairness.csv
 !data/model/folds.csv
 !data/model/stability.csv
+!data/model/candidate_evidence.json
+!data/model/llm_explanations.json
 
 # Large experiment outputs, kept in pigeon-ai-experiment-outputs.zip on the team Drive (see DATA.md)
 experiments/v2/combos/out/study_oof_predictions.csv
