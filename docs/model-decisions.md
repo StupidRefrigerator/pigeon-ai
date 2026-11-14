@@ -89,7 +89,7 @@ The review eval is the one that decides whether the product works. Review at lea
 `compare_experiments.py` tests the declared V1–V10 datasets without changing the
 production choices above. It deliberately retains density and enables V7's
 independently sourced Census/SEIFA inputs and V8's projection inputs. The former
-can reproduce provision bias. The latter is only an exploratory scenario. See the
+can reproduce provision bias. The latter is only an exploratory scenario. See
 [comparison-page.md](comparison-page.md) for the outputs.
 
 Every experiment is scored with held-out predictions from `model.cross_validate`
