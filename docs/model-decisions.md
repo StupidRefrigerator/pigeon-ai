@@ -90,7 +90,7 @@ The review eval is the one that decides whether the product works. Review at lea
 production choices above. It deliberately retains density and enables V7's
 independently sourced Census/SEIFA inputs and V8's projection inputs. The former
 can reproduce provision bias. The latter is only an exploratory scenario. See the
-README's comparison section for the outputs.
+[comparison-page.md](comparison-page.md) for the outputs.
 
 Every experiment is scored with held-out predictions from `model.cross_validate`
 (seed 0). The first version also ran SHAP, seed stability and fold anchoring for
