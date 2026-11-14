@@ -2,8 +2,6 @@
 
 Tests whether the toilet model's approach transfers to Sydney bike lanes. It uses the same 16,228 res-9 hexes and the same 5-fold spatial CV by res-6 block, and every number is held-out.
 
-> `experiments/bike/report.md` is not in this commit: the agent that ran the experiment could not write `.md` report files. The full report text is below and still needs adding as that file. All scripts, per-hex data and result CSVs are committed.
-
 ## Summary
 
 **The approach transfers.** The toilet recipe (a random forest predicting a quantity per hex; gap = predicted − existing) works with metres of bike lane as the label. With bike features it scores PR-AUC **0.702**, where random order scores 0.325: 5,279 of 16,228 hexes (32.5%) have a lane. 96 of its top 100 hexes and 839 of its top 1,000 have a lane. It predicts 2,382 km against 2,361 km real. Toilets, for comparison, score 0.569 against a random 0.118.
