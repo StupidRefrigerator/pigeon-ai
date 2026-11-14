@@ -27,6 +27,20 @@ describe('stats.json', () => {
     expect(stats.reach.poorest30).toEqual(tracking.current.picks.poorest30)
     expect(stats.reach.richest30).toEqual(tracking.current.picks.richest30)
   })
+
+  it('reports the suggested list against its own length, not a fixed top 120', () => {
+    const { listed, alreadyOne, nearPlanned, poorest30, richest30, noSeifa } = tracking.current.picks
+    for (const r of [alreadyOne, nearPlanned, poorest30, richest30]) expect(r.y).toBe(listed)
+    expect(poorest30.x + richest30.x + noSeifa).toBeLessThanOrEqual(listed)
+    expect(stats.reach.listed).toBe(listed)
+  })
+
+  it('counts more growth-suburb toilets once OpenStreetMap is included', () => {
+    const { withOsm } = stats.growth
+    expect(withOsm.toiletHexes).toBeGreaterThanOrEqual(stats.growth.toiletHexes)
+    expect(withOsm.actual).toBeGreaterThanOrEqual(stats.growth.actual)
+    expect(withOsm.top100.y).toBe(withOsm.toiletHexes)
+  })
 })
 
 describe('tracking.json', () => {

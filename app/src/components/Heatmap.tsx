@@ -26,23 +26,23 @@ const AREAS: { id: Area; label: string }[] = [
   { id: 'future', label: 'Future areas' },
 ]
 const METRICS: { id: Metric; label: string }[] = [
-  { id: 'gap', label: 'Gap' },
+  { id: 'gap', label: 'Toilets missing' },
   { id: 'pred', label: 'Predicted toilets' },
   { id: 'p', label: 'Chance of a toilet' },
 ]
 const NOTES: Record<Area, string> = {
   today:
-    'All 16,228 study hexagons. Each prediction comes from a model that never saw that hexagon in training. Dark outlines mark the 100 suggested spots.',
+    'All 16,228 study hexagons. Each prediction comes from a model that never saw that hexagon in training. Dark outlines mark the 100 places that need at least one more toilet.',
   growth: '1,108 hexagons in growth suburbs the model never trained on. Toilets there today are the real count.',
   future:
-    'Bradfield (Aerotropolis) and Leppington as planned, with no toilets yet, so the gap equals the prediction. Only the top 10 hexagons per area were saved, so only those are shown. Read the order, not the totals.',
+    'Bradfield (Aerotropolis) and Leppington as planned, with no toilets yet, so toilets missing equals the prediction. Only the top 10 hexagons per area were saved, so only those are shown. Read the order, not the totals.',
 }
 const FUTURE_NAMES: Record<string, string> = { aerotropolis: 'Bradfield (Aerotropolis)', leppington: 'Leppington' }
 
 // Jimmy's gap colours, reused for every metric so the scale reads the same way.
 const RAMP = ['#dfe7df', '#f7e3aa', '#e9b75b', '#df873c', '#c94c35', '#842f37']
 const SCALES: Record<Metric, { title: string; cuts: number[]; labels: string[]; value: (h: Hex) => number }> = {
-  gap: { title: 'Gap (toilets missing)', cuts: [0, 0.25, 0.5, 1, 2], labels: ['0', '>0–0.25', '0.25–0.5', '0.5–1', '1–2', '2+'], value: (h) => Math.max(0, h.gap) },
+  gap: { title: 'Toilets missing', cuts: [0, 0.25, 0.5, 1, 2], labels: ['0', '>0–0.25', '0.25–0.5', '0.5–1', '1–2', '2+'], value: (h) => Math.max(0, h.gap) },
   pred: { title: 'Predicted toilets', cuts: [0.05, 0.25, 0.5, 1, 2], labels: ['<0.05', '0.05–0.25', '0.25–0.5', '0.5–1', '1–2', '2+'], value: (h) => h.pred },
   p: { title: 'Chance of at least one toilet', cuts: [0.05, 0.2, 0.4, 0.6, 0.8], labels: ['<5%', '5–20%', '20–40%', '40–60%', '60–80%', '80%+'], value: (h) => h.p },
 }
@@ -233,7 +233,7 @@ export function Heatmap() {
             )}
             {area === 'today' && (
               <span>
-                <strong>100</strong> suggested spots
+                <strong>100</strong> places need at least one more toilet
               </span>
             )}
             <span>V12, seed 0</span>
@@ -252,7 +252,7 @@ export function Heatmap() {
             </span>
           ))}
         </div>
-        <p>{area === 'today' ? 'Dark outlines mark the 100 suggested spots' : area === 'future' ? 'Dark outlines mark the saved top 10 per area' : 'Same colours on every view'} · click a hexagon for details</p>
+        <p>{area === 'today' ? 'Dark outlines mark the 100 places that need at least one more toilet' : area === 'future' ? 'Dark outlines mark the saved top 10 per area' : 'Same colours on every view'} · click a hexagon for details</p>
       </div>
       <Detail hex={selected} area={area} />
     </>
@@ -268,7 +268,7 @@ function Detail({ hex, area }: { hex: Hex | null; area: Area }) {
       </div>
     )
   const title = hex.rec
-    ? `Suggested spot ${hex.rec.rank} of 100, near ${hex.place}`
+    ? `Short by at least one toilet: ${hex.rec.rank} of 100, near ${hex.place}`
     : hex.future
       ? `${hex.place}: ${hex.future.rank} of 10`
       : `Hexagon near ${hex.place}`
@@ -295,7 +295,7 @@ function Detail({ hex, area }: { hex: Hex | null; area: Area }) {
           </div>
         )}
         <div>
-          <span>Gap{hex.rec ? ' (after OSM toilets)' : ''}</span>
+          <span>Toilets missing{hex.rec ? ' (after OSM toilets)' : ''}</span>
           <strong>{signed(hex.gap)}</strong>
         </div>
         <div>
