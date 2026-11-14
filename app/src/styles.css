@@ -67,6 +67,12 @@ button, input, select { font: inherit; }
 .jimmy table.small td:nth-child(2) { min-width: 0; }
 .jimmy h3 { color: #fff; font-size: 16px; font-weight: 600; line-height: 1.35; margin: 14px 0 10px; }
 .jimmy .table-scroll:focus-visible, .jimmy a:focus-visible, .jimmy button:focus-visible { outline: 2px solid #ccc; outline-offset: 2px; }
+.jimmy .term { text-decoration: underline dotted #888; text-underline-offset: 3px; cursor: help; }
+.jimmy .term:focus-visible { outline: 2px solid #ccc; outline-offset: 2px; }
+.jimmy .term-tip { display: none; position: fixed; z-index: 1000; width: max-content; max-width: 320px; padding: 8px 10px; background: #1c1c1c; color: var(--ink); border: 1px solid #555; font-size: 13px; font-weight: 400; line-height: 1.45; white-space: normal; text-align: left; pointer-events: none; }
+.jimmy .term:hover + .term-tip, .jimmy .term:focus + .term-tip { display: block; }
+.jimmy .split-diagram { display: block; max-width: 740px; height: auto; margin: 12px 0 4px; }
+.jimmy .split-diagram text { fill: var(--muted); font-size: 12px; }
 
 /* Tracking-page heatmap, after Jimmy's heatmap demo */
 .jimmy .switches { display: flex; flex-wrap: wrap; gap: 12px 28px; margin: 18px 0 8px; }

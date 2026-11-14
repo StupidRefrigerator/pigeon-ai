@@ -1,6 +1,7 @@
 """Build the data behind the internal Tracking (/app/stats) and Tests (/app/tests) pages.
 
 Run from anywhere:  /tmp/pigeon-env/bin/python app/scripts/build_data.py
+(needs pandas 2: pandas 3's qcut splits tied SEIFA scores differently from fairness.csv)
 
 Writes, all committed:
   src/data/tracking.json  version history V1-V12 and the V12 headline (bundled)
@@ -9,7 +10,7 @@ Writes, all committed:
 
 Model numbers are V12 (M1 in experiments/v2/combos): seed-mean metrics from
 experiments/v2/combos/out, per-hex values from data/model (seed 0). The default
-list is ranked by gap only, with no weighting.
+list is every hexagon short of at least one toilet, ranked by gap only, with no weighting.
 """
 import json
 import math
@@ -60,23 +61,29 @@ n_hex = len(hexes)
 toilet_hexes = int((hexes.toilet_count > 0).sum())
 base_rate = toilet_hexes / n_hex
 
-# ---------- the default list's top 120 (seed 0) ----------
+# ---------- the suggested list (seed 0) ----------
+# The list is every hexagon where the model expects at least one more toilet than exist,
+# counting official-map and OpenStreetMap toilets as existing. It is not capped at a fixed length.
+assert (recs.existing_toilets == recs[["toilet_count", "osm_toilets_public"]].max(axis=1)).all()
+assert (recs.gap >= 1).all() and np.allclose(recs.gap, recs.predicted_toilets - recs.existing_toilets, atol=1e-3)
+# Cross-check against the saved top 120 of the same run: exactly the listed hexagons have gap >= 1.
 picks = pd.read_csv(V2 / "picks_top120_seed0.csv")
 picks = picks[(picks.model == "M1+postL") & (picks.post == "P0")]
-assert len(picks) == 120 and set(recs.hex_id) <= set(picks.hex_id)
-poor = int(picks.seifa_decile.between(1, 3).sum())
-rich = int(picks.seifa_decile.between(8, 10).sum())
+assert len(picks) == 120 and set(picks[picks.gap >= 1].hex_id) == set(recs.hex_id)
+assert parse_ratio(chosen["picks gap ≥ 1"])["x"] == len(recs)
+listed = picks[picks.hex_id.isin(recs.hex_id)].set_index("hex_id").loc[recs.hex_id]
+assert (listed.seifa_decile.fillna(0).to_numpy() == recs.seifa_decile.fillna(0).to_numpy()).all()
+n_list = len(recs)
+has_one = recs[recs.existing_toilets > 0]
+assert (has_one.existing_toilets == 1).all() and (has_one.predicted_toilets >= 2).all()
 pick_counts = {
-    "listed": int((picks.gap >= 1).sum()),
-    "osmAlready": ratio((picks.osm_toilets_public > 0).sum(), 120),
-    "nearPlanned": ratio(picks.near_planned.sum(), 120),
-    "poorest30": ratio(poor, 120),
-    "richest30": ratio(rich, 120),
+    "listed": n_list,
+    "alreadyOne": ratio(len(has_one), n_list),
+    "nearPlanned": ratio(listed.near_planned.sum(), n_list),
+    "poorest30": ratio(recs.seifa_decile.between(1, 3).sum(), n_list),
+    "richest30": ratio(recs.seifa_decile.between(8, 10).sum(), n_list),
+    "noSeifa": int(recs.seifa_decile.isna().sum()),
 }
-assert pick_counts["listed"] == len(recs) == parse_ratio(chosen["picks gap ≥ 1"])["x"]
-assert pick_counts["osmAlready"] == parse_ratio(chosen["OSM toilet already"])
-assert pick_counts["nearPlanned"] == parse_ratio(chosen["near planned site"])
-assert chosen["deciles 1–3 / 8–10"] == f"{poor} / {rich}"
 
 # ---------- tracking.json ----------
 jimmy = json.load(open(APP / "scripts/curated_stats.json"))["versions_jimmy"]
@@ -104,7 +111,9 @@ tracking = {
 }
 
 # ---------- stats.json: the four Tests-page answers ----------
-gm = pd.read_csv(V2 / "growth_metrics.csv", header=[0, 1], index_col=[0, 1]).loc[("official", "M1")]
+growth_metrics = pd.read_csv(V2 / "growth_metrics.csv", header=[0, 1], index_col=[0, 1])
+gm = growth_metrics.loc[("official", "M1")]
+gm_osm = growth_metrics.loc[("osm_corrected", "M1")]  # OpenStreetMap toilets count as real too
 growth_pred = pd.read_csv(V2 / "growth_predictions.csv")
 assert int(gm[("toilet_hexes", "mean")]) == int((growth_pred.toilet_count > 0).sum())
 g_hexes, g_toilet_hexes = len(growth_pred), int(gm[("toilet_hexes", "mean")])
@@ -134,9 +143,15 @@ stats = {
         "randomTop100": round(100 * g_toilet_hexes / g_hexes),
         "prAuc": r(gm[("pr_auc", "mean")]), "random": r(g_toilet_hexes / g_hexes),
         "predicted": round(gm[("pred_total", "mean")]), "actual": int(gm[("actual_total", "mean")]),
+        "withOsm": {
+            "toiletHexes": int(gm_osm[("toilet_hexes", "mean")]),
+            "top100": ratio(round(gm_osm[("found_top100", "mean")]), gm_osm[("toilet_hexes", "mean")]),
+            "prAuc": r(gm_osm[("pr_auc", "mean")]), "random": r(gm_osm[("toilet_hexes", "mean")] / g_hexes),
+            "actual": int(gm_osm[("actual_total", "mean")]),
+        },
     },
     "reach": {
-        "poorest30": pick_counts["poorest30"], "richest30": pick_counts["richest30"],
+        "listed": n_list, "poorest30": pick_counts["poorest30"], "richest30": pick_counts["richest30"], "noSeifa": pick_counts["noSeifa"],
         "deciles": [
             {"decile": d, "real": int(fair.loc[d, "actual_toilets"]), "predicted": round(float(fair.loc[d, "predicted_toilets"])),
              "per10k": r(by_dec.loc[d, "toilets"] / by_dec.loc[d, "pop"] * 1e4, 2)}
@@ -146,6 +161,7 @@ stats = {
 }
 assert stats["reach"]["deciles"][0]["real"] == 274 and stats["reach"]["deciles"][0]["per10k"] == 4.1
 assert stats["growth"]["predicted"] == round(float(v12["growth predicted (39)"]))
+assert stats["growth"]["withOsm"]["top100"]["x"] == 31 and stats["growth"]["withOsm"]["toiletHexes"] == 48
 
 # ---------- public/heatmap.json ----------
 places = json.load(open(REPO / "data/reference/sydney_places.json"))["places"]

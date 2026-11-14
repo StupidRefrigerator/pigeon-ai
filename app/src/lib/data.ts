@@ -19,8 +19,12 @@ export interface Stats {
     random: number
     predicted: number
     actual: number
+    /** The same test with OpenStreetMap toilets counted as real too. */
+    withOsm: { toiletHexes: number; top100: Ratio; prAuc: number; random: number; actual: number }
   }
   reach: {
+    listed: number
+    noSeifa: number
     poorest30: Ratio
     richest30: Ratio
     deciles: { decile: number; real: number; predicted: number; per10k: number }[]
@@ -49,7 +53,8 @@ export interface Tracking {
     council: Ratio
     predictedTotal: number
     actualTotal: number
-    picks: { listed: number; osmAlready: Ratio; nearPlanned: Ratio; poorest30: Ratio; richest30: Ratio }
+    /** The suggested list: every hexagon where the model expects at least one more toilet than exist. */
+    picks: { listed: number; alreadyOne: Ratio; nearPlanned: Ratio; poorest30: Ratio; richest30: Ratio; noSeifa: number }
   }
 }
 
