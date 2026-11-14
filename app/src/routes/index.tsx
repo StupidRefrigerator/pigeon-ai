@@ -149,7 +149,7 @@ function OpenApp() {
 
 function SignIn() {
   return (
-    <SignInButton>
+    <SignInButton forceRedirectUrl="/app" signUpForceRedirectUrl="/app">
       <button className="signin" type="button">
         Sign in
       </button>
