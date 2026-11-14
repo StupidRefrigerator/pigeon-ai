@@ -61,3 +61,16 @@ Three large per-hexagon outputs from `experiments/` are not in Git (12.7 MB). Th
 Unzip it at the repo root (`unzip pigeon-ai-experiment-outputs.zip`), or rerun the script that makes the file. You don't need them to train the model or run the app; the summary CSVs that the findings page and the app read are committed.
 
 > **TODO(drive):** `pigeon-ai-experiment-outputs.zip` is not on the Drive yet. Until it is, ask Summit for it.
+
+## Bike-lane experiment downloads
+
+`experiments/bike/` needs about 1.1 GB of downloads that are not in Git. Keep them in `experiments/bike/downloads/` (ignored) or any folder outside the repo, and pass that folder to `experiments/bike/run_all.sh`. Every file is public and the scripts re-download all of them except the PBF and the TfNSW zip:
+
+| Path in the downloads folder | Dataset | Source | Downloaded |
+| --- | --- | --- | --- |
+| `overpass/bike_tile_*.json` (12 tiles, 28 MB) | OSM cycleways, cycle lanes and `bicycle=designated` ways | Overpass API (`experiments/bike/scripts/fetch_bike_osm.py`) | 2026-11-14; all tiles OSM snapshot 2026-11-14 (`fetch_log.json`) |
+| `pbf/australia-261113.osm.pbf` (930 MB) | Geofabrik Australia extract, for roads, junctions, schools, universities, stations and planned cycleways | https://download.geofabrik.de/australia-oceania/australia-261113.osm.pbf (MD5 `77be6f23bf858d170c89954f515b8fd2`) | 2026-11-14 |
+| `tfnsw/existing_bicycle_network.zip` (13 MB), unzipped to `tfnsw/shp/` | TfNSW Existing Bicycle Network (CC BY), for comparison only | [TfNSW Open Data Hub, Infrastructure Cycleway Data](https://opendata.transport.nsw.gov.au/dataset/infrastructure-cycleway-data) | 2026-11-14 (dataset updated 2026-10-31) |
+| `dem/12_*_*.png` (99 tiles, 3.5 MB) | AWS Terrain Tiles, Terrarium encoding, zoom 12 | `experiments/bike/scripts/fetch_dem.py` | 2026-11-14 |
+
+The per-hex outputs built from them (`experiments/bike/data/*.csv`) are committed, so the experiments run without the downloads: start from `experiments/bike/scripts/run_experiments.py`. The scripts also need `pip install osmium`.

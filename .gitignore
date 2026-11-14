@@ -46,3 +46,7 @@ data/model/*
 experiments/v2/combos/out/study_oof_predictions.csv
 experiments/future/aero_predictions.csv
 experiments/future/aero_features.csv
+
+# Bike-lane experiment downloads (Overpass tiles, Geofabrik PBF, TfNSW shapefile, DEM tiles; about 1.1 GB, see DATA.md)
+experiments/bike/downloads/
+*.osm.pbf

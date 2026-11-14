@@ -1,0 +1,13 @@
+rule,top100_with_tfnsw_lane,candidates,pr_auc
+random no-OSM-lane hex (expected per 100),5.470819252899808,,
+rf_len_bike: top 100 no-OSM-lane hexes,27.0,,
+rf_cls_bike: top 100 no-OSM-lane hexes,25.0,,
+hgb_poisson_bike: top 100 no-OSM-lane hexes,27.0,,
+rf_len_toilet_v12: top 100 no-OSM-lane hexes,19.0,,
+"rf_len_bike: candidates (gap >= 200 m), existing = OSM only",,1824.0,
+"rf_len_bike: candidates (gap >= 200 m), existing = max(OSM, TfNSW)",,1572.0,
+rf_len_bike: PR-AUC vs OSM label,,,0.7015412177547847
+rf_len_bike: PR-AUC vs TfNSW label,,,0.6817433265927699
+rf_cls_bike: PR-AUC vs OSM label,,,0.703530224214195
+rf_cls_bike: PR-AUC vs TfNSW label,,,0.6798577040848469
+TfNSW label as a ranking of the OSM label (agreement ceiling),,,0.8318334788519324
