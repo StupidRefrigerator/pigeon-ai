@@ -83,7 +83,7 @@
 .area-radius button[aria-checked="true"] { background: var(--blue); color: var(--paper); }
 .area-radius button:not([aria-checked="true"]):hover { background: rgba(50, 85, 164, .1); }
 .area-sum { display: flex; flex-direction: column; min-height: 0; margin-top: 10px; padding: 0 4px; animation: hexcard-in .22s var(--ease); }
-.area-sum h2 { margin: 0 0 8px; font: 400 19px/1.15 var(--poster); letter-spacing: .01em; }
+.area-sum h2 { margin: 0 0 2px; font: 400 19px/1.15 var(--poster); letter-spacing: .01em; }
 .area-sum .nums { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--blue); border-bottom: 2px solid var(--blue); }
 .area-sum .nums div { padding: 8px 0 6px; }
 .area-sum .nums div + div { padding-left: 10px; border-left: 2px solid var(--blue); }
@@ -111,3 +111,5 @@
 @media (prefers-reduced-motion: reduce) {
   .hexcard, .ask-panel, .area-sum { animation: none; }
 }
+
+.area-sub { margin: 0 0 8px; font-size: 13px; color: rgba(50, 85, 164, .7); }
