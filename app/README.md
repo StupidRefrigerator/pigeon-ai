@@ -2,7 +2,7 @@
 
 TanStack Start (React) + Clerk, hosted on Vercel via Nitro.
 
-- `/` landing page (`src/routes/index.tsx`, styles and canvas code in `src/landing/`), `/app` placeholder with sign-in and sign-out, `/app/stats` Tracking (V12 results, results map, version history), `/app/tests` Tests (four questions).
+- `/` landing page (`src/routes/index.tsx`, styles and canvas code in `src/landing/`), `/app` dashboard shell (sidebar, user menu, Admin group; marked work in progress), `/app/stats` Tracking (V12 results, results map, version history), `/app/tests` Tests (four questions).
 - Model shown: V12. Every prediction is held out (spatial cross-validation). The suggested list is ranked by gap only.
 
 ## Run locally
