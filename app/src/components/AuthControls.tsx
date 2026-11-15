@@ -15,7 +15,7 @@ export function AuthControls() {
   return (
     <div className="actions">
       <Show when="signed-out">
-        <SignInButton>
+        <SignInButton forceRedirectUrl="/app" signUpForceRedirectUrl="/app">
           <button className="btn">Sign in</button>
         </SignInButton>
       </Show>
