@@ -23,11 +23,6 @@
 .dash-home { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .dash-logo { width: 30px; height: 36px; flex: none; filter: drop-shadow(2px 2px 0 var(--pink)); }
 .dash-word { font-family: var(--poster); font-size: 17px; line-height: 1; padding: .34em .45em .26em; background: var(--pink); color: var(--purple); white-space: nowrap; }
-/* rubber stamp, slightly off true */
-.dash-wip {
-  margin-left: 40px; padding: 2px 8px 1px; font-size: 12px; font-weight: 700; color: var(--purple);
-  border: 1.5px solid var(--purple); border-radius: 2px; transform: rotate(-3deg); background: var(--yellow); cursor: default;
-}
 
 .dash-group-h { font-size: 13px; color: var(--ink-soft); padding: 0 8px 6px; }
 .dash-infra { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
@@ -78,7 +73,6 @@
   .dash-side { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 10px 14px; overflow: visible;
     border-right: 0; border-bottom: 2px solid var(--blue); box-shadow: 0 4px 0 rgba(255, 72, 176, .5); }
   .dash-brand { flex-direction: row; align-items: center; padding: 0; }
-  .dash-wip { margin-left: 0; }
   .dash-side > .dash-group, .dash-admin-h { display: none; }
   .dash-nav { display: flex; flex-wrap: wrap; gap: 4px; }
   .dash-nav a { padding: 6px 10px; }

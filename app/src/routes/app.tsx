@@ -10,7 +10,6 @@ const INFRA = [
   { name: 'Toilets', color: '#FF48B0', live: true },
   { name: 'Bike lanes', color: '#FFE800', live: false },
   { name: 'Water fountains', color: '#3255A4', live: false },
-  { name: 'Shade trees', color: '#321871', live: false },
 ] as const
 
 const ADMIN_PAGES: Record<string, string> = { '/app/stats': 'Tracking', '/app/tests': 'Tests' }
@@ -28,9 +27,6 @@ function AppShell() {
             <Logo />
             <span className="dash-word">PIGEON AI</span>
           </Link>
-          <span className="dash-wip" title="Features and numbers on these pages may change">
-            Work in progress
-          </span>
         </div>
 
         <div className="dash-group">
