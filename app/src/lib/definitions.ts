@@ -9,7 +9,7 @@ export const DEFINITIONS = {
   prAuc:
     'PR-AUC: how early real toilet hexagons appear when every hexagon is ranked by the model; 1.0 is perfect and random guessing scores the share of hexagons with a toilet (0.118 across Sydney).',
   deviance:
-    'Poisson deviance: the average difference between predicted and real toilet counts per hexagon, measured the standard way for counts; lower is better and 0 would be exact everywhere.',
+    'Poisson deviance: how far predicted toilet counts are from real ones, on hexagons the model never saw; lower means it learned Sydney’s pattern better (predicting the average everywhere scores 0.719), but it won’t reach 0 and shouldn’t, because the places it misses are partly the gaps we’re looking for.',
   top100:
     'Top-100 hits: of the 100 hexagons the model ranks highest, how many really have a toilet; higher is better, and random guessing finds about 12.',
   top1000:
@@ -25,7 +25,7 @@ export const DEFINITIONS = {
   suggested:
     'Suggested list: every hexagon where the model expects at least one more toilet than exist, counting official-map and OpenStreetMap toilets; it is not capped at a fixed number.',
   officialMap:
-    'Official map: the National Public Toilet Map (data.gov.au), the toilets the model learns from.',
+    'Official map: the National Public Toilet Map (data.gov.au), the toilets the model trains on.',
   osm: 'OpenStreetMap: a volunteer-made world map; its public toilets catch some the official map misses, especially in new suburbs.',
   heldOut:
     'Held-out: scored only on hexagons the model did not see in training, so the score shows how it does on new places rather than how well it memorised.',

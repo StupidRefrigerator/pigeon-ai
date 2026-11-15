@@ -32,7 +32,7 @@ const METRICS: { id: Metric; label: string }[] = [
 ]
 const NOTES: Record<Area, string> = {
   today:
-    'All 16,228 study hexagons. Each prediction comes from a model that never saw that hexagon in training. Dark outlines mark the 100 places that need at least one more toilet.',
+    'All 16,228 study hexagons. Each prediction comes from a model that never saw that hexagon in training. Dark outlines mark the 100 suggested places.',
   growth: '1,108 hexagons in growth suburbs the model never trained on. Toilets there today are the real count.',
   future:
     'Bradfield (Aerotropolis) and Leppington as planned, with no toilets yet, so toilets missing equals the prediction. Only the top 10 hexagons per area were saved, so only those are shown. Read the order, not the totals.',
@@ -233,7 +233,7 @@ export function Heatmap() {
             )}
             {area === 'today' && (
               <span>
-                <strong>100</strong> places need at least one more toilet
+                <strong>100</strong> suggested places
               </span>
             )}
             <span>V12, seed 0</span>
@@ -252,7 +252,7 @@ export function Heatmap() {
             </span>
           ))}
         </div>
-        <p>{area === 'today' ? 'Dark outlines mark the 100 places that need at least one more toilet' : area === 'future' ? 'Dark outlines mark the saved top 10 per area' : 'Same colours on every view'} · click a hexagon for details</p>
+        <p>{area === 'today' ? 'Dark outlines mark the 100 suggested places' : area === 'future' ? 'Dark outlines mark the saved top 10 per area' : 'Same colours on every view'} · click a hexagon for details</p>
       </div>
       <Detail hex={selected} area={area} />
     </>

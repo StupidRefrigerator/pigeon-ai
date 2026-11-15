@@ -38,7 +38,7 @@ function TrackingPage() {
               <strong>
                 <Term id="deviance">Poisson deviance</Term>:
               </strong>{' '}
-              {c.deviance.value.toFixed(3)} (V11: {c.deviance.was.toFixed(3)}; lower is better).
+              {c.deviance.value.toFixed(3)} (V11: {c.deviance.was.toFixed(3)} against 0.719 for predicting the average everywhere).
             </li>
             <li>
               <strong>
@@ -82,7 +82,7 @@ function TrackingPage() {
         <section aria-labelledby="training-title">
           <h2 id="training-title">How it's trained and tested</h2>
           <p>
-            The model learns from where Sydney's toilets are today. To test it fairly, Sydney's 16,228 hexagons are grouped into 90 larger blocks, and the blocks are
+            The model learns the pattern of where Sydney's toilets go: how many a place has for its population, shops, transport and parks. To test it fairly, Sydney's 16,228 hexagons are grouped into 90 larger blocks, and the blocks are
             split into 5 groups. Each turn, the model trains on 4 groups and predicts the 5th. After 5 turns, every hexagon has been predicted once, by a model that
             never saw its area. This is <Term id="crossValidation">five-fold spatial cross-validation</Term>, and every score above is{' '}
             <Term id="heldOut">held-out</Term> this way. The <Term id="growthSuburbs">growth-suburbs test</Term> is separate: 1,108 new-suburb hexagons were not in
@@ -95,8 +95,8 @@ function TrackingPage() {
           <h2 id="heatmap-title">Heatmap</h2>
           <Heatmap />
           <p className="note">
-            Toilets missing = how many fewer toilets a place has than the Sydney average for places with similar population, shops, transport and parks. The
-            model learns from where toilets are today, so it finds places below Sydney's own standard, not an absolute need. Map data ©{' '}
+            Toilets missing = how many fewer toilets a place has than the Sydney average for places with similar population, shops, transport and parks. Map
+            data ©{' '}
             <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.
           </p>
         </section>

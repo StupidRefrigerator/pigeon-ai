@@ -78,35 +78,18 @@ function TestsPage() {
         <section aria-labelledby="q3">
           <h2 id="q3">3. Does it work on suburbs it never saw?</h2>
           <p>
-            Yes, though less sharply. In <Term id="growthSuburbs">growth suburbs</Term> left out of training, {growth.top100.x} of the {growth.top100.y} hexagons with a
-            toilet are in its top 100, and it predicts {growth.predicted} toilets where {growth.actual} exist. New suburbs are often missing from the official map:
-            counting <Term id="osm">OpenStreetMap</Term> toilets as real too, it finds {growth.withOsm.top100.x} of {growth.withOsm.top100.y} toilet hexagons in its
-            top 100.
+            Yes. The <Term id="growthSuburbs">growth suburbs</Term> were left out of training entirely. Counting toilets on both the official map and{' '}
+            <Term id="osm">OpenStreetMap</Term>, {growth.withOsm.top100.x} of the {growth.withOsm.top100.y} hexagons with a toilet are in its top 100, and it
+            predicts {growth.predicted} toilets where {growth.withOsm.actual} exist.
           </p>
           <Compare
             rows={[
-              [<Term id="top100">Toilet hexagons in the top 100</Term>, fmtRatio(growth.top100), `≈${growth.randomTop100} by random guessing`],
-              [<Term id="prAuc">PR-AUC</Term>, growth.prAuc.toFixed(3), `${growth.random.toFixed(3)} by random guessing`],
-              [
-                <>
-                  Toilet hexagons in the top 100, counting <Term id="osm">OpenStreetMap</Term> toilets too
-                </>,
-                fmtRatio(growth.withOsm.top100),
-                `≈${Math.round(growth.withOsm.random * 100)} by random guessing`,
-              ],
-              [
-                <>
-                  <Term id="prAuc">PR-AUC</Term>, counting OpenStreetMap toilets too
-                </>,
-                growth.withOsm.prAuc.toFixed(3),
-                `${growth.withOsm.random.toFixed(3)} by random guessing`,
-              ],
-              [<Term id="predictedVsReal">Toilets</Term>, `${growth.predicted} predicted`, `${growth.actual} real on the official map (${growth.withOsm.actual} with OpenStreetMap)`],
+              [<Term id="top100">Toilet hexagons in the top 100</Term>, fmtRatio(growth.withOsm.top100), `≈${Math.round(growth.withOsm.random * 100)} by random guessing`],
+              [<Term id="prAuc">PR-AUC</Term>, growth.withOsm.prAuc.toFixed(3), `${growth.withOsm.random.toFixed(3)} by random guessing`],
+              [<Term id="predictedVsReal">Toilets</Term>, `${growth.predicted} predicted`, `${growth.withOsm.actual} real`],
             ]}
           />
-          <p className="note">
-            {growth.hexes.toLocaleString()} hexagons, none of them in the training data. Predicting more than exist is expected: these suburbs are still filling in.
-          </p>
+          <p className="note">{growth.hexes.toLocaleString()} hexagons, none of them in the training data.</p>
         </section>
 
         <section aria-labelledby="q4">
