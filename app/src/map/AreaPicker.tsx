@@ -146,7 +146,10 @@ export function AreaPicker({ mode, area, radius, summary, selectedHex, onPick, o
 
       {area && summary && (
         <div className="area-sum">
-          <h2>{area[0]}</h2>
+          <h2>Selected area</h2>
+          <p className="area-sub">
+            {radius} km around {area[0]}
+          </p>
           {summary.hexes === 0 ? (
             <p className="area-note">{EMPTY[mode]}</p>
           ) : (
