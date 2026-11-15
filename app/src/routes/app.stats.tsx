@@ -4,6 +4,7 @@ import { Heatmap } from '../components/Heatmap'
 import { Term } from '../components/Term'
 import { fmtRatio, type Tracking } from '../lib/data'
 import trackingJson from '../data/tracking.json'
+import referencesJson from '../data/references.json'
 
 const t = trackingJson as Tracking
 const c = t.current
@@ -89,6 +90,13 @@ function TrackingPage() {
             the training data at all.
           </p>
           <SplitDiagram />
+          <h3>Why the scores aren't perfect, and shouldn't be</h3>
+          <p>
+            Every score is measured on hexagons the model never saw, so it can't copy their toilets. It can only score well by learning Sydney's pattern: more
+            people, shops and stations means more toilets. A perfect score would mean every place already has exactly the toilets that places like it have, so
+            Sydney would have no shortfalls. Lower <Term id="deviance">deviance</Term> means the model learned the pattern better, and what's left over is partly the
+            shortfalls we're looking for. That is how Pigeon AI measures need: against Sydney's own standard, applied the same way to growth and new suburbs.
+          </p>
         </section>
 
         <section aria-labelledby="heatmap-title">
@@ -145,6 +153,39 @@ function TrackingPage() {
             <Term id="seeds">mean of seeds 0–2</Term>.
           </p>
         </section>
+        <section aria-labelledby="references-title">
+          <details className="references">
+            <summary>
+              <h2 id="references-title">References</h2>
+            </summary>
+            <h3>Data</h3>
+            <ul>
+              {DATA_SOURCES.map(([name, url, use]) => (
+                <li key={url}>
+                  <a href={url}>{name}</a>: {use}
+                </li>
+              ))}
+            </ul>
+            <h3>
+              Council toilet plans ({referencesJson.councilSites} sites from {councils.length} councils)
+            </h3>
+            <p className="note">Used to check the model against where councils plan to build. Each link is the document the sites came from.</p>
+            <ul>
+              {councils.map(([council, docs]) => (
+                <li key={council}>
+                  <strong>{council}</strong>
+                  <ul>
+                    {docs.map((d) => (
+                      <li key={d.url + d.document}>
+                        <a href={d.url}>{d.document}</a> ({d.sites} {d.sites === 1 ? 'site' : 'sites'})
+                      </li>
+                    ))}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </details>
+        </section>
       </main>
     </div>
   )
@@ -193,3 +234,20 @@ function SplitDiagram() {
     </svg>
   )
 }
+
+const DATA_SOURCES: [string, string, string][] = [
+  ['National Public Toilet Map (data.gov.au)', 'https://data.gov.au/data/dataset/national-public-toilet-map', 'the official toilet locations the model trains on.'],
+  ['OpenStreetMap', 'https://www.openstreetmap.org/copyright', 'shops, food, transport, parks, sports grounds, playgrounds, beaches, footpaths, and toilets the official map misses (Geofabrik NSW extract and the Overpass API).'],
+  ['ABS 2021 Census DataPacks', 'https://www.abs.gov.au/census/find-census-data/datapacks', 'population per area.'],
+  ['ABS Australian Statistical Geography Standard', 'https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3', 'Greater Sydney, suburb and SA1 boundaries.'],
+  ['ABS SEIFA 2021', 'https://www.abs.gov.au/statistics/people/people-and-communities/socio-economic-indexes-areas-seifa-australia/latest-release', 'disadvantage deciles for the fairness check (never a model input).'],
+  ['NSW Planning Portal open data', 'https://www.planningportal.nsw.gov.au/opendata', 'zoning used to build features for future areas.'],
+  ['H3 hexagonal grid', 'https://h3geo.org', 'the resolution-9 hexagons everything is measured on.'],
+]
+
+const councils = Object.entries(
+  referencesJson.councilDocs.reduce<Record<string, typeof referencesJson.councilDocs>>((acc, d) => {
+    ;(acc[d.council] ??= []).push(d)
+    return acc
+  }, {}),
+)
