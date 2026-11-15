@@ -35,19 +35,32 @@
   "prAuc": 0.337,
   "random": 0.032,
   "predicted": 49,
-  "actual": 39
+  "actual": 39,
+  "withOsm": {
+   "toiletHexes": 48,
+   "top100": {
+    "x": 31,
+    "y": 48,
+    "pct": 65
+   },
+   "prAuc": 0.511,
+   "random": 0.043,
+   "actual": 56
+  }
  },
  "reach": {
+  "listed": 100,
   "poorest30": {
-   "x": 39,
-   "y": 120,
-   "pct": 32
+   "x": 30,
+   "y": 100,
+   "pct": 30
   },
   "richest30": {
-   "x": 17,
-   "y": 120,
+   "x": 14,
+   "y": 100,
    "pct": 14
   },
+  "noSeifa": 10,
   "deciles": [
    {
     "decile": 1,
