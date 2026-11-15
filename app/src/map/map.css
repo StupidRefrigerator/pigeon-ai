@@ -64,13 +64,50 @@
 .ask-composer button:disabled { opacity: .45; cursor: not-allowed; }
 .ask-open .hexcard { right: 396px; top: 16px; }
 
+/* area picker: suburb or point plus a radius, with the area's summary underneath */
+.area { position: absolute; z-index: 4; top: 66px; left: 16px; width: 300px; max-height: calc(100% - 252px); display: flex; flex-direction: column; padding: 8px; }
+.area-search { position: relative; display: flex; align-items: center; gap: 6px; padding: 0 4px 0 8px; border: 2px solid var(--blue); border-radius: 3px; background: #fff; }
+.area-search:focus-within { outline: 3px solid var(--pink); outline-offset: 2px; }
+.area-search input:focus-visible { outline: 0; }
+.area-search svg { width: 16px; height: 16px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.4; }
+.area-search input { flex: 1; min-width: 0; padding: 8px 0; border: 0; outline: 0; font: inherit; font-size: 14px; color: var(--blue); background: none; }
+.area-search input::placeholder { color: #8A97C2; }
+.area .x { width: 26px; height: 26px; flex: none; font-size: 19px; line-height: 1; border-radius: 2px; }
+.area .x:hover { background: rgba(50, 85, 164, .1); }
+.area-list { position: absolute; z-index: 1; top: calc(100% + 4px); left: -2px; right: -2px; margin: 0; padding: 3px; list-style: none; background: var(--paper); border: 2px solid var(--blue); border-radius: 3px; box-shadow: 4px 4px 0 var(--pink); }
+.area-list li { padding: 6px 8px; font-size: 14px; border-radius: 2px; cursor: pointer; }
+.area-list li[aria-selected="true"] { background: var(--yellow); color: var(--purple); }
+.area-miss { margin: 6px 2px 0; font-size: 12.5px; }
+.area-radius { display: grid; grid-template-columns: repeat(5, 1fr); gap: 3px; margin-top: 6px; }
+.area-radius button { padding: 5px 0; border-radius: 2px; font-size: 13px; font-weight: 700; white-space: nowrap; }
+.area-radius button[aria-checked="true"] { background: var(--blue); color: var(--paper); }
+.area-radius button:not([aria-checked="true"]):hover { background: rgba(50, 85, 164, .1); }
+.area-sum { display: flex; flex-direction: column; min-height: 0; margin-top: 10px; padding: 0 4px; animation: hexcard-in .22s var(--ease); }
+.area-sum h2 { margin: 0 0 8px; font: 400 19px/1.15 var(--poster); letter-spacing: .01em; }
+.area-sum .nums { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 2px solid var(--blue); border-bottom: 2px solid var(--blue); }
+.area-sum .nums div { padding: 8px 0 6px; }
+.area-sum .nums div + div { padding-left: 10px; border-left: 2px solid var(--blue); }
+.area-sum .nums b { display: block; font: 400 22px/1 var(--poster); font-variant-numeric: tabular-nums; }
+.area-sum .nums span { font-size: 12px; line-height: 1.2; display: block; margin-top: 3px; }
+.area-sum h3 { margin: 10px 0 4px; font-size: 13px; }
+.area-note { margin: 10px 0 2px; font-size: 13px; color: var(--ink-soft); }
+.area-spots { min-height: 0; overflow-y: auto; margin: 0 -4px; padding: 0; list-style: none; }
+.area-spots button { width: 100%; display: grid; grid-template-columns: 30px 1fr auto; align-items: center; gap: 8px; padding: 5px 4px; border-radius: 2px; text-align: left; font-size: 13.5px; }
+.area-spots button:hover { background: rgba(50, 85, 164, .08); }
+.area-spots button[aria-current="true"] { background: var(--purple); color: var(--paper); }
+.area-spots .rank { justify-self: start; min-width: 24px; padding: 1px 5px; text-align: center; background: var(--yellow); color: var(--purple); font-weight: 700; font-size: 12px; border-radius: 2px; }
+.area-spots .name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.area-spots .miss, .area-spots small { font-size: 12px; color: var(--ink-soft); }
+.area-spots button[aria-current="true"] :is(.miss, small) { color: inherit; }
+
 @media (max-width: 900px) {
   .mappage-title { font-size: 17px; }
   .hexmap-legend { display: none; }
   .hexmap-modes { bottom: 12px; }
+  .area { top: 56px; left: 8px; right: 8px; width: auto; max-height: 45%; }
   .hexcard, .mappage .hexcard, .ask-open .hexcard { top: auto; left: 8px; right: 8px; bottom: 64px; width: auto; max-height: 55%; }
   .ask-panel { width: 100%; top: 40%; border-left: 0; border-top: 2px solid var(--blue); box-shadow: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .hexcard, .ask-panel { animation: none; }
+  .hexcard, .ask-panel, .area-sum { animation: none; }
 }
