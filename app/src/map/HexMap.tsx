@@ -1,13 +1,15 @@
-import { AmbientLight, DirectionalLight, FlyToInterpolator, LightingEffect, type MapViewState, type PickingInfo } from '@deck.gl/core'
+import { AmbientLight, DirectionalLight, FlyToInterpolator, LightingEffect, WebMercatorViewport, type MapViewState, type PickingInfo } from '@deck.gl/core'
 import { H3HexagonLayer } from '@deck.gl/geo-layers'
 import { ScatterplotLayer } from '@deck.gl/layers'
 import DeckGL from '@deck.gl/react'
 import { cellToLatLng } from 'h3-js'
 import 'maplibre-gl/dist/maplibre-gl.css'
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Map as MaplibreMap } from 'maplibre-gl'
 import { Map as BaseMap } from 'react-map-gl/maplibre'
 import type { HeatmapData } from '../lib/data'
+import { selectArea, DEFAULT_RADIUS_KM, type Place } from './area'
+import { AreaPicker } from './AreaPicker'
 import { drivers, MODES, toCells, type Cell, type Cells, type Mode } from './cells'
 
 /** Keyless CARTO basemap, recoloured to the riso paper palette once it loads. */
@@ -44,7 +46,11 @@ function gapColor(x: number): RGBA {
   return c0
 }
 
+/** Hexes outside a picked area keep their hue but wash most of the way to paper. */
+const fade = ([r, g, b, a]: RGBA): RGBA => [r + (250 - r) * 0.72, g + (250 - g) * 0.72, b + (246 - b) * 0.72, a]
+
 const PURPLE: RGBA = [50, 24, 113, 255]
+const BLUE: RGBA = [50, 85, 164, 255]
 const MATERIAL = { ambient: 0.55, diffuse: 0.6, shininess: 12, specularColor: [255, 255, 255] as [number, number, number] }
 const LIGHTING = new LightingEffect({
   ambient: new AmbientLight({ color: [255, 255, 255], intensity: 1.05 }),
@@ -58,7 +64,23 @@ const lngLat = (hex: string): [number, number] => {
   const [lat, lng] = cellToLatLng(hex)
   return [lng, lat]
 }
+/** Width of the area panel plus its margin, kept clear when framing an area. */
+const AREA_PANEL_PX = 332
 const fmt = (x: number) => String(Math.round(x * 100) / 100)
+
+/** Camera that fits the circle in the map space right of the area panel, tilted so the columns still read. */
+function areaView(place: Place, radiusKm: number, el: HTMLElement | null, bearing: number): MapViewState {
+  const [, latitude, longitude] = place
+  const width = el?.clientWidth ?? 1200
+  const height = el?.clientHeight ?? 900
+  const panel = width > 900 ? AREA_PANEL_PX : 0
+  const metresPerPixel = (2 * radiusKm * 1000) / (Math.min(width - panel, height) * 0.62)
+  const zoom = Math.log2((40075016.686 * Math.cos((latitude * Math.PI) / 180)) / (512 * metresPerPixel))
+  const view = { longitude, latitude, zoom, pitch: 48, bearing }
+  if (!panel) return view
+  const [lng, lat] = new WebMercatorViewport({ ...view, width, height }).unproject([width / 2 - panel / 2, height / 2])
+  return { ...view, longitude: lng!, latitude: lat! }
+}
 
 function reduceMotion() {
   return typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -94,6 +116,9 @@ export default function HexMap({ dataUrl = '/heatmap.json' }: { dataUrl?: string
   const [mode, setMode] = useState<Mode>('today')
   const [view, setView] = useState<MapViewState>(VIEWS.today)
   const [selected, setSelected] = useState<Cell | null>(null)
+  const [area, setArea] = useState<Place | null>(null)
+  const [radius, setRadius] = useState(DEFAULT_RADIUS_KM)
+  const box = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     let live = true
@@ -113,7 +138,19 @@ export default function HexMap({ dataUrl = '/heatmap.json' }: { dataUrl?: string
     if (m === mode) return
     setMode(m)
     setSelected(null)
-    fly(VIEWS[m], 1800)
+    fly(area ? areaView(area, radius, box.current, view.bearing ?? 0) : VIEWS[m], 1800)
+  }
+
+  const pickArea = (place: Place, km = radius) => {
+    setArea(place)
+    setRadius(km)
+    setSelected(null)
+    fly(areaView(place, km, box.current, view.bearing ?? 0), 1600)
+  }
+  const clearArea = () => {
+    setArea(null)
+    setSelected(null)
+    fly(VIEWS[mode], 1600)
   }
 
   const select = (cell: Cell) => {
@@ -121,6 +158,11 @@ export default function HexMap({ dataUrl = '/heatmap.json' }: { dataUrl?: string
     const [longitude, latitude] = lngLat(cell.hex)
     fly({ longitude, latitude, zoom: Math.max(view.zoom, 13.4), pitch: 58, bearing: (view.bearing ?? 0) + 25 }, 1700)
   }
+
+  const summary = useMemo(() => (area && load.state === 'ready' ? selectArea(load.cells[mode], area, radius) : null), [area, radius, load, mode])
+  const inside = summary?.inside
+  /** deck.gl compares updateTriggers by value, and a Set has no keys, so the colours key on the area itself. */
+  const areaKey = area ? `${area[0]}|${radius}` : ''
 
   const z = zoomFactor(view.zoom)
   const layers = useMemo(() => {
@@ -137,8 +179,10 @@ export default function HexMap({ dataUrl = '/heatmap.json' }: { dataUrl?: string
     out.push(
       new H3HexagonLayer<Cell>({
         id: `hex-${mode}`, data, getHexagon: (d) => d.hex, extruded: true, coverage: 0.8, highPrecision: mode !== 'today',
-        elevationScale: scale, getElevation: (d) => d.predicted, getFillColor: (d) => gapColor(d.gap * gain),
+        elevationScale: scale, getElevation: (d) => d.predicted,
+        getFillColor: (d) => (inside && !inside.has(d.hex) ? fade(gapColor(d.gap * gain)) : gapColor(d.gap * gain)),
         material: MATERIAL, pickable: true, autoHighlight: true, highlightColor: [50, 24, 113, 200], opacity: dim,
+        updateTriggers: { getFillColor: areaKey },
       }),
     )
     const spots = data.filter((d) => d.spot !== undefined)
@@ -146,8 +190,18 @@ export default function HexMap({ dataUrl = '/heatmap.json' }: { dataUrl?: string
       out.push(
         new ScatterplotLayer<Cell>({
           id: `spots-${mode}`, data: spots, getPosition: (d) => [...lngLat(d.hex), d.predicted * scale], radiusUnits: 'pixels', getRadius: 6,
-          stroked: true, filled: true, getFillColor: [250, 250, 246, 220], getLineColor: PURPLE, lineWidthUnits: 'pixels', getLineWidth: 2.5,
-          parameters: { depthCompare: 'always' }, opacity: selected ? 0.4 : 1, updateTriggers: { getPosition: scale },
+          stroked: true, filled: true, getFillColor: [250, 250, 246, 220], lineWidthUnits: 'pixels', getLineWidth: 2.5,
+          getLineColor: (d) => (inside && !inside.has(d.hex) ? [50, 24, 113, 70] : PURPLE),
+          parameters: { depthCompare: 'always' }, opacity: selected ? 0.4 : 1, updateTriggers: { getPosition: scale, getLineColor: areaKey },
+        }),
+      )
+    }
+    if (area) {
+      out.push(
+        new ScatterplotLayer<Place>({
+          id: 'area-ring', data: [area], getPosition: (p) => [p[2], p[1]], radiusUnits: 'meters', getRadius: radius * 1000,
+          stroked: true, filled: false, getLineColor: BLUE, lineWidthUnits: 'pixels', getLineWidth: 2.5,
+          parameters: { depthCompare: 'always' }, updateTriggers: { getRadius: radius },
         }),
       )
     }
@@ -160,14 +214,14 @@ export default function HexMap({ dataUrl = '/heatmap.json' }: { dataUrl?: string
       )
     }
     return out
-  }, [load, mode, z, selected])
+  }, [load, mode, z, selected, area, radius, inside])
 
   const onClick = (info: PickingInfo<Cell>) => {
     if (info.object?.hex) select(info.object)
   }
 
   return (
-    <div className="hexmap">
+    <div className="hexmap" ref={box}>
       <DeckGL
         viewState={view}
         onViewStateChange={({ viewState }) => setView(viewState as MapViewState)}
@@ -187,6 +241,13 @@ export default function HexMap({ dataUrl = '/heatmap.json' }: { dataUrl?: string
           </button>
         ))}
       </div>
+
+      {load.state === 'ready' && (
+        <AreaPicker
+          mode={mode} area={area} radius={radius} summary={summary} selectedHex={selected?.hex ?? null}
+          onPick={pickArea} onRadius={(km) => (area ? pickArea(area, km) : setRadius(km))} onClear={clearArea} onSpot={select}
+        />
+      )}
 
       <div className="hexmap-legend slab">
         <b>Toilets missing</b>

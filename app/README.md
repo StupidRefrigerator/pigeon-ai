@@ -31,4 +31,10 @@ Clerk uses the team's "Pigeon AI" application (`app_3Ls1IZXrkbrqOOmBnD6QCVOAzTn`
 npm run build-data   # uses /tmp/pigeon-env/bin/python
 ```
 
-The script asserts that its numbers match `summary_table.csv`. V1–V10 have no CSV in this repo; their rows live in `scripts/curated_stats.json`.
+The script asserts that its numbers match `summary_table.csv`.
+
+`public/places.json` feeds the map's area search: the suburbs and landmarks from `data/reference/sydney_places.json` that have a map hexagon within 2 km. Regenerate it after `heatmap.json` changes:
+
+```bash
+node scripts/build_places.mjs
+``` V1–V10 have no CSV in this repo; their rows live in `scripts/curated_stats.json`.
