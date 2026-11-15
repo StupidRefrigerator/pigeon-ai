@@ -1,0 +1,76 @@
+/* /app map page. Paper slabs with a hard pink offset sit over a full-bleed 3D map (map concept 1's riso look). */
+.mappage { position: relative; height: 100%; overflow: hidden; background: #FAFAF6; }
+.mappage .slab { background: var(--paper); border: 2px solid var(--blue); box-shadow: 4px 4px 0 var(--pink); border-radius: 3px; }
+.hexmap { position: absolute; inset: 0; }
+.hexmap .maplibregl-ctrl-attrib { font-size: 10px; background: rgba(250, 250, 246, .75); }
+.hexmap .maplibregl-ctrl-logo { display: none; }
+
+.mappage-title { position: absolute; z-index: 4; top: 16px; left: 16px; margin: 0; padding: 8px 14px 7px; font: 400 22px/1.1 var(--poster); letter-spacing: .01em; }
+
+.hexmap-modes { position: absolute; z-index: 4; bottom: 24px; left: 50%; transform: translateX(-50%); display: inline-flex; gap: 3px; padding: 3px; }
+.hexmap-modes button { padding: 7px 14px; border-radius: 2px; font-weight: 700; font-size: 14px; white-space: nowrap; }
+.hexmap-modes button[aria-pressed="true"] { background: var(--blue); color: var(--paper); }
+.hexmap-modes button:not([aria-pressed="true"]):hover { background: rgba(50, 85, 164, .1); }
+
+.hexmap-legend { position: absolute; z-index: 4; bottom: 24px; left: 16px; width: 250px; padding: 10px 12px 11px; font-size: 12.5px; }
+.hexmap-legend .ramp { height: 10px; margin: 6px 0 3px; background: linear-gradient(90deg, #3255A4, #9FB0DC 16%, #DCE1EE 26%, #FFE800 42%, #FF8A1F 60%, #FF48B0 80%, #C21C86); }
+.hexmap-legend .ends { display: flex; justify-content: space-between; }
+.hexmap-legend p { margin: 6px 0 0; }
+.hexmap-legend .ring { display: inline-block; width: 11px; height: 11px; margin: 0 3px 0 2px; vertical-align: -1px; border: 2.5px solid var(--purple); border-radius: 50%; background: var(--paper); }
+
+.hexmap-status { position: absolute; z-index: 4; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; padding: 10px 16px; font-weight: 700; }
+
+/* click card (map concept 3) */
+.hexcard { position: absolute; z-index: 5; top: 16px; right: 16px; width: 340px; max-height: calc(100% - 32px); overflow-y: auto; padding: 18px 20px 16px; transform-origin: top right; animation: hexcard-in .22s var(--ease); }
+@keyframes hexcard-in { from { opacity: 0; transform: translateY(6px) scale(.98); } }
+.hexcard .x { position: absolute; top: 8px; right: 8px; width: 30px; height: 30px; font-size: 20px; line-height: 1; border-radius: 2px; }
+.hexcard .x:hover { background: rgba(50, 85, 164, .1); }
+.hexcard h2 { margin: 0 30px 4px 0; font: 400 22px/1.1 var(--poster); letter-spacing: .01em; }
+.hexcard .sub { margin: 0 0 14px; font-size: 13px; color: var(--ink-soft); display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; }
+.hexcard .tag { background: var(--yellow); color: var(--purple); font-weight: 700; font-size: 12px; padding: 2px 7px; border-radius: 2px; }
+.hexcard .nums { display: grid; grid-template-columns: 1fr 1fr; margin-bottom: 14px; border-top: 2px solid var(--blue); border-bottom: 2px solid var(--blue); }
+.hexcard .nums div { padding: 10px 0 8px; }
+.hexcard .nums div + div { padding-left: 14px; border-left: 2px solid var(--blue); }
+.hexcard .nums b { display: block; font: 400 30px/1 var(--poster); font-variant-numeric: tabular-nums; }
+.hexcard .nums span { font-size: 13px; }
+.hexcard .row { display: flex; justify-content: space-between; gap: 12px; padding: 3px 0; font-size: 14px; }
+.hexcard h3 { margin: 14px 0 8px; font-size: 14px; }
+.hexcard .drv { display: grid; gap: 4px; font-size: 13px; }
+.hexcard .drv-row { display: grid; grid-template-columns: 1fr 92px; align-items: center; gap: 10px; }
+.hexcard .drv i { display: block; height: 10px; background: var(--pink); }
+.hexcard .drv i.neg { background: var(--blue); opacity: .55; }
+
+/* Ask Pigeon: hidden until opened */
+.ask-toggle { position: absolute; z-index: 4; top: 16px; right: 16px; display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; font-weight: 700; font-size: 14px; }
+.ask-toggle[hidden] { display: none; }
+.ask-toggle svg, .ask-close svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; }
+.ask-toggle:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--pink); }
+.mappage .hexcard { top: 68px; }
+.ask-panel { position: absolute; z-index: 6; top: 0; right: 0; bottom: 0; width: 380px; display: flex; flex-direction: column; background: var(--paper); border-left: 2px solid var(--blue); box-shadow: -4px 0 0 rgba(255, 72, 176, .5); animation: ask-in .26s var(--ease); }
+.ask-panel[hidden] { display: none; }
+@keyframes ask-in { from { transform: translateX(24px); opacity: 0; } }
+.ask-panel header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px 14px; border-bottom: 2px solid var(--blue); }
+.ask-panel h2 { margin: 0; font: 400 20px/1.1 var(--poster); }
+.ask-close { padding: 5px 10px; border: 2px solid var(--blue) !important; border-radius: 3px; font-weight: 700; font-size: 13px; }
+.ask-close:hover { background: var(--yellow) !important; }
+.ask-body { flex: 1; overflow-y: auto; padding: 22px 22px 10px; }
+.ask-body p { margin: 0 0 10px; max-width: 40ch; }
+.ask-soon { display: inline-block; padding: 2px 8px; background: var(--yellow); color: var(--purple); font-weight: 700; }
+.ask-composer { display: flex; gap: 8px; padding: 14px 20px 18px; border-top: 2px solid var(--blue); }
+.ask-composer input { flex: 1; min-width: 0; padding: 10px 12px; border: 2px solid var(--blue); border-radius: 3px; font: inherit; color: var(--blue); background: #fff; }
+.ask-composer input:disabled { background: var(--paper-2); }
+.ask-composer input::placeholder { color: #8A97C2; }
+.ask-composer button { padding: 0 16px; border-radius: 3px; font-weight: 700; color: var(--paper) !important; background: var(--blue) !important; }
+.ask-composer button:disabled { opacity: .45; cursor: not-allowed; }
+.ask-open .hexcard { right: 396px; top: 16px; }
+
+@media (max-width: 900px) {
+  .mappage-title { font-size: 17px; }
+  .hexmap-legend { display: none; }
+  .hexmap-modes { bottom: 12px; }
+  .hexcard, .mappage .hexcard, .ask-open .hexcard { top: auto; left: 8px; right: 8px; bottom: 64px; width: auto; max-height: 55%; }
+  .ask-panel { width: 100%; top: 40%; border-left: 0; border-top: 2px solid var(--blue); box-shadow: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hexcard, .ask-panel { animation: none; }
+}

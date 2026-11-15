@@ -2,7 +2,7 @@
 
 TanStack Start (React) + Clerk, hosted on Vercel via Nitro.
 
-- `/` landing page (`src/routes/index.tsx`, styles and canvas code in `src/landing/`), `/app` dashboard shell (sidebar, user menu, Admin group; marked work in progress), `/app/stats` Tracking (V12 results, results map, version history), `/app/tests` Tests (four questions).
+- `/` landing page (`src/routes/index.tsx`, styles and canvas code in `src/landing/`), `/app` dashboard (sidebar, user menu, Admin group; marked work in progress) with the 3D hexagon map (`src/map/`, deck.gl + MapLibre, loaded in the browser only), `/app/stats` Tracking (V12 results, results map, version history), `/app/tests` Tests (four questions).
 - Model shown: V12. Every prediction is held out (spatial cross-validation). The suggested list is ranked by gap only.
 
 ## Run locally
@@ -25,7 +25,7 @@ Clerk uses the team's "Pigeon AI" application (`app_3Ls1IZXrkbrqOOmBnD6QCVOAzTn`
 /tmp/pigeon-env/bin/python scripts/build_landing_data.py
 ```
 
-`src/data/tracking.json`, `src/data/stats.json` (Tracking and Tests pages, bundled) and `public/heatmap.json` (the Tracking-page map, fetched at runtime) are generated from the V12 outputs in `data/model/` and `experiments/v2/combos/out/` and committed:
+`src/data/tracking.json`, `src/data/stats.json` (Tracking and Tests pages, bundled) and `public/heatmap.json` (the `/app` and Tracking-page maps, fetched at runtime) are generated from the V12 outputs in `data/model/` and `experiments/v2/combos/out/` and committed:
 
 ```bash
 npm run build-data   # uses /tmp/pigeon-env/bin/python
