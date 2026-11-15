@@ -115,7 +115,7 @@ function UserMenu() {
         <UserButton showName />
       </Show>
       <Show when="signed-out">
-        <SignInButton>
+        <SignInButton forceRedirectUrl="/app" signUpForceRedirectUrl="/app">
           <button className="dash-signin">Sign in</button>
         </SignInButton>
       </Show>
