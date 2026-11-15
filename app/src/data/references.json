@@ -1,0 +1,323 @@
+{
+ "councilSites": 56,
+ "councilDocs": [
+  {
+   "sites": 2,
+   "council": "Bayside",
+   "document": "Bayside project page",
+   "url": "https://www.bayside.nsw.gov.au/planning-and-development/projects/sir-joseph-banks-park-carpark-and-amenities"
+  },
+  {
+   "sites": 1,
+   "council": "Blacktown",
+   "document": "Gartner Rose project note; Blacktown budget",
+   "url": "https://www.gartnerrose.com/news/project-award-for-ken-birdsey-park-amenities-building/"
+  },
+  {
+   "sites": 1,
+   "council": "Blacktown",
+   "document": "The Independent",
+   "url": "https://theindependentmagazine.com.au/work-begins-on-woodbury-reserve-bmx-pump-track/"
+  },
+  {
+   "sites": 1,
+   "council": "Camden",
+   "document": "Camden major projects",
+   "url": "https://www.camden.nsw.gov.au/major-projects/upgrades-to-amenities-buildings"
+  },
+  {
+   "sites": 1,
+   "council": "Camden",
+   "document": "Camden major projects",
+   "url": "https://www.camden.nsw.gov.au/major-projects/harrington-park-reserve-new-amenities-building"
+  },
+  {
+   "sites": 1,
+   "council": "Camden",
+   "document": "Camden/press (search summary)",
+   "url": "https://www.camden.nsw.gov.au/major-projects/upgrades-to-amenities-buildings"
+  },
+  {
+   "sites": 1,
+   "council": "Campbelltown",
+   "document": "AusTender listing",
+   "url": "https://www.australiantenders.com.au/tenders/580316/design-and-construction-of-bensley-reserve-amenity-building"
+  },
+  {
+   "sites": 1,
+   "council": "Canada Bay",
+   "document": "Canada Bay Collaborate page",
+   "url": "https://www.collaborate.canadabay.nsw.gov.au/five-dock-park-precinct/amenities"
+  },
+  {
+   "sites": 1,
+   "council": "Canada Bay",
+   "document": "Canada Bay Collaborate page",
+   "url": "https://collaborate.canadabay.nsw.gov.au/hallidaypark"
+  },
+  {
+   "sites": 1,
+   "council": "Canada Bay",
+   "document": "Henry Lawson Park Concept Plan FAQ",
+   "url": "https://canadabay.engagementhub.com.au/henry-lawson-park-concept-plan"
+  },
+  {
+   "sites": 1,
+   "council": "Canterbury-Bankstown",
+   "document": "CBCity upcoming projects",
+   "url": "https://www.cbcity.nsw.gov.au/planning-and-building/upcoming-projects/allum-park-greenacre-new-amenities-building"
+  },
+  {
+   "sites": 1,
+   "council": "Canterbury-Bankstown",
+   "document": "Council News 2019",
+   "url": "https://councilnews.com.au/2019/03/4862761-parks-and-precincts-get-go-ahead"
+  },
+  {
+   "sites": 2,
+   "council": "City of Sydney",
+   "document": "Information Relevant To Item 7.5, Council 17 Mar 2025",
+   "url": "https://meetings.cityofsydney.nsw.gov.au/documents/s92566/Information%20Relevant%20To%20Item%207.5%20-%20Project%20Scope%20-%20New%20Public%20Toilet%20Building%20Landscape%20Works%20and%20U.pdf"
+  },
+  {
+   "sites": 1,
+   "council": "City of Sydney",
+   "document": "LPP report D/2021/1088 (site A1022)",
+   "url": "https://meetings.cityofsydney.nsw.gov.au/documents/s61295/Item%207%20-%20D20211088%20-%20various%20locations%20around%20Central%20Sydney%20and%20Paddington.pdf"
+  },
+  {
+   "sites": 1,
+   "council": "City of Sydney",
+   "document": "LPP report D/2021/1088 (site A1026)",
+   "url": "https://meetings.cityofsydney.nsw.gov.au/documents/s61295/Item%207%20-%20D20211088%20-%20various%20locations%20around%20Central%20Sydney%20and%20Paddington.pdf"
+  },
+  {
+   "sites": 1,
+   "council": "City of Sydney",
+   "document": "New APT page; LPP report D/2021/1087",
+   "url": "https://www.cityofsydney.nsw.gov.au/improving-streets-public-spaces/new-automatic-public-toilets-2021-22"
+  },
+  {
+   "sites": 1,
+   "council": "City of Sydney",
+   "document": "New APT page; LPP report D/2021/1088 (site A1023)",
+   "url": "https://meetings.cityofsydney.nsw.gov.au/documents/s61295/Item%207%20-%20D20211088%20-%20various%20locations%20around%20Central%20Sydney%20and%20Paddington.pdf"
+  },
+  {
+   "sites": 1,
+   "council": "City of Sydney",
+   "document": "New automatic public toilets project page",
+   "url": "https://www.cityofsydney.nsw.gov.au/improving-streets-public-spaces/new-automatic-public-toilets-2021-22"
+  },
+  {
+   "sites": 1,
+   "council": "City of Sydney",
+   "document": "New automatic public toilets project page (All locations table)",
+   "url": "https://www.cityofsydney.nsw.gov.au/improving-streets-public-spaces/new-automatic-public-toilets-2021-22"
+  },
+  {
+   "sites": 1,
+   "council": "Cumberland",
+   "document": "Cumberland Have Your Say",
+   "url": "https://haveyoursay.cumberland.nsw.gov.au/york-street-park-exeloo"
+  },
+  {
+   "sites": 2,
+   "council": "Cumberland",
+   "document": "Cumberland Have Your Say (York St page)",
+   "url": "https://haveyoursay.cumberland.nsw.gov.au/york-street-park-exeloo"
+  },
+  {
+   "sites": 1,
+   "council": "Hornsby",
+   "document": "Hornsby news",
+   "url": "https://www.hornsby.nsw.gov.au/council/noticeboard/news/old-mans-valley-field-of-play-to-become-hornsbys-new-backyard"
+  },
+  {
+   "sites": 1,
+   "council": "Hornsby",
+   "document": "Hornsby news",
+   "url": "https://www.hornsby.nsw.gov.au/council/noticeboard/news/new-amenities-promoting-diversity-in-sport-open-at-ron-payne-park"
+  },
+  {
+   "sites": 1,
+   "council": "Hornsby",
+   "document": "Hornsby works page",
+   "url": "https://www.hornsby.nsw.gov.au/council/noticeboard/works/park-playspace-projects/pennant-hills-park-new-no.2-amenities-building"
+  },
+  {
+   "sites": 1,
+   "council": "Inner West",
+   "document": "Inner West Public Toilet Strategy 2022 #3",
+   "url": "https://www.innerwest.nsw.gov.au/sites/default/files/2026-01/210323%20IWC%20Public%20Toilet%20Strategy.pdf"
+  },
+  {
+   "sites": 1,
+   "council": "Inner West",
+   "document": "Inner West Public Toilet Strategy 2022, Programmed Upgrades #16",
+   "url": "https://www.innerwest.nsw.gov.au/sites/default/files/2026-01/210323%20IWC%20Public%20Toilet%20Strategy.pdf"
+  },
+  {
+   "sites": 1,
+   "council": "Inner West",
+   "document": "Inner West Public Toilet Strategy 2022, Programmed Upgrades table; project page",
+   "url": "https://www.innerwest.nsw.gov.au/develop/council-run-works-and-projects/park-building-and-road-projects/upcoming-and-ongoing-projects/pioneers-memorial-park-new-public-toilets"
+  },
+  {
+   "sites": 1,
+   "council": "Inner West",
+   "document": "Inner West project page",
+   "url": "https://www.innerwest.nsw.gov.au/develop/council-run-works-and-projects/park-building-and-road-projects/upcoming-and-ongoing-projects/mackey-park-amenities-upgrade"
+  },
+  {
+   "sites": 1,
+   "council": "Inner West",
+   "document": "Inner West project page; Strategy p172",
+   "url": "https://www.innerwest.nsw.gov.au/capital-works-projects/gladstone-park-new-public-toilets"
+  },
+  {
+   "sites": 1,
+   "council": "Inner West",
+   "document": "Inner West project page; news 2022",
+   "url": "https://www.innerwest.nsw.gov.au/develop/council-run-works-and-projects/park-building-and-road-projects/upcoming-and-ongoing-projects/camperdown-memorial-rest-park-new-public-toilet"
+  },
+  {
+   "sites": 1,
+   "council": "Lane Cove",
+   "document": "Stringybark Reserve masterplan",
+   "url": "https://issuu.com/lanecovecouncil/docs/stringybark_reserve_draft_masterplan"
+  },
+  {
+   "sites": 1,
+   "council": "NSW Government / Liverpool",
+   "document": "NSW Planning Parks for People",
+   "url": "https://www.planning.nsw.gov.au/policy-and-legislation/open-space/parks-for-people/leppington"
+  },
+  {
+   "sites": 1,
+   "council": "NSW NPWS",
+   "document": "NSW Environment and Heritage update Feb 2025",
+   "url": "https://environment.nsw.gov.au/topics/parks-reserves-and-protected-areas/park-management/community-engagement/ku-ring-gai-chase-national-park/barrenjoey-headland-amenities/update-february-2025"
+  },
+  {
+   "sites": 1,
+   "council": "Northern Beaches",
+   "document": "AusTender listing",
+   "url": "https://www.australiantenders.com.au/tenders/533245/construction-of-little-manly-point-amenities"
+  },
+  {
+   "sites": 1,
+   "council": "Northern Beaches",
+   "document": "Northern Beaches media release Jul 2026",
+   "url": "https://www.northernbeaches.nsw.gov.au/council/news/family-friendly-facilities-way-freshie"
+  },
+  {
+   "sites": 1,
+   "council": "Parramatta",
+   "document": "Parramatta media release",
+   "url": "https://www.cityofparramatta.nsw.gov.au/document/39051"
+  },
+  {
+   "sites": 1,
+   "council": "Parramatta",
+   "document": "Participate Parramatta",
+   "url": "https://participate.cityofparramatta.nsw.gov.au/parramatta-station-car-park-toilets"
+  },
+  {
+   "sites": 1,
+   "council": "Parramatta",
+   "document": "Participate Parramatta",
+   "url": "https://participate.cityofparramatta.nsw.gov.au/maxruddockreserve"
+  },
+  {
+   "sites": 1,
+   "council": "Parramatta",
+   "document": "Participate Parramatta RTR-JRR page",
+   "url": "https://participate.cityofparramatta.nsw.gov.au/rtr-jrr-sporting-facilities"
+  },
+  {
+   "sites": 1,
+   "council": "Penrith",
+   "document": "AusTender listing; Western Weekender",
+   "url": "https://www.australiantenders.com.au/tenders/602264/cook-park-precinct-upgrade"
+  },
+  {
+   "sites": 1,
+   "council": "Penrith",
+   "document": "Inside Local Government Jul 2025",
+   "url": "https://insidelocalgovernment.com.au/new-penrith-amenities-block-a-game-changer"
+  },
+  {
+   "sites": 1,
+   "council": "Randwick",
+   "document": "Eastern Suburbs Life letter (secondary)",
+   "url": "https://issuu.com/easternsuburbslife/docs/esled53may2023small/s/23557358"
+  },
+  {
+   "sites": 1,
+   "council": "Randwick",
+   "document": "Randwick Your Say",
+   "url": "https://www.yoursay.randwick.nsw.gov.au/dunninghamamenities"
+  },
+  {
+   "sites": 1,
+   "council": "Strathfield",
+   "document": "Strathfield Have Your Say",
+   "url": "https://haveyoursay.strathfield.nsw.gov.au/amenity-upgrade-austin-park"
+  },
+  {
+   "sites": 1,
+   "council": "Strathfield",
+   "document": "Strathfield Have Your Say",
+   "url": "https://haveyoursay.strathfield.nsw.gov.au/amenity-upgrade-freshwater-park"
+  },
+  {
+   "sites": 1,
+   "council": "Sutherland",
+   "document": "NSW Liberal announcement (political commitment)",
+   "url": "https://nswliberal.org.au/alex-xu/news/liberals-commit-to-local-infrastructure-upgrades-a"
+  },
+  {
+   "sites": 1,
+   "council": "Sutherland",
+   "document": "St George & Sutherland Leader",
+   "url": "https://www.theleader.com.au/story/7470508/toilets-for-monro-park/"
+  },
+  {
+   "sites": 1,
+   "council": "Sutherland",
+   "document": "Sutherland Join the Conversation",
+   "url": "https://jointheconversation.sutherlandshire.nsw.gov.au/public-amenities"
+  },
+  {
+   "sites": 1,
+   "council": "Sutherland",
+   "document": "Sutherland media release",
+   "url": "https://sutherlandshire.nsw.gov.au/your-council/news-and-publications/council-news/new-facilities-to-come-as-a-relief-to-users-of-woolooware-bay-shared-pathway"
+  },
+  {
+   "sites": 1,
+   "council": "The Hills",
+   "document": "Hills Focus 2023-25",
+   "url": "https://issuu.com/thehillsshirecouncil/docs/hill_focus_magazine_autumn_2025"
+  },
+  {
+   "sites": 1,
+   "council": "Waverley",
+   "document": "Bondi Beach precinct response Jun 2024",
+   "url": "https://www.waverley.nsw.gov.au/residents/precinct_committees/meetings_docs/bondi_beach/2024/response_reports/Bondi_Beach_Response_Report_June_2024_2.pdf"
+  },
+  {
+   "sites": 1,
+   "council": "Waverley",
+   "document": "Inside Local Government Jan 2026",
+   "url": "https://insidelocalgovernment.com.au/waverley-frothing-as-work-begins-on-new-bronte-surf-life-saving-club/"
+  },
+  {
+   "sites": 1,
+   "council": "Woollahra",
+   "document": "Woollahra Your Say page",
+   "url": "https://yoursay.woollahra.nsw.gov.au/gugara-toilet"
+  }
+ ]
+}

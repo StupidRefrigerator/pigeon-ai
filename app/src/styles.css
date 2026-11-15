@@ -90,3 +90,11 @@ button, input, select { font: inherit; }
   .jimmy h2 { font-size: 20px; }
   .jimmy .map { height: 420px; }
 }
+
+.jimmy h3 { color: #fff; font-size: 17px; font-weight: 600; margin: 22px 0 6px; }
+.jimmy .references summary { cursor: pointer; list-style: none; }
+.jimmy .references summary::-webkit-details-marker { display: none; }
+.jimmy .references summary h2 { display: inline-block; width: 100%; }
+.jimmy .references summary h2::after { content: ' ▸'; color: var(--muted); }
+.jimmy .references[open] summary h2::after { content: ' ▾'; }
+.jimmy .references li ul { margin: 4px 0 8px; }
