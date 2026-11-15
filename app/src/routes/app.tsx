@@ -1,6 +1,6 @@
 import { Show, SignInButton, UserButton } from '@clerk/tanstack-react-start'
 import { Link, Outlet, createFileRoute, useRouterState } from '@tanstack/react-router'
-import { useState, type CSSProperties } from 'react'
+import { useEffect, useState, type CSSProperties } from 'react'
 import { clerkEnabled } from '../lib/clerk'
 import '../shell.css'
 
@@ -18,15 +18,28 @@ function AppShell() {
   const path = useRouterState({ select: (s) => s.location.pathname.replace(/\/$/, '') })
   const adminPage = ADMIN_PAGES[path]
   const [adminOpen, setAdminOpen] = useState(true)
+  const [folded, setFolded] = useState(false)
+
+  useEffect(() => {
+    setFolded(localStorage.getItem('pigeon-sidebar') === 'folded')
+  }, [])
+  useEffect(() => {
+    localStorage.setItem('pigeon-sidebar', folded ? 'folded' : 'open')
+  }, [folded])
 
   return (
-    <div className="dash">
-      <aside className="dash-side">
+    <div className={folded ? 'dash folded' : 'dash'}>
+      <aside className="dash-side" id="dash-side" inert={folded}>
         <div className="dash-brand">
           <Link to="/" className="dash-home" aria-label="Pigeon AI home">
             <Logo />
             <span className="dash-word">PIGEON AI</span>
           </Link>
+          <button className="dash-fold" aria-label="Hide sidebar" aria-controls="dash-side" aria-expanded="true" onClick={() => setFolded(true)}>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m15 6-6 6 6 6" />
+            </svg>
+          </button>
         </div>
 
         <div className="dash-group">
@@ -77,6 +90,13 @@ function AppShell() {
         <UserMenu />
       </aside>
 
+      {folded && (
+        <button className="dash-unfold" aria-label="Show sidebar" aria-controls="dash-side" aria-expanded="false" onClick={() => setFolded(false)}>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m9 6 6 6-6 6" />
+          </svg>
+        </button>
+      )}
       <main className="dash-main">
         {adminPage ? (
           <div className="dash-admin-page">
