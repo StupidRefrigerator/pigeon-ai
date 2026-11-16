@@ -24,7 +24,7 @@ Each entry lists the decision, the reason, and the trade-off.
 
 4. **Use a random forest regressor.** On our data it matches or slightly beats gradient boosting. A forest averages 300 trees, each grown on a random sample of hexes and features. A forest cannot be drawn, so we also fit a depth-3 surrogate tree to the forest's predictions for the report. It matches them with R² 0.79.
 
-5. **Control complexity with leaf size, not L1 or L2.** L1 and L2 shrink the coefficients of linear models, and a forest has none. It is kept simple with `min_samples_leaf=20` and `max_features=0.5`. Only 1,911 hexes have a toilet, so small leaves would memorise individual town centres.
+5. **Control complexity with leaf size, not L1 or L2.** L1 and L2 shrink the coefficients of linear models, and a forest has none. It is kept simple with `min_samples_leaf=20` and `max_features=0.5`. Only 1,911 hexes have a toilet, so small leaves would memorise individual town centres. `experiments/leaf_size/sweep.py` tests leaf sizes 1 to 500 on V12: error on unseen areas is lowest at 10 to 20 (deviance 0.380 and 0.378), against 0.409 at leaf size 1 and 0.432 at 500.
 
 6. **Read the output as an expected count and a probability.** The forest predicts an expected count, such as 1.2. The chance of at least one toilet is `1 - exp(-prediction)`, so 1.2 means about 70%.
 
