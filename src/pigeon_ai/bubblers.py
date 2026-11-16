@@ -5,6 +5,7 @@ point lies within MATCH_M, so a fountain on both maps counts once. The downloads
 data/raw/bubblers/ (see DATA.md); scripts/build_bubblers.py writes the processed files.
 """
 import json
+from typing import NamedTuple
 
 import geopandas as gpd
 import h3
@@ -20,13 +21,25 @@ LABEL = "bubbler_count"
 MATCH_M = 50
 NOT_PUBLIC = {"private", "customers", "no"}
 
-# File stem in RAW_DIR/official -> the council it covers. Penrith and Fairfield are partial layers.
+
+class CouncilLayer(NamedTuple):
+    council: str
+    #: ArcGIS REST layer; scripts/fetch_bubblers.py queries it for every feature as GeoJSON.
+    url: str
+
+
+# File stem in RAW_DIR/official -> its council layer. Penrith and Fairfield are partial layers.
 OFFICIAL = {
-    "cos_fountains": "SYDNEY",
-    "parramatta_fountains": "CITY OF PARRAMATTA",
-    "fairfield_bubblers": "FAIRFIELD",
-    "northern_beaches_bubblers": "NORTHERN BEACHES",
-    "penrith_bubblers": "PENRITH",
+    "cos_fountains": CouncilLayer(
+        "SYDNEY", "https://services1.arcgis.com/cNVyNtjGVZybOQWZ/arcgis/rest/services/Drinking_fountains/FeatureServer/0"),
+    "parramatta_fountains": CouncilLayer(
+        "CITY OF PARRAMATTA", "https://services6.arcgis.com/NrOjMi9LSYL3MUze/arcgis/rest/services/Drinking_Fountains/FeatureServer/0"),
+    "fairfield_bubblers": CouncilLayer(
+        "FAIRFIELD", "https://services9.arcgis.com/ptMeJSvCigyke2Tt/arcgis/rest/services/Bubbler_Inspection_Data_View_Layer/FeatureServer/0"),
+    "northern_beaches_bubblers": CouncilLayer(
+        "NORTHERN BEACHES", "https://maps.northernbeaches.nsw.gov.au/arcgis/rest/services/Bubblers/MapServer/0"),
+    "penrith_bubblers": CouncilLayer(
+        "PENRITH", "https://services-ap1.arcgis.com/2ifYh4l3ar2sldJb/arcgis/rest/services/Bubbler_Locations/FeatureServer/0"),
 }
 POINT_COLUMNS = ["source", "council", "rule", "osm_id", "lat", "lng", "hex_id", "counted"]
 LABEL_COLUMNS = ["hex_id", "area", "lga", "bubbler_osm", "bubbler_official", LABEL]
@@ -78,7 +91,7 @@ def load_osm(path):
 
 def load_official(folder):
     rows = []
-    for stem, council in OFFICIAL.items():
+    for stem, (council, _) in OFFICIAL.items():
         for f in json.loads((folder / f"{stem}.geojson").read_text())["features"]:
             if f["geometry"] is None:
                 continue
@@ -113,7 +126,7 @@ def coverage(points):
     g = to_gdf(points)
     osm = g[g.source == "osm"]
     rows = []
-    for stem, council in OFFICIAL.items():
+    for stem, (council, _) in OFFICIAL.items():
         off = g[g.source == stem]
         osm_in = osm[osm.council == council]
         off_matched = nearest_m(off, osm) <= MATCH_M
