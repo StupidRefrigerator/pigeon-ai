@@ -37,10 +37,11 @@
 
 .dash-group-h { font-size: 13px; color: var(--ink-soft); padding: 0 8px 6px; }
 .dash-infra { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
-.dash-infra li { display: grid; grid-template-columns: 18px 1fr auto; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 6px; }
+.dash-infra li > * { display: grid; grid-template-columns: 18px 1fr auto; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 6px; color: inherit; text-decoration: none; }
+.dash-infra a:hover { background: var(--paper-2); }
+.dash-infra a[aria-current] { background: var(--paper-2); font-weight: 700; }
 .dash-infra .swatch { width: 16px; height: 16px; border-radius: 50%; background: var(--c); box-shadow: 2px 1px 0 var(--blue); }
 .dash-infra small { font-size: 12px; }
-.dash-infra .live { background: var(--paper-2); font-weight: 700; }
 .dash-infra .live small { color: var(--paper); background: var(--blue); padding: 1px 7px; border-radius: 99px; font-weight: 400; }
 .dash-infra .soon { opacity: .55; }
 .dash-infra .soon .swatch { background: repeating-linear-gradient(45deg, var(--c) 0 2px, transparent 2px 4px); }

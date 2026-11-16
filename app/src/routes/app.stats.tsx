@@ -3,8 +3,9 @@ import 'leaflet/dist/leaflet.css'
 import { Heatmap } from '../components/Heatmap'
 import { Term } from '../components/Term'
 import { capitalize, LIVE_LAYERS, type Unit } from '../infra'
-import { LAYER_DATA } from '../infra-data'
+import { LAYER_DATA, type Labels } from '../infra-data'
 import { useLayer } from '../layer'
+import { Caveat } from '../components/Caveat'
 import { fmtRatio, type References } from '../lib/data'
 
 export const Route = createFileRoute('/app/stats')({ component: TrackingPage })
@@ -21,7 +22,7 @@ const settingsFor = (many: string) =>
     ['Rebalancing', 'None', `Keeps predictions on the real scale: 1.2 means 1.2 ${many}`],
   ] as const
 
-// From experiments/leaf_size/results.csv: leaf size, deviance on trained hexagons, deviance on unseen areas, PR-AUC.
+// Tested on toilets, from experiments/leaf_size/results.csv: leaf size, deviance on trained hexagons, deviance on unseen areas, PR-AUC.
 const LEAF_SWEEP = [
   [1, 0.0784, 0.4091, 0.5592],
   [5, 0.1705, 0.3845, 0.5734],
@@ -37,8 +38,9 @@ const ORDINALS = ['first', 'second', 'third', 'fourth'] as const
 function TrackingPage() {
   const layer = useLayer()
   const { one, many } = layer.unit
-  const { tracking: t, stats, references, officialMap } = LAYER_DATA[layer.id]
+  const { tracking: t, stats, references, labels, osmInLabel, meanDeviance } = LAYER_DATA[layer.id]
   const c = t.current
+  const previous = t.versions.at(-2)?.id
   const settings = settingsFor(many)
   return (
     <div className="jimmy">
@@ -48,6 +50,7 @@ function TrackingPage() {
           <p>
             Pigeon AI predicts where the next public infrastructure should go, from a bird's-eye view of Sydney today and of its growth and future suburbs. {`Public ${many} are the ${ORDINALS[LIVE_LAYERS.indexOf(layer)]} layer.`}
           </p>
+          <Caveat />
         </section>
 
         <section aria-labelledby="selected-title">
@@ -57,13 +60,15 @@ function TrackingPage() {
               <strong>
                 <Term id="prAuc">PR-AUC</Term>:
               </strong>{' '}
-              {c.prAuc.value.toFixed(3)} (V11: {c.prAuc.was.toFixed(3)}; <Term id="random">random guessing</Term>: {c.prAuc.random.toFixed(3)}).
+              {c.prAuc.value.toFixed(3)} ({c.prAuc.was !== undefined && `${previous}: ${c.prAuc.was.toFixed(3)}; `}
+              <Term id="random">random guessing</Term>: {c.prAuc.random.toFixed(3)}).
             </li>
             <li>
               <strong>
                 <Term id="deviance">Poisson deviance</Term>:
               </strong>{' '}
-              {c.deviance.value.toFixed(3)} (V11: {c.deviance.was.toFixed(3)} against 0.719 for predicting the average everywhere).
+              {c.deviance.value.toFixed(3)} ({c.deviance.was !== undefined && `${previous}: ${c.deviance.was.toFixed(3)} `}against {meanDeviance.toFixed(3)} for predicting the
+              average everywhere).
             </li>
             <li>
               <strong>
@@ -71,12 +76,14 @@ function TrackingPage() {
               </strong>{' '}
               {fmtRatio(c.top1000)} of the model's 1,000 highest <Term id="hexagon">hexagons</Term> have a real {one}.
             </li>
-            <li>
-              <strong>
-                <Term id="council">Council-planned sites</Term>:
-              </strong>{' '}
-              {fmtRatio(c.council)} land in the model's top 10%.
-            </li>
+            {c.council && (
+              <li>
+                <strong>
+                  <Term id="council">Council-planned sites</Term>:
+                </strong>{' '}
+                {fmtRatio(c.council)} land in the model's top 10%.
+              </li>
+            )}
             <li>
               <strong>
                 <Term id="predictedVsReal">Predicted vs real</Term>:
@@ -85,15 +92,22 @@ function TrackingPage() {
             </li>
           </ul>
           <p>
-            <strong>Result:</strong> {c.picks.listed} <Term id="suggested">places need at least one more {one}</Term> than they have, counting {many} on
-            both the <Term id="officialMap">official map</Term> and <Term id="osm">OpenStreetMap</Term>. They are ranked by{' '}
+            <strong>Result:</strong> {c.picks.listed} <Term id="suggested">places need at least one more {one}</Term> than they have, counting {many}{' '}
+            <Term id="officialMap">{labels.on}</Term>
+            {!osmInLabel && (
+              <>
+                {' '}
+                and <Term id="osm">OpenStreetMap</Term>
+              </>
+            )}
+            . They are ranked by{' '}
             <Term id="missing">{many} missing</Term>, with no other weighting. Of these {c.picks.listed}:
           </p>
           <ul>
             <li>
-              {fmtRatio(c.picks.alreadyOne)} already have one {one}, but the model expects 2 or more.
+              {fmtRatio(c.picks.alreadyOne)} already have at least one {one}, but the model expects at least one more.
             </li>
-            <li>{fmtRatio(c.picks.nearPlanned)} are near a council-planned site.</li>
+            {c.picks.nearPlanned && <li>{fmtRatio(c.picks.nearPlanned)} are near a council-planned site.</li>}
             <li>
               {fmtRatio(c.picks.poorest30)} are in Sydney's poorest 30% of areas and {fmtRatio(c.picks.richest30)} in the richest 30% (by{' '}
               <Term id="seifa">SEIFA decile</Term>; {c.picks.noSeifa} have no score).
@@ -146,7 +160,7 @@ function TrackingPage() {
           </div>
           <h3>Why leaf size 20?</h3>
           <p>
-            We tested it. Smaller leaves fit the training hexagons better but do worse on areas the model never saw, which means it is memorising. Bigger leaves
+            We tested it on toilets, and every layer uses the same settings. Smaller leaves fit the training hexagons better but do worse on areas the model never saw, which means it is memorising. Bigger leaves
             are too blunt everywhere. Leaf sizes 10 to 20 are the sweet spot, and we kept 20.
           </p>
           <div className="table-scroll">
@@ -174,7 +188,7 @@ function TrackingPage() {
             </table>
           </div>
           <p className="note">
-            Error is <Term id="deviance">Poisson deviance</Term> (lower is better). Each row is a full V12 run with only the leaf size changed. Rerun it with{' '}
+            Tested on toilets. Error is <Term id="deviance">Poisson deviance</Term> (lower is better). Each row is a full V12 toilet run with only the leaf size changed. Rerun it with{' '}
             <code>experiments/leaf_size/sweep.py</code>.
           </p>
         </section>
@@ -200,7 +214,7 @@ function TrackingPage() {
 
         <section aria-labelledby="heatmap-title">
           <h2 id="heatmap-title">Heatmap</h2>
-          <Heatmap />
+          <Heatmap key={layer.id} />
           <p className="note">
             {capitalize(many)} missing = how many fewer {many} a place has than the Sydney average for places with similar population, shops, transport and parks. Map
             data ©{' '}
@@ -246,11 +260,18 @@ function TrackingPage() {
               </tbody>
             </table>
           </div>
+          {t.versions.length === 1 ? (
+            <p className="note">
+              <Term id="crossValidation">Five-fold spatial cross-validation</Term>. {c.id} uses V12's inputs and settings unchanged; its scores are the{' '}
+              <Term id="seeds">mean of seeds 0–2</Term>.
+            </p>
+          ) : (
           <p className="note">
             <Term id="crossValidation">Five-fold spatial cross-validation</Term>. V1–V8 use the same {stats.find.hexes.toLocaleString()} hexagons and folds; V8 is an exploratory future-population scenario, and V9's
             full-area deviance is not directly comparable. V10 is incomplete. V1–V10 are seed 0, from Jimmy's saved <code>comparison.csv</code>; V11 and V12 are the{' '}
             <Term id="seeds">mean of seeds 0–2</Term>.
           </p>
+          )}
         </section>
         <section aria-labelledby="references-title">
           <details className="references">
@@ -259,7 +280,7 @@ function TrackingPage() {
             </summary>
             <h3>Data</h3>
             <ul>
-              {dataSources(layer.unit, officialMap).map(([name, url, use]) => (
+              {dataSources(layer.unit, labels, osmInLabel).map(([name, url, use]) => (
                 <li key={url}>
                   <a href={url}>{name}</a>: {use}
                 </li>
@@ -317,10 +338,14 @@ function SplitDiagram() {
   )
 }
 
-function dataSources({ one, many }: Unit, officialMap: { name: string; url: string }): [string, string, string][] {
+function dataSources({ one, many }: Unit, labels: Labels, osmInLabel: boolean): [string, string, string][] {
   return [
-    [officialMap.name, officialMap.url, `the official ${one} locations the model trains on.`],
-    ['OpenStreetMap', 'https://www.openstreetmap.org/copyright', `shops, food, transport, parks, sports grounds, playgrounds, beaches, footpaths, and ${many} the official map misses (Geofabrik NSW extract and the Overpass API).`],
+    ...labels.sources.map(({ name, url }): [string, string, string] => [name, url, `${one} locations the model trains on.`]),
+    [
+      'OpenStreetMap',
+      'https://www.openstreetmap.org/copyright',
+      `shops, food, transport, parks, sports grounds, playgrounds, beaches, footpaths, and ${many} ${osmInLabel ? 'where councils keep no records' : 'the official map misses'} (Geofabrik NSW extract and the Overpass API).`,
+    ],
     ['ABS 2021 Census DataPacks', 'https://www.abs.gov.au/census/find-census-data/datapacks', 'population per area.'],
     ['ABS Australian Statistical Geography Standard', 'https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3', 'Greater Sydney, suburb and SA1 boundaries.'],
     ['ABS SEIFA 2021', 'https://www.abs.gov.au/statistics/people/people-and-communities/socio-economic-indexes-areas-seifa-australia/latest-release', 'disadvantage deciles for the fairness check (never a model input).'],

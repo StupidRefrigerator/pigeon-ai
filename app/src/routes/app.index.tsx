@@ -20,7 +20,7 @@ function MapPage() {
       <h1 className="mappage-title slab">{`${layer.name} in Sydney`}</h1>
       {mounted && (
         <Suspense fallback={<p className="hexmap-status slab">Loading the map…</p>}>
-          <HexMap />
+          <HexMap key={layer.id} />
         </Suspense>
       )}
       <AskPanel open={askOpen} onToggle={setAskOpen} />

@@ -3,6 +3,7 @@ import type * as Leaflet from 'leaflet'
 import { capitalize, type Unit } from '../infra'
 import { LAYER_DATA } from '../infra-data'
 import { useLayer } from '../layer'
+import { FUTURE_AREAS, futureAreaList } from '../lib/areas'
 import type { HeatmapData } from '../lib/data'
 
 /** One results map in Jimmy's heatmap style. Leaflet and h3-js load in the browser only, after the page renders. */
@@ -33,12 +34,11 @@ const metricsFor = ({ one, many }: Unit): { id: Metric; label: string }[] => [
   { id: 'pred', label: `Predicted ${many}` },
   { id: 'p', label: `Chance of a ${one}` },
 ]
-const notesFor = (hexes: { today: number; growth: number }, { many }: Unit): Record<Area, string> => ({
-  today: `All ${hexes.today.toLocaleString('en-AU')} study hexagons. Each prediction comes from a model that never saw that hexagon in training. Dark outlines mark the 100 suggested places.`,
+const notesFor = (hexes: { today: number; growth: number; listed: number }, { many }: Unit): Record<Area, string> => ({
+  today: `All ${hexes.today.toLocaleString('en-AU')} study hexagons. Each prediction comes from a model that never saw that hexagon in training. Dark outlines mark the ${hexes.listed} suggested places.`,
   growth: `${hexes.growth.toLocaleString('en-AU')} hexagons in growth suburbs the model never trained on. ${capitalize(many)} there today are the real count.`,
-  future: `Bradfield (Aerotropolis) and Leppington as planned, with no ${many} yet, so ${many} missing equals the prediction. Only the top 10 hexagons per area were saved, so only those are shown. Read the order, not the totals.`,
+  future: `${futureAreaList()} as planned, with no ${many} yet, so ${many} missing equals the prediction. Only the top 10 hexagons per area were saved, so only those are shown. Read the order, not the totals.`,
 })
-const FUTURE_NAMES: Record<string, string> = { aerotropolis: 'Bradfield (Aerotropolis)', leppington: 'Leppington' }
 
 // Jimmy's gap colours, reused for every metric so the scale reads the same way.
 const RAMP = ['#dfe7df', '#f7e3aa', '#e9b75b', '#df873c', '#c94c35', '#842f37']
@@ -66,7 +66,7 @@ function parse(d: HeatmapData): Record<Area, Map<string, Hex>> {
   const future = new Map<string, Hex>()
   for (const [area, rank, id, pred, p, zone, station, dist, drv] of d.future)
     future.set(id, {
-      id, real: 0, pred, p, gap: pred, drivers: drivers(drv), place: FUTURE_NAMES[area] ?? area,
+      id, real: 0, pred, p, gap: pred, drivers: drivers(drv), place: FUTURE_AREAS[area]?.name ?? area,
       future: { area, rank, zone: zone.replace(/^[A-Z0-9]+ /, ''), station, dist },
     })
   return { today, growth, future }
@@ -106,7 +106,8 @@ interface MapRefs {
 export function Heatmap() {
   const layer = useLayer()
   const { unit } = layer
-  const { stats } = LAYER_DATA[layer.id]
+  const { stats, tracking, osmInLabel } = LAYER_DATA[layer.id]
+  const listed = tracking.current.picks.listed
   const scales = useMemo(() => scalesFor(unit), [unit])
   const el = useRef<HTMLDivElement>(null)
   const refs = useRef<MapRefs | null>(null)
@@ -220,7 +221,7 @@ export function Heatmap() {
           ))}
         </div>
       </div>
-      <p className="note">{notesFor({ today: stats.find.hexes, growth: stats.growth.hexes }, unit)[area]}</p>
+      <p className="note">{notesFor({ today: stats.find.hexes, growth: stats.growth.hexes, listed }, unit)[area]}</p>
       {error && <p className="status error">{error}</p>}
       <div ref={el} className="map" aria-label={`Map of ${AREAS.find((a) => a.id === area)!.label}, coloured by ${scale.title.toLowerCase()}`} />
       <div className="map-total">
@@ -239,10 +240,10 @@ export function Heatmap() {
             )}
             {area === 'today' && (
               <span>
-                <strong>100</strong> suggested places
+                <strong>{listed}</strong> suggested places
               </span>
             )}
-            <span>V12, seed 0</span>
+            <span>{tracking.current.id}, seed 0</span>
           </>
         ) : (
           !error && 'Loading the map…'
@@ -258,14 +259,14 @@ export function Heatmap() {
             </span>
           ))}
         </div>
-        <p>{area === 'today' ? 'Dark outlines mark the 100 suggested places' : area === 'future' ? 'Dark outlines mark the saved top 10 per area' : 'Same colours on every view'} · click a hexagon for details</p>
+        <p>{area === 'today' ? `Dark outlines mark the ${listed} suggested places` : area === 'future' ? 'Dark outlines mark the saved top 10 per area' : 'Same colours on every view'} · click a hexagon for details</p>
       </div>
-      <Detail hex={selected} area={area} />
+      <Detail hex={selected} area={area} listed={listed} osmAfterModel={!osmInLabel} />
     </>
   )
 }
 
-function Detail({ hex, area }: { hex: Hex | null; area: Area }) {
+function Detail({ hex, area, listed, osmAfterModel }: { hex: Hex | null; area: Area; listed: number; osmAfterModel: boolean }) {
   const { unit } = useLayer()
   if (!hex)
     return (
@@ -275,7 +276,7 @@ function Detail({ hex, area }: { hex: Hex | null; area: Area }) {
       </div>
     )
   const title = hex.rec
-    ? `Short by at least one ${unit.one}: ${hex.rec.rank} of 100, near ${hex.place}`
+    ? `Short by at least one ${unit.one}: ${hex.rec.rank} of ${listed}, near ${hex.place}`
     : hex.future
       ? `${hex.place}: ${hex.future.rank} of 10`
       : `Hexagon near ${hex.place}`
@@ -302,14 +303,14 @@ function Detail({ hex, area }: { hex: Hex | null; area: Area }) {
           </div>
         )}
         <div>
-          <span>{capitalize(unit.many)} missing{hex.rec ? ` (after OSM ${unit.many})` : ''}</span>
+          <span>{capitalize(unit.many)} missing{hex.rec && osmAfterModel ? ` (after OSM ${unit.many})` : ''}</span>
           <strong>{signed(hex.gap)}</strong>
         </div>
         <div>
           <span>Chance of a {unit.one}</span>
           <strong>{Math.round(hex.p * 100)}%</strong>
         </div>
-        {hex.rec && (
+        {hex.rec && osmAfterModel && (
           <div>
             <span>OpenStreetMap {unit.many}</span>
             <strong>{hex.rec.osm}</strong>

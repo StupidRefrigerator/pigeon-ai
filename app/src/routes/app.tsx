@@ -1,7 +1,7 @@
 import { Show, SignInButton, UserButton } from '@clerk/tanstack-react-start'
 import { Link, Outlet, createFileRoute, useRouterState } from '@tanstack/react-router'
 import { useEffect, useState, type CSSProperties } from 'react'
-import { LAYERS, LIVE_LAYERS, resolveLayer, type LiveLayerId } from '../infra'
+import { DEFAULT_LAYER, LAYERS, LIVE_LAYERS, resolveLayer, type LiveLayerId } from '../infra'
 import { LayerProvider, useLayer } from '../layer'
 import { clerkEnabled } from '../lib/clerk'
 import '../shell.css'
@@ -59,10 +59,20 @@ function Dashboard() {
           </div>
           <ul className="dash-infra" aria-labelledby="infra-h">
             {LAYERS.map((i) => (
-              <li key={i.id} className={i.live ? 'live' : 'soon'} style={{ '--c': i.color } as CSSProperties} aria-current={i.id === layer.id ? 'true' : undefined}>
-                <i className="swatch" aria-hidden="true" />
-                {i.name}
-                <small>{i.live ? 'live' : 'soon'}</small>
+              <li key={i.id} className={i.live ? 'live' : 'soon'} style={{ '--c': i.color } as CSSProperties}>
+                {i.live ? (
+                  <Link to="." search={(prev) => ({ ...prev, layer: i.id === DEFAULT_LAYER.id ? undefined : i.id })} aria-current={i.id === layer.id ? 'true' : undefined}>
+                    <i className="swatch" aria-hidden="true" />
+                    {i.name}
+                    <small>live</small>
+                  </Link>
+                ) : (
+                  <span>
+                    <i className="swatch" aria-hidden="true" />
+                    {i.name}
+                    <small>soon</small>
+                  </span>
+                )}
               </li>
             ))}
           </ul>

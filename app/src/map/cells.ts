@@ -1,3 +1,4 @@
+import { FUTURE_AREAS } from '../lib/areas'
 import type { HeatmapData } from '../lib/data'
 
 export type Mode = 'today' | 'growth' | 'future'
@@ -70,8 +71,6 @@ const FEATURE_LABELS: Record<string, string> = {
   food_500m: 'cafes and food within 500 m',
 }
 
-const AREA_NAMES: Record<string, string> = { aerotropolis: 'the Aerotropolis', leppington: 'Leppington' }
-
 export function toCells(d: HeatmapData): Cells {
   const place = (i: number) => d.places[i] ?? 'Sydney'
   const spots = new Map(d.recs.map(([hex, rank]) => [hex, rank]))
@@ -87,7 +86,7 @@ export function toCells(d: HeatmapData): Cells {
   }))
   const future = d.future.map(([area, rank, hex, pred, chance, zone, station, metres, drivers]): Cell => ({
     hex, name: `${station.replace(/ Station$/, '')} precinct`, context: `${zone}, ${(metres / 1000).toFixed(1)} km from ${station}`,
-    today: 0, predicted: pred, chance, gap: pred, driverPairs: drivers, spot: rank, spotLabel: `Pick ${rank} for ${AREA_NAMES[area] ?? area}`,
+    today: 0, predicted: pred, chance, gap: pred, driverPairs: drivers, spot: rank, spotLabel: `Pick ${rank} for ${FUTURE_AREAS[area]?.short ?? area}`,
   }))
   return { today, growth, future, feats: d.feats.map((f) => FEATURE_LABELS[f] ?? f.replace(/_/g, ' ')) }
 }

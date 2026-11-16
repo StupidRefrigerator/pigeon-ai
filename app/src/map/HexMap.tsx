@@ -11,6 +11,7 @@ import { capitalize } from '../infra'
 import { useLayer } from '../layer'
 import type { HeatmapData } from '../lib/data'
 import { LAYER_DATA } from '../infra-data'
+import { Caveat } from '../components/Caveat'
 import { selectArea, DEFAULT_RADIUS_KM, type Place } from './area'
 import { AreaPicker } from './AreaPicker'
 import { drivers, MODES, toCells, type Cell, type Cells, type Mode } from './cells'
@@ -267,10 +268,11 @@ export default function HexMap() {
             <>
               {' '}
               <i className="ring" aria-hidden="true" />
-              {mode === 'future' ? 'Rings are the picks for each future area.' : 'Rings are the 100 suggested spots.'}
+              {mode === 'future' ? 'Rings are the picks for each future area.' : `Rings are the ${LAYER_DATA[layer.id].tracking.current.picks.listed} suggested spots.`}
             </>
           )}
         </p>
+        <Caveat />
       </div>
 
       {load.state === 'loading' && <p className="hexmap-status slab">{`Loading ${LAYER_DATA[layer.id].stats.find.hexes.toLocaleString()} hexagons…`}</p>}
