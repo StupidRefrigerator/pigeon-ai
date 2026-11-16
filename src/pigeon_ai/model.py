@@ -1,5 +1,6 @@
-"""Toilet-placement model: spatial CV, SHAP, candidates, evals, the recommended list and the review file."""
+"""Placement model: spatial CV, SHAP, candidates, evals, the recommended list and the review file."""
 from dataclasses import dataclass
+from pathlib import Path
 from enum import StrEnum
 from time import perf_counter
 
@@ -18,6 +19,7 @@ from sklearn.model_selection import GroupKFold
 from sklearn.tree import DecisionTreeRegressor, plot_tree
 
 from .accessibility import ACCESSIBILITY_FEATURES
+from .bubblers import LABELS_FILE as BUBBLER_LABELS_FILE
 from .experiments import EXTENDED_FEATURES
 from .paths import PROCESSED, ROOT
 from .postprocess import recommendations
@@ -42,7 +44,16 @@ CALIBRATION_BINS = [0, 0.1, 0.25, 0.5, 1, 1.5, np.inf]
 @dataclass(frozen=True)
 class Target:
     label: str
+    #: One piece of the infrastructure, for output column names (predicted_<unit>s, p_any_<unit>).
+    unit: str
     feature_sets: dict[str, list[str]]
+    out_dir: Path
+    #: CSV with hex_id and the label, when the label is not a column of the feature file.
+    label_file: Path | None = None
+    #: OSM count added to the label after the model for the recommended list; None writes no list.
+    osm_existing: str | None = None
+    #: Whether the default run of this target merges its candidates into the review file.
+    owns_review: bool = False
 
 
 # Each infrastructure type lists its own inputs so a future target can omit
@@ -50,14 +61,18 @@ class Target:
 # The column order is part of the model: max_features samples by position.
 _V1 = [f for f in FEATURES if f != "population_density"]
 _LATEST = _V1 + EXTENDED_FEATURES[len(FEATURES):] + ACCESSIBILITY_FEATURES
+_V12 = _LATEST + RECREATION_FEATURES
 TARGETS = {
     "toilets": Target(
-        label="toilet_count",
-        feature_sets={
-            "v1": _V1,
-            "latest": _LATEST,
-            "v12": _LATEST + RECREATION_FEATURES,
-        },
+        label="toilet_count", unit="toilet",
+        feature_sets={"v1": _V1, "latest": _LATEST, "v12": _V12},
+        out_dir=MODEL_DIR, osm_existing="osm_toilets_public", owns_review=True,
+    ),
+    # V12 has no toilet or drinking-water count, so it is safe for fountains too.
+    "bubblers": Target(
+        label="bubbler_count", unit="bubbler",
+        feature_sets={"latest": _LATEST, "v12": _V12},
+        out_dir=MODEL_DIR / "bubblers", label_file=BUBBLER_LABELS_FILE,
     ),
 }
 DEFAULT_FEATURES = "v12"
@@ -138,18 +153,28 @@ def is_candidate(pred, actual, threshold=THRESHOLD):
     return (pred - actual) >= threshold
 
 
-def candidate_kind(actual):
-    return np.where(actual == 0, "no_toilet", "shortfall")
+def candidate_kind(actual, unit="toilet"):
+    return np.where(actual == 0, f"no_{unit}", "shortfall")
 
 
 def p_any(pred):
     return 1 - np.exp(-pred)
 
 
-def load_data(data_file=DATA_FILE, recreation_file=RECREATION_FILE):
-    """The extended features with the V12 OSM columns joined by hex_id, in the extended file's order."""
+def load_data(data_file=DATA_FILE, recreation_file=RECREATION_FILE, label_file=None):
+    """The extended features with the V12 OSM columns joined by hex_id, in the extended file's order.
+
+    `label_file` adds the label columns of a target whose label is not in the feature file.
+    """
     extra = pd.read_csv(recreation_file)
-    return pd.read_csv(data_file).merge(extra, on="hex_id", how="left", validate="1:1")
+    df = pd.read_csv(data_file).merge(extra, on="hex_id", how="left", validate="1:1")
+    if label_file is None:
+        return df
+    labels = pd.read_csv(label_file).drop(columns=["area", "lga"], errors="ignore")
+    df = df.merge(labels, on="hex_id", how="left", validate="1:1")
+    if df[labels.columns].isna().any().any():
+        raise ValueError(f"{label_file} has no label for some study hexagons")
+    return df
 
 
 # Evals
@@ -181,12 +206,12 @@ def calibration_table(pred, actual):
     return out.rename_axis("band").reset_index()
 
 
-def fold_table(pred, actual, fold):
+def fold_table(pred, actual, fold, unit="toilet"):
     rows = []
     for k in sorted(set(fold)):
         m = fold == k
         rows.append(dict(
-            fold=k, hexes=int(m.sum()), toilets=int(actual[m].sum()),
+            fold=k, hexes=int(m.sum()), **{f"{unit}s": int(actual[m].sum())},
             deviance=mean_poisson_deviance(actual[m], np.clip(pred[m], MIN_PREDICTION, None)),
             pr_auc=average_precision_score(actual[m] > 0, pred[m])))
     return pd.DataFrame(rows)
@@ -198,16 +223,16 @@ def stability_row(name, mask, reference):
                 jaccard=common / max(int((mask | reference).sum()), 1))
 
 
-def fairness_table(seifa, pred, actual, candidate):
+def fairness_table(seifa, pred, actual, candidate, unit="toilet"):
     """SEIFA is used here only to audit the output, never as a model input."""
     group = pd.Series("unknown", index=seifa.index, dtype=object)
     known = seifa.notna()
     group[known] = pd.qcut(seifa[known], 10, labels=range(1, 11)).astype(str)
     frame = pd.DataFrame({"group": group, "actual": actual, "pred": pred, "cand": candidate})
     out = frame.groupby("group").agg(
-        hexes=("actual", "size"), actual_toilets=("actual", "sum"),
-        predicted_toilets=("pred", "sum"), candidates=("cand", "sum"))
-    out["pred_actual_ratio"] = out["predicted_toilets"] / out["actual_toilets"].replace(0, np.nan)
+        hexes=("actual", "size"), actual=("actual", "sum"), predicted=("pred", "sum"), candidates=("cand", "sum"))
+    out["pred_actual_ratio"] = out["predicted"] / out["actual"].replace(0, np.nan)
+    out = out.rename(columns={"actual": f"actual_{unit}s", "predicted": f"predicted_{unit}s"})
     out["candidates_per_1000_hexes"] = 1000 * out["candidates"] / out["hexes"]
     order = [str(d) for d in range(1, 11)] + ["unknown"]
     return out.reindex([g for g in order if g in out.index]).reset_index()
@@ -274,23 +299,25 @@ def review_progress(review):
 
 # Pipeline
 
-def recommended_list(df, pred):
+def recommended_list(df, pred, label, osm_existing):
     """The default recommended list with coordinates; see postprocess.recommendations."""
-    rec = recommendations(df["hex_id"], pred, df["toilet_count"], df["osm_toilets_public"], df[SEIFA_COLUMN])
+    rec = recommendations(df["hex_id"], pred, df[label], df[osm_existing], df[SEIFA_COLUMN])
     rec.insert(1, "lat", [round(h3.cell_to_latlng(h)[0], 5) for h in rec["hex_id"]])
     rec.insert(2, "lng", [round(h3.cell_to_latlng(h)[1], 5) for h in rec["hex_id"]])
     return rec
 
 
 def run(target_name="toilets", feature_set=DEFAULT_FEATURES, threshold=THRESHOLD, today=None,
-        out_dir=MODEL_DIR, review_path=REVIEW_PATH, data_file=DATA_FILE, recreation_file=RECREATION_FILE):
+        out_dir=None, review_path=REVIEW_PATH, data_file=DATA_FILE, recreation_file=RECREATION_FILE):
+    """Train and evaluate one target. Outputs go to `out_dir`, by default the target's own folder."""
     start = perf_counter()
     target = TARGETS[target_name]
-    label, features = target.label, target.feature_sets[feature_set]
+    label, features, unit = target.label, target.feature_sets[feature_set], target.unit
+    out_dir = target.out_dir if out_dir is None else out_dir
     # Compare with the set registered just before this one (v12 -> latest), or the last for the first.
     names = list(target.feature_sets)
     other_set = names[names.index(feature_set) - 1] if names.index(feature_set) else names[-1]
-    df = load_data(data_file, recreation_file)
+    df = load_data(data_file, recreation_file, target.label_file)
     actual = df[label].to_numpy()
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -308,9 +335,9 @@ def run(target_name="toilets", feature_set=DEFAULT_FEATURES, threshold=THRESHOLD
 
     drivers = top_drivers(shap_values, features)
     hexes = pd.DataFrame({
-        "hex_id": df["hex_id"], label: actual, "predicted_toilets": pred,
-        "p_any_toilet": p_any(pred), "gap": pred - actual, "is_candidate": candidate,
-        "kind": np.where(candidate, candidate_kind(actual), ""),
+        "hex_id": df["hex_id"], label: actual, f"predicted_{unit}s": pred,
+        f"p_any_{unit}": p_any(pred), "gap": pred - actual, "is_candidate": candidate,
+        "kind": np.where(candidate, candidate_kind(actual, unit), ""),
         "fold": fold, "top_drivers": drivers})
     hexes.to_csv(out_dir / "hex_predictions.csv", index=False)
 
@@ -331,46 +358,50 @@ def run(target_name="toilets", feature_set=DEFAULT_FEATURES, threshold=THRESHOLD
         metrics_row("rank by shop_500m", actual, None, df["shop_500m"].to_numpy(), threshold),
     ]).astype({"top100_hits": "Int64", "top1000_hits": "Int64", "candidates": "Int64"})
     calibration = calibration_table(pred, actual)
-    folds = fold_table(pred, actual, fold)
+    folds = fold_table(pred, actual, fold, unit)
     stability = pd.DataFrame(
         [stability_row("seed 0 (reference)", candidate, candidate)]
         + [stability_row(f"seed {s} vs seed 0", seed_masks[s], candidate) for s in SEEDS[1:]]
         + [stability_row(f"{other_set} vs {feature_set} (seed 0)",
                          is_candidate(other_pred, actual, threshold), candidate)])
-    fairness = fairness_table(df[SEIFA_COLUMN], pred, actual, candidate)
+    fairness = fairness_table(df[SEIFA_COLUMN], pred, actual, candidate, unit)
     for name, table in [("metrics", metrics), ("calibration", calibration), ("folds", folds),
                         ("stability", stability), ("fairness", fairness)]:
         table.to_csv(out_dir / f"{name}.csv", index=False)
     surrogate_r2 = save_surrogate_plot(df, features, pred, out_dir / "decision_tree.png")
 
     rec_text = ""
-    if target_name == "toilets":
-        rec = recommended_list(df, pred)
+    if target.osm_existing:
+        rec = recommended_list(df, pred, label, target.osm_existing)
         rec.round(4).to_csv(out_dir / "recommendations.csv", index=False)
         deciles = rec["seifa_decile"]
         rec_text = (f"\nRecommended list (recommendations.csv): {len(rec)} hexes; "
                     f"SEIFA deciles 1-3: {int(deciles.between(1, 3).sum())}, 8-10: {int(deciles.between(8, 10).sum())}; "
                     f"no toilet within 400 m: {int(rec['uncovered_400m'].sum())}")
 
-    found = hexes[candidate].copy()
-    found[["lat", "lng"]] = [[round(c, 5) for c in h3.cell_to_latlng(i)] for i in found["hex_id"]]
-    for col in ("predicted_toilets", "p_any_toilet"):
-        found[col] = found[col].round(4)
-    review = load_review(review_path)
-    # Only the default configuration owns the review file; experiments must not
-    # mark reviewed candidates as stale or add their own.
-    if (target_name, feature_set, threshold) == ("toilets", DEFAULT_FEATURES, THRESHOLD):
-        review = merge_review(review, found, today or pd.Timestamp.today().date().isoformat())
-        save_review(review, review_path)
-    else:
-        print(f"Experiment run: {review_path.name} left unchanged.")
-    counts, reviewed, share = review_progress(review)
+    review_text = ""
+    if target.owns_review:
+        found = hexes[candidate].copy()
+        found[["lat", "lng"]] = [[round(c, 5) for c in h3.cell_to_latlng(i)] for i in found["hex_id"]]
+        for col in (f"predicted_{unit}s", f"p_any_{unit}"):
+            found[col] = found[col].round(4)
+        review = load_review(review_path)
+        # Only the default configuration owns the review file; experiments must not
+        # mark reviewed candidates as stale or add their own.
+        if (feature_set, threshold) == (DEFAULT_FEATURES, THRESHOLD):
+            review = merge_review(review, found, today or pd.Timestamp.today().date().isoformat())
+            save_review(review, review_path)
+        else:
+            print(f"Experiment run: {review_path.name} left unchanged.")
+        counts, reviewed, share = review_progress(review)
+        share_text = "n/a (none reviewed)" if share is None else f"{share:.1%} ({counts['real_gap']}/{reviewed})"
+        review_text = ("\n== Review progress ==\n" + counts.to_string()
+                       + f"\nShare of reviewed candidates that are real gaps: {share_text}")
 
     def block(title, table, **kw):
         return f"\n== {title} ==\n{table.to_string(index=False, **kw)}"
 
     fmt = lambda x: f"{x:.4f}"
-    share_text = "n/a (none reviewed)" if share is None else f"{share:.1%} ({counts['real_gap']}/{reviewed})"
     parts = [
         f"Target: {target_name} ({label}); features: {feature_set} ({len(features)} columns); "
         f"threshold: {threshold}; spatial CV: {N_FOLDS} folds by res-{BLOCK_RESOLUTION} block",
@@ -384,10 +415,9 @@ def run(target_name="toilets", feature_set=DEFAULT_FEATURES, threshold=THRESHOLD
         block("Feature importance (mean |SHAP|)", importance, float_format=fmt),
         f"\nSurrogate depth-3 tree R^2 vs forest predictions: {surrogate_r2:.3f}",
         rec_text,
-        "\n== Review progress ==\n" + counts.to_string()
-        + f"\nShare of reviewed candidates that are real gaps: {share_text}",
+        review_text,
         f"\nCandidates this run: {int(candidate.sum())} "
-        f"({int((candidate & (actual == 0)).sum())} no_toilet, {int((candidate & (actual > 0)).sum())} shortfall); review rows: {len(review)}; "
+        f"({int((candidate & (actual == 0)).sum())} with none, {int((candidate & (actual > 0)).sum())} shortfall); "
         f"runtime: {perf_counter() - start:.0f}s",
     ]
     return "\n".join(parts)

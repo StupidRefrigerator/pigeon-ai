@@ -1,6 +1,6 @@
 # PIGEON-AI
 
-Pigeon AI predicts where Sydney's next public infrastructure should go, from a bird's-eye view of the city. Public toilets are the first layer.
+Pigeon AI predicts where Sydney's next public infrastructure should go, from a bird's-eye view of the city. Public toilets are the first layer and water fountains (bubblers) the second.
 
 **Live app:** https://pigeon-ai.vercel.app
 
@@ -23,6 +23,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python scripts/train_model.py      # about 2.5 minutes
 ```
+
+`python scripts/train_model.py --target bubblers` trains the same forest, with the same 45 inputs, on water fountains and writes to `data/model/bubblers/`. `PYTHONPATH=src python experiments/bubblers/growth_future.py` scores the growth suburbs and future areas for it. Each layer is one entry in `TARGETS` in `src/pigeon_ai/model.py`.
+
+**Water fountain results (B1, seed 0):** PR-AUC 0.529 (random is 0.095). 89 of the top 100 and 589 of the top 1,000 predictions have a fountain. Deviance 0.408 vs 0.771 for predicting the average everywhere. Council fountain records are thin in western Sydney (see [DATA.md](DATA.md)), so predictions there are less checked.
 
 You don't need to train to use the results. The final V12 results are committed in `data/model/` (`recommendations.csv` is the suggested list).
 
