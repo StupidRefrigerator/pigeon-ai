@@ -1,16 +1,11 @@
 import { Show, SignInButton, UserButton } from '@clerk/tanstack-react-start'
 import { Link, Outlet, createFileRoute, useRouterState } from '@tanstack/react-router'
 import { useEffect, useState, type CSSProperties } from 'react'
+import { LAYERS } from '../infra'
 import { clerkEnabled } from '../lib/clerk'
 import '../shell.css'
 
 export const Route = createFileRoute('/app')({ component: AppShell })
-
-const INFRA = [
-  { name: 'Toilets', color: '#FF48B0', live: true },
-  { name: 'Bike lanes', color: '#FFE800', live: false },
-  { name: 'Water fountains', color: '#3255A4', live: false },
-] as const
 
 const ADMIN_PAGES: Record<string, string> = { '/app/stats': 'Tracking', '/app/tests': 'Tests' }
 
@@ -47,8 +42,8 @@ function AppShell() {
             Infrastructure
           </div>
           <ul className="dash-infra" aria-labelledby="infra-h">
-            {INFRA.map((i) => (
-              <li key={i.name} className={i.live ? 'live' : 'soon'} style={{ '--c': i.color } as CSSProperties} aria-current={i.live ? 'true' : undefined}>
+            {LAYERS.map((i) => (
+              <li key={i.id} className={i.live ? 'live' : 'soon'} style={{ '--c': i.color } as CSSProperties} aria-current={i.live ? 'true' : undefined}>
                 <i className="swatch" aria-hidden="true" />
                 {i.name}
                 <small>{i.live ? 'live' : 'soon'}</small>

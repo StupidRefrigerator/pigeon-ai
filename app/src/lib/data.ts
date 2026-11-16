@@ -31,6 +31,12 @@ export interface Stats {
   }
 }
 
+/** src/data/infra/<layer>/references.json: the planning documents behind the layer's planned sites. */
+export interface References {
+  councilSites: number
+  councilDocs: { council: string; document: string; url: string; sites: number }[]
+}
+
 export interface Version {
   id: string
   description: string
