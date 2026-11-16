@@ -25,15 +25,15 @@ Clerk uses the team's "Pigeon AI" application (`app_3Ls1IZXrkbrqOOmBnD6QCVOAzTn`
 /tmp/pigeon-env/bin/python scripts/build_landing_data.py
 ```
 
-`src/data/tracking.json`, `src/data/stats.json` (Tracking and Tests pages, bundled) and `public/heatmap.json` (the `/app` and Tracking-page maps, fetched at runtime) are generated from the V12 outputs in `data/model/` and `experiments/v2/combos/out/` and committed:
+`src/data/infra/toilets/tracking.json`, `src/data/infra/toilets/stats.json` (Tracking and Tests pages, bundled) and `public/infra/toilets/heatmap.json` (the `/app` and Tracking-page maps, fetched at runtime) are generated from the V12 outputs in `data/model/` and `experiments/v2/combos/out/` and committed:
 
 ```bash
-npm run build-data   # uses /tmp/pigeon-env/bin/python
+npm run build-data   # uses /tmp/pigeon-env/bin/python; pass -- --target <layer> for another layer
 ```
 
 The script asserts that its numbers match `summary_table.csv`.
 
-`public/places.json` feeds the map's area search: the suburbs and landmarks from `data/reference/sydney_places.json` that have a map hexagon within 2 km. Regenerate it after `heatmap.json` changes:
+`public/places.json` feeds the map's area search: the suburbs and landmarks from `data/reference/sydney_places.json` that have a map hexagon within 2 km. Regenerate it after a layer's `heatmap.json` changes:
 
 ```bash
 node scripts/build_places.mjs

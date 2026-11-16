@@ -111,7 +111,7 @@ function restyle(map: MaplibreMap) {
 
 type Load = { state: 'loading' } | { state: 'error'; message: string } | { state: 'ready'; cells: Cells }
 
-export default function HexMap({ dataUrl = '/heatmap.json' }: { dataUrl?: string }) {
+export default function HexMap({ dataUrl = '/infra/toilets/heatmap.json' }: { dataUrl?: string }) {
   const [load, setLoad] = useState<Load>({ state: 'loading' })
   const [mode, setMode] = useState<Mode>('today')
   const [view, setView] = useState<MapViewState>(VIEWS.today)

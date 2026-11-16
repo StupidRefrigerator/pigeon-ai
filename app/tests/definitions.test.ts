@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import stats from '../src/data/stats.json'
-import tracking from '../src/data/tracking.json'
+import stats from '../src/data/infra/toilets/stats.json'
+import tracking from '../src/data/infra/toilets/tracking.json'
 import { DEFINITIONS } from '../src/lib/definitions'
 
 describe('DEFINITIONS', () => {

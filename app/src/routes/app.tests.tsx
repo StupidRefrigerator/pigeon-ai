@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import type { ReactNode } from 'react'
 import { Term } from '../components/Term'
 import { fmtRatio, type Stats } from '../lib/data'
-import statsJson from '../data/stats.json'
+import statsJson from '../data/infra/toilets/stats.json'
 
 const s = statsJson as Stats
 const { find, council, growth, reach } = s

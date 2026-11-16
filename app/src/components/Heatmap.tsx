@@ -116,7 +116,7 @@ export function Heatmap() {
   useEffect(() => {
     let cancelled = false
     let map: Leaflet.Map | undefined
-    Promise.all([import('leaflet'), import('h3-js'), fetch('/heatmap.json').then((r) => (r.ok ? r.json() : Promise.reject(new Error(`heatmap.json: ${r.status}`))))])
+    Promise.all([import('leaflet'), import('h3-js'), fetch('/infra/toilets/heatmap.json').then((r) => (r.ok ? r.json() : Promise.reject(new Error(`heatmap.json: ${r.status}`))))])
       .then(([leaflet, h3, data]: [typeof import('leaflet'), typeof import('h3-js'), HeatmapData]) => {
         if (cancelled || !el.current) return
         // leaflet is UMD: Vite hands it over as the default export

@@ -3,8 +3,8 @@ import 'leaflet/dist/leaflet.css'
 import { Heatmap } from '../components/Heatmap'
 import { Term } from '../components/Term'
 import { fmtRatio, type Tracking } from '../lib/data'
-import trackingJson from '../data/tracking.json'
-import referencesJson from '../data/references.json'
+import trackingJson from '../data/infra/toilets/tracking.json'
+import referencesJson from '../data/infra/toilets/references.json'
 
 const t = trackingJson as Tracking
 const c = t.current

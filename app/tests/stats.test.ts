@@ -1,10 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import { readFileSync } from 'node:fs'
-import stats from '../src/data/stats.json'
-import tracking from '../src/data/tracking.json'
+import stats from '../src/data/infra/toilets/stats.json'
+import tracking from '../src/data/infra/toilets/tracking.json'
 import type { HeatmapData } from '../src/lib/data'
 
-const heatmap = JSON.parse(readFileSync(new URL('../public/heatmap.json', import.meta.url), 'utf8')) as HeatmapData
+const heatmap = JSON.parse(readFileSync(new URL('../public/infra/toilets/heatmap.json', import.meta.url), 'utf8')) as HeatmapData
 
 describe('stats.json', () => {
   it('reports every ratio as x/y with a matching percentage', () => {
