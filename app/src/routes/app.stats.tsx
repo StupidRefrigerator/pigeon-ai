@@ -82,7 +82,7 @@ function TrackingPage() {
           <p>
             <strong>Result:</strong> {c.picks.listed} <Term id="suggested">places need at least one more toilet</Term> than they have, counting toilets on
             both the <Term id="officialMap">official map</Term> and <Term id="osm">OpenStreetMap</Term>. They are ranked by{' '}
-            <Term id="toiletsMissing">toilets missing</Term>, with no other weighting. Of these {c.picks.listed}:
+            <Term id="missing">toilets missing</Term>, with no other weighting. Of these {c.picks.listed}:
           </p>
           <ul>
             <li>

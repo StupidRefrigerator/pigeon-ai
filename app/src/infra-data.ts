@@ -9,8 +9,8 @@ export interface LayerData {
   tracking: Tracking
   stats: Stats
   references?: References
-  /** Source rows the layer adds to the shared References list: name, url, what it is used for. */
-  sources: [string, string, string][]
+  /** The authoritative dataset the model trains on, listed first under References. */
+  officialMap: { name: string; url: string }
 }
 
 /** One entry per live layer: a layer without an entry here does not compile. */
@@ -19,6 +19,6 @@ export const LAYER_DATA: Record<LiveLayerId, LayerData> = {
     tracking: toiletsTracking as Tracking,
     stats: toiletsStats as Stats,
     references: toiletsReferences,
-    sources: [['National Public Toilet Map (data.gov.au)', 'https://data.gov.au/data/dataset/national-public-toilet-map', 'the official toilet locations the model trains on.']],
+    officialMap: { name: 'National Public Toilet Map (data.gov.au)', url: 'https://data.gov.au/data/dataset/national-public-toilet-map' },
   },
 }

@@ -1,4 +1,5 @@
 import { useId, useState, type ReactNode } from 'react'
+import { useLayer } from '../layer'
 import { DEFINITIONS, type TermId } from '../lib/definitions'
 
 /**
@@ -8,6 +9,7 @@ import { DEFINITIONS, type TermId } from '../lib/definitions'
  */
 export function Term({ id, children }: { id: TermId; children: ReactNode }) {
   const tipId = useId()
+  const definition = DEFINITIONS[useLayer().id][id]
   const [pos, setPos] = useState<{ left: number; top: number }>()
   const place = (el: HTMLElement) => {
     const r = el.getBoundingClientRect()
@@ -18,7 +20,7 @@ export function Term({ id, children }: { id: TermId; children: ReactNode }) {
       <span
         className="term"
         tabIndex={0}
-        title={DEFINITIONS[id]}
+        title={definition}
         aria-describedby={tipId}
         onPointerEnter={(e) => place(e.currentTarget)}
         onFocus={(e) => place(e.currentTarget)}
@@ -27,7 +29,7 @@ export function Term({ id, children }: { id: TermId; children: ReactNode }) {
         {children}
       </span>
       <span role="tooltip" id={tipId} className="term-tip" style={pos}>
-        {DEFINITIONS[id]}
+        {definition}
       </span>
     </span>
   )
