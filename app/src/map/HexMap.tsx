@@ -7,7 +7,10 @@ import 'maplibre-gl/dist/maplibre-gl.css'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Map as MaplibreMap } from 'maplibre-gl'
 import { Map as BaseMap } from 'react-map-gl/maplibre'
+import { capitalize } from '../infra'
+import { useLayer } from '../layer'
 import type { HeatmapData } from '../lib/data'
+import { LAYER_DATA } from '../infra-data'
 import { selectArea, DEFAULT_RADIUS_KM, type Place } from './area'
 import { AreaPicker } from './AreaPicker'
 import { drivers, MODES, toCells, type Cell, type Cells, type Mode } from './cells'
@@ -22,7 +25,7 @@ const VIEWS: Record<Mode, MapViewState> = {
   future: { longitude: 150.75, latitude: -33.915, zoom: 11.7, pitch: 58, bearing: 20 },
 }
 
-/** Metres of column per predicted toilet at the overview zoom; growth and future predictions are small, so they get taller columns. */
+/** Metres of column per predicted unit at the overview zoom; growth and future predictions are small, so they get taller columns. */
 const ELEVATION: Record<Mode, number> = { today: 650, growth: 4200, future: 1100 }
 /** Colour gain per mode, so each mode's typical gap reaches the warm end of the ramp. */
 const GAIN: Record<Mode, number> = { today: 1, growth: 2.2, future: 1.2 }
@@ -111,7 +114,9 @@ function restyle(map: MaplibreMap) {
 
 type Load = { state: 'loading' } | { state: 'error'; message: string } | { state: 'ready'; cells: Cells }
 
-export default function HexMap({ dataUrl = '/infra/toilets/heatmap.json' }: { dataUrl?: string }) {
+export default function HexMap() {
+  const layer = useLayer()
+  const dataUrl = layer.heatmapUrl
   const [load, setLoad] = useState<Load>({ state: 'loading' })
   const [mode, setMode] = useState<Mode>('today')
   const [view, setView] = useState<MapViewState>(VIEWS.today)
@@ -250,14 +255,14 @@ export default function HexMap({ dataUrl = '/infra/toilets/heatmap.json' }: { da
       )}
 
       <div className="hexmap-legend slab">
-        <b>Toilets missing</b>
+        <b>{capitalize(layer.unit.many)} missing</b>
         <div className="ramp" />
         <div className="ends">
           <span>Well served</span>
           <span>2+ short</span>
         </div>
         <p>
-          Column height is how many toilets the model expects.
+          Column height is how many {layer.unit.many} the model expects.
           {mode !== 'growth' && (
             <>
               {' '}
@@ -268,7 +273,7 @@ export default function HexMap({ dataUrl = '/infra/toilets/heatmap.json' }: { da
         </p>
       </div>
 
-      {load.state === 'loading' && <p className="hexmap-status slab">Loading 16,228 hexagons…</p>}
+      {load.state === 'loading' && <p className="hexmap-status slab">{`Loading ${LAYER_DATA[layer.id].stats.find.hexes.toLocaleString()} hexagons…`}</p>}
       {load.state === 'error' && <p className="hexmap-status slab" role="alert">{load.message} Reload the page to try again.</p>}
 
       {selected && load.state === 'ready' && <HexCard cell={selected} feats={load.cells.feats} onClose={() => setSelected(null)} />}
@@ -277,6 +282,7 @@ export default function HexMap({ dataUrl = '/infra/toilets/heatmap.json' }: { da
 }
 
 function HexCard({ cell, feats, onClose }: { cell: Cell; feats: string[]; onClose: () => void }) {
+  const { unit } = useLayer()
   const top = drivers(cell, feats)
   const max = Math.max(0.01, ...top.map(([, v]) => Math.abs(v)))
   useEffect(() => {
@@ -298,11 +304,11 @@ function HexCard({ cell, feats, onClose }: { cell: Cell; feats: string[]; onClos
       <div className="nums">
         <div>
           <b>{fmt(cell.predicted)}</b>
-          <span>toilets predicted</span>
+          <span>{unit.many} predicted</span>
         </div>
         <div>
           <b>{cell.today}</b>
-          <span>toilets today</span>
+          <span>{unit.many} today</span>
         </div>
       </div>
       <div className="row">
@@ -310,7 +316,7 @@ function HexCard({ cell, feats, onClose }: { cell: Cell; feats: string[]; onClos
         <b>{Math.round(cell.chance * 100)}%</b>
       </div>
       <div className="row">
-        <span>Toilets missing</span>
+        <span>{capitalize(unit.many)} missing</span>
         <b>{cell.gap > 0 ? fmt(cell.gap) : 'none'}</b>
       </div>
       {top.length > 0 && (

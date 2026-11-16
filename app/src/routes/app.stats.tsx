@@ -2,25 +2,24 @@ import { Link, createFileRoute } from '@tanstack/react-router'
 import 'leaflet/dist/leaflet.css'
 import { Heatmap } from '../components/Heatmap'
 import { Term } from '../components/Term'
-import { fmtRatio, type Tracking } from '../lib/data'
-import trackingJson from '../data/infra/toilets/tracking.json'
-import referencesJson from '../data/infra/toilets/references.json'
-
-const t = trackingJson as Tracking
-const c = t.current
+import { capitalize, LIVE_LAYERS, type Unit } from '../infra'
+import { LAYER_DATA } from '../infra-data'
+import { useLayer } from '../layer'
+import { fmtRatio, type References } from '../lib/data'
 
 export const Route = createFileRoute('/app/stats')({ component: TrackingPage })
 
 const fmt = (v: number | null, digits: number) => (v === null ? 'Pending' : v.toFixed(digits))
 const STATUS = { done: 'Completed', pending: 'Pending', current: 'Current' } as const
 
-const SETTINGS = [
-  ['Trees', '300', 'Averaging many trees steadies the prediction'],
-  ['Leaf size', 'At least 20 hexagons', 'Each guess averages 20+ similar places, so it learns patterns, not single spots'],
-  ['Inputs per question', 'Half, picked at random', 'Stops one input (like shops) from taking over every tree'],
-  ['Depth limit', 'None', 'Leaf size stops the trees, at about 21 questions deep'],
-  ['Rebalancing', 'None', 'Keeps predictions on the real scale: 1.2 means 1.2 toilets'],
-] as const
+const settingsFor = (many: string) =>
+  [
+    ['Trees', '300', 'Averaging many trees steadies the prediction'],
+    ['Leaf size', 'At least 20 hexagons', 'Each guess averages 20+ similar places, so it learns patterns, not single spots'],
+    ['Inputs per question', 'Half, picked at random', 'Stops one input (like shops) from taking over every tree'],
+    ['Depth limit', 'None', 'Leaf size stops the trees, at about 21 questions deep'],
+    ['Rebalancing', 'None', `Keeps predictions on the real scale: 1.2 means 1.2 ${many}`],
+  ] as const
 
 // From experiments/leaf_size/results.csv: leaf size, deviance on trained hexagons, deviance on unseen areas, PR-AUC.
 const LEAF_SWEEP = [
@@ -33,15 +32,21 @@ const LEAF_SWEEP = [
   [500, 0.4102, 0.4323, 0.455],
 ] as const
 
+const ORDINALS = ['first', 'second', 'third', 'fourth'] as const
+
 function TrackingPage() {
+  const layer = useLayer()
+  const { one, many } = layer.unit
+  const { tracking: t, stats, references, officialMap } = LAYER_DATA[layer.id]
+  const c = t.current
+  const settings = settingsFor(many)
   return (
     <div className="jimmy">
       <main>
         <section aria-labelledby="tracking-title">
           <h1 id="tracking-title">PIGEON-AI — Tracking</h1>
           <p>
-            Pigeon AI predicts where the next public infrastructure should go, from a bird's-eye view of Sydney today and of its growth and future suburbs. Public toilets
-            are the first layer.
+            Pigeon AI predicts where the next public infrastructure should go, from a bird's-eye view of Sydney today and of its growth and future suburbs. {`Public ${many} are the ${ORDINALS[LIVE_LAYERS.indexOf(layer)]} layer.`}
           </p>
         </section>
 
@@ -64,7 +69,7 @@ function TrackingPage() {
               <strong>
                 <Term id="top1000">Top-1,000 hits</Term>:
               </strong>{' '}
-              {fmtRatio(c.top1000)} of the model's 1,000 highest <Term id="hexagon">hexagons</Term> have a real toilet.
+              {fmtRatio(c.top1000)} of the model's 1,000 highest <Term id="hexagon">hexagons</Term> have a real {one}.
             </li>
             <li>
               <strong>
@@ -76,17 +81,17 @@ function TrackingPage() {
               <strong>
                 <Term id="predictedVsReal">Predicted vs real</Term>:
               </strong>{' '}
-              predicts {c.predictedTotal.toLocaleString()} toilets across the study area (real: {c.actualTotal.toLocaleString()}).
+              predicts {c.predictedTotal.toLocaleString()} {many} across the study area (real: {c.actualTotal.toLocaleString()}).
             </li>
           </ul>
           <p>
-            <strong>Result:</strong> {c.picks.listed} <Term id="suggested">places need at least one more toilet</Term> than they have, counting toilets on
+            <strong>Result:</strong> {c.picks.listed} <Term id="suggested">places need at least one more {one}</Term> than they have, counting {many} on
             both the <Term id="officialMap">official map</Term> and <Term id="osm">OpenStreetMap</Term>. They are ranked by{' '}
-            <Term id="missing">toilets missing</Term>, with no other weighting. Of these {c.picks.listed}:
+            <Term id="missing">{many} missing</Term>, with no other weighting. Of these {c.picks.listed}:
           </p>
           <ul>
             <li>
-              {fmtRatio(c.picks.alreadyOne)} already have one toilet, but the model expects 2 or more.
+              {fmtRatio(c.picks.alreadyOne)} already have one {one}, but the model expects 2 or more.
             </li>
             <li>{fmtRatio(c.picks.nearPlanned)} are near a council-planned site.</li>
             <li>
@@ -95,27 +100,29 @@ function TrackingPage() {
             </li>
           </ul>
           <p className="note">
-            Every test behind these numbers is on the <Link to="/app/tests">Tests</Link> page.
+            Every test behind these numbers is on the <Link to="/app/tests" search={(prev) => prev}>
+              Tests
+            </Link> page.
           </p>
         </section>
 
         <section aria-labelledby="model-title">
           <h2 id="model-title">The model</h2>
           <p>
-            Pigeon AI uses a random forest: 300 decision trees that each predict how many toilets a hexagon should have. The final prediction is the average of
+            Pigeon AI uses a random forest: 300 decision trees that each predict how many {many} a hexagon should have. The final prediction is the average of
             the 300.
           </p>
           <p>
             <strong>One tree</strong> is a list of yes/no questions about a place, such as "4 or more food places within 250 m?". Each hexagon answers the questions
-            and lands in a leaf. The leaf's prediction is the average toilet count of the hexagons in it.
+            and lands in a leaf. The leaf's prediction is the average {one} count of the hexagons in it.
           </p>
           <p>
             <strong>What it sees:</strong> 45 inputs per hexagon. These are population, shops, food, transport, parks, footpaths, sports grounds, playgrounds and
             beaches, counted inside the hexagon and within 250 m, 500 m and 1 km.
           </p>
           <p>
-            <strong>What it doesn't see, on purpose:</strong> location, council, income or demographics, and OpenStreetMap toilets. Location would let it learn
-            "this area has few toilets" and repeat that gap. OpenStreetMap toilets would nearly give it the answer.
+            <strong>What it doesn't see, on purpose:</strong> location, council, income or demographics, and OpenStreetMap {many}. Location would let it learn
+            "this area has few {many}" and repeat that gap. OpenStreetMap {many} would nearly give it the answer.
           </p>
           <div className="table-scroll">
             <table className="small">
@@ -127,7 +134,7 @@ function TrackingPage() {
                 </tr>
               </thead>
               <tbody>
-                {SETTINGS.map(([setting, choice, why]) => (
+                {settings.map(([setting, choice, why]) => (
                   <tr key={setting}>
                     <td>{setting}</td>
                     <td>{choice}</td>
@@ -175,17 +182,17 @@ function TrackingPage() {
         <section aria-labelledby="training-title">
           <h2 id="training-title">How it's trained and tested</h2>
           <p>
-            The model learns the pattern of where Sydney's toilets go: how many a place has for its population, shops, transport and parks. To test it fairly, Sydney's 16,228 hexagons are grouped into 90 larger blocks, and the blocks are
+            The model learns the pattern of where Sydney's {many} go: how many a place has for its population, shops, transport and parks. To test it fairly, Sydney's {stats.find.hexes.toLocaleString()} hexagons are grouped into 90 larger blocks, and the blocks are
             split into 5 groups. Each turn, the model trains on 4 groups and predicts the 5th. After 5 turns, every hexagon has been predicted once, by a model that
             never saw its area. This is <Term id="crossValidation">five-fold spatial cross-validation</Term>, and every score above is{' '}
-            <Term id="heldOut">held-out</Term> this way. The <Term id="growthSuburbs">growth-suburbs test</Term> is separate: 1,108 new-suburb hexagons were not in
+            <Term id="heldOut">held-out</Term> this way. The <Term id="growthSuburbs">growth-suburbs test</Term> is separate: {stats.growth.hexes.toLocaleString()} new-suburb hexagons were not in
             the training data at all.
           </p>
           <SplitDiagram />
           <h3>Why the scores aren't perfect, and shouldn't be</h3>
           <p>
-            Every score is measured on hexagons the model never saw, so it can't copy their toilets. It can only score well by learning Sydney's pattern: more
-            people, shops and stations means more toilets. A perfect score would mean every place already has exactly the toilets that places like it have, so
+            Every score is measured on hexagons the model never saw, so it can't copy their {many}. It can only score well by learning Sydney's pattern: more
+            people, shops and stations means more {many}. A perfect score would mean every place already has exactly the {many} that places like it have, so
             Sydney would have no shortfalls. Lower <Term id="deviance">deviance</Term> means the model learned the pattern better, and what's left over is partly the
             shortfalls we're looking for. That is how Pigeon AI measures need: against Sydney's own standard, applied the same way to growth and new suburbs.
           </p>
@@ -195,7 +202,7 @@ function TrackingPage() {
           <h2 id="heatmap-title">Heatmap</h2>
           <Heatmap />
           <p className="note">
-            Toilets missing = how many fewer toilets a place has than the Sydney average for places with similar population, shops, transport and parks. Map
+            {capitalize(many)} missing = how many fewer {many} a place has than the Sydney average for places with similar population, shops, transport and parks. Map
             data ©{' '}
             <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>.
           </p>
@@ -240,7 +247,7 @@ function TrackingPage() {
             </table>
           </div>
           <p className="note">
-            <Term id="crossValidation">Five-fold spatial cross-validation</Term>. V1–V8 use the same 16,228 hexagons and folds; V8 is an exploratory future-population scenario, and V9's
+            <Term id="crossValidation">Five-fold spatial cross-validation</Term>. V1–V8 use the same {stats.find.hexes.toLocaleString()} hexagons and folds; V8 is an exploratory future-population scenario, and V9's
             full-area deviance is not directly comparable. V10 is incomplete. V1–V10 are seed 0, from Jimmy's saved <code>comparison.csv</code>; V11 and V12 are the{' '}
             <Term id="seeds">mean of seeds 0–2</Term>.
           </p>
@@ -252,30 +259,13 @@ function TrackingPage() {
             </summary>
             <h3>Data</h3>
             <ul>
-              {DATA_SOURCES.map(([name, url, use]) => (
+              {dataSources(layer.unit, officialMap).map(([name, url, use]) => (
                 <li key={url}>
                   <a href={url}>{name}</a>: {use}
                 </li>
               ))}
             </ul>
-            <h3>
-              Council toilet plans ({referencesJson.councilSites} sites from {councils.length} councils)
-            </h3>
-            <p className="note">Used to check the model against where councils plan to build. Each link is the document the sites came from.</p>
-            <ul>
-              {councils.map(([council, docs]) => (
-                <li key={council}>
-                  <strong>{council}</strong>
-                  <ul>
-                    {docs.map((d) => (
-                      <li key={d.url + d.document}>
-                        <a href={d.url}>{d.document}</a> ({d.sites} {d.sites === 1 ? 'site' : 'sites'})
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ul>
+            {references && <CouncilPlans references={references} unit={layer.unit.one} />}
           </details>
         </section>
       </main>
@@ -327,19 +317,45 @@ function SplitDiagram() {
   )
 }
 
-const DATA_SOURCES: [string, string, string][] = [
-  ['National Public Toilet Map (data.gov.au)', 'https://data.gov.au/data/dataset/national-public-toilet-map', 'the official toilet locations the model trains on.'],
-  ['OpenStreetMap', 'https://www.openstreetmap.org/copyright', 'shops, food, transport, parks, sports grounds, playgrounds, beaches, footpaths, and toilets the official map misses (Geofabrik NSW extract and the Overpass API).'],
-  ['ABS 2021 Census DataPacks', 'https://www.abs.gov.au/census/find-census-data/datapacks', 'population per area.'],
-  ['ABS Australian Statistical Geography Standard', 'https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3', 'Greater Sydney, suburb and SA1 boundaries.'],
-  ['ABS SEIFA 2021', 'https://www.abs.gov.au/statistics/people/people-and-communities/socio-economic-indexes-areas-seifa-australia/latest-release', 'disadvantage deciles for the fairness check (never a model input).'],
-  ['NSW Planning Portal open data', 'https://www.planningportal.nsw.gov.au/opendata', 'zoning used to build features for future areas.'],
-  ['H3 hexagonal grid', 'https://h3geo.org', 'the resolution-9 hexagons everything is measured on.'],
-]
+function dataSources({ one, many }: Unit, officialMap: { name: string; url: string }): [string, string, string][] {
+  return [
+    [officialMap.name, officialMap.url, `the official ${one} locations the model trains on.`],
+    ['OpenStreetMap', 'https://www.openstreetmap.org/copyright', `shops, food, transport, parks, sports grounds, playgrounds, beaches, footpaths, and ${many} the official map misses (Geofabrik NSW extract and the Overpass API).`],
+    ['ABS 2021 Census DataPacks', 'https://www.abs.gov.au/census/find-census-data/datapacks', 'population per area.'],
+    ['ABS Australian Statistical Geography Standard', 'https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3', 'Greater Sydney, suburb and SA1 boundaries.'],
+    ['ABS SEIFA 2021', 'https://www.abs.gov.au/statistics/people/people-and-communities/socio-economic-indexes-areas-seifa-australia/latest-release', 'disadvantage deciles for the fairness check (never a model input).'],
+    ['NSW Planning Portal open data', 'https://www.planningportal.nsw.gov.au/opendata', 'zoning used to build features for future areas.'],
+    ['H3 hexagonal grid', 'https://h3geo.org', 'the resolution-9 hexagons everything is measured on.'],
+  ]
+}
 
-const councils = Object.entries(
-  referencesJson.councilDocs.reduce<Record<string, typeof referencesJson.councilDocs>>((acc, d) => {
-    ;(acc[d.council] ??= []).push(d)
-    return acc
-  }, {}),
-)
+function CouncilPlans({ references, unit }: { references: References; unit: string }) {
+  const councils = Object.entries(
+    references.councilDocs.reduce<Record<string, References['councilDocs']>>((acc, d) => {
+      ;(acc[d.council] ??= []).push(d)
+      return acc
+    }, {}),
+  )
+  return (
+    <>
+      <h3>
+        Council {unit} plans ({references.councilSites} sites from {councils.length} councils)
+      </h3>
+      <p className="note">Used to check the model against where councils plan to build. Each link is the document the sites came from.</p>
+      <ul>
+        {councils.map(([council, docs]) => (
+          <li key={council}>
+            <strong>{council}</strong>
+            <ul>
+              {docs.map((d) => (
+                <li key={d.url + d.document}>
+                  <a href={d.url}>{d.document}</a> ({d.sites} {d.sites === 1 ? 'site' : 'sites'})
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))}
+      </ul>
+    </>
+  )
+}

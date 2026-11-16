@@ -1,6 +1,7 @@
 import { useEffect, useId, useState, type KeyboardEvent } from 'react'
 import { cellToLatLng } from 'h3-js'
 import { distanceKm, parseLatLng, RADII_KM, searchPlaces, type AreaSummary, type Place } from './area'
+import { useLayer } from '../layer'
 import type { Cell, Mode } from './cells'
 
 interface Props {
@@ -28,6 +29,7 @@ const away = ([, lat, lng]: Place, hex: string) => {
 
 export function AreaPicker({ mode, area, radius, summary, selectedHex, onPick, onRadius, onClear, onSpot }: Props) {
   const id = useId()
+  const { unit } = useLayer()
   const [places, setPlaces] = useState<Place[]>([])
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState(false)
@@ -161,11 +163,11 @@ export function AreaPicker({ mode, area, radius, summary, selectedHex, onPick, o
                 </div>
                 <div>
                   <b>{summary.today.toLocaleString()}</b>
-                  <span>toilets today</span>
+                  <span>{unit.many} today</span>
                 </div>
                 <div>
                   <b>{one(summary.predicted)}</b>
-                  <span>toilets predicted</span>
+                  <span>{unit.many} predicted</span>
                 </div>
               </div>
               {summary.spots.length ? (

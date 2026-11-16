@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react'
+import { useLayer } from '../layer'
 
 /** Side panel for the assistant. Closed by default; the assistant itself is not connected yet. */
 export function AskPanel({ open, onToggle }: { open: boolean; onToggle: (open: boolean) => void }) {
+  const { unit } = useLayer()
   const closeRef = useRef<HTMLButtonElement>(null)
   const openRef = useRef<HTMLButtonElement>(null)
   const wasOpen = useRef(open)
@@ -31,7 +33,7 @@ export function AskPanel({ open, onToggle }: { open: boolean; onToggle: (open: b
           <p>You will be able to ask about any suburb or suggested spot, and the answer will point to the hexagons on the map.</p>
         </div>
         <form className="ask-composer" onSubmit={(e) => e.preventDefault()}>
-          <input placeholder="Why is Woolloomooloo short of toilets?" aria-label="Question" disabled />
+          <input placeholder={`Why is Woolloomooloo short of ${unit.many}?`} aria-label="Question" disabled />
           <button disabled>Ask</button>
         </form>
       </aside>
