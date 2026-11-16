@@ -14,6 +14,25 @@ export const Route = createFileRoute('/app/stats')({ component: TrackingPage })
 const fmt = (v: number | null, digits: number) => (v === null ? 'Pending' : v.toFixed(digits))
 const STATUS = { done: 'Completed', pending: 'Pending', current: 'Current' } as const
 
+const SETTINGS = [
+  ['Trees', '300', 'Averaging many trees steadies the prediction'],
+  ['Leaf size', 'At least 20 hexagons', 'Each guess averages 20+ similar places, so it learns patterns, not single spots'],
+  ['Inputs per question', 'Half, picked at random', 'Stops one input (like shops) from taking over every tree'],
+  ['Depth limit', 'None', 'Leaf size stops the trees, at about 21 questions deep'],
+  ['Rebalancing', 'None', 'Keeps predictions on the real scale: 1.2 means 1.2 toilets'],
+] as const
+
+// From experiments/leaf_size/results.csv: leaf size, deviance on trained hexagons, deviance on unseen areas, PR-AUC.
+const LEAF_SWEEP = [
+  [1, 0.0784, 0.4091, 0.5592],
+  [5, 0.1705, 0.3845, 0.5734],
+  [10, 0.2248, 0.3795, 0.5752],
+  [20, 0.2716, 0.3782, 0.5687],
+  [50, 0.323, 0.3836, 0.5536],
+  [100, 0.3527, 0.3928, 0.5343],
+  [500, 0.4102, 0.4323, 0.455],
+] as const
+
 function TrackingPage() {
   return (
     <div className="jimmy">
@@ -77,6 +96,79 @@ function TrackingPage() {
           </ul>
           <p className="note">
             Every test behind these numbers is on the <Link to="/app/tests">Tests</Link> page.
+          </p>
+        </section>
+
+        <section aria-labelledby="model-title">
+          <h2 id="model-title">The model</h2>
+          <p>
+            Pigeon AI uses a random forest: 300 decision trees that each predict how many toilets a hexagon should have. The final prediction is the average of
+            the 300.
+          </p>
+          <p>
+            <strong>One tree</strong> is a list of yes/no questions about a place, such as "4 or more food places within 250 m?". Each hexagon answers the questions
+            and lands in a leaf. The leaf's prediction is the average toilet count of the hexagons in it.
+          </p>
+          <p>
+            <strong>What it sees:</strong> 45 inputs per hexagon. These are population, shops, food, transport, parks, footpaths, sports grounds, playgrounds and
+            beaches, counted inside the hexagon and within 250 m, 500 m and 1 km.
+          </p>
+          <p>
+            <strong>What it doesn't see, on purpose:</strong> location, council, income or demographics, and OpenStreetMap toilets. Location would let it learn
+            "this area has few toilets" and repeat that gap. OpenStreetMap toilets would nearly give it the answer.
+          </p>
+          <div className="table-scroll">
+            <table className="small">
+              <thead>
+                <tr>
+                  <th>Setting</th>
+                  <th>Our choice</th>
+                  <th>Why</th>
+                </tr>
+              </thead>
+              <tbody>
+                {SETTINGS.map(([setting, choice, why]) => (
+                  <tr key={setting}>
+                    <td>{setting}</td>
+                    <td>{choice}</td>
+                    <td>{why}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <h3>Why leaf size 20?</h3>
+          <p>
+            We tested it. Smaller leaves fit the training hexagons better but do worse on areas the model never saw, which means it is memorising. Bigger leaves
+            are too blunt everywhere. Leaf sizes 10 to 20 are the sweet spot, and we kept 20.
+          </p>
+          <div className="table-scroll">
+            <table className="small">
+              <thead>
+                <tr>
+                  <th>Leaf size</th>
+                  <th>Error on trained hexagons</th>
+                  <th>Error on unseen areas</th>
+                  <th>
+                    <Term id="prAuc">PR-AUC</Term>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {LEAF_SWEEP.map(([leaf, trained, unseen, prAuc]) => (
+                  <tr key={leaf}>
+                    <td>{leaf === 20 ? <strong>20 (ours)</strong> : leaf}</td>
+                    <td>{trained.toFixed(3)}</td>
+                    <td>{unseen.toFixed(3)}</td>
+                    <td>{prAuc.toFixed(3)}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="note">
+            Error is <Term id="deviance">Poisson deviance</Term> (lower is better). Each row is a full V12 run with only the leaf size changed. Rerun it with{' '}
+            <code>experiments/leaf_size/sweep.py</code>.
           </p>
         </section>
 
