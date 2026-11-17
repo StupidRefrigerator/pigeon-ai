@@ -27,7 +27,7 @@ interface SoonShape extends LayerBase {
 export const LAYERS = [
   { id: 'toilets', name: 'Toilets', color: '#FF48B0', live: true, unit: { one: 'toilet', many: 'toilets' }, heatmapUrl: '/infra/toilets/heatmap.json' },
   { id: 'bikeLanes', name: 'Bike lanes', color: '#FFE800', live: false, unit: { one: 'bike lane', many: 'bike lanes' } },
-  { id: 'bubblers', name: 'Water fountains', color: '#3255A4', live: false, unit: { one: 'water fountain', many: 'water fountains' } },
+  { id: 'bubblers', name: 'Water fountains', color: '#3255A4', live: true, unit: { one: 'water fountain', many: 'water fountains' }, heatmapUrl: '/infra/bubblers/heatmap.json' },
 ] as const satisfies readonly ((LiveShape | SoonShape) & { id: string })[]
 
 export type Layer = (typeof LAYERS)[number]

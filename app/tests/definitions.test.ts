@@ -20,8 +20,11 @@ describe.each(LIVE_LAYERS)('DEFINITIONS for $id', (layer) => {
     expect(defs.prAuc).toContain(`(${tracking.current.prAuc.random.toFixed(3)} across Sydney)`)
     expect(defs.top100).toContain(`about ${Math.round(stats.find.random * 100)}.`)
     expect(defs.top1000).toContain(`about ${Math.round(stats.find.random * 1000)}.`)
-    expect(defs.council).toContain(`${stats.council.top10.y} future ${layer.unit.one} sites`)
-    expect(defs.council).toContain(`about ${stats.council.random}.`)
+    if (stats.council) {
+      expect(defs.council).toContain(`${stats.council.top10.y} future ${layer.unit.one} sites`)
+      expect(defs.council).toContain(`about ${stats.council.random}.`)
+    }
+    expect(defs.deviance).toContain(`scores ${LAYER_DATA[layer.id].meanDeviance.toFixed(3)})`)
     expect(defs.growthSuburbs).toContain(`${fmt(stats.growth.hexes)} hexagons`)
   })
 })

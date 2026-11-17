@@ -41,6 +41,10 @@ data/model/*
 !data/model/fairness.csv
 !data/model/folds.csv
 !data/model/stability.csv
+# The water fountain layer's results, the same files as the toilet layer's.
+!data/model/bubblers/
+data/model/bubblers/shap_values.csv
+data/model/bubblers/decision_tree.png
 
 # Large experiment outputs, kept in pigeon-ai-experiment-outputs.zip on the team Drive (see DATA.md)
 experiments/v2/combos/out/study_oof_predictions.csv

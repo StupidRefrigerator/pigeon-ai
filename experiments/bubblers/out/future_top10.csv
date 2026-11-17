@@ -1,0 +1,21 @@
+area,rank,hex_id,pred,zone,role,nearest_station,station_dist_m,drivers
+aerotropolis,1,89be0857323ffff,0.7262629584439689,ENZ Environment and Recreation,park,Luddenham Station,585.0,distance_nearest_park_m +0.18; food_inside +0.16; food_250m +0.13
+aerotropolis,2,89be08cd9b7ffff,0.7001957207619901,RE1 Public Recreation,park,Bradfield Station,2343.0,distance_nearest_playground_m +0.24; park_area_inside_m2 +0.13; playground_inside +0.11
+aerotropolis,3,89be08cd9a3ffff,0.6972263238169368,RE1 Public Recreation,park,Bradfield Station,2402.0,distance_nearest_playground_m +0.24; park_area_inside_m2 +0.13; playground_inside +0.11
+aerotropolis,4,89be08572bbffff,0.6366611810576022,ENZ Environment and Recreation,park,Luddenham Station,3025.0,distance_nearest_playground_m +0.24; park_area_inside_m2 +0.13; playground_inside +0.10
+aerotropolis,5,89be08cd93bffff,0.6249320161500623,ENZ Environment and Recreation,park,Bradfield Station,2511.0,distance_nearest_playground_m +0.24; park_area_inside_m2 +0.13; playground_inside +0.10
+aerotropolis,6,89be08cd9abffff,0.523764049230952,RU4 Primary Production Small Lots,rural,Bradfield Station,2518.0,distance_nearest_playground_m +0.21; park_area_inside_m2 +0.11; distance_nearest_beach_m -0.10
+aerotropolis,7,89be0856417ffff,0.5053158353354212,MU Mixed Use,centre,Bradfield Station,407.0,food_inside +0.16; food_250m +0.09; park_area_inside_m2 +0.08
+aerotropolis,8,89be0857287ffff,0.49620973474254215,IN1 General Industrial,enterprise,Luddenham Station,3280.0,distance_nearest_playground_m +0.24; park_area_inside_m2 +0.10; distance_nearest_beach_m -0.08
+aerotropolis,9,89be0857053ffff,0.4913868685777883,ENZ Environment and Recreation,park,Luddenham Station,3487.0,distance_nearest_playground_m +0.24; park_area_inside_m2 +0.12; distance_nearest_beach_m -0.08
+aerotropolis,10,89be0857333ffff,0.4895431517399065,MU Mixed Use,centre,Luddenham Station,204.0,food_inside +0.09; food_250m +0.09; park_area_inside_m2 +0.07
+leppington,1,89be08cc307ffff,0.9590104787642315,RE1 Public Recreation,park,Leppington,484.0,distance_nearest_playground_m +0.29; park_area_inside_m2 +0.19; playground_inside +0.13
+leppington,2,89be08cc343ffff,0.7733031227282564,RE1 Public Recreation,park,Leppington,1004.0,distance_nearest_playground_m +0.26; park_area_inside_m2 +0.16; distance_nearest_beach_m -0.12
+leppington,3,89be08cc38bffff,0.6629211134484848,RE1 Public Recreation,park,Leppington,646.0,distance_nearest_playground_m +0.24; park_area_inside_m2 +0.14; distance_nearest_beach_m -0.12
+leppington,4,89be08cdd03ffff,0.6350655220546005,RE1 Public Recreation,park,Leppington,2795.0,distance_nearest_playground_m +0.23; park_area_inside_m2 +0.13; distance_nearest_beach_m -0.10
+leppington,5,89be08cdcb7ffff,0.6145477211555347,RE1 Public Recreation,park,Leppington,1436.0,distance_nearest_playground_m +0.24; park_area_inside_m2 +0.14; distance_nearest_beach_m -0.11
+leppington,6,89be08cc30fffff,0.6044123704501044,MU1 Mixed Use,centre,Leppington,503.0,distance_nearest_beach_m -0.11; distance_nearest_playground_m +0.10; park_area_inside_m2 +0.09
+leppington,7,89be08cc3c3ffff,0.6030021766116246,RE1 Public Recreation,park,Leppington,899.0,distance_nearest_playground_m +0.23; park_area_inside_m2 +0.14; distance_nearest_beach_m -0.11
+leppington,8,89be08cc30bffff,0.5987946607458408,SP2 Infrastructure,infrastructure,Leppington,426.0,distance_nearest_playground_m +0.14; distance_nearest_beach_m -0.13; playground_inside +0.08
+leppington,9,89be08cc36bffff,0.58785454952853,R2 Low Density Residential,residential,Leppington,1410.0,distance_nearest_playground_m +0.23; park_area_inside_m2 +0.14; distance_nearest_beach_m -0.12
+leppington,10,89be08cc373ffff,0.5527858948823178,RE1 Public Recreation,park,Leppington,751.0,distance_nearest_playground_m +0.24; park_area_inside_m2 +0.14; distance_nearest_beach_m -0.10

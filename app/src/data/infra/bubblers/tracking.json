@@ -1,0 +1,63 @@
+{
+ "undercount": {
+  "councils": [
+   "Penrith",
+   "Blacktown",
+   "Liverpool",
+   "Campbelltown",
+   "Fairfield",
+   "Hawkesbury"
+  ],
+  "recorded": 163,
+  "predicted": 479,
+  "listed": 26
+ },
+ "versions": [
+  {
+   "id": "B1",
+   "description": "V12's 45 inputs and settings, trained on council and OpenStreetMap water fountains",
+   "hexes": 16228,
+   "features": 45,
+   "deviance": 0.4081,
+   "prAuc": 0.5285,
+   "top100": 89,
+   "status": "current"
+  }
+ ],
+ "current": {
+  "id": "B1",
+  "prAuc": {
+   "value": 0.529,
+   "random": 0.095
+  },
+  "deviance": {
+   "value": 0.408
+  },
+  "top1000": {
+   "x": 588,
+   "y": 1000,
+   "pct": 58.8
+  },
+  "predictedTotal": 2508,
+  "actualTotal": 2472,
+  "picks": {
+   "listed": 154,
+   "alreadyOne": {
+    "x": 25,
+    "y": 154,
+    "pct": 16
+   },
+   "poorest30": {
+    "x": 41,
+    "y": 154,
+    "pct": 27
+   },
+   "richest30": {
+    "x": 26,
+    "y": 154,
+    "pct": 17
+   },
+   "noSeifa": 32
+  }
+ }
+}

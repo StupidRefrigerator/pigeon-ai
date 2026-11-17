@@ -1,0 +1,23 @@
+rule,count
+amenity=drinking_water,2474
+man_made=water_tap|tap|drinking_fountain + drinking_water=yes,83
+amenity=water_point|fountain + drinking_water=yes,5
+untyped feature + drinking_water=yes,5
+excluded: amenity=fountain man_made=None drinking_water=None,193
+excluded: amenity=None man_made=water_tap drinking_water=None,150
+excluded: amenity=fountain man_made=None drinking_water=no,44
+excluded: amenity=toilets man_made=None drinking_water=no,42
+excluded: amenity=None man_made=water_tap drinking_water=no,39
+excluded: access=private,29
+excluded: amenity=toilets man_made=None drinking_water=yes,17
+excluded: access=customers,11
+excluded: amenity=None man_made=None drinking_water=no,8
+excluded: amenity=water_point man_made=None drinking_water=None,8
+excluded: amenity=shelter man_made=None drinking_water=yes,3
+excluded: amenity=compressed_air man_made=water_tap drinking_water=None,3
+excluded: amenity=watering_place man_made=water_tap drinking_water=None,2
+excluded: amenity=water_point man_made=water_tap drinking_water=no,2
+excluded: amenity=None man_made=water_well drinking_water=no,2
+excluded: amenity=bbq man_made=None drinking_water=yes,1
+excluded: access=no,1
+excluded: amenity=None man_made=water_tower drinking_water=recycled,1

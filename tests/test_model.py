@@ -87,6 +87,19 @@ def test_feature_sets_hold_no_label_identifier_or_sensitive_columns():
             assert not {"lat", "lng", "lon"} & set(features)
 
 
+def test_no_target_sees_a_toilet_or_drinking_water_count():
+    for target in TARGETS.values():
+        for features in target.feature_sets.values():
+            assert not [f for f in features if any(w in f for w in ("toilet", "bubbler", "drinking", "fountain"))]
+
+
+def test_each_target_writes_to_its_own_folder_and_only_toilets_own_the_review_file():
+    dirs = [t.out_dir for t in TARGETS.values()]
+    assert len(set(dirs)) == len(dirs)
+    assert [name for name, t in TARGETS.items() if t.owns_review] == ["toilets"]
+    assert TARGETS["bubblers"].feature_sets["v12"] == TARGETS["toilets"].feature_sets["v12"]
+
+
 def test_candidates_are_empty_hexes_or_shortfalls_of_at_least_the_threshold():
     pred = np.array([1.0, 0.9, 2.1, 1.5, 3.2])
     actual = np.array([0, 0, 1, 1, 2])

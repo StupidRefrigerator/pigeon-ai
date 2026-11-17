@@ -267,7 +267,7 @@ export default function HexMap() {
             <>
               {' '}
               <i className="ring" aria-hidden="true" />
-              {mode === 'future' ? 'Rings are the picks for each future area.' : 'Rings are the 100 suggested spots.'}
+              {mode === 'future' ? 'Rings are the picks for each future area.' : `Rings are the ${LAYER_DATA[layer.id].tracking.current.picks.listed} suggested spots.`}
             </>
           )}
         </p>

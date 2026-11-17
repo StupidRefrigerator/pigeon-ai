@@ -44,6 +44,22 @@ To refresh the V12 layers from today's OpenStreetMap, run `python scripts/fetch_
 | `osm/nsw.osm.pbf`      | OpenStreetMap NSW extract                | Geofabrik                  | 2026-10-18 |
 | `osm_overpass_v12/`    | OpenStreetMap sports, playgrounds, beaches, surf clubs and toilets, in 39 tiles plus one surf-club query (in `pigeon-ai-raw-v12-osm.zip`) | Overpass API (`scripts/fetch_overpass.py`) | 2026-11-09 |
 
+### Water fountains (`data/raw/bubblers/`)
+
+`python scripts/fetch_bubblers.py` downloads the council layers and the OpenStreetMap features (`--skip-osm` for the council layers only). Then `python -I scripts/build_bubblers.py` writes `data/processed/bubbler_labels.csv` and `bubbler_points.csv`. Each council layer is queried with `query?where=1=1&outFields=*&outSR=4326&f=geojson`.
+
+| Path in `data/raw/bubblers/` | Dataset | Source | Downloaded |
+| --- | --- | --- | --- |
+| `official/cos_fountains.geojson` | City of Sydney drinking fountains (273) | [ArcGIS layer](https://services1.arcgis.com/cNVyNtjGVZybOQWZ/arcgis/rest/services/Drinking_fountains/FeatureServer/0) | 2026-11-16 |
+| `official/parramatta_fountains.geojson` | City of Parramatta drinking fountains (132) | [ArcGIS layer](https://services6.arcgis.com/NrOjMi9LSYL3MUze/arcgis/rest/services/Drinking_Fountains/FeatureServer/0) | 2026-11-16 |
+| `official/fairfield_bubblers.geojson` | Fairfield bubbler inspections (12, partial) | [ArcGIS layer](https://services9.arcgis.com/ptMeJSvCigyke2Tt/arcgis/rest/services/Bubbler_Inspection_Data_View_Layer/FeatureServer/0) | 2026-11-16 |
+| `official/northern_beaches_bubblers.geojson` | Northern Beaches bubblers (239) | [ArcGIS layer](https://maps.northernbeaches.nsw.gov.au/arcgis/rest/services/Bubblers/MapServer/0) | 2026-11-16 |
+| `official/penrith_bubblers.geojson` | Penrith bubbler locations (14, partial) | [ArcGIS layer](https://services-ap1.arcgis.com/2ifYh4l3ar2sldJb/arcgis/rest/services/Bubbler_Locations/FeatureServer/0) | 2026-11-16 |
+| `osm/drinking_water.json` | OpenStreetMap drinking water, taps and fountains | Overpass API | 2026-11-16 |
+| `lga/lga.geojson` | NSW local government area boundaries (`lganame`) | Downloaded by hand; source not recorded | 2026-11-16 |
+
+Other councils publish no fountain layer we found, so their fountains come from OpenStreetMap only. Western councils record few: Penrith, Blacktown, Liverpool, Campbelltown, Fairfield and Hawkesbury have 163 fountains in the label where the model predicts 479.
+
 OSM changes daily, so a new download gives slightly different features. Use the Drive copies to reproduce the committed dataset exactly. In `osm_overpass_v12/`, `fetch_log.json` and the `.meta.json` files record each tile's server and OSM snapshot time. Some mirror tiles are snapshots from 2026-05-31 to 2026-07-28, not 2026-11-09.
 
 The archived baseline (`archive/before_simplification/`) is also in the Drive folder. It's only needed for `--check-baseline`.

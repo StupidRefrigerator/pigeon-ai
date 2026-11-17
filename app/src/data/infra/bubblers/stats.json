@@ -1,0 +1,108 @@
+{
+ "find": {
+  "hexes": 16228,
+  "toiletHexes": 1540,
+  "top100": {
+   "x": 89,
+   "y": 100,
+   "pct": 89
+  },
+  "top1000": {
+   "x": 588,
+   "y": 1000,
+   "pct": 58.8
+  },
+  "prAuc": 0.529,
+  "random": 0.095
+ },
+ "growth": {
+  "hexes": 1108,
+  "toiletHexes": 32,
+  "top100": {
+   "x": 19,
+   "y": 32,
+   "pct": 59
+  },
+  "randomTop100": 3,
+  "prAuc": 0.205,
+  "random": 0.029,
+  "predicted": 29,
+  "actual": 39
+ },
+ "reach": {
+  "listed": 154,
+  "poorest30": {
+   "x": 41,
+   "y": 154,
+   "pct": 27
+  },
+  "richest30": {
+   "x": 26,
+   "y": 154,
+   "pct": 17
+  },
+  "noSeifa": 32,
+  "deciles": [
+   {
+    "decile": 1,
+    "real": 71,
+    "predicted": 217,
+    "per10k": 1.06
+   },
+   {
+    "decile": 2,
+    "real": 114,
+    "predicted": 189,
+    "per10k": 2.39
+   },
+   {
+    "decile": 3,
+    "real": 143,
+    "predicted": 189,
+    "per10k": 3.34
+   },
+   {
+    "decile": 4,
+    "real": 206,
+    "predicted": 220,
+    "per10k": 4.93
+   },
+   {
+    "decile": 5,
+    "real": 235,
+    "predicted": 213,
+    "per10k": 5.91
+   },
+   {
+    "decile": 6,
+    "real": 263,
+    "predicted": 215,
+    "per10k": 7.53
+   },
+   {
+    "decile": 7,
+    "real": 251,
+    "predicted": 202,
+    "per10k": 6.61
+   },
+   {
+    "decile": 8,
+    "real": 258,
+    "predicted": 227,
+    "per10k": 7.03
+   },
+   {
+    "decile": 9,
+    "real": 235,
+    "predicted": 186,
+    "per10k": 7.66
+   },
+   {
+    "decile": 10,
+    "real": 225,
+    "predicted": 192,
+    "per10k": 8.5
+   }
+  ]
+ }
+}

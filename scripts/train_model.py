@@ -12,7 +12,7 @@ if __name__ == "__main__":
     parser.add_argument("--features", default=DEFAULT_FEATURES,
                         help="feature set name: v12 (default), latest or v1")
     parser.add_argument("--threshold", type=float, default=THRESHOLD,
-                        help="how many more toilets than exist the prediction must be to flag a candidate")
+                        help="how many more units than exist the prediction must be to flag a candidate")
     args = parser.parse_args()
     if args.features not in TARGETS[args.target].feature_sets:
         parser.error(f"--features must be one of {list(TARGETS[args.target].feature_sets)}")
