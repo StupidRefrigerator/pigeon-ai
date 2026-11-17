@@ -98,4 +98,3 @@ button, input, select { font: inherit; }
 .jimmy .references summary h2::after { content: ' ▸'; color: var(--muted); }
 .jimmy .references[open] summary h2::after { content: ' ▾'; }
 .jimmy .references li ul { margin: 4px 0 8px; }
-.jimmy .caveat { margin: 14px 0; padding: 8px 12px; border-left: 3px solid #e9b75b; background: #1a1a1a; font-size: 14px; }

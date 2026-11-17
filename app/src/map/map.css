@@ -16,7 +16,6 @@
 .hexmap-legend .ramp { height: 10px; margin: 6px 0 3px; background: linear-gradient(90deg, #3255A4, #9FB0DC 16%, #DCE1EE 26%, #FFE800 42%, #FF8A1F 60%, #FF48B0 80%, #C21C86); }
 .hexmap-legend .ends { display: flex; justify-content: space-between; }
 .hexmap-legend p { margin: 6px 0 0; }
-.hexmap-legend .caveat { padding-top: 6px; border-top: 1px solid var(--line, #d9dee3); }
 .hexmap-legend .ring { display: inline-block; width: 11px; height: 11px; margin: 0 3px 0 2px; vertical-align: -1px; border: 2.5px solid var(--purple); border-radius: 50%; background: var(--paper); }
 
 .hexmap-status { position: absolute; z-index: 4; top: 50%; left: 50%; transform: translate(-50%, -50%); margin: 0; padding: 10px 16px; font-weight: 700; }

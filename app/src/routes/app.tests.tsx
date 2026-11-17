@@ -1,6 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router'
 import type { ReactNode } from 'react'
-import { Caveat } from '../components/Caveat'
 import { Term } from '../components/Term'
 import { capitalize } from '../infra'
 import { LAYER_DATA } from '../infra-data'
@@ -34,6 +33,8 @@ function Compare({ model, rows }: { model: string; rows: [ReactNode, string, str
   )
 }
 
+const list = (names: string[]) => `${names.slice(0, -1).join(', ')} and ${names.at(-1)}`
+
 const NUMBER_WORDS = ['Three', 'Four'] as const
 
 /** The decile whose prediction is furthest from the real count, as a ratio; `close` when every decile is within 25%. */
@@ -48,6 +49,7 @@ function TestsPage() {
   const { one, many } = layer.unit
   const { stats, tracking, labels, osmInLabel } = LAYER_DATA[layer.id]
   const { find, council, growth, reach } = stats
+  const gap = tracking.undercount
   const model = tracking.current.id
   // The growth test counts OpenStreetMap units too: from the label itself, or from the OSM-corrected rerun.
   const g = growth.withOsm ?? growth
@@ -63,7 +65,6 @@ function TestsPage() {
             {NUMBER_WORDS[council ? 1 : 0]} questions about the selected model, {model}. Every answer scores predictions for <Term id="hexagon">hexagons</Term>{' '}
             the model did not train on (<Term id="heldOut">held-out</Term>).
           </p>
-          <Caveat />
         </section>
 
         <section aria-labelledby="q1">
@@ -174,6 +175,15 @@ function TestsPage() {
             Deciles of the ABS SEIFA disadvantage index (IRSD) across the study hexagons. Hexagons without a SEIFA score are left out. Predictions are seed 0.
           </p>
         </section>
+
+        {gap && (
+          <section aria-labelledby="gap-title">
+            <h2 id="gap-title">Known data gap</h2>
+            <p>
+              {`Council records are thin in the west. ${list(gap.councils)} have ${gap.recorded} ${many} on record where ${model} predicts ${gap.predicted}. Some of that gap is real need and some is ${many} nobody mapped, so the tests above check less there, and some of the ${gap.listed} suggested places there may already have one.`}
+            </p>
+          </section>
+        )}
       </main>
     </div>
   )

@@ -5,7 +5,6 @@ import { Term } from '../components/Term'
 import { capitalize, LIVE_LAYERS, type Unit } from '../infra'
 import { LAYER_DATA, type Labels } from '../infra-data'
 import { useLayer } from '../layer'
-import { Caveat } from '../components/Caveat'
 import { fmtRatio, type References } from '../lib/data'
 
 export const Route = createFileRoute('/app/stats')({ component: TrackingPage })
@@ -50,7 +49,6 @@ function TrackingPage() {
           <p>
             Pigeon AI predicts where the next public infrastructure should go, from a bird's-eye view of Sydney today and of its growth and future suburbs. {`Public ${many} are the ${ORDINALS[LIVE_LAYERS.indexOf(layer)]} layer.`}
           </p>
-          <Caveat />
         </section>
 
         <section aria-labelledby="selected-title">
