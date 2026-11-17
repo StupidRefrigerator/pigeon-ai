@@ -16,7 +16,7 @@ export interface Cell {
   context: string
   today: number
   predicted: number
-  /** Chance a hexagon like this has at least one toilet, 0–1. */
+  /** Chance a hexagon like this has at least one, 0–1. */
   chance: number
   /** Predicted minus today; negative means better served than expected. */
   gap: number

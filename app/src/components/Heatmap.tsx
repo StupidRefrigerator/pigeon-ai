@@ -1,5 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type * as Leaflet from 'leaflet'
+import { capitalize, type Unit } from '../infra'
+import { LAYER_DATA } from '../infra-data'
+import { useLayer } from '../layer'
 import type { HeatmapData } from '../lib/data'
 
 /** One results map in Jimmy's heatmap style. Leaflet and h3-js load in the browser only, after the page renders. */
@@ -12,7 +15,7 @@ interface Hex {
   real: number
   pred: number
   p: number
-  /** predicted − real; for suggested spots, after counting OpenStreetMap toilets too */
+  /** predicted − real; for suggested spots, after counting OpenStreetMap units too */
   gap: number
   drivers: { f: string; v: number }[] | null
   place: string
@@ -25,27 +28,26 @@ const AREAS: { id: Area; label: string }[] = [
   { id: 'growth', label: 'Growth suburbs' },
   { id: 'future', label: 'Future areas' },
 ]
-const METRICS: { id: Metric; label: string }[] = [
-  { id: 'gap', label: 'Toilets missing' },
-  { id: 'pred', label: 'Predicted toilets' },
-  { id: 'p', label: 'Chance of a toilet' },
+const metricsFor = ({ one, many }: Unit): { id: Metric; label: string }[] => [
+  { id: 'gap', label: `${capitalize(many)} missing` },
+  { id: 'pred', label: `Predicted ${many}` },
+  { id: 'p', label: `Chance of a ${one}` },
 ]
-const NOTES: Record<Area, string> = {
-  today:
-    'All 16,228 study hexagons. Each prediction comes from a model that never saw that hexagon in training. Dark outlines mark the 100 suggested places.',
-  growth: '1,108 hexagons in growth suburbs the model never trained on. Toilets there today are the real count.',
-  future:
-    'Bradfield (Aerotropolis) and Leppington as planned, with no toilets yet, so toilets missing equals the prediction. Only the top 10 hexagons per area were saved, so only those are shown. Read the order, not the totals.',
-}
+const notesFor = (hexes: { today: number; growth: number }, { many }: Unit): Record<Area, string> => ({
+  today: `All ${hexes.today.toLocaleString('en-AU')} study hexagons. Each prediction comes from a model that never saw that hexagon in training. Dark outlines mark the 100 suggested places.`,
+  growth: `${hexes.growth.toLocaleString('en-AU')} hexagons in growth suburbs the model never trained on. ${capitalize(many)} there today are the real count.`,
+  future: `Bradfield (Aerotropolis) and Leppington as planned, with no ${many} yet, so ${many} missing equals the prediction. Only the top 10 hexagons per area were saved, so only those are shown. Read the order, not the totals.`,
+})
 const FUTURE_NAMES: Record<string, string> = { aerotropolis: 'Bradfield (Aerotropolis)', leppington: 'Leppington' }
 
 // Jimmy's gap colours, reused for every metric so the scale reads the same way.
 const RAMP = ['#dfe7df', '#f7e3aa', '#e9b75b', '#df873c', '#c94c35', '#842f37']
-const SCALES: Record<Metric, { title: string; cuts: number[]; labels: string[]; value: (h: Hex) => number }> = {
-  gap: { title: 'Toilets missing', cuts: [0, 0.25, 0.5, 1, 2], labels: ['0', '>0–0.25', '0.25–0.5', '0.5–1', '1–2', '2+'], value: (h) => Math.max(0, h.gap) },
-  pred: { title: 'Predicted toilets', cuts: [0.05, 0.25, 0.5, 1, 2], labels: ['<0.05', '0.05–0.25', '0.25–0.5', '0.5–1', '1–2', '2+'], value: (h) => h.pred },
-  p: { title: 'Chance of at least one toilet', cuts: [0.05, 0.2, 0.4, 0.6, 0.8], labels: ['<5%', '5–20%', '20–40%', '40–60%', '60–80%', '80%+'], value: (h) => h.p },
-}
+type Scale = { title: string; cuts: number[]; labels: string[]; value: (h: Hex) => number }
+const scalesFor = ({ one, many }: Unit): Record<Metric, Scale> => ({
+  gap: { title: `${capitalize(many)} missing`, cuts: [0, 0.25, 0.5, 1, 2], labels: ['0', '>0–0.25', '0.25–0.5', '0.5–1', '1–2', '2+'], value: (h) => Math.max(0, h.gap) },
+  pred: { title: `Predicted ${many}`, cuts: [0.05, 0.25, 0.5, 1, 2], labels: ['<0.05', '0.05–0.25', '0.25–0.5', '0.5–1', '1–2', '2+'], value: (h) => h.pred },
+  p: { title: `Chance of at least one ${one}`, cuts: [0.05, 0.2, 0.4, 0.6, 0.8], labels: ['<5%', '5–20%', '20–40%', '40–60%', '60–80%', '80%+'], value: (h) => h.p },
+})
 const binOf = (v: number, cuts: number[]) => cuts.filter((c) => v > c).length
 
 function parse(d: HeatmapData): Record<Area, Map<string, Hex>> {
@@ -102,6 +104,10 @@ interface MapRefs {
 }
 
 export function Heatmap() {
+  const layer = useLayer()
+  const { unit } = layer
+  const { stats } = LAYER_DATA[layer.id]
+  const scales = useMemo(() => scalesFor(unit), [unit])
   const el = useRef<HTMLDivElement>(null)
   const refs = useRef<MapRefs | null>(null)
   const [sets, setSets] = useState<Record<Area, Map<string, Hex>> | null>(null)
@@ -116,7 +122,7 @@ export function Heatmap() {
   useEffect(() => {
     let cancelled = false
     let map: Leaflet.Map | undefined
-    Promise.all([import('leaflet'), import('h3-js'), fetch('/heatmap.json').then((r) => (r.ok ? r.json() : Promise.reject(new Error(`heatmap.json: ${r.status}`))))])
+    Promise.all([import('leaflet'), import('h3-js'), fetch(layer.heatmapUrl).then((r) => (r.ok ? r.json() : Promise.reject(new Error(`heatmap.json: ${r.status}`))))])
       .then(([leaflet, h3, data]: [typeof import('leaflet'), typeof import('h3-js'), HeatmapData]) => {
         if (cancelled || !el.current) return
         // leaflet is UMD: Vite hands it over as the default export
@@ -144,7 +150,7 @@ export function Heatmap() {
       map?.remove()
       refs.current = null
     }
-  }, [])
+  }, [layer.heatmapUrl])
 
   // fit the view when the area changes
   useEffect(() => {
@@ -162,7 +168,7 @@ export function Heatmap() {
     let layer = m.cache.get(key)
     if (!layer) {
       const { L, h3 } = m
-      const scale = SCALES[metric]
+      const scale = scales[metric]
       const byBin: Hex[][] = RAMP.map(() => [])
       for (const h of sets[area].values()) byBin[binOf(scale.value(h), scale.cuts)]!.push(h)
       layer = L.layerGroup()
@@ -177,7 +183,7 @@ export function Heatmap() {
     if (m.layer) m.map.removeLayer(m.layer)
     m.layer = layer.addTo(m.map)
     m.selected.bringToFront()
-  }, [sets, area, metric])
+  }, [sets, area, metric, scales])
 
   // outline the selected hexagon
   useEffect(() => {
@@ -193,7 +199,7 @@ export function Heatmap() {
     return { hexes: hs.length, pred: hs.reduce((s, h) => s + h.pred, 0), real: hs.reduce((s, h) => s + h.real, 0) }
   }, [sets, area])
 
-  const scale = SCALES[metric]
+  const scale = scales[metric]
   return (
     <>
       <div className="switches">
@@ -207,14 +213,14 @@ export function Heatmap() {
         </div>
         <div className="switch" role="group" aria-label="Colour by">
           <span>Colour by</span>
-          {METRICS.map((m) => (
+          {metricsFor(unit).map((m) => (
             <button key={m.id} type="button" aria-pressed={metric === m.id} onClick={() => setMetric(m.id)}>
               {m.label}
             </button>
           ))}
         </div>
       </div>
-      <p className="note">{NOTES[area]}</p>
+      <p className="note">{notesFor({ today: stats.find.hexes, growth: stats.growth.hexes }, unit)[area]}</p>
       {error && <p className="status error">{error}</p>}
       <div ref={el} className="map" aria-label={`Map of ${AREAS.find((a) => a.id === area)!.label}, coloured by ${scale.title.toLowerCase()}`} />
       <div className="map-total">
@@ -224,11 +230,11 @@ export function Heatmap() {
               <strong>{totals.hexes.toLocaleString()}</strong> hexagons
             </span>
             <span>
-              <strong>{totals.pred.toLocaleString(undefined, { maximumFractionDigits: totals.pred < 100 ? 1 : 0 })}</strong> predicted toilets
+              <strong>{totals.pred.toLocaleString(undefined, { maximumFractionDigits: totals.pred < 100 ? 1 : 0 })}</strong> predicted {unit.many}
             </span>
             {area !== 'future' && (
               <span>
-                <strong>{totals.real.toLocaleString()}</strong> real toilets
+                <strong>{totals.real.toLocaleString()}</strong> real {unit.many}
               </span>
             )}
             {area === 'today' && (
@@ -260,6 +266,7 @@ export function Heatmap() {
 }
 
 function Detail({ hex, area }: { hex: Hex | null; area: Area }) {
+  const { unit } = useLayer()
   if (!hex)
     return (
       <div className="details">
@@ -268,7 +275,7 @@ function Detail({ hex, area }: { hex: Hex | null; area: Area }) {
       </div>
     )
   const title = hex.rec
-    ? `Short by at least one toilet: ${hex.rec.rank} of 100, near ${hex.place}`
+    ? `Short by at least one ${unit.one}: ${hex.rec.rank} of 100, near ${hex.place}`
     : hex.future
       ? `${hex.place}: ${hex.future.rank} of 10`
       : `Hexagon near ${hex.place}`
@@ -285,26 +292,26 @@ function Detail({ hex, area }: { hex: Hex | null; area: Area }) {
       </p>
       <div className="detail-numbers">
         <div>
-          <span>Predicted toilets</span>
+          <span>Predicted {unit.many}</span>
           <strong>{f2(hex.pred)}</strong>
         </div>
         {!hex.future && (
           <div>
-            <span>Toilets there today</span>
+            <span>{capitalize(unit.many)} there today</span>
             <strong>{hex.real}</strong>
           </div>
         )}
         <div>
-          <span>Toilets missing{hex.rec ? ' (after OSM toilets)' : ''}</span>
+          <span>{capitalize(unit.many)} missing{hex.rec ? ` (after OSM ${unit.many})` : ''}</span>
           <strong>{signed(hex.gap)}</strong>
         </div>
         <div>
-          <span>Chance of a toilet</span>
+          <span>Chance of a {unit.one}</span>
           <strong>{Math.round(hex.p * 100)}%</strong>
         </div>
         {hex.rec && (
           <div>
-            <span>OpenStreetMap toilets</span>
+            <span>OpenStreetMap {unit.many}</span>
             <strong>{hex.rec.osm}</strong>
           </div>
         )}

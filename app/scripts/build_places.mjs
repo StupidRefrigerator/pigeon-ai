@@ -3,7 +3,7 @@
 // Run from app/:  node scripts/build_places.mjs
 //
 // Reads ../data/reference/sydney_places.json (ABS suburbs plus six landmarks) and keeps the places
-// with at least one map hexagon (public/heatmap.json) within 2 km, so every result lands on data.
+// with at least one map hexagon (public/infra/toilets/heatmap.json) within 2 km, so every result lands on data.
 // Output: {"places": [[name, lat, lng], ...]}, sorted by name, "(NSW)" dropped from the ABS names.
 import { readFileSync, writeFileSync } from 'node:fs'
 import { cellToLatLng } from 'h3-js'
@@ -11,7 +11,7 @@ import { cellToLatLng } from 'h3-js'
 const NEAR_KM = 2
 const read = (p) => JSON.parse(readFileSync(new URL(p, import.meta.url), 'utf8'))
 const { places } = read('../../data/reference/sydney_places.json')
-const heat = read('../public/heatmap.json')
+const heat = read('../public/infra/toilets/heatmap.json')
 const hexes = new Set([...heat.today.map((r) => r[0]), ...heat.growth.map((r) => r[0]), ...heat.future.map((r) => r[2])])
 const centres = [...hexes].map((h) => cellToLatLng(h))
 

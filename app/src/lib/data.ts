@@ -6,7 +6,7 @@ export interface Ratio {
 
 export const fmtRatio = (r: Ratio) => `${r.x.toLocaleString()}/${r.y.toLocaleString()}`
 
-/** src/data/stats.json: the four answers on the Tests page. */
+/** src/data/infra/toilets/stats.json: the four answers on the Tests page. */
 export interface Stats {
   find: { hexes: number; toiletHexes: number; top100: Ratio; top1000: Ratio; prAuc: number; random: number }
   council: { top10: Ratio; random: number }
@@ -31,6 +31,12 @@ export interface Stats {
   }
 }
 
+/** src/data/infra/<layer>/references.json: the planning documents behind the layer's planned sites. */
+export interface References {
+  councilSites: number
+  councilDocs: { council: string; document: string; url: string; sites: number }[]
+}
+
 export interface Version {
   id: string
   description: string
@@ -42,7 +48,7 @@ export interface Version {
   status: 'done' | 'pending' | 'current'
 }
 
-/** src/data/tracking.json: version history and the current model's headline. */
+/** src/data/infra/toilets/tracking.json: version history and the current model's headline. */
 export interface Tracking {
   versions: Version[]
   current: {
@@ -58,7 +64,7 @@ export interface Tracking {
   }
 }
 
-/** public/heatmap.json, fetched by the Tracking-page map. Drivers are "featIndex:value" pairs joined by commas. */
+/** public/infra/toilets/heatmap.json, fetched by the Tracking-page map. Drivers are "featIndex:value" pairs joined by commas. */
 export interface HeatmapData {
   feats: string[]
   places: string[]

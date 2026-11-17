@@ -1,17 +1,18 @@
 """Build the data behind the internal Tracking (/app/stats) and Tests (/app/tests) pages.
 
-Run from anywhere:  /tmp/pigeon-env/bin/python app/scripts/build_data.py
+Run from anywhere:  /tmp/pigeon-env/bin/python app/scripts/build_data.py [--target toilets]
 (needs pandas 2: pandas 3's qcut splits tied SEIFA scores differently from fairness.csv)
 
-Writes, all committed:
-  src/data/tracking.json  version history V1-V12 and the V12 headline (bundled)
-  src/data/stats.json     the four answers on the Tests page (bundled)
-  public/heatmap.json     per-hex results for the Tracking-page map (fetched at runtime)
+Writes, all committed, for the target layer (default toilets):
+  src/data/infra/<target>/tracking.json  version history V1-V12 and the V12 headline (bundled)
+  src/data/infra/<target>/stats.json     the four answers on the Tests page (bundled)
+  public/infra/<target>/heatmap.json     per-hex results for the maps (fetched at runtime)
 
 Model numbers are V12 (M1 in experiments/v2/combos): seed-mean metrics from
 experiments/v2/combos/out, per-hex values from data/model (seed 0). The default
 list is every hexagon short of at least one toilet, ranked by gap only, with no weighting.
 """
+import argparse
 import json
 import math
 from pathlib import Path
@@ -19,6 +20,10 @@ from pathlib import Path
 import h3
 import numpy as np
 import pandas as pd
+
+parser = argparse.ArgumentParser()
+parser.add_argument("--target", choices=["toilets"], default="toilets", help="the infrastructure layer to build")
+TARGET = parser.parse_args().target
 
 APP = Path(__file__).resolve().parents[1]
 REPO = APP.parent
@@ -163,7 +168,7 @@ assert stats["reach"]["deciles"][0]["real"] == 274 and stats["reach"]["deciles"]
 assert stats["growth"]["predicted"] == round(float(v12["growth predicted (39)"]))
 assert stats["growth"]["withOsm"]["top100"]["x"] == 31 and stats["growth"]["withOsm"]["toiletHexes"] == 48
 
-# ---------- public/heatmap.json ----------
+# ---------- heatmap.json ----------
 places = json.load(open(REPO / "data/reference/sydney_places.json"))["places"]
 p_names = [n.replace(" (NSW)", "") for n in places]
 p_ll = np.radians(np.array(list(places.values())))
@@ -207,10 +212,11 @@ future = [[f.area, int(f.rank), f.hex_id, r(f.pred), r(1 - math.exp(-f.pred)), f
 heatmap = {"feats": feats, "places": p_names, "today": today, "recs": rec_rows, "growth": growth, "future": future}
 
 out = {
-    APP / "src/data/tracking.json": json.dumps(tracking, indent=1, ensure_ascii=False),
-    APP / "src/data/stats.json": json.dumps(stats, indent=1, ensure_ascii=False),
-    APP / "public/heatmap.json": json.dumps(heatmap, separators=(",", ":"), ensure_ascii=False),
+    APP / f"src/data/infra/{TARGET}/tracking.json": json.dumps(tracking, indent=1, ensure_ascii=False),
+    APP / f"src/data/infra/{TARGET}/stats.json": json.dumps(stats, indent=1, ensure_ascii=False),
+    APP / f"public/infra/{TARGET}/heatmap.json": json.dumps(heatmap, separators=(",", ":"), ensure_ascii=False),
 }
 for path, text in out.items():
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text)
     print(f"{path.relative_to(APP)}: {path.stat().st_size / 1024:.0f} KB")

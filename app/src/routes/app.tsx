@@ -1,20 +1,31 @@
 import { Show, SignInButton, UserButton } from '@clerk/tanstack-react-start'
 import { Link, Outlet, createFileRoute, useRouterState } from '@tanstack/react-router'
 import { useEffect, useState, type CSSProperties } from 'react'
+import { LAYERS, LIVE_LAYERS, resolveLayer, type LiveLayerId } from '../infra'
+import { LayerProvider, useLayer } from '../layer'
 import { clerkEnabled } from '../lib/clerk'
 import '../shell.css'
 
-export const Route = createFileRoute('/app')({ component: AppShell })
+/** `?layer=` picks the infrastructure layer; absent or unknown ids mean the default layer. */
+function validateSearch(search: Record<string, unknown>): { layer?: LiveLayerId } {
+  const layer = LIVE_LAYERS.find((l) => l.id === search.layer)
+  return layer ? { layer: layer.id } : {}
+}
 
-const INFRA = [
-  { name: 'Toilets', color: '#FF48B0', live: true },
-  { name: 'Bike lanes', color: '#FFE800', live: false },
-  { name: 'Water fountains', color: '#3255A4', live: false },
-] as const
+export const Route = createFileRoute('/app')({ validateSearch, component: AppShell })
 
 const ADMIN_PAGES: Record<string, string> = { '/app/stats': 'Tracking', '/app/tests': 'Tests' }
 
 function AppShell() {
+  return (
+    <LayerProvider value={resolveLayer(Route.useSearch().layer)}>
+      <Dashboard />
+    </LayerProvider>
+  )
+}
+
+function Dashboard() {
+  const layer = useLayer()
   const path = useRouterState({ select: (s) => s.location.pathname.replace(/\/$/, '') })
   const adminPage = ADMIN_PAGES[path]
   const [adminOpen, setAdminOpen] = useState(true)
@@ -47,8 +58,8 @@ function AppShell() {
             Infrastructure
           </div>
           <ul className="dash-infra" aria-labelledby="infra-h">
-            {INFRA.map((i) => (
-              <li key={i.name} className={i.live ? 'live' : 'soon'} style={{ '--c': i.color } as CSSProperties} aria-current={i.live ? 'true' : undefined}>
+            {LAYERS.map((i) => (
+              <li key={i.id} className={i.live ? 'live' : 'soon'} style={{ '--c': i.color } as CSSProperties} aria-current={i.id === layer.id ? 'true' : undefined}>
                 <i className="swatch" aria-hidden="true" />
                 {i.name}
                 <small>{i.live ? 'live' : 'soon'}</small>
@@ -58,7 +69,7 @@ function AppShell() {
         </div>
 
         <nav className="dash-nav" aria-label="Main">
-          <Link to="/app" activeOptions={{ exact: true }}>
+          <Link to="/app" search={(prev) => prev} activeOptions={{ exact: true }}>
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="M12 2 21 7v10l-9 5-9-5V7z" />
               <path d="M12 7 16.5 9.5v5L12 17l-4.5-2.5v-5z" />
@@ -72,13 +83,13 @@ function AppShell() {
             </svg>
           </button>
           <div id="admin-links" className="dash-admin" hidden={!adminOpen}>
-            <Link to="/app/stats">
+            <Link to="/app/stats" search={(prev) => prev}>
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M3 20h18M6 16V9M11 16V5M16 16v-4M21 16V8" />
               </svg>
               Tracking
             </Link>
-            <Link to="/app/tests">
+            <Link to="/app/tests" search={(prev) => prev}>
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3" />
               </svg>

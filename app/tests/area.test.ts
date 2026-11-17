@@ -39,7 +39,7 @@ describe('selectArea', () => {
   })
 
   it('finds suggested places around Parramatta on the real map data', () => {
-    const heat = JSON.parse(readFileSync(new URL('../public/heatmap.json', import.meta.url), 'utf8')) as HeatmapData
+    const heat = JSON.parse(readFileSync(new URL('../public/infra/toilets/heatmap.json', import.meta.url), 'utf8')) as HeatmapData
     const places = (JSON.parse(readFileSync(new URL('../public/places.json', import.meta.url), 'utf8')) as { places: Place[] }).places
     const parra = places.find((p) => p[0] === 'Parramatta')!
     const s = selectArea(toCells(heat).today, parra, 1)
