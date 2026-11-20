@@ -1,0 +1,7 @@
+model,seed,top100_in_common_with_seed0
+rf_len_bike,1,90
+rf_len_bike,2,86
+rf_cls_bike,1,90
+rf_cls_bike,2,87
+hgb_poisson_bike,1,63
+hgb_poisson_bike,2,59
