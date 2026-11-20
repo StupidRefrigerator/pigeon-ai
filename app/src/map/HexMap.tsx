@@ -136,6 +136,9 @@ export default function HexMap() {
     }
   }, [dataUrl])
 
+  /** The camera before the first hexagon was picked, so closing the card flies back to it. */
+  const home = useRef<MapViewState | null>(null)
+
   const fly = (to: MapViewState, duration: number) =>
     setView({ ...to, transitionDuration: reduceMotion() ? 0 : duration, transitionInterpolator: new FlyToInterpolator({ speed: 1.4 }) })
 
@@ -143,6 +146,7 @@ export default function HexMap() {
     if (m === mode) return
     setMode(m)
     setSelected(null)
+    home.current = null
     fly(area ? areaView(area, radius, box.current, view.bearing ?? 0) : VIEWS[m], 1800)
   }
 
@@ -150,18 +154,34 @@ export default function HexMap() {
     setArea(place)
     setRadius(km)
     setSelected(null)
+    home.current = null
     fly(areaView(place, km, box.current, view.bearing ?? 0), 1600)
   }
   const clearArea = () => {
     setArea(null)
     setSelected(null)
+    home.current = null
     fly(VIEWS[mode], 1600)
   }
 
+  /** The first pick swings the camera round; picking another while one is open only pans and zooms. */
   const select = (cell: Cell) => {
-    setSelected(cell)
     const [longitude, latitude] = lngLat(cell.hex)
-    fly({ longitude, latitude, zoom: Math.max(view.zoom, 13.4), pitch: 58, bearing: (view.bearing ?? 0) + 25 }, 1700)
+    const zoom = Math.max(view.zoom, 13.4)
+    if (selected) {
+      fly({ longitude, latitude, zoom, pitch: view.pitch ?? 58, bearing: view.bearing ?? 0 }, 1200)
+    } else {
+      const { longitude: lng, latitude: lat, zoom: z0, pitch, bearing } = view
+      home.current = { longitude: lng, latitude: lat, zoom: z0, pitch, bearing }
+      fly({ longitude, latitude, zoom, pitch: 58, bearing: (view.bearing ?? 0) + 25 }, 1700)
+    }
+    setSelected(cell)
+  }
+
+  const deselect = () => {
+    setSelected(null)
+    if (home.current) fly(home.current, 1400)
+    home.current = null
   }
 
   const summary = useMemo(() => (area && load.state === 'ready' ? selectArea(load.cells[mode], area, radius) : null), [area, radius, load, mode])
@@ -276,7 +296,7 @@ export default function HexMap() {
       {load.state === 'loading' && <p className="hexmap-status slab">{`Loading ${LAYER_DATA[layer.id].stats.find.hexes.toLocaleString()} hexagons…`}</p>}
       {load.state === 'error' && <p className="hexmap-status slab" role="alert">{load.message} Reload the page to try again.</p>}
 
-      {selected && load.state === 'ready' && <HexCard cell={selected} feats={load.cells.feats} onClose={() => setSelected(null)} />}
+      {selected && load.state === 'ready' && <HexCard cell={selected} feats={load.cells.feats} onClose={deselect} />}
     </div>
   )
 }
