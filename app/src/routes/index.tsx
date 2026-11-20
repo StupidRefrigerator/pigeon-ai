@@ -1,8 +1,6 @@
-import { Show, SignInButton, UserButton } from '@clerk/tanstack-react-start'
 import { Link, createFileRoute } from '@tanstack/react-router'
 import { useEffect, useRef } from 'react'
 import { HEX_DATA_URL, startLanding } from '../landing/engine'
-import { clerkEnabled } from '../lib/clerk'
 import '../landing/landing.css'
 
 const TITLE = "Pigeon AI: where Sydney's next public infrastructure should go"
@@ -44,7 +42,7 @@ function Landing() {
           <Wordmark />
         </a>
         <div className="auth">
-          <NavAuth />
+          <OpenApp />
         </div>
       </header>
 
@@ -130,7 +128,7 @@ function Landing() {
         <footer>
           <Wordmark />
           <span className="blurb">Predicting where public infrastructure should go across Greater Sydney, starting with public toilets.</span>
-          <FooterAuth />
+          <OpenApp />
         </footer>
       </main>
 
@@ -147,44 +145,6 @@ function OpenApp() {
   )
 }
 
-function SignIn() {
-  return (
-    <SignInButton forceRedirectUrl="/app" signUpForceRedirectUrl="/app">
-      <button className="signin" type="button">
-        Sign in
-      </button>
-    </SignInButton>
-  )
-}
-
-function NavAuth() {
-  if (!clerkEnabled) return <OpenApp />
-  return (
-    <>
-      <Show when="signed-out">
-        <SignIn />
-      </Show>
-      <Show when="signed-in">
-        <OpenApp />
-        <UserButton />
-      </Show>
-    </>
-  )
-}
-
-function FooterAuth() {
-  if (!clerkEnabled) return <OpenApp />
-  return (
-    <>
-      <Show when="signed-out">
-        <SignIn />
-      </Show>
-      <Show when="signed-in">
-        <OpenApp />
-      </Show>
-    </>
-  )
-}
 
 function Wordmark() {
   return (

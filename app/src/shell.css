@@ -59,12 +59,6 @@
 .dash-admin { display: grid; gap: 2px; }
 .dash-admin[hidden] { display: none; }
 
-.dash-me { margin-top: auto; display: flex; align-items: center; gap: 10px; min-height: 58px; padding: 10px; border: 2px solid var(--blue); background: var(--paper); }
-.dash-me b { display: block; font-size: 14px; }
-.dash-me span { font-size: 12px; color: var(--ink-soft); }
-.dash-av { flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--yellow); display: grid; place-items: center; font-family: var(--poster); font-size: 13px; color: var(--purple) !important; box-shadow: 2px 2px 0 var(--pink); }
-.dash-signin { width: 100%; padding: 7px 12px; font-weight: 700 !important; color: var(--paper) !important; background: var(--blue) !important; box-shadow: 3px 3px 0 var(--pink); }
-.dash-me .cl-userButtonBox { color: var(--blue); font-family: var(--text); font-weight: 700; flex-direction: row-reverse; gap: 10px; }
 
 /* ---------- main ---------- */
 .dash-main { position: relative; min-width: 0; min-height: 0; overflow: hidden; }
@@ -91,8 +85,6 @@
   .dash-nav { display: flex; flex-wrap: wrap; gap: 4px; }
   .dash-nav a { padding: 6px 10px; }
   .dash-admin, .dash-admin[hidden] { display: contents; }
-  .dash-me { margin: 0 0 0 auto; min-height: 0; padding: 4px 8px; border-width: 1.5px; }
-  .dash-me-text { display: none; }
   .dash-admin-page { padding: 12px; }
 }
 @media (prefers-reduced-motion: reduce) {

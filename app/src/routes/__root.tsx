@@ -1,7 +1,5 @@
-import { ClerkProvider } from '@clerk/tanstack-react-start'
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import type { ReactNode } from 'react'
-import { clerkEnabled } from '../lib/clerk'
 import appCss from '../styles.css?url'
 
 /** Dela Gothic One (poster type) and Atkinson Hyperlegible Next (text), shared by the landing page and the app. */
@@ -33,7 +31,7 @@ function RootDocument({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {clerkEnabled ? <ClerkProvider>{children}</ClerkProvider> : children}
+        {children}
         <Scripts />
       </body>
     </html>
