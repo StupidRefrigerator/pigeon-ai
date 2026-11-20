@@ -1,9 +1,7 @@
-import { Show, SignInButton, UserButton } from '@clerk/tanstack-react-start'
 import { Link, Outlet, createFileRoute, useRouterState } from '@tanstack/react-router'
 import { useEffect, useState, type CSSProperties } from 'react'
 import { DEFAULT_LAYER, LAYERS, LIVE_LAYERS, resolveLayer, type LiveLayerId } from '../infra'
 import { LayerProvider, useLayer } from '../layer'
-import { clerkEnabled } from '../lib/clerk'
 import '../shell.css'
 
 /** `?layer=` picks the infrastructure layer; absent or unknown ids mean the default layer. */
@@ -108,7 +106,6 @@ function Dashboard() {
           </div>
         </nav>
 
-        <UserMenu />
       </aside>
 
       {folded && (
@@ -136,33 +133,6 @@ function Dashboard() {
   )
 }
 
-function UserMenu() {
-  if (!clerkEnabled) {
-    return (
-      <div className="dash-me">
-        <span className="dash-av" aria-hidden="true">
-          ?
-        </span>
-        <div className="dash-me-text">
-          <b>Sign-in is off</b>
-          <span>Clerk keys are not set</span>
-        </div>
-      </div>
-    )
-  }
-  return (
-    <div className="dash-me">
-      <Show when="signed-in">
-        <UserButton showName />
-      </Show>
-      <Show when="signed-out">
-        <SignInButton forceRedirectUrl="/app" signUpForceRedirectUrl="/app">
-          <button className="dash-signin">Sign in</button>
-        </SignInButton>
-      </Show>
-    </div>
-  )
-}
 
 function Logo() {
   return (
