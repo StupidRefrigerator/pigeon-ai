@@ -28,6 +28,9 @@ function Dashboard() {
   const adminPage = ADMIN_PAGES[path]
   const [adminOpen, setAdminOpen] = useState(true)
   const [folded, setFolded] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const narrow = useNarrow()
+  const href = useRouterState({ select: (s) => s.location.href })
 
   useEffect(() => {
     setFolded(localStorage.getItem('pigeon-sidebar') === 'folded')
@@ -35,15 +38,26 @@ function Dashboard() {
   useEffect(() => {
     localStorage.setItem('pigeon-sidebar', folded ? 'folded' : 'open')
   }, [folded])
+  // Picking a layer or a page closes the phone menu.
+  useEffect(() => setMenuOpen(false), [href])
 
   return (
-    <div className={folded ? 'dash folded' : 'dash'}>
-      <aside className="dash-side" id="dash-side" inert={folded}>
+    <div className={['dash', folded && !narrow && 'folded', menuOpen && 'menu-open'].filter(Boolean).join(' ')}>
+      <aside className="dash-side" id="dash-side" inert={folded && !narrow}>
         <div className="dash-brand">
           <Link to="/" className="dash-home" aria-label="Pigeon AI home">
             <Logo />
             <span className="dash-word">PIGEON AI</span>
           </Link>
+          <span className="dash-current" style={{ '--c': layer.color } as CSSProperties}>
+            <i className="swatch" aria-hidden="true" />
+            {layer.name}
+          </span>
+          <button className="dash-menu" aria-label={menuOpen ? 'Close menu' : 'Open menu'} aria-controls="dash-panel" aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d={menuOpen ? 'M6 6l12 12M18 6 6 18' : 'M4 7h16M4 12h16M4 17h16'} />
+            </svg>
+          </button>
           <button className="dash-fold" aria-label="Hide sidebar" aria-controls="dash-side" aria-expanded="true" onClick={() => setFolded(true)}>
             <svg viewBox="0 0 24 24" aria-hidden="true">
               <path d="m15 6-6 6 6 6" />
@@ -51,6 +65,7 @@ function Dashboard() {
           </button>
         </div>
 
+        <div className="dash-panel" id="dash-panel">
         <div className="dash-group">
           <div className="dash-group-h" id="infra-h">
             Infrastructure
@@ -59,7 +74,7 @@ function Dashboard() {
             {LAYERS.map((i) => (
               <li key={i.id} className={i.live ? 'live' : 'soon'} style={{ '--c': i.color } as CSSProperties}>
                 {i.live ? (
-                  <Link to="." search={(prev) => ({ ...prev, layer: i.id === DEFAULT_LAYER.id ? undefined : i.id })} aria-current={i.id === layer.id ? 'true' : undefined}>
+                  <Link to="." search={(prev) => ({ ...prev, layer: i.id === DEFAULT_LAYER.id ? undefined : i.id })} activeOptions={{ includeSearch: true, explicitUndefined: true }} aria-current={i.id === layer.id ? 'true' : undefined}>
                     <i className="swatch" aria-hidden="true" />
                     {i.name}
                     <small>live</small>
@@ -105,7 +120,7 @@ function Dashboard() {
             </Link>
           </div>
         </nav>
-
+        </div>
       </aside>
 
       {folded && (
@@ -133,6 +148,19 @@ function Dashboard() {
   )
 }
 
+
+/** True on phone-width screens, where the sidebar becomes a top bar with a menu. */
+function useNarrow() {
+  const [narrow, setNarrow] = useState(false)
+  useEffect(() => {
+    const mq = matchMedia('(max-width: 900px)')
+    const update = () => setNarrow(mq.matches)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+  return narrow
+}
 
 function Logo() {
   return (
