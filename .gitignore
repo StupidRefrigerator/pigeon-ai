@@ -50,3 +50,8 @@ data/model/bubblers/decision_tree.png
 experiments/v2/combos/out/study_oof_predictions.csv
 experiments/future/aero_predictions.csv
 experiments/future/aero_features.csv
+
+# Secrets
+.env
+.env.*
+!.env.example

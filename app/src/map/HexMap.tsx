@@ -1,8 +1,8 @@
 import { AmbientLight, DirectionalLight, FlyToInterpolator, LightingEffect, WebMercatorViewport, type MapViewState, type PickingInfo } from '@deck.gl/core'
 import { H3HexagonLayer } from '@deck.gl/geo-layers'
-import { ScatterplotLayer } from '@deck.gl/layers'
+import { PathLayer, ScatterplotLayer } from '@deck.gl/layers'
 import DeckGL from '@deck.gl/react'
-import { cellToLatLng } from 'h3-js'
+import { cellToBoundary, cellToLatLng } from 'h3-js'
 import 'maplibre-gl/dist/maplibre-gl.css'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Map as MaplibreMap } from 'maplibre-gl'
@@ -13,6 +13,7 @@ import type { HeatmapData } from '../lib/data'
 import { LAYER_DATA } from '../infra-data'
 import { selectArea, DEFAULT_RADIUS_KM, type Place } from './area'
 import { AreaPicker } from './AreaPicker'
+import type { MapSpot, SummaryFile } from '../ai/protocol'
 import { drivers, MODES, toCells, type Cell, type Cells, type Mode } from './cells'
 
 /** Keyless CARTO basemap, recoloured to the riso paper palette once it loads. */
@@ -63,6 +64,13 @@ const LIGHTING = new LightingEffect({
 
 /** Shrinks columns as you zoom in, so close-up hexagons stay readable instead of towering. */
 const zoomFactor = (zoom: number) => Math.min(1.6, Math.max(0.08, 2 ** ((10.35 - zoom) * 0.62)))
+/** A closed ring around the top face of a hexagon's column, a little wider than the column (coverage 0.8) so it frames it. */
+function focusRing(hex: string, z: number): [number, number, number][] {
+  const [clat, clng] = cellToLatLng(hex)
+  const ring = cellToBoundary(hex).map(([lat, lng]): [number, number, number] => [clng + (lng - clng) * 0.95, clat + (lat - clat) * 0.95, z])
+  return [...ring, ring[0]!]
+}
+
 const lngLat = (hex: string): [number, number] => {
   const [lat, lng] = cellToLatLng(hex)
   return [lng, lat]
@@ -83,6 +91,22 @@ function areaView(place: Place, radiusKm: number, el: HTMLElement | null, bearin
   if (!panel) return view
   const [lng, lat] = new WebMercatorViewport({ ...view, width, height }).unproject([width / 2 - panel / 2, height / 2])
   return { ...view, longitude: lng!, latitude: lat! }
+}
+
+/** Camera that frames the highlighted hexagons, leaving room for the assistant panel on the right. */
+function fitSpots(spots: MapSpot[], el: HTMLElement | null, bearing: number): MapViewState {
+  const width = el?.clientWidth ?? 1200
+  const height = el?.clientHeight ?? 900
+  const pts = spots.map((s) => lngLat(s.hex))
+  const lngs = pts.map((p) => p[0])
+  const lats = pts.map((p) => p[1])
+  const pad = 0.004
+  const wide = width > 900
+  const { longitude, latitude, zoom } = new WebMercatorViewport({ width, height }).fitBounds(
+    [[Math.min(...lngs) - pad, Math.min(...lats) - pad], [Math.max(...lngs) + pad, Math.max(...lats) + pad]],
+    { padding: wide ? { top: 140, bottom: 120, left: 340, right: 420 } : { top: 80, bottom: 80, left: 30, right: 30 } },
+  )
+  return { longitude, latitude, zoom: Math.min(zoom - 0.3, 15), pitch: 45, bearing }
 }
 
 function reduceMotion() {
@@ -112,9 +136,20 @@ function restyle(map: MaplibreMap) {
   }
 }
 
+/** Hexagons the assistant asked to show; `select` opens one of them. `key` changes on every request so the same set can be shown again. */
+export interface Focus {
+  key: number
+  mode: Mode
+  caption: string
+  spots: MapSpot[]
+  select?: string
+}
+
+const YELLOW: RGBA = [255, 232, 0, 255]
+
 type Load = { state: 'loading' } | { state: 'error'; message: string } | { state: 'ready'; cells: Cells }
 
-export default function HexMap() {
+export default function HexMap({ focus, onAsk }: { focus: Focus | null; onAsk: (cell: Cell) => void }) {
   const layer = useLayer()
   const dataUrl = layer.heatmapUrl
   const [load, setLoad] = useState<Load>({ state: 'loading' })
@@ -127,14 +162,17 @@ export default function HexMap() {
 
   useEffect(() => {
     let live = true
+    const summaries = fetch(layer.summariesUrl)
+      .then((r) => (r.ok ? (r.json() as Promise<SummaryFile>) : null))
+      .then((f) => f?.spots ?? {}, () => ({}))
     fetch(dataUrl)
       .then((r) => (r.ok ? (r.json() as Promise<HeatmapData>) : Promise.reject(new Error(`The map data did not load (HTTP ${r.status}).`))))
-      .then((d) => live && setLoad({ state: 'ready', cells: toCells(d) }))
+      .then(async (d) => live && setLoad({ state: 'ready', cells: toCells(d, await summaries) }))
       .catch((e: Error) => live && setLoad({ state: 'error', message: e.message }))
     return () => {
       live = false
     }
-  }, [dataUrl])
+  }, [dataUrl, layer.summariesUrl])
 
   /** The camera before the first hexagon was picked, so closing the card flies back to it. */
   const home = useRef<MapViewState | null>(null)
@@ -184,6 +222,28 @@ export default function HexMap() {
     home.current = null
   }
 
+  const [shown, setShown] = useState<Focus | null>(null)
+  /** Each request is shown once; one made before this map mounted (another layer) is ignored. */
+  const seen = useRef(focus?.key)
+  useEffect(() => {
+    if (!focus || focus.key === seen.current || load.state !== 'ready' || !focus.spots.length) return
+    seen.current = focus.key
+    setShown(focus)
+    setMode(focus.mode)
+    setArea(null)
+    home.current = null
+    const pick = focus.select ? load.cells[focus.mode].find((c) => c.hex === focus.select) : undefined
+    if (pick) {
+      setSelected(null)
+      const [longitude, latitude] = lngLat(pick.hex)
+      fly({ longitude, latitude, zoom: Math.max(view.zoom, 14), pitch: 58, bearing: view.bearing ?? 0 }, 1400)
+      setSelected(pick)
+      return
+    }
+    setSelected(null)
+    fly(fitSpots(focus.spots, box.current, view.bearing ?? 0), 1600)
+  }, [focus, load.state])
+
   const summary = useMemo(() => (area && load.state === 'ready' ? selectArea(load.cells[mode], area, radius) : null), [area, radius, load, mode])
   const inside = summary?.inside
   /** deck.gl compares updateTriggers by value, and a Set has no keys, so the colours key on the area itself. */
@@ -230,6 +290,16 @@ export default function HexMap() {
         }),
       )
     }
+    const lit = shown && shown.mode === mode ? shown.spots : []
+    if (lit.length) {
+      const height = new Map(data.map((c) => [c.hex, c.predicted * scale]))
+      out.push(
+        new PathLayer<MapSpot>({
+          id: 'focus', data: lit, getPath: (d) => focusRing(d.hex, height.get(d.hex) ?? 0), widthUnits: 'pixels', getWidth: 4, getColor: YELLOW,
+          parameters: { depthCompare: 'always' }, updateTriggers: { getPath: scale },
+        }),
+      )
+    }
     if (selected) {
       out.push(
         new H3HexagonLayer<Cell>({
@@ -239,7 +309,7 @@ export default function HexMap() {
       )
     }
     return out
-  }, [load, mode, z, selected, area, radius, inside])
+  }, [load, mode, z, selected, area, radius, inside, shown])
 
   const onClick = (info: PickingInfo<Cell>) => {
     if (info.object?.hex) select(info.object)
@@ -296,12 +366,19 @@ export default function HexMap() {
       {load.state === 'loading' && <p className="hexmap-status slab">{`Loading ${LAYER_DATA[layer.id].stats.find.hexes.toLocaleString()} hexagons…`}</p>}
       {load.state === 'error' && <p className="hexmap-status slab" role="alert">{load.message} Reload the page to try again.</p>}
 
-      {selected && load.state === 'ready' && <HexCard cell={selected} feats={load.cells.feats} onClose={deselect} />}
+      {shown && shown.mode === mode && (
+        <p className="hexmap-focus slab">
+          <span>{shown.caption}</span>
+          <button onClick={() => setShown(null)} aria-label="Clear highlight">×</button>
+        </p>
+      )}
+
+      {selected && load.state === 'ready' && <HexCard cell={selected} feats={load.cells.feats} onClose={deselect} onAsk={onAsk} />}
     </div>
   )
 }
 
-function HexCard({ cell, feats, onClose }: { cell: Cell; feats: string[]; onClose: () => void }) {
+function HexCard({ cell, feats, onClose, onAsk }: { cell: Cell; feats: string[]; onClose: () => void; onAsk: (cell: Cell) => void }) {
   const { unit } = useLayer()
   const top = drivers(cell, feats)
   const max = Math.max(0.01, ...top.map(([, v]) => Math.abs(v)))
@@ -352,6 +429,24 @@ function HexCard({ cell, feats, onClose }: { cell: Cell; feats: string[]; onClos
           </div>
         </>
       )}
+      {cell.summary && (
+        <>
+          <h3>Why here</h3>
+          <p className="why">{cell.summary.text}</p>
+          {cell.summary.sources.length > 0 && (
+            <p className="why-src">
+              {cell.summary.sources.slice(0, 3).map((s) => (
+                <a key={s.url} href={s.url} target="_blank" rel="noreferrer">
+                  {s.title}
+                </a>
+              ))}
+            </p>
+          )}
+        </>
+      )}
+      <button className="hexcard-ask" onClick={() => onAsk(cell)}>
+        Ask Pigeon about this spot
+      </button>
     </aside>
   )
 }

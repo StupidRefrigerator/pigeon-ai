@@ -1,0 +1,596 @@
+{
+ "model": "gpt-6-luna",
+ "generated": "2026-11-20",
+ "spots": {
+  "89be0e35c77ffff": {
+   "text": "This George Street North block serves walkers and visitors approaching the Harbour Bridge and people using Dawes Point Fountain Garden, directly beside the site. The model records no fountain in the hexagon and estimates 2.23 missing, with about 233 residents, 37 cafes and food outlets, and 10 bus stops within 500 metres. The City’s Millers Point reserves plan identifies Dawes Point Fountain Garden for a drinking fountain and latrines, while its George Street North boulevard project includes new bubblers. Check the garden and nearby bubblers are accessible and working, then site a fountain where park users can reach it easily.",
+   "sources": []
+  },
+  "89be0853653ffff": {
+   "text": "This Parramatta River foreshore block serves walkers, cyclists and families using the riverside paths and nearby parkland. The model estimates 2.42 fountains missing and none recorded today; within 500 metres are 3,173 residents, 60 food outlets, 10 bus stops, two train stations and 227,100 square metres of parkland. Council’s Western River Precinct Connections project covers the river corridor between Marsden and O’Connell Streets, linking the city centre, Parramatta Park and key attractions; the exact distance from this block is not specified. Check path flows, accessible access and service connections before siting a fountain.",
+   "sources": [
+    {
+     "title": "The Parramatta to Sydney Foreshore Link | City of Parramatta",
+     "url": "https://www.cityofparramatta.nsw.gov.au/council/projects/parramatta-river-transformation/the-parramatta-to-sydney-foreshore-link"
+    }
+   ]
+  },
+  "89be0e3435bffff": {
+   "text": "This Darlinghurst block near Stanley and Yurong streets serves 1,555 residents, with 5 shops and 21 cafés and food outlets in the hexagon. Café customers, local residents and people walking to nearby Hyde Park and bus stops need convenient drinking water; 28 bus stops are within 500 metres. The model estimates 2.3 fountains missing here, despite an existing fountain in the next hexagon, less than about 500 metres away. Council has approved potable-water outlets at Taylor Square, roughly 500 metres away, for events and vendors, not as a confirmed public fountain. Check pedestrian flows, accessible placement and servicing needs on site before choosing a fountain location.",
+   "sources": []
+  },
+  "89be0e34333ffff": {
+   "text": "At Knox Street beside the Lansdowne Hotel and City Road, this block serves nearby residents, hotel and venue patrons, workers, café customers and bus passengers. The model records no fountain here and estimates 2.66 missing, alongside about 1,899 residents, 22 shops and 27 cafés or food outlets in the hexagon; 16 bus stops lie within 500 metres. Victoria Park is across City Road, about 135 metres from the spot, adding park users to the likely demand. Check pedestrian flows, accessible siting and water connections on site before selecting a fountain location.",
+   "sources": []
+  },
+  "89be0e343d3ffff": {
+   "text": "This Surry Hills block has a modelled shortfall of 2.46 fountains and about 1,039 residents. Within 500 metres are 5,454 residents, 34 cafes and food outlets, 31 shops and 10 bus stops, serving locals, workers, shoppers and visitors. The model also counts five playgrounds and six sports facilities nearby, with parkland just 42 metres away. But Council’s Ward Park upgrade, about 400 metres away, is already underway and includes public park facilities, so avoid duplicating provision. Check existing and planned fountain coverage, water and sewer connections, and accessible placement before choosing a site.",
+   "sources": []
+  },
+  "89be0e3422fffff": {
+   "text": "This Darlinghurst block sits amid Oxford Street cafés and shops, serving 1,498 local residents, workers, shoppers and people changing between buses: 76 shops and 29 bus stops lie within 500 metres, with a train station nearby. The model records no fountain in the hexagon and estimates 2.17 are missing, despite fountains in surrounding blocks. Council’s Green Park upgrade, about 550 metres south, is planned for early 2027 and its concept plan includes a new drinking fountain, so coordinate provision rather than duplicate it. Check existing fountain access, pedestrian flows and utility connections on site.",
+   "sources": []
+  },
+  "89be0e3420fffff": {
+   "text": "Rushcutters Bay Park draws walkers, families, dog owners and players to its foreshore paths, playground, sportsfields, exercise station and tennis courts; nearby bus stops serve park visitors. The model flags 2.03 fountains missing in this hex, with 1,156 residents, five shops, 14 bus stops and 105,000 m² of parkland within 500 metres. But Woollahra Council says the youth recreation area, opened 14 November 2026, already includes a drinking fountain, and its park listing records other fountains. Nearby hexes are also flagged, including one 380 metres away. Check existing fountains’ locations, condition and access before adding one at a busy path or play area.",
+   "sources": [
+    {
+     "title": "Rushcutters Bay Park | Woollahra Municipal Council",
+     "url": "https://www.woollahra.nsw.gov.au/Recreation/List-of-Parks-Reserves-and-Playgrounds/Rushcutters-Bay-Park"
+    }
+   ]
+  },
+  "89be08536cfffff": {
+   "text": "This Parramatta CBD block has no fountain against a modelled need of 2.12, with an 88% chance of at least one being warranted. It sits amid 27 shops and 16 cafes and food outlets; within 500 metres are 92 shops, 87 food outlets, six bus stops and two train stations. Workers, shoppers, commuters and people walking between the CBD and nearby parks could use a refill point. Council’s endorsed CBD South master plan proposes more public spaces and walkable streets, but no nearby fountain installation is confirmed. Check pedestrian flows and existing services on site, then place an accessible fountain on a busy public route.",
+   "sources": [
+    {
+     "title": "CBD Parramatta South Master Plan",
+     "url": "https://participate.cityofparramatta.nsw.gov.au/cbd-south-master-plan"
+    }
+   ]
+  },
+  "89be08c82bbffff": {
+   "text": "This Bankstown CBD block has 1.97 modelled fountains missing, with none recorded today. It serves about 367 residents in the hexagon and 4,273 within 500 metres, alongside 11 shops here and 59 nearby. Thirty bus stops, three playgrounds and nearly 76,845 square metres of parkland within 500 metres bring families, shoppers and people waiting or transferring on foot. Council has resolved to review fountain access in parks and consider bubblers in new or upgraded parks, but no nearby planned fountain site is confirmed. Check existing drinking points and services on site, then install an accessible fountain near the main pedestrian route.",
+   "sources": []
+  },
+  "89be0e3438fffff": {
+   "text": "This Redfern block has no mapped fountain, despite 1,206 residents locally and 7,054 within 500 m. Nearby demand includes 35 shops and 61 cafés and food outlets within 500 m, plus 18 bus stops; pedestrians, workers, residents and park visitors all need drinking water. The area has 86,781 m² of parkland within 500 m, with the nearest park about 19 m away. City of Sydney has planned upgrades to Redfern Community Centre open space, Yellomundee Park and Hugo Street Reserve, but their proximity to this block is unconfirmed. Check existing services and accessible, shaded installation options on site.",
+   "sources": []
+  },
+  "89be0e35dc7ffff": {
+   "text": "This Pyrmont block sits by Pyrmont Bay Park and the Australian National Maritime Museum, on the walking route toward Pyrmont Bridge and Darling Harbour. Residents share it with museum and harbour visitors, workers and pedestrians; the model counts 2,316 residents, 13 cafés and food outlets, 17 bus stops and 3 train stations within 500 metres. It predicts 1.97 fountains missing here, despite 14 fountains predicted across the surrounding kilometre. Other suggested gaps are 380 metres, 660 metres and 760 metres away. Check pedestrian flows and existing drinking-water points, then site an accessible fountain on the busiest public route.",
+   "sources": []
+  },
+  "89be0e34223ffff": {
+   "text": "This Darlinghurst block sits among local shops and cafés and within reach of St Vincent’s Hospital and the National Art School, serving hospital patients, visitors and staff, art students, residents and people travelling through. The model estimates 1.88 fountains missing here, with 1,808 residents and 9 shops in the hex; within 500 metres it counts 84 shops, 25 bus stops and one train station. Nearby Green Park has a historic bubbler, and council plans park upgrades expected to start in early 2027, including a new drinking fountain; check whether this block needs a separate accessible fountain and confirm connections and siting on site.",
+   "sources": []
+  },
+  "89be0e3414bffff": {
+   "text": "This Redfern block has 0 fountains today against a model prediction of 1.79 missing; it sits amid 8,688 residents within 500 m, 54 shops and 40 cafes and food outlets, with 28 bus stops nearby. Walkers, bus users, nearby residents and families using the six playgrounds and 87,309 m² of parkland could benefit from a convenient drinking fountain. Redfern Park has play areas, sports facilities and a cafe, but its listed Baptist Fountain is an ornamental water feature, not evidence of a drinking fountain. Council’s planned Redfern neighbourhood park upgrades cover Redfern Community Centre open space, Yellomundee Park and Hugo Street Reserve; their distance from this block is unconfirmed. Check existing drinking-water access on site and assess a durable, accessible fountain location.",
+   "sources": []
+  },
+  "89be0e22163ffff": {
+   "text": "This Fairlight block is beside the foreshore walking network serving Esplanade Park and Fairlight Beach, where residents, walkers and swimmers need drinking water. The model records no fountain here and estimates a 1.86-fountain shortfall, with about 1,012 residents in the hexagon and 6,252 within 500 metres. Nearby demand includes 43 shops, 63 food and café outlets and 27 bus stops within 500 metres; there are also three playgrounds and 25 sports facilities. The nearest existing fountain is in the next hexagon, under about 500 metres away. Check the path and park entrances for a safe, accessible fountain site with water and drainage connections.",
+   "sources": []
+  },
+  "89be08d802bffff": {
+   "text": "This block sits near Cronulla’s beach and parkland, where families using the playground, swimmers, walkers and beach visitors need convenient drinking water. The model records no fountain here and predicts 1.75 missing, despite 3,624 residents within 500 m, 39 shops, 8 bus stops and a train station nearby. Cronulla Park, about 10 m from the nearest park point, already has a bubbler, so check whether it serves this block before adding another. Council’s 2026/27–2029/30 works program lists accessible drinking fountain stations in town centres, but gives no specific Cronulla site or distance. Check existing fountain locations, access and demand on site before choosing a position.",
+   "sources": [
+    {
+     "title": "Cronulla Park, Cronulla | Sutherland Shire Council",
+     "url": "https://www.sutherlandshire.nsw.gov.au/play-and-explore/the-outdoors/parks-and-reserves/all-parks-reserves/cronulla-park-cronulla"
+    }
+   ]
+  },
+  "89be0e3431bffff": {
+   "text": "Central Station’s eastern precinct serves rail, light-rail and bus passengers, nearby workers, residents and visitors; Belmore Park is about 12 metres away. The model records one fountain against 2.77 predicted, with 749 residents in the block, 101 shops within 500 metres, 43 bus stops and two train stations in that radius. The City’s City South Public Domain Plan covers the area through to Central Station and addresses Central Square, but does not confirm a fountain installation. Check existing drinking-water points and accessible services on site, then locate a fountain on a well-used public route.",
+   "sources": [
+    {
+     "title": "City south public domain plan - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/strategies-action-plans/city-south-public-domain-plan"
+    }
+   ]
+  },
+  "89be0e34233ffff": {
+   "text": "This Darlinghurst block has 1,256 residents and 13 shops; within 500 m are 57 cafes and food outlets, 24 bus stops, 9 sports facilities and 5 playgrounds. St Vincent’s Hospital and Green Park draw patients, staff, visitors and people using the park, while 8,067 residents live within 500 m. The model records no fountain here and estimates 1.85 missing, with an 84% chance of one; it predicts 33.2 fountains across 18 nearby hexagons, versus 20 today. Check pedestrian desire lines and service access on site, then assess a drinking fountain location.",
+   "sources": []
+  },
+  "89be0842d73ffff": {
+   "text": "This block sits in Penrith’s walkable city centre, among shops, cafés and food outlets, with City Park and Westfield Penrith nearby and Penrith Station a short walk away. It serves shoppers, workers, visitors and train passengers; the model counts 45 shops in the block, 18 food outlets, 87 shops and 41 food outlets within 500 metres, plus 25 bus stops and one station. It predicts 1.64 fountains missing here, with none recorded today; 1,910 residents live within 500 metres. Check existing provision and services on site, then install an accessible fountain where park and centre foot traffic meet.",
+   "sources": [
+    {
+     "title": "City Park - Penrith City Council",
+     "url": "https://www.penrithcity.nsw.gov.au/building-development/revitalise-penrith/city-park"
+    }
+   ]
+  },
+  "89be0e34ec3ffff": {
+   "text": "This block serves about 3,061 residents within 500 m and sits among 35 cafes and food outlets, 10 bus stops, 313 walkable street junctions, sports facilities and parkland. The model estimates 1.65 fountains missing here, despite a fountain in the next hexagon, less than about 500 m away. A draft Camperdown Park master plan proposes a drinking fountain at the Fowler Street edge, roughly 1 km from this spot; check whether it proceeds and whether it serves this walking catchment. Site a fountain by a well-used path or bus stop, subject to checking access, utilities and existing fountain locations.",
+   "sources": []
+  },
+  "89be0e35eafffff": {
+   "text": "This Lavender Bay block has no mapped fountain, despite 1,237 residents and 5,473 people within 500 metres. Nearby users include walkers and families visiting Clark Park, Watt Park’s playground and the foreshore, plus commuters using North Sydney and Milsons Point stations. There are 52 shops, 41 cafés and food outlets, 16 bus stops and two train stations within 500 metres. Council describes the parklands and their paths and playground, but no nearby planned fountain site was confirmed; the nearest mapped fountain is in the next hexagon, under about 500 metres away. Check accessible, high-footfall paths for a durable drinking fountain with bottle refill.",
+   "sources": []
+  },
+  "89be085361bffff": {
+   "text": "Schaefer Park is the key local draw at this block, with Western Sydney University’s Parramatta South campus and Rosehill Gardens nearby. Park visitors, students, families and local workers would benefit from a refill point; the model also identifies five sports facilities and one playground within 500 metres. It predicts 1.74 fountains are missing here, with about 2,622 residents within 500 metres, 24 cafés and food outlets, three bus stops and no train stations in that radius. Council’s published park-upgrade information does not confirm works at this site. Check park entrances, paths and water connections before siting a durable fountain with a bottle filler.",
+   "sources": []
+  },
+  "89be0e3437bffff": {
+   "text": "This Darling Harbour block has 21 shops and 25 cafes and food outlets, serving workers, shoppers and visitors moving between the precinct’s attractions and nearby streets. Within 500 metres are 224 food outlets, 20 bus stops, two train stations, 13,000 residents and 13,809 square metres of parkland, including places for families and people taking a break outdoors. The model records one fountain today against 2.59 predicted, a shortfall of 1.59, with a 93% chance of at least one. Check existing drinking-water access on site, then install a public fountain where foot traffic and park use meet.",
+   "sources": []
+  },
+  "89be0e3733bffff": {
+   "text": "This Bondi Beach block has no recorded public fountain, despite 1,678 residents, 19 shops and 31 cafes within it. Beachgoers, walkers and cafe customers can also draw on demand from 7,410 residents within 500 metres, 12 nearby bus stops and Bondi Park, about 193 metres away. The model estimates 1.59 missing fountains here; the nearest suggested block is about 380 metres away, so it may not serve this spot. Check existing taps and water connections on site, then assess an accessible drinking fountain with a dog bowl.",
+   "sources": []
+  },
+  "89be084253bffff": {
+   "text": "This St Marys block has no mapped fountain, despite 503 residents within 500 metres and 3,453 within 1 kilometre. Families using nearby playgrounds and sports facilities, and people walking to local shops or bus stops, could benefit from accessible drinking water; the model records 3 playgrounds, 35 sports facilities and 7 bus stops within 500 metres. Penrith Council’s St Marys Central Park project is underway and includes a playspace and water play, but the project information does not confirm a drinking fountain. The model’s other suggested spots are 0.38 km and 0.66 km away. Check park plans and on-site demand before locating a durable, accessible fountain.",
+   "sources": []
+  },
+  "89be0e27477ffff": {
+   "text": "This block sits by Chatswood Oval, where people using the sports facilities and nearby parkland can benefit from a public fountain. The model identifies a gap of 1.57 fountains here, with about 1,407 residents in the hexagon and 9,249 within 500 metres. Chatswood’s shops and food businesses draw workers, visitors and shoppers, while 21 bus stops and a train station lie within 500 metres. The model counts 83 shops and 73 food outlets within that distance. Council describes the nearby Chatswood Interchange as a central hub linking buses, trains and Metro to the shopping district. Check water connections, accessible placement and demand around the oval before installing a fountain.",
+   "sources": []
+  },
+  "89be0e359bbffff": {
+   "text": "This block sits beside Drummoyne’s Iron Cove foreshore and the Bay Run, where walkers, runners, families and playground users can benefit from a refill stop. The model estimates 1.58 fountains missing, with 1,641 residents within 500 metres, 34 shops, four bus stops, two playgrounds and 36,054 square metres of parkland nearby. Brett Park has a playground and picnic facilities, strengthening the case for convenient drinking water. The nearest hexagon with a fountain is about 660 metres away centre to centre. Check the exact path-side location, accessibility and water connection before installing a fountain.",
+   "sources": []
+  },
+  "89be0e343d7ffff": {
+   "text": "This Surry Hills block contains 15 shops, including 17 cafes and food outlets, and sits within a 500 m walk of 59 shops, 74 food outlets, 14 bus stops and 59,960 m² of parkland. Residents, café customers, shoppers and people walking between nearby streets and parks all add to demand. The model estimates 1,381 residents in the block and a shortfall of 1.51 fountains; its 92% chance of at least one missing fountain supports checking the gap on the ground. A council refurbishment plan for Cooper Street and Adelaide Street reserves includes a bubbler, but the source does not establish its distance from this block. Check utility access and pedestrian clearances before siting a fountain.",
+   "sources": []
+  },
+  "89be0e35c93ffff": {
+   "text": "This Woolloomooloo block has one mapped fountain against a modelled need of 2.51, a gap of 1.51. It serves 1,072 residents locally and nearly 9,395 within 500 metres, alongside 89 cafés and food outlets, 125 shops and 22 bus stops. Nearby parks and playgrounds draw families and people exercising; local streets also carry café customers and commuters. City plans identify Woolloomooloo Playground for an upgrade, but the source does not establish its distance from this spot. Check the exact fountain and accessible footpath locations on site, then install a public drinking fountain where park users and pedestrians can reach it.",
+   "sources": [
+    {
+     "title": "Woolloomooloo Playground upgrade - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/park-playground-works/woolloomooloo-playground-upgrade"
+    }
+   ]
+  },
+  "89be08c8ba7ffff": {
+   "text": "This Liverpool block has no existing fountain, despite 769 residents in the hex and about 5,987 within 500 metres. A park is only 19 metres away; within 500 metres are four playgrounds, four sports facilities and 15 bus stops, serving families, park visitors, players and people walking or waiting for buses. There are no shops in the hex, but 88 are within 500 metres; no train station is within 1 kilometre. Council’s Brickmakers’ Creek and Woodward Park project is about 650 metres away. Check park entrances and bus-stop walking routes, then install an accessible fountain with bottle refill.",
+   "sources": [
+    {
+     "title": "Western Sydney Infrastructure Grants - Projects | NSW Government",
+     "url": "https://www.nsw.gov.au/grants-and-funding/western-sydney-infrastructure-grants-program/western-sydney-infrastructure-grants-projects"
+    }
+   ]
+  },
+  "89be0842d23ffff": {
+   "text": "This Jamisontown block is beside parkland, with 114,908 m² of park area within 500 m, and Tench Reserve on the Nepean River draws people picnicking, exercising and using its playgrounds. Nearby residents, park visitors and customers of 41 shops also have 15 bus stops within 500 m. The model counts no fountains in this hexagon or within 1 km, despite 5,598 residents within 1 km; it predicts 1.49 missing fountains here. Other model-suggested blocks are 380 m and 660 m away, not confirmed projects. Check the best accessible, shaded location and water connection on site.",
+   "sources": []
+  },
+  "89be0e343c3ffff": {
+   "text": "This Surry Hills block has 1,454 residents, 9 shops and 13 cafes, with 77 shops and 81 food outlets within 500 m. Local residents, cafe and shop staff, customers and people walking the 378 nearby street junctions can benefit from a reliable refill point. The model records 1 fountain against 2.51 expected, a gap of 1.51; its nearest existing fountain is in the next hexagon, under about 500 m away. Council works at Cooper Street and Adelaide Street reserves added a bubbler, but those sites’ distance from this block is unconfirmed. Check existing fountain access and water connections on site before choosing a durable, accessible location.",
+   "sources": []
+  },
+  "89be0e2533bffff": {
+   "text": "This Waitara block is close to Waitara Park’s inclusive playground, Mark Taylor Oval and PCYC, where children, carers, sports players and families need water during play and exercise. The model records no fountain here and estimates 1.46 missing; 731 residents live in the hexagon, with about 8,083 within 500 metres. It also counts 2 shops here, 12 bus stops within 500 metres and 2 train stations within 1 kilometre. Council reports the Waitara Park precinct works, including the pavilion, were completed in March 2026; no nearby planned fountain site was confirmed. Check existing taps on site and assess a durable, accessible fountain near the park paths.",
+   "sources": []
+  },
+  "89be0e27453ffff": {
+   "text": "This North Willoughby block is about 30 metres from a park, with 2 playgrounds, 3 sports facilities and nearly 24,100 m² of parkland within 500 metres. Children, carers, people exercising and dog walkers can use a public refill point here. The model estimates 1.47 fountains missing in the block; 4,369 residents, 19 shops, 20 cafes and food outlets, and 16 bus stops are within 500 metres. No train stations are within 1 km. Willoughby Park is about 1.5 km away, so check the nearest park and bus-stop approaches for an accessible fountain with bottle refill and dog bowl.",
+   "sources": []
+  },
+  "89be0e35dd7ffff": {
+   "text": "This block centres on Union Square and Harris Street, with Pyrmont Community Centre and its gym nearby. Residents, centre users, café customers and people walking between local shops and John Street Square light rail can all use a fountain here. The model counts 1,284 residents in the hex, 23 shops, 17 cafés and food outlets, plus 19 bus stops and 6 train stations within 500 metres; it estimates 1 fountain present against 2.47 expected. Union Square is a practical, visible location. Check underground services, accessibility and drinking-water connections on site before choosing the exact position.",
+   "sources": []
+  },
+  "89be0e3436fffff": {
+   "text": "This Darling Harbour block serves ICC Sydney, Tumbalong Park and the surrounding cafés and shops, drawing event visitors, workers, families and people changing between buses and light rail. The model counts 3,470 residents in the hex, 9 shops, 49 cafés and food outlets within 500 metres, 13 bus stops and 4 train stations in that radius. It records no fountain here and estimates a 1.46-fountain shortfall. Another suggested hex is 380 metres away, so check whether its fountain is accessible and conveniently placed before choosing a site for a new drinking fountain.",
+   "sources": []
+  },
+  "89be0e343abffff": {
+   "text": "This Chippendale block sits among Central Park, Kensington Street and Broadway, where residents, students, workers and visitors move between shops, cafés and public spaces. The model counts 1,584 residents in the hexagon and 11,641 within 500 metres, alongside 35 shops and 16 cafés and food outlets on the block. It records one fountain today against 2.46 predicted, a gap of 1.46. There are 11 bus stops within 500 metres; no train station is that close. Check the nearby fountain’s exact location, then assess an accessible refill fountain on a busy public route.",
+   "sources": []
+  },
+  "89be0e35c97ffff": {
+   "text": "This Woolloomooloo block has 1,145 residents, 5 shops and 5 cafes and food outlets; 4,765 residents live within 500 metres, alongside 35 food outlets and 20 bus stops. Parkland is close, just 48 metres away, and walkers, nearby workers and park users could benefit from a reliable refill point. The model counts 1 fountain today against 2.46 predicted, a gap of 1.46. Council’s completed Woolloomooloo Playground upgrade included a bubbler, but its distance from this spot is not established. Check existing fountain locations and pedestrian flows on site before choosing an accessible, maintainable installation point.",
+   "sources": []
+  },
+  "89be0e26bafffff": {
+   "text": "This Parramatta block is forecast to be short 1.43 public fountains and has none recorded today, despite 588 residents and 15 shops within 500 m. Nearby streets draw commuters, shoppers and food customers: there are 30 cafes and food outlets, eight bus stops and one train station within 500 m. The block is also about 10 m from a park, with 13 sports facilities and five playgrounds in the same radius. Council is upgrading Robin Thomas and James Ruse Reserves; Robin Thomas is roughly 0.5 km north. Check existing taps and accessible connections, then site a durable, accessible fountain on the main pedestrian route.",
+   "sources": [
+    {
+     "title": "James Ruse and Robin Thomas Reserves | City of Parramatta",
+     "url": "https://www.cityofparramatta.nsw.gov.au/council/projects/major-works/james-ruse-and-robin-thomas-reserves"
+    }
+   ]
+  },
+  "89be0e358cfffff": {
+   "text": "This Waverton block has no fountains in the model, despite 3,063 residents within 500 metres and 17 cafés and food outlets nearby. Waverton Park draws cricketers, soccer and touch players, school groups and families to its sports field and Merrett Playground; the Coal Loader and Balls Head trails also bring walkers and visitors through the area. The model counts 16 bus stops within 500 metres and two train stations within 1 kilometre. Council lists Waverton Park amenities and recreation improvements as planned work, but no confirmed fountain project. Check park and walking-route connections on site, then install an accessible drinking fountain where it serves both.",
+   "sources": []
+  },
+  "89be0e26b27ffff": {
+   "text": "This Parramatta CBD block has 9 shops and 4 food outlets, with 48 cafes and food venues within 500 m drawing workers, shoppers and diners into the area. The model records 1,609 residents in the hex, 5,692 within 500 m, 15 bus stops and 2 train stations nearby, but no fountain here; it predicts 1.45 missing. Nearby parks and the river foreshore offer recreation, while the Civic Link connects Parramatta Square and the transport interchange to the river and Powerhouse precinct; Council lists works along Phillip Street, but their distance from this block is unverified. Check footfall, accessible space and water connections on site before siting a fountain.",
+   "sources": [
+    {
+     "title": "Civic Link | City of Parramatta",
+     "url": "https://www.cityofparramatta.nsw.gov.au/council/projects/major-works/civic-link"
+    }
+   ]
+  },
+  "89be0e34293ffff": {
+   "text": "This residential block sits about 400 m south of Chiswick Gardens, where a fountain already serves garden visitors, but the model still estimates 1.45 fountains missing here. The hexagon has about 632 residents, with 3,805 within 500 m, and five playgrounds and 19 bus stops nearby. Two shops are in the hexagon and 25 are within 500 m, bringing local shoppers, families and people waiting for buses into the area. Check the nearest existing fountain’s walking access, then site an accessible drinking fountain near a well-used public path or playground.",
+   "sources": []
+  },
+  "89be0e342afffff": {
+   "text": "The block sits by Moore Park Road and Oxford Street, where Paddington’s shops and cafés draw residents, workers and visitors; nearby bus users add a steady stream of people on foot. The model counts 12 shops in the hexagon and 53 within 500 metres, with 20 bus stops in that radius and 5,488 residents. It predicts 1.43 fountains are missing here, while the nearest existing fountain is in the next hexagon, under about 500 metres away. Check pedestrian desire lines and utilities, then install an accessible fountain where it serves both the retail street and bus stops.",
+   "sources": []
+  },
+  "89be0e3730fffff": {
+   "text": "This Bondi Beach block serves swimmers, surfers, beachgoers and people using the nearby park, cafés and food outlets. The model flags 1.41 fountains missing, with about 897 residents in the block and 5,933 within 500 metres. It counts 14 cafés and food outlets in the block, 55 within 500 metres, 11 bus stops and no train stations within 500 metres. Bondi Park works include upgraded public toilets and showers, but no fountain is specified. Check existing fountain coverage on site and install an accessible drinking fountain with a bottle filler if this gap is confirmed.",
+   "sources": [
+    {
+     "title": "Bondi Park Upgrade Works to Bondi Beach Facilities | Planning Portal - Department of Planning and Environment",
+     "url": "https://www.planningportal.nsw.gov.au/planning-panel/bondi-park-upgrade-works-bondi-beach-facilities"
+    }
+   ]
+  },
+  "89be0e35ca7ffff": {
+   "text": "At Darling Harbour’s waterfront, this block serves visitors, nearby workers and residents moving between the promenade, shops and food outlets. The model estimates 1.4 fountains missing here, with about 808 residents in the hex and 3,049 within 500 metres; it also counts 8 shops here, 143 nearby, 39 bus stops and 2 train stations within 500 metres. Harbourside’s approved redevelopment includes new public spaces and a Bunn Street pedestrian bridge, but the source does not establish their distance from this block. Check existing fountain coverage and foot traffic on site, then install an accessible drinking fountain where it best serves the promenade.",
+   "sources": []
+  },
+  "89be0e36b73ffff": {
+   "text": "This Wolli Creek block is short by 1.4 fountains, with none recorded today, despite 1,620 residents locally and about 6,093 within 500 m. Nearby users include families at four playgrounds and people walking or exercising in parkland just 36 m away; six bus stops and two train stations are also within 500 m. There are nine shops and 20 food outlets nearby, but only one food outlet in the hexagon. Council has proposed a new town park at 4 Guess Avenue; the source does not establish its distance from this block. Check pedestrian desire lines and water connections, then site a durable, accessible fountain near the park/playground route.",
+   "sources": []
+  },
+  "89be0e34327ffff": {
+   "text": "This Glebe block has no mapped fountain despite 801 residents in the hexagon and about 4,569 within 500 metres. Nearby parks cover 78,494 square metres, with the closest just 78 metres away, drawing walkers, families and people using the area’s nine sports facilities and four playgrounds. There are 23 bus stops and 44 shops within 500 metres, including 23 cafes and food outlets; no train station is within 1 km. The model estimates 1.41 fountains missing here. Glebe Street Playground, about 300 metres away, completed works in June 2026 including a new bubbler. Check existing fountain coverage on site and assess a convenient, accessible location.",
+   "sources": [
+    {
+     "title": "Upgrading Glebe Street Playground, Glebe - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/park-playground-works/upgrading-glebe-street-playground-glebe"
+    }
+   ]
+  },
+  "89be0e358cbffff": {
+   "text": "This Lavender Bay block has no mapped fountain, despite 12 shops and 12 cafés or food outlets in the hexagon, and 91 food outlets within 500 m. Nearby users include residents, café customers, walkers and families visiting the Lavender Bay Parklands; Clark Park, Wendy Whiteley’s Secret Garden and Quibaree Park are part of that waterfront network. The model estimates 308 residents in the hexagon and 3,794 within 500 m; there are 28 bus stops and one train station within 500 m. Council lists an existing bubbler at the Parklands’ heritage playground, but no nearby planned fountain was confirmed. Check access, demand and connection points before siting a new fountain.",
+   "sources": [
+    {
+     "title": "Lavender Bay Parklands - Parks, playgrounds and sportsgrounds – North Sydney Council",
+     "url": "https://www.northsydney.nsw.gov.au/directory-record/1403/lavender-bay-parklands"
+    }
+   ]
+  },
+  "89be0853613ffff": {
+   "text": "This block sits in Mays Hill Reserve, beside Mays Hill Oval and about 240 metres from Parramatta Aquatic Centre. Oval users, swimmers, families and people walking through the park could benefit from convenient drinking water. The model estimates 1.41 fountains missing here, with about 6,703 residents within 500 metres, 45 shops, 13 bus stops and 217,532 square metres of nearby parkland. However, Council lists a drinking fountain at Mays Hill Reserve, so the model’s zero count may not reflect what is on the ground. Check the existing fountain’s location, condition and accessibility before adding or relocating one.",
+   "sources": [
+    {
+     "title": "Mays Hill Map - Park - Parramatta, Sydney, New South Wales, Australia",
+     "url": "https://mapcarta.com/W14363193"
+    }
+   ]
+  },
+  "89be0852473ffff": {
+   "text": "This Canley Vale block sits beside Sherwin Park, whose sports field is also used by Canley Vale High School, so students, players and park visitors can all benefit from a fountain. The model records 1.39 fountains missing here, with about 440 residents in the hexagon and 2,984 within 500 metres. It also counts 17 bus stops, seven sports facilities and one playground within 500 metres, but no shops in the hexagon. Council’s 2027–28 asset plan lists bench, lighting, shelter and bollard replacements at Sherwin Park; it does not confirm a fountain project. Check paths and field entrances on site before siting a drinking fountain.",
+   "sources": [
+    {
+     "title": "AM IAMP Template",
+     "url": "https://www.fairfieldcity.nsw.gov.au/files/assets/public/v/1/documents/your-council/ipr/attachment-f-asset-management-plan-parks-and-recreation.pdf"
+    }
+   ]
+  },
+  "89be0e35d6bffff": {
+   "text": "This Birchgrove block has no fountain despite 1,003 residents and 2 shops; within 500 m are 5,057 residents, 27 shops, 20 food outlets, 20 bus stops, five playgrounds and 91,151 m² of parkland. Birchgrove Park and Oval draw families, walkers and sports users, including children and older residents. The model estimates 1.37 fountains missing here; its nearest existing fountain is in the next hexagon, under about 500 m away. Council’s Birchgrove Park master plan marks proposed drinking fountains, but does not confirm installation. Check existing provision and service connections, then site a durable accessible fountain on the main park route.",
+   "sources": [
+    {
+     "title": "Birchgrove Park Masterplan",
+     "url": "https://www.innerwest.nsw.gov.au/sites/default/files/2026-01/Birchgrove%20Park%20Master%20Plan.pdf"
+    }
+   ]
+  },
+  "89be0e34323ffff": {
+   "text": "This Ultimo block has 31 shops and 14 cafes, with 56 food outlets within 500 m, serving residents, workers and visitors. The model counts 1,275 residents in the hexagon and 7,800 within 500 m, alongside 16 bus stops and 100,222 m² of park area nearby. It predicts 2.38 fountains against 1 present, a gap of 1.38. City of Sydney’s Mary Ann Street Park upgrade plan includes a drinking fountain, about 70 m from the model point. Check whether it has been installed and is accessible before adding another.",
+   "sources": []
+  },
+  "89be0e2612fffff": {
+   "text": "This point is in Liberty Grove’s parkland, where families use playgrounds and residents walk, run and play sport. The model estimates 1.38 missing fountains; 823 residents are within 500 m and about 9,201 within 1 km, but it records no shops, cafes, bus stops or train stations within 500 m. It also counts 186,846 m² of parkland and four sports facilities within 500 m, so park users and players are the clearest beneficiaries. Build a public fountain beside a well-used path or playground, and check access, water connection and existing estate facilities on site.",
+   "sources": [
+    {
+     "title": "Liberty Grove Community - Recreation Facilities",
+     "url": "https://www.libertygrove.info/about-liberty-grove/recreation-facilities"
+    }
+   ]
+  },
+  "89be0e343c7ffff": {
+   "text": "This Surry Hills block around Commonwealth Street serves 1,327 residents and sits among 20 shops and 19 cafes and food outlets. Across 500 metres, 8,161 residents, 69 shops, 92 food outlets and 18 bus stops add to the daily demand from local workers, customers and people walking through the street junctions. The model counts one fountain here against 2.36 predicted, a shortfall of 1.36; the nearest existing fountain is in the next hexagon, less than about 500 metres away. Check pedestrian flows and accessible pipe connections before siting a durable drinking fountain.",
+   "sources": [
+    {
+     "title": "Commonwealth Street, Surry Hills, Sydney, Council Of The City Of Sydney, New South Wales, 2010, Australia",
+     "url": "https://www.findlatitudeandlongitude.com/l/Commonwealth%2BStreet%2C%2BSurry%2BHills%2C%2BSydney%2C%2BCouncil%2Bof%2Bthe%2BCity%2Bof%2BSydney%2C%2BNew%2BSouth%2BWales%2C%2B2010%2C%2BAustralia/10328613/"
+    }
+   ]
+  },
+  "89be08c52bbffff": {
+   "text": "This block sits by Mawson Park, on Queen and Cordeaux Streets, where families use the playground and picnic areas, workers take breaks, and people gather for memorial ceremonies. Campbelltown station is within 500 metres, alongside 22 bus stops, 28 shops and about 773 residents; the model records no fountains within 1 km and estimates 1.39 missing. Council lists a Mawson Park upgrade in its infrastructure plan, but does not specify a fountain. Check existing park taps and memorial features on site, then locate an accessible drinking fountain by the paths and playground.",
+   "sources": [
+    {
+     "title": "Mawson Park Campbelltown | NSW Government",
+     "url": "https://www.nsw.gov.au/visiting-and-exploring-nsw/locations-and-attractions/mawson-park-campbelltown"
+    }
+   ]
+  },
+  "89be0e3423bffff": {
+   "text": "This block near Bayswater Road and the New South Head Road junction serves nearby residents, café and shop customers, bus users and people walking to Rushcutters Bay Park. The model counts 2,191 residents in the hexagon, 13 shops, and 122 shops and 18 bus stops within 500 metres; it predicts 2.34 fountains against one today, a gap of 1.34. However, Rushcutters Bay Park already has drinking fountains, including one at its youth recreation area, roughly 700 metres away. Check whether that provision is accessible from this block before siting an additional fountain.",
+   "sources": [
+    {
+     "title": "Rushcutters Bay Park | Woollahra Municipal Council",
+     "url": "https://www.woollahra.nsw.gov.au/Recreation/List-of-Parks-Reserves-and-Playgrounds/Rushcutters-Bay-Park"
+    }
+   ]
+  },
+  "89be0842d63ffff": {
+   "text": "This Penrith city-centre block has 24 shops and 14 cafes and food outlets, serving local residents, workers and visitors on foot. Within 500 metres are 109 shops, 42 cafes and food outlets, 15 bus stops, Penrith train station, 23,834 square metres of parkland, four playgrounds and three sports facilities. The model estimates 1.34 missing fountains here; it records 2,392 residents within 500 metres and 6,905 within one kilometre. Council identifies City Park, at Henry and Station streets, as a completed public space nearby. Check for an accessible, shaded fountain location on the main walking routes and confirm water and drainage connections.",
+   "sources": []
+  },
+  "89be08536d7ffff": {
+   "text": "This Parramatta block has no mapped public drinking fountain despite 1,706 residents, 87 shops and 31 food outlets within it. Around 8,793 people live within 500 metres, where 18 bus stops and 17 sports facilities serve workers, shoppers and people travelling through. James Ruse Reserve, about 1 km east, has drinking fountains, but the model still predicts 1.3 missing here; its nearest mapped fountain is in the next hexagon, under about 500 metres away. Check fountain locations and access on site, then install a durable, accessible drinking fountain near the busiest pedestrian route.",
+   "sources": []
+  },
+  "89be085241bffff": {
+   "text": "This Canley Vale block serves 16 cafés and food outlets, 15 shops, six bus stops and Canley Vale Station within 500 metres, bringing diners, shoppers, commuters and nearby residents past the site. The model estimates 3,001 residents within 500 metres and 1.31 missing fountains here; it records none in this hexagon. Canley Vale’s town centre and station are nearby, while Avenel Park, about 0.8 km away, already has bubblers and a misting station. Check existing drinking-water access and utilities on site, then place a fountain on the busiest accessible pedestrian route.",
+   "sources": []
+  },
+  "89be08d9807ffff": {
+   "text": "This block is in Sans Souci Park, beside the foreshore and roughly 73 metres from the beach. Families using the playground, walkers and cyclists on the waterfront paths, and people visiting the park’s picnic and leisure areas could all use a nearby fountain. The model estimates 1.29 fountains missing; 1,240 residents live within 500 metres, with seven bus stops, one café or food outlet and no shops nearby. Georges River Council’s adopted 2023 park plan includes bubblers in the main playground area and a drinking fountain in a pocket park, but their distance from this spot is unclear. Check existing fountain coverage on site before choosing an accessible location.",
+   "sources": []
+  },
+  "89be0e3439bffff": {
+   "text": "This Redfern block has no mapped public water fountain despite 1,224 residents, 23 shops and 21 cafes in the hex. Nearby cafes, 17 bus stops and 8,155 residents within 500 metres bring a steady mix of customers, workers, bus users and local pedestrians who may need water, especially in hot weather. The model estimates 1.33 fountains are missing here. City of Sydney proposes a drinking fountain in upgrades to Jack O’Brien and Baptist Street reserves, roughly 500 metres away, but that would not serve this block directly. Check existing fountains and water connections on site before selecting a durable, accessible location.",
+   "sources": []
+  },
+  "89be08c81b7ffff": {
+   "text": "This East Hills block has no mapped fountain, despite 291,903 m² of parkland within 500 m, two playgrounds and 26 sports facilities. East Hills Park on Henry Lawson Drive offers a playground, picnic facilities and walking track, drawing families, walkers and sports users; the model estimates 1,138 residents within 500 m and 4,802 within 1 km. Two bus stops are within 500 m, and East Hills Station is within 1 km. There are no shops or food outlets within 500 m, so users may have few nearby places to refill. Check paths and activity areas on site, then install an accessible fountain with a bottle refill point.",
+   "sources": []
+  },
+  "89be08536c7ffff": {
+   "text": "This Parramatta block has no mapped fountain despite 1,450 residents, 39 shops and 19 food outlets within it. Nearby, 79 food outlets, 13 bus stops and three train stations within 500 metres serve shoppers, workers, commuters and people walking between the CBD and open space. The model estimates 1.29 missing fountains here; across 18 nearby hexagons it counts 17 existing fountains against 25.45 predicted. With 121,618 square metres of park area within 500 metres, a fountain could serve both daily trips and outdoor activity. Check pedestrian desire lines and utility access before choosing the installation point.",
+   "sources": []
+  },
+  "89be0e3468fffff": {
+   "text": "Waverley Park’s playground, Margaret Whitlam Recreation Centre, oval, sports courts and fitness stations draw children, families, older adults, players and people walking or cycling through the park. The model finds 1.27 fountains missing here, with about 809 residents in the hexagon and 4,955 within 500 metres; it also counts 9 cafes and food outlets, 22 bus stops and 15 sports facilities within 500 metres. Council’s park upgrade included an accessible picnic area with a bubbler, so check its location, access and condition before adding another fountain.",
+   "sources": [
+    {
+     "title": "Waverley Park Play Space upgrade | Have Your Say Waverley",
+     "url": "https://haveyoursay.waverley.nsw.gov.au/waverley-park-play-space-upgrade?tool=survey_tool"
+    }
+   ]
+  },
+  "89be0e3422bffff": {
+   "text": "At 100 William Street, between Palmer and Crown streets, 2,570 residents share this block with 64 shops and 44 cafés and food outlets. Office workers, shoppers and people walking the 333 nearby street junctions add to demand; 18 bus stops and a train station lie within 500 metres. The model counts one fountain against 2.28 expected, a shortfall of 1.28. Cook and Phillip Park and Hyde Park are nearby, but the nearest mapped fountain is in the next hexagon, under about 500 metres away. Check foot traffic, accessible placement and water servicing before installing a fountain.",
+   "sources": [
+    {
+     "title": "Office For lease — 100 William Street WOOLLOOMOOLOO NSW 2011 | Australia | Colliers",
+     "url": "https://www.colliers.com.au/en-au/properties/cost-effective-fitted-offices-with-harbour-views/aus-100-william-street-woolloomooloo-nsw-2011/aus66022585"
+    }
+   ]
+  },
+  "89be084250fffff": {
+   "text": "This block has no mapped fountain despite 666 residents within 500 m and 84 shops, including 21 cafes and food outlets. Queen Street businesses, St Marys station users, and people visiting nearby parks and sports facilities all add to demand: there are 14 bus stops, one train station, three playgrounds and 11 sports facilities within 500 m. Council’s St Marys Central Park is under construction, linking Coachmans Park and Kokoda Park; the exact distance from this block is not confirmed. The model estimates 1.26 missing fountains here. Check park access and utility connections, then install a durable, accessible fountain with a bottle refill point.",
+   "sources": []
+  },
+  "89be0e34e87ffff": {
+   "text": "This Newtown block serves 1,104 residents, with 6,443 within 500 metres, alongside 32 local shops and 19 cafes and food outlets. King Street’s businesses, nearby streets and Newtown rail users share a walkable area with 11 bus stops, one station and seven playgrounds within 500 metres. The model records no fountain here and estimates 1.26 missing, despite 38 fountains across nearby hexagons. Council’s Peace Reserve upgrade includes a new water bubbler, but its precise distance from this spot is unconfirmed. Check existing fountain access on site, then install an accessible bottle-refill fountain where pedestrian flows meet.",
+   "sources": []
+  },
+  "89be0e343cbffff": {
+   "text": "This Darlinghurst block has one fountain against modelled demand of 2.26, a shortfall of 1.26, with a 90% chance that at least one is warranted. It serves 1,675 residents, 46 shops and 31 cafes and food outlets in the hexagon; within 500 metres are 9,848 residents, 112 shops, 31 bus stops and two playgrounds. Oxford Street’s shops and cafes draw walkers and bus users, while 371 walkable street junctions support steady foot traffic. Green Park’s approved upgrade, about 700 metres away, includes a new fountain with dog bowl. Check underground services and pedestrian flows before siting an accessible drinking fountain.",
+   "sources": [
+    {
+     "title": "Improving Green Park, Darlinghurst - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/park-playground-works/improving-green-park-darlinghurst"
+    }
+   ]
+  },
+  "89be0e26323ffff": {
+   "text": "This block sits beside Meadowbank Park, where soccer and cricket players, families using the playground and skate park, and people walking or cycling the river path need drinking water. The model flags 1.26 missing fountains, about 841 residents in the hex and 4,789 within 500 metres; it also counts six shops, five bus stops and Meadowbank train station within 500 metres. Council already lists water stations in Meadowbank Park, and plans another at Meadowbank Park #13 for 2027/28, but its exact location is unclear. Check existing coverage on site and add a fountain only where there is a genuine gap.",
+   "sources": [
+    {
+     "title": "Filtered Water Stations | City of Ryde",
+     "url": "https://www.ryde.nsw.gov.au/Environment-and-Waste/Waste-and-Recycling/Other-Services/Reuse-Services/Filtered-Water-Stations"
+    }
+   ]
+  },
+  "89be0e34227ffff": {
+   "text": "This Darlinghurst block sits near Oxford Street and Taylor Square, where local residents, shoppers, hospitality workers and people walking between the surrounding shops and bus stops share a busy public street. The model records 1,356 residents, 6 shops and 16 cafes or food outlets in the hexagon, with 106 shops and 130 food outlets within 500 metres; 36 bus stops are also nearby. It counts 1 fountain today against 2.25 predicted, leaving a modeled gap of 1.25. Check pedestrian desire lines and utilities on site, then install an accessible drinking fountain where it serves the busiest walking routes.",
+   "sources": []
+  },
+  "89be0842d77ffff": {
+   "text": "This Penrith block is within reach of City Park, the Station Street and Henry Street civic green, and the CBD’s shops and cafes. Families using nearby parks and playgrounds, shoppers, workers and bus passengers all benefit from a refill point: the model flags 1.24 fountains missing, with about 1,519 residents within 500 metres, 143 shops and 13 bus stops. Penrith Station is within 1 km, and the nearest mapped fountain is about 760 metres away. Council describes City Park as a walkable space near the station. Check existing fountain coverage and accessible, shaded placement on site.",
+   "sources": [
+    {
+     "title": "City Park - Penrith City Council",
+     "url": "https://www.penrithcity.nsw.gov.au/building-development/revitalise-penrith/city-park"
+    }
+   ]
+  },
+  "89be0e36b77ffff": {
+   "text": "This Wolli Creek block has no recorded public fountain despite 3,368 residents and 18 food outlets; within 500 metres are 9,681 residents, 20 cafés and food outlets, 10 shops, three bus stops and Wolli Creek station. Nearby users include apartment residents, commuters, café customers and people walking to Discovery Point Park, about 78 metres away. The park and station draw people outdoors and between transport and local businesses, while the model identifies 1.26 fountains missing here. A separate suggested spot is 380 metres away, also with no fountain recorded. Check existing park and station amenities on site, then install an accessible drinking fountain on the main pedestrian route.",
+   "sources": []
+  },
+  "89be08c8a03ffff": {
+   "text": "The suggested block sits beside the Georges River foreshore in Lansvale, where people using nearby parkland, a playground and sports facilities can benefit from drinking water during walks and play. The model estimates 1.22 fountains missing; it counts about 580 residents within 500 metres and 3,870 within 1 kilometre. It records one playground and three sports facilities within 500 metres, but no shops, cafes, bus stops or train stations there. Council lists Lansvale Park’s playground and walking circuit, but no confirmed nearby fountain project. Check foreshore access, water connections and demand on site before selecting a fountain location.",
+   "sources": []
+  },
+  "89be08c896fffff": {
+   "text": "This Liverpool block has no fountain today, with the model estimating 1.21 missing, despite 148,105 m² of parkland within 500 m, four playgrounds and 15 sports facilities. Families, players and walkers share the open space, while 22 nearby bus stops bring through-travellers; 3,276 residents live within 500 m and projected growth is 20.21% for 2021–2031. There are no shops within 500 m, so a refill point is especially useful for people spending time outdoors. Council’s Light Horse Park revitalisation includes play, water-play and recreation upgrades, but the source does not confirm its distance from this block. Check park access, water connection and overlap with planned works before siting a fountain.",
+   "sources": [
+    {
+     "title": "Light Horse Park Revitalisation Project | Liverpool City Council",
+     "url": "https://www.liverpool.nsw.gov.au/development/current-major-works/lighthorse-park-redevelopment-shaping-our-future"
+    }
+   ]
+  },
+  "89be0e35dcbffff": {
+   "text": "This Barangaroo block sits by the harbour-side walking routes and parkland, where residents, commuters, workers and visitors need water while walking, cycling or waiting for transport. The model estimates 1.22 fountains missing here, with 147 residents in the hexagon and about 1,709 within 500 metres; that catchment also has 8 bus stops, a train station, 11 shops and 30 cafes or food outlets. Barangaroo Reserve is a regional park with walking and cycling trails, and the model places the nearest existing fountain in the next hexagon, under about 500 metres away. Check existing taps and pedestrian flows on site, then install an accessible bottle-refill fountain on the main route.",
+   "sources": [
+    {
+     "title": "Barangaroo Reserve - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/parks/barangaroo-reserve"
+    }
+   ]
+  },
+  "89be0e204afffff": {
+   "text": "This North Curl Curl block sits beside Makim Reserve’s recently reopened playground and about 274 m from North Curl Curl Beach, drawing children and carers, beachgoers and people exercising in the 176,572 m² of nearby parkland. Council says the reserve playground upgrade is complete; no nearby planned fountain site was confirmed. The model flags 1.2 missing fountains, with 2,379 residents within 500 m, 13 bus stops and no shops in that radius; there are two cafes or food outlets in the block. Build a durable drinking fountain with a bottle filler near the playground, after checking accessible paths and existing services on site.",
+   "sources": []
+  },
+  "89be0e36b57ffff": {
+   "text": "This Tempe block sits beside substantial open space: the model records 256,919 m² of parkland within 500 m, one playground and 24 sports facilities, attracting families, players, walkers and cycleway users. It estimates 1.21 fountains missing, with about 203 residents within 500 m; there are no shops in that radius, but two bus stops, and three train stations within 1 km. Tempe Recreation Reserve includes sports grounds, a shaded playground and the Cooks River Cycleway. Council’s reserve plan identifies a fountain, so check its location and condition before adding one here.",
+   "sources": [
+    {
+     "title": "Tempe Recreation Reserve | Inner West Council",
+     "url": "https://www.innerwest.nsw.gov.au/tempe-parks/tempe-recreation-reserve"
+    }
+   ]
+  },
+  "89be0842d33ffff": {
+   "text": "This Jamisontown block sits beside parkland, with a playground about 70 metres away; nearby park users, children and carers, sports participants and people walking to local services could use a fountain. The model estimates 1.2 fountains missing here, with 1,545 residents within 500 metres, 39 shops, 13 bus stops and 39 sports facilities in that radius. It records three existing fountains across 18 hexagons within 1 km, but none in this hexagon. Check for an existing accessible drinking point and suitable water connection before siting a fountain near the park path.",
+   "sources": [
+    {
+     "title": "Penrith Park Map - City of Penrith, New South Wales, Australia",
+     "url": "https://mapcarta.com/28663782"
+    }
+   ]
+  },
+  "89be08cb5c3ffff": {
+   "text": "This Hurstville block has 21 shops and sits among Forest Road food businesses, serving local residents, shoppers and people changing between buses and trains. The model records no fountain here today and estimates 1.19 missing, with about 2,257 residents in the hexagon, 9,277 within 500 metres, 21 bus stops and one train station nearby. There are 89 food outlets within 500 metres. Council completed Hurstville Park upgrades including a drinking fountain, but that does not establish coverage for this busy block. Check existing street-level access and services, then site a fountain on a safe, visible pedestrian route.",
+   "sources": [
+    {
+     "title": "Off Leash Dog Park Improvements | Your Say Georges River",
+     "url": "https://yoursay.georgesriver.nsw.gov.au/off-leash-dog-park-improvements"
+    }
+   ]
+  },
+  "89be0e344abffff": {
+   "text": "This Kingsford block is about 94 metres from a park and sits within 500 metres of two playgrounds and eight sports facilities, serving nearby families, children and people exercising. The model estimates 267 residents in the hexagon and 4,167 within 500 metres; it records no fountains here, with 1.19 missing. There are 17 bus stops within 500 metres and a train station within 1 kilometre, but no shops in the hexagon. Check the park edge and pedestrian routes on site, then install an accessible drinking fountain where park users can reach it easily.",
+   "sources": []
+  },
+  "89be08c8567ffff": {
+   "text": "This Panania block has no water fountain today, despite 66,904 m² of parkland within 500 m, two playgrounds and nine sports facilities. Nearby park users include children, carers, walkers and players; 19.9% of residents are under 18 and 18.8% are 65 or older. The model counts 2,777 residents within 500 m and 11,799 within 1 km, with nine bus stops nearby and two train stations within 1 km. It predicts 1.19 missing fountains here; the nearest hexagon with one is about 1.38 km away. Check park entrances, paths and service access on site before choosing a durable, accessible fountain location.",
+   "sources": []
+  },
+  "89be0e35e37ffff": {
+   "text": "Berry Street is a busy North Sydney CBD block, close to Victoria Cross station, cafés, shops and bus stops. The model records no fountain here, with 21 shops and 27 nearby food outlets; within 500 metres it estimates 5,128 residents, 56 shops, 27 bus stops and a train station. Commuters, office workers, local residents and café customers all add to demand. North Sydney Council’s Ward Street Precinct strategy describes a planned urban renewal area, but its distance from this suggested point is not established. Check pedestrian desire lines and underground services, then assess a convenient, accessible drinking fountain location.",
+   "sources": []
+  },
+  "89be08cb187ffff": {
+   "text": "This Mortdale block has no fountain today, despite 127,652 m² of parkland within 500 m, five playgrounds and 25 sports facilities. Children and families at nearby parks, people exercising, and residents walking the area could use a reliable place to refill; 2,860 residents live within 500 m, alongside eight bus stops and two shops. Council has confirmed a 2026/27 renewal of Ruby Wing Reserve’s playground, but the available information does not establish its distance from this block. Check park ownership, accessible paths and utility connections on site, then consider a bottle-filling fountain.",
+   "sources": []
+  },
+  "89be0e34387ffff": {
+   "text": "This block sits by Redfern Park, where families use the playground and water play, sports players and spectators visit the oval, and people meet at the café. The model estimates 1,423 residents in the hexagon and 8,722 within 500 m, with 5 shops, 14 food outlets and 21 bus stops nearby. It flags one missing fountain, with an expected 2.18 and an 89% chance of at least one. The City’s proposed drinking fountain at Jack O’Brien and Baptist Street reserves is roughly 0.5 km away. Check existing drinking-water access and site a durable fountain on the park approach.",
+   "sources": [
+    {
+     "title": "Redfern Park - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/parks/redfern-park"
+    }
+   ]
+  },
+  "89be0e34213ffff": {
+   "text": "The model flags one missing fountain in this Edgecliff block, with about 782 residents; 6,044 people live within 500 m. Edgecliff Station and its bus interchange bring commuters through, while Trumper Park and nearby reserves serve walkers, families and sports users. Within 500 m are 24 bus stops, one train station, 37 shops and 11 cafes or food outlets. Woollahra Council’s Rushcutters Bay Park page confirms a drinking fountain there, but the model places the nearest existing fountain in the next hexagon, under about 500 m away. Check the station-to-park walking routes and install an accessible fountain where gaps in coverage are greatest.",
+   "sources": []
+  },
+  "89be08c99bbffff": {
+   "text": "This hex covers the Carrawood Park and Prospect Creek recreation area, where families use the inclusive Big Bass playspace and people walk, cycle and play sport. The model estimates 1.16 fountains missing here, with 1,959 residents within 500 metres and 7,366 within 1 kilometre; there are six bus stops nearby, but no shops in the hex. Its 276,586 square metres of park within 500 metres makes water access useful for longer visits. The nearby Lansdowne suggestion is 0.38 kilometres away. Carrawood Park’s upgrade is complete, not a future project. Check existing taps and utilities, then site a durable, accessible fountain near the park’s main activity hub.",
+   "sources": [
+    {
+     "title": "Carrawood Park | Planning",
+     "url": "https://www.planning.nsw.gov.au/the-planning-system/open-space/parks-for-people/carrawood-park"
+    }
+   ]
+  },
+  "89be084298bffff": {
+   "text": "This block sits beside the Nepean River near Regatta Park, with 172,577 m² of parkland within 500 m, a playground, 15 sports facilities and five bus stops. Families, walkers, cyclists and people using the river foreshore and recreation spaces could benefit from a nearby refill point. The model estimates 1.18 fountains missing; it counts about 347 residents within 500 m, two shops and one café or food outlet. Council’s Regatta Park upgrade includes water bubblers, so check whether those serve this block before adding a fountain.",
+   "sources": [
+    {
+     "title": "Regatta Park - Penrith City Council",
+     "url": "https://www.penrithcity.nsw.gov.au/building-development/revitalise-penrith/regatta-park"
+    }
+   ]
+  },
+  "89be08c8963ffff": {
+   "text": "This block sits beside Woodward Park, where children at the playground, sports participants and event visitors need drinking water, especially during outdoor activity. The model records 1.17 fountains missing here and none within 1 km, despite 5,647 residents within 500 m, 17 bus stops and 17 shops nearby; the nearest hexagon with a fountain is about 1.15 km away. Council’s adopted Woodward Park master plan includes park and recreation improvements, though it does not confirm a drinking fountain. Check existing water points and accessible, shaded locations, then install a public fountain on a well-used path.",
+   "sources": [
+    {
+     "title": "Woodward Park | Liverpool City Council",
+     "url": "https://www.liverpool.nsw.gov.au/development/major-projects/woodward-park"
+    }
+   ]
+  },
+  "89be0e35a13ffff": {
+   "text": "This Crows Nest block has no fountain in the model despite 4,843 residents within 500 metres, 34 shops, 28 cafes and food outlets, and 12 bus stops. Nearby users include residents, cafe and shop customers, bus passengers, and people visiting Hume Street Park and the North Sydney Indoor Sports Centre. The park is about 85 metres away; three playgrounds and six sports facilities are within 500 metres. Council is planning an approximately 2,000-square-metre Hume Street Park expansion, but no nearby planned fountain site is confirmed. Check pedestrian flows and accessible placement, then install a bottle-filling fountain if water connections allow.",
+   "sources": []
+  },
+  "89be08d9a13ffff": {
+   "text": "This block sits beside Tonbridge Street Reserve, about 55 m from its playground, where children, carers and nearby residents gather; Scarborough Park’s larger recreation area is also close. The model estimates 1.15 fountains missing here, with about 385 residents in the hexagon and 3,153 within 500 m. Eighteen bus stops, four playgrounds and 11 sports facilities within 500 m add passing and active users; there are two shops and five food outlets in that radius. Bayside’s Scarborough Park plan describes play areas with drinking fountains, so check existing provision before adding one. On site, verify fountain locations, access and water connections.",
+   "sources": []
+  },
+  "89be08c84d3ffff": {
+   "text": "This Peakhurst Park block serves families at the playground, junior and adult sports players, and people using the fields, public toilets and barbecue facilities. The model records 1.15 missing fountains, with none in the 18 surrounding hexagons; the nearest fountain is about 1.15 km away centre to centre. Within 500 m are 3,542 residents, 22 bus stops and nearly 98,828 m² of parkland, but no shops in the block. Council’s confirmed Adventure Playspace project will add biking trails, parkour and basketball facilities within Peakhurst Park. Check accessible, high-use locations for plumbing and drainage before siting a fountain.",
+   "sources": []
+  },
+  "89be08c9987ffff": {
+   "text": "This block sits in Lansdowne’s parkland, where families use playgrounds and walkers and cyclists use the tracks; Lansdowne Reserve and Mirambeena Regional Park draw year-round visitors. The model flags 1.15 fountains missing, with about 186 residents in the hex and 1,093 within 500 metres. It also records two playgrounds, two sports facilities, four bus stops and about 382,000 square metres of parkland within 500 metres, but no fountain today. The nearest fountain is about 770 metres away centre to centre. Check paths, play areas and bus-stop access on site, then install an accessible fountain with a bottle filler.",
+   "sources": []
+  },
+  "89be08c960fffff": {
+   "text": "Sanders Reserve sits at Oxford and Norwood streets, where children use the playground and residents walk dogs. Council lists water fountains there, so the model’s 1.16 missing fountains is a neighbourhood-level estimate, not evidence that this reserve lacks one. The case for checking provision is still strong: 6,698 residents live within 500 metres, alongside 17 bus stops, three cafés or food outlets, and 17,170 square metres of parkland; the hex itself has no shops. Confirm the existing fountain’s location, condition and accessibility on site before considering any additional installation.",
+   "sources": [
+    {
+     "title": "Sanders Reserve, Burwood | Burwood Council",
+     "url": "https://www.burwood.nsw.gov.au/For-Residents/Parks-and-Recreation/Parks-and-Reserves/Sanders-Reserve"
+    }
+   ]
+  },
+  "89be0e34c47ffff": {
+   "text": "This Enmore block serves 3477 residents within 500 m and has 71 shops, three sports facilities and four playgrounds nearby, but the model identifies one missing fountain. Enmore Park is immediately adjacent, with its playground, Annette Kellerman Aquatic Centre, picnic areas and dog exercise area attracting families, swimmers, walkers and local residents. Fifteen bus stops are within 500 m, and the park plan records a former fountain that is no longer in use. The model identifies no nearby suggested fountain sites. Check existing park taps and fountain infrastructure, then install an accessible drinking fountain with a bottle refill point on a well-used park path.",
+   "sources": [
+    {
+     "title": "Enmore Park | Inner West Council",
+     "url": "https://www.innerwest.nsw.gov.au/marrickville-parks/enmore-park"
+    }
+   ]
+  },
+  "89be0e26bb3ffff": {
+   "text": "The model flags a 1.14-fountain shortfall here, with no fountain recorded in the hexagon. This is a largely industrial Camellia block, but 3,359 residents are within 500 m, alongside 12 shops, five food outlets, 13 bus stops and Rosehill Gardens light rail stop. Workers, local residents and racecourse visitors may all need water while walking or waiting for transport. The nearest park is about 124 m away; 81,190 m² of parkland and two playgrounds are within 500 m. Council describes Camellia as an employment precinct with future renewal opportunities. Check pedestrian desire lines and a safe, accessible, maintainable site before installation.",
+   "sources": [
+    {
+     "title": "Camellia | City of Parramatta",
+     "url": "https://www.cityofparramatta.nsw.gov.au/development/plans-and-strategies/precinct-and-area-planning/precinct-planning/camellia"
+    }
+   ]
+  },
+  "89be0850ba3ffff": {
+   "text": "The model flags 1.13 fountains missing, with a 68% chance of one, but this block appears to sit at Timesweep Drive Reserve, not an unserved park: council lists a playspace there. Nearby St Clair has 1,689 residents within 500 m, 25 shops, 13 bus stops, two playgrounds and about 121,716 m² of parkland; there are no train stations within 1 km. Council also lists bubblers at Explorers Way and Henley Grove Reserve and Dorothy Radford Reserve, so check whether either is walkable from this block before adding another. Verify existing taps and pedestrian access on site, then place a fountain only if a clear gap remains.",
+   "sources": []
+  },
+  "89be0e35e23ffff": {
+   "text": "This block is in North Sydney’s walkable centre, with 245 street junctions and 78 cafes and food outlets within 500 metres. Nearby workers, residents, cafe customers and bus passengers can use a fountain during everyday trips; 21 bus stops and 5,919 residents are within 500 metres. St Leonards Park, with its playground and sports facilities, is about 117 metres away, adding park users to the likely demand. The model records no fountain in this hexagon and estimates a shortfall of 1.14. Check pedestrian flows and accessible water connections on site, then place a durable fountain on a visible public route.",
+   "sources": []
+  },
+  "89be0e2696fffff": {
+   "text": "This Harris Park block has three existing fountains versus 2.13 predicted, leaving a modelled gap of 1.13. It serves 2,262 residents, with 9,131 within 500 m, alongside 12 shops in the hex and 116 nearby, including Little India’s food businesses. Commuters use the nearby Harris Park and Parramatta stations; the model counts 22 bus stops and two train stations within 500 m. Rosella Park is about 22 m away. Council’s Marion Street and Wigram Street streetscape works are under way, but no nearby fountain is confirmed. Check foot traffic, accessible placement and water connections before installing one.",
+   "sources": []
+  },
+  "89be0e2650fffff": {
+   "text": "This block sits by Edwards Park on Brewer Street, where park users, including families with children, share nearby open space with local residents. The model identifies 1.14 missing fountains, with 2,334 residents within 500 m and 9,120 within 1 km. It records no shops in the block, but six shops and seven cafes or food outlets within 500 m, plus 20 bus stops. Two playgrounds and 14 sports facilities within 500 m add reasons for visitors to need drinking water. Check the park entrance and busiest paths, then install an accessible fountain with a bottle filler if water and drainage connections are feasible.",
+   "sources": []
+  },
+  "89be08c961bffff": {
+   "text": "This Burwood town-centre block is a strong fountain candidate: the model estimates 1.13 fountains missing, with about 1,177 residents in the hex and 7,793 within 500 metres. Burwood Road’s cafes and food outlets draw diners and workers, while 25 bus stops and Burwood Station within 500 metres bring commuters and visitors past. The block has 17 cafes and food outlets, but only four shops; the nearest hex with a fountain is about 660 metres away. Council’s Burwood Road and Deane Street transformation plans target the town centre. Check footpath space, utilities and pedestrian flows before siting an accessible fountain.",
+   "sources": [
+    {
+     "title": "Burwood Road and Deane Street Transformation | Participate Burwood",
+     "url": "https://participate.burwood.nsw.gov.au/burwood-road-and-deane-street-transformation"
+    }
+   ]
+  },
+  "89be0e27463ffff": {
+   "text": "This Chatswood block is 23 metres from Chatswood Park, where children use the playground and families picnic while oval users, skaters and walkers exercise. Council lists an accessible bubbler in the park, but the model records no fountain in this hexagon and estimates a shortfall of 1.13. Nearby demand is substantial: 7,776 residents within 500 metres, 72 shops and 71 food outlets, plus 24 bus stops and Chatswood train station. Council’s park information confirms the playground, skate park and bubbler; no nearby planned fountain site was confirmed. Check the existing bubbler’s location, access and capacity, then assess a drinking fountain on this block.",
+   "sources": []
+  }
+ }
+}
