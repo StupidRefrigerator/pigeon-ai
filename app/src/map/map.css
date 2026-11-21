@@ -40,29 +40,59 @@
 .hexcard .drv i { display: block; height: 10px; background: var(--pink); }
 .hexcard .drv i.neg { background: var(--blue); opacity: .55; }
 
+.hexcard .why { margin: 0 0 6px; font-size: 13.5px; line-height: 1.45; }
+.hexcard .why-src { display: flex; flex-wrap: wrap; gap: 4px 10px; margin: 0 0 4px; font-size: 12px; }
+.hexcard .why-src a { color: var(--blue); }
+.hexcard-ask { margin-top: 12px; width: 100%; padding: 8px 10px; border-radius: 3px; font-weight: 700; font-size: 13.5px; color: var(--paper) !important; background: var(--blue) !important; }
+.hexcard-ask:hover { background: var(--purple) !important; }
+.hexmap-focus { position: absolute; z-index: 4; bottom: 76px; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 8px; margin: 0; padding: 5px 6px 5px 12px; font-weight: 700; font-size: 13.5px; background: var(--yellow) !important; color: var(--purple); }
+.hexmap-focus button { width: 24px; height: 24px; font-size: 18px; line-height: 1; border-radius: 2px; }
+
 /* Ask Pigeon: hidden until opened */
 .ask-toggle { position: absolute; z-index: 4; top: 16px; right: 16px; display: inline-flex; align-items: center; gap: 8px; padding: 7px 12px; font-weight: 700; font-size: 14px; }
 .ask-toggle[hidden] { display: none; }
 .ask-toggle svg, .ask-close svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; }
 .ask-toggle:hover { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--pink); }
 .mappage .hexcard { top: 68px; }
-.ask-panel { position: absolute; z-index: 6; top: 0; right: 0; bottom: 0; width: 380px; display: flex; flex-direction: column; background: var(--paper); border-left: 2px solid var(--blue); box-shadow: -4px 0 0 rgba(255, 72, 176, .5); animation: ask-in .26s var(--ease); }
+.ask-panel { position: absolute; z-index: 6; top: 0; right: 0; bottom: 0; width: 420px; display: flex; flex-direction: column; background: var(--paper); border-left: 2px solid var(--blue); box-shadow: -4px 0 0 rgba(255, 72, 176, .5); animation: ask-in .26s var(--ease); }
 .ask-panel[hidden] { display: none; }
 @keyframes ask-in { from { transform: translateX(24px); opacity: 0; } }
 .ask-panel header { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px 14px; border-bottom: 2px solid var(--blue); }
 .ask-panel h2 { margin: 0; font: 400 20px/1.1 var(--poster); }
 .ask-close { padding: 5px 10px; border: 2px solid var(--blue) !important; border-radius: 3px; font-weight: 700; font-size: 13px; }
 .ask-close:hover { background: var(--yellow) !important; }
-.ask-body { flex: 1; overflow-y: auto; padding: 22px 22px 10px; }
-.ask-body p { margin: 0 0 10px; max-width: 40ch; }
-.ask-soon { display: inline-block; padding: 2px 8px; background: var(--yellow); color: var(--purple); font-weight: 700; }
-.ask-composer { display: flex; gap: 8px; padding: 14px 20px 18px; border-top: 2px solid var(--blue); }
-.ask-composer input { flex: 1; min-width: 0; padding: 10px 12px; border: 2px solid var(--blue); border-radius: 3px; font: inherit; color: var(--blue); background: #fff; }
-.ask-composer input:disabled { background: var(--paper-2); }
-.ask-composer input::placeholder { color: #8A97C2; }
+.ask-body { flex: 1; overflow-y: auto; padding: 18px 20px 10px; font-size: 14px; line-height: 1.45; }
+.ask-head-btns { display: flex; gap: 6px; }
+.ask-empty p { margin: 0 0 12px; }
+.ask-starter { display: block; width: 100%; margin: 0 0 8px; padding: 9px 11px; text-align: left; border: 2px solid var(--blue) !important; border-radius: 3px; font-size: 13.5px; }
+.ask-starter:hover { background: var(--yellow) !important; }
+.ask-turn { margin-bottom: 20px; }
+.ask-q { margin: 0 0 10px 28px; padding: 8px 11px; background: var(--blue); color: var(--paper); border-radius: 3px; }
+.ask-think { margin: 0 0 8px; padding: 6px 10px; border-left: 3px solid var(--pink); background: rgba(255, 72, 176, .06); font-size: 13px; color: var(--ink-soft); }
+.ask-think summary { cursor: pointer; font-weight: 700; color: var(--purple); }
+.ask-think[open] summary { margin-bottom: 4px; }
+.ask-think p { margin: 0 0 6px; }
+.ask-steps { margin: 0 0 10px; padding: 0; list-style: none; font-size: 12.5px; }
+.ask-steps li { position: relative; padding: 2px 0 2px 20px; color: var(--ink-soft); }
+.ask-steps li::before { content: ''; position: absolute; left: 2px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--blue); }
+.ask-steps li.running::before { background: none; border: 2px solid var(--pink); border-right-color: transparent; animation: ask-spin .8s linear infinite; }
+@keyframes ask-spin { to { transform: rotate(360deg); } }
+.ask-a p, .ask-a ul, .ask-a ol { margin: 0 0 8px; }
+.ask-a ul, .ask-a ol { padding-left: 20px; }
+.ask-a h4 { margin: 10px 0 4px; font-size: 14px; }
+.ask-a a { color: var(--blue); }
+.ask-map { margin: 6px 0 0; }
+.ask-map-all { padding: 6px 10px; border-radius: 3px; font-weight: 700; font-size: 13px; color: var(--purple) !important; background: var(--yellow) !important; }
+.ask-chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.ask-chips button { padding: 3px 8px; border: 1.5px solid var(--blue) !important; border-radius: 12px; font-size: 12.5px; }
+.ask-chips button:hover { background: rgba(50, 85, 164, .1) !important; }
+.ask-err { margin: 6px 0 0; padding: 6px 10px; background: rgba(255, 72, 176, .12); color: var(--purple); font-weight: 700; }
+.ask-composer { display: flex; gap: 8px; padding: 12px 16px 16px; border-top: 2px solid var(--blue); }
+.ask-composer textarea { flex: 1; min-width: 0; resize: none; padding: 8px 10px; border: 2px solid var(--blue); border-radius: 3px; font: inherit; font-size: 14px; color: var(--blue); background: #fff; }
+.ask-composer textarea::placeholder { color: #8A97C2; }
 .ask-composer button { padding: 0 16px; border-radius: 3px; font-weight: 700; color: var(--paper) !important; background: var(--blue) !important; }
 .ask-composer button:disabled { opacity: .45; cursor: not-allowed; }
-.ask-open .hexcard { right: 396px; top: 16px; }
+.ask-open .hexcard { right: 436px; top: 16px; }
 
 /* area picker: suburb or point plus a radius, with the area's summary underneath */
 .area { position: absolute; z-index: 4; top: 66px; left: 16px; width: 300px; max-height: calc(100% - 252px); display: flex; flex-direction: column; padding: 8px; }
@@ -106,6 +136,7 @@
   .hexmap-modes { bottom: 12px; }
   .area { top: 56px; left: 8px; right: 8px; width: auto; max-height: 45%; }
   .hexcard, .mappage .hexcard, .ask-open .hexcard { top: auto; left: 8px; right: 8px; bottom: 64px; width: auto; max-height: 55%; }
+  .hexmap-focus { bottom: 60px; max-width: calc(100% - 24px); }
   .ask-panel { width: 100%; top: 40%; border-left: 0; border-top: 2px solid var(--blue); box-shadow: none; }
 }
 @media (prefers-reduced-motion: reduce) {

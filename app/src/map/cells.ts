@@ -1,4 +1,5 @@
 import { FUTURE_AREAS } from '../lib/areas'
+import type { SpotSummary } from '../ai/protocol'
 import type { HeatmapData } from '../lib/data'
 
 export type Mode = 'today' | 'growth' | 'future'
@@ -26,6 +27,8 @@ export interface Cell {
   /** Rank in the 100 suggested spots (Today) or in the area's picks (Future). */
   spot?: number
   spotLabel?: string
+  /** The saved AI explanation, for the top suggested spots. */
+  summary?: SpotSummary
 }
 
 export interface Cells {
@@ -71,14 +74,14 @@ const FEATURE_LABELS: Record<string, string> = {
   food_500m: 'cafes and food within 500 m',
 }
 
-export function toCells(d: HeatmapData): Cells {
+export function toCells(d: HeatmapData, summaries: Record<string, SpotSummary> = {}): Cells {
   const place = (i: number) => d.places[i] ?? 'Sydney'
   const spots = new Map(d.recs.map(([hex, rank]) => [hex, rank]))
   const today = d.today.map(([hex, real, pred, chance, drivers, pl]): Cell => {
     const spot = spots.get(hex)
     return {
       hex, name: place(pl), context: 'Sydney today', today: real, predicted: pred, chance, gap: pred - real, driverPairs: drivers,
-      spot, spotLabel: spot ? `Suggested spot ${spot} of ${d.recs.length}` : undefined,
+      spot, spotLabel: spot ? `Suggested spot ${spot} of ${d.recs.length}` : undefined, summary: summaries[hex],
     }
   })
   const growth = d.growth.map(([hex, real, pred, chance, pl]): Cell => ({

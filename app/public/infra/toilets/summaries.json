@@ -1,0 +1,706 @@
+{
+ "model": "gpt-6-luna",
+ "generated": "2026-11-20",
+ "spots": {
+  "89be0e345dbffff": {
+   "text": "This Kingsford block sits by Anzac Parade and Meeks Street Plaza, a public space used by shoppers, diners and visitors. The model finds 13 shops in the hexagon, 43 within 500 metres, 32 food outlets, 28 bus stops and one train station nearby, serving about 971 local residents and 6,122 within 500 metres. It estimates 1.73 toilets missing and maps none in the hexagon. A 2024 council precinct resolution asked Council to reinstate the plaza’s toilet or provide one elsewhere in Kingsford Shopping Centre. Check current access and demand, then assess an accessible toilet at the plaza or shopping-centre edge.",
+   "sources": [
+    {
+     "title": "<table id=\"e1\">",
+     "url": "https://www.randwick.nsw.gov.au/__data/assets/pdf_file/0012/396669/20240513_KWK-Meeting-13-May-minutes.pdf"
+    }
+   ]
+  },
+  "89be0e3460fffff": {
+   "text": "This Spring Street/Eastgate-area block sits among Bondi Junction shops and cafés, serving shoppers, workers, residents and people travelling through the town centre. The model counts 45 shops and 12 food outlets in the hex, 97 shops and 26 food outlets within 500 metres, and about 8,197 nearby residents. It records no public toilet here and estimates 2.22 are missing; 40 bus stops and one train station are within 500 metres. Council’s adopted Master Plan includes an Oxford Street Mall square and station-entry upgrades, but no planned toilet site is listed within 1 km. Check pedestrian flows, accessible routes and servicing before choosing a site.",
+   "sources": []
+  },
+  "89be08cb5dbffff": {
+   "text": "This Hurstville town-centre block has 33 shops and 22 food outlets, drawing shoppers, diners, workers and residents. Within 500 metres are 129 shops, 69 food outlets, 21 bus stops, a train station and about 10,187 residents. The model estimates 2.07 toilets missing here, with none mapped in the hexagon. Council records described Hurstville Plaza’s toilets as temporarily closed in 2025 while their long-term viability was investigated; the council also lists toilets at Hurstville Plaza, so verify their current access and hours. Check accessible walking routes and demand on site before selecting a new facility.",
+   "sources": [
+    {
+     "title": "AGENDA \n \nCouncil Meeting \n \nMonday, 26 May 2025",
+     "url": "https://georgesriver.infocouncil.biz/RedirectToDoc.aspx?URL=Open%2F2025%2F05%2FCCL_26052025_AGN_AT.PDF"
+    }
+   ]
+  },
+  "89be0e343abffff": {
+   "text": "This Chippendale block has 35 shops and 16 cafes or food outlets, serving local residents, shoppers and workers, with 11 bus stops nearby. The model estimates 1,584 residents in the hexagon and 11,641 within 500 metres, but records no public toilet here; the nearest is about 380 metres away. A council-planned automatic toilet at Quay Street and George Street is about 789 metres away and is not yet open. Check pedestrian demand and accessible siting near the shops and bus stops before selecting a location.",
+   "sources": []
+  },
+  "89be0e34267ffff": {
+   "text": "This Woolloomooloo block has 50 shops and 28 cafes, serving local residents, workers and visitors; 3,133 residents live in the hex and about 12,682 within 500 metres. Nearby demand includes 20 bus stops, one train station and nearly 27,000 square metres of parkland. The model records no toilets in the hex and estimates a shortfall of 2.27. However, Council lists public toilets at Sydney Place and Cowper Wharf Road near Brougham Street, and no planned toilet sites are listed within 1 km. Check walking routes, opening hours and capacity before deciding whether another facility is needed.",
+   "sources": [
+    {
+     "title": "New automatic public toilets - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/improving-streets-public-spaces/new-automatic-public-toilets-2021-22"
+    }
+   ]
+  },
+  "89be0e35dd7ffff": {
+   "text": "This block is at Union Square on Harris Street, amid Pyrmont’s shops and cafés, with John Street Square light rail nearby. Residents, café and shop customers, commuters, and visitors to the surrounding parks use the area. The model records 1,284 residents in the hex and 9,671 within 500 metres, plus 23 shops, 17 food outlets, and six train stations within 500 metres. It predicts a shortfall of 2.09 toilets, with none mapped in the hex; a council source lists existing toilets at Pirrama Park, but no planned site is listed within 1 km. Check access, visibility, and servicing before siting an accessible public toilet.",
+   "sources": []
+  },
+  "89be0842503ffff": {
+   "text": "This block is beside St Marys Village on Charles Hackett Drive, with 32 shops in the hexagon and 85 within 500 metres, plus 20 nearby cafes and food outlets. Shoppers, centre workers, families and bus passengers use the area; 10 bus stops lie within 500 metres, and St Marys Public School is nearby. The model estimates 1.64 toilets missing, with about 259 residents in the hexagon and 1,555 within 500 metres. No council-planned toilet site is listed within 1 kilometre. Check whether existing centre toilets are accessible to the public, then assess a visible, accessible public facility near the shops and bus stops.",
+   "sources": [
+    {
+     "title": "St Marys Village Shopping Centre | Getting Here",
+     "url": "https://www.stmarysvillage.com.au/centre-info/getting-here"
+    }
+   ]
+  },
+  "89be0e34237ffff": {
+   "text": "This block covers Green Park, beside St Vincent’s Hospital, with Victoria Street and Darlinghurst Road businesses nearby. Park visitors, hospital patients, staff and visitors, residents, and people using local shops and cafés all add to demand. The model records no public toilet in the hexagon, about 709 residents there and 7,886 within 500 metres, plus 8 shops, 6 cafés and 30 bus stops within 500 metres. A proposed Gugara Park toilet is 623 metres away; Woollahra reports its location is approved, but construction planning is still underway. Check accessible siting, servicing and pedestrian demand on site.",
+   "sources": [
+    {
+     "title": "Green Park - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/parks/green-park"
+    }
+   ]
+  },
+  "89be0e2403bffff": {
+   "text": "This Epping town-centre block serves about 575 modelled residents, with 5,680 within 500 metres, alongside 14 shops and five cafés or food outlets. Epping Station is within 250 metres, bringing commuters and bus passengers as well as shoppers and nearby park users. The model estimates 1.56 toilets missing and records none in the block, but Transport for NSW lists station toilets open during staffed hours, so access may be time-limited rather than absent. No council-planned toilet site is listed within 1 kilometre. Check station access, opening hours and nearby public land before selecting an accessible, well-serviced site.",
+   "sources": []
+  },
+  "89be0e346cbffff": {
+   "text": "This Bondi block has no toilet mapped within it, despite 30 shops, six cafés and food outlets, and about 1,247 residents. Customers, shop and café staff, and people travelling through the area may need facilities; 19 bus stops and two playgrounds lie within 500 metres, alongside three sports facilities. The model estimates 1.53 toilets missing, with the nearest mapped toilet about 660 metres away. Waverley Council lists toilets at Waverley Park, so verify their walking distance and accessibility before treating the gap as unmet. Check foot traffic and suitable sites for an accessible public toilet.",
+   "sources": [
+    {
+     "title": "Waverley Park - Waverley Council",
+     "url": "https://www.waverley.nsw.gov.au/recreation/parks_and_reserves/waverley_park"
+    }
+   ]
+  },
+  "89be0e34023ffff": {
+   "text": "This Waterloo block has 14 shops and 28 cafes and food outlets, serving residents, shoppers, diners and workers. The model estimates 3,319 residents in the hexagon and 11,986 within 500 metres, with 16 bus stops nearby and no train stations within 1 kilometre. It maps zero public toilets in the block and estimates a 1.57-toilet shortfall. Waterloo Park, about 250 metres west, has public toilets, an oval and skate park; Mount Carmel Church and Primary School are also beside the park. Check toilet access, hours and peak demand before siting an additional accessible facility.",
+   "sources": []
+  },
+  "89be085ac07ffff": {
+   "text": "This Parklea block serves shoppers, families and bus passengers around Glenvale Avenue, Quakers Hill Parkway and Sentry Drive. The model counts 25 shops and 7 food outlets in the hex, 10 bus stops within 500 metres and 2,489 residents nearby, but no mapped public toilet and no train station within 1 kilometre. It estimates a 1.62-toilet shortfall and an 80% chance of need. Council has installed a bus shelter on Sentry Drive, but no nearby planned toilet sites are listed. Check pedestrian flows, accessible routes, servicing and a suitable site before deciding what facility to build.",
+   "sources": []
+  },
+  "89be0e341cbffff": {
+   "text": "This Green Square block sits beside Joynton Avenue, close to Matron Ruby Grant Park, its playground and basketball court, the Joynton Avenue Creative Centre and Green Square Public School and Community Spaces. Families, school and community-space users, park visitors, workers and residents all use the area. The model finds 1.52 toilets missing and no mapped public toilet in the hexagon, despite 2,168 residents, 9 shops and 4 food outlets; within 500 metres are 28 bus stops and one train station. City information lists public toilets at nearby Joynton Park, so verify access and walking distance before adding provision. Check site demand and accessible servicing before choosing a location.",
+   "sources": [
+    {
+     "title": "Joynton Park - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/parks/joynton-park"
+    }
+   ]
+  },
+  "89be085ae67ffff": {
+   "text": "At Beaumont Hills’ local shops on The Parkway, 20 shops and 9 cafes or food outlets serve shoppers, workers and nearby families. The model estimates 1.52 toilets missing, with 147 residents in the hex and about 1,251 within 500 metres; 12 bus stops and two playgrounds also bring people through. There are no train stations nearby. Beaumont Village has a listed toilet, so check its public access, hours and walking route before treating the area as unserved. No planned sites are listed within 1 kilometre. Assess demand and accessibility on site before deciding whether another toilet is needed.",
+   "sources": []
+  },
+  "89be0e35d63ffff": {
+   "text": "This Balmain block has 22 shops and 17 food outlets, with 28 more shops and 21 cafes or food outlets within 500 metres. Its 914 residents share the area with shoppers, diners and park users; there are 20 bus stops and about 53,763 square metres of parkland within 500 metres. The model records no public toilet in the block and estimates a 1.42-toilet shortfall, although one is about 380 metres away. Gladstone Park’s new toilets were completed in September 2025, about 270 metres away. Check walking routes, access and current demand on site before considering another facility.",
+   "sources": []
+  },
+  "89be0e3423bffff": {
+   "text": "This block near Bayswater Road and New South Head Road has no public toilet recorded by the model, despite about 2,191 residents and 13 shops. Within 500 metres are 122 shops, 98 cafes and food outlets, 18 bus stops and one train station, serving residents, commuters and park visitors. The model estimates a 1.49-toilet shortfall; its nearest recorded toilet is about 380 metres away. Rushcutters Bay Park draws walkers, families and sports users, while Woollahra Council has finalised a toilet location at Gugara Park, about 404 metres away. Check park toilet access, walking routes and demand before selecting a site or facility.",
+   "sources": [
+    {
+     "title": "Public toilet at Gugara Park | Your Say Woollahra",
+     "url": "https://yoursay.woollahra.nsw.gov.au/gugara-toilet"
+    }
+   ]
+  },
+  "89be0e34287ffff": {
+   "text": "This Paddington block has 24 shops and 11 cafes or food outlets, used by local residents, workers and visitors on foot. The model estimates 1.49 toilets missing; 1,067 residents live in the hexagon and about 5,952 within 500 metres. It also records 16 bus stops within 500 metres, six playgrounds and 61,890 m² of parkland nearby, but no mapped public toilet in the hexagon. Woollahra Council has finalised a location for a new toilet at Gugara Park, about 983 metres away. Check pedestrian desire lines and accessible toilet siting on site.",
+   "sources": [
+    {
+     "title": "Public toilet at Gugara Park | Your Say Woollahra",
+     "url": "https://yoursay.woollahra.nsw.gov.au/gugara-toilet"
+    }
+   ]
+  },
+  "89be0e35dc7ffff": {
+   "text": "This Pyrmont block is near John Street Square light rail stop and Pyrmont Community Centre, which houses the Pyrmont Link library. Residents, library and centre users, commuters and people visiting nearby shops and cafes all use this area. The model estimates 2,316 residents in the hexagon and 6,480 within 500 metres, with 32 shops, 39 cafes and food outlets, 17 bus stops and three train stations nearby. It maps no public toilets in the hexagon and estimates 1.42 are missing; no planned toilet sites are listed within 1 kilometre. Check access, servicing and nearby toilet provision on site before selecting a location.",
+   "sources": [
+    {
+     "title": "Pyrmont Link - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/libraries/pyrmont-link"
+    }
+   ]
+  },
+  "89be0e34223ffff": {
+   "text": "This Darlinghurst block is near St John’s Anglican Church on Darlinghurst Road, with St Vincent’s Hospital and its clinic campus a short walk south. Patients, visitors, hospital staff, churchgoers, residents and people using nearby cafés and shops all add to demand. The model records no public toilets in the hex, 1,808 residents, 9 shops and 28 food outlets; within 500 metres it counts 9,990 residents, 25 bus stops and one train station. A proposed Gugara Park toilet is 587 metres away, but does not serve this block directly. Check walking routes, accessible access and suitable council land on site.",
+   "sources": [
+    {
+     "title": "St Vincent’s Hospital Sydney",
+     "url": "https://www.svhs.org.au/patients-visitors/coming-to-st-vincents/on-site-services/location"
+    }
+   ]
+  },
+  "89be0e2ac4bffff": {
+   "text": "Bilgola Beach’s surf club, 50-metre rock pool, kiosk and car park draw swimmers, surfers, families, nippers and visitors, especially on busy summer weekends. The model flags 1.42 toilets missing, although it records none in this hexagon; Northern Beaches Council confirms toilets and change rooms at both the surf club and a separate amenities building beside the car park. It also counts 1,154 residents within 500 metres, 17 shops, 5 food outlets and 15 bus stops nearby. Council’s beach plan identifies existing amenities and car-park improvements, not a new toilet site. Check facility access, capacity and peak-time queues before adding provision.",
+   "sources": [
+    {
+     "title": "## Land Categorisation",
+     "url": "https://www.northernbeaches.nsw.gov.au/sites/default/files/media/files/2025-09/ocean-beaches-plan-of-management.PDF?1793673077="
+    }
+   ]
+  },
+  "89be0e2ed93ffff": {
+   "text": "This Hornsby town-centre block has 24 shops and three food outlets, serving shoppers, local residents and people travelling through Hornsby Station and its bus interchange. The model estimates 1,539 residents in the block and 6,351 within 500 metres, with 109 shops and 13 bus stops in that wider area. It flags a 1.41-toilet shortfall, though no toilets are mapped in the block; the nearest recorded toilet is in the next hexagon, about 380 metres away. Council’s Hornsby Park recreation hub is under construction about 728 metres away. Check walking routes and demand, then assess a well-sited accessible facility.",
+   "sources": []
+  },
+  "89be0e348c7ffff": {
+   "text": "Petersham’s shops and food strip generate steady foot traffic: the model counts 14 shops and 20 food outlets in this block, with Petersham Station and 18 bus stops within 500 metres. About 4,958 residents live within that radius, alongside commuters, café customers and visitors to nearby Petersham Park and Fanny Durack Aquatic Centre. The model estimates 1.4 toilets missing, but mapped gaps do not mean no facilities exist: station and park toilets are nearby. Council’s park plan says to investigate toilets there; no planned site is listed for this spot. Check access, opening hours, capacity and peak queues before choosing a location or adding facilities.",
+   "sources": []
+  },
+  "89be0e34e87ffff": {
+   "text": "This Newtown block has 32 shops and 19 cafes or food outlets, serving shoppers, diners and local workers, with 86 shops and 65 food outlets within 500 metres. About 1,104 residents live in the hexagon; 11 bus stops and one train station are within 500 metres. The model maps no public toilets here and estimates a 1.38-toilet shortfall. Council records say the new Camperdown Memorial Rest Park toilet, about 469 metres away, was completed; a City of Sydney toilet at Ellen Lawman Rest Area is listed as planned, about 827 metres away. Check toilet access, opening hours and accessible routes before deciding whether to build here.",
+   "sources": [
+    {
+     "title": "Current Term - Outstanding Council Resolution",
+     "url": "https://www.innerwest.nsw.gov.au/ArticleDocuments/1428/Current%20Term%20-%20Outstanding%20Council%20Resolution%20Publisher%20Report%20-%20as%20at%2030%20June%202023.pdf.aspx"
+    }
+   ]
+  },
+  "89be0e342c3ffff": {
+   "text": "This Double Bay centre block has no mapped public toilet, despite 10 shops within the hexagon and 125 shops and 29 food outlets within 500 metres. Shoppers, diners, workers, bus users and the 4,582 residents within 500 metres all add to demand; 11 bus stops and 162 walkable street junctions support steady foot traffic. The model estimates a 1.37-toilet shortfall, while the nearest hexagon with a toilet is about 380 metres away. Council’s planned Gugara Park toilet is elsewhere in Double Bay, but its distance from this block is unconfirmed. Check pedestrian flows, accessible routes and service connections before choosing a site.",
+   "sources": []
+  },
+  "89be0e34c33ffff": {
+   "text": "This block sits among Marrickville’s shops and food outlets, close to Marrickville Station and the Marrickville Road and Illawarra Road town-centre streets. Residents, shoppers, café customers and people changing between trains and buses all use the area. The model records no public toilet in this hexagon and estimates 1.36 are missing; within 500 metres it counts about 3,680 residents, 75 shops, 37 food outlets, 10 bus stops and one station. The nearest mapped toilet is about 380 metres away. Check walking routes, accessible access and utility connections before selecting a site.",
+   "sources": []
+  },
+  "89be0844217ffff": {
+   "text": "This Springwood town-centre block serves commuters at Springwood Station, café and shop customers, and visitors to nearby parkland. The model counts 181 residents in the hexagon and about 670 within 500 metres, with 9 shops, 5 cafés and 10 bus stops nearby; 31.7% of nearby residents are aged 65 or older. It predicts 1.33 toilets missing, but Transport for NSW lists toilets, including an accessible toilet, at the station, so access and opening hours matter. Council’s town-centre upgrade covered crossings and streetscape, not a new toilet. Check existing facilities on site before deciding whether to add an accessible public toilet.",
+   "sources": []
+  },
+  "89be0e24d8fffff": {
+   "text": "This North Parramatta block is identified by the model as having 24 shops and two cafes or food outlets, with 57 shops and five food outlets within 500 metres. Shoppers, nearby residents and people using the bus corridor contribute to demand: 24 bus stops and one train station are within 500 metres, alongside 2,399 residents. The model records zero public toilets in the hexagon and estimates 1.34 are missing; that does not confirm there are no accessible toilets nearby. Check existing facilities, access and opening hours, then assess a convenient, maintainable site.",
+   "sources": []
+  },
+  "89be0e3438fffff": {
+   "text": "This block is beside Redfern Park, which already has public toilets, so the model’s zero mapped toilets in this hexagon needs checking against actual access and opening hours. The model estimates a 1.34-toilet shortfall, about 1,206 residents in the hexagon and 7,054 within 500 metres, with five food outlets nearby in the hexagon and 61 within 500 metres. Park visitors, café customers, residents and bus users (18 stops within 500 metres) may need facilities; Redfern Station is within 1 kilometre. A council-planned automatic toilet at Quay Street and George Street is about 883 metres away. Check park toilet access and demand on site before siting another facility.",
+   "sources": [
+    {
+     "title": "Redfern Park - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/parks/redfern-park"
+    }
+   ]
+  },
+  "89be0e346cfffff": {
+   "text": "Waverley Park is a major sports and recreation hub, with Waverley Oval, Margaret Whitlam Recreation Centre, courts, fields, a playground and kiosk. Players, families, spectators, walkers and cyclists use the park. The model counts about 1,103 residents, six shops and three food outlets in this hexagon, and estimates 1.3 toilets missing; within 500 metres are about 7,052 residents, 42 shops and 19 bus stops. Council lists existing toilets at the Bondi Road end of the park, so the model’s zero-toilet count needs checking. Verify access, capacity and demand on site before adding facilities.",
+   "sources": []
+  },
+  "89be085365bffff": {
+   "text": "Prince Alfred Square, a historic park used for gatherings, events and parades, is close to this central Parramatta block, with Church Street shops and food outlets nearby. Park visitors, event crowds, shoppers and commuters all add to demand. The model estimates 1.31 toilets missing and counts about 4,674 residents, 21 shops and 10 food outlets within 500 metres, alongside 17 bus stops and two train stations; its map shows no public toilet in the hex. Council lists possible toilets at Parramatta Station Car Park, 854 metres away, in early planning. Check pedestrian access, visibility and servicing before choosing an accessible toilet location.",
+   "sources": []
+  },
+  "89be0853653ffff": {
+   "text": "This Parramatta North block has no mapped public toilet, and the model estimates 1.28 toilets missing, with a 72% chance of need. Within 500 metres are about 3,173 residents, 60 cafés and food outlets, 10 bus stops, two train stations, 227,100 square metres of parkland and seven sports facilities, serving residents, commuters, diners and park users. Council is considering accessible toilets at Parramatta Station Car Park, 478 metres away; the proposal is unfunded and in early planning. Check existing facility access, walking routes and peak pedestrian flows on site before selecting a location.",
+   "sources": [
+    {
+     "title": "Parramatta Station Car Park Toilet Consultation, Parramatta",
+     "url": "https://participate.cityofparramatta.nsw.gov.au/parramatta-station-car-park-toilets"
+    }
+   ]
+  },
+  "89be0e34eb3ffff": {
+   "text": "Enmore Road and Stanmore Road’s shops and cafes draw customers, workers and bus users; the model counts 15 shops, 23 food outlets and seven bus stops within 500 metres. About 7,070 residents live within that radius, yet no public toilet is mapped in this block, and the nearest mapped toilet is about 660 metres away. Camperdown Memorial Rest Park’s new accessible toilets are open, 799 metres away. Council’s Public Toilet Strategy also listed a proposed new toilet beside Stanmore Library, 809 metres away, for FY25/26; confirm its status. Check footfall, existing facilities and accessible-site options before choosing a location.",
+   "sources": [
+    {
+     "title": "Inner West Council",
+     "url": "https://www.innerwest.nsw.gov.au/ArticleDocuments/33716/Annual%20Report%202024-2025.pdf.aspx"
+    }
+   ]
+  },
+  "89be0e3422bffff": {
+   "text": "This Woolloomooloo block has 64 shops and 44 cafes and food outlets, serving workers, customers and about 2,570 residents; around 13,670 people live within 500 metres. The model counts 18 bus stops and one train station nearby, predicts 2.28 toilets against one today, and estimates a 1.27-toilet shortfall. City records list public toilets at Cowper Wharf Road and Sydney Place, so check actual walking access and opening hours. Woollahra’s approved Gugara Park toilet is 770 metres away; construction planning was still underway in July 2026. Check access, demand and servicing on site before selecting an accessible facility.",
+   "sources": [
+    {
+     "title": "Public toilet at Gugara Park | Your Say Woollahra",
+     "url": "https://yoursay.woollahra.nsw.gov.au/gugara-toilet"
+    }
+   ]
+  },
+  "89be0853267ffff": {
+   "text": "This block sits at Binalong Park in Old Toongabbie, with soccer and cricket fields, courts, a playground and picnic facilities used by local families, children and sporting groups. The model records no public toilets in the hexagon, 2,436 residents within 500 metres, 13 nearby sports facilities and three playgrounds. There are 14 bus stops within 500 metres, no nearby train stations, and no shops in the hexagon. Council’s completed Sue Savage Reserve upgrade includes public toilets about 492 metres away. Check whether those toilets are accessible and adequate at Binalong Park peak times before deciding whether to add an accessible facility.",
+   "sources": [
+    {
+     "title": "Binalong Park | City of Parramatta",
+     "url": "https://www.cityofparramatta.nsw.gov.au/community/parks-and-public-spaces/find-a-park-or-reserve/binalong-park"
+    }
+   ]
+  },
+  "89be084a527ffff": {
+   "text": "This central Windsor block near Macquarie and Baker streets serves shoppers, café customers, local workers and bus users. The model counts 20 shops and 12 cafés or food outlets in the hexagon, five bus stops and about 471 residents within 500 metres; it records no toilet here and estimates 1.27 are missing. McQuade Park, about 240 metres away, has public toilets, and Hawkesbury Council has said its park landscape plan will address public toilets. Check walking routes, existing toilet access and demand before choosing a site.",
+   "sources": [
+    {
+     "title": "McQuade Park Windsor | NSW Government",
+     "url": "https://www.nsw.gov.au/visiting-and-exploring-nsw/locations-and-attractions/mcquade-park-windsor"
+    }
+   ]
+  },
+  "89be08c9c47ffff": {
+   "text": "This Birrong Park block serves Jim Ring Reserve, Birrong Leisure and Aquatic Centre, sports fields and a playground, drawing swimmers, footballers, cricket players, children and families. The model estimates 1.26 toilets missing and about 2,129 residents within 500 metres; it counts 16 sports facilities, 11 bus stops and 127,041 square metres of parkland, but no shops or train stations within 500 metres. Council confirms public toilets at Jim Ring Reserve and says it will investigate a new Birrong Town Centre toilet, with no site determined; no nearby planned site is listed within 1 km. Check existing toilet capacity, access and peak-time queues before considering another facility.",
+   "sources": []
+  },
+  "89be0e363bbffff": {
+   "text": "This Hillsdale hex covers Heffron Park, including sports fields, netball courts, the cycle track and Des Renford Leisure Centre. Players, families, leisure-centre visitors and other park users create demand across a large recreation area. The model records zero mapped toilets in the hex and estimates 1.27 missing; it counts about 3,154 residents within 500 metres, 10 nearby bus stops and four shops. Council lists public amenities in the park, so the model gap may reflect unmapped facilities rather than no toilets. Check existing access, capacity and accessible provision before choosing a site.",
+   "sources": []
+  },
+  "89be08cb5cfffff": {
+   "text": "This Forest Road block serves shoppers, diners and commuters in Hurstville town centre, close to Hurstville Station and its bus connections. The model records 38 shops and 24 food outlets in the hex, with 25 bus stops and one train station within 500 metres; about 9,050 residents live within that distance. It estimates one toilet today against 2.23 expected, a shortfall of 1.23. No council-planned toilet sites are listed within 1 km, though a mapped toilet is reportedly about 380 metres away. Check that facility’s access and hours, then assess demand and a suitable accessible toilet site on this block.",
+   "sources": []
+  },
+  "89be0e3468fffff": {
+   "text": "This Bondi block adjoins Waverley Park, including Waverley Oval, sports fields, courts, Margaret Whitlam Recreation Centre and a playground. Players, spectators, families, walkers and café customers use the area; Bondi Road and 22 bus stops within 500 metres add passing users. The model estimates 1.26 toilets missing, with 809 residents in the hexagon, 4,955 within 500 metres, 9 food outlets in the hexagon and 14 within 500 metres. However, Council confirms toilets at the Bondi Road end of the park, so the model’s zero mapped toilets needs checking. Verify access, capacity and peak demand before considering another facility.",
+   "sources": [
+    {
+     "title": "Waverley Park - Waverley Council",
+     "url": "https://www.waverley.nsw.gov.au/recreation/parks_and_reserves/waverley_park"
+    }
+   ]
+  },
+  "89be085156fffff": {
+   "text": "This Seven Hills block is beside International Peace Park and Blacktown Creek, where softball players, families using the playground, and walkers share open space and paths. The model counts 33 sports facilities, 3 playgrounds and 12 bus stops within 500 metres, alongside about 2,722 residents; it estimates 1.23 toilets are missing here. There are no shops or food outlets in the block, and no train station within 1 kilometre. Four toilets are mapped across 18 nearby hexagons, but none in this one; the nearest is reported about 380 metres away. Check park entrances, existing amenities and accessible servicing options before choosing a site.",
+   "sources": []
+  },
+  "89be0e2aeb3ffff": {
+   "text": "Avalon village’s 14 shops and 3 cafes draw shoppers, workers and visitors, while 12 bus stops serve the wider catchment. The model records no public toilet in this block and estimates 1.22 missing; about 1,620 residents live within 500 metres. Avalon Beach and its rockpool also attract beachgoers, and Avalon Public School adds families and students to local trips. Council’s Avalon Streets as Shared Spaces project includes village public-domain upgrades, and a community update reports funding for toilets near Avalon Community Centre; the model lists no planned toilet site within 1 km. Check existing access and demand, then assess an accessible village facility.",
+   "sources": []
+  },
+  "89be08422b7ffff": {
+   "text": "Ropes Crossing Reserve on Lawler Street has a sportsfield used for football in winter and cricket in summer, plus basketball and tennis courts and a playground. Players, families and other park visitors need reliable public facilities, yet the model records zero toilets in this hexagon and estimates 1.22 missing. It counts 537 residents in the hexagon and 2,647 within 500 m, with five bus stops and seven sports facilities nearby. Council lists toilets among the reserve’s amenities, so the mapped gap may reflect missing data rather than no facility. Check toilet access, opening hours and condition on site before deciding whether an additional public toilet is needed.",
+   "sources": [
+    {
+     "title": "Ropes Crossing Reserve - Blacktown City",
+     "url": "https://www.blacktown.nsw.gov.au/Sport-recreation/Parks-and-recreation-directory/Ropes-Crossing-Reserve"
+    }
+   ]
+  },
+  "89be0e36b6bffff": {
+   "text": "This Tempe block borders Mackey Park, where football and cricket players, spectators, walkers, cyclists and families use the sports fields and playground. The model records no toilets in the hex, 112 residents, about 2,101 people within 500 metres, three shops nearby and a train station within 500 metres. But Inner West Council confirms the new Mackey Park amenities building, with five all-gender public toilets including accessible facilities, is complete and open, just 84 metres away. Before proposing another facility, check the toilets’ opening hours, access and wayfinding from this block.",
+   "sources": [
+    {
+     "title": "Mackey Park Amenities Upgrade | Inner West Council",
+     "url": "https://www.innerwest.nsw.gov.au/capital-works-projects/mackey-park-amenities-upgrade"
+    }
+   ]
+  },
+  "89be08c8bb3ffff": {
+   "text": "This block is in Macquarie Mall, Liverpool’s central shopping and public-space precinct, where shoppers, café customers, workers and people attending events need convenient facilities. The model counts 65 shops and 10 food outlets in the hexagon, estimates 2.21 toilets missing, and maps one public toilet there. Within 500 metres are about 3,637 residents, 32 bus stops and Liverpool Station; the station also has toilets, but they may not serve mall users equally well. Council’s city-centre master plan guides public-space improvements. Check toilet access, hours and condition on site, then assess demand for an accessible facility in the mall.",
+   "sources": [
+    {
+     "title": "Liverpool City Centre Public Domain Master Plan | Liverpool City Council",
+     "url": "https://www.liverpool.nsw.gov.au/development/major-projects/public-domain-master-plan"
+    }
+   ]
+  },
+  "89be08c81b7ffff": {
+   "text": "This East Hills block serves park and sports-ground users, including families using two nearby playgrounds. The model counts 26 sports facilities and about 291,900 m² of parkland within 500 metres, alongside 1,138 residents and two bus stops; it estimates 1.21 toilets are missing. There are no shops or food outlets counted nearby, and the hexagon itself has about 18 residents. Council’s infrastructure plan lists public toilets at East Hills Park and Monash Reserve, so check whether they are accessible and practical for users of this block before adding another facility.",
+   "sources": []
+  },
+  "89be08c944bffff": {
+   "text": "This Enfield block serves Henley Park’s sports fields, walking track, playgrounds and Enfield Aquatic Centre, drawing players, families, walkers and swimmers. The model estimates 1.21 toilets missing in the hexagon, 2,935 residents within 500 m, four shops and six bus stops nearby, and no mapped public toilet in the hexagon. Burwood Council confirms toilets at Henley Park, about 380 m away, so access and opening hours matter as much as supply. Council also lists an Enfield Aquatic Centre redevelopment, but no council-planned toilet site is listed within 1 km. Check demand, accessible routes and existing toilet availability before choosing a site.",
+   "sources": [
+    {
+     "title": "Henley Park, Enfield | Burwood Council",
+     "url": "https://www.burwood.nsw.gov.au/For-Residents/Parks-and-Recreation/Parks-and-Reserves/Henley-Park"
+    }
+   ]
+  },
+  "89be0e34e23ffff": {
+   "text": "This Stanmore block has 16 shops and 3 cafes or food outlets, serving customers, workers and 960 residents locally; 5,622 people live within 500 metres. Crammond Park’s playground and shaded benches attract families and park visitors, and six bus stops are within 500 metres. The model records no public toilet in the hexagon and estimates a shortfall of 1.2; the nearest toilet is about 660 metres away. Council’s Public Toilet Strategy lists a proposed facility beside Stanmore Library, about 695 metres away. Check walking routes, land availability and demand before choosing an accessible facility.",
+   "sources": [
+    {
+     "title": "Crammond Park | Inner West Council",
+     "url": "https://www.innerwest.nsw.gov.au/stanmore-parks/crammond-park"
+    }
+   ]
+  },
+  "89be08ca2dbffff": {
+   "text": "This site is in Mortdale town centre, near Morts Road shops and cafés, Mortdale railway station and Mortdale Memorial Park, about 34 metres away. Shoppers, commuters, residents and park visitors share the area; the model counts 945 residents in the hexagon, 9 shops and 2 cafés, with 10 bus stops and one station within 500 metres. It estimates 1.2 toilets missing and maps no public toilet in the hexagon. Council has confirmed Mortdale streetscape upgrades, including seating and greening, but no nearby planned toilet site is listed. Check existing toilet access and pedestrian flows, then assess an accessible public facility.",
+   "sources": []
+  },
+  "89be0e343cbffff": {
+   "text": "Around Bourke Street and Bloomfield Street, Darlinghurst’s shops and food venues serve residents, shoppers, diners and bus users. The model counts 1,675 residents in this hexagon and 9,848 within 500 metres, plus 46 shops, 31 cafes and food outlets, and 31 bus stops nearby. It estimates 2.2 toilets are needed but counts one, leaving a shortfall of 1.2; the nearest mapped toilet is about 380 metres away. Green Park’s planned upgrade, roughly 600 metres north, covers paths, lighting and landscaping, not toilets. Check existing toilet access and accessible servicing options on site before choosing a location.",
+   "sources": [
+    {
+     "title": "Improving Green Park, Darlinghurst - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/park-playground-works/improving-green-park-darlinghurst"
+    }
+   ]
+  },
+  "89be0e34353ffff": {
+   "text": "Oxford Square and Oxford Street sit beside this Darlinghurst block, with cafés, food outlets and shops drawing residents, workers and visitors. The model identifies 37 shops, 25 cafés and food outlets, about 2,899 residents in the hexagon and 12,029 within 500 metres; 40 bus stops and five train stations lie within 1 km. It counts one existing toilet against 2.19 predicted, a modelled shortfall of 1.19. City of Sydney lists planned automatic toilets 660 metres away at College Street after William Street and 964 metres away before Market Street on Elizabeth Street. Check pedestrian flows, accessible routes and servicing before selecting a site.",
+   "sources": []
+  },
+  "89be08536c7ffff": {
+   "text": "This block sits beside Westfield Parramatta, near Aird Street shops and food outlets, serving shoppers, workers, residents and people changing between buses and trains. The model counts 39 shops and 19 food outlets in the hexagon, 13 bus stops and three train stations within 500 metres, and 1,450 residents locally; it estimates 1.2 toilets missing, with no public toilet mapped here. Council is in early planning for possible accessible toilets at Parramatta Station Car Park, 322 metres away, but this is not a confirmed delivery. Check pedestrian routes, demand and servicing on site before selecting a visible, accessible location.",
+   "sources": [
+    {
+     "title": "Parramatta Station Car Park Toilet Consultation, Parramatta",
+     "url": "https://participate.cityofparramatta.nsw.gov.au/parramatta-station-car-park-toilets"
+    }
+   ]
+  },
+  "89be0e26b27ffff": {
+   "text": "This block sits by Prince Alfred Square and Church Street’s food and pedestrian area, serving park visitors, diners, workers and people travelling through central Parramatta. The model maps no public toilet in the hexagon and predicts a shortfall of 1.2, with a 70% chance of at least one. It records 1,609 residents in the block, 9 shops, 4 food outlets, and, within 500 metres, 15 bus stops and 2 train stations. Council is in early planning for possible toilets at Parramatta Station Car Park, about 690 metres away; the proposal is unfunded. Check accessible walking routes and likely demand on site before choosing a location.",
+   "sources": [
+    {
+     "title": "Parramatta Station Car Park Toilet Consultation, Parramatta",
+     "url": "https://participate.cityofparramatta.nsw.gov.au/parramatta-station-car-park-toilets"
+    }
+   ]
+  },
+  "89be0e34e0bffff": {
+   "text": "This Forest Lodge block around Wigram Road and Minogue Crescent serves about 2,037 residents, local shop and café customers, and people using 17 nearby bus stops. The model counts 13 shops and 8 food outlets in the hex, but no public toilet and a 1.2-toilet shortfall; the nearest existing facility is about 380 metres away. Lew Hoad Reserve and nearby parkland, playgrounds and sports facilities add visitors, including families and players. The model lists no planned toilet sites within 1 km. Check pedestrian routes, servicing and an accessible site before deciding whether to add a facility.",
+   "sources": [
+    {
+     "title": "Section 2 - Locality Statements",
+     "url": "https://www.cityofsydney.nsw.gov.au/-/media/corporate/files/publications/development-control-plans/2023/section2-dcp2012_061023.pdf%3Fdownload%3Dtrue"
+    }
+   ]
+  },
+  "89be08cc0a7ffff": {
+   "text": "This Denham Court block sits among Willowdale homes, near Willowdale Sports Complex, Willowdale Park and Denham Court Public School. Players, families, students and local residents use the area; the Willowdale Community Centre also hosts group activities and has toilets. The model estimates a 1.18-toilet shortfall and no mapped public toilet in the hex, despite 2,146 residents within 500 m and 9 bus stops; there are no shops in the hex. Willowdale Park has a public toilet nearby. Check access, opening hours and peak demand at existing facilities before considering another toilet.",
+   "sources": []
+  },
+  "89be08c897bffff": {
+   "text": "This block sits by Woodward Park and near Whitlam Leisure Centre, where park visitors, swimmers, sports users and event crowds mix with shoppers and bus riders. The model finds no mapped public toilet here and estimates a shortfall of 1.19; it also counts 1,460 residents, 18 shops and 4 food outlets in the hex, with 11 bus stops within 500 metres. Council’s adopted Woodward Park Design Master Plan includes toilet facilities; no planned toilet sites are listed within 1 km. Check existing amenities, accessible routes and servicing needs on site, and coordinate provision with the park plan.",
+   "sources": [
+    {
+     "title": "Woodward Park | Liverpool City Council",
+     "url": "https://www.liverpool.nsw.gov.au/development/major-projects/woodward-park"
+    }
+   ]
+  },
+  "89be0842d63ffff": {
+   "text": "This Penrith town-centre block serves shoppers, café customers, workers and people using nearby buses and the train. The model counts 24 shops and 14 cafés or food outlets in the hex, with 109 shops, 42 food outlets, 15 bus stops and one train station within 500 metres. It estimates demand for 2.19 toilets against one present, a shortfall of 1.19; 2,392 residents live within 500 metres. Council’s 2026–27 program lists renewal of Allen Place public toilets, but its distance from this spot is unconfirmed. Check walking routes, existing toilet access and peak demand before deciding whether to add a facility.",
+   "sources": [
+    {
+     "title": "Building Asset Renewal Program for 2026–27",
+     "url": "https://www.penrithcity.nsw.gov.au/images/documents/council/council-business/Enclosure%201%20to%20Item%207%20-%20Draft%202025-29%20Delivery%20Program%20and%202026-27%20Operational%20Plan%20-%20Exhibition%20Copy.pdf"
+    }
+   ]
+  },
+  "89be0e34193ffff": {
+   "text": "This Rosebery block has 18 shops and 6 cafes or food outlets, but the model records no public toilet here and estimates 1.18 toilets are missing. Nearby users include workers, shoppers, residents and people visiting local parks. There are about 421 residents in the hexagon and 3,951 within 500 metres, alongside 31 shops, 12 food outlets and 14 bus stops. A council-approved automated toilet at Rosebery Park is roughly 500 metres away. Check pedestrian routes, visibility and existing toilet access on site, then assess a convenient, accessible facility near the shops and bus stops.",
+   "sources": []
+  },
+  "89be0e343d3ffff": {
+   "text": "This Surry Hills block has no public toilet recorded in the model, which estimates a 1.17-toilet shortfall. It serves about 1,039 residents and sits within 500 metres of 5,454 residents, 34 cafes and food outlets, 31 shops, 10 bus stops and substantial parkland. Nearby users include shoppers, diners, bus passengers, families and people exercising. The City confirms public toilets at Eddie Ward Park, about 380 metres away; its upgrade is underway and includes public toilets, with completion expected in mid-2027. Check pedestrian access and peak demand, then assess an accessible toilet location that complements Ward Park’s facility.",
+   "sources": [
+    {
+     "title": "Eddie Ward Park - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/parks/ward-park"
+    }
+   ]
+  },
+  "89be0e2ed83ffff": {
+   "text": "This Hornsby block has 28 shops and one food outlet, serving shoppers, workers and nearby residents. The model counts about 311 residents in the hexagon and 3,244 within 500 metres, alongside 64 shops, nine bus stops and three playgrounds. It predicts 1.15 toilets missing; OpenStreetMap lists none in the block, and the nearest toilet is in the next hexagon, about 380 metres away. Council’s Old Mans Valley Field of Play, including toilets, is under construction about 423 metres away. Check walking access and whether that planned facility serves this block before deciding where to build.",
+   "sources": [
+    {
+     "title": "Works underway on new recreation hub at Hornsby Park | Hornsby Shire Council",
+     "url": "https://www.hornsby.nsw.gov.au/Council/Noticeboard/Latest-news/Works-underway-on-new-recreation-hub-at-Hornsby-Park"
+    }
+   ]
+  },
+  "89be0e22e4fffff": {
+   "text": "Nolan Reserve’s soccer, rugby league, touch-football and cricket fields draw players, families and spectators, with a playground and eight bus stops within 500 metres. The model estimates 1.17 toilets missing in this hex, despite 112 residents inside it and 1,733 within 500 metres; it counts 29 nearby sports facilities but no shops. However, Council confirms Nolan Reserve already has two amenities buildings with public toilets, and its current sportsground information lists a North Manly Sports Precinct upgrade. The model’s zero may reflect mapping or access gaps, not a lack of facilities. Check toilet locations, public access and peak-time capacity before adding provision.",
+   "sources": [
+    {
+     "title": "Nolan Reserve | Northern Beaches Council",
+     "url": "https://www.northernbeaches.nsw.gov.au/things-to-do/recreation-area/nolan-reserve"
+    }
+   ]
+  },
+  "89be0e3426fffff": {
+   "text": "This Potts Point block sits in the Kings Cross area, among 13 shops and 8 cafes and food outlets, serving 1,680 local residents as well as shoppers and visitors. The model estimates 1.16 toilets are missing in the hex, with 6,605 residents within 500 metres and 11 nearby bus stops. Its zero mapped toilets should be checked carefully: City of Sydney lists public toilets at Fitzroy Gardens, beside the El Alamein Fountain and playground, about 380 metres away. Check access, operating hours and pedestrian demand on site before deciding whether a new accessible toilet is needed.",
+   "sources": [
+    {
+     "title": "Public toilets in Sydney - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/public-health-safety-programs/public-toilets"
+    }
+   ]
+  },
+  "89be084716bffff": {
+   "text": "Warrimoo Station, the village shops on Great Western Highway and adjacent Ardill Park draw commuters, local shoppers and families, but this block’s model estimates 1.16 toilets missing. The hex has about 64 residents and 2 shops; within 500 metres are about 424 residents, 4 shops and 6 bus stops. Transport for NSW lists toilets at Warrimoo Station, about 380 metres away, so check their access and opening arrangements before adding provision. No council-planned toilet sites are listed within 1 kilometre. Check pedestrian access, station toilet availability and a suitable accessible site near the shops and park.",
+   "sources": [
+    {
+     "title": "Warrimoo Station | transportnsw.info",
+     "url": "https://transportnsw.info/stop?q=277420"
+    }
+   ]
+  },
+  "89be08cd283ffff": {
+   "text": "The coordinate falls within Heckenberg’s Whitlam Parks area, near Whitlam Park and local sports grounds. Families, children, older residents and players use the parkland and fields; Council identifies Whitlam Parks as part of a local walking route. The model counts 112,180 m² of parkland, nine sports facilities, two playgrounds and 18 bus stops within 500 m, serving about 3,097 nearby residents. It maps no public toilet in this hexagon, and the nearest mapped toilet is about 770 m away. No planned toilet site is listed within 1 km. Check field and playground entrances, utilities and accessible servicing before selecting a toilet location.",
+   "sources": [
+    {
+     "title": "Heckenberg/Busby Walk | Liverpool City Council",
+     "url": "https://www.liverpool.nsw.gov.au/venues/parks-and-playgrounds/cycleways-and-walkways/heckenbergbusby-walk"
+    }
+   ]
+  },
+  "89be08c894fffff": {
+   "text": "Macquarie Street’s Liverpool town centre draws shoppers, workers and commuters, with 40 shops and 15 food outlets in this block, plus 25 bus stops and one train station within 500 metres. The model estimates 3,531 residents within 500 metres and finds no mapped public toilet here, against 2.15 predicted; its nearest mapped toilet is about 380 metres away. Council confirms streetscape upgrades on Macquarie, Railway and Scott streets, but no nearby planned toilet site is listed. Check the upgrade design and pedestrian flows, then assess a visible, accessible toilet with servicing access.",
+   "sources": [
+    {
+     "title": "Liverpool City Centre Streetscape Upgrade | Liverpool City Council",
+     "url": "https://www.liverpool.nsw.gov.au/development/current-major-works/liverpool-city-centre-streetscape-upgrades"
+    }
+   ]
+  },
+  "89be0e34d03ffff": {
+   "text": "Hughes Park on Westfield Street has a playground, sporting field and off-leash dog area, drawing players, families and dog walkers. The model estimates 1.14 toilets missing here and no public toilet in the hexagon, despite 2,205 residents within 500 metres, 17 sports facilities, six bus stops and two shops. Council material says a Hughes Park amenities upgrade, including toilets, is scheduled for 2028/29; it is at this site, not a separate nearby location. Check existing amenities, access and peak-use demand, then plan an accessible toilet near the park’s activity areas.",
+   "sources": [
+    {
+     "title": "Hughes Park | Place, City of Canterbury Bankstown",
+     "url": "https://www.cbcity.nsw.gov.au/hughes-park"
+    }
+   ]
+  },
+  "89be08d8067ffff": {
+   "text": "This Cronulla block serves 46 shops and 25 cafes, drawing shoppers, diners, commuters and beach visitors. Within 500 metres are about 3,834 residents, eight bus stops and 66,800 square metres of parkland; the model estimates 2.13 toilets are warranted against one mapped, a shortfall of 1.13. But Cronulla Town Square’s new public and accessible toilets opened in June 2026, and station toilets are also available, so check whether the model’s count and walking access reflect these facilities. Verify on site before adding another toilet, including whether southern routes have adequate access.",
+   "sources": [
+    {
+     "title": "Cronulla Town Square and new stage come alive | Sutherland Shire Council",
+     "url": "https://www.sutherlandshire.nsw.gov.au/your-council/news-and-publications/council-news/cronulla-town-square-and-new-stage-come-alive"
+    }
+   ]
+  },
+  "89be0e34553ffff": {
+   "text": "This block sits by Kensington Park and UNSW, serving sports players and spectators, families at the John Calopedos Memorial Playground, students and nearby residents. The model identifies 4,720 residents, 25 shops, 35 cafés and food outlets, and 17 bus stops within 500 metres; it predicts a shortfall of 1.11 toilets. However, Randwick Council lists public toilets in Kensington Park, so the mapped zero needs checking. Council is investigating toilets at Kokoda Park and near the playground, but neither is listed among planned sites within 1 kilometre. Check toilet access, opening hours and walking routes before selecting a site.",
+   "sources": []
+  },
+  "89be08c9cd7ffff": {
+   "text": "O’Neill Park, at Cooper Road and Nobbs Road, has a playground, playing field, walking track and basketball hoop, drawing families, walkers and sports players. The model flags 1.13 toilets missing and no public toilet recorded in this hexagon; within 500 metres it counts 2,952 residents, four sports facilities, three playgrounds and 16 bus stops, but no shops. Council lists a public toilet at Yagoona Community Centre, 176D Cooper Road, but no planned toilet sites are listed within 1 km. Check opening access and walking distance to that facility, then assess an accessible park toilet near the playground and fields.",
+   "sources": [
+    {
+     "title": "O'Neill Park | Place, City of Canterbury Bankstown",
+     "url": "https://www.cbcity.nsw.gov.au/oneill-park"
+    }
+   ]
+  },
+  "89be0e2495bffff": {
+   "text": "Crestwood Reserve draws soccer, rugby, cricket and tennis players, families using its playgrounds and picnic areas, skaters, dog walkers and people on the walking paths. Council lists an existing toilet block at the reserve’s southern end, open only during daylight, so the model’s zero toilets recorded in this hexagon and estimate of 1.11 missing should be checked against actual access and coverage. The surrounding area has 2,817 residents within 500 metres and 16 bus stops, but just one shop in that radius. No council-planned toilet site is listed within 1 kilometre. Check the existing block’s location, opening hours, accessibility and capacity before considering another facility.",
+   "sources": [
+    {
+     "title": "Crestwood Reserve | The Hills Shire Council",
+     "url": "https://www.thehills.nsw.gov.au/Venues/Parks-Recreation/Parks-Recreation-Directory/Crestwood-Reserve"
+    }
+   ]
+  },
+  "89be0842cafffff": {
+   "text": "This Kingswood block serves train passengers, bus users and people visiting six shops and two food outlets; Kingswood Station is within 250 metres, with 12 bus stops within 500 metres. Nearby residents add to demand: 2,526 live within 500 metres and 10,233 within 1 kilometre. The model records no public toilet in the hexagon and estimates 1.11 are missing; its nearest listed toilet is about 380 metres away. Council’s Kingswood-Werrington plans cover the wider station-centred area, but no planned toilet site is listed within 1 kilometre. Check station and park access, then assess a visible, accessible toilet.",
+   "sources": [
+    {
+     "title": "Our City Centres - Penrith City Council",
+     "url": "https://penrithcity.nsw.gov.au/building-development/planning-zoning/our-city-centres"
+    }
+   ]
+  },
+  "89be08ce033ffff": {
+   "text": "This Minto block is beside Rose Park and within 500 metres of 13 shops, four food outlets, 10 bus stops, a playground and 42 sports facilities. Nearby users include residents, families and people visiting local shops and parkland; the model counts about 1,618 residents within 500 metres and estimates a shortfall of 1.09 toilets. However, Campbelltown Council lists an accessible public toilet at Pembroke Park, so the model’s zero toilets in this block does not mean none is nearby. Check walking access and whether the Pembroke Park facility serves this block before considering another toilet.",
+   "sources": [
+    {
+     "title": "Accessible Toilet and Parking Facilities - Campbelltown City Council",
+     "url": "https://www.campbelltown.nsw.gov.au/Your-Neighbourhood/Accessible-Toilet-and-Parking-Facilities"
+    }
+   ]
+  },
+  "89be08c937bffff": {
+   "text": "Phillips Park’s playgrounds, learn-to-ride track and soccer and cricket fields bring children, carers, players and spectators to this block. The model estimates 1.11 toilets missing, records none in the hexagon and counts about 3,422 residents, 15 bus stops, four sports facilities and two playgrounds within 500 metres; there is one shop and no train station within that radius. A mapped toilet is about 380 metres away, and Phillips Park is also described as having toilets, so access may matter more than supply. Check toilet location, opening hours, accessibility and capacity on site before adding or upgrading facilities.",
+   "sources": [
+    {
+     "title": "Phillips Park – Lidcombe NSW | NearMe",
+     "url": "https://nearme.com.au/parks/nsw/sydney/parramatta/lidcombe-2141/phillips-park"
+    }
+   ]
+  },
+  "89be0e21107ffff": {
+   "text": "This Warriewood block serves people using nearby sports grounds, parkland and playgrounds, including players, families and local residents. The model estimates 708 residents, 7 shops and 8 bus stops within 500 metres, alongside 29 sports facilities and 206,290 m² of parkland; it records no public toilet in the hexagon and a 1.09-toilet shortfall. Council lists accessible toilets at Warriewood Valley Sports Courts and Jacksons Road amenities, so access may depend on where visitors are and whether facilities are open. Council plans Boondah Reserve amenities upgrades for November 2026 to May 2027; no planned site is listed within 1 km. Check walking routes, access and peak demand before deciding whether to build.",
+   "sources": [
+    {
+     "title": "Warriewood Valley Sports Courts | Northern Beaches Council",
+     "url": "https://est.northernbeaches.nsw.gov.au/things-to-do/recreation-area/warriewood-valley-sports-courts"
+    }
+   ]
+  },
+  "89be0e24d87ffff": {
+   "text": "This block has no mapped public toilet despite a modelled shortfall of 1.09. About 711 residents live in the hexagon and 3,179 within 500 metres; nearby users include visitors to Parramatta North’s heritage precinct, parks and sports facilities, and passengers using 24 bus stops and two train stations within 500 metres. The model counts two shops and two food outlets in the block. The Parramatta North plan provides for new homes, open space and a local centre, but no planned toilet site is listed within 1 kilometre. Check pedestrian desire lines and servicing, then assess an accessible public toilet near the busiest route.",
+   "sources": []
+  },
+  "89be0853613ffff": {
+   "text": "This block covers the Mays Hill precinct of Parramatta Park, including Mays Hill Oval’s sports facilities beside Parramatta High School. Players, students, park visitors and nearby residents use this open space. The model records no mapped public toilets in the hex, despite 8 sports facilities and 217,532 m² of park within 500 m; 6,703 residents and 45 shops are also within 500 m, with 13 bus stops. A possible toilet at Parramatta Station Car Park is in early planning, 664 m away, and is unfunded. Check existing amenities and access on site before locating an accessible public toilet.",
+   "sources": [
+    {
+     "title": "REVIEW OF ENVIRONMENTAL",
+     "url": "https://www.greatersydneyparklands.nsw.gov.au/sites/default/files/2025-03/Parramatta-Park-Youth-Sports-Upgrade-Mays-Hill-Oval.pdf"
+    }
+   ]
+  },
+  "89be0e343c3ffff": {
+   "text": "This Surry Hills block sits among Crown Street’s cafés, food outlets and shops, serving nearby residents, workers and visitors. The model counts 1,454 residents in the hex, 8,895 within 500 metres, 13 food outlets and 9 shops here, plus 81 food outlets, 77 shops and 16 bus stops within 500 metres. It predicts a shortfall of 1.08 toilets; no public toilet is mapped in the hex. However, Council lists an operating automatic toilet at Ward Park, about 400 metres away. Check actual access, walking routes and demand before choosing a new facility.",
+   "sources": [
+    {
+     "title": "New automatic public toilets - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/improving-streets-public-spaces/new-automatic-public-toilets-2021-22"
+    }
+   ]
+  },
+  "89be0e358c3ffff": {
+   "text": "This hexagon has no mapped public toilet despite 13 shops and 12 cafés, with 711 residents locally and 3,260 within 500 metres. Its catchment also includes 23 shops, 25 cafés, 21 bus stops, a train station and 45,651 square metres of parkland, serving residents, customers, commuters and park users. Blues Point Reserve has accessible toilets, but users may need to walk there; the model predicts a shortfall of 1.08 toilets. Council is preparing a Blues Point foreshore masterplan, but no planned toilet site is listed within 1 km. Check walking access and demand on site before choosing an accessible facility location.",
+   "sources": []
+  },
+  "89be0e342afffff": {
+   "text": "Oxford Street’s Paddington and Darlinghurst edge draws shoppers, café customers and bus passengers, but the model maps no public toilets in this block. It counts 12 shops and three food outlets here, with 32 cafés and food outlets and 20 bus stops within 500 metres. About 961 residents live in the hexagon and 5,488 within 500 metres, adding everyday local demand to visitor use. Woollahra has approved a new toilet at Gugara Park, 502 metres away; as of July 2026, construction planning was still underway. Check pedestrian flows and existing facilities, then assess an accessible public toilet on or near the shopping strip.",
+   "sources": [
+    {
+     "title": "Public toilet at Gugara Park | Your Say Woollahra",
+     "url": "https://yoursay.woollahra.nsw.gov.au/gugara-toilet"
+    }
+   ]
+  },
+  "89be081a657ffff": {
+   "text": "This map pin appears close to Ron Dine Reserve in Camden South, where Camden Tigers use multiple football fields and council lists sporting-field toilets. The model nevertheless records no public toilet in this hexagon and predicts a shortfall of 1.07; the nearest hexagon with a toilet is under about 500 m away. There are about 318 residents within 500 m, alongside 16 shops, five bus stops and two playgrounds; the large nearby park area and sports facilities suggest extra demand from players, families and spectators on match days. Check the reserve’s existing toilet access and opening arrangements before considering an additional accessible public facility.",
+   "sources": []
+  },
+  "89be08429abffff": {
+   "text": "This Emu Plains block has 8 shops, including 5 cafes and food outlets, and sits within 250 metres of a train station. Commuters, café customers and nearby residents may need an accessible toilet while waiting, eating or walking locally. The model estimates 1.07 toilets missing, with about 80 residents in the block and 485 within 500 metres; it also counts 11 shops and 8 bus stops within 500 metres. No public toilets are mapped in the block, though the station lists an accessible toilet. Check station and nearby facility access, hours and condition before choosing a site.",
+   "sources": []
+  },
+  "89be08cb4dbffff": {
+   "text": "This Kogarah town-centre block has seven shops and seven food outlets, with 30 shops and 25 cafés or food outlets within 500 metres. Workers, shoppers and people travelling through can use the 22 nearby bus stops and Kogarah station; residents also need access, with about 7,028 within 500 metres. The model estimates 1.07 toilets missing here, while OpenStreetMap records none in the hexagon. No council-planned toilet sites are listed within 1 kilometre. Check pedestrian desire lines and accessible servicing before selecting a site for a public toilet.",
+   "sources": [
+    {
+     "title": "Kogarah Map - Railway stop - Georges River Council, New South Wales, Australia",
+     "url": "https://mapcarta.com/N1580109371"
+    }
+   ]
+  },
+  "89be0e21947ffff": {
+   "text": "This block covers Terrey Hills Oval, including lit sportsfields, cricket nets, basketball and netball courts, a skate park and nearby tennis and pickleball courts. Players, families, spectators and park users gather here; the model also counts 21 sports facilities and 3 playgrounds within 500 m. It estimates 1.07 toilets missing, with 100.75 residents in the hex, 1,031 within 500 m, 6 shops and 4 bus stops within 500 m, and no train stations within 1 km. However, Council lists public toilets at the oval, so confirm access and availability before adding capacity.",
+   "sources": [
+    {
+     "title": "Terrey Hills Oval (Karl Brown Oval) Dog Off-leash Area | Northern Beaches Council",
+     "url": "https://www.northernbeaches.nsw.gov.au/things-to-do/recreation-area/terrey-hills-oval-karl-brown-oval-dog-area"
+    }
+   ]
+  },
+  "89be0e34303ffff": {
+   "text": "This block sits by Central Station and Railway Square, where commuters, nearby workers, shoppers and visitors pass through; Belmore Park is about 90 metres away. The model counts 1,349 residents in the hexagon, 22 shops and 16 cafes and food outlets, with 118 shops and 130 food outlets within 500 metres. It records no public toilets here, against a predicted 2.06, and 38 bus stops and two train stations within 500 metres. A council automatic toilet is planned at Quay Street and George Street, 221 metres away. Check access and coverage on site before adding a facility.",
+   "sources": [
+    {
+     "title": "New automatic public toilets - City of Sydney",
+     "url": "https://www.cityofsydney.nsw.gov.au/improving-streets-public-spaces/new-automatic-public-toilets-2021-22"
+    }
+   ]
+  },
+  "89be085162bffff": {
+   "text": "This block is at Francesco Crescent Reserve, with two sports fields, cricket nets, a half basketball court and a playground used by players, families and children. The model estimates 1.06 toilets missing, with a 65% chance of at least one; the hex contains about 274 residents, with 1,693 within 500 metres and 7,267 within 1 kilometre. There are three sports facilities and two playgrounds within 500 metres, but no shops or cafes there. The model records no public toilet in the hex; check existing change-room access and demand, then assess an accessible public toilet near the fields and playground.",
+   "sources": [
+    {
+     "title": "Francesco Crescent Reserve | The Hills Shire Council",
+     "url": "https://www.thehills.nsw.gov.au/Venues/Parks-Recreation/Parks-Recreation-Directory/Francesco-Crescent-Reserve"
+    }
+   ]
+  },
+  "89be0e22b6bffff": {
+   "text": "The pin sits in Forestville’s shop and civic area, close to The Centre on Darley and Starkey Streets, Forestville Community Hall, Poppy Park and sports fields. Shoppers, café customers, bus passengers and people using nearby recreation facilities all share this walkable centre. The model records no toilet in this hex and estimates a shortfall of 1.06, with about 411 residents here and 2,028 within 500 m; it also counts 13 shops and 20 bus stops within 500 m. Council’s Forestville shops engagement report documents community requests for public toilets. Check existing access and demand, then assess an accessible public toilet near the shops.",
+   "sources": [
+    {
+     "title": "Forestville Community Hall Map - Building - Northern Beaches, New South Wales, Australia",
+     "url": "https://mapcarta.com/W469810502"
+    }
+   ]
+  },
+  "89be0e3464bffff": {
+   "text": "Bellevue Park sits beside Bellevue Hill Public School, with a playground used by children from the school and nearby neighbourhood. Families, park visitors and people using the bus stops on Birriga and Victoria Roads have no public toilet recorded in this hexagon; the nearest hexagon with one is about 660 metres away. The model estimates a shortfall of 1.05 toilets, with 959 residents locally and 5,840 within 500 metres. It counts 3 shops, 6 cafes and food outlets, 24 bus stops within 500 metres, and nearly 89,300 square metres of park nearby. Check accessible siting, servicing and demand at the park before selecting a facility.",
+   "sources": [
+    {
+     "title": "Bellevue Park | Woollahra Municipal Council",
+     "url": "https://www.woollahra.nsw.gov.au/Recreation/List-of-Parks-Reserves-and-Playgrounds/Bellevue-Park"
+    }
+   ]
+  },
+  "89be0850b07ffff": {
+   "text": "This block is Potter Field at Shepherd Street Park, used by local sports players, families and children visiting the playground. The model counts 1.04 toilets missing here, with about 298 residents in the hexagon and 2,088 within 500 metres; it records 15 sports facilities and a playground within 500 metres, plus 10 bus stops. It records no shops nearby and no mapped public toilet in the hexagon. The listed Mark Leece Sporting Complex amenities site is 690 metres away, but council records say its upgrade is complete, not a future build. Check existing facilities and access on site before adding an accessible public toilet.",
+   "sources": []
+  },
+  "89be0e3690bffff": {
+   "text": "This Brighton-Le-Sands block sits beside Bicentennial Park and close to Brighton Memorial Playing Fields, drawing sports participants, families and park visitors. The model records 0 mapped public toilets in the hexagon, despite about 199,918 m² of parkland, 22 sports facilities and a playground within 500 m. About 2,511 residents live within that distance; there are also 10 bus stops and two shops, but no train station within 1 km. Council identifies public amenities at Brighton Memorial Playing Fields, so check their location, access and capacity before adding a toilet here.",
+   "sources": [
+    {
+     "title": "Brighton Memorial Playing Fields | Bayside Council | NSW",
+     "url": "https://www.bayside.nsw.gov.au/area/parks-sports-grounds/brighton-memorial-playing-fields"
+    }
+   ]
+  },
+  "89be0e3412fffff": {
+   "text": "This King Street Newtown block serves 1,466 residents and sits amid 15 shops and 5 cafes and food outlets. Nearby users include commuters at Newtown Station and bus passengers: 14 bus stops and 2 train stations are within 500 metres. The model records no toilet in the hex and estimates a shortfall of 1.06, with the nearest hex containing a toilet about 660 metres away. A City of Sydney automatic toilet is listed 569 metres away at Erskineville Road and Charles Street. Check current access to nearby facilities and identify a safe, accessible site for a public toilet.",
+   "sources": []
+  },
+  "89be0e22907ffff": {
+   "text": "This Willoughby East block sits beside Bicentennial Reserve, whose sportsground, courts, baseball diamond and shared path draw players, families and walkers. The model records 15 sports facilities and 70,887 m² of parkland within 500 m, with the nearest park at the site, but no mapped public toilet in the hexagon. About 2,281 residents live within 500 m; 13 bus stops serve the area, with no train station within 1 km. The model estimates 1.05 toilets missing. Check existing amenities and access on site, then assess a public toilet near the reserve’s main activity routes.",
+   "sources": [
+    {
+     "title": "Bicentennial Reserve | Willoughby City Council",
+     "url": "https://www.willoughby.nsw.gov.au/Residents/Parks-and-recreation/Parks-reserves-and-playgrounds/Bicentennial-Reserve?lang_update=639157800195777730"
+    }
+   ]
+  },
+  "89be0e342cfffff": {
+   "text": "This block sits in Double Bay’s busy centre, among 28 shops, with 148 shops and 35 food outlets within 500 metres. Woollahra Library at Kiaora Place draws readers, families and people using its study and community spaces; 22 bus stops and a train station are also within 500 metres. The model counts 1,015 residents in the block and estimates a shortfall of 1.04 toilets today, despite one mapped toilet. Council’s planning document identifies Steyne Park as Double Bay’s only public toilet, underscoring the centre’s limited provision. No council-planned toilet site is listed within 1 kilometre. Check existing access and demand, then assess a convenient, accessible public facility.",
+   "sources": []
+  },
+  "89be0e21113ffff": {
+   "text": "This block sits by North Narrabeen Reserve’s sports fields, where rugby, AFL, baseball, touch football and softball bring players, families and spectators. The model flags 1.03 missing toilets, with about 878 residents within 500 m and 11 sports facilities in that radius; it also records a playground, 10 bus stops and 263,010 m² of parkland. Although the model maps no public toilets here, Council lists toilets at the reserve, so the gap may reflect mapping or access rather than absent facilities. No planned sites are listed within 1 km. Check toilet access and capacity on site before adding provision.",
+   "sources": [
+    {
+     "title": "North Narrabeen Reserve Fields 3 - 6 | Northern Beaches Council",
+     "url": "https://www.northernbeaches.nsw.gov.au/things-to-do/recreation-area/north-narrabeen-reserve-fields-3-6"
+    }
+   ]
+  },
+  "89be0e34a1bffff": {
+   "text": "This Lilyfield block sits beside parkland and within 500 m of 11 bus stops, four cafes or food outlets, two playgrounds and a sports facility. Families, park visitors, sports users and bus passengers add demand; the model counts 305 residents in the hexagon and 2,772 within 500 m, but only one shop and no mapped public toilet in the hexagon. Council upgraded King George Park amenities, about 940 m away, with six public toilets, completed in November 2024; Pioneers Memorial Park toilets, about 979 m away, were completed in December 2023. Check access and signage to nearby facilities before considering another toilet.",
+   "sources": []
+  },
+  "89be0e348b7ffff": {
+   "text": "This Dulwich Hill block sits by the station precinct, where train and light-rail passengers meet bus users, nearby residents and people visiting local shops and food outlets. The model estimates a shortfall of 1.03 toilets, with about 1,049 residents in the hexagon and 6,113 within 500 metres; it counts 3 shops locally, 7 food outlets and 10 bus stops within 500 metres. The model maps no public toilet in the hexagon, though council lists toilets at nearby parks. Check station and park access, then assess a visible, accessible public toilet for this busy walking catchment.",
+   "sources": [
+    {
+     "title": "Parks with public toilets | Inner West Council",
+     "url": "https://www.innerwest.nsw.gov.au/parks-facility/parks-public-toilets"
+    }
+   ]
+  },
+  "89be0853643ffff": {
+   "text": "This block sits beside Parramatta Park and CommBank Stadium, where park visitors, families, event crowds and sports users need nearby public facilities. The model records 0 public toilets, 0 shops and about 11 residents in the hex, but identifies 9 sports facilities and 376,169 m² of parkland within 500 metres, alongside 8 bus stops and about 703 residents. Council is in early planning for possible toilets at Parramatta Station Car Park, 792 metres away; the proposal is unfunded and intended to replace facilities removed in precinct upgrades. Check event-day demand and accessible toilet coverage on site.",
+   "sources": [
+    {
+     "title": "Parramatta Station Car Park Toilet Consultation, Parramatta",
+     "url": "https://participate.cityofparramatta.nsw.gov.au/parramatta-station-car-park-toilets"
+    }
+   ]
+  },
+  "89be0e26bb3ffff": {
+   "text": "This Camellia block has no mapped public toilet, despite 5 shops in the hexagon and 12 within 500 m, plus 13 bus stops and a station within 500 m. Workers, customers and people changing between transport or visiting nearby parks and sports facilities may need facilities; 3,359 residents live within 500 m, rising to 17,283 within 1 km. Council’s Camellia plans envisage a future town centre and community hub, but no planned toilet site is listed within 1 km. Check pedestrian access, land ownership and servicing, then assess an accessible toilet near the shops and transport.",
+   "sources": []
+  },
+  "89be0e343cfffff": {
+   "text": "This Surry Hills block has no mapped public toilet, despite 11 cafes or food outlets within the hex and 130 within 500 metres. It serves 1,557 residents locally and nearly 9,939 within 500 metres, alongside cafe customers, shoppers and people using nearby parks; 30 bus stops are within 500 metres. The model estimates 1.01 toilets missing. City of Sydney lists an approved automatic toilet at Quay Street and George Street, 806 metres away, and a planned Hyde Park site 996 metres away. Check toilet access and demand on surrounding streets, then assess a publicly accessible, accessible facility here.",
+   "sources": []
+  },
+  "89be08c9e23ffff": {
+   "text": "Everley Park’s cricket and soccer fields draw players, families and spectators, while nearby playgrounds serve children. The model identifies 1 missing toilet in this hexagon, with about 733 residents within 500 m and 5,833 within 1 km. It counts 20 sports facilities, 2 playgrounds and 11 bus stops within 500 m, but no shops, food outlets or train stations there. Although two toilets are counted across the wider 1 km area, none is mapped in this hexagon. Check existing park amenities, access and peak-use patterns before siting an accessible public toilet.",
+   "sources": []
+  },
+  "89be0e34403ffff": {
+   "text": "This Randwick Junction block sits around Avoca Street and Alison Road, among cafés, food outlets and shops. It has 16 food outlets and 5 shops in the hex, with 30 food outlets and 49 shops within 500 m, serving local residents, shoppers and people changing between buses; 21 bus stops are within 500 m. The model estimates 927 residents in the block and 5,480 within 500 m, but finds no mapped public toilet here. There is no council-planned toilet site listed within 1 km. Check pedestrian flows and accessible routes on site, then assess a public toilet location that serves the busy junction.",
+   "sources": []
+  },
+  "89be0e34233ffff": {
+   "text": "This Darlinghurst block has no public toilet recorded, despite 1,257 residents locally and about 8,067 within 500 metres. Its 13 shops and 6 cafes and food outlets serve shoppers, diners, workers and people passing through; 24 bus stops are also within 500 metres. The model estimates a shortfall of 1.01 toilets, while its wider one-kilometre area has 9 toilets today against 22.18 predicted. Woollahra has approved a new toilet at Gugara Park, 247 metres away, but construction had not started as of July 2026. Check current nearby facilities and demand, then assess a convenient accessible toilet on this block.",
+   "sources": []
+  }
+ }
+}
