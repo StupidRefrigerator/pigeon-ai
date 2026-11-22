@@ -6,11 +6,24 @@ Pigeon AI predicts where Sydney's next public infrastructure should go, from a b
 
 ## Contributions
 
-| Member | Owned |
-|---|---|
-| Jimmy (Aranchai Khanijow) | Data |
-| Summit Setia | Model |
-| Oscar | LLM (Ask Pigeon) |
+The work was split roughly evenly, with each of us owning one part of the system.
+
+**Jimmy (Aranchai Khanijow): data**
+- Sourced the public datasets: ABS Census 2021 and SEIFA, OpenStreetMap, the National Public Toilet Map and council records.
+- Cleaned them and built the H3 hexagon dataset of 16,228 hexagons and 45 inputs.
+- Built the V1–V10 comparison page.
+
+**Summit Setia: model**
+- Built the random forest (300 trees) that predicts the expected toilet count per hexagon.
+- Set up 5-fold spatial cross-validation and the evals: PR-AUC, Poisson deviance, top-100 hits, council-planned sites and growth suburbs.
+- Added SHAP explanations and ran the V11–V12 experiments that chose the final model.
+
+**Oscar: LLM**
+- Built Ask Pigeon, an LLM agent (OpenAI's `gpt-6.1-sol`) that answers planning questions about the map.
+- Designed its tools, which read the model's held-out predictions, and its web search for costs and council plans.
+- Wrote its prompt and project brief, and tested it.
+
+Commit counts don't tell the whole story. Some work was done in pairs or outside the repo, such as sourcing data, the slides and the pitch. Some was committed from one person's account, for example the Ask Pigeon code, which went in under Summit's account.
 
 ## How it works
 
