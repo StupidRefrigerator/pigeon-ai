@@ -4,6 +4,14 @@ Pigeon AI predicts where Sydney's next public infrastructure should go, from a b
 
 **Live app:** https://pigeon-ai.vercel.app
 
+## Contributions
+
+| Member | Owned |
+|---|---|
+| Jimmy (Aranchai Khanijow) | Data |
+| Summit Setia | Model |
+| Oscar | LLM (Ask Pigeon) |
+
 ## How it works
 
 1. Sydney is split into 16,228 hexagons of about 0.1 km² each.
@@ -35,7 +43,7 @@ Web app: see [app/README.md](app/README.md).
 ## Folders
 
 ```text
-app/         Web app (TanStack Start, Clerk, Vercel)
+app/         Web app (TanStack Start, deck.gl, OpenAI, Vercel)
 data/        Processed features and V12 results (committed); raw data is on Drive
 src/         Python package (pigeon_ai)
 scripts/     Command-line entry points
