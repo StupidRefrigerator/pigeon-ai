@@ -11,16 +11,20 @@ export interface Prompt {
   hex?: string
 }
 
+/** `peek` is the phone-only bar left at the bottom while the map shows the answer's hexagons. */
+export type AskView = 'closed' | 'open' | 'peek'
+
 interface Props {
-  open: boolean
-  onToggle: (open: boolean) => void
+  view: AskView
+  onView: (view: AskView) => void
   prompt: Prompt | null
   /** Highlight a set of hexagons on the map, optionally opening one. */
   onShow: (map: MapEvent, select?: string) => void
 }
 
 /** Side panel for the Pigeon agent: it streams the agent's reasoning, tool steps and answer, and hands highlighted hexagons to the map. */
-export function AskPanel({ open, onToggle, prompt, onShow }: Props) {
+export function AskPanel({ view, onView, prompt, onShow }: Props) {
+  const open = view !== 'closed'
   const layer = useLayer()
   const { unit } = layer
   const [turns, setTurns] = useState<Turn[]>([])
@@ -32,10 +36,11 @@ export function AskPanel({ open, onToggle, prompt, onShow }: Props) {
   const abort = useRef<AbortController | null>(null)
   const wasOpen = useRef(open)
   const busy = turns.at(-1)?.state === 'running'
+  const lastMap = [...turns].reverse().find((t) => t.maps.length)?.maps.at(-1)
 
   useEffect(() => {
-    if (open) inputRef.current?.focus()
-    else if (wasOpen.current) openRef.current?.focus()
+    if (open && !wasOpen.current) inputRef.current?.focus()
+    else if (!open && wasOpen.current) openRef.current?.focus()
     wasOpen.current = open
   }, [open])
   useEffect(() => () => abort.current?.abort(), [])
@@ -97,13 +102,30 @@ export function AskPanel({ open, onToggle, prompt, onShow }: Props) {
 
   return (
     <>
-      <button ref={openRef} className="ask-toggle slab" aria-expanded={open} aria-controls="ask-panel" hidden={open} onClick={() => onToggle(true)}>
+      <button ref={openRef} className="ask-toggle slab" aria-expanded={open} aria-controls="ask-panel" hidden={open} onClick={() => onView('open')}>
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <path d="M4 5h16v11H9l-5 4z" />
         </svg>
         Ask Pigeon
       </button>
-      <aside id="ask-panel" className="ask-panel" aria-labelledby="ask-title" hidden={!open}>
+      <aside id="ask-panel" className={view === 'peek' ? 'ask-panel peek' : 'ask-panel'} aria-labelledby="ask-title" hidden={!open}>
+        <div className="ask-peek-bar">
+          <div className="ask-peek-row">
+            <p>{busy ? 'Pigeon is still answering…' : lastMap ? `Showing ${lastMap.caption}` : 'Answer ready'}</p>
+            <button className="ask-close" onClick={() => onView('open')}>
+              Open chat
+            </button>
+          </div>
+          {lastMap && (
+            <div className="ask-chips">
+              {lastMap.spots.map((s) => (
+                <button key={s.hex} onClick={() => onShow(lastMap, s.hex)}>
+                  {s.name}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
         <header>
           <h2 id="ask-title">Ask Pigeon</h2>
           <div className="ask-head-btns">
@@ -112,7 +134,7 @@ export function AskPanel({ open, onToggle, prompt, onShow }: Props) {
                 New chat
               </button>
             )}
-            <button ref={closeRef} className="ask-close" onClick={() => onToggle(false)}>
+            <button ref={closeRef} className="ask-close" onClick={() => onView('closed')}>
               Close
             </button>
           </div>

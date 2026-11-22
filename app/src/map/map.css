@@ -93,6 +93,7 @@
 .ask-composer button { padding: 0 16px; border-radius: 3px; font-weight: 700; color: var(--paper) !important; background: var(--blue) !important; }
 .ask-composer button:disabled { opacity: .45; cursor: not-allowed; }
 .ask-open .hexcard { right: 436px; top: 16px; }
+.ask-peek-bar { display: none; }
 
 /* area picker: suburb or point plus a radius, with the area's summary underneath */
 .area { position: absolute; z-index: 4; top: 66px; left: 16px; width: 300px; max-height: calc(100% - 252px); display: flex; flex-direction: column; padding: 8px; }
@@ -134,10 +135,27 @@
   .mappage-title { font-size: 17px; }
   .hexmap-legend { display: none; }
   .hexmap-modes { bottom: 12px; }
-  .area { top: 56px; left: 8px; right: 8px; width: auto; max-height: 45%; }
+  /* Ask Pigeon sits beside the search box instead of on its own row above it. */
+  .area { top: 8px; left: 8px; right: 8px; width: auto; max-height: 45%; }
+  .ask-toggle { top: 18px; right: 18px; z-index: 5; height: 40px; padding: 0 10px; box-shadow: none; }
+  .area-search { height: 40px; margin-right: 132px; }
+  :is(.ask-open, .ask-peek) .area-search { margin-right: 0; }
   .hexcard, .mappage .hexcard, .ask-open .hexcard { top: auto; left: 8px; right: 8px; bottom: 64px; width: auto; max-height: 55%; }
   .hexmap-focus { bottom: 60px; max-width: calc(100% - 24px); }
-  .ask-panel { width: 100%; top: 40%; border-left: 0; border-top: 2px solid var(--blue); box-shadow: none; }
+  /* The header already names the layer, and the title ran under the Ask Pigeon button. */
+  .mappage-title { display: none; }
+  /* Open, the chat takes the whole map; once it shows hexagons it shrinks to a bar so the map is clear. */
+  .ask-panel { width: 100%; border-left: 0; box-shadow: none; }
+  .ask-panel.peek { top: auto; border-top: 2px solid var(--blue); box-shadow: 0 -4px 0 rgba(255, 72, 176, .5); animation: none; }
+  .ask-panel.peek > :not(.ask-peek-bar) { display: none; }
+  .ask-panel.peek .ask-peek-bar { display: block; padding: 10px 12px 12px; }
+  .ask-peek-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+  .ask-peek-row .ask-close { flex: none; white-space: nowrap; }
+  .ask-peek-row p { margin: 0; font-weight: 700; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .ask-peek-bar .ask-chips { flex-wrap: nowrap; overflow-x: auto; padding-bottom: 2px; }
+  .ask-peek-bar .ask-chips button { flex: none; }
+  .ask-peek .hexmap-modes, .ask-peek .hexmap-focus { display: none; }
+  .ask-peek .hexcard { bottom: 104px; max-height: 50%; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hexcard, .ask-panel, .area-sum { animation: none; }

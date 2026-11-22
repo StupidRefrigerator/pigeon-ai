@@ -4,6 +4,8 @@ Pigeon AI predicts where Sydney's next public infrastructure should go, from a b
 
 **Live app:** https://pigeon-ai.vercel.app
 
+**Original repository:** https://github.com/StupidRefrigerator/pigeon-ai. This is where the project was built; other copies are mirrors of it.
+
 ## Contributions
 
 The work was split roughly evenly, with each of us owning one part of the system.

@@ -104,9 +104,20 @@ function fitSpots(spots: MapSpot[], el: HTMLElement | null, bearing: number): Ma
   const wide = width > 900
   const { longitude, latitude, zoom } = new WebMercatorViewport({ width, height }).fitBounds(
     [[Math.min(...lngs) - pad, Math.min(...lats) - pad], [Math.max(...lngs) + pad, Math.max(...lats) + pad]],
-    { padding: wide ? { top: 140, bottom: 120, left: 340, right: 420 } : { top: 80, bottom: 80, left: 30, right: 30 } },
+    { padding: wide ? { top: 140, bottom: 120, left: 340, right: 420 } : { ...phoneGap(el, height), left: 30, right: 30 } },
   )
-  return { longitude, latitude, zoom: Math.min(zoom - 0.3, 15), pitch: 45, bearing }
+  return { longitude, latitude, zoom: Math.min(zoom - 0.3, 15), pitch: wide ? 45 : 30, bearing }
+}
+
+/** On a phone the search box covers the top of the map and the chat bar or mode buttons the bottom; fit the hexagons between them. */
+function phoneGap(el: HTMLElement | null, height: number): { top: number; bottom: number } {
+  const box = el?.getBoundingClientRect()
+  if (!box) return { top: 80, bottom: 80 }
+  const below = (sel: string) => { const r = document.querySelector(sel)?.getBoundingClientRect(); return r && r.height ? r.bottom - box.top : 0 }
+  const above = (sel: string) => { const r = document.querySelector(sel)?.getBoundingClientRect(); return r && r.height ? box.bottom - r.top : 0 }
+  const top = Math.max(below('.area'), 40) + 24
+  const bottom = Math.max(above('.ask-panel.peek'), above('.hexmap-modes'), 40) + 24
+  return top + bottom < height - 120 ? { top, bottom } : { top: 80, bottom: 80 }
 }
 
 function reduceMotion() {
@@ -236,7 +247,8 @@ export default function HexMap({ focus, onAsk }: { focus: Focus | null; onAsk: (
     if (pick) {
       setSelected(null)
       const [longitude, latitude] = lngLat(pick.hex)
-      fly({ longitude, latitude, zoom: Math.max(view.zoom, 14), pitch: 58, bearing: view.bearing ?? 0 }, 1400)
+      const phone = (box.current?.clientWidth ?? 1200) <= 900
+      fly({ longitude, latitude, zoom: Math.max(view.zoom, 14), pitch: phone ? 40 : 58, bearing: view.bearing ?? 0 }, 1400)
       setSelected(pick)
       return
     }
