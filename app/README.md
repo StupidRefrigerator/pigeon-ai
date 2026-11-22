@@ -27,6 +27,8 @@ The "Why here" note on the top 100 suggested spots of each layer is precomputed 
 npm run summaries -- toilets      # then: bubblers
 ```
 
+Evals for Ask Pigeon: `OPENAI_API_KEY=... npx tsx evals/agent-eval.mts 3`. Method and results are in [docs/llm-eval.md](../docs/llm-eval.md).
+
 ## Infrastructure layers
 
 `src/infra.ts` is the registry of layers (toilets live; bike lanes and water fountains announced). A live layer names its heatmap URL under `public/infra/<id>/`, and `src/infra-data.ts` bundles its JSON from `src/data/infra/<id>/`. `/app` reads `?layer=<id>` (unknown or absent means the first live layer), and pages take the layer's name and unit from it.

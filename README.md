@@ -36,6 +36,11 @@ Every prediction comes from a model that never saw that part of Sydney, so a hex
 
 **V12 results:** PR-AUC 0.569 (random is 0.118). 677 of the top 1,000 predictions have a toilet. 2,625 toilets predicted vs 2,570 real. 30 of 42 council-planned sites are flagged.
 
+## Evals
+
+- **Model (random forest):** PR-AUC, Poisson deviance, top-100 hits, calibration, fairness and stability, all on held-out predictions from 5-fold spatial cross-validation, with baselines. See [docs/model.md](docs/model.md#evals); results are in `data/model/metrics.csv`. Tests on real places the model never trained on (council-planned sites, growth suburbs, Bradfield) are in [docs/findings.md](docs/findings.md).
+- **LLM (Ask Pigeon):** 10 planning questions, 3 runs each, graded by code against a baseline LLM without our tools. See [docs/llm-eval.md](docs/llm-eval.md); the script is `app/evals/agent-eval.mts`.
+
 ## Quick start
 
 ```sh
@@ -68,6 +73,7 @@ docs/        Details
 
 - [docs/model.md](docs/model.md): inputs, training, evals, the suggested list and reviewing candidates.
 - [docs/findings.md](docs/findings.md): every experiment and result.
+- [docs/llm-eval.md](docs/llm-eval.md): Ask Pigeon (LLM) evals.
 - [docs/model-decisions.md](docs/model-decisions.md): design decisions and trade-offs.
 - [data/README.md](data/README.md): how the dataset is built.
 - [DATA.md](DATA.md): getting the raw data from Drive.
