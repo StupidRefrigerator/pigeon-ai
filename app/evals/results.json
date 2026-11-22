@@ -1,0 +1,1295 @@
+{
+ "model": "gpt-6.1-sol",
+ "date": "2026-11-22T08:11:57.558Z",
+ "runs": 3,
+ "results": [
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Budget",
+   "q": "I have $500k for new public toilets in Blacktown. Where should they go?",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "plans sites",
+     "ok": true,
+     "note": "1 plan_sites calls"
+    },
+    {
+     "name": "looks up a cost",
+     "ok": true,
+     "note": "1 searches"
+    },
+    {
+     "name": "shows what it planned",
+     "ok": true,
+     "note": "planned 1, shown 1"
+    },
+    {
+     "name": "sites in Blacktown (≤3 km)",
+     "ok": true,
+     "note": "1/1"
+    }
+   ],
+   "grounded": 0.14285714285714285,
+   "cost": 0.0434742,
+   "secs": 40.33,
+   "tools": [
+    "plan_sites",
+    "get_hex",
+    "show_on_map"
+   ],
+   "searches": 1,
+   "text": "**Prioritise one new toilet block beside International Peace Park and Blacktown Creek, in Seven Hills**, subject to checking nearby amenities. I’ve highlighted the candidate on your map.\n\n- **Budget:** I used **$300,000 per block**, based on Blacktown Council’s 2025/26 estimate for a new Seven Hills toilet block. $500,000 therefore funds **one**, with $200,000 left for contingency and site-specific costs. This is a planning allowance, not a quote. ([blacktown.nsw.gov.au](https://www.blacktown.nsw.gov.au/files/assets/public/v/1/ipampr/ipampr-documents/works-improvement-program-2025_26-adopted-23-june-2025-online.pdf))\n- **Why here:** Pigeon predicts **1.23 toilets** in this block, with **none recorded**. Sports grounds and park space are the strongest drivers, supporting players, families and walkers.\n- **Important check:** A toilet is mapped in the next block, roughly **380 metres away**. Check its opening hours and accessible walking route before committing. This may be an access gap rather than a complete absence of facilities.\n\nI’ve interpreted “Blacktown” as **within 2 km of Blacktown centre**, not the whole council area. The recommendation could change for a council-wide search."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Budget",
+   "q": "I have $500k for new public toilets in Blacktown. Where should they go?",
+   "run": 2,
+   "pass": true,
+   "checks": [
+    {
+     "name": "plans sites",
+     "ok": true,
+     "note": "1 plan_sites calls"
+    },
+    {
+     "name": "looks up a cost",
+     "ok": true,
+     "note": "1 searches"
+    },
+    {
+     "name": "shows what it planned",
+     "ok": true,
+     "note": "planned 1, shown 1"
+    },
+    {
+     "name": "sites in Blacktown (≤3 km)",
+     "ok": true,
+     "note": "1/1"
+    }
+   ],
+   "grounded": 0.14285714285714285,
+   "cost": 0.04614939999999999,
+   "secs": 51.155,
+   "tools": [
+    "find_place",
+    "plan_sites",
+    "get_hex",
+    "show_on_map"
+   ],
+   "searches": 1,
+   "text": "**Prioritise one new toilet block beside International Peace Park and Blacktown Creek, on the Seven Hills side of Blacktown.** I’ve highlighted the candidate block on your map.\n\n- **Budget:** use **$400,000 per block** as a planning allowance, matching a new-toilet estimate in Blacktown Council’s 2025/26 works program. Your $500,000 funds one block, leaving $100,000 for contingency and site-specific costs, subject to quotes. ([blacktown.nsw.gov.au](https://www.blacktown.nsw.gov.au/files/assets/public/v/1/ipampr/ipampr-documents/works-improvement-program-2025_26-adopted-23-june-2025-online.pdf))\n- **Why here:** the model estimates **1.23 missing toilets**, with none recorded in this block. Sports grounds and parkland are the strongest drivers, with three playgrounds within 500 metres.\n- **Check before committing:** a toilet is mapped in the neighbouring block, so inspect its opening hours, accessibility and walking route before deciding another facility is needed. Confirm land ownership and sewer connections too.\n\n**Scope:** I’ve treated “Blacktown” as within **2 km of the suburb centre**, not the whole council area. This is a priority investigation site, not an approved building location."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Budget",
+   "q": "I have $500k for new public toilets in Blacktown. Where should they go?",
+   "run": 3,
+   "pass": true,
+   "checks": [
+    {
+     "name": "plans sites",
+     "ok": true,
+     "note": "1 plan_sites calls"
+    },
+    {
+     "name": "looks up a cost",
+     "ok": true,
+     "note": "1 searches"
+    },
+    {
+     "name": "shows what it planned",
+     "ok": true,
+     "note": "planned 1, shown 1"
+    },
+    {
+     "name": "sites in Blacktown (≤3 km)",
+     "ok": true,
+     "note": "1/1"
+    }
+   ],
+   "grounded": 0.25,
+   "cost": 0.045743000000000006,
+   "secs": 37.933,
+   "tools": [
+    "find_place",
+    "plan_sites",
+    "get_hex",
+    "show_on_map"
+   ],
+   "searches": 1,
+   "text": "**Prioritise one new toilet block beside International Peace Park and Blacktown Creek, on the Seven Hills side of Blacktown.** I’ve highlighted the candidate block on the map.\n\n- **Budget:** use **$400,000 per block**, matching Blacktown Council’s 2025/26 estimate for a new toilet block at Rooty Hill shops. Your $500,000 funds **one**, leaving $100,000 for contingency and site-specific costs. This is a planning allowance, not a quote. ([blacktown.nsw.gov.au](https://www.blacktown.nsw.gov.au/files/assets/public/v/1/ipampr/ipampr-documents/works-improvement-program-2025_26-adopted-23-june-2025-online.pdf))\n- **Why here:** the selected block has **no mapped public toilet**, and the model predicts **1.23 toilets**. Sports grounds and park space are its strongest demand drivers.\n- **Who benefits:** the model’s local data records **3 playgrounds and about 2,722 residents within 500 metres**, alongside sporting activity.\n- **Before committing:** a toilet is mapped in the neighbouring block, so check its actual walking route, opening hours and accessibility before building. Confirm land ownership, sewer connection and ongoing cleaning funding too.\n\nI’ve treated “Blacktown” as **within 2 km of the suburb centre**, not the whole council area."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Budget",
+   "q": "Our council has $1.2 million for toilets around Liverpool. How many can we build and where?",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "plans sites",
+     "ok": true,
+     "note": "1 plan_sites calls"
+    },
+    {
+     "name": "looks up a cost",
+     "ok": true,
+     "note": "1 searches"
+    },
+    {
+     "name": "shows what it planned",
+     "ok": true,
+     "note": "planned 3, shown 3"
+    },
+    {
+     "name": "sites in Liverpool (≤3 km)",
+     "ok": true,
+     "note": "3/3"
+    }
+   ],
+   "grounded": 0.65,
+   "cost": 0.048956099999999995,
+   "secs": 33.245,
+   "tools": [
+    "plan_sites",
+    "get_hex",
+    "get_hex",
+    "get_hex",
+    "show_on_map"
+   ],
+   "searches": 1,
+   "text": "I’ll use a provisional allowance of $400,000 per small accessible toilet facility, giving three sites. I’ll search within 2 km of Liverpool’s centre, keeping sites at least 400 m apart. This is a local search, not the whole council area.\n\n**Plan for three small accessible toilet facilities**, with the candidate blocks highlighted on your map.\n\n**Budget:** I’ve allowed **$400,000 per facility**. A NSW parliamentary report puts a single accessible unisex facility at $280,000–$310,000 excluding GST. My higher allowance leaves some room for site works and contingency, but is not a construction quote. ([files.parliament.nsw.gov.au](https://files.parliament.nsw.gov.au/fileapi/ParlFiles/GetArtifact/Report%20No.%204%20-%20Portfolio%20Committee%20No.%208%20-%20Customer%20Service%20-%20Public%20toilets.pdf?serverRelativeUrl=%2Ftp%2Ffiles%2F191976%2FReport+No.+4+-+Portfolio+Committee+No.+8+-+Customer+Service+-+Public+toilets.pdf))\n\nWithin **2 km of Liverpool’s centre**, keeping sites at least **400 m apart**, Pigeon picks:\n\n- **Macquarie Mall precinct, Liverpool:** strongest candidate, with a modelled shortfall of **2.21 toilets**, driven by shops and nearby food outlets.\n- **Liverpool block near Woodward Park / Whitlam Leisure Centre:** modelled shortfall of **1.19**, driven mainly by retail and food activity.\n- **Ashcroft sports-ground block:** modelled shortfall of **0.90**, driven by sports grounds and parkland. This is the weaker, third-priority candidate.\n\n**Investigate the first two before committing to the third.** These are candidate blocks, not approved building sites. Check existing toilet access and hours, land ownership, sewer connections and ongoing cleaning costs. The Macquarie Mall records conflict about existing provision, making an on-site audit especially important.\n\nThis search covers central Liverpool and surrounds, **not the whole Liverpool council area**."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Budget",
+   "q": "Our council has $1.2 million for toilets around Liverpool. How many can we build and where?",
+   "run": 2,
+   "pass": true,
+   "checks": [
+    {
+     "name": "plans sites",
+     "ok": true,
+     "note": "1 plan_sites calls"
+    },
+    {
+     "name": "looks up a cost",
+     "ok": true,
+     "note": "1 searches"
+    },
+    {
+     "name": "shows what it planned",
+     "ok": true,
+     "note": "planned 3, shown 3"
+    },
+    {
+     "name": "sites in Liverpool (≤3 km)",
+     "ok": true,
+     "note": "3/3"
+    }
+   ],
+   "grounded": 0.5,
+   "cost": 0.060568899999999995,
+   "secs": 25.923,
+   "tools": [
+    "plan_sites",
+    "get_hex",
+    "get_hex",
+    "get_hex",
+    "show_on_map"
+   ],
+   "searches": 1,
+   "text": "I’ll use a provisional allowance of $400,000 per accessible toilet facility, including a buffer above published NSW construction estimates. That gives three sites. I’ll look within 2 km of Liverpool centre, keeping sites at least 400 m apart.\n\n**Plan for three accessible toilet facilities**, provisionally budgeted at **$400,000 each**. I’ve highlighted three candidate blocks within **2 km of Liverpool centre**, spaced at least **400 m apart**.\n\n**Budget basis:** NSW evidence estimates $280,000–$310,000 excluding GST for a single accessible unisex facility. My $400,000 allowance adds a planning buffer, not a contractor quote. **$1.2 million ÷ $400,000 = 3 facilities.** ([files.parliament.nsw.gov.au](https://files.parliament.nsw.gov.au/fileapi/ParlFiles/GetArtifact/0059%20Local%20Government%20NSW.pdf?serverRelativeUrl=%2Flcdocs%2Fsubmissions%2F88501%2F0059+Local+Government+NSW.pdf))\n\nPriority locations:\n1. **Macquarie Mall precinct, Liverpool:** modelled shortfall of **2.21 toilets**, driven by shops and nearby cafés. Strongest candidate.\n2. **Woodward Park / Whitlam Leisure Centre vicinity:** shortfall of **1.19**, with retail and food activity contributing to demand.\n3. **Ashcroft sports-ground block:** shortfall of **0.90**, driven by sports grounds and parkland. A weaker third candidate, worth investigating rather than committing immediately.\n\nThese are **candidate blocks, not approved building sites**. Before committing funds, check existing toilets and opening hours, council’s works pipeline, land availability, accessible paths and sewer connections. The saved Macquarie Mall explanation conflicts with its current mapped toilet count, so that access audit is especially important. Keep ongoing cleaning and maintenance funding separate."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Budget",
+   "q": "Our council has $1.2 million for toilets around Liverpool. How many can we build and where?",
+   "run": 3,
+   "pass": true,
+   "checks": [
+    {
+     "name": "plans sites",
+     "ok": true,
+     "note": "1 plan_sites calls"
+    },
+    {
+     "name": "looks up a cost",
+     "ok": true,
+     "note": "1 searches"
+    },
+    {
+     "name": "shows what it planned",
+     "ok": true,
+     "note": "planned 3, shown 3"
+    },
+    {
+     "name": "sites in Liverpool (≤3 km)",
+     "ok": true,
+     "note": "3/3"
+    }
+   ],
+   "grounded": 0.5384615384615384,
+   "cost": 0.047602099999999994,
+   "secs": 26.582,
+   "tools": [
+    "plan_sites",
+    "get_hex",
+    "get_hex",
+    "get_hex",
+    "show_on_map"
+   ],
+   "searches": 1,
+   "text": "I’ll use a provisional allowance of $400,000 per small accessible toilet facility, giving three sites. I’ll treat “around Liverpool” as within 2 km of Liverpool’s centre and keep the sites at least 400 m apart. This is a planning allowance, not a construction quote.\n\n**Plan for three small accessible toilet facilities**, with the three candidate blocks now highlighted on your map.\n\n**Budget:** I’ve allowed **$400,000 per facility**: $1.2 million ÷ $400,000 = **3**. As a benchmark, Local Government NSW quotes **$280,000–$310,000 excluding GST** for a single accessible unisex facility. My higher allowance provides some headroom, but isn’t a Liverpool construction quote. ([files.parliament.nsw.gov.au](https://files.parliament.nsw.gov.au/fileapi/ParlFiles/GetArtifact/0059%20Local%20Government%20NSW.pdf?serverRelativeUrl=%2Flcdocs%2Fsubmissions%2F88501%2F0059+Local+Government+NSW.pdf))\n\nWithin **2 km of Liverpool’s centre**, keeping sites at least **400 m apart**, the model selects:\n\n- **Liverpool shopping precinct, Macquarie Mall area:** strongest candidate, with **2.21 modelled toilets missing**, driven by shops and nearby cafés.\n- **Woodward Park / Whitlam Leisure Centre area:** **1.19 missing**, driven by shopping and food activity.\n- **Ashcroft sports-ground block:** **0.90 missing**, driven by sports grounds and parkland. This is the weaker, third-priority candidate.\n\nThese are **blocks to investigate, not approved building sites**. Check existing facilities and opening hours, land ownership, accessible paths and sewer connections before committing. In particular, the saved shopping-precinct explanation conflicts with its current zero-toilet count, so verify that location first.\n\nAllow separately for ongoing cleaning and maintenance."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Constraints",
+   "q": "Plan 5 new toilets in Parramatta, at least 400 m apart, only where there is no toilet yet.",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "shows 5",
+     "ok": true,
+     "note": "shown 5"
+    },
+    {
+     "name": "all within 3 km",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "≥400 m apart",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "no toilet there yet",
+     "ok": true,
+     "note": "5/5"
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.006043700000000001,
+   "secs": 11.094,
+   "tools": [
+    "plan_sites",
+    "show_on_map"
+   ],
+   "searches": 0,
+   "text": "**I’ve highlighted 5 candidate sites within 2 km of Parramatta’s centre**, keeping at least **400 m between sites** and selecting only hexagons with **no recorded toilet**.\n\nThe selected areas are:\n- Parramatta, 0.63 km from the centre\n- North Parramatta, 1.99 km\n- Westmead, 2.00 km\n- Parramatta, 1.01 km\n- Mays Hill, 1.11 km\n\nTogether, these hexagons have a modelled shortfall of **7.02 toilets**, prioritised for a five-site build.\n\nThese are block-sized search areas, not approved construction sites. Before committing, check for unrecorded toilets, particularly inside stations and shopping centres, and confirm land ownership, access and servicing."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Constraints",
+   "q": "Plan 5 new toilets in Parramatta, at least 400 m apart, only where there is no toilet yet.",
+   "run": 2,
+   "pass": true,
+   "checks": [
+    {
+     "name": "shows 5",
+     "ok": true,
+     "note": "shown 5"
+    },
+    {
+     "name": "all within 3 km",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "≥400 m apart",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "no toilet there yet",
+     "ok": true,
+     "note": "5/5"
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.005542200000000001,
+   "secs": 9.654,
+   "tools": [
+    "plan_sites",
+    "show_on_map"
+   ],
+   "searches": 0,
+   "text": "**I’ve highlighted 5 candidate sites, at least 400 m apart, with no existing toilets recorded.** The search used a 2 km radius around Parramatta, so it includes neighbouring suburbs.\n\n- **Parramatta**, 0.63 km from the centre: predicted need of **1.99 toilets**.\n- **North Parramatta**, 1.99 km: **1.34**.\n- **Westmead**, 2.00 km: **1.31**.\n- **Parramatta**, 1.01 km: **1.31**.\n- **Mays Hill**, 1.11 km: **1.08**.\n\nThese are priority blocks for investigation, not approved construction sites. “No toilet yet” means none recorded in either the official toilet map or OpenStreetMap. Check on the ground for unlisted facilities, then confirm land availability, access and servicing before committing."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Constraints",
+   "q": "Plan 5 new toilets in Parramatta, at least 400 m apart, only where there is no toilet yet.",
+   "run": 3,
+   "pass": true,
+   "checks": [
+    {
+     "name": "shows 5",
+     "ok": true,
+     "note": "shown 5"
+    },
+    {
+     "name": "all within 3 km",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "≥400 m apart",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "no toilet there yet",
+     "ok": true,
+     "note": "5/5"
+    }
+   ],
+   "grounded": 0.5,
+   "cost": 0.005784200000000001,
+   "secs": 10.744,
+   "tools": [
+    "plan_sites",
+    "show_on_map"
+   ],
+   "searches": 0,
+   "text": "**I’ve highlighted five proposed toilet sites on the map**, using a 2 km radius around Parramatta and at least 400 m spacing between sites.\n\nAll five have **no existing toilet recorded**:\n\n- **Parramatta, 630 m from the centre:** predicted need of 1.99 toilets.\n- **North Parramatta, 1.99 km from the centre:** 1.34.\n- **Westmead, 2 km from the centre:** 1.31.\n- **Parramatta, 1.01 km from the centre:** 1.31.\n- **Mays Hill, 1.11 km from the centre:** 1.08.\n\nThese are priority blocks for investigation, not approved construction sites. “None recorded” checks both the official toilet map and OpenStreetMap, but unrecorded facilities may exist. Confirm those, plus land availability, access and servicing, before committing.\n\n**Scope:** this search includes neighbouring suburbs within 2 km, rather than only Parramatta’s suburb boundary."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Constraints",
+   "q": "Give me 3 spots near Bondi Beach for toilets, at least 800 m apart.",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "shows 3",
+     "ok": true,
+     "note": "shown 3"
+    },
+    {
+     "name": "all within 3 km",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "≥800 m apart",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0050458,
+   "secs": 10.183,
+   "tools": [
+    "plan_sites",
+    "show_on_map"
+   ],
+   "searches": 0,
+   "text": "**I’ve highlighted 3 candidate spots within 2 km of Bondi Beach, selected to be at least 800 m apart:**\n\n- **Bondi:** 0.99 km from the search centre. Highest priority of the three, with **1.53 modelled missing toilets**.\n- **Bellevue Hill:** 1.42 km from the centre, with **1.05 modelled missing toilets**.\n- **Bondi Beach:** 0.52 km from the centre, with **0.61 modelled missing toilets**. This is a weaker candidate, included to meet your three-site spacing requirement.\n\nAll three have **no existing toilets recorded** in the model’s combined official and OpenStreetMap counts.\n\nThese are candidate blocks, not approved building sites. Exact locations, pedestrian access, land availability and servicing still need checking."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Constraints",
+   "q": "Give me 3 spots near Bondi Beach for toilets, at least 800 m apart.",
+   "run": 2,
+   "pass": true,
+   "checks": [
+    {
+     "name": "shows 3",
+     "ok": true,
+     "note": "shown 3"
+    },
+    {
+     "name": "all within 3 km",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "≥800 m apart",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0048358,
+   "secs": 10.094,
+   "tools": [
+    "plan_sites",
+    "show_on_map"
+   ],
+   "searches": 0,
+   "text": "**I’ve highlighted 3 candidate spots within 2 km of Bondi Beach, selected to be at least 800 m apart:**\n\n- **Bondi:** 0.99 km from the search centre. Model predicts **1.53 toilets**, with none recorded.\n- **Bellevue Hill:** 1.42 km from the centre. Model predicts **1.05 toilets**, with none recorded.\n- **Bondi Beach:** 0.52 km from the centre. Model predicts **0.61 toilets**, with none recorded. This is the weaker candidate, included to meet your spacing requirement.\n\nThese are block-sized search areas, not approved building sites. Check land, access, servicing and any unrecorded toilets before choosing exact locations."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Constraints",
+   "q": "Give me 3 spots near Bondi Beach for toilets, at least 800 m apart.",
+   "run": 3,
+   "pass": true,
+   "checks": [
+    {
+     "name": "shows 3",
+     "ok": true,
+     "note": "shown 3"
+    },
+    {
+     "name": "all within 3 km",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "≥800 m apart",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0049258,
+   "secs": 11.04,
+   "tools": [
+    "plan_sites",
+    "show_on_map"
+   ],
+   "searches": 0,
+   "text": "**I’ve highlighted 3 candidate spots within 2 km of Bondi Beach, selected to be at least 800 m apart:**\n\n- **Bondi:** 0.99 km from the search centre. Predicted need: **1.53 toilets**, with none recorded.\n- **Bellevue Hill:** 1.42 km from the centre. Predicted need: **1.05 toilets**, with none recorded.\n- **Bondi Beach:** 0.52 km from the centre. Predicted need: **0.61 toilets**, with none recorded. This is the weaker candidate needed to complete the spaced-out set.\n\nThese are block-sized candidate areas, not approved building sites. Check land availability, access and servicing, and confirm whether any unrecorded toilets already serve them."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Explain a hexagon",
+   "q": "Why is this spot ranked so high?",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "reads the hexagon",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "numbers grounded (≥90%)",
+     "ok": true,
+     "note": "100%"
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0045495,
+   "secs": 11.366,
+   "tools": [
+    "get_hex"
+   ],
+   "searches": 0,
+   "text": "**This Woolloomooloo block ranks #1 because it combines strong activity with no toilets recorded inside the hexagon.**\n\n- **Large estimated gap:** the model predicts **2.27 toilets**, compared with **0 recorded**. Suggestions are ranked by this gap.\n- **Busy local area:** the block has **50 shops and 28 cafés**, with **3,133 residents** inside it and about **12,682 within 500 metres**.\n- **Main drivers:** shops in the block, cafés and food venues in the block, and those within 250 metres push its prediction up most.\n\n**High rank does not mean “build two toilets here”.** It means places with similar features usually have more toilets recorded.\n\nThere is a toilet in the next hexagon, and **9 recorded across the model’s 1 km neighbourhood**. Nearby walking coverage is not a filter on this ranking, so checking actual routes, opening hours and any unrecorded facilities is important before proposing a new one."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Explain a hexagon",
+   "q": "Why is this spot ranked so high?",
+   "run": 2,
+   "pass": true,
+   "checks": [
+    {
+     "name": "reads the hexagon",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "numbers grounded (≥90%)",
+     "ok": true,
+     "note": "100%"
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0043595000000000005,
+   "secs": 10.136,
+   "tools": [
+    "get_hex"
+   ],
+   "searches": 0,
+   "text": "**This Woolloomooloo block ranks #1 because it has a busy mix of shops and food venues, but no toilets recorded inside the hexagon.**\n\n- **Large predicted gap:** the model expects **2.27 toilets** in a block like this. With **0 recorded**, its estimated shortfall is also **2.27**. Suggestions are ranked by that shortfall.\n- **Strongest drivers:** shops inside the block, cafés and food venues inside it, and food venues within **250 m** all push the prediction up.\n- **Busy surroundings:** the block has **50 shops, 28 cafés and 3,133 residents**, with about **12,682 residents within 500 m**.\n\n**The important catch:** zero recorded here does not mean no toilets nearby. There is a toilet in a neighbouring hexagon. Walking access, opening hours and capacity need checking before treating this as a build site.\n\nThe score means “places like this usually have more toilets”, not that exactly 2.27 toilets should be built."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Explain a hexagon",
+   "q": "Why is this spot ranked so high?",
+   "run": 3,
+   "pass": true,
+   "checks": [
+    {
+     "name": "reads the hexagon",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "numbers grounded (≥90%)",
+     "ok": true,
+     "note": "100%"
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0040995,
+   "secs": 8.511,
+   "tools": [
+    "get_hex"
+   ],
+   "searches": 0,
+   "text": "**This Woolloomooloo block ranks #1 because it has lots of shops and cafés, but no toilets recorded inside the hexagon.**\n\n- **Strong demand signals:** 50 shops and 28 cafés in the block. Shops, cafés in the block and food venues within 250 m are the model’s three strongest reasons for its high prediction.\n- **Large estimated gap:** the model predicts **2.27 toilets**, compared with **0 recorded**, giving it a missing score of **2.27**. Suggestions are ranked by that gap alone.\n- **Busy surroundings:** 3,133 residents live in the block, with about 12,682 within 500 m.\n\n**The important catch:** a toilet is recorded in the next hexagon over. The ranking measures the gap inside this block, not whether nearby toilets already provide convenient access. Opening hours, walking routes and any unrecorded facilities need checking before treating this as a build recommendation."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Explain a hexagon",
+   "q": "What is around this hexagon and how many toilets does the model expect here?",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "reads the hexagon",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "states the prediction",
+     "ok": true,
+     "note": "prediction 1.57"
+    },
+    {
+     "name": "numbers grounded (≥90%)",
+     "ok": true,
+     "note": "100%"
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0043367,
+   "secs": 10.942,
+   "tools": [
+    "get_hex"
+   ],
+   "searches": 0,
+   "text": "**The model expects 1.57 public toilets in this Darlinghurst hexagon**, compared with **0 recorded**. That means places with similar features typically have around 1–2 toilets, not that exactly two must be built.\n\n- **Around the block:** Green Park, beside St Vincent’s Hospital, with Victoria Street and Darlinghurst Road shops and cafés nearby.\n- **What drives the prediction:** cafés and food venues within 250 m, cafés inside the hexagon, and local shops are the strongest factors pushing it up.\n- **Within 1 km:** the map records **6 toilets**, compared with roughly **23 predicted** across that neighbourhood.\n- **Modelled chance of at least one toilet:** **79%**.\n\n“0 recorded” does not guarantee none are available. Toilets inside hospitals, businesses or other buildings may be missing from the public datasets or have restricted access."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Explain a hexagon",
+   "q": "What is around this hexagon and how many toilets does the model expect here?",
+   "run": 2,
+   "pass": true,
+   "checks": [
+    {
+     "name": "reads the hexagon",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "states the prediction",
+     "ok": true,
+     "note": "prediction 1.57"
+    },
+    {
+     "name": "numbers grounded (≥90%)",
+     "ok": true,
+     "note": "100%"
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0043167,
+   "secs": 8.807,
+   "tools": [
+    "get_hex"
+   ],
+   "searches": 0,
+   "text": "**This Darlinghurst hexagon covers Green Park, beside St Vincent’s Hospital. The model expects 1.57 public toilets here**, compared with **0 recorded**.\n\nAround it:\n- Victoria Street and Darlinghurst Road shops and cafés.\n- About **709 residents inside the hexagon** and **7,886 within 500 m**.\n- **8 shops, 6 cafés and 30 bus stops within 500 m**, according to the saved area summary.\n\nThe strongest drivers of the prediction are cafés and food businesses within 250 m, plus cafés and shops inside the hexagon.\n\nThe **1.57 is an expected count**, meaning places with similar features typically have around one or two toilets, not a precise building requirement. The model estimates a **79% chance of at least one**.\n\n“0 recorded” doesn’t guarantee none is available: toilets inside venues can be missing from the public datasets."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Explain a hexagon",
+   "q": "What is around this hexagon and how many toilets does the model expect here?",
+   "run": 3,
+   "pass": true,
+   "checks": [
+    {
+     "name": "reads the hexagon",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "states the prediction",
+     "ok": true,
+     "note": "prediction 1.57"
+    },
+    {
+     "name": "numbers grounded (≥90%)",
+     "ok": true,
+     "note": "100%"
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0040967,
+   "secs": 9.524,
+   "tools": [
+    "get_hex"
+   ],
+   "searches": 0,
+   "text": "**The model expects 1.57 public toilets in this Darlinghurst hexagon**, compared with **0 recorded** in the data. That means places with similar features typically have around 1 to 2 toilets, not that exactly two should be built.\n\n- **What’s around it:** Green Park, beside St Vincent’s Hospital, with Victoria Street and Darlinghurst Road businesses nearby.\n- **Local activity:** about 709 residents in the hexagon; within 500 metres, about 7,886 residents, 8 shops and 6 cafés.\n- **What drives the prediction:** cafés and food venues within 250 metres, plus cafés and shops inside the hexagon.\n- **Wider area:** 6 toilets are recorded within 1 km. The nearest recorded toilet is in a neighbouring hexagon, under roughly 500 metres away.\n\n“0 recorded” doesn’t guarantee none exist: toilets inside venues can be missing from the source maps."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Project facts",
+   "q": "How was the model trained and tested?",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "300 trees",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "spatial CV, 5 folds",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "no false SEIFA-input claim",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 0,
+   "cost": 0.0033668,
+   "secs": 7.369,
+   "tools": [],
+   "searches": 0,
+   "text": "**The model learns how many public toilets places with similar features usually have. It was tested on whole areas kept out of training, not randomly scattered hexagons.**\n\n- **Training data:** Sydney is divided into 16,228 small hexagons. Toilet counts come from the National Public Toilet Map. The model uses 45 public-data features, including population, shops, transport, parks, walking paths, sports grounds, playgrounds and beaches. It never sees coordinates, council, disadvantage or demographics.\n- **Model:** A random forest of 300 decision trees predicts the expected toilet count per hexagon, with at least 20 training hexagons per leaf.\n- **Spatial testing:** Sydney’s 90 larger blocks were divided into five groups. Each run trained on four groups and tested on the fifth. Every prediction on the map comes from a model that never saw that hexagon or its surrounding area.\n- **Results:** Of the top 100 predicted hexagons, 85 actually have a toilet, versus about 12 for random picks. Separate checks captured 22 of 35 toilet-containing hexagons in new growth suburbs and placed 30 of 42 council-planned sites in the top 10%.\n\n**The limitation:** it learns existing provision patterns, not an independently established standard of need."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Project facts",
+   "q": "How was the model trained and tested?",
+   "run": 2,
+   "pass": true,
+   "checks": [
+    {
+     "name": "300 trees",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "spatial CV, 5 folds",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "no false SEIFA-input claim",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 0,
+   "cost": 0.0033168000000000004,
+   "secs": 6.467,
+   "tools": [],
+   "searches": 0,
+   "text": "**The model was trained to predict how many public toilets a place like this usually has, then tested on areas it had never seen.**\n\n- **Training data:** Toilet counts from the National Public Toilet Map, paired with 45 public-data inputs covering population, shops, public transport, parks, walking paths, sports grounds, playgrounds and beaches.\n- **Model:** A random forest of 300 decision trees, with at least 20 hexagons per leaf. It never sees coordinates, council, disadvantage, demographics or population projections.\n- **Spatial testing:** Sydney was divided into 90 large blocks, split into five groups. Each run trained on four groups and tested on the fifth. Every prediction on the map is held out, meaning the model never trained on that hexagon or its surrounding area.\n- **Results:** 85 of the top 100 predicted hexagons actually have a toilet, compared with about 12 for random picks. It also placed 30 of 42 council-planned sites in its top 10%.\n- **Model selection:** The team tried 12 versions. Adding sports grounds, playgrounds and beaches was the only change that improved performance beyond random-seed variation.\n\nOpenStreetMap toilets are counted afterwards when identifying gaps, not used to train the model."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Project facts",
+   "q": "How was the model trained and tested?",
+   "run": 3,
+   "pass": true,
+   "checks": [
+    {
+     "name": "300 trees",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "spatial CV, 5 folds",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "no false SEIFA-input claim",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 0,
+   "cost": 0.0033268,
+   "secs": 6.127,
+   "tools": [],
+   "searches": 0,
+   "text": "**The model learns how many public toilets places with similar features usually have, then is tested on areas it never saw during training.**\n\n- **Training data:** Official National Public Toilet Map counts across 16,228 Sydney hexagons. It uses 45 public-data inputs, including population, shops, public transport, parks, walking paths, sports grounds, playgrounds and beaches.\n- **Model:** A random forest of 300 decision trees, with at least 20 hexagons per leaf. It never sees coordinates, council, disadvantage or demographics. OpenStreetMap toilet locations are excluded from training to avoid effectively giving it the answers.\n- **Testing:** Five-fold spatial cross-validation. Sydney’s 90 larger geographic blocks are divided into five groups. Each round trains on four groups and tests on the fifth. Every prediction on the map is held out, meaning the model never trained on that hexagon or its surrounding block.\n- **Results:** Of the 100 highest-predicted hexagons, 85 actually have a toilet, compared with about 12 for random picks. Separately, 30 of 42 council-planned sites fall within the model’s top 10%.\n\n**The key limitation:** it learns existing provision patterns, not a definitive standard of what every community needs."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Project facts",
+   "q": "How accurate is it?",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "top 100 hits (85/100)",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "compares with random",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.003426,
+   "secs": 7.741,
+   "tools": [
+    "model_facts"
+   ],
+   "searches": 0,
+   "text": "**It’s good at identifying likely toilet locations, but it isn’t proof a site needs a new toilet.**\n\n- **85 of its top 100 predicted blocks have a real toilet**, compared with about 12 out of 100 picked randomly.\n- **30 of 42 council-planned sites** fall in the model’s top 10%, compared with about 4 by chance.\n- In new growth suburbs it never trained on, its top 100 picks capture **22 of 35 blocks with toilets**, versus about 3 by chance.\n\nThese are **held-out results**: Sydney was split into five groups of large geographic blocks, and each prediction was tested on an area excluded from that model’s training.\n\nThe key distinction: it learns **“places like this usually have a toilet”**, not “a new toilet here is definitely justified”. Suggested sites still need checks for existing facilities, access, land and servicing."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Project facts",
+   "q": "How accurate is it?",
+   "run": 2,
+   "pass": true,
+   "checks": [
+    {
+     "name": "top 100 hits (85/100)",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "compares with random",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.003456,
+   "secs": 7.485,
+   "tools": [
+    "model_facts"
+   ],
+   "searches": 0,
+   "text": "**It’s useful for shortlisting places to investigate, not approving a toilet site.**\n\n- **85 of its top 100 predicted blocks have a real toilet**, compared with about 12 out of 100 picked at random.\n- **30 of 42 council-planned sites** fall in the model’s top 10%, compared with about 4 by chance.\n- In new growth suburbs it never trained on, its top 100 picks contain **22 of the 35 blocks with toilets**, compared with 3 by chance.\n\nThese results use **spatial testing**: each block is predicted by a model that never trained on that block or its surrounding area.\n\nThe important distinction: **85 out of 100 is not an 85% success rate for proposed new toilets.** It shows the model recognises places that typically have toilets. Whether a suggested gap genuinely needs one still requires checking nearby facilities, access, land and servicing."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Project facts",
+   "q": "How accurate is it?",
+   "run": 3,
+   "pass": true,
+   "checks": [
+    {
+     "name": "top 100 hits (85/100)",
+     "ok": true,
+     "note": ""
+    },
+    {
+     "name": "compares with random",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.003456,
+   "secs": 7.907,
+   "tools": [
+    "model_facts"
+   ],
+   "searches": 0,
+   "text": "**It’s good at identifying likely need, but it isn’t a site approval tool.**\n\n- **85 of its top 100 predicted blocks actually have a toilet**, compared with about 12 for random picks. That tests whether it learns where toilets tend to be, not whether every proposed new site is right.\n- **30 of 42 council-planned sites** fall in the model’s top 10%, compared with about 4 by chance.\n- In new growth suburbs excluded from training, its top 100 picks capture **22 of the 35 blocks with real toilets**, compared with 3 randomly.\n\nThese results use **spatial hold-out testing**: each block is predicted by a model that never trained on it or its surrounding area.\n\nThe main limit: it learns where places like this *usually have* toilets, rather than directly measuring unmet demand. Suggested sites still need checks for existing facilities, land, access and servicing."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Out of scope",
+   "q": "Where should a new hospital go in Penrith?",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "no hexagons shown",
+     "ok": true,
+     "note": "shown 0"
+    },
+    {
+     "name": "says it only covers toilets/fountains",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0018671,
+   "secs": 4.889,
+   "tools": [],
+   "searches": 0,
+   "text": "**Pigeon’s toilet model can’t reliably recommend a hospital site in Penrith.** Its rankings predict public toilet provision, not hospital demand, so using them would be misleading.\n\nA hospital location assessment would need:\n- Current hospital capacity and service gaps.\n- Population growth, age and health needs.\n- Ambulance travel times and public transport access.\n- Suitable land, flood risk and room to expand.\n\nDo you mean a **major emergency hospital**, or a **smaller hospital or day-surgery facility**? That distinction would shape a separate, evidence-based assessment."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Out of scope",
+   "q": "Where should a new hospital go in Penrith?",
+   "run": 2,
+   "pass": true,
+   "checks": [
+    {
+     "name": "no hexagons shown",
+     "ok": true,
+     "note": "shown 0"
+    },
+    {
+     "name": "says it only covers toilets/fountains",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0123291,
+   "secs": 9.94,
+   "tools": [],
+   "searches": 1,
+   "text": "**I wouldn’t pick a hospital site from Pigeon’s map.** Our model predicts public toilet provision, not hospital demand, so its rankings can’t support that decision.\n\nFor Penrith, I’d start by assessing the remaining service gaps **after Nepean Hospital’s expansion**, rather than assuming a separate new hospital is needed. Construction of its Stage 2 building finished in October 2026, adding inpatient accommodation, intensive care and other clinical facilities. Construction completion does not necessarily mean all services are operating. ([nsw.gov.au](https://www.nsw.gov.au/health-and-wellbeing/health-infrastructure-projects/nepean-redevelopment?utm_source=openai))\n\nA hospital-specific assessment should compare:\n- unmet demand and travel times to suitable care\n- ambulance access, public transport and flood-safe access\n- available land, staffing and supporting clinical services.\n\n**Do you mean a major public hospital with an emergency department, or a smaller private or specialist hospital? And is your search across the whole Penrith council area?** Those choices would materially change the shortlist."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Out of scope",
+   "q": "Where should a new hospital go in Penrith?",
+   "run": 3,
+   "pass": true,
+   "checks": [
+    {
+     "name": "no hexagons shown",
+     "ok": true,
+     "note": "shown 0"
+    },
+    {
+     "name": "says it only covers toilets/fountains",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0019071,
+   "secs": 5.323,
+   "tools": [],
+   "searches": 0,
+   "text": "**Pigeon’s toilet model can’t reliably recommend a hospital site in Penrith.** Its predictions estimate toilet need, not hospital demand, so using its rankings would be misleading.\n\nA hospital location study would need to assess:\n- Gaps in access to emergency and specialist care.\n- Existing hospital capacity and planned expansions.\n- Population growth, age and health needs.\n- Ambulance access, public transport, suitable land and flood risk.\n\nDo you mean a **major emergency hospital**, or a **smaller community or specialist hospital**? That distinction would shape a separate, evidence-based search."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Out of scope",
+   "q": "What is the crime rate in Redfern?",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "no hexagons shown",
+     "ok": true,
+     "note": "shown 0"
+    },
+    {
+     "name": "does not claim model data on crime",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 0,
+   "cost": 0.020302900000000002,
+   "secs": 12.219,
+   "tools": [],
+   "searches": 1,
+   "text": "**Redfern’s reported overall crime rate was about 27,326 recorded incidents per 100,000 residents** for **1 July 2025 to 30 June 2026**, according to SafeSuburbs’ calculation from NSW Bureau of Crime Statistics and Research (BOCSAR) data. That covered **3,572 incidents**, down approximately **3%** on the previous year. ([safesuburbs.com.au](https://safesuburbs.com.au/nsw/sydney/redfern/?utm_source=openai))\n\nTwo important cautions:\n- **That is not a 27% chance of becoming a victim.** It counts incidents, not individual victims, and combines very different offence types. SafeSuburbs uses the 2021 Census population, so this is a third-party calculation rather than an official BOCSAR suburb rate. ([safesuburbs.com.au](https://safesuburbs.com.au/nsw/sydney/redfern/?utm_source=openai))\n- Population-based crime rates need care in areas with many visitors, because incidents involving non-residents are counted against the residential population. BOCSAR explicitly warns about this limitation. ([csi.nsw.gov.au](https://csi.nsw.gov.au/content/dcj/bocsar/bocsar-home/statistics-dashboards/crime-and-policing/rcs-definitions-and-explanations.html?utm_source=openai))\n\nAre you interested in **personal safety, break-ins or car theft**? An offence-specific figure would be more useful than the combined total."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Out of scope",
+   "q": "What is the crime rate in Redfern?",
+   "run": 2,
+   "pass": true,
+   "checks": [
+    {
+     "name": "no hexagons shown",
+     "ok": true,
+     "note": "shown 0"
+    },
+    {
+     "name": "does not claim model data on crime",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 0,
+   "cost": 0.0298109,
+   "secs": 10.747,
+   "tools": [],
+   "searches": 2,
+   "text": "**Redfern’s reported overall crime rate was about 273 recorded incidents per 1,000 residents** for **1 July 2025 to 30 June 2026**, according to Safe Suburbs’ analysis of NSW Bureau of Crime Statistics and Research (BOCSAR) data. It reports **3,572 incidents**, down about **3%** on the previous year. ([safesuburbs.com.au](https://safesuburbs.com.au/nsw/sydney/redfern/?utm_source=openai))\n\nTwo important qualifications:\n- **That rate is a third-party calculation**, using the 2021 Census population, not an official BOCSAR suburb-rate figure. ([safesuburbs.com.au](https://safesuburbs.com.au/nsw/sydney/redfern/))\n- **It is not your probability of becoming a victim.** BOCSAR measures recorded incidents against residential population and cautions that rates need care in areas with many visitors. Its data also distinguishes incidents from victims. ([bocsar.nsw.gov.au](https://bocsar.nsw.gov.au/statistics-dashboards/crime-and-policing/rcs-definitions-and-explanations.html))\n\nAre you interested in **violent crime, break-ins, or general personal safety**? Those give a more useful picture than a combined total."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "agent",
+   "group": "Out of scope",
+   "q": "What is the crime rate in Redfern?",
+   "run": 3,
+   "pass": true,
+   "checks": [
+    {
+     "name": "no hexagons shown",
+     "ok": true,
+     "note": "shown 0"
+    },
+    {
+     "name": "does not claim model data on crime",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 0,
+   "cost": 0.029222900000000003,
+   "secs": 10.853,
+   "tools": [],
+   "searches": 2,
+   "text": "**Redfern recorded about 27,326 criminal incidents per 100,000 residents in the year to 30 June 2026**, according to SafeSuburbs’ calculation using NSW Bureau of Crime Statistics and Research (BOCSAR) data. That represents **3,572 recorded incidents**, down about **3%** on the previous year. ([safesuburbs.com.au](https://safesuburbs.com.au/nsw/sydney/redfern/))\n\nA few important qualifications:\n- **It’s a third-party rate**, calculated using the 2021 Census population, not a suburb rate published directly by BOCSAR. ([safesuburbs.com.au](https://safesuburbs.com.au/nsw/sydney/redfern/?utm_source=openai))\n- The total includes **500 incidents against people, 1,250 against property and 1,822 other offences**. It is not simply a measure of violent crime. ([safesuburbs.com.au](https://safesuburbs.com.au/nsw/sydney/redfern/))\n- Recorded incidents per resident **do not equal your personal chance of becoming a victim**. They describe the whole suburb, not the risk on a particular street. ([australiancrimerate.com.au](https://australiancrimerate.com.au/suburb/nsw/redfern/?utm_source=openai))"
+  },
+  {
+   "outputsCaptured": true,
+   "system": "baseline",
+   "group": "Budget",
+   "q": "I have $500k for new public toilets in Blacktown. Where should they go?",
+   "run": 1,
+   "pass": false,
+   "checks": [
+    {
+     "name": "plans sites",
+     "ok": false,
+     "note": "0 plan_sites calls"
+    },
+    {
+     "name": "looks up a cost",
+     "ok": true,
+     "note": "2 searches"
+    },
+    {
+     "name": "shows what it planned",
+     "ok": false,
+     "note": "planned -1, shown 0"
+    },
+    {
+     "name": "sites in Blacktown (≤3 km)",
+     "ok": false,
+     "note": "0/0"
+    }
+   ],
+   "grounded": 0,
+   "cost": 0.0306044,
+   "secs": 16.587,
+   "tools": [],
+   "searches": 2,
+   "text": "**Assuming A$500,000 across Blacktown LGA, I’d provisionally fund one accessible facility—not spread the budget across several sites.** I don’t have a Pigeon demand-model run for this area, so this is an evidence-backed shortlist, not a predicted ranking.\n\n| Priority | Location | Basis |\n|---|---|---|\n| **1** | **Shanes Park, South Creek Road** | Council’s 2025/26 works program listed a new accessible toilet at **$400,000**, ahead of the other options below. ([blacktown.nsw.gov.au](https://www.blacktown.nsw.gov.au/files/assets/public/v/1/ipampr/ipampr-documents/works-improvement-program-2025_26-adopted-23-june-2025-online.pdf)) |\n| **2** | **Popondetta Park, Franklin Crescent, Emerton** | An accessible toilet adjoining existing amenities was also estimated at **$400,000**. ([blacktown.nsw.gov.au](https://www.blacktown.nsw.gov.au/files/assets/public/v/1/ipampr/ipampr-documents/works-improvement-program-2025_26-adopted-23-june-2025-online.pdf)) |\n| **3** | **William Lawson Reserve, Myrtle Street, Prospect** | The listed accessible-toilet/canteen project was **$500,000**, leaving no headroom within your budget. ([blacktown.nsw.gov.au](https://www.blacktown.nsw.gov.au/files/assets/public/v/1/ipampr/ipampr-documents/works-improvement-program-2025_26-adopted-23-june-2025-online.pdf)) |\n\n**My proposed allocation:** up to **$400,000 for the facility**, retaining **$100,000 for site investigations, any additional access/services work and contingency**. These are planning allowances, not current quotes.\n\n**Before committing:** confirm these projects remain unbuilt and unfunded, check nearby toilets’ actual opening hours, and compare observed usage. Require public access beyond club bookings and a funded cleaning plan. If Shanes Park already has funding or adequate access, assess Popondetta next."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "baseline",
+   "group": "Budget",
+   "q": "Our council has $1.2 million for toilets around Liverpool. How many can we build and where?",
+   "run": 1,
+   "pass": false,
+   "checks": [
+    {
+     "name": "plans sites",
+     "ok": false,
+     "note": "0 plan_sites calls"
+    },
+    {
+     "name": "looks up a cost",
+     "ok": true,
+     "note": "2 searches"
+    },
+    {
+     "name": "shows what it planned",
+     "ok": false,
+     "note": "planned -1, shown 0"
+    },
+    {
+     "name": "sites in Liverpool (≤3 km)",
+     "ok": false,
+     "note": "0/0"
+    }
+   ],
+   "grounded": 0,
+   "cost": 0.038954699999999995,
+   "secs": 14.793,
+   "tools": [],
+   "searches": 2,
+   "text": "**Assuming Liverpool, NSW, and A$1.2 million: plan for three small toilet blocks—not three individual cubicles.** This is a preliminary estimate, not a tender price or a Pigeon AI model result.\n\n### How many?\nA NSW council’s 2025 estimate put a basic two-toilet block at **$300,000**. Using that benchmark, I’d provisionally allocate **$900,000 for three blocks**, retaining **$300,000 for site investigations, connections, accessible paths and contingency**. Difficult sites could reduce delivery to two. Cleaning and maintenance need a separate operating budget. ([midwestern.nsw.gov.au](https://www.midwestern.nsw.gov.au/files/assets/public/v/1/council-meetings/2025/2.-19-march-2025/business-paper-public-ordinary-council-meeting-19-march-2025_1.pdf?utm_source=openai))\n\n### Where?\nMy **investigation shortlist**, not confirmed construction sites:\n\n| Candidate | What to investigate |\n|---|---|\n| **Austral—Local Park 2, 335 Sixth Avenue** | Whether toilets can be integrated into the park’s detailed design. ([liverpool.nsw.gov.au](https://www.liverpool.nsw.gov.au/development/major-projects/austral-open-space-planning?utm_source=openai)) |\n| **Austral—District Park 11, between Gurner Avenue and Swamphen Street** | Whether its proposed play and picnic facilities justify a second Austral location rather than concentrating investment. ([liverpool.nsw.gov.au](https://www.liverpool.nsw.gov.au/development/major-projects/austral-open-space-planning?utm_source=openai)) |\n| **Liverpool CBD—Scott/Macquarie/Railway streets precinct** | Whether a publicly accessible, extended-hours facility would fill a genuine gap alongside planned street upgrades. ([liverpool.nsw.gov.au](https://www.liverpool.nsw.gov.au/council/Media/media-releases/may-2024/liverpool-council-budgets-for-growth?utm_source=openai)) |\n\n**Before committing:** rank these against other council sites using pedestrian demand, walking distance to *open* toilets, accessibility, sewer availability and existing funded projects. I haven’t run that analysis, so I wouldn’t claim these are Liverpool’s three highest-need locations."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "baseline",
+   "group": "Constraints",
+   "q": "Plan 5 new toilets in Parramatta, at least 400 m apart, only where there is no toilet yet.",
+   "run": 1,
+   "pass": false,
+   "checks": [
+    {
+     "name": "shows 5",
+     "ok": false,
+     "note": "shown 0"
+    },
+    {
+     "name": "all within 3 km",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "name": "≥400 m apart",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "name": "no toilet there yet",
+     "ok": false,
+     "note": "0/0"
+    }
+   ],
+   "grounded": 0,
+   "cost": 0.040627,
+   "secs": 22.14,
+   "tools": [],
+   "searches": 2,
+   "text": "**I can draft the plan, but can’t yet certify five sites meet “no toilet yet.”** Council directs users to the National Public Toilet Map; I haven’t verified a complete current inventory against potential sites. ([cityofparramatta.nsw.gov.au](https://www.cityofparramatta.nsw.gov.au/community/ageing-and-disability/people-with-disability/national-public-toilet-map?utm_source=openai))\n\nAssuming **City of Parramatta LGA** and **400 m straight-line separation between new toilets**, the selection plan is:\n\n1. Exclude sites with existing toilets, including temporarily closed facilities.\n2. Check planned toilets to avoid duplicating committed projects.\n3. Rank remaining public-land sites by pedestrian demand, recreation use and gaps in access.\n4. Select five locations with **all 10 pairwise distances ≥400 m**.\n5. Confirm toilet absence, land availability and servicing through Council/site inspections.\n\n**Please upload Pigeon’s existing-toilet and candidate-site layers** (CSV or GeoJSON). I can then return five coordinates, nearest-existing-toilet distances and a spacing check—not unverified site guesses."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "baseline",
+   "group": "Constraints",
+   "q": "Give me 3 spots near Bondi Beach for toilets, at least 800 m apart.",
+   "run": 1,
+   "pass": false,
+   "checks": [
+    {
+     "name": "shows 3",
+     "ok": false,
+     "note": "shown 0"
+    },
+    {
+     "name": "all within 3 km",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "name": "≥800 m apart",
+     "ok": false,
+     "note": ""
+    }
+   ],
+   "grounded": 0,
+   "cost": 0.0319825,
+   "secs": 18.98,
+   "tools": [],
+   "searches": 2,
+   "text": "**Three candidate sites for new or upgraded toilets** near Bondi Beach:\n\n| Spot | Suggested location | Planning rationale |\n|---|---|---|\n| **Seven Ways** | Glenayr Avenue–Warners Avenue junction | Assess provision for the village’s shops and cafés. ([fabrikproperty.com.au](https://www.fabrikproperty.com.au/seven-ways?utm_source=openai)) |\n| **Hugh Bamford Reserve** | Military Road entrance, near the playing field | Assess public access for sports users, walkers and park visitors. ([waverley.nsw.gov.au](https://www.waverley.nsw.gov.au/recreation/parks_and_reserves/hugh_bamford_reserve?utm_source=openai)) |\n| **South Bondi Park** | Notts Avenue entrance | Assess an **upgrade to existing toilets**, rather than duplicating provision. ([toiletsnearme.com.au](https://toiletsnearme.com.au/nsw/waverley/bondi-beach?utm_source=openai)) |\n\n**Estimated straight-line spacing:** Seven Ways ↔ Hugh Bamford **~1.0 km**; Seven Ways ↔ South Bondi **~1.2 km**; Hugh Bamford ↔ South Bondi **~2.0 km**.\n\nThese are preliminary locations—not model-validated demand hotspots. Confirm exact footprints and the **800 m minimum in GIS** before selection."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "baseline",
+   "group": "Explain a hexagon",
+   "q": "Why is this spot ranked so high?",
+   "run": 1,
+   "pass": false,
+   "checks": [
+    {
+     "name": "reads the hexagon",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "name": "numbers grounded (≥90%)",
+     "ok": true,
+     "note": "100%"
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0013134000000000002,
+   "secs": 3.414,
+   "tools": [],
+   "searches": 0,
+   "text": "Which spot do you mean? Share its location or a screenshot showing its score breakdown, and I’ll explain what’s driving the high ranking."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "baseline",
+   "group": "Explain a hexagon",
+   "q": "What is around this hexagon and how many toilets does the model expect here?",
+   "run": 1,
+   "pass": false,
+   "checks": [
+    {
+     "name": "reads the hexagon",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "name": "states the prediction",
+     "ok": false,
+     "note": "prediction 1.57"
+    },
+    {
+     "name": "numbers grounded (≥90%)",
+     "ok": true,
+     "note": "100%"
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0012342,
+   "secs": 3.308,
+   "tools": [],
+   "searches": 0,
+   "text": "Which hexagon do you mean? Select it on the map or share a screenshot with its location and model prediction so I can describe what’s nearby and how many toilets the model expects there."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "baseline",
+   "group": "Project facts",
+   "q": "How was the model trained and tested?",
+   "run": 1,
+   "pass": false,
+   "checks": [
+    {
+     "name": "300 trees",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "name": "spatial CV, 5 folds",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "name": "no false SEIFA-input claim",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0109194,
+   "secs": 8.943,
+   "tools": [],
+   "searches": 1,
+   "text": "I don’t have Pigeon AI’s training or evaluation documentation, and I couldn’t find a public description, so I can’t verify how this model was trained and tested.\n\nTo answer reliably, we’d need:\n- **Training:** data sources, how “toilet need” was defined, and the algorithm used.\n- **Testing:** whether separate Sydney areas or time periods were held out from training.\n- **Results:** prediction errors, comparison with a simple baseline, and performance across neighbourhoods.\n\nCan you share the model report or repository?"
+  },
+  {
+   "outputsCaptured": true,
+   "system": "baseline",
+   "group": "Project facts",
+   "q": "How accurate is it?",
+   "run": 1,
+   "pass": false,
+   "checks": [
+    {
+     "name": "top 100 hits (85/100)",
+     "ok": false,
+     "note": ""
+    },
+    {
+     "name": "compares with random",
+     "ok": false,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.0105031,
+   "secs": 7.679,
+   "tools": [],
+   "searches": 1,
+   "text": "I don’t have verified accuracy figures for Pigeon AI’s toilet-demand predictions, and I couldn’t find a published validation report.\n\nTreat its recommendations as **planning guidance, not certainty**. To establish accuracy, we’d need to compare predicted high-need areas with independent usage counts, unmet-demand surveys, and on-site assessments across Sydney."
+  },
+  {
+   "outputsCaptured": true,
+   "system": "baseline",
+   "group": "Out of scope",
+   "q": "Where should a new hospital go in Penrith?",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "no hexagons shown",
+     "ok": true,
+     "note": "shown 0"
+    },
+    {
+     "name": "says it only covers toilets/fountains",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 1,
+   "cost": 0.011353700000000001,
+   "secs": 9.829,
+   "tools": [],
+   "searches": 1,
+   "text": "Assuming you mean **Penrith, NSW**, I wouldn’t select a hospital site using Pigeon AI’s public-toilet demand model.\n\nFirst assess unmet need after the Nepean Hospital expansion in Kingswood; construction of its Stage 2 building finished in October 2026. ([nsw.gov.au](https://www.nsw.gov.au/health-and-wellbeing/health-infrastructure-projects/nepean-redevelopment?utm_source=openai))\n\nA hospital-specific study should compare candidate sites using:\n- Population growth and healthcare demand\n- Ambulance travel times and public transport access\n- Flood risk, available land and staffing feasibility\n\n**There isn’t enough evidence here to recommend a particular site responsibly.**"
+  },
+  {
+   "outputsCaptured": true,
+   "system": "baseline",
+   "group": "Out of scope",
+   "q": "What is the crime rate in Redfern?",
+   "run": 1,
+   "pass": true,
+   "checks": [
+    {
+     "name": "no hexagons shown",
+     "ok": true,
+     "note": "shown 0"
+    },
+    {
+     "name": "does not claim model data on crime",
+     "ok": true,
+     "note": ""
+    }
+   ],
+   "grounded": 0,
+   "cost": 0.0201395,
+   "secs": 10.131,
+   "tools": [],
+   "searches": 1,
+   "text": "For **Redfern, Sydney**, the reported crime rate was approximately **27,326 recorded incidents per 100,000 residents**—or **273 per 1,000**—for **1 July 2025–30 June 2026**. There were **3,572 incidents**, down about **3%** from the preceding year. These figures are a third-party calculation using BOCSAR incident data and the 2021 Census population, not an official BOCSAR suburb rate. ([safesuburbs.com.au](https://safesuburbs.com.au/nsw/sydney/redfern/?utm_source=openai))\n\nThis measures **incidents, not your likelihood of becoming a victim**. For public-toilet planning, I’d use location-specific incident patterns rather than the suburb-wide total alone."
+  }
+ ]
+}
